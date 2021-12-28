@@ -75,27 +75,25 @@ public class EmailsClient
      */
     public LockstepResponse<ActionResultModel> DeleteEmail(String id)
     {
-        RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE",
-                "/api/v1/Emails/{id}");
+        RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Emails/{id}");
         r.AddPath("{id}", id.toString());
         return r.Call(ActionResultModel.class);
     }
 
-    // Commented out - this method doesn't currently work
-    // /**
-    //  * Retrieves a signature logo for the email with the specified identifier and increments 'ViewCount'.
-    //  * 
-    //  * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
-    //  * @param emailId - The unique ID number of the Email to retrieve.
-    //  * @param nonce - The random nonce applied at time of url creation.
-    //  */
-    // public LockstepResponse<File> RetrieveEmailLogo(String emailId, String nonce)
-    // {
-    //     RestRequest<File> r = new RestRequest<File>(this.client, "GET", "/api/v1/Emails/{emailId}/logo/{nonce}");
-    //     r.AddPath("{emailId}", emailId.toString());
-    //     r.AddPath("{nonce}", nonce.toString());
-    //     return r.Call(File.class);
-    // }
+    /**
+     * Retrieves a signature logo for the email with the specified identifier and increments 'ViewCount'.
+     * 
+     * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
+     * @param emailId - The unique ID number of the Email to retrieve.
+     * @param nonce - The random nonce applied at time of url creation.
+     */
+    public LockstepResponse<byte[]> RetrieveEmailLogo(String emailId, String nonce)
+    {
+        RestRequest<byte[]> r = new RestRequest<byte[]>(this.client, "GET", "/api/v1/Emails/{emailId}/logo/{nonce}");
+        r.AddPath("{emailId}", emailId.toString());
+        r.AddPath("{nonce}", nonce.toString());
+        return r.Call(byte[].class);
+    }
 
     /**
      * Creates one or more emails from the specified array of Email Models

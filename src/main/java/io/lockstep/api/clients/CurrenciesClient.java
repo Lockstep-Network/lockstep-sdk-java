@@ -18,7 +18,6 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
-import io.lockstep.api.models.CurrencyModel;
 import io.lockstep.api.models.CurrencyRateModel;
 
 import java.util.Date;
