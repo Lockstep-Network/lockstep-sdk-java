@@ -31,64 +31,64 @@ public class UserRoleModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getuserRoleId() { return this.userRoleId; }
+    public String getUserRoleId() { return this.userRoleId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setuserRoleId(String value) { this.userRoleId = value; }
+    public void setUserRoleId(String value) { this.userRoleId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The name of the user role
      */
-    public String getuserRoleName() { return this.userRoleName; }
+    public String getUserRoleName() { return this.userRoleName; }
     /**
      * The name of the user role
      */
-    public void setuserRoleName(String value) { this.userRoleName = value; }
+    public void setUserRoleName(String value) { this.userRoleName = value; }
     /**
      * The date that the user role was created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date that the user role was created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created the user role
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the user role
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date the user role was last modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date the user role was last modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified the user role
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the user role
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
 };

@@ -72,44 +72,44 @@ public class InvoiceModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public String getinvoiceId() { return this.invoiceId; }
+    public String getInvoiceId() { return this.invoiceId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public void setinvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The ID number of the company that created this invoice.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the company that created this invoice.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -119,7 +119,7 @@ public class InvoiceModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public String geterpKey() { return this.erpKey; }
+    public String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -129,357 +129,357 @@ public class InvoiceModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public void seterpKey(String value) { this.erpKey = value; }
+    public void setErpKey(String value) { this.erpKey = value; }
     /**
      * The purchase order code as it exists in the user's ERP or accounting system.
      */
-    public String getpurchaseOrderCode() { return this.purchaseOrderCode; }
+    public String getPurchaseOrderCode() { return this.purchaseOrderCode; }
     /**
      * The purchase order code as it exists in the user's ERP or accounting system.
      */
-    public void setpurchaseOrderCode(String value) { this.purchaseOrderCode = value; }
+    public void setPurchaseOrderCode(String value) { this.purchaseOrderCode = value; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public String getreferenceCode() { return this.referenceCode; }
+    public String getReferenceCode() { return this.referenceCode; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public void setreferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * A code identifying the salesperson responsible for writing this quote, invoice, or order.
      */
-    public String getsalespersonCode() { return this.salespersonCode; }
+    public String getSalespersonCode() { return this.salespersonCode; }
     /**
      * A code identifying the salesperson responsible for writing this quote, invoice, or order.
      */
-    public void setsalespersonCode(String value) { this.salespersonCode = value; }
+    public void setSalespersonCode(String value) { this.salespersonCode = value; }
     /**
      * A string identifying the salesperson responsible for writing this quote, invoice, or order.
      */
-    public String getsalespersonName() { return this.salespersonName; }
+    public String getSalespersonName() { return this.salespersonName; }
     /**
      * A string identifying the salesperson responsible for writing this quote, invoice, or order.
      */
-    public void setsalespersonName(String value) { this.salespersonName = value; }
+    public void setSalespersonName(String value) { this.salespersonName = value; }
     /**
      * A code identifying the type of this invoice.
      */
-    public String getinvoiceTypeCode() { return this.invoiceTypeCode; }
+    public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
      * A code identifying the type of this invoice.
      */
-    public void setinvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
+    public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
     /**
      * A code identifying the status of this invoice.
      */
-    public String getinvoiceStatusCode() { return this.invoiceStatusCode; }
+    public String getInvoiceStatusCode() { return this.invoiceStatusCode; }
     /**
      * A code identifying the status of this invoice.
      */
-    public void setinvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
+    public void setInvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
     /**
      * A code identifying the terms given to the purchaser.
      */
-    public String gettermsCode() { return this.termsCode; }
+    public String getTermsCode() { return this.termsCode; }
     /**
      * A code identifying the terms given to the purchaser.
      */
-    public void settermsCode(String value) { this.termsCode = value; }
+    public void setTermsCode(String value) { this.termsCode = value; }
     /**
      * If the customer negotiated any special terms different from the standard terms above, describe them here.
      */
-    public String getspecialTerms() { return this.specialTerms; }
+    public String getSpecialTerms() { return this.specialTerms; }
     /**
      * If the customer negotiated any special terms different from the standard terms above, describe them here.
      */
-    public void setspecialTerms(String value) { this.specialTerms = value; }
+    public void setSpecialTerms(String value) { this.specialTerms = value; }
     /**
      * The three-character ISO 4217 currency code used for this invoice.
      */
-    public String getcurrencyCode() { return this.currencyCode; }
+    public String getCurrencyCode() { return this.currencyCode; }
     /**
      * The three-character ISO 4217 currency code used for this invoice.
      */
-    public void setcurrencyCode(String value) { this.currencyCode = value; }
+    public void setCurrencyCode(String value) { this.currencyCode = value; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
      */
-    public Double gettotalAmount() { return this.totalAmount; }
+    public Double getTotalAmount() { return this.totalAmount; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
      */
-    public void settotalAmount(Double value) { this.totalAmount = value; }
+    public void setTotalAmount(Double value) { this.totalAmount = value; }
     /**
      * The total sales (or transactional) tax calculated for this invoice.
      */
-    public Double getsalesTaxAmount() { return this.salesTaxAmount; }
+    public Double getSalesTaxAmount() { return this.salesTaxAmount; }
     /**
      * The total sales (or transactional) tax calculated for this invoice.
      */
-    public void setsalesTaxAmount(Double value) { this.salesTaxAmount = value; }
+    public void setSalesTaxAmount(Double value) { this.salesTaxAmount = value; }
     /**
      * The total discounts given by the seller to the buyer on this invoice.
      */
-    public Double getdiscountAmount() { return this.discountAmount; }
+    public Double getDiscountAmount() { return this.discountAmount; }
     /**
      * The total discounts given by the seller to the buyer on this invoice.
      */
-    public void setdiscountAmount(Double value) { this.discountAmount = value; }
+    public void setDiscountAmount(Double value) { this.discountAmount = value; }
     /**
      * The remaining balance value of this invoice.
      */
-    public Double getoutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
+    public Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
     /**
      * The remaining balance value of this invoice.
      */
-    public void setoutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
+    public void setOutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
     /**
      * The reporting date for this invoice.
      */
-    public Date getinvoiceDate() { return this.invoiceDate; }
+    public Date getInvoiceDate() { return this.invoiceDate; }
     /**
      * The reporting date for this invoice.
      */
-    public void setinvoiceDate(Date value) { this.invoiceDate = value; }
+    public void setInvoiceDate(Date value) { this.invoiceDate = value; }
     /**
      * The date when discounts were adjusted for this invoice.
      */
-    public Date getdiscountDate() { return this.discountDate; }
+    public Date getDiscountDate() { return this.discountDate; }
     /**
      * The date when discounts were adjusted for this invoice.
      */
-    public void setdiscountDate(Date value) { this.discountDate = value; }
+    public void setDiscountDate(Date value) { this.discountDate = value; }
     /**
      * The date when this invoice posted to the company's general ledger.
      */
-    public Date getpostedDate() { return this.postedDate; }
+    public Date getPostedDate() { return this.postedDate; }
     /**
      * The date when this invoice posted to the company's general ledger.
      */
-    public void setpostedDate(Date value) { this.postedDate = value; }
+    public void setPostedDate(Date value) { this.postedDate = value; }
     /**
      * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
      * services.
      */
-    public Date getinvoiceClosedDate() { return this.invoiceClosedDate; }
+    public Date getInvoiceClosedDate() { return this.invoiceClosedDate; }
     /**
      * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
      * services.
      */
-    public void setinvoiceClosedDate(Date value) { this.invoiceClosedDate = value; }
+    public void setInvoiceClosedDate(Date value) { this.invoiceClosedDate = value; }
     /**
      * The date when the remaining outstanding balance is due.
      */
-    public Date getpaymentDueDate() { return this.paymentDueDate; }
+    public Date getPaymentDueDate() { return this.paymentDueDate; }
     /**
      * The date when the remaining outstanding balance is due.
      */
-    public void setpaymentDueDate(Date value) { this.paymentDueDate = value; }
+    public void setPaymentDueDate(Date value) { this.paymentDueDate = value; }
     /**
      * The date and time when this record was imported from the user's ERP or accounting system.
      */
-    public Date getimportedDate() { return this.importedDate; }
+    public Date getImportedDate() { return this.importedDate; }
     /**
      * The date and time when this record was imported from the user's ERP or accounting system.
      */
-    public void setimportedDate(Date value) { this.importedDate = value; }
+    public void setImportedDate(Date value) { this.importedDate = value; }
     /**
      * The ID number of the invoice's origination address
      */
-    public String getprimaryOriginAddressId() { return this.primaryOriginAddressId; }
+    public String getPrimaryOriginAddressId() { return this.primaryOriginAddressId; }
     /**
      * The ID number of the invoice's origination address
      */
-    public void setprimaryOriginAddressId(String value) { this.primaryOriginAddressId = value; }
+    public void setPrimaryOriginAddressId(String value) { this.primaryOriginAddressId = value; }
     /**
      * The ID number of the invoice's bill-to address
      */
-    public String getprimaryBillToAddressId() { return this.primaryBillToAddressId; }
+    public String getPrimaryBillToAddressId() { return this.primaryBillToAddressId; }
     /**
      * The ID number of the invoice's bill-to address
      */
-    public void setprimaryBillToAddressId(String value) { this.primaryBillToAddressId = value; }
+    public void setPrimaryBillToAddressId(String value) { this.primaryBillToAddressId = value; }
     /**
      * The ID number of the invoice's ship-to address
      */
-    public String getprimaryShipToAddressId() { return this.primaryShipToAddressId; }
+    public String getPrimaryShipToAddressId() { return this.primaryShipToAddressId; }
     /**
      * The ID number of the invoice's ship-to address
      */
-    public void setprimaryShipToAddressId(String value) { this.primaryShipToAddressId = value; }
+    public void setPrimaryShipToAddressId(String value) { this.primaryShipToAddressId = value; }
     /**
      * The date on which this address record was created.
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date on which this address record was created.
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID number of the user who created this address.
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this address.
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date on which this address record was last modified.
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date on which this address record was last modified.
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this address.
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this address.
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * Is the invoice voided?
      */
-    public Boolean getisVoided() { return this.isVoided; }
+    public Boolean getIsVoided() { return this.isVoided; }
     /**
      * Is the invoice voided?
      */
-    public void setisVoided(Boolean value) { this.isVoided = value; }
+    public void setIsVoided(Boolean value) { this.isVoided = value; }
     /**
      * Is the invoice in dispute?
      */
-    public Boolean getinDispute() { return this.inDispute; }
+    public Boolean getInDispute() { return this.inDispute; }
     /**
      * Is the invoice in dispute?
      */
-    public void setinDispute(Boolean value) { this.inDispute = value; }
+    public void setInDispute(Boolean value) { this.inDispute = value; }
     /**
      * Should the invoice be excluded from aging calculations?
      */
-    public Boolean getexcludeFromAging() { return this.excludeFromAging; }
+    public Boolean getExcludeFromAging() { return this.excludeFromAging; }
     /**
      * Should the invoice be excluded from aging calculations?
      */
-    public void setexcludeFromAging(Boolean value) { this.excludeFromAging = value; }
+    public void setExcludeFromAging(Boolean value) { this.excludeFromAging = value; }
     /**
      * All addresses connected to this invoice.
      * To retrieve this collection, specify `Addresses` in the "Include" parameter for your query.
      */
-    public InvoiceAddressModel[] getaddresses() { return this.addresses; }
+    public InvoiceAddressModel[] getAddresses() { return this.addresses; }
     /**
      * All addresses connected to this invoice.
      * To retrieve this collection, specify `Addresses` in the "Include" parameter for your query.
      */
-    public void setaddresses(InvoiceAddressModel[] value) { this.addresses = value; }
+    public void setAddresses(InvoiceAddressModel[] value) { this.addresses = value; }
     /**
      * All lines attached to this invoice.
      * To retrieve this collection, specify `Lines` in the "Include" parameter for your query.
      */
-    public InvoiceLineModel[] getlines() { return this.lines; }
+    public InvoiceLineModel[] getLines() { return this.lines; }
     /**
      * All lines attached to this invoice.
      * To retrieve this collection, specify `Lines` in the "Include" parameter for your query.
      */
-    public void setlines(InvoiceLineModel[] value) { this.lines = value; }
+    public void setLines(InvoiceLineModel[] value) { this.lines = value; }
     /**
      * All payments attached to this invoice, the amount of the payment applied to this Invoice, and the date the Payment was applied.
      * To retrieve this collection, specify `Payments` in the "Include" parameter for your query.
      */
-    public InvoicePaymentDetailModel[] getpayments() { return this.payments; }
+    public InvoicePaymentDetailModel[] getPayments() { return this.payments; }
     /**
      * All payments attached to this invoice, the amount of the payment applied to this Invoice, and the date the Payment was applied.
      * To retrieve this collection, specify `Payments` in the "Include" parameter for your query.
      */
-    public void setpayments(InvoicePaymentDetailModel[] value) { this.payments = value; }
+    public void setPayments(InvoicePaymentDetailModel[] value) { this.payments = value; }
     /**
      * All notes attached to this invoice.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this invoice.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this invoice.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this invoice.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * The Company associated to this invoice.
      * To retrieve this item, specify `Company` in the "Include" parameter for your query.
      */
-    public CompanyModel getcompany() { return this.company; }
+    public CompanyModel getCompany() { return this.company; }
     /**
      * The Company associated to this invoice.
      * To retrieve this item, specify `Company` in the "Include" parameter for your query.
      */
-    public void setcompany(CompanyModel value) { this.company = value; }
+    public void setCompany(CompanyModel value) { this.company = value; }
     /**
      * The Customer associated to the invoice customer
      * To retrieve this item, specify `Customer` in the "Include" parameter for your query.
      */
-    public CompanyModel getcustomer() { return this.customer; }
+    public CompanyModel getCustomer() { return this.customer; }
     /**
      * The Customer associated to the invoice customer
      * To retrieve this item, specify `Customer` in the "Include" parameter for your query.
      */
-    public void setcustomer(CompanyModel value) { this.customer = value; }
+    public void setCustomer(CompanyModel value) { this.customer = value; }
     /**
      * The Contact associated to the invoice customer
      * To retrieve this item, specify `Customer` in the "Include" parameter for your query.
      */
-    public ContactModel getcustomerPrimaryContact() { return this.customerPrimaryContact; }
+    public ContactModel getCustomerPrimaryContact() { return this.customerPrimaryContact; }
     /**
      * The Contact associated to the invoice customer
      * To retrieve this item, specify `Customer` in the "Include" parameter for your query.
      */
-    public void setcustomerPrimaryContact(ContactModel value) { this.customerPrimaryContact = value; }
+    public void setCustomerPrimaryContact(ContactModel value) { this.customerPrimaryContact = value; }
     /**
      * The credit memos associated to this invoice.
      * To retrieve this item, specify `CreditMemos` in the "Include" parameter for your query.
      */
-    public CreditMemoInvoiceModel[] getcreditMemos() { return this.creditMemos; }
+    public CreditMemoInvoiceModel[] getCreditMemos() { return this.creditMemos; }
     /**
      * The credit memos associated to this invoice.
      * To retrieve this item, specify `CreditMemos` in the "Include" parameter for your query.
      */
-    public void setcreditMemos(CreditMemoInvoiceModel[] value) { this.creditMemos = value; }
+    public void setCreditMemos(CreditMemoInvoiceModel[] value) { this.creditMemos = value; }
     /**
      * All custom field values associated with this invoice
      * To retrieve this item, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All custom field values associated with this invoice
      * To retrieve this item, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
      * All custom field definitions
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All custom field definitions
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
 };

@@ -33,80 +33,80 @@ public class CodeDefinitionModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getcodeDefinitionId() { return this.codeDefinitionId; }
+    public String getCodeDefinitionId() { return this.codeDefinitionId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setcodeDefinitionId(String value) { this.codeDefinitionId = value; }
+    public void setCodeDefinitionId(String value) { this.codeDefinitionId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The type of the Code Definition
      */
-    public String getcodeType() { return this.codeType; }
+    public String getCodeType() { return this.codeType; }
     /**
      * The type of the Code Definition
      */
-    public void setcodeType(String value) { this.codeType = value; }
+    public void setCodeType(String value) { this.codeType = value; }
     /**
      * The Code to be defined.
      */
-    public String getcode() { return this.code; }
+    public String getCode() { return this.code; }
     /**
      * The Code to be defined.
      */
-    public void setcode(String value) { this.code = value; }
+    public void setCode(String value) { this.code = value; }
     /**
      * The definition of the Code
      */
-    public String getcodeDescription() { return this.codeDescription; }
+    public String getCodeDescription() { return this.codeDescription; }
     /**
      * The definition of the Code
      */
-    public void setcodeDescription(String value) { this.codeDescription = value; }
+    public void setCodeDescription(String value) { this.codeDescription = value; }
     /**
      * The date that the Code Definition was created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date that the Code Definition was created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created the Code Definition
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the Code Definition
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date the Code Definition was last modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date the Code Definition was last modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified the Code Definition
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the Code Definition
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
 };

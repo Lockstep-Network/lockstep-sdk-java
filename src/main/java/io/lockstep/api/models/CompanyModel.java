@@ -68,22 +68,22 @@ public class CompanyModel
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The short name of the company.
      */
-    public String getcompanyName() { return this.companyName; }
+    public String getCompanyName() { return this.companyName; }
     /**
      * The short name of the company.
      */
-    public void setcompanyName(String value) { this.companyName = value; }
+    public void setCompanyName(String value) { this.companyName = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -93,7 +93,7 @@ public class CompanyModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public String geterpKey() { return this.erpKey; }
+    public String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -103,7 +103,7 @@ public class CompanyModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public void seterpKey(String value) { this.erpKey = value; }
+    public void setErpKey(String value) { this.erpKey = value; }
     /**
      * This field indicates the type of company.  It can be one of a limited number of values:
      * Company, Customer, Group, or Vendor.  A company that represents both a customer and a vendor
@@ -115,7 +115,7 @@ public class CompanyModel
      * * `Vendor` - This record represents a business entity that sells things to the account holder.
      * * `CustomerVendor` - Both a customer and a vendor.
      */
-    public String getcompanyType() { return this.companyType; }
+    public String getCompanyType() { return this.companyType; }
     /**
      * This field indicates the type of company.  It can be one of a limited number of values:
      * Company, Customer, Group, or Vendor.  A company that represents both a customer and a vendor
@@ -127,371 +127,371 @@ public class CompanyModel
      * * `Vendor` - This record represents a business entity that sells things to the account holder.
      * * `CustomerVendor` - Both a customer and a vendor.
      */
-    public void setcompanyType(String value) { this.companyType = value; }
+    public void setCompanyType(String value) { this.companyType = value; }
     /**
      * The status of the company.  Companies can be either `Active` or `Inactive`.  When matched to a
      * Lockstep corporate profile, this value will change to reflect that this record will be kept
      * in sync with that company's identity.
      */
-    public String getcompanyStatus() { return this.companyStatus; }
+    public String getCompanyStatus() { return this.companyStatus; }
     /**
      * The status of the company.  Companies can be either `Active` or `Inactive`.  When matched to a
      * Lockstep corporate profile, this value will change to reflect that this record will be kept
      * in sync with that company's identity.
      */
-    public void setcompanyStatus(String value) { this.companyStatus = value; }
+    public void setCompanyStatus(String value) { this.companyStatus = value; }
     /**
      * If this business entity is part of an organization, this value is non-null and it is set
      * to the `CompanyId` value of the parent company of this business entity.
      * 
      * If this value is null, this business entity is a standalone.
      */
-    public String getparentCompanyId() { return this.parentCompanyId; }
+    public String getParentCompanyId() { return this.parentCompanyId; }
     /**
      * If this business entity is part of an organization, this value is non-null and it is set
      * to the `CompanyId` value of the parent company of this business entity.
      * 
      * If this value is null, this business entity is a standalone.
      */
-    public void setparentCompanyId(String value) { this.parentCompanyId = value; }
+    public void setParentCompanyId(String value) { this.parentCompanyId = value; }
     /**
      * For convenience, this field indicates the top-level parent company.  This can be used
      * to jump directly to the top parent in complex organizational hierarchies.
      */
-    public String getenterpriseId() { return this.enterpriseId; }
+    public String getEnterpriseId() { return this.enterpriseId; }
     /**
      * For convenience, this field indicates the top-level parent company.  This can be used
      * to jump directly to the top parent in complex organizational hierarchies.
      */
-    public void setenterpriseId(String value) { this.enterpriseId = value; }
+    public void setEnterpriseId(String value) { this.enterpriseId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * This flag indicates whether the company is currently active.  An inactive company
      * should be hidden from the user interface but will still be available for querying.
      */
-    public Boolean getisActive() { return this.isActive; }
+    public Boolean getIsActive() { return this.isActive; }
     /**
      * This flag indicates whether the company is currently active.  An inactive company
      * should be hidden from the user interface but will still be available for querying.
      */
-    public void setisActive(Boolean value) { this.isActive = value; }
+    public void setIsActive(Boolean value) { this.isActive = value; }
     /**
      * The default currency code used by this business entity.  This value can be overridden
      * for invoices in a different currency code.
      * 
      * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies)
      */
-    public String getdefaultCurrencyCode() { return this.defaultCurrencyCode; }
+    public String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
      * The default currency code used by this business entity.  This value can be overridden
      * for invoices in a different currency code.
      * 
      * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies)
      */
-    public void setdefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
+    public void setDefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
     /**
      * The URL of this company's logo, if known.
      */
-    public String getcompanyLogoUrl() { return this.companyLogoUrl; }
+    public String getCompanyLogoUrl() { return this.companyLogoUrl; }
     /**
      * The URL of this company's logo, if known.
      */
-    public void setcompanyLogoUrl(String value) { this.companyLogoUrl = value; }
+    public void setCompanyLogoUrl(String value) { this.companyLogoUrl = value; }
     /**
      * The Lockstep `ContactId` of the primary contact for this company.
      */
-    public String getprimaryContactId() { return this.primaryContactId; }
+    public String getPrimaryContactId() { return this.primaryContactId; }
     /**
      * The Lockstep `ContactId` of the primary contact for this company.
      */
-    public void setprimaryContactId(String value) { this.primaryContactId = value; }
+    public void setPrimaryContactId(String value) { this.primaryContactId = value; }
     /**
      * Address info
      */
-    public String getaddress1() { return this.address1; }
+    public String getAddress1() { return this.address1; }
     /**
      * Address info
      */
-    public void setaddress1(String value) { this.address1 = value; }
+    public void setAddress1(String value) { this.address1 = value; }
     /**
      * Address info
      */
-    public String getaddress2() { return this.address2; }
+    public String getAddress2() { return this.address2; }
     /**
      * Address info
      */
-    public void setaddress2(String value) { this.address2 = value; }
+    public void setAddress2(String value) { this.address2 = value; }
     /**
      * Address info
      */
-    public String getaddress3() { return this.address3; }
+    public String getAddress3() { return this.address3; }
     /**
      * Address info
      */
-    public void setaddress3(String value) { this.address3 = value; }
+    public void setAddress3(String value) { this.address3 = value; }
     /**
      * Address info
      */
-    public String getcity() { return this.city; }
+    public String getCity() { return this.city; }
     /**
      * Address info
      */
-    public void setcity(String value) { this.city = value; }
+    public void setCity(String value) { this.city = value; }
     /**
      * Address info
      */
-    public String getstateRegion() { return this.stateRegion; }
+    public String getStateRegion() { return this.stateRegion; }
     /**
      * Address info
      */
-    public void setstateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(String value) { this.stateRegion = value; }
     /**
      * Address info
      */
-    public String getpostalCode() { return this.postalCode; }
+    public String getPostalCode() { return this.postalCode; }
     /**
      * Address info
      */
-    public void setpostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(String value) { this.postalCode = value; }
     /**
      * Address info
      */
-    public String getcountry() { return this.country; }
+    public String getCountry() { return this.country; }
     /**
      * Address info
      */
-    public void setcountry(String value) { this.country = value; }
+    public void setCountry(String value) { this.country = value; }
     /**
      * Phone number
      */
-    public String getphoneNumber() { return this.phoneNumber; }
+    public String getPhoneNumber() { return this.phoneNumber; }
     /**
      * Phone number
      */
-    public void setphoneNumber(String value) { this.phoneNumber = value; }
+    public void setPhoneNumber(String value) { this.phoneNumber = value; }
     /**
      * Fax number
      */
-    public String getfaxNumber() { return this.faxNumber; }
+    public String getFaxNumber() { return this.faxNumber; }
     /**
      * Fax number
      */
-    public void setfaxNumber(String value) { this.faxNumber = value; }
+    public void setFaxNumber(String value) { this.faxNumber = value; }
     /**
      * The date this company was created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date this company was created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created this company
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this company
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date this company was last modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date this company was last modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified this company
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this company
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * The name of the user who last modified this company
      */
-    public String getmodifiedUserName() { return this.modifiedUserName; }
+    public String getModifiedUserName() { return this.modifiedUserName; }
     /**
      * The name of the user who last modified this company
      */
-    public void setmodifiedUserName(String value) { this.modifiedUserName = value; }
+    public void setModifiedUserName(String value) { this.modifiedUserName = value; }
     /**
      * Federal Tax ID
      */
-    public String gettaxId() { return this.taxId; }
+    public String getTaxId() { return this.taxId; }
     /**
      * Federal Tax ID
      */
-    public void settaxId(String value) { this.taxId = value; }
+    public void setTaxId(String value) { this.taxId = value; }
     /**
      * Dun & Bradstreet Number
      */
-    public String getdunsNumber() { return this.dunsNumber; }
+    public String getDunsNumber() { return this.dunsNumber; }
     /**
      * Dun & Bradstreet Number
      */
-    public void setdunsNumber(String value) { this.dunsNumber = value; }
+    public void setDunsNumber(String value) { this.dunsNumber = value; }
     /**
      * AP (Accounts Payable) Email Address
      */
-    public String getapEmailAddress() { return this.apEmailAddress; }
+    public String getApEmailAddress() { return this.apEmailAddress; }
     /**
      * AP (Accounts Payable) Email Address
      */
-    public void setapEmailAddress(String value) { this.apEmailAddress = value; }
+    public void setApEmailAddress(String value) { this.apEmailAddress = value; }
     /**
      * AR (Accounts Receivable) Email Address
      */
-    public String getarEmailAddress() { return this.arEmailAddress; }
+    public String getArEmailAddress() { return this.arEmailAddress; }
     /**
      * AR (Accounts Receivable) Email Address
      */
-    public void setarEmailAddress(String value) { this.arEmailAddress = value; }
+    public void setArEmailAddress(String value) { this.arEmailAddress = value; }
     /**
      * For companies that use a custom domain name for their email system, this is
      * the domain name used by this company.  If this value is known, new emails that
      * come in from this domain will be connected to this company.
      */
-    public String getdomainName() { return this.domainName; }
+    public String getDomainName() { return this.domainName; }
     /**
      * For companies that use a custom domain name for their email system, this is
      * the domain name used by this company.  If this value is known, new emails that
      * come in from this domain will be connected to this company.
      */
-    public void setdomainName(String value) { this.domainName = value; }
+    public void setDomainName(String value) { this.domainName = value; }
     /**
      * Identifier for classification of this company.
      */
-    public String getcompanyClassificationCodeDefId() { return this.companyClassificationCodeDefId; }
+    public String getCompanyClassificationCodeDefId() { return this.companyClassificationCodeDefId; }
     /**
      * Identifier for classification of this company.
      */
-    public void setcompanyClassificationCodeDefId(String value) { this.companyClassificationCodeDefId = value; }
+    public void setCompanyClassificationCodeDefId(String value) { this.companyClassificationCodeDefId = value; }
     /**
      * Description of the company.
      */
-    public String getdescription() { return this.description; }
+    public String getDescription() { return this.description; }
     /**
      * Description of the company.
      */
-    public void setdescription(String value) { this.description = value; }
+    public void setDescription(String value) { this.description = value; }
     /**
      * Website URL for this company.
      */
-    public String getwebsite() { return this.website; }
+    public String getWebsite() { return this.website; }
     /**
      * Website URL for this company.
      */
-    public void setwebsite(String value) { this.website = value; }
+    public void setWebsite(String value) { this.website = value; }
     /**
      * The AppEnrollmentId of the application that imported this company record.  For accounts
      * with more than one financial system connected, this field identifies the originating
      * financial system that produced this record.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this company record.  For accounts
      * with more than one financial system connected, this field identifies the originating
      * financial system that produced this record.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * All notes attached to this company.
      * 
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this company.
      * 
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this company.
      * 
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this company.
      * 
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All contacts attached to this company.
      * 
      * To retrieve this collection, specify `Contacts` in the "Include" parameter for your query.
      */
-    public ContactModel[] getcontacts() { return this.contacts; }
+    public ContactModel[] getContacts() { return this.contacts; }
     /**
      * All contacts attached to this company.
      * 
      * To retrieve this collection, specify `Contacts` in the "Include" parameter for your query.
      */
-    public void setcontacts(ContactModel[] value) { this.contacts = value; }
+    public void setContacts(ContactModel[] value) { this.contacts = value; }
     /**
      * All invoices attached to this company.
      * 
      * To retrieve this collection, specify `Invoices` in the "Include" parameter for your query. For more information on Invoices, see [InvoiceModel](https://developer.lockstep.io/reference/get_api-v1-invoices-id).
      */
-    public Object[] getinvoices() { return this.invoices; }
+    public Object[] getInvoices() { return this.invoices; }
     /**
      * All invoices attached to this company.
      * 
      * To retrieve this collection, specify `Invoices` in the "Include" parameter for your query. For more information on Invoices, see [InvoiceModel](https://developer.lockstep.io/reference/get_api-v1-invoices-id).
      */
-    public void setinvoices(Object[] value) { this.invoices = value; }
+    public void setInvoices(Object[] value) { this.invoices = value; }
     /**
      * All definitions attached to this company.
      * 
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to this company.
      * 
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to this company.
      * 
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this company.
      * 
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
      * Classification code definition for this company.
      * 
      * To retrieve this collection, specify `Classification` in the "Include" parameter for your query.
      */
-    public CodeDefinitionModel getcompanyClassificationCodeDefinition() { return this.companyClassificationCodeDefinition; }
+    public CodeDefinitionModel getCompanyClassificationCodeDefinition() { return this.companyClassificationCodeDefinition; }
     /**
      * Classification code definition for this company.
      * 
      * To retrieve this collection, specify `Classification` in the "Include" parameter for your query.
      */
-    public void setcompanyClassificationCodeDefinition(CodeDefinitionModel value) { this.companyClassificationCodeDefinition = value; }
+    public void setCompanyClassificationCodeDefinition(CodeDefinitionModel value) { this.companyClassificationCodeDefinition = value; }
 };

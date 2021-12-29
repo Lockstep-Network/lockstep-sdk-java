@@ -28,42 +28,42 @@ public class LeadModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getleadId() { return this.leadId; }
+    public String getLeadId() { return this.leadId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setleadId(String value) { this.leadId = value; }
+    public void setLeadId(String value) { this.leadId = value; }
     /**
      * Name of lead
      */
-    public String getname() { return this.name; }
+    public String getName() { return this.name; }
     /**
      * Name of lead
      */
-    public void setname(String value) { this.name = value; }
+    public void setName(String value) { this.name = value; }
     /**
      * Name of company of lead
      */
-    public String getcompany() { return this.company; }
+    public String getCompany() { return this.company; }
     /**
      * Name of company of lead
      */
-    public void setcompany(String value) { this.company = value; }
+    public void setCompany(String value) { this.company = value; }
     /**
      * Email of lead
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * Email of lead
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
     /**
      * Requested ERP of lead
      */
-    public String geterpSystem() { return this.erpSystem; }
+    public String getErpSystem() { return this.erpSystem; }
     /**
      * Requested ERP of lead
      */
-    public void seterpSystem(String value) { this.erpSystem = value; }
+    public void setErpSystem(String value) { this.erpSystem = value; }
 };

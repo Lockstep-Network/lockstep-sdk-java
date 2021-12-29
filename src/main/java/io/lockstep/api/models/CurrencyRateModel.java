@@ -27,33 +27,33 @@ public class CurrencyRateModel
     /**
      * The source currency
      */
-    public String getsourceCurrency() { return this.sourceCurrency; }
+    public String getSourceCurrency() { return this.sourceCurrency; }
     /**
      * The source currency
      */
-    public void setsourceCurrency(String value) { this.sourceCurrency = value; }
+    public void setSourceCurrency(String value) { this.sourceCurrency = value; }
     /**
      * The destination currency
      */
-    public String getdestinationCurrency() { return this.destinationCurrency; }
+    public String getDestinationCurrency() { return this.destinationCurrency; }
     /**
      * The destination currency
      */
-    public void setdestinationCurrency(String value) { this.destinationCurrency = value; }
+    public void setDestinationCurrency(String value) { this.destinationCurrency = value; }
     /**
      * The date for the currency rate
      */
-    public Date getdate() { return this.date; }
+    public Date getDate() { return this.date; }
     /**
      * The date for the currency rate
      */
-    public void setdate(Date value) { this.date = value; }
+    public void setDate(Date value) { this.date = value; }
     /**
      * The currency rate value
      */
-    public Double getcurrencyRate() { return this.currencyRate; }
+    public Double getCurrencyRate() { return this.currencyRate; }
     /**
      * The currency rate value
      */
-    public void setcurrencyRate(Double value) { this.currencyRate = value; }
+    public void setCurrencyRate(Double value) { this.currencyRate = value; }
 };

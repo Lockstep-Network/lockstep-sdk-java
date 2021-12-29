@@ -24,17 +24,17 @@ public class ProvisioningModel
     /**
      * The full name of the new user
      */
-    public String getfullName() { return this.fullName; }
+    public String getFullName() { return this.fullName; }
     /**
      * The full name of the new user
      */
-    public void setfullName(String value) { this.fullName = value; }
+    public void setFullName(String value) { this.fullName = value; }
     /**
      * The information necessary to enroll the user in their ERP
      */
-    public ErpInfoModel geterp() { return this.erp; }
+    public ErpInfoModel getErp() { return this.erp; }
     /**
      * The information necessary to enroll the user in their ERP
      */
-    public void seterp(ErpInfoModel value) { this.erp = value; }
+    public void setErp(ErpInfoModel value) { this.erp = value; }
 };

@@ -25,25 +25,25 @@ public class ErpModel
     /**
      * Unique ID for this ERP
      */
-    public String geterpSystemId() { return this.erpSystemId; }
+    public String getErpSystemId() { return this.erpSystemId; }
     /**
      * Unique ID for this ERP
      */
-    public void seterpSystemId(String value) { this.erpSystemId = value; }
+    public void setErpSystemId(String value) { this.erpSystemId = value; }
     /**
      * Name of ERP
      */
-    public String getname() { return this.name; }
+    public String getName() { return this.name; }
     /**
      * Name of ERP
      */
-    public void setname(String value) { this.name = value; }
+    public void setName(String value) { this.name = value; }
     /**
      * Flag to indicate if ERP is supported
      */
-    public Boolean getisSupported() { return this.isSupported; }
+    public Boolean getIsSupported() { return this.isSupported; }
     /**
      * Flag to indicate if ERP is supported
      */
-    public void setisSupported(Boolean value) { this.isSupported = value; }
+    public void setIsSupported(Boolean value) { this.isSupported = value; }
 };

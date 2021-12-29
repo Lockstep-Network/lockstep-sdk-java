@@ -25,25 +25,25 @@ public class StateModel
     /**
      * Name of the state
      */
-    public String getname() { return this.name; }
+    public String getName() { return this.name; }
     /**
      * Name of the state
      */
-    public void setname(String value) { this.name = value; }
+    public void setName(String value) { this.name = value; }
     /**
      * 2 letter alphabetic code for the given state
      */
-    public String getalpha2() { return this.alpha2; }
+    public String getAlpha2() { return this.alpha2; }
     /**
      * 2 letter alphabetic code for the given state
      */
-    public void setalpha2(String value) { this.alpha2 = value; }
+    public void setAlpha2(String value) { this.alpha2 = value; }
     /**
      * A different name for a state
      */
-    public String getaliases() { return this.aliases; }
+    public String getAliases() { return this.aliases; }
     /**
      * A different name for a state
      */
-    public void setaliases(String value) { this.aliases = value; }
+    public void setAliases(String value) { this.aliases = value; }
 };

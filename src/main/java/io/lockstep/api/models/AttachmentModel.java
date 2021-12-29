@@ -37,106 +37,106 @@ public class AttachmentModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getattachmentId() { return this.attachmentId; }
+    public String getAttachmentId() { return this.attachmentId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setattachmentId(String value) { this.attachmentId = value; }
+    public void setAttachmentId(String value) { this.attachmentId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The name of the table the attachment is associated with
      */
-    public String gettableKey() { return this.tableKey; }
+    public String getTableKey() { return this.tableKey; }
     /**
      * The name of the table the attachment is associated with
      */
-    public void settableKey(String value) { this.tableKey = value; }
+    public void setTableKey(String value) { this.tableKey = value; }
     /**
      * The ID of the object the attachment is associated with
      */
-    public String getobjectKey() { return this.objectKey; }
+    public String getObjectKey() { return this.objectKey; }
     /**
      * The ID of the object the attachment is associated with
      */
-    public void setobjectKey(String value) { this.objectKey = value; }
+    public void setObjectKey(String value) { this.objectKey = value; }
     /**
      * Name of the file
      */
-    public String getfileName() { return this.fileName; }
+    public String getFileName() { return this.fileName; }
     /**
      * Name of the file
      */
-    public void setfileName(String value) { this.fileName = value; }
+    public void setFileName(String value) { this.fileName = value; }
     /**
      * Extension type of the file
      */
-    public String getfileExt() { return this.fileExt; }
+    public String getFileExt() { return this.fileExt; }
     /**
      * Extension type of the file
      */
-    public void setfileExt(String value) { this.fileExt = value; }
+    public void setFileExt(String value) { this.fileExt = value; }
     /**
      * Corresponding AttachmentType object to describe this attachment
      */
-    public String getattachmentTypeId() { return this.attachmentTypeId; }
+    public String getAttachmentTypeId() { return this.attachmentTypeId; }
     /**
      * Corresponding AttachmentType object to describe this attachment
      */
-    public void setattachmentTypeId(String value) { this.attachmentTypeId = value; }
+    public void setAttachmentTypeId(String value) { this.attachmentTypeId = value; }
     /**
      * Flag indicating the attachment was archived
      */
-    public Boolean getisArchived() { return this.isArchived; }
+    public Boolean getIsArchived() { return this.isArchived; }
     /**
      * Flag indicating the attachment was archived
      */
-    public void setisArchived(Boolean value) { this.isArchived = value; }
-    public String getoriginAttachmentId() { return this.originAttachmentId; }
-    public void setoriginAttachmentId(String value) { this.originAttachmentId = value; }
+    public void setIsArchived(Boolean value) { this.isArchived = value; }
+    public String getOriginAttachmentId() { return this.originAttachmentId; }
+    public void setOriginAttachmentId(String value) { this.originAttachmentId = value; }
     /**
      * Flag for if LS clients can see this file
      */
-    public Boolean getviewInternal() { return this.viewInternal; }
+    public Boolean getViewInternal() { return this.viewInternal; }
     /**
      * Flag for if LS clients can see this file
      */
-    public void setviewInternal(Boolean value) { this.viewInternal = value; }
+    public void setViewInternal(Boolean value) { this.viewInternal = value; }
     /**
      * Flag for if Vendors and customers can see this file
      */
-    public Boolean getviewExternal() { return this.viewExternal; }
+    public Boolean getViewExternal() { return this.viewExternal; }
     /**
      * Flag for if Vendors and customers can see this file
      */
-    public void setviewExternal(Boolean value) { this.viewExternal = value; }
+    public void setViewExternal(Boolean value) { this.viewExternal = value; }
     /**
      * The date the attachment was created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date the attachment was created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * Id of the user who made the file
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * Id of the user who made the file
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
 };

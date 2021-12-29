@@ -58,280 +58,280 @@ public class UserAccountModel
      * 
      * This record provides a link to the user's Azure AD B2C OID.
      */
-    public String getuserId() { return this.userId; }
+    public String getUserId() { return this.userId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * This record provides a link to the user's Azure AD B2C OID.
      */
-    public void setuserId(String value) { this.userId = value; }
+    public void setUserId(String value) { this.userId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The full name of the user
      */
-    public String getuserName() { return this.userName; }
+    public String getUserName() { return this.userName; }
     /**
      * The full name of the user
      */
-    public void setuserName(String value) { this.userName = value; }
+    public void setUserName(String value) { this.userName = value; }
     /**
      * The email of the user
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * The email of the user
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
     /**
      * The status of the user's account
      */
-    public String getstatus() { return this.status; }
+    public String getStatus() { return this.status; }
     /**
      * The status of the user's account
      */
-    public void setstatus(String value) { this.status = value; }
+    public void setStatus(String value) { this.status = value; }
     /**
      * The date that the user account was created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date that the user account was created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created the user account
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the user account
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date the user account was last modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date the user account was last modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified the user account
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the user account
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * The name of the user who last modified the user account
      */
-    public String getmodifiedUserName() { return this.modifiedUserName; }
+    public String getModifiedUserName() { return this.modifiedUserName; }
     /**
      * The name of the user who last modified the user account
      */
-    public void setmodifiedUserName(String value) { this.modifiedUserName = value; }
+    public void setModifiedUserName(String value) { this.modifiedUserName = value; }
     /**
      * The ID of the user in Azure B2C
      */
-    public String getb2CUserId() { return this.b2CUserId; }
+    public String getB2CUserId() { return this.b2CUserId; }
     /**
      * The ID of the user in Azure B2C
      */
-    public void setb2CUserId(String value) { this.b2CUserId = value; }
+    public void setB2CUserId(String value) { this.b2CUserId = value; }
     /**
      * The id of the Permission Level for the user.
      */
-    public String getuserRole() { return this.userRole; }
+    public String getUserRole() { return this.userRole; }
     /**
      * The id of the Permission Level for the user.
      */
-    public void setuserRole(String value) { this.userRole = value; }
+    public void setUserRole(String value) { this.userRole = value; }
     /**
      * The date timestamp when the invite was sent to the user.
      */
-    public Date getinviteSent() { return this.inviteSent; }
+    public Date getInviteSent() { return this.inviteSent; }
     /**
      * The date timestamp when the invite was sent to the user.
      */
-    public void setinviteSent(Date value) { this.inviteSent = value; }
+    public void setInviteSent(Date value) { this.inviteSent = value; }
     /**
      * The phone number of the user.
      */
-    public String getphoneNumber() { return this.phoneNumber; }
+    public String getPhoneNumber() { return this.phoneNumber; }
     /**
      * The phone number of the user.
      */
-    public void setphoneNumber(String value) { this.phoneNumber = value; }
+    public void setPhoneNumber(String value) { this.phoneNumber = value; }
     /**
      * The fax number of the user.
      */
-    public String getfaxNumber() { return this.faxNumber; }
+    public String getFaxNumber() { return this.faxNumber; }
     /**
      * The fax number of the user.
      */
-    public void setfaxNumber(String value) { this.faxNumber = value; }
+    public void setFaxNumber(String value) { this.faxNumber = value; }
     /**
      * The title of the user; free text field
      */
-    public String gettitle() { return this.title; }
+    public String getTitle() { return this.title; }
     /**
      * The title of the user; free text field
      */
-    public void settitle(String value) { this.title = value; }
+    public void setTitle(String value) { this.title = value; }
     /**
      * FK to the CodeDefinition table; CodeType = 'AccountingRole'
      */
-    public String getaccountingRoleCodeDefId() { return this.accountingRoleCodeDefId; }
+    public String getAccountingRoleCodeDefId() { return this.accountingRoleCodeDefId; }
     /**
      * FK to the CodeDefinition table; CodeType = 'AccountingRole'
      */
-    public void setaccountingRoleCodeDefId(String value) { this.accountingRoleCodeDefId = value; }
+    public void setAccountingRoleCodeDefId(String value) { this.accountingRoleCodeDefId = value; }
     /**
      * Address Line 1 for this User
      */
-    public String getaddress1() { return this.address1; }
+    public String getAddress1() { return this.address1; }
     /**
      * Address Line 1 for this User
      */
-    public void setaddress1(String value) { this.address1 = value; }
+    public void setAddress1(String value) { this.address1 = value; }
     /**
      * Address Line 2 for this User
      */
-    public String getaddress2() { return this.address2; }
+    public String getAddress2() { return this.address2; }
     /**
      * Address Line 2 for this User
      */
-    public void setaddress2(String value) { this.address2 = value; }
+    public void setAddress2(String value) { this.address2 = value; }
     /**
      * Address Line 3 for this User
      */
-    public String getaddress3() { return this.address3; }
+    public String getAddress3() { return this.address3; }
     /**
      * Address Line 3 for this User
      */
-    public void setaddress3(String value) { this.address3 = value; }
+    public void setAddress3(String value) { this.address3 = value; }
     /**
      * City for this User
      */
-    public String getcity() { return this.city; }
+    public String getCity() { return this.city; }
     /**
      * City for this User
      */
-    public void setcity(String value) { this.city = value; }
+    public void setCity(String value) { this.city = value; }
     /**
      * Region ("state" in the US) for this User
      */
-    public String getstateRegion() { return this.stateRegion; }
+    public String getStateRegion() { return this.stateRegion; }
     /**
      * Region ("state" in the US) for this User
      */
-    public void setstateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(String value) { this.stateRegion = value; }
     /**
      * Postal Code this User
      */
-    public String getpostalCode() { return this.postalCode; }
+    public String getPostalCode() { return this.postalCode; }
     /**
      * Postal Code this User
      */
-    public void setpostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(String value) { this.postalCode = value; }
     /**
      * Country for this User This will be validated by the /api/v1/countries data set
      */
-    public String getcountry() { return this.country; }
+    public String getCountry() { return this.country; }
     /**
      * Country for this User This will be validated by the /api/v1/countries data set
      */
-    public void setcountry(String value) { this.country = value; }
+    public void setCountry(String value) { this.country = value; }
     /**
      * Image URL for this User
      */
-    public String getimageURL() { return this.imageURL; }
+    public String getImageURL() { return this.imageURL; }
     /**
      * Image URL for this User
      */
-    public void setimageURL(String value) { this.imageURL = value; }
+    public void setImageURL(String value) { this.imageURL = value; }
     /**
      * Description for this User.
      */
-    public String getdescription() { return this.description; }
+    public String getDescription() { return this.description; }
     /**
      * Description for this User.
      */
-    public void setdescription(String value) { this.description = value; }
+    public void setDescription(String value) { this.description = value; }
     /**
      * Last date time user logged into Azure B2C.
      */
-    public Date getb2CLastLoggedIn() { return this.b2CLastLoggedIn; }
+    public Date getB2CLastLoggedIn() { return this.b2CLastLoggedIn; }
     /**
      * Last date time user logged into Azure B2C.
      */
-    public void setb2CLastLoggedIn(Date value) { this.b2CLastLoggedIn = value; }
+    public void setB2CLastLoggedIn(Date value) { this.b2CLastLoggedIn = value; }
     /**
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
      * 
      * For a list of defined currency codes, see [TODO]()
      */
-    public String getdefaultCurrencyCode() { return this.defaultCurrencyCode; }
+    public String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
      * 
      * For a list of defined currency codes, see [TODO]()
      */
-    public void setdefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
+    public void setDefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
     /**
      * All notes attached to this User.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this User.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this User.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this User.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All values attached to this User.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this User.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
      * Accounting role definition for this User.
      * To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
      */
-    public CodeDefinitionModel getaccountingRoleCodeDefinition() { return this.accountingRoleCodeDefinition; }
+    public CodeDefinitionModel getAccountingRoleCodeDefinition() { return this.accountingRoleCodeDefinition; }
     /**
      * Accounting role definition for this User.
      * To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
      */
-    public void setaccountingRoleCodeDefinition(CodeDefinitionModel value) { this.accountingRoleCodeDefinition = value; }
+    public void setAccountingRoleCodeDefinition(CodeDefinitionModel value) { this.accountingRoleCodeDefinition = value; }
 };

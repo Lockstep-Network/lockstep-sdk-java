@@ -37,94 +37,94 @@ public class CustomFieldValueModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getcustomFieldDefinitionId() { return this.customFieldDefinitionId; }
+    public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setcustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
+    public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
     /**
      * Additional key if source table doesn't have a unique id
      */
-    public String getrecordKey() { return this.recordKey; }
+    public String getRecordKey() { return this.recordKey; }
     /**
      * Additional key if source table doesn't have a unique id
      */
-    public void setrecordKey(String value) { this.recordKey = value; }
+    public void setRecordKey(String value) { this.recordKey = value; }
     /**
      * String of data for field
      */
-    public String getstringValue() { return this.stringValue; }
+    public String getStringValue() { return this.stringValue; }
     /**
      * String of data for field
      */
-    public void setstringValue(String value) { this.stringValue = value; }
+    public void setStringValue(String value) { this.stringValue = value; }
     /**
      * Number data for field
      */
-    public Double getnumericValue() { return this.numericValue; }
+    public Double getNumericValue() { return this.numericValue; }
     /**
      * Number data for field
      */
-    public void setnumericValue(Double value) { this.numericValue = value; }
+    public void setNumericValue(Double value) { this.numericValue = value; }
     /**
      * Date created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * Date created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * Id of user who created this value
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * Id of user who created this value
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * Date modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * Date modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * Id of user who modified this value
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * Id of user who modified this value
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * Definition of the value
      */
-    public CustomFieldDefinitionModel getcustomFieldDefinition() { return this.customFieldDefinition; }
+    public CustomFieldDefinitionModel getCustomFieldDefinition() { return this.customFieldDefinition; }
     /**
      * Definition of the value
      */
-    public void setcustomFieldDefinition(CustomFieldDefinitionModel value) { this.customFieldDefinition = value; }
+    public void setCustomFieldDefinition(CustomFieldDefinitionModel value) { this.customFieldDefinition = value; }
 };

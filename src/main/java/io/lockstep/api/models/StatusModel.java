@@ -35,99 +35,99 @@ public class StatusModel
     /**
      * If authentication is successful, contains the username of the logged-in user.
      */
-    public String getuserName() { return this.userName; }
+    public String getUserName() { return this.userName; }
     /**
      * If authentication is successful, contains the username of the logged-in user.
      */
-    public void setuserName(String value) { this.userName = value; }
+    public void setUserName(String value) { this.userName = value; }
     /**
      * If authentication is successful, contains subscription account name of logged-in user.
      */
-    public String getaccountName() { return this.accountName; }
+    public String getAccountName() { return this.accountName; }
     /**
      * If authentication is successful, contains subscription account name of logged-in user.
      */
-    public void setaccountName(String value) { this.accountName = value; }
+    public void setAccountName(String value) { this.accountName = value; }
     /**
      * If authentication is successful, contains subscription account company id of logged-in user.
      */
-    public String getaccountCompanyId() { return this.accountCompanyId; }
+    public String getAccountCompanyId() { return this.accountCompanyId; }
     /**
      * If authentication is successful, contains subscription account company id of logged-in user.
      */
-    public void setaccountCompanyId(String value) { this.accountCompanyId = value; }
+    public void setAccountCompanyId(String value) { this.accountCompanyId = value; }
     /**
      * If authentication is successful, contains the unique identifier of the logged-in user.
      */
-    public String getuserId() { return this.userId; }
+    public String getUserId() { return this.userId; }
     /**
      * If authentication is successful, contains the unique identifier of the logged-in user.
      */
-    public void setuserId(String value) { this.userId = value; }
+    public void setUserId(String value) { this.userId = value; }
     /**
      * If authentication is successful, contains the group key of the logged-in user.
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * If authentication is successful, contains the group key of the logged-in user.
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * Returns true if authentication for this API was successful.
      */
-    public Boolean getloggedIn() { return this.loggedIn; }
+    public Boolean getLoggedIn() { return this.loggedIn; }
     /**
      * Returns true if authentication for this API was successful.
      */
-    public void setloggedIn(Boolean value) { this.loggedIn = value; }
+    public void setLoggedIn(Boolean value) { this.loggedIn = value; }
     /**
      * The error message.
      */
-    public String geterrorMessage() { return this.errorMessage; }
+    public String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message.
      */
-    public void seterrorMessage(String value) { this.errorMessage = value; }
+    public void setErrorMessage(String value) { this.errorMessage = value; }
     /**
      * The set of roles for this user.
      */
-    public String[] getroles() { return this.roles; }
+    public String[] getRoles() { return this.roles; }
     /**
      * The set of roles for this user.
      */
-    public void setroles(String[] value) { this.roles = value; }
+    public void setRoles(String[] value) { this.roles = value; }
     /**
      * Date and time user has last logged into Azure B2C.
      */
-    public Date getlastLoggedIn() { return this.lastLoggedIn; }
+    public Date getLastLoggedIn() { return this.lastLoggedIn; }
     /**
      * Date and time user has last logged into Azure B2C.
      */
-    public void setlastLoggedIn(Date value) { this.lastLoggedIn = value; }
+    public void setLastLoggedIn(Date value) { this.lastLoggedIn = value; }
     /**
      * The id of the API key used to authenticate.
      */
-    public String getapiKeyId() { return this.apiKeyId; }
+    public String getApiKeyId() { return this.apiKeyId; }
     /**
      * The id of the API key used to authenticate.
      */
-    public void setapiKeyId(String value) { this.apiKeyId = value; }
+    public void setApiKeyId(String value) { this.apiKeyId = value; }
     /**
      * If authentication is successful, contains the user status of the logged-in user.
      */
-    public String getuserStatus() { return this.userStatus; }
+    public String getUserStatus() { return this.userStatus; }
     /**
      * If authentication is successful, contains the user status of the logged-in user.
      */
-    public void setuserStatus(String value) { this.userStatus = value; }
+    public void setUserStatus(String value) { this.userStatus = value; }
     /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.
      */
-    public Object getdependencies() { return this.dependencies; }
+    public Object getDependencies() { return this.dependencies; }
     /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.
      */
-    public void setdependencies(Object value) { this.dependencies = value; }
+    public void setDependencies(Object value) { this.dependencies = value; }
 };

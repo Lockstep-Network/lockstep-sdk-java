@@ -27,41 +27,41 @@ public class SyncEntityResultModel
     /**
      * The number of entities inserted
      */
-    public Integer getinsertCount() { return this.insertCount; }
+    public Integer getInsertCount() { return this.insertCount; }
     /**
      * The number of entities inserted
      */
-    public void setinsertCount(Integer value) { this.insertCount = value; }
+    public void setInsertCount(Integer value) { this.insertCount = value; }
     /**
      * The number of entities updated
      */
-    public Integer getupdateCount() { return this.updateCount; }
+    public Integer getUpdateCount() { return this.updateCount; }
     /**
      * The number of entities updated
      */
-    public void setupdateCount(Integer value) { this.updateCount = value; }
+    public void setUpdateCount(Integer value) { this.updateCount = value; }
     /**
      * The number of entities skipped
      */
-    public Integer getskipCount() { return this.skipCount; }
+    public Integer getSkipCount() { return this.skipCount; }
     /**
      * The number of entities skipped
      */
-    public void setskipCount(Integer value) { this.skipCount = value; }
+    public void setSkipCount(Integer value) { this.skipCount = value; }
     /**
      * The number of errors encountered during sync
      */
-    public Integer geterrorCount() { return this.errorCount; }
+    public Integer getErrorCount() { return this.errorCount; }
     /**
      * The number of errors encountered during sync
      */
-    public void seterrorCount(Integer value) { this.errorCount = value; }
+    public void setErrorCount(Integer value) { this.errorCount = value; }
     /**
      * The errors encountered during sync keyed by ERP key
      */
-    public Object geterrors() { return this.errors; }
+    public Object getErrors() { return this.errors; }
     /**
      * The errors encountered during sync keyed by ERP key
      */
-    public void seterrors(Object value) { this.errors = value; }
+    public void setErrors(Object value) { this.errors = value; }
 };

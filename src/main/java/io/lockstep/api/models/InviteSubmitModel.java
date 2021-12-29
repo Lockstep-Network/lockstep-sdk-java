@@ -23,9 +23,9 @@ public class InviteSubmitModel
     /**
      * The email address of the user to invite
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * The email address of the user to invite
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
 };

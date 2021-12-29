@@ -27,41 +27,41 @@ public class CashflowReportModel
     /**
      * Timeframe in days the cashflow report is generated on
      */
-    public Integer gettimeframe() { return this.timeframe; }
+    public Integer getTimeframe() { return this.timeframe; }
     /**
      * Timeframe in days the cashflow report is generated on
      */
-    public void settimeframe(Integer value) { this.timeframe = value; }
+    public void setTimeframe(Integer value) { this.timeframe = value; }
     /**
      * Amount of payments collected based in the timeframe
      */
-    public Double getpaymentsCollected() { return this.paymentsCollected; }
+    public Double getPaymentsCollected() { return this.paymentsCollected; }
     /**
      * Amount of payments collected based in the timeframe
      */
-    public void setpaymentsCollected(Double value) { this.paymentsCollected = value; }
+    public void setPaymentsCollected(Double value) { this.paymentsCollected = value; }
     /**
      * Number of payments collected based in the timeframe
      */
-    public Integer getpaymentsCollectedCount() { return this.paymentsCollectedCount; }
+    public Integer getPaymentsCollectedCount() { return this.paymentsCollectedCount; }
     /**
      * Number of payments collected based in the timeframe
      */
-    public void setpaymentsCollectedCount(Integer value) { this.paymentsCollectedCount = value; }
+    public void setPaymentsCollectedCount(Integer value) { this.paymentsCollectedCount = value; }
     /**
      * Amount of invoices billed based in the timeframe
      */
-    public Double getinvoicesBilled() { return this.invoicesBilled; }
+    public Double getInvoicesBilled() { return this.invoicesBilled; }
     /**
      * Amount of invoices billed based in the timeframe
      */
-    public void setinvoicesBilled(Double value) { this.invoicesBilled = value; }
+    public void setInvoicesBilled(Double value) { this.invoicesBilled = value; }
     /**
      * Number of invoices billed in the timeframe
      */
-    public Integer getinvoicesBilledCount() { return this.invoicesBilledCount; }
+    public Integer getInvoicesBilledCount() { return this.invoicesBilledCount; }
     /**
      * Number of invoices billed in the timeframe
      */
-    public void setinvoicesBilledCount(Integer value) { this.invoicesBilledCount = value; }
+    public void setInvoicesBilledCount(Integer value) { this.invoicesBilledCount = value; }
 };

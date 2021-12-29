@@ -43,44 +43,44 @@ public class CreditMemoAppliedModel
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public String getcreditMemoAppliedId() { return this.creditMemoAppliedId; }
+    public String getCreditMemoAppliedId() { return this.creditMemoAppliedId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public void setcreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
+    public void setCreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The id of the invoice
      */
-    public String getinvoiceId() { return this.invoiceId; }
+    public String getInvoiceId() { return this.invoiceId; }
     /**
      * The id of the invoice
      */
-    public void setinvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The id of the credit memo invoice
      */
-    public String getcreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
+    public String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
     /**
      * The id of the credit memo invoice
      */
-    public void setcreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
+    public void setCreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -90,7 +90,7 @@ public class CreditMemoAppliedModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public String geterpKey() { return this.erpKey; }
+    public String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -100,109 +100,109 @@ public class CreditMemoAppliedModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public void seterpKey(String value) { this.erpKey = value; }
+    public void setErpKey(String value) { this.erpKey = value; }
     /**
      * Reference number for the applied credit memo.
      */
-    public Integer getentryNumber() { return this.entryNumber; }
+    public Integer getEntryNumber() { return this.entryNumber; }
     /**
      * Reference number for the applied credit memo.
      */
-    public void setentryNumber(Integer value) { this.entryNumber = value; }
+    public void setEntryNumber(Integer value) { this.entryNumber = value; }
     /**
      * Date payment applied to credit memo.
      */
-    public Date getapplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date payment applied to credit memo.
      */
-    public void setapplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to credit memo.
      */
-    public Double getcreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
+    public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
      * Amount applied to credit memo.
      */
-    public void setcreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
+    public void setCreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
     /**
      * Date credit memo applied record was created.
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * Date credit memo applied record was created.
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The id of the user who created this applied credit memo.
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The id of the user who created this applied credit memo.
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * Date credit memo applied record was modified.
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * Date credit memo applied record was modified.
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The id of the user who modified this applied credit memo.
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The id of the user who modified this applied credit memo.
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * All attachments attached to applied Credit Memo.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to applied Credit Memo.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All notes attached to this applied Credit Memo.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this applied Credit Memo.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All definitions attached to this applied Credit Memo.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to this applied Credit Memo.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to this Credit Memo.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this Credit Memo.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

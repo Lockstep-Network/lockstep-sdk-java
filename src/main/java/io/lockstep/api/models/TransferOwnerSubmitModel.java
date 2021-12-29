@@ -23,9 +23,9 @@ public class TransferOwnerSubmitModel
     /**
      * The ID of the user to transfer ownership to.
      */
-    public String gettargetUserId() { return this.targetUserId; }
+    public String getTargetUserId() { return this.targetUserId; }
     /**
      * The ID of the user to transfer ownership to.
      */
-    public void settargetUserId(String value) { this.targetUserId = value; }
+    public void setTargetUserId(String value) { this.targetUserId = value; }
 };

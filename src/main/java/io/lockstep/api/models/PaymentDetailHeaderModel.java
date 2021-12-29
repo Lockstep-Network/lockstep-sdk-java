@@ -31,52 +31,52 @@ public class PaymentDetailHeaderModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The total number of Customers.
      */
-    public Integer getcustomerCount() { return this.customerCount; }
+    public Integer getCustomerCount() { return this.customerCount; }
     /**
      * The total number of Customers.
      */
-    public void setcustomerCount(Integer value) { this.customerCount = value; }
+    public void setCustomerCount(Integer value) { this.customerCount = value; }
     /**
      * The total amount collected.
      */
-    public Double getamountCollected() { return this.amountCollected; }
+    public Double getAmountCollected() { return this.amountCollected; }
     /**
      * The total amount collected.
      */
-    public void setamountCollected(Double value) { this.amountCollected = value; }
+    public void setAmountCollected(Double value) { this.amountCollected = value; }
     /**
      * The total unapplied amount.
      */
-    public Double getunappliedAmount() { return this.unappliedAmount; }
+    public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * The total unapplied amount.
      */
-    public void setunappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
      * The number of paid invoices.
      */
-    public Integer getpaidInvoiceCount() { return this.paidInvoiceCount; }
+    public Integer getPaidInvoiceCount() { return this.paidInvoiceCount; }
     /**
      * The number of paid invoices.
      */
-    public void setpaidInvoiceCount(Integer value) { this.paidInvoiceCount = value; }
+    public void setPaidInvoiceCount(Integer value) { this.paidInvoiceCount = value; }
     /**
      * The number of open invoices.
      */
-    public Integer getopenInvoiceCount() { return this.openInvoiceCount; }
+    public Integer getOpenInvoiceCount() { return this.openInvoiceCount; }
     /**
      * The number of open invoices.
      */
-    public void setopenInvoiceCount(Integer value) { this.openInvoiceCount = value; }
+    public void setOpenInvoiceCount(Integer value) { this.openInvoiceCount = value; }
 };

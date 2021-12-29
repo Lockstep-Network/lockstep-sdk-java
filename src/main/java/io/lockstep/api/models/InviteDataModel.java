@@ -24,17 +24,17 @@ public class InviteDataModel
     /**
      * The email address of the invited user.
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * The email address of the invited user.
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
     /**
      * The status of the user.
      */
-    public String getuserStatus() { return this.userStatus; }
+    public String getUserStatus() { return this.userStatus; }
     /**
      * The status of the user.
      */
-    public void setuserStatus(String value) { this.userStatus = value; }
+    public void setUserStatus(String value) { this.userStatus = value; }
 };

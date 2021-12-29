@@ -38,102 +38,102 @@ public class CustomFieldDefinitionModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getcustomFieldDefinitionId() { return this.customFieldDefinitionId; }
+    public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setcustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
+    public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
     /**
      * Table to which this definition belongs
      */
-    public String gettableKey() { return this.tableKey; }
+    public String getTableKey() { return this.tableKey; }
     /**
      * Table to which this definition belongs
      */
-    public void settableKey(String value) { this.tableKey = value; }
+    public void setTableKey(String value) { this.tableKey = value; }
     /**
      * Id of app this definition belongs to
      */
-    public String getappId() { return this.appId; }
+    public String getAppId() { return this.appId; }
     /**
      * Id of app this definition belongs to
      */
-    public void setappId(String value) { this.appId = value; }
+    public void setAppId(String value) { this.appId = value; }
     /**
      * Text to display in-application for custom field
      */
-    public String getcustomFieldLabel() { return this.customFieldLabel; }
+    public String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
      * Text to display in-application for custom field
      */
-    public void setcustomFieldLabel(String value) { this.customFieldLabel = value; }
+    public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
     /**
      * Data type of this definition
      */
-    public String getdataType() { return this.dataType; }
+    public String getDataType() { return this.dataType; }
     /**
      * Data type of this definition
      */
-    public void setdataType(String value) { this.dataType = value; }
+    public void setDataType(String value) { this.dataType = value; }
     /**
      * Used for display logic when multiple custom fields exist
      */
-    public Integer getsortOrder() { return this.sortOrder; }
+    public Integer getSortOrder() { return this.sortOrder; }
     /**
      * Used for display logic when multiple custom fields exist
      */
-    public void setsortOrder(Integer value) { this.sortOrder = value; }
+    public void setSortOrder(Integer value) { this.sortOrder = value; }
     /**
      * Date created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * Date created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * Id of user who created this definition
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * Id of user who created this definition
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * Date modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * Date modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * Id of user who modified this definition
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * Id of user who modified this definition
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

@@ -36,86 +36,86 @@ public class InvoicePaymentDetailModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique identifier of this PaymentApplied record.
      */
-    public String getpaymentAppliedId() { return this.paymentAppliedId; }
+    public String getPaymentAppliedId() { return this.paymentAppliedId; }
     /**
      * The unique identifier of this PaymentApplied record.
      */
-    public void setpaymentAppliedId(String value) { this.paymentAppliedId = value; }
+    public void setPaymentAppliedId(String value) { this.paymentAppliedId = value; }
     /**
      * The database id of the invoice
      */
-    public String getinvoiceId() { return this.invoiceId; }
+    public String getInvoiceId() { return this.invoiceId; }
     /**
      * The database id of the invoice
      */
-    public void setinvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The database id of the Payment.
      */
-    public String getpaymentId() { return this.paymentId; }
+    public String getPaymentId() { return this.paymentId; }
     /**
      * The database id of the Payment.
      */
-    public void setpaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * Date Payment applied to Invoice.
      */
-    public Date getapplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date Payment applied to Invoice.
      */
-    public void setapplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to Invoice.
      */
-    public Double getpaymentAppliedAmount() { return this.paymentAppliedAmount; }
+    public Double getPaymentAppliedAmount() { return this.paymentAppliedAmount; }
     /**
      * Amount applied to Invoice.
      */
-    public void setpaymentAppliedAmount(Double value) { this.paymentAppliedAmount = value; }
+    public void setPaymentAppliedAmount(Double value) { this.paymentAppliedAmount = value; }
     /**
      * An additional reference code that is sometimes used to identify this Payment.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public String getreferenceCode() { return this.referenceCode; }
+    public String getReferenceCode() { return this.referenceCode; }
     /**
      * An additional reference code that is sometimes used to identify this Payment.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public void setreferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The ID number of the Company (CompanyType = "Customer") that created this Payment.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the Company (CompanyType = "Customer") that created this Payment.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The total value of this Payment.
      */
-    public Double getpaymentAmount() { return this.paymentAmount; }
+    public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * The total value of this Payment.
      */
-    public void setpaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
      * The remaining balance value of this Payment.
      */
-    public Double getunappliedAmount() { return this.unappliedAmount; }
+    public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * The remaining balance value of this Payment.
      */
-    public void setunappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
 };

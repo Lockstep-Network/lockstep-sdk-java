@@ -48,180 +48,180 @@ public class PaymentDetailModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this Payment.
      */
-    public String getpaymentId() { return this.paymentId; }
+    public String getPaymentId() { return this.paymentId; }
     /**
      * The unique ID of this Payment.
      */
-    public void setpaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * The ID of the customer to which this Payment belongs.
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The ID of the customer to which this Payment belongs.
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
     /**
      * The name of the customer to which this Payment belongs.
      */
-    public String getcustomerName() { return this.customerName; }
+    public String getCustomerName() { return this.customerName; }
     /**
      * The name of the customer to which this Payment belongs.
      */
-    public void setcustomerName(String value) { this.customerName = value; }
+    public void setCustomerName(String value) { this.customerName = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      */
-    public String getmemoText() { return this.memoText; }
+    public String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      */
-    public void setmemoText(String value) { this.memoText = value; }
+    public void setMemoText(String value) { this.memoText = value; }
     /**
      * Reference code for the payment for the given Erp system.
      */
-    public String getreferenceCode() { return this.referenceCode; }
+    public String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      */
-    public void setreferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The name of the Primary Contact for the Customer.
      */
-    public String getprimaryContact() { return this.primaryContact; }
+    public String getPrimaryContact() { return this.primaryContact; }
     /**
      * The name of the Primary Contact for the Customer.
      */
-    public void setprimaryContact(String value) { this.primaryContact = value; }
+    public void setPrimaryContact(String value) { this.primaryContact = value; }
     /**
      * The Email address of the Customer.
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * The Email address of the Customer.
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
     /**
      * Total amount of this Payment.
      */
-    public Double getpaymentAmount() { return this.paymentAmount; }
+    public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this Payment.
      */
-    public void setpaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this Payment.
      */
-    public Double getunappliedAmount() { return this.unappliedAmount; }
+    public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this Payment.
      */
-    public void setunappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
      * The type of payment, Payment or AP Payment.
      */
-    public String getpaymentType() { return this.paymentType; }
+    public String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, Payment or AP Payment.
      */
-    public void setpaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(String value) { this.paymentType = value; }
     /**
      * The date of this Payment.
      */
-    public Date getpaymentDate() { return this.paymentDate; }
+    public Date getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this Payment.
      */
-    public void setpaymentDate(Date value) { this.paymentDate = value; }
+    public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
      * Payment post date.
      */
-    public Date getpostDate() { return this.postDate; }
+    public Date getPostDate() { return this.postDate; }
     /**
      * Payment post date.
      */
-    public void setpostDate(Date value) { this.postDate = value; }
+    public void setPostDate(Date value) { this.postDate = value; }
     /**
      * The phone number of the Customer's Primary Contact.
      */
-    public String getphone() { return this.phone; }
+    public String getPhone() { return this.phone; }
     /**
      * The phone number of the Customer's Primary Contact.
      */
-    public void setphone(String value) { this.phone = value; }
+    public void setPhone(String value) { this.phone = value; }
     /**
      * The fax number of the Customer's Primary Contact.
      */
-    public String getfax() { return this.fax; }
+    public String getFax() { return this.fax; }
     /**
      * The fax number of the Customer's Primary Contact.
      */
-    public void setfax(String value) { this.fax = value; }
+    public void setFax(String value) { this.fax = value; }
     /**
      * The first line of the address for the Customer's Primary Contact.
      */
-    public String getaddress1() { return this.address1; }
+    public String getAddress1() { return this.address1; }
     /**
      * The first line of the address for the Customer's Primary Contact.
      */
-    public void setaddress1(String value) { this.address1 = value; }
+    public void setAddress1(String value) { this.address1 = value; }
     /**
      * The second line of the address for the Customer's Primary Contact.
      */
-    public String getaddress2() { return this.address2; }
+    public String getAddress2() { return this.address2; }
     /**
      * The second line of the address for the Customer's Primary Contact.
      */
-    public void setaddress2(String value) { this.address2 = value; }
+    public void setAddress2(String value) { this.address2 = value; }
     /**
      * The third line of the address for the Customer's Primary Contact.
      */
-    public String getaddress3() { return this.address3; }
+    public String getAddress3() { return this.address3; }
     /**
      * The third line of the address for the Customer's Primary Contact.
      */
-    public void setaddress3(String value) { this.address3 = value; }
+    public void setAddress3(String value) { this.address3 = value; }
     /**
      * The city of the address for the Customer's Primary Contact.
      */
-    public String getcity() { return this.city; }
+    public String getCity() { return this.city; }
     /**
      * The city of the address for the Customer's Primary Contact.
      */
-    public void setcity(String value) { this.city = value; }
+    public void setCity(String value) { this.city = value; }
     /**
      * The state/region of the address for the Customer's Primary Contact.
      */
-    public String getstateRegion() { return this.stateRegion; }
+    public String getStateRegion() { return this.stateRegion; }
     /**
      * The state/region of the address for the Customer's Primary Contact.
      */
-    public void setstateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(String value) { this.stateRegion = value; }
     /**
      * The postal/zip code of the address for the Customer's Primary Contact.
      */
-    public String getpostalCode() { return this.postalCode; }
+    public String getPostalCode() { return this.postalCode; }
     /**
      * The postal/zip code of the address for the Customer's Primary Contact.
      */
-    public void setpostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(String value) { this.postalCode = value; }
     /**
      * The 2 character country code of the address for the Customer's Primary Contact.
      */
-    public String getcountryCode() { return this.countryCode; }
+    public String getCountryCode() { return this.countryCode; }
     /**
      * The 2 character country code of the address for the Customer's Primary Contact.
      */
-    public void setcountryCode(String value) { this.countryCode = value; }
+    public void setCountryCode(String value) { this.countryCode = value; }
 };

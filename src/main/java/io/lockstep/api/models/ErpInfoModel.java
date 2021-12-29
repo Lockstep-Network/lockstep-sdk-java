@@ -24,17 +24,17 @@ public class ErpInfoModel
     /**
      * The id of the ERP's App
      */
-    public String getappId() { return this.appId; }
+    public String getAppId() { return this.appId; }
     /**
      * The id of the ERP's App
      */
-    public void setappId(String value) { this.appId = value; }
+    public void setAppId(String value) { this.appId = value; }
     /**
      * The data required to store for connector access
      */
-    public ConnectorInfoModel getdata() { return this.data; }
+    public ConnectorInfoModel getData() { return this.data; }
     /**
      * The data required to store for connector access
      */
-    public void setdata(ConnectorInfoModel value) { this.data = value; }
+    public void setData(ConnectorInfoModel value) { this.data = value; }
 };

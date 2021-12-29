@@ -45,164 +45,164 @@ public class CustomerDetailsModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this customer
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The unique ID of this customer
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
     /**
      * The unique ID of this customer
      */
-    public String getname() { return this.name; }
+    public String getName() { return this.name; }
     /**
      * The unique ID of this customer
      */
-    public void setname(String value) { this.name = value; }
+    public void setName(String value) { this.name = value; }
     /**
      * Customer address info
      */
-    public String getaddress1() { return this.address1; }
+    public String getAddress1() { return this.address1; }
     /**
      * Customer address info
      */
-    public void setaddress1(String value) { this.address1 = value; }
+    public void setAddress1(String value) { this.address1 = value; }
     /**
      * Customer address info
      */
-    public String getaddress2() { return this.address2; }
+    public String getAddress2() { return this.address2; }
     /**
      * Customer address info
      */
-    public void setaddress2(String value) { this.address2 = value; }
+    public void setAddress2(String value) { this.address2 = value; }
     /**
      * Customer address info
      */
-    public String getaddress3() { return this.address3; }
+    public String getAddress3() { return this.address3; }
     /**
      * Customer address info
      */
-    public void setaddress3(String value) { this.address3 = value; }
+    public void setAddress3(String value) { this.address3 = value; }
     /**
      * Customer address info
      */
-    public String getcity() { return this.city; }
+    public String getCity() { return this.city; }
     /**
      * Customer address info
      */
-    public void setcity(String value) { this.city = value; }
+    public void setCity(String value) { this.city = value; }
     /**
      * Customer address info
      */
-    public String getstate() { return this.state; }
+    public String getState() { return this.state; }
     /**
      * Customer address info
      */
-    public void setstate(String value) { this.state = value; }
+    public void setState(String value) { this.state = value; }
     /**
      * Customer address info
      */
-    public String getpostalCode() { return this.postalCode; }
+    public String getPostalCode() { return this.postalCode; }
     /**
      * Customer address info
      */
-    public void setpostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(String value) { this.postalCode = value; }
     /**
      * Customer address country
      */
-    public String getcountry() { return this.country; }
+    public String getCountry() { return this.country; }
     /**
      * Customer address country
      */
-    public void setcountry(String value) { this.country = value; }
+    public void setCountry(String value) { this.country = value; }
     /**
      * Customer phone number
      */
-    public String getphoneNumber() { return this.phoneNumber; }
+    public String getPhoneNumber() { return this.phoneNumber; }
     /**
      * Customer phone number
      */
-    public void setphoneNumber(String value) { this.phoneNumber = value; }
+    public void setPhoneNumber(String value) { this.phoneNumber = value; }
     /**
      * Customer fax number
      */
-    public String getfaxNumber() { return this.faxNumber; }
+    public String getFaxNumber() { return this.faxNumber; }
     /**
      * Customer fax number
      */
-    public void setfaxNumber(String value) { this.faxNumber = value; }
+    public void setFaxNumber(String value) { this.faxNumber = value; }
     /**
      * Customer AR email address
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * Customer AR email address
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
     /**
      * Customer primary contact id
      */
-    public String getcontactId() { return this.contactId; }
+    public String getContactId() { return this.contactId; }
     /**
      * Customer primary contact id
      */
-    public void setcontactId(String value) { this.contactId = value; }
+    public void setContactId(String value) { this.contactId = value; }
     /**
      * Customer primary contact name
      */
-    public String getcontactName() { return this.contactName; }
+    public String getContactName() { return this.contactName; }
     /**
      * Customer primary contact name
      */
-    public void setcontactName(String value) { this.contactName = value; }
+    public void setContactName(String value) { this.contactName = value; }
     /**
      * Customer primary contact email address
      */
-    public String getcontactEmail() { return this.contactEmail; }
+    public String getContactEmail() { return this.contactEmail; }
     /**
      * Customer primary contact email address
      */
-    public void setcontactEmail(String value) { this.contactEmail = value; }
+    public void setContactEmail(String value) { this.contactEmail = value; }
     /**
      * Customer number of outstanding invoices
      */
-    public Integer getoutstandingInvoices() { return this.outstandingInvoices; }
+    public Integer getOutstandingInvoices() { return this.outstandingInvoices; }
     /**
      * Customer number of outstanding invoices
      */
-    public void setoutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
+    public void setOutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
     /**
      * Customer total outstanding invoice amount
      */
-    public Double getoutstandingAmount() { return this.outstandingAmount; }
+    public Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
      * Customer total outstanding invoice amount
      */
-    public void setoutstandingAmount(Double value) { this.outstandingAmount = value; }
+    public void setOutstandingAmount(Double value) { this.outstandingAmount = value; }
     /**
      * Customer total past due amount
      */
-    public Double getamountPastDue() { return this.amountPastDue; }
+    public Double getAmountPastDue() { return this.amountPastDue; }
     /**
      * Customer total past due amount
      */
-    public void setamountPastDue(Double value) { this.amountPastDue = value; }
+    public void setAmountPastDue(Double value) { this.amountPastDue = value; }
     /**
      * Customer payments collected
      */
-    public CustomerDetailsPaymentModel[] getpayments() { return this.payments; }
+    public CustomerDetailsPaymentModel[] getPayments() { return this.payments; }
     /**
      * Customer payments collected
      */
-    public void setpayments(CustomerDetailsPaymentModel[] value) { this.payments = value; }
+    public void setPayments(CustomerDetailsPaymentModel[] value) { this.payments = value; }
 };

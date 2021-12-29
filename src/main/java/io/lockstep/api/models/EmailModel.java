@@ -52,240 +52,240 @@ public class EmailModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getemailId() { return this.emailId; }
+    public String getEmailId() { return this.emailId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setemailId(String value) { this.emailId = value; }
+    public void setEmailId(String value) { this.emailId = value; }
     /**
      * The unique ID number of this email's conversation thread.
      */
-    public String getthreadId() { return this.threadId; }
+    public String getThreadId() { return this.threadId; }
     /**
      * The unique ID number of this email's conversation thread.
      */
-    public void setthreadId(String value) { this.threadId = value; }
+    public void setThreadId(String value) { this.threadId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The ID number of the company that created this email.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the company that created this email.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The email address for the sender of this email.
      */
-    public String getemailFrom() { return this.emailFrom; }
+    public String getEmailFrom() { return this.emailFrom; }
     /**
      * The email address for the sender of this email.
      */
-    public void setemailFrom(String value) { this.emailFrom = value; }
+    public void setEmailFrom(String value) { this.emailFrom = value; }
     /**
      * The email address for the recipient(s) of this email.
      */
-    public String getemailTo() { return this.emailTo; }
+    public String getEmailTo() { return this.emailTo; }
     /**
      * The email address for the recipient(s) of this email.
      */
-    public void setemailTo(String value) { this.emailTo = value; }
+    public void setEmailTo(String value) { this.emailTo = value; }
     /**
      * The email address for the CC recipient(s) of this email
      */
-    public String getemailCC() { return this.emailCC; }
+    public String getEmailCC() { return this.emailCC; }
     /**
      * The email address for the CC recipient(s) of this email
      */
-    public void setemailCC(String value) { this.emailCC = value; }
+    public void setEmailCC(String value) { this.emailCC = value; }
     /**
      * The subject line of this email.
      */
-    public String getemailSubject() { return this.emailSubject; }
+    public String getEmailSubject() { return this.emailSubject; }
     /**
      * The subject line of this email.
      */
-    public void setemailSubject(String value) { this.emailSubject = value; }
+    public void setEmailSubject(String value) { this.emailSubject = value; }
     /**
      * The body content of this email.
      */
-    public String getemailBody() { return this.emailBody; }
+    public String getEmailBody() { return this.emailBody; }
     /**
      * The body content of this email.
      */
-    public void setemailBody(String value) { this.emailBody = value; }
+    public void setEmailBody(String value) { this.emailBody = value; }
     /**
      * The date on which this email was sent.
      */
-    public Date getsentDate() { return this.sentDate; }
+    public Date getSentDate() { return this.sentDate; }
     /**
      * The date on which this email was sent.
      */
-    public void setsentDate(Date value) { this.sentDate = value; }
+    public void setSentDate(Date value) { this.sentDate = value; }
     /**
      * A status flag indicating if this email is unread.
      */
-    public Boolean getisUnread() { return this.isUnread; }
+    public Boolean getIsUnread() { return this.isUnread; }
     /**
      * A status flag indicating if this email is unread.
      */
-    public void setisUnread(Boolean value) { this.isUnread = value; }
+    public void setIsUnread(Boolean value) { this.isUnread = value; }
     /**
      * A status flag indicating if this email is priority status.
      */
-    public Boolean getisPriority() { return this.isPriority; }
+    public Boolean getIsPriority() { return this.isPriority; }
     /**
      * A status flag indicating if this email is priority status.
      */
-    public void setisPriority(Boolean value) { this.isPriority = value; }
+    public void setIsPriority(Boolean value) { this.isPriority = value; }
     /**
      * A status flag indicating if this email is marked as spam.
      */
-    public Boolean getisSpam() { return this.isSpam; }
+    public Boolean getIsSpam() { return this.isSpam; }
     /**
      * A status flag indicating if this email is marked as spam.
      */
-    public void setisSpam(Boolean value) { this.isSpam = value; }
+    public void setIsSpam(Boolean value) { this.isSpam = value; }
     /**
      * The date on which this email was created.
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date on which this email was created.
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID number of the user who created this email.
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this email.
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * A status flag indicating if this email is to be sent.
      */
-    public Boolean gettoBeSent() { return this.toBeSent; }
+    public Boolean getToBeSent() { return this.toBeSent; }
     /**
      * A status flag indicating if this email is to be sent.
      */
-    public void settoBeSent(Boolean value) { this.toBeSent = value; }
+    public void setToBeSent(Boolean value) { this.toBeSent = value; }
     /**
      * The ID number of the customer that sent this email.
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the customer that sent this email.
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
     /**
      * The date on which this email was received.
      */
-    public Date getreceivedTimeStamp() { return this.receivedTimeStamp; }
+    public Date getReceivedTimeStamp() { return this.receivedTimeStamp; }
     /**
      * The date on which this email was received.
      */
-    public void setreceivedTimeStamp(Date value) { this.receivedTimeStamp = value; }
+    public void setReceivedTimeStamp(Date value) { this.receivedTimeStamp = value; }
     /**
      * The date on which this email was opened.
      */
-    public Date getopenedTimestamp() { return this.openedTimestamp; }
+    public Date getOpenedTimestamp() { return this.openedTimestamp; }
     /**
      * The date on which this email was opened.
      */
-    public void setopenedTimestamp(Date value) { this.openedTimestamp = value; }
+    public void setOpenedTimestamp(Date value) { this.openedTimestamp = value; }
     /**
      * The number of times this email was viewed.
      */
-    public Integer getviewCount() { return this.viewCount; }
+    public Integer getViewCount() { return this.viewCount; }
     /**
      * The number of times this email was viewed.
      */
-    public void setviewCount(Integer value) { this.viewCount = value; }
+    public void setViewCount(Integer value) { this.viewCount = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * The id of the email in an external system if imported.
      */
-    public String getexternalEmailId() { return this.externalEmailId; }
+    public String getExternalEmailId() { return this.externalEmailId; }
     /**
      * The id of the email in an external system if imported.
      */
-    public void setexternalEmailId(String value) { this.externalEmailId = value; }
+    public void setExternalEmailId(String value) { this.externalEmailId = value; }
     /**
      * The id of the email thread in an external system if imported.
      */
-    public String getexternalThreadId() { return this.externalThreadId; }
+    public String getExternalThreadId() { return this.externalThreadId; }
     /**
      * The id of the email thread in an external system if imported.
      */
-    public void setexternalThreadId(String value) { this.externalThreadId = value; }
+    public void setExternalThreadId(String value) { this.externalThreadId = value; }
     /**
      * The email address(es) for the BCC recipient(s) of this email
      */
-    public String getemailBcc() { return this.emailBcc; }
+    public String getEmailBcc() { return this.emailBcc; }
     /**
      * The email address(es) for the BCC recipient(s) of this email
      */
-    public void setemailBcc(String value) { this.emailBcc = value; }
+    public void setEmailBcc(String value) { this.emailBcc = value; }
     /**
      * All notes attached to this email.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this email.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this email.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this email.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All definitions attached to this email.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to this email.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to this email.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this email.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

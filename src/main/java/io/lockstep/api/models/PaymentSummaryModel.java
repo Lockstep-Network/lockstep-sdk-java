@@ -40,116 +40,116 @@ public class PaymentSummaryModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The id of the payment
      */
-    public String getpaymentId() { return this.paymentId; }
+    public String getPaymentId() { return this.paymentId; }
     /**
      * The id of the payment
      */
-    public void setpaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      */
-    public String getmemoText() { return this.memoText; }
+    public String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      */
-    public void setmemoText(String value) { this.memoText = value; }
+    public void setMemoText(String value) { this.memoText = value; }
     /**
      * Reference code for the payment for the given Erp system.
      */
-    public String getreferenceCode() { return this.referenceCode; }
+    public String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      */
-    public void setreferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The type of payment, Payment or AP Payment.
      */
-    public String getpaymentType() { return this.paymentType; }
+    public String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, Payment or AP Payment.
      */
-    public void setpaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(String value) { this.paymentType = value; }
     /**
      * The date of this payment.
      */
-    public Date getpaymentDate() { return this.paymentDate; }
+    public Date getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this payment.
      */
-    public void setpaymentDate(Date value) { this.paymentDate = value; }
+    public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
      * Total amount of this payment.
      */
-    public Double getpaymentAmount() { return this.paymentAmount; }
+    public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this payment.
      */
-    public void setpaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this payment.
      */
-    public Double getunappliedAmount() { return this.unappliedAmount; }
+    public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this payment.
      */
-    public void setunappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
      * The number of invoices associated to this payment.
      */
-    public Integer getinvoiceCount() { return this.invoiceCount; }
+    public Integer getInvoiceCount() { return this.invoiceCount; }
     /**
      * The number of invoices associated to this payment.
      */
-    public void setinvoiceCount(Integer value) { this.invoiceCount = value; }
+    public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
     /**
      * The number of payments applied to this payment.
      */
-    public Double gettotalPaymentsApplied() { return this.totalPaymentsApplied; }
+    public Double getTotalPaymentsApplied() { return this.totalPaymentsApplied; }
     /**
      * The number of payments applied to this payment.
      */
-    public void settotalPaymentsApplied(Double value) { this.totalPaymentsApplied = value; }
+    public void setTotalPaymentsApplied(Double value) { this.totalPaymentsApplied = value; }
     /**
      * The reference codes of the invoices associated to this payment.
      */
-    public String[] getinvoiceList() { return this.invoiceList; }
+    public String[] getInvoiceList() { return this.invoiceList; }
     /**
      * The reference codes of the invoices associated to this payment.
      */
-    public void setinvoiceList(String[] value) { this.invoiceList = value; }
+    public void setInvoiceList(String[] value) { this.invoiceList = value; }
     /**
      * The ids of the invoices associated to this payment.
      */
-    public String[] getinvoiceIdList() { return this.invoiceIdList; }
+    public String[] getInvoiceIdList() { return this.invoiceIdList; }
     /**
      * The ids of the invoices associated to this payment.
      */
-    public void setinvoiceIdList(String[] value) { this.invoiceIdList = value; }
+    public void setInvoiceIdList(String[] value) { this.invoiceIdList = value; }
     /**
      * The name of the customer for this payment.
      */
-    public String getcustomerName() { return this.customerName; }
+    public String getCustomerName() { return this.customerName; }
     /**
      * The name of the customer for this payment.
      */
-    public void setcustomerName(String value) { this.customerName = value; }
+    public void setCustomerName(String value) { this.customerName = value; }
     /**
      * The id of the customer for this payment.
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The id of the customer for this payment.
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
 };

@@ -41,124 +41,124 @@ public class CustomerSummaryModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this company.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The unique ID of this company.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The name of the company.
      */
-    public String getcompanyName() { return this.companyName; }
+    public String getCompanyName() { return this.companyName; }
     /**
      * The name of the company.
      */
-    public void setcompanyName(String value) { this.companyName = value; }
+    public void setCompanyName(String value) { this.companyName = value; }
     /**
      * The name of the primary contact.
      */
-    public String getprimaryContact() { return this.primaryContact; }
+    public String getPrimaryContact() { return this.primaryContact; }
     /**
      * The name of the primary contact.
      */
-    public void setprimaryContact(String value) { this.primaryContact = value; }
+    public void setPrimaryContact(String value) { this.primaryContact = value; }
     /**
      * The number of outstanding invoices for this customer.
      */
-    public Integer getoutstandingInvoices() { return this.outstandingInvoices; }
+    public Integer getOutstandingInvoices() { return this.outstandingInvoices; }
     /**
      * The number of outstanding invoices for this customer.
      */
-    public void setoutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
+    public void setOutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
     /**
      * The number of open invoices.
      */
-    public Integer gettotalInvoicesOpen() { return this.totalInvoicesOpen; }
+    public Integer getTotalInvoicesOpen() { return this.totalInvoicesOpen; }
     /**
      * The number of open invoices.
      */
-    public void settotalInvoicesOpen(Integer value) { this.totalInvoicesOpen = value; }
+    public void setTotalInvoicesOpen(Integer value) { this.totalInvoicesOpen = value; }
     /**
      * The number of past due invoices.
      */
-    public Integer gettotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
+    public Integer getTotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
     /**
      * The number of past due invoices.
      */
-    public void settotalInvoicesPastDue(Integer value) { this.totalInvoicesPastDue = value; }
+    public void setTotalInvoicesPastDue(Integer value) { this.totalInvoicesPastDue = value; }
     /**
      * The number of closed invoices for this customer.
      */
-    public Integer getclosedInvoices() { return this.closedInvoices; }
+    public Integer getClosedInvoices() { return this.closedInvoices; }
     /**
      * The number of closed invoices for this customer.
      */
-    public void setclosedInvoices(Integer value) { this.closedInvoices = value; }
+    public void setClosedInvoices(Integer value) { this.closedInvoices = value; }
     /**
      * The total from collected payments.
      */
-    public Double getamountCollected() { return this.amountCollected; }
+    public Double getAmountCollected() { return this.amountCollected; }
     /**
      * The total from collected payments.
      */
-    public void setamountCollected(Double value) { this.amountCollected = value; }
+    public void setAmountCollected(Double value) { this.amountCollected = value; }
     /**
      * The total balance of outstanding invoices.
      */
-    public Double getoutstandingAmount() { return this.outstandingAmount; }
+    public Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
      * The total balance of outstanding invoices.
      */
-    public void setoutstandingAmount(Double value) { this.outstandingAmount = value; }
+    public void setOutstandingAmount(Double value) { this.outstandingAmount = value; }
     /**
      * The total amount past due for this customer.
      */
-    public Double getamountPastDue() { return this.amountPastDue; }
+    public Double getAmountPastDue() { return this.amountPastDue; }
     /**
      * The total amount past due for this customer.
      */
-    public void setamountPastDue(Double value) { this.amountPastDue = value; }
+    public void setAmountPastDue(Double value) { this.amountPastDue = value; }
     /**
      * The total value of unapplied Payments for this Customer.
      */
-    public Double getunappliedPayments() { return this.unappliedPayments; }
+    public Double getUnappliedPayments() { return this.unappliedPayments; }
     /**
      * The total value of unapplied Payments for this Customer.
      */
-    public void setunappliedPayments(Double value) { this.unappliedPayments = value; }
+    public void setUnappliedPayments(Double value) { this.unappliedPayments = value; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      */
-    public Double getpercentOfTotalAr() { return this.percentOfTotalAr; }
+    public Double getPercentOfTotalAr() { return this.percentOfTotalAr; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      */
-    public void setpercentOfTotalAr(Double value) { this.percentOfTotalAr = value; }
+    public void setPercentOfTotalAr(Double value) { this.percentOfTotalAr = value; }
     /**
      * Daily sales outstanding value for this Customer.
      */
-    public Double getdso() { return this.dso; }
+    public Double getDso() { return this.dso; }
     /**
      * Daily sales outstanding value for this Customer.
      */
-    public void setdso(Double value) { this.dso = value; }
+    public void setDso(Double value) { this.dso = value; }
     /**
      * The date stamp for the newest Activity on this Customer.
      */
-    public Date getnewestActivity() { return this.newestActivity; }
+    public Date getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Customer.
      */
-    public void setnewestActivity(Date value) { this.newestActivity = value; }
+    public void setNewestActivity(Date value) { this.newestActivity = value; }
 };

@@ -38,104 +38,104 @@ public class CreditMemoInvoiceModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public String getcreditMemoAppliedId() { return this.creditMemoAppliedId; }
+    public String getCreditMemoAppliedId() { return this.creditMemoAppliedId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      */
-    public void setcreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
+    public void setCreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
     /**
      * The id of the invoice
      */
-    public String getinvoiceId() { return this.invoiceId; }
+    public String getInvoiceId() { return this.invoiceId; }
     /**
      * The id of the invoice
      */
-    public void setinvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The id of the credit memo invoice
      */
-    public String getcreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
+    public String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
     /**
      * The id of the credit memo invoice
      */
-    public void setcreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
+    public void setCreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
     /**
      * Date invoice applied to credit memo.
      */
-    public Date getapplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date invoice applied to credit memo.
      */
-    public void setapplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to credit memo.
      */
-    public Double getcreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
+    public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
      * Amount applied to credit memo.
      */
-    public void setcreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
+    public void setCreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public String getreferenceCode() { return this.referenceCode; }
+    public String getReferenceCode() { return this.referenceCode; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public void setreferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The ID number of the company that created this invoice.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the company that created this invoice.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
     /**
      * A code identifying the status of this invoice.
      */
-    public String getinvoiceStatusCode() { return this.invoiceStatusCode; }
+    public String getInvoiceStatusCode() { return this.invoiceStatusCode; }
     /**
      * A code identifying the status of this invoice.
      */
-    public void setinvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
+    public void setInvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
      */
-    public Double gettotalAmount() { return this.totalAmount; }
+    public Double getTotalAmount() { return this.totalAmount; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
      */
-    public void settotalAmount(Double value) { this.totalAmount = value; }
+    public void setTotalAmount(Double value) { this.totalAmount = value; }
     /**
      * The remaining balance value of this invoice.
      */
-    public Double getoutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
+    public Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
     /**
      * The remaining balance value of this invoice.
      */
-    public void setoutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
+    public void setOutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
 };

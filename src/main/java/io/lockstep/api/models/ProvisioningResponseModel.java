@@ -29,57 +29,57 @@ public class ProvisioningResponseModel
     /**
      * If provisioning is successful, contains the username of the created user.
      */
-    public String getuserName() { return this.userName; }
+    public String getUserName() { return this.userName; }
     /**
      * If provisioning is successful, contains the username of the created user.
      */
-    public void setuserName(String value) { this.userName = value; }
+    public void setUserName(String value) { this.userName = value; }
     /**
      * If provisioning is successful, contains subscription account name of created user.
      */
-    public String getaccountName() { return this.accountName; }
+    public String getAccountName() { return this.accountName; }
     /**
      * If provisioning is successful, contains subscription account name of created user.
      */
-    public void setaccountName(String value) { this.accountName = value; }
+    public void setAccountName(String value) { this.accountName = value; }
     /**
      * If provisioning is successful, contains the unique identifier of the created user.
      */
-    public String getuserId() { return this.userId; }
+    public String getUserId() { return this.userId; }
     /**
      * If provisioning is successful, contains the unique identifier of the created user.
      */
-    public void setuserId(String value) { this.userId = value; }
+    public void setUserId(String value) { this.userId = value; }
     /**
      * If provisioning is successful, contains the group key of the created user.
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * If provisioning is successful, contains the group key of the created user.
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * If provisioning is successful, contains the app enrollment id of the created app enrollment.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * If provisioning is successful, contains the app enrollment id of the created app enrollment.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
      */
-    public String getsyncRequestId() { return this.syncRequestId; }
+    public String getSyncRequestId() { return this.syncRequestId; }
     /**
      * if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
      */
-    public void setsyncRequestId(String value) { this.syncRequestId = value; }
+    public void setSyncRequestId(String value) { this.syncRequestId = value; }
     /**
      * The error message(s).
      */
-    public String geterrorMessage() { return this.errorMessage; }
+    public String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message(s).
      */
-    public void seterrorMessage(String value) { this.errorMessage = value; }
+    public void setErrorMessage(String value) { this.errorMessage = value; }
 };

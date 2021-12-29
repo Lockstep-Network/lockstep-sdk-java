@@ -35,76 +35,76 @@ public class RiskRateModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The month the risk rate was calculated for
      */
-    public Date getreportPeriod() { return this.reportPeriod; }
+    public Date getReportPeriod() { return this.reportPeriod; }
     /**
      * The month the risk rate was calculated for
      */
-    public void setreportPeriod(Date value) { this.reportPeriod = value; }
+    public void setReportPeriod(Date value) { this.reportPeriod = value; }
     /**
      * The string name of the month the risk rate was calculated for
      */
-    public String getinvoiceMonthName() { return this.invoiceMonthName; }
+    public String getInvoiceMonthName() { return this.invoiceMonthName; }
     /**
      * The string name of the month the risk rate was calculated for
      */
-    public void setinvoiceMonthName(String value) { this.invoiceMonthName = value; }
+    public void setInvoiceMonthName(String value) { this.invoiceMonthName = value; }
     /**
      * The count of all invoices in the calculation month
      */
-    public Integer gettotalInvoiceCount() { return this.totalInvoiceCount; }
+    public Integer getTotalInvoiceCount() { return this.totalInvoiceCount; }
     /**
      * The count of all invoices in the calculation month
      */
-    public void settotalInvoiceCount(Integer value) { this.totalInvoiceCount = value; }
+    public void setTotalInvoiceCount(Integer value) { this.totalInvoiceCount = value; }
     /**
      * The sum of the total amount for invoices in the calculation month
      */
-    public Double gettotalInvoiceAmount() { return this.totalInvoiceAmount; }
+    public Double getTotalInvoiceAmount() { return this.totalInvoiceAmount; }
     /**
      * The sum of the total amount for invoices in the calculation month
      */
-    public void settotalInvoiceAmount(Double value) { this.totalInvoiceAmount = value; }
+    public void setTotalInvoiceAmount(Double value) { this.totalInvoiceAmount = value; }
     /**
      * The count of open invoices over 90 days from the calculation month
      */
-    public Integer getatRiskCount() { return this.atRiskCount; }
+    public Integer getAtRiskCount() { return this.atRiskCount; }
     /**
      * The count of open invoices over 90 days from the calculation month
      */
-    public void setatRiskCount(Integer value) { this.atRiskCount = value; }
+    public void setAtRiskCount(Integer value) { this.atRiskCount = value; }
     /**
      * The sum of the outstanding balance of open invoices over 90 days from the calculation month
      */
-    public Double getatRiskAmount() { return this.atRiskAmount; }
+    public Double getAtRiskAmount() { return this.atRiskAmount; }
     /**
      * The sum of the outstanding balance of open invoices over 90 days from the calculation month
      */
-    public void setatRiskAmount(Double value) { this.atRiskAmount = value; }
+    public void setAtRiskAmount(Double value) { this.atRiskAmount = value; }
     /**
      * The percentage of all open invoices for the calculation month that are over 90 days based on count
      */
-    public Double getatRiskCountPercentage() { return this.atRiskCountPercentage; }
+    public Double getAtRiskCountPercentage() { return this.atRiskCountPercentage; }
     /**
      * The percentage of all open invoices for the calculation month that are over 90 days based on count
      */
-    public void setatRiskCountPercentage(Double value) { this.atRiskCountPercentage = value; }
+    public void setAtRiskCountPercentage(Double value) { this.atRiskCountPercentage = value; }
     /**
      * The percentage of all open invoices for the calculation month that are over 90 days based on outstanding balance
      */
-    public Double getatRiskPercentage() { return this.atRiskPercentage; }
+    public Double getAtRiskPercentage() { return this.atRiskPercentage; }
     /**
      * The percentage of all open invoices for the calculation month that are over 90 days based on outstanding balance
      */
-    public void setatRiskPercentage(Double value) { this.atRiskPercentage = value; }
+    public void setAtRiskPercentage(Double value) { this.atRiskPercentage = value; }
 };

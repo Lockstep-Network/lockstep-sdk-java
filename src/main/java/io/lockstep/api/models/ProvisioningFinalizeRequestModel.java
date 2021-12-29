@@ -27,41 +27,41 @@ public class ProvisioningFinalizeRequestModel
     /**
      * The full name of the user
      */
-    public String getfullName() { return this.fullName; }
+    public String getFullName() { return this.fullName; }
     /**
      * The full name of the user
      */
-    public void setfullName(String value) { this.fullName = value; }
+    public void setFullName(String value) { this.fullName = value; }
     /**
      * The time zone of the user
      */
-    public String gettimeZone() { return this.timeZone; }
+    public String getTimeZone() { return this.timeZone; }
     /**
      * The time zone of the user
      */
-    public void settimeZone(String value) { this.timeZone = value; }
+    public void setTimeZone(String value) { this.timeZone = value; }
     /**
      * The default currency of the user
      */
-    public String getdefaultCurrency() { return this.defaultCurrency; }
+    public String getDefaultCurrency() { return this.defaultCurrency; }
     /**
      * The default currency of the user
      */
-    public void setdefaultCurrency(String value) { this.defaultCurrency = value; }
+    public void setDefaultCurrency(String value) { this.defaultCurrency = value; }
     /**
      * The company information for the user and group
      */
-    public CompanyModel getcompany() { return this.company; }
+    public CompanyModel getCompany() { return this.company; }
     /**
      * The company information for the user and group
      */
-    public void setcompany(CompanyModel value) { this.company = value; }
+    public void setCompany(CompanyModel value) { this.company = value; }
     /**
      * Optional connector information needed to enroll user to their email connector
      */
-    public ErpInfoModel getemailConnector() { return this.emailConnector; }
+    public ErpInfoModel getEmailConnector() { return this.emailConnector; }
     /**
      * Optional connector information needed to enroll user to their email connector
      */
-    public void setemailConnector(ErpInfoModel value) { this.emailConnector = value; }
+    public void setEmailConnector(ErpInfoModel value) { this.emailConnector = value; }
 };

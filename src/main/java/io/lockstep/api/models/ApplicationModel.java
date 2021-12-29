@@ -42,167 +42,167 @@ public class ApplicationModel
     /**
      * A unique code identifying this application
      */
-    public String getappId() { return this.appId; }
+    public String getAppId() { return this.appId; }
     /**
      * A unique code identifying this application
      */
-    public void setappId(String value) { this.appId = value; }
+    public void setAppId(String value) { this.appId = value; }
     /**
      * The name of this application
      */
-    public String getname() { return this.name; }
+    public String getName() { return this.name; }
     /**
      * The name of this application
      */
-    public void setname(String value) { this.name = value; }
+    public void setName(String value) { this.name = value; }
     /**
      * Brief summary of this application shown as a subtitle
      */
-    public String getdescription() { return this.description; }
+    public String getDescription() { return this.description; }
     /**
      * Brief summary of this application shown as a subtitle
      */
-    public void setdescription(String value) { this.description = value; }
+    public void setDescription(String value) { this.description = value; }
     /**
      * Tag for what type of app this is
      */
-    public String getappType() { return this.appType; }
+    public String getAppType() { return this.appType; }
     /**
      * Tag for what type of app this is
      */
-    public void setappType(String value) { this.appType = value; }
+    public void setAppType(String value) { this.appType = value; }
     /**
      * The ID of the owner
      */
-    public String getownerId() { return this.ownerId; }
+    public String getOwnerId() { return this.ownerId; }
     /**
      * The ID of the owner
      */
-    public void setownerId(String value) { this.ownerId = value; }
+    public void setOwnerId(String value) { this.ownerId = value; }
     /**
      * The URL to visit for more information about this application
      */
-    public String getprojectUrl() { return this.projectUrl; }
+    public String getProjectUrl() { return this.projectUrl; }
     /**
      * The URL to visit for more information about this application
      */
-    public void setprojectUrl(String value) { this.projectUrl = value; }
+    public void setProjectUrl(String value) { this.projectUrl = value; }
     /**
      * The URL for the icon for this application
      */
-    public String geticonUrl() { return this.iconUrl; }
+    public String getIconUrl() { return this.iconUrl; }
     /**
      * The URL for the icon for this application
      */
-    public void seticonUrl(String value) { this.iconUrl = value; }
+    public void setIconUrl(String value) { this.iconUrl = value; }
     /**
      * The description of the price for this application
      */
-    public String getpriceTerms() { return this.priceTerms; }
+    public String getPriceTerms() { return this.priceTerms; }
     /**
      * The description of the price for this application
      */
-    public void setpriceTerms(String value) { this.priceTerms = value; }
+    public void setPriceTerms(String value) { this.priceTerms = value; }
     /**
      * The ID of the user who created this application
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this application
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The ID of the user who last modified this application
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this application
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * The date this application was created
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date this application was created
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The date this application was last modified
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date this application was last modified
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * Flag indicating if the application is active.
      */
-    public Boolean getisActive() { return this.isActive; }
+    public Boolean getIsActive() { return this.isActive; }
     /**
      * Flag indicating if the application is active.
      */
-    public void setisActive(Boolean value) { this.isActive = value; }
+    public void setIsActive(Boolean value) { this.isActive = value; }
     /**
      * URL to the Wiki for the Application
      */
-    public String getwikiURL() { return this.wikiURL; }
+    public String getWikiURL() { return this.wikiURL; }
     /**
      * URL to the Wiki for the Application
      */
-    public void setwikiURL(String value) { this.wikiURL = value; }
+    public void setWikiURL(String value) { this.wikiURL = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * All notes attached to this app.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this app.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this app.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this app.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All definitions attached to the application.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to the application.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to the application.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to the application.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

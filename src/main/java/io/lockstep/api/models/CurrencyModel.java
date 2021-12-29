@@ -27,41 +27,41 @@ public class CurrencyModel
     /**
      * Alphabetic code for the given currency
      */
-    public String getalphaCode() { return this.alphaCode; }
+    public String getAlphaCode() { return this.alphaCode; }
     /**
      * Alphabetic code for the given currency
      */
-    public void setalphaCode(String value) { this.alphaCode = value; }
+    public void setAlphaCode(String value) { this.alphaCode = value; }
     /**
      * Numeric code for the given currency
      */
-    public String getnumericCode() { return this.numericCode; }
+    public String getNumericCode() { return this.numericCode; }
     /**
      * Numeric code for the given currency
      */
-    public void setnumericCode(String value) { this.numericCode = value; }
+    public void setNumericCode(String value) { this.numericCode = value; }
     /**
      * Name of currency
      */
-    public String getcurrencyName() { return this.currencyName; }
+    public String getCurrencyName() { return this.currencyName; }
     /**
      * Name of currency
      */
-    public void setcurrencyName(String value) { this.currencyName = value; }
+    public void setCurrencyName(String value) { this.currencyName = value; }
     /**
      * Number of places after the decimal for this currency
      */
-    public Integer getminorUnit() { return this.minorUnit; }
+    public Integer getMinorUnit() { return this.minorUnit; }
     /**
      * Number of places after the decimal for this currency
      */
-    public void setminorUnit(Integer value) { this.minorUnit = value; }
+    public void setMinorUnit(Integer value) { this.minorUnit = value; }
     /**
      * Symbol for the given currency
      */
-    public String getsymbol() { return this.symbol; }
+    public String getSymbol() { return this.symbol; }
     /**
      * Symbol for the given currency
      */
-    public void setsymbol(String value) { this.symbol = value; }
+    public void setSymbol(String value) { this.symbol = value; }
 };

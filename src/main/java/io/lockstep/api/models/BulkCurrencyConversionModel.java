@@ -25,17 +25,17 @@ public class BulkCurrencyConversionModel
     /**
      * The date for the currency rate
      */
-    public Date getdate() { return this.date; }
+    public Date getDate() { return this.date; }
     /**
      * The date for the currency rate
      */
-    public void setdate(Date value) { this.date = value; }
+    public void setDate(Date value) { this.date = value; }
     /**
      * The currency code This will be validated by the /api/v1/currencies data set
      */
-    public String getsourceCurrency() { return this.sourceCurrency; }
+    public String getSourceCurrency() { return this.sourceCurrency; }
     /**
      * The currency code This will be validated by the /api/v1/currencies data set
      */
-    public void setsourceCurrency(String value) { this.sourceCurrency = value; }
+    public void setSourceCurrency(String value) { this.sourceCurrency = value; }
 };

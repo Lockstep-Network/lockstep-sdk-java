@@ -56,36 +56,36 @@ public class ContactModel
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public String getcontactId() { return this.contactId; }
+    public String getContactId() { return this.contactId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public void setcontactId(String value) { this.contactId = value; }
+    public void setContactId(String value) { this.contactId = value; }
     /**
      * The ID of the company to which this contact belongs.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The ID of the company to which this contact belongs.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -95,7 +95,7 @@ public class ContactModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public String geterpKey() { return this.erpKey; }
+    public String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -105,221 +105,221 @@ public class ContactModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public void seterpKey(String value) { this.erpKey = value; }
+    public void setErpKey(String value) { this.erpKey = value; }
     /**
      * The name of the contact.
      */
-    public String getcontactName() { return this.contactName; }
+    public String getContactName() { return this.contactName; }
     /**
      * The name of the contact.
      */
-    public void setcontactName(String value) { this.contactName = value; }
+    public void setContactName(String value) { this.contactName = value; }
     /**
      * A friendly human-readable code that describes this Contact.
      */
-    public String getcontactCode() { return this.contactCode; }
+    public String getContactCode() { return this.contactCode; }
     /**
      * A friendly human-readable code that describes this Contact.
      */
-    public void setcontactCode(String value) { this.contactCode = value; }
+    public void setContactCode(String value) { this.contactCode = value; }
     /**
      * The title of the contact.
      */
-    public String gettitle() { return this.title; }
+    public String getTitle() { return this.title; }
     /**
      * The title of the contact.
      */
-    public void settitle(String value) { this.title = value; }
+    public void setTitle(String value) { this.title = value; }
     /**
      * The role code for the contact.
      */
-    public String getroleCode() { return this.roleCode; }
+    public String getRoleCode() { return this.roleCode; }
     /**
      * The role code for the contact.
      */
-    public void setroleCode(String value) { this.roleCode = value; }
+    public void setRoleCode(String value) { this.roleCode = value; }
     /**
      * The email address of the contact.
      */
-    public String getemailAddress() { return this.emailAddress; }
+    public String getEmailAddress() { return this.emailAddress; }
     /**
      * The email address of the contact.
      */
-    public void setemailAddress(String value) { this.emailAddress = value; }
+    public void setEmailAddress(String value) { this.emailAddress = value; }
     /**
      * The phone number of the contact.
      */
-    public String getphone() { return this.phone; }
+    public String getPhone() { return this.phone; }
     /**
      * The phone number of the contact.
      */
-    public void setphone(String value) { this.phone = value; }
+    public void setPhone(String value) { this.phone = value; }
     /**
      * The fax number of the contact.
      */
-    public String getfax() { return this.fax; }
+    public String getFax() { return this.fax; }
     /**
      * The fax number of the contact.
      */
-    public void setfax(String value) { this.fax = value; }
+    public void setFax(String value) { this.fax = value; }
     /**
      * The first line of the address.
      */
-    public String getaddress1() { return this.address1; }
+    public String getAddress1() { return this.address1; }
     /**
      * The first line of the address.
      */
-    public void setaddress1(String value) { this.address1 = value; }
+    public void setAddress1(String value) { this.address1 = value; }
     /**
      * The second line of the address.
      */
-    public String getaddress2() { return this.address2; }
+    public String getAddress2() { return this.address2; }
     /**
      * The second line of the address.
      */
-    public void setaddress2(String value) { this.address2 = value; }
+    public void setAddress2(String value) { this.address2 = value; }
     /**
      * The third line of the address.
      */
-    public String getaddress3() { return this.address3; }
+    public String getAddress3() { return this.address3; }
     /**
      * The third line of the address.
      */
-    public void setaddress3(String value) { this.address3 = value; }
+    public void setAddress3(String value) { this.address3 = value; }
     /**
      * The city of the address.
      */
-    public String getcity() { return this.city; }
+    public String getCity() { return this.city; }
     /**
      * The city of the address.
      */
-    public void setcity(String value) { this.city = value; }
+    public void setCity(String value) { this.city = value; }
     /**
      * The state/region of the address.
      */
-    public String getstateRegion() { return this.stateRegion; }
+    public String getStateRegion() { return this.stateRegion; }
     /**
      * The state/region of the address.
      */
-    public void setstateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(String value) { this.stateRegion = value; }
     /**
      * The postal/zip code of the address.
      */
-    public String getpostalCode() { return this.postalCode; }
+    public String getPostalCode() { return this.postalCode; }
     /**
      * The postal/zip code of the address.
      */
-    public void setpostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(String value) { this.postalCode = value; }
     /**
      * The two character country code of the address. This will be validated by the /api/v1/countries data set
      */
-    public String getcountryCode() { return this.countryCode; }
+    public String getCountryCode() { return this.countryCode; }
     /**
      * The two character country code of the address. This will be validated by the /api/v1/countries data set
      */
-    public void setcountryCode(String value) { this.countryCode = value; }
+    public void setCountryCode(String value) { this.countryCode = value; }
     /**
      * Flag indicating if the contact is active.
      */
-    public Boolean getisActive() { return this.isActive; }
+    public Boolean getIsActive() { return this.isActive; }
     /**
      * Flag indicating if the contact is active.
      */
-    public void setisActive(Boolean value) { this.isActive = value; }
+    public void setIsActive(Boolean value) { this.isActive = value; }
     /**
      * The webpage url of the contact.
      */
-    public String getwebpageUrl() { return this.webpageUrl; }
+    public String getWebpageUrl() { return this.webpageUrl; }
     /**
      * The webpage url of the contact.
      */
-    public void setwebpageUrl(String value) { this.webpageUrl = value; }
+    public void setWebpageUrl(String value) { this.webpageUrl = value; }
     /**
      * The picture/avatar url of the contact.
      */
-    public String getpictureUrl() { return this.pictureUrl; }
+    public String getPictureUrl() { return this.pictureUrl; }
     /**
      * The picture/avatar url of the contact.
      */
-    public void setpictureUrl(String value) { this.pictureUrl = value; }
+    public void setPictureUrl(String value) { this.pictureUrl = value; }
     /**
      * The date on which this record was created.
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date on which this record was created.
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created this contact.
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this contact.
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date on which this record was last modified.
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date on which this record was last modified.
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified this contact.
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this contact.
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * All notes attached to this company.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this company.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this company.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this company.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All definitions attached to this contact.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to this contact.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to this contact.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this contact.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

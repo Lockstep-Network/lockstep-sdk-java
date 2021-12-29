@@ -32,60 +32,60 @@ public class ArAgingHeaderInfoModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The aging bucket this data belongs to.
      */
-    public String getreportBucket() { return this.reportBucket; }
+    public String getReportBucket() { return this.reportBucket; }
     /**
      * The aging bucket this data belongs to.
      */
-    public void setreportBucket(String value) { this.reportBucket = value; }
+    public void setReportBucket(String value) { this.reportBucket = value; }
     /**
      * The total number of customers.
      */
-    public Integer gettotalCustomers() { return this.totalCustomers; }
+    public Integer getTotalCustomers() { return this.totalCustomers; }
     /**
      * The total number of customers.
      */
-    public void settotalCustomers(Integer value) { this.totalCustomers = value; }
+    public void setTotalCustomers(Integer value) { this.totalCustomers = value; }
     /**
      * The total number of invoices outstanding.
      */
-    public Integer gettotalInvoicesOutstanding() { return this.totalInvoicesOutstanding; }
+    public Integer getTotalInvoicesOutstanding() { return this.totalInvoicesOutstanding; }
     /**
      * The total number of invoices outstanding.
      */
-    public void settotalInvoicesOutstanding(Integer value) { this.totalInvoicesOutstanding = value; }
+    public void setTotalInvoicesOutstanding(Integer value) { this.totalInvoicesOutstanding = value; }
     /**
      * The total amount outstanding.
      */
-    public Double gettotalOutstandingAmount() { return this.totalOutstandingAmount; }
+    public Double getTotalOutstandingAmount() { return this.totalOutstandingAmount; }
     /**
      * The total amount outstanding.
      */
-    public void settotalOutstandingAmount(Double value) { this.totalOutstandingAmount = value; }
+    public void setTotalOutstandingAmount(Double value) { this.totalOutstandingAmount = value; }
     /**
      * The total amount for AR.
      */
-    public Double gettotalArAmount() { return this.totalArAmount; }
+    public Double getTotalArAmount() { return this.totalArAmount; }
     /**
      * The total amount for AR.
      */
-    public void settotalArAmount(Double value) { this.totalArAmount = value; }
+    public void setTotalArAmount(Double value) { this.totalArAmount = value; }
     /**
      * Portion of Total AR this data represents.
      */
-    public Double getpercentageOfTotalAr() { return this.percentageOfTotalAr; }
+    public Double getPercentageOfTotalAr() { return this.percentageOfTotalAr; }
     /**
      * Portion of Total AR this data represents.
      */
-    public void setpercentageOfTotalAr(Double value) { this.percentageOfTotalAr = value; }
+    public void setPercentageOfTotalAr(Double value) { this.percentageOfTotalAr = value; }
 };

@@ -52,36 +52,36 @@ public class PaymentModel
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public String getpaymentId() { return this.paymentId; }
+    public String getPaymentId() { return this.paymentId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      * 
      * For the ID of this record in its originating financial system, see `ErpKey`.
      */
-    public void setpaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * The ID of the company to which this payment belongs.
      */
-    public String getcompanyId() { return this.companyId; }
+    public String getCompanyId() { return this.companyId; }
     /**
      * The ID of the company to which this payment belongs.
      */
-    public void setcompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -91,7 +91,7 @@ public class PaymentModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public String geterpKey() { return this.erpKey; }
+    public String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      * 
@@ -101,191 +101,191 @@ public class PaymentModel
      * 
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      */
-    public void seterpKey(String value) { this.erpKey = value; }
+    public void setErpKey(String value) { this.erpKey = value; }
     /**
      * The type of payment, cash or check.
      */
-    public String getpaymentType() { return this.paymentType; }
+    public String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, cash or check.
      */
-    public void setpaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(String value) { this.paymentType = value; }
     /**
      * Cash, check, credit card, wire transfer.
      */
-    public String gettenderType() { return this.tenderType; }
+    public String getTenderType() { return this.tenderType; }
     /**
      * Cash, check, credit card, wire transfer.
      */
-    public void settenderType(String value) { this.tenderType = value; }
+    public void setTenderType(String value) { this.tenderType = value; }
     /**
      * Has the payment been fully applied?
      */
-    public Boolean getisOpen() { return this.isOpen; }
+    public Boolean getIsOpen() { return this.isOpen; }
     /**
      * Has the payment been fully applied?
      */
-    public void setisOpen(Boolean value) { this.isOpen = value; }
+    public void setIsOpen(Boolean value) { this.isOpen = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      */
-    public String getmemoText() { return this.memoText; }
+    public String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      */
-    public void setmemoText(String value) { this.memoText = value; }
+    public void setMemoText(String value) { this.memoText = value; }
     /**
      * The date of this payment.
      */
-    public Date getpaymentDate() { return this.paymentDate; }
+    public Date getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this payment.
      */
-    public void setpaymentDate(Date value) { this.paymentDate = value; }
+    public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
      * Payment post date.
      */
-    public Date getpostDate() { return this.postDate; }
+    public Date getPostDate() { return this.postDate; }
     /**
      * Payment post date.
      */
-    public void setpostDate(Date value) { this.postDate = value; }
+    public void setPostDate(Date value) { this.postDate = value; }
     /**
      * Total amount of this payment.
      */
-    public Double getpaymentAmount() { return this.paymentAmount; }
+    public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this payment.
      */
-    public void setpaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this payment.
      */
-    public Double getunappliedAmount() { return this.unappliedAmount; }
+    public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this payment.
      */
-    public void setunappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
      * Currency of the payment. This will be validated by the /api/v1/currencies data set
      */
-    public String getcurrencyCode() { return this.currencyCode; }
+    public String getCurrencyCode() { return this.currencyCode; }
     /**
      * Currency of the payment. This will be validated by the /api/v1/currencies data set
      */
-    public void setcurrencyCode(String value) { this.currencyCode = value; }
+    public void setCurrencyCode(String value) { this.currencyCode = value; }
     /**
      * Reference code for the payment for the given Erp system.
      */
-    public String getreferenceCode() { return this.referenceCode; }
+    public String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      */
-    public void setreferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The date on which this record was created.
      */
-    public Date getcreated() { return this.created; }
+    public Date getCreated() { return this.created; }
     /**
      * The date on which this record was created.
      */
-    public void setcreated(Date value) { this.created = value; }
+    public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created this payment.
      */
-    public String getcreatedUserId() { return this.createdUserId; }
+    public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this payment.
      */
-    public void setcreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date on which this record was last modified.
      */
-    public Date getmodified() { return this.modified; }
+    public Date getModified() { return this.modified; }
     /**
      * The date on which this record was last modified.
      */
-    public void setmodified(Date value) { this.modified = value; }
+    public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified this payment.
      */
-    public String getmodifiedUserId() { return this.modifiedUserId; }
+    public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this payment.
      */
-    public void setmodifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * Is the payment voided?
      */
-    public Boolean getisVoided() { return this.isVoided; }
+    public Boolean getIsVoided() { return this.isVoided; }
     /**
      * Is the payment voided?
      */
-    public void setisVoided(Boolean value) { this.isVoided = value; }
+    public void setIsVoided(Boolean value) { this.isVoided = value; }
     /**
      * Is the payment in dispute?
      */
-    public Boolean getinDispute() { return this.inDispute; }
+    public Boolean getInDispute() { return this.inDispute; }
     /**
      * Is the payment in dispute?
      */
-    public void setinDispute(Boolean value) { this.inDispute = value; }
+    public void setInDispute(Boolean value) { this.inDispute = value; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.
      */
-    public PaymentAppliedModel[] getapplications() { return this.applications; }
+    public PaymentAppliedModel[] getApplications() { return this.applications; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.
      */
-    public void setapplications(PaymentAppliedModel[] value) { this.applications = value; }
+    public void setApplications(PaymentAppliedModel[] value) { this.applications = value; }
     /**
      * All notes attached to this payment.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public NoteModel[] getnotes() { return this.notes; }
+    public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this payment.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
-    public void setnotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All attachments attached to this payment.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public AttachmentModel[] getattachments() { return this.attachments; }
+    public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * All attachments attached to this payment.
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
-    public void setattachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All definitions attached to this payment.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldDefinitionModel[] getcustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to this payment.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to this payment.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public CustomFieldValueModel[] getcustomFieldValues() { return this.customFieldValues; }
+    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this payment.
      * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
-    public void setcustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

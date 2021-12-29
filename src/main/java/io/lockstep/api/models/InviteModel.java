@@ -26,33 +26,33 @@ public class InviteModel
     /**
      * The invited email address
      */
-    public String getemail() { return this.email; }
+    public String getEmail() { return this.email; }
     /**
      * The invited email address
      */
-    public void setemail(String value) { this.email = value; }
+    public void setEmail(String value) { this.email = value; }
     /**
      * True if the invite was sent successfully
      */
-    public Boolean getsuccess() { return this.success; }
+    public Boolean getSuccess() { return this.success; }
     /**
      * True if the invite was sent successfully
      */
-    public void setsuccess(Boolean value) { this.success = value; }
+    public void setSuccess(Boolean value) { this.success = value; }
     /**
      * The invited user, may be null if the user could not be invited
      */
-    public UserAccountModel getinvitedUser() { return this.invitedUser; }
+    public UserAccountModel getInvitedUser() { return this.invitedUser; }
     /**
      * The invited user, may be null if the user could not be invited
      */
-    public void setinvitedUser(UserAccountModel value) { this.invitedUser = value; }
+    public void setInvitedUser(UserAccountModel value) { this.invitedUser = value; }
     /**
      * The error message if the invite was not successful
      */
-    public String geterrorMessage() { return this.errorMessage; }
+    public String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message if the invite was not successful
      */
-    public void seterrorMessage(String value) { this.errorMessage = value; }
+    public void setErrorMessage(String value) { this.errorMessage = value; }
 };

@@ -39,137 +39,137 @@ public class AtRiskInvoiceSummaryModel
     /**
      * The date of the report
      */
-    public Date getreportDate() { return this.reportDate; }
+    public Date getReportDate() { return this.reportDate; }
     /**
      * The date of the report
      */
-    public void setreportDate(Date value) { this.reportDate = value; }
+    public void setReportDate(Date value) { this.reportDate = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public String getcustomerId() { return this.customerId; }
+    public String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public void setcustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(String value) { this.customerId = value; }
     /**
      * The unique ID number of this invoice.
      */
-    public String getinvoiceId() { return this.invoiceId; }
+    public String getInvoiceId() { return this.invoiceId; }
     /**
      * The unique ID number of this invoice.
      */
-    public void setinvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * A reference code that is used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public String getinvoiceNumber() { return this.invoiceNumber; }
+    public String getInvoiceNumber() { return this.invoiceNumber; }
     /**
      * A reference code that is used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      */
-    public void setinvoiceNumber(String value) { this.invoiceNumber = value; }
+    public void setInvoiceNumber(String value) { this.invoiceNumber = value; }
     /**
      * The reporting date for this invoice.
      */
-    public Date getinvoiceDate() { return this.invoiceDate; }
+    public Date getInvoiceDate() { return this.invoiceDate; }
     /**
      * The reporting date for this invoice.
      */
-    public void setinvoiceDate(Date value) { this.invoiceDate = value; }
+    public void setInvoiceDate(Date value) { this.invoiceDate = value; }
     /**
      * The name of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public String getcustomerName() { return this.customerName; }
+    public String getCustomerName() { return this.customerName; }
     /**
      * The name of the counterparty for the invoice, for example, a customer or vendor.
      */
-    public void setcustomerName(String value) { this.customerName = value; }
+    public void setCustomerName(String value) { this.customerName = value; }
     /**
      * The status of the invoice.
      */
-    public String getstatus() { return this.status; }
+    public String getStatus() { return this.status; }
     /**
      * The status of the invoice.
      */
-    public void setstatus(String value) { this.status = value; }
+    public void setStatus(String value) { this.status = value; }
     /**
      * The due date of the invoice.
      */
-    public Date getpaymentDueDate() { return this.paymentDueDate; }
+    public Date getPaymentDueDate() { return this.paymentDueDate; }
     /**
      * The due date of the invoice.
      */
-    public void setpaymentDueDate(Date value) { this.paymentDueDate = value; }
+    public void setPaymentDueDate(Date value) { this.paymentDueDate = value; }
     /**
      * The total amount of the Invoice.
      */
-    public Double getinvoiceAmount() { return this.invoiceAmount; }
+    public Double getInvoiceAmount() { return this.invoiceAmount; }
     /**
      * The total amount of the Invoice.
      */
-    public void setinvoiceAmount(Double value) { this.invoiceAmount = value; }
+    public void setInvoiceAmount(Double value) { this.invoiceAmount = value; }
     /**
      * The remaining balance value of this invoice.
      */
-    public Double getoutstandingBalance() { return this.outstandingBalance; }
+    public Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
      * The remaining balance value of this invoice.
      */
-    public void setoutstandingBalance(Double value) { this.outstandingBalance = value; }
+    public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
     /**
      * A code identifying the type of this Invoice.
      */
-    public String getinvoiceTypeCode() { return this.invoiceTypeCode; }
+    public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
      * A code identifying the type of this Invoice.
      */
-    public void setinvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
+    public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
     /**
      * The date stamp for the newest Activity on this Invoice.
      */
-    public Date getnewestActivity() { return this.newestActivity; }
+    public Date getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Invoice.
      */
-    public void setnewestActivity(Date value) { this.newestActivity = value; }
+    public void setNewestActivity(Date value) { this.newestActivity = value; }
     /**
      * The number of days this Invoice is past due.
      */
-    public Integer getdaysPastDue() { return this.daysPastDue; }
+    public Integer getDaysPastDue() { return this.daysPastDue; }
     /**
      * The number of days this Invoice is past due.
      */
-    public void setdaysPastDue(Integer value) { this.daysPastDue = value; }
+    public void setDaysPastDue(Integer value) { this.daysPastDue = value; }
     /**
      * The memo text of the payments associated to this invoice.
      */
-    public String[] getpaymentNumbers() { return this.paymentNumbers; }
+    public String[] getPaymentNumbers() { return this.paymentNumbers; }
     /**
      * The memo text of the payments associated to this invoice.
      */
-    public void setpaymentNumbers(String[] value) { this.paymentNumbers = value; }
+    public void setPaymentNumbers(String[] value) { this.paymentNumbers = value; }
     /**
      * The ids of the payments associated to this invoice.
      */
-    public String[] getpaymentIds() { return this.paymentIds; }
+    public String[] getPaymentIds() { return this.paymentIds; }
     /**
      * The ids of the payments associated to this invoice.
      */
-    public void setpaymentIds(String[] value) { this.paymentIds = value; }
+    public void setPaymentIds(String[] value) { this.paymentIds = value; }
 };

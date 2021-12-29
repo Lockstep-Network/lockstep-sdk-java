@@ -23,9 +23,9 @@ public class SyncSubmitModel
     /**
      * The identifier of the app enrollment
      */
-    public String getappEnrollmentId() { return this.appEnrollmentId; }
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The identifier of the app enrollment
      */
-    public void setappEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

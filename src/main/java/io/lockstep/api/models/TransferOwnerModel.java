@@ -24,17 +24,17 @@ public class TransferOwnerModel
     /**
      * The previous owner of the account.
      */
-    public UserAccountModel getpreviousOwner() { return this.previousOwner; }
+    public UserAccountModel getPreviousOwner() { return this.previousOwner; }
     /**
      * The previous owner of the account.
      */
-    public void setpreviousOwner(UserAccountModel value) { this.previousOwner = value; }
+    public void setPreviousOwner(UserAccountModel value) { this.previousOwner = value; }
     /**
      * The new owner of the account.
      */
-    public UserAccountModel getnewOwner() { return this.newOwner; }
+    public UserAccountModel getNewOwner() { return this.newOwner; }
     /**
      * The new owner of the account.
      */
-    public void setnewOwner(UserAccountModel value) { this.newOwner = value; }
+    public void setNewOwner(UserAccountModel value) { this.newOwner = value; }
 };

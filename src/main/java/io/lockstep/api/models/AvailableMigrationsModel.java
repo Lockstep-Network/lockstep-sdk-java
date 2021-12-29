@@ -23,9 +23,9 @@ public class AvailableMigrationsModel
     /**
      * Indicates which records are available for migration
      */
-    public AvailableGroup[] getmigrations() { return this.migrations; }
+    public AvailableGroup[] getMigrations() { return this.migrations; }
     /**
      * Indicates which records are available for migration
      */
-    public void setmigrations(AvailableGroup[] value) { this.migrations = value; }
+    public void setMigrations(AvailableGroup[] value) { this.migrations = value; }
 };

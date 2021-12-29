@@ -25,25 +25,25 @@ public class AgingModel
     /**
      * Aging bucket of outstanding balance data (days past due date of invoice)
      */
-    public Integer getbucket() { return this.bucket; }
+    public Integer getBucket() { return this.bucket; }
     /**
      * Aging bucket of outstanding balance data (days past due date of invoice)
      */
-    public void setbucket(Integer value) { this.bucket = value; }
+    public void setBucket(Integer value) { this.bucket = value; }
     /**
      * Currency code of aging bucket
      */
-    public String getcurrencyCode() { return this.currencyCode; }
+    public String getCurrencyCode() { return this.currencyCode; }
     /**
      * Currency code of aging bucket
      */
-    public void setcurrencyCode(String value) { this.currencyCode = value; }
+    public void setCurrencyCode(String value) { this.currencyCode = value; }
     /**
      * Outstanding balance for the given aging bucket
      */
-    public Double getoutstandingBalance() { return this.outstandingBalance; }
+    public Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
      * Outstanding balance for the given aging bucket
      */
-    public void setoutstandingBalance(Double value) { this.outstandingBalance = value; }
+    public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
 };

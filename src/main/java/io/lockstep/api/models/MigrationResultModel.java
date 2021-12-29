@@ -34,96 +34,96 @@ public class MigrationResultModel
      * If the API call produced messages, this element will contain a list of user-visible
      * text strings that contain information about what work occurred in the API.
      */
-    public String[] getmessages() { return this.messages; }
+    public String[] getMessages() { return this.messages; }
     /**
      * If the API call produced messages, this element will contain a list of user-visible
      * text strings that contain information about what work occurred in the API.
      */
-    public void setmessages(String[] value) { this.messages = value; }
+    public void setMessages(String[] value) { this.messages = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public String getgroupKey() { return this.groupKey; }
+    public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
      * 
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
-    public void setgroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The number of invoices migrated
      */
-    public Integer getinvoiceCount() { return this.invoiceCount; }
+    public Integer getInvoiceCount() { return this.invoiceCount; }
     /**
      * The number of invoices migrated
      */
-    public void setinvoiceCount(Integer value) { this.invoiceCount = value; }
+    public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
     /**
      * The number of addresses migrated
      */
-    public Integer getaddressCount() { return this.addressCount; }
+    public Integer getAddressCount() { return this.addressCount; }
     /**
      * The number of addresses migrated
      */
-    public void setaddressCount(Integer value) { this.addressCount = value; }
+    public void setAddressCount(Integer value) { this.addressCount = value; }
     /**
      * The number of invoice and invoice line fields migrated
      */
-    public Integer getinvoiceFieldCount() { return this.invoiceFieldCount; }
+    public Integer getInvoiceFieldCount() { return this.invoiceFieldCount; }
     /**
      * The number of invoice and invoice line fields migrated
      */
-    public void setinvoiceFieldCount(Integer value) { this.invoiceFieldCount = value; }
+    public void setInvoiceFieldCount(Integer value) { this.invoiceFieldCount = value; }
     /**
      * The number of invoice lines migrated
      */
-    public Integer getlineCount() { return this.lineCount; }
+    public Integer getLineCount() { return this.lineCount; }
     /**
      * The number of invoice lines migrated
      */
-    public void setlineCount(Integer value) { this.lineCount = value; }
+    public void setLineCount(Integer value) { this.lineCount = value; }
     /**
      * The number of contacts migrated
      */
-    public Integer getcontactCount() { return this.contactCount; }
+    public Integer getContactCount() { return this.contactCount; }
     /**
      * The number of contacts migrated
      */
-    public void setcontactCount(Integer value) { this.contactCount = value; }
+    public void setContactCount(Integer value) { this.contactCount = value; }
     /**
      * The number of companies migrated
      */
-    public Integer getcompanyCount() { return this.companyCount; }
+    public Integer getCompanyCount() { return this.companyCount; }
     /**
      * The number of companies migrated
      */
-    public void setcompanyCount(Integer value) { this.companyCount = value; }
+    public void setCompanyCount(Integer value) { this.companyCount = value; }
     /**
      * The number of payments migrated
      */
-    public Integer getpaymentCount() { return this.paymentCount; }
+    public Integer getPaymentCount() { return this.paymentCount; }
     /**
      * The number of payments migrated
      */
-    public void setpaymentCount(Integer value) { this.paymentCount = value; }
+    public void setPaymentCount(Integer value) { this.paymentCount = value; }
     /**
      * The number of payment fields migrated
      */
-    public Integer getpaymentFieldCount() { return this.paymentFieldCount; }
+    public Integer getPaymentFieldCount() { return this.paymentFieldCount; }
     /**
      * The number of payment fields migrated
      */
-    public void setpaymentFieldCount(Integer value) { this.paymentFieldCount = value; }
+    public void setPaymentFieldCount(Integer value) { this.paymentFieldCount = value; }
     /**
      * The number of payments applied migrated
      */
-    public Integer getpaymentAppliedCount() { return this.paymentAppliedCount; }
+    public Integer getPaymentAppliedCount() { return this.paymentAppliedCount; }
     /**
      * The number of payments applied migrated
      */
-    public void setpaymentAppliedCount(Integer value) { this.paymentAppliedCount = value; }
+    public void setPaymentAppliedCount(Integer value) { this.paymentAppliedCount = value; }
 };
