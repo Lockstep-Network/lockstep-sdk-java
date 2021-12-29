@@ -35,7 +35,7 @@ public class ProvisioningClient
      * 
      * @param body - Represents a User and their related metadata
      */
-    public LockstepResponse<ProvisioningResponseModel> ProvisionUserAccount(ProvisioningModel body)
+    public LockstepResponse<ProvisioningResponseModel> provisionUserAccount(ProvisioningModel body)
     {
         RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning");
         r.AddBody(body);
@@ -47,7 +47,7 @@ public class ProvisioningClient
      * 
      * @param body - Represents a User and their related metadata
      */
-    public LockstepResponse<ProvisioningResponseModel> FinalizeUserAccountProvisioning(ProvisioningFinalizeRequestModel body)
+    public LockstepResponse<ProvisioningResponseModel> finalizeUserAccountProvisioning(ProvisioningFinalizeRequestModel body)
     {
         RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning/finalize");
         r.AddBody(body);

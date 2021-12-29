@@ -39,7 +39,7 @@ public class CreditMemoAppliedClient
      * @param id - The unique Lockstep Platform ID number of this Credit Memo Application; NOT the customer's ERP key
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
      */
-    public LockstepResponse<CreditMemoAppliedModel> RetrieveCreditMemoApplication(String id, String include)
+    public LockstepResponse<CreditMemoAppliedModel> retrieveCreditMemoApplication(String id, String include)
     {
         RestRequest<CreditMemoAppliedModel> r = new RestRequest<CreditMemoAppliedModel>(this.client, "GET", "/api/v1/CreditMemoApplied/{id}");
         r.AddPath("{id}", id.toString());
@@ -55,7 +55,7 @@ public class CreditMemoAppliedClient
      * @param id - The unique Lockstep Platform ID number of the Credit Memo Application to update; NOT the customer's ERP key
      * @param body - A list of changes to apply to this Credit Memo Application
      */
-    public LockstepResponse<CreditMemoAppliedModel> UpdateCreditMemoApplication(String id, Object body)
+    public LockstepResponse<CreditMemoAppliedModel> updateCreditMemoApplication(String id, Object body)
     {
         RestRequest<CreditMemoAppliedModel> r = new RestRequest<CreditMemoAppliedModel>(this.client, "PATCH", "/api/v1/CreditMemoApplied/{id}");
         r.AddPath("{id}", id.toString());
@@ -70,7 +70,7 @@ public class CreditMemoAppliedClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Credit Memo Application to delete; NOT the customer's ERP key
      */
-    public LockstepResponse<CreditMemoAppliedModel> DeleteCreditMemoApplication(String id)
+    public LockstepResponse<CreditMemoAppliedModel> deleteCreditMemoApplication(String id)
     {
         RestRequest<CreditMemoAppliedModel> r = new RestRequest<CreditMemoAppliedModel>(this.client, "DELETE", "/api/v1/CreditMemoApplied/{id}");
         r.AddPath("{id}", id.toString());
@@ -84,7 +84,7 @@ public class CreditMemoAppliedClient
      * 
      * @param body - The Credit Memo Applications to create
      */
-    public LockstepResponse<CreditMemoAppliedModel[]> CreateCreditMemoApplications(CreditMemoAppliedModel[] body)
+    public LockstepResponse<CreditMemoAppliedModel[]> createCreditMemoApplications(CreditMemoAppliedModel[] body)
     {
         RestRequest<CreditMemoAppliedModel[]> r = new RestRequest<CreditMemoAppliedModel[]>(this.client, "POST", "/api/v1/CreditMemoApplied");
         r.AddBody(body);
@@ -102,7 +102,7 @@ public class CreditMemoAppliedClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<CreditMemoAppliedModel>> QueryCreditMemoApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CreditMemoAppliedModel>> queryCreditMemoApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CreditMemoAppliedModel>> r = new RestRequest<FetchResult<CreditMemoAppliedModel>>(this.client, "GET", "/api/v1/CreditMemoApplied/query");
         r.AddQuery("filter", filter.toString());

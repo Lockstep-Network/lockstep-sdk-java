@@ -33,7 +33,7 @@ public class MigrationClient
      * Migrates all customer data from the Lockstep Collect system to the API, including all stored data for contacts, companies, payments, and invoices.
      * 
      */
-    public LockstepResponse<MigrationResultModel> MigrateData()
+    public LockstepResponse<MigrationResultModel> migrateData()
     {
         RestRequest<MigrationResultModel> r = new RestRequest<MigrationResultModel>(this.client, "POST", "/api/v1/Migration");
         return r.Call(MigrationResultModel.class);
@@ -43,7 +43,7 @@ public class MigrationClient
      * Lists all of the customer, contact, payment, and invoice data currently available for Migration.
      * 
      */
-    public LockstepResponse<AvailableMigrationsModel> ListMigrations()
+    public LockstepResponse<AvailableMigrationsModel> listMigrations()
     {
         RestRequest<AvailableMigrationsModel> r = new RestRequest<AvailableMigrationsModel>(this.client, "GET", "/api/v1/Migration/list");
         return r.Call(AvailableMigrationsModel.class);

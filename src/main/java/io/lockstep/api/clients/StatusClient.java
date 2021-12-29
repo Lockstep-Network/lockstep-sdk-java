@@ -35,7 +35,7 @@ public class StatusClient
      * 
      * The Ping API can be used to verify that your app is working correctly.  The Ping API will always return 200 OK.  If you call this API and you receive a code other than 200 OK, you should check your network connectivity.  A response code of anything other than 200 means that a routing issue or proxy issue may prevent your application from reaching the Lockstep API
      */
-    public LockstepResponse<StatusModel> Ping()
+    public LockstepResponse<StatusModel> ping()
     {
         RestRequest<StatusModel> r = new RestRequest<StatusModel>(this.client, "GET", "/api/v1/Status");
         return r.Call(StatusModel.class);
@@ -49,7 +49,7 @@ public class StatusClient
      * The Error Test API allows you to test whether your client program is capable of handling certain types of error codes.  Developers writing libraries may find it useful to create integration tests that verify that their code can correctly detect the difference between a validation error resulting in a 400 error code, a network timeout resulting in a broken network connection, and a server error resulting in a 500 error code.  You may use the Error Test API to verify that your code is able to identify and handle these cases correctly.
      * @param err - The type of error test to execute. Supported error types: 500, timeout
      */
-    public LockstepResponse<TestTimeoutException> ErrorTest(String err)
+    public LockstepResponse<TestTimeoutException> errorTest(String err)
     {
         RestRequest<TestTimeoutException> r = new RestRequest<TestTimeoutException>(this.client, "GET", "/api/v1/Status/testing");
         r.AddQuery("err", err.toString());

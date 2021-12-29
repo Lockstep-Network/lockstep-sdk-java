@@ -34,7 +34,7 @@ public class LeadsClient
      * A Lead is a person who is interested in the Lockstep platform but needs certain new features in order to use it. If you are interested in the Lockstep platform, you can create a lead with your information and our team will prioritize the feature you need.
      * @param body - The Leads to create
      */
-    public LockstepResponse<LeadModel[]> CreateLeads(LeadModel[] body)
+    public LockstepResponse<LeadModel[]> createLeads(LeadModel[] body)
     {
         RestRequest<LeadModel[]> r = new RestRequest<LeadModel[]>(this.client, "POST", "/api/v1/Leads");
         r.AddBody(body);

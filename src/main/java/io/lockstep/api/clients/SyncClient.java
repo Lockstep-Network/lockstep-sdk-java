@@ -39,7 +39,7 @@ public class SyncClient
      * 
      * @param body - Information about the Sync to execute
      */
-    public LockstepResponse<SyncRequestModel> CreateSync(SyncSubmitModel body)
+    public LockstepResponse<SyncRequestModel> createSync(SyncSubmitModel body)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "POST", "/api/v1/Sync");
         r.AddBody(body);
@@ -52,7 +52,7 @@ public class SyncClient
      * A Sync task represents an action performed by an Application for a particular account.  An Application can provide many different tasks as part of their capabilities.  Sync tasks are executed in the background and will continue running after they are created.  Use one of the creation APIs to request execution of a task. To check on the progress of the task, call GetSync or QuerySync.
      * 
      */
-    public LockstepResponse<SyncRequestModel> UploadSyncFile()
+    public LockstepResponse<SyncRequestModel> uploadSyncFile()
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "POST", "/api/v1/Sync/zip");
         return r.Call(SyncRequestModel.class);
@@ -68,7 +68,7 @@ public class SyncClient
      * @param id - The unique ID number of the Sync to update
      * @param body - A list of changes to apply to this Application
      */
-    public LockstepResponse<SyncRequestModel> UpdateSync(String id, Object body)
+    public LockstepResponse<SyncRequestModel> updateSync(String id, Object body)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "PATCH", "/api/v1/Sync/{id}");
         r.AddPath("{id}", id.toString());
@@ -82,7 +82,7 @@ public class SyncClient
      * @param id - The unique ID number of the Sync task to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Details
      */
-    public LockstepResponse<SyncRequestModel> RetrieveSync(String id, String include)
+    public LockstepResponse<SyncRequestModel> retrieveSync(String id, String include)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "GET", "/api/v1/Sync/{id}");
         r.AddPath("{id}", id.toString());
@@ -101,7 +101,7 @@ public class SyncClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<SyncRequestModel>> QuerySyncs(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<SyncRequestModel>> querySyncs(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<SyncRequestModel>> r = new RestRequest<FetchResult<SyncRequestModel>>(this.client, "GET", "/api/v1/Sync/query");
         r.AddQuery("filter", filter.toString());

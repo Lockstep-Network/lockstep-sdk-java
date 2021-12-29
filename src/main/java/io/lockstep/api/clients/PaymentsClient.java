@@ -43,7 +43,7 @@ public class PaymentsClient
      * @param id - The unique Lockstep Platform ID number of this Payment; NOT the customer's ERP key
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Applications, Notes, Attachments, CustomFields
      */
-    public LockstepResponse<PaymentModel> RetrievePayment(String id, String include)
+    public LockstepResponse<PaymentModel> retrievePayment(String id, String include)
     {
         RestRequest<PaymentModel> r = new RestRequest<PaymentModel>(this.client, "GET", "/api/v1/Payments/{id}");
         r.AddPath("{id}", id.toString());
@@ -61,7 +61,7 @@ public class PaymentsClient
      * @param id - The unique Lockstep Platform ID number of the Payment to update; NOT the customer's ERP key
      * @param body - A list of changes to apply to this Payment
      */
-    public LockstepResponse<PaymentModel> UpdatePayment(String id, Object body)
+    public LockstepResponse<PaymentModel> updatePayment(String id, Object body)
     {
         RestRequest<PaymentModel> r = new RestRequest<PaymentModel>(this.client, "PATCH", "/api/v1/Payments/{id}");
         r.AddPath("{id}", id.toString());
@@ -76,7 +76,7 @@ public class PaymentsClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Payment to delete; NOT the customer's ERP key
      */
-    public LockstepResponse<ActionResultModel> DeletePayment(String id)
+    public LockstepResponse<ActionResultModel> deletePayment(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Payments/{id}");
         r.AddPath("{id}", id.toString());
@@ -90,7 +90,7 @@ public class PaymentsClient
      * 
      * @param body - The Payments to create
      */
-    public LockstepResponse<PaymentModel[]> CreatePayments(PaymentModel[] body)
+    public LockstepResponse<PaymentModel[]> createPayments(PaymentModel[] body)
     {
         RestRequest<PaymentModel[]> r = new RestRequest<PaymentModel[]>(this.client, "POST", "/api/v1/Payments");
         r.AddBody(body);
@@ -110,7 +110,7 @@ public class PaymentsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<PaymentModel>> QueryPayments(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<PaymentModel>> queryPayments(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<PaymentModel>> r = new RestRequest<FetchResult<PaymentModel>>(this.client, "GET", "/api/v1/Payments/query");
         r.AddQuery("filter", filter.toString());
@@ -134,7 +134,7 @@ public class PaymentsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<PaymentSummaryModel>> QueryPaymentSummaryView(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<PaymentSummaryModel>> queryPaymentSummaryView(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<PaymentSummaryModel>> r = new RestRequest<FetchResult<PaymentSummaryModel>>(this.client, "GET", "/api/v1/Payments/views/summary");
         r.AddQuery("filter", filter.toString());
@@ -149,7 +149,7 @@ public class PaymentsClient
      * Retrieves aggregated payment data from your account.
      * 
      */
-    public LockstepResponse<PaymentDetailHeaderModel> RetrievePaymentDetailHeader()
+    public LockstepResponse<PaymentDetailHeaderModel> retrievePaymentDetailHeader()
     {
         RestRequest<PaymentDetailHeaderModel> r = new RestRequest<PaymentDetailHeaderModel>(this.client, "GET", "/api/v1/Payments/views/detail-header");
         return r.Call(PaymentDetailHeaderModel.class);
@@ -166,7 +166,7 @@ public class PaymentsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<PaymentDetailModel>> QueryPaymentDetailView(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<PaymentDetailModel>> queryPaymentDetailView(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<PaymentDetailModel>> r = new RestRequest<FetchResult<PaymentDetailModel>>(this.client, "GET", "/api/v1/Payments/views/detail");
         r.AddQuery("filter", filter.toString());

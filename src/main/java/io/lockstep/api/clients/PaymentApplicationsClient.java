@@ -40,7 +40,7 @@ public class PaymentApplicationsClient
      * @param id - The unique Lockstep Platform ID number of this Payment Application; NOT the customer's ERP key
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Invoice
      */
-    public LockstepResponse<PaymentAppliedModel> RetrievePaymentApplication(String id, String include)
+    public LockstepResponse<PaymentAppliedModel> retrievePaymentApplication(String id, String include)
     {
         RestRequest<PaymentAppliedModel> r = new RestRequest<PaymentAppliedModel>(this.client, "GET", "/api/v1/PaymentApplications/{id}");
         r.AddPath("{id}", id.toString());
@@ -56,7 +56,7 @@ public class PaymentApplicationsClient
      * @param id - The unique Lockstep Platform ID number of the Payment Application to update; NOT the customer's ERP key
      * @param body - A list of changes to apply to this Payment Application
      */
-    public LockstepResponse<PaymentAppliedModel> UpdatePaymentApplication(String id, Object body)
+    public LockstepResponse<PaymentAppliedModel> updatePaymentApplication(String id, Object body)
     {
         RestRequest<PaymentAppliedModel> r = new RestRequest<PaymentAppliedModel>(this.client, "PATCH", "/api/v1/PaymentApplications/{id}");
         r.AddPath("{id}", id.toString());
@@ -71,7 +71,7 @@ public class PaymentApplicationsClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Payment Application to delete; NOT the customer's ERP key
      */
-    public LockstepResponse<ActionResultModel> DeletePaymentApplication(String id)
+    public LockstepResponse<ActionResultModel> deletePaymentApplication(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/PaymentApplications/{id}");
         r.AddPath("{id}", id.toString());
@@ -85,7 +85,7 @@ public class PaymentApplicationsClient
      * 
      * @param body - The Payment Applications to create
      */
-    public LockstepResponse<PaymentAppliedModel[]> CreatePaymentApplications(PaymentAppliedModel[] body)
+    public LockstepResponse<PaymentAppliedModel[]> createPaymentApplications(PaymentAppliedModel[] body)
     {
         RestRequest<PaymentAppliedModel[]> r = new RestRequest<PaymentAppliedModel[]>(this.client, "POST", "/api/v1/PaymentApplications");
         r.AddBody(body);
@@ -103,7 +103,7 @@ public class PaymentApplicationsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<PaymentAppliedModel>> QueryPaymentApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<PaymentAppliedModel>> queryPaymentApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<PaymentAppliedModel>> r = new RestRequest<FetchResult<PaymentAppliedModel>>(this.client, "GET", "/api/v1/PaymentApplications/query");
         r.AddQuery("filter", filter.toString());

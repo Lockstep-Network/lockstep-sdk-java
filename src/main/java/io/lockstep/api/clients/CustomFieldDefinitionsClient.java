@@ -39,7 +39,7 @@ public class CustomFieldDefinitionsClient
      * @param id - The unique Lockstep Platform ID number of this Custom Field Definition
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
      */
-    public LockstepResponse<CustomFieldDefinitionModel> RetrieveFieldDefinition(String id, String include)
+    public LockstepResponse<CustomFieldDefinitionModel> retrieveFieldDefinition(String id, String include)
     {
         RestRequest<CustomFieldDefinitionModel> r = new RestRequest<CustomFieldDefinitionModel>(this.client, "GET", "/api/v1/CustomFieldDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -57,7 +57,7 @@ public class CustomFieldDefinitionsClient
      * @param id - The unique Lockstep Platform ID number of the Custom Field Definition to update
      * @param body - A list of changes to apply to this Custom Field Definition
      */
-    public LockstepResponse<CustomFieldDefinitionModel> UpdateFieldDefinition(String id, Object body)
+    public LockstepResponse<CustomFieldDefinitionModel> updateFieldDefinition(String id, Object body)
     {
         RestRequest<CustomFieldDefinitionModel> r = new RestRequest<CustomFieldDefinitionModel>(this.client, "PATCH", "/api/v1/CustomFieldDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -72,7 +72,7 @@ public class CustomFieldDefinitionsClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Custom Field Definition to delete
      */
-    public LockstepResponse<CustomFieldDefinitionModel> DeleteFieldDefinition(String id)
+    public LockstepResponse<CustomFieldDefinitionModel> deleteFieldDefinition(String id)
     {
         RestRequest<CustomFieldDefinitionModel> r = new RestRequest<CustomFieldDefinitionModel>(this.client, "DELETE", "/api/v1/CustomFieldDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -84,7 +84,7 @@ public class CustomFieldDefinitionsClient
      * 
      * @param body - The Custom Field Definitions to create
      */
-    public LockstepResponse<CustomFieldDefinitionModel[]> CreateFieldDefinitions(CustomFieldDefinitionModel[] body)
+    public LockstepResponse<CustomFieldDefinitionModel[]> createFieldDefinitions(CustomFieldDefinitionModel[] body)
     {
         RestRequest<CustomFieldDefinitionModel[]> r = new RestRequest<CustomFieldDefinitionModel[]>(this.client, "POST", "/api/v1/CustomFieldDefinitions");
         r.AddBody(body);
@@ -104,7 +104,7 @@ public class CustomFieldDefinitionsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<CustomFieldDefinitionModel>> QueryFieldDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CustomFieldDefinitionModel>> queryFieldDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CustomFieldDefinitionModel>> r = new RestRequest<FetchResult<CustomFieldDefinitionModel>>(this.client, "GET", "/api/v1/CustomFieldDefinitions/query");
         r.AddQuery("filter", filter.toString());

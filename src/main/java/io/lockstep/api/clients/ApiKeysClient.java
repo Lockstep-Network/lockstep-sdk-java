@@ -39,7 +39,7 @@ public class ApiKeysClient
      * @param id - The unique ID number of the API Key to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future.
      */
-    public LockstepResponse<ApiKeyModel> RetrieveAPIKey(String id, String include)
+    public LockstepResponse<ApiKeyModel> retrieveAPIKey(String id, String include)
     {
         RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "GET", "/api/v1/ApiKeys/{id}");
         r.AddPath("{id}", id.toString());
@@ -54,7 +54,7 @@ public class ApiKeysClient
      * 
      * @param id - The unique Lockstep Platform ID number of this API Key
      */
-    public LockstepResponse<ApiKeyModel> RevokeAPIKey(String id)
+    public LockstepResponse<ApiKeyModel> revokeAPIKey(String id)
     {
         RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "DELETE", "/api/v1/ApiKeys/{id}");
         r.AddPath("{id}", id.toString());
@@ -68,7 +68,7 @@ public class ApiKeysClient
      * 
      * @param body - Metadata about the API Key to create.
      */
-    public LockstepResponse<ApiKeyModel> CreateAPIKey(ApiKeyModel body)
+    public LockstepResponse<ApiKeyModel> createAPIKey(ApiKeyModel body)
     {
         RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "POST", "/api/v1/ApiKeys");
         r.AddBody(body);
@@ -84,7 +84,7 @@ public class ApiKeysClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<ApiKeyModel>> QueryAPIKeys(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<ApiKeyModel>> queryAPIKeys(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<ApiKeyModel>> r = new RestRequest<FetchResult<ApiKeyModel>>(this.client, "GET", "/api/v1/ApiKeys/query");
         r.AddQuery("filter", filter.toString());

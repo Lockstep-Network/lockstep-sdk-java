@@ -43,7 +43,7 @@ public class ReportsClient
      * 
      * @param timeframe - Number of days of data to include for the Cash Flow Report (default is 30 days from today)
      */
-    public LockstepResponse<CashflowReportModel> CashFlow(Integer timeframe)
+    public LockstepResponse<CashflowReportModel> cashFlow(Integer timeframe)
     {
         RestRequest<CashflowReportModel> r = new RestRequest<CashflowReportModel>(this.client, "GET", "/api/v1/Reports/cashflow");
         r.AddQuery("timeframe", timeframe.toString());
@@ -56,7 +56,7 @@ public class ReportsClient
      * Daily Sales Outstanding, or DSO, is a metric that indicates the average number of days that it takes for an invoice to be fully paid.  You can use this report to identify whether a company is improving on its ability to collect on invoices.
      * 
      */
-    public LockstepResponse<DailySalesOutstandingReportModel[]> DailySalesOutstanding()
+    public LockstepResponse<DailySalesOutstandingReportModel[]> dailySalesOutstanding()
     {
         RestRequest<DailySalesOutstandingReportModel[]> r = new RestRequest<DailySalesOutstandingReportModel[]>(this.client, "GET", "/api/v1/Reports/dailysalesoutstanding");
         return r.Call(DailySalesOutstandingReportModel[].class);
@@ -68,7 +68,7 @@ public class ReportsClient
      * Risk Rate is a metric that indicates the percentage of total AR balance left unpaid after 90 days.  You can use this report to identify the percentage of invoice value that is not being collected in a timely manner.
      * 
      */
-    public LockstepResponse<RiskRateModel[]> RiskRates()
+    public LockstepResponse<RiskRateModel[]> riskRates()
     {
         RestRequest<RiskRateModel[]> r = new RestRequest<RiskRateModel[]>(this.client, "GET", "/api/v1/Reports/riskrates");
         return r.Call(RiskRateModel[].class);
@@ -80,7 +80,7 @@ public class ReportsClient
      * @param reportDate - The date of the report.
      * @param companyId - Include a company to get AR data for a specific company, leave as null to include all Companies.
      */
-    public LockstepResponse<ArHeaderInfoModel> AccountsReceivableHeader(Date reportDate, String companyId)
+    public LockstepResponse<ArHeaderInfoModel> accountsReceivableHeader(Date reportDate, String companyId)
     {
         RestRequest<ArHeaderInfoModel> r = new RestRequest<ArHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/ar-header");
         r.AddQuery("reportDate", reportDate.toString());
@@ -103,7 +103,7 @@ public class ReportsClient
      * @param CurrencyProvider - Currency provider currency rates should be returned from to convert aging amounts to (default Lockstep currency provider used if no data provider specified)
      * @param Buckets - Customized buckets used for aging calculations (default buckets [0,30,60,90,120,180] will be used if buckets not specified)
      */
-    public LockstepResponse<AgingModel[]> Invoiceagingreport(String CompanyId, Boolean Recalculate, String CurrencyCode, String CurrencyProvider, Integer[] Buckets)
+    public LockstepResponse<AgingModel[]> invoiceagingreport(String CompanyId, Boolean Recalculate, String CurrencyCode, String CurrencyProvider, Integer[] Buckets)
     {
         RestRequest<AgingModel[]> r = new RestRequest<AgingModel[]>(this.client, "GET", "/api/v1/Reports/aging");
         r.AddQuery("CompanyId", CompanyId.toString());
@@ -120,7 +120,7 @@ public class ReportsClient
      * The AR Aging Header report contains aggregated information about the `TotalInvoicesPastDue`, `TotalCustomers`, and their respective `PercentageOfTotalAr` grouped by their aging `ReportBucket`.
      * 
      */
-    public LockstepResponse<ArAgingHeaderInfoModel[]> AccountsReceivableAgingHeader()
+    public LockstepResponse<ArAgingHeaderInfoModel[]> accountsReceivableAgingHeader()
     {
         RestRequest<ArAgingHeaderInfoModel[]> r = new RestRequest<ArAgingHeaderInfoModel[]>(this.client, "GET", "/api/v1/Reports/ar-aging-header");
         return r.Call(ArAgingHeaderInfoModel[].class);
@@ -133,7 +133,7 @@ public class ReportsClient
      * 
      * @param companyId - Include a specific company to get Attachment data for, leave as null to include all Companies.
      */
-    public LockstepResponse<AttachmentHeaderInfoModel> AttachmentsHeaderInformation(String companyId)
+    public LockstepResponse<AttachmentHeaderInfoModel> attachmentsHeaderInformation(String companyId)
     {
         RestRequest<AttachmentHeaderInfoModel> r = new RestRequest<AttachmentHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/attachments-header");
         r.AddQuery("companyId", companyId.toString());

@@ -39,7 +39,7 @@ public class ActivitiesClient
      * @param id - The unique Lockstep Platform ID number of this Activity
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, and Notes
      */
-    public LockstepResponse<ActivityModel> RetrieveActivity(String id, String include)
+    public LockstepResponse<ActivityModel> retrieveActivity(String id, String include)
     {
         RestRequest<ActivityModel> r = new RestRequest<ActivityModel>(this.client, "GET", "/api/v1/Activities/{id}");
         r.AddPath("{id}", id.toString());
@@ -57,7 +57,7 @@ public class ActivitiesClient
      * @param id - The unique Lockstep Platform ID number of the Activity to update
      * @param body - A list of changes to apply to this Activity
      */
-    public LockstepResponse<ActivityModel> UpdateActivity(String id, Object body)
+    public LockstepResponse<ActivityModel> updateActivity(String id, Object body)
     {
         RestRequest<ActivityModel> r = new RestRequest<ActivityModel>(this.client, "PATCH", "/api/v1/Activities/{id}");
         r.AddPath("{id}", id.toString());
@@ -72,7 +72,7 @@ public class ActivitiesClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Activity to delete
      */
-    public LockstepResponse<ActivityModel> DeleteActivity(String id)
+    public LockstepResponse<ActivityModel> deleteActivity(String id)
     {
         RestRequest<ActivityModel> r = new RestRequest<ActivityModel>(this.client, "DELETE", "/api/v1/Activities/{id}");
         r.AddPath("{id}", id.toString());
@@ -86,7 +86,7 @@ public class ActivitiesClient
      * 
      * @param body - The Activities to create
      */
-    public LockstepResponse<ActivityModel[]> CreateActivities(ActivityModel[] body)
+    public LockstepResponse<ActivityModel[]> createActivities(ActivityModel[] body)
     {
         RestRequest<ActivityModel[]> r = new RestRequest<ActivityModel[]>(this.client, "POST", "/api/v1/Activities");
         r.AddBody(body);
@@ -106,7 +106,7 @@ public class ActivitiesClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<ActivityModel>> QueryActivities(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<ActivityModel>> queryActivities(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<ActivityModel>> r = new RestRequest<FetchResult<ActivityModel>>(this.client, "GET", "/api/v1/Activities/query");
         r.AddQuery("filter", filter.toString());

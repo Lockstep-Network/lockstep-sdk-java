@@ -39,7 +39,7 @@ public class CodeDefinitionsClient
      * @param id - The unique Lockstep Platform ID number of this CodeDefinition
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      */
-    public LockstepResponse<CodeDefinitionModel> RetrieveCodeDefinition(String id, String include)
+    public LockstepResponse<CodeDefinitionModel> retrieveCodeDefinition(String id, String include)
     {
         RestRequest<CodeDefinitionModel> r = new RestRequest<CodeDefinitionModel>(this.client, "GET", "/api/v1/CodeDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -58,7 +58,7 @@ public class CodeDefinitionsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<CodeDefinitionModel>> QueryCodeDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CodeDefinitionModel>> queryCodeDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CodeDefinitionModel>> r = new RestRequest<FetchResult<CodeDefinitionModel>>(this.client, "GET", "/api/v1/CodeDefinitions/query");
         r.AddQuery("filter", filter.toString());

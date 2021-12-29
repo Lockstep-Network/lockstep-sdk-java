@@ -41,7 +41,7 @@ public class CurrenciesClient
      * @param date - The date for which we should cto use for this currency conversion.
      * @param dataProvider - Optionally, you can specify a data provider.
      */
-    public LockstepResponse<CurrencyRateModel> Retrievecurrencyrate(String sourceCurrency, String destinationCurrency, Date date, String dataProvider)
+    public LockstepResponse<CurrencyRateModel> retrievecurrencyrate(String sourceCurrency, String destinationCurrency, Date date, String dataProvider)
     {
         RestRequest<CurrencyRateModel> r = new RestRequest<CurrencyRateModel>(this.client, "GET", "/api/v1/Currencies/{sourceCurrency}/{destinationCurrency}");
         r.AddPath("{sourceCurrency}", sourceCurrency.toString());
@@ -57,7 +57,7 @@ public class CurrenciesClient
      * @param destinationCurrency - The currency to convert to.
      * @param body - A list of dates and source currencies.
      */
-    public LockstepResponse<CurrencyRateModel[]> Bulkcurrencydata(String destinationCurrency, BulkCurrencyConversionModel[] body)
+    public LockstepResponse<CurrencyRateModel[]> bulkcurrencydata(String destinationCurrency, BulkCurrencyConversionModel[] body)
     {
         RestRequest<CurrencyRateModel[]> r = new RestRequest<CurrencyRateModel[]>(this.client, "POST", "/api/v1/Currencies/bulk");
         r.AddQuery("destinationCurrency", destinationCurrency.toString());

@@ -42,7 +42,7 @@ public class ApplicationsClient
      * @param id - The unique ID number of the Application to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
      */
-    public LockstepResponse<ApplicationModel> RetrieveApplication(String id, String include)
+    public LockstepResponse<ApplicationModel> retrieveApplication(String id, String include)
     {
         RestRequest<ApplicationModel> r = new RestRequest<ApplicationModel>(this.client, "GET", "/api/v1/Applications/{id}");
         r.AddPath("{id}", id.toString());
@@ -60,7 +60,7 @@ public class ApplicationsClient
      * @param id - The unique ID number of the Application to update
      * @param body - A list of changes to apply to this Application
      */
-    public LockstepResponse<ApplicationModel> UpdateApplication(String id, Object body)
+    public LockstepResponse<ApplicationModel> updateApplication(String id, Object body)
     {
         RestRequest<ApplicationModel> r = new RestRequest<ApplicationModel>(this.client, "PATCH", "/api/v1/Applications/{id}");
         r.AddPath("{id}", id.toString());
@@ -75,7 +75,7 @@ public class ApplicationsClient
      * 
      * @param id - The unique ID number of the Application to delete
      */
-    public LockstepResponse<ActionResultModel> DeleteApplication(String id)
+    public LockstepResponse<ActionResultModel> deleteApplication(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Applications/{id}");
         r.AddPath("{id}", id.toString());
@@ -91,7 +91,7 @@ public class ApplicationsClient
      * 
      * @param body - The Applications to create
      */
-    public LockstepResponse<ApplicationModel[]> CreateApplications(ApplicationModel[] body)
+    public LockstepResponse<ApplicationModel[]> createApplications(ApplicationModel[] body)
     {
         RestRequest<ApplicationModel[]> r = new RestRequest<ApplicationModel[]>(this.client, "POST", "/api/v1/Applications");
         r.AddBody(body);
@@ -111,7 +111,7 @@ public class ApplicationsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<ApplicationModel>> QueryApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<ApplicationModel>> queryApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<ApplicationModel>> r = new RestRequest<FetchResult<ApplicationModel>>(this.client, "GET", "/api/v1/Applications/query");
         r.AddQuery("filter", filter.toString());

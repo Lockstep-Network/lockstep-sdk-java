@@ -38,7 +38,7 @@ public class ContactsClient
      * @param id - The unique Lockstep Platform ID number of this Contact; NOT the customer's ERP key
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
      */
-    public LockstepResponse<ContactModel> RetrieveContact(String id, String include)
+    public LockstepResponse<ContactModel> retrieveContact(String id, String include)
     {
         RestRequest<ContactModel> r = new RestRequest<ContactModel>(this.client, "GET", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
@@ -54,7 +54,7 @@ public class ContactsClient
      * @param id - The unique Lockstep Platform ID number of the Contact to update; NOT the customer's ERP key
      * @param body - A list of changes to apply to this Contact
      */
-    public LockstepResponse<ContactModel> UpdateContact(String id, Object body)
+    public LockstepResponse<ContactModel> updateContact(String id, Object body)
     {
         RestRequest<ContactModel> r = new RestRequest<ContactModel>(this.client, "PATCH", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
@@ -69,7 +69,7 @@ public class ContactsClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Contact to disable; NOT the customer's ERP key
      */
-    public LockstepResponse<ActionResultModel> DisableContact(String id)
+    public LockstepResponse<ActionResultModel> disableContact(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
@@ -83,7 +83,7 @@ public class ContactsClient
      * 
      * @param body - The Contacts to create
      */
-    public LockstepResponse<ContactModel[]> CreateContacts(ContactModel[] body)
+    public LockstepResponse<ContactModel[]> createContacts(ContactModel[] body)
     {
         RestRequest<ContactModel[]> r = new RestRequest<ContactModel[]>(this.client, "POST", "/api/v1/Contacts");
         r.AddBody(body);
@@ -101,7 +101,7 @@ public class ContactsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<ContactModel>> QueryContacts(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<ContactModel>> queryContacts(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<ContactModel>> r = new RestRequest<FetchResult<ContactModel>>(this.client, "GET", "/api/v1/Contacts/query");
         r.AddQuery("filter", filter.toString());

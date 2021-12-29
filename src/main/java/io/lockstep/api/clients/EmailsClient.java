@@ -40,7 +40,7 @@ public class EmailsClient
      * @param id - The unique ID number of the Email to retrieve.
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
      */
-    public LockstepResponse<EmailModel> RetrieveEmail(String id, String include)
+    public LockstepResponse<EmailModel> retrieveEmail(String id, String include)
     {
         RestRequest<EmailModel> r = new RestRequest<EmailModel>(this.client, "GET", "/api/v1/Emails/{id}");
         r.AddPath("{id}", id.toString());
@@ -58,7 +58,7 @@ public class EmailsClient
      * @param id - The unique Lockstep Platform ID number of the email to update
      * @param body - A list of changes to apply to this Email
      */
-    public LockstepResponse<EmailModel> UpdateEmail(String id, Object body)
+    public LockstepResponse<EmailModel> updateEmail(String id, Object body)
     {
         RestRequest<EmailModel> r = new RestRequest<EmailModel>(this.client, "PATCH", "/api/v1/Emails/{id}");
         r.AddPath("{id}", id.toString());
@@ -73,7 +73,7 @@ public class EmailsClient
      * 
      * @param id - The unique Lockstep Platform ID number of the Email to delete
      */
-    public LockstepResponse<ActionResultModel> DeleteEmail(String id)
+    public LockstepResponse<ActionResultModel> deleteEmail(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Emails/{id}");
         r.AddPath("{id}", id.toString());
@@ -87,7 +87,7 @@ public class EmailsClient
      * @param emailId - The unique ID number of the Email to retrieve.
      * @param nonce - The random nonce applied at time of url creation.
      */
-    public LockstepResponse<byte[]> RetrieveEmailLogo(String emailId, String nonce)
+    public LockstepResponse<byte[]> retrieveEmailLogo(String emailId, String nonce)
     {
         RestRequest<byte[]> r = new RestRequest<byte[]>(this.client, "GET", "/api/v1/Emails/{emailId}/logo/{nonce}");
         r.AddPath("{emailId}", emailId.toString());
@@ -102,7 +102,7 @@ public class EmailsClient
      * 
      * @param body - The array of emails to be created
      */
-    public LockstepResponse<EmailModel[]> CreateEmails(EmailModel[] body)
+    public LockstepResponse<EmailModel[]> createEmails(EmailModel[] body)
     {
         RestRequest<EmailModel[]> r = new RestRequest<EmailModel[]>(this.client, "POST", "/api/v1/Emails");
         r.AddBody(body);
@@ -122,7 +122,7 @@ public class EmailsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<EmailModel>> QueryEmails(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<EmailModel>> queryEmails(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<EmailModel>> r = new RestRequest<FetchResult<EmailModel>>(this.client, "GET", "/api/v1/Emails/query");
         r.AddQuery("filter", filter.toString());

@@ -44,7 +44,7 @@ public class DefinitionsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<CountryModel>> QueryCountries(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CountryModel>> queryCountries(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CountryModel>> r = new RestRequest<FetchResult<CountryModel>>(this.client, "GET", "/api/v1/Definitions/countries");
         r.AddQuery("filter", filter.toString());
@@ -67,7 +67,7 @@ public class DefinitionsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<CurrencyModel>> QueryCurrencies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CurrencyModel>> queryCurrencies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CurrencyModel>> r = new RestRequest<FetchResult<CurrencyModel>>(this.client, "GET", "/api/v1/Definitions/currencies");
         r.AddQuery("filter", filter.toString());
@@ -88,7 +88,7 @@ public class DefinitionsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<StateModel>> QueryStates(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<StateModel>> queryStates(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<StateModel>> r = new RestRequest<FetchResult<StateModel>>(this.client, "GET", "/api/v1/Definitions/states");
         r.AddQuery("filter", filter.toString());
@@ -109,7 +109,7 @@ public class DefinitionsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<ErpModel>> QueryFinancialSystems(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<ErpModel>> queryFinancialSystems(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<ErpModel>> r = new RestRequest<FetchResult<ErpModel>>(this.client, "GET", "/api/v1/Definitions/financialsystems");
         r.AddQuery("filter", filter.toString());

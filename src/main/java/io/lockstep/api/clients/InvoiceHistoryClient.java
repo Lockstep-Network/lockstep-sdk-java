@@ -38,7 +38,7 @@ public class InvoiceHistoryClient
      * 
      * @param id - The unique Lockstep Platform ID number of this invoice; NOT the customer's ERP key
      */
-    public LockstepResponse<FetchResult<InvoiceHistoryModel>> RetrieveInvoiceHistory(String id)
+    public LockstepResponse<FetchResult<InvoiceHistoryModel>> retrieveInvoiceHistory(String id)
     {
         RestRequest<FetchResult<InvoiceHistoryModel>> r = new RestRequest<FetchResult<InvoiceHistoryModel>>(this.client, "GET", "/api/v1/InvoiceHistory/{id}");
         r.AddPath("{id}", id.toString());
@@ -56,7 +56,7 @@ public class InvoiceHistoryClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<InvoiceHistoryModel>> QueryInvoiceHistory(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<InvoiceHistoryModel>> queryInvoiceHistory(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<InvoiceHistoryModel>> r = new RestRequest<FetchResult<InvoiceHistoryModel>>(this.client, "GET", "/api/v1/InvoiceHistory/query");
         r.AddQuery("filter", filter.toString());

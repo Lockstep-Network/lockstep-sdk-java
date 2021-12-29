@@ -42,7 +42,7 @@ public class CompaniesClient
      * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
      */
-    public LockstepResponse<CompanyModel> RetrieveCompany(String id, String include)
+    public LockstepResponse<CompanyModel> retrieveCompany(String id, String include)
     {
         RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "GET", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
@@ -60,7 +60,7 @@ public class CompaniesClient
      * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @param body - A list of changes to apply to this Company
      */
-    public LockstepResponse<CompanyModel> UpdateCompany(String id, Object body)
+    public LockstepResponse<CompanyModel> updateCompany(String id, Object body)
     {
         RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "PATCH", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
@@ -77,7 +77,7 @@ public class CompaniesClient
      * 
      * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      */
-    public LockstepResponse<ActionResultModel> DisableCompany(String id)
+    public LockstepResponse<ActionResultModel> disableCompany(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
@@ -91,7 +91,7 @@ public class CompaniesClient
      * 
      * @param body - The Companies to create
      */
-    public LockstepResponse<CompanyModel[]> CreateCompanies(CompanyModel[] body)
+    public LockstepResponse<CompanyModel[]> createCompanies(CompanyModel[] body)
     {
         RestRequest<CompanyModel[]> r = new RestRequest<CompanyModel[]>(this.client, "POST", "/api/v1/Companies");
         r.AddBody(body);
@@ -111,7 +111,7 @@ public class CompaniesClient
      * @param pageSize - The page size for results (default 200, maximum of 10,000)
      * @param pageNumber - The page number for results (default 0)
      */
-    public LockstepResponse<FetchResult<CompanyModel>> QueryCompanies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CompanyModel>> queryCompanies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CompanyModel>> r = new RestRequest<FetchResult<CompanyModel>>(this.client, "GET", "/api/v1/Companies/query");
         r.AddQuery("filter", filter.toString());
@@ -133,7 +133,7 @@ public class CompaniesClient
      * @param pageSize - The page size for results (default 200, maximum of 10,000)
      * @param pageNumber - The page number for results (default 0)
      */
-    public LockstepResponse<FetchResult<CustomerSummaryModel>> QueryCustomerSummary(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<CustomerSummaryModel>> r = new RestRequest<FetchResult<CustomerSummaryModel>>(this.client, "GET", "/api/v1/Companies/views/customer-summary");
         r.AddQuery("filter", filter.toString());
@@ -149,7 +149,7 @@ public class CompaniesClient
      * 
      * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      */
-    public LockstepResponse<CustomerDetailsModel> RetrieveCustomerDetail(String id)
+    public LockstepResponse<CustomerDetailsModel> retrieveCustomerDetail(String id)
     {
         RestRequest<CustomerDetailsModel> r = new RestRequest<CustomerDetailsModel>(this.client, "GET", "/api/v1/Companies/views/customer-details/{id}");
         r.AddPath("{id}", id.toString());

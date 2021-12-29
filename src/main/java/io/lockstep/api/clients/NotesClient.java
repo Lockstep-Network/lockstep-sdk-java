@@ -40,7 +40,7 @@ public class NotesClient
      * @param id - The unique ID number of the Note to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      */
-    public LockstepResponse<NoteModel> RetrieveNote(String id, String include)
+    public LockstepResponse<NoteModel> retrieveNote(String id, String include)
     {
         RestRequest<NoteModel> r = new RestRequest<NoteModel>(this.client, "GET", "/api/v1/Notes/{id}");
         r.AddPath("{id}", id.toString());
@@ -55,7 +55,7 @@ public class NotesClient
      * 
      * @param id - Note id to be archived
      */
-    public LockstepResponse<ActionResultModel> ArchiveNote(String id)
+    public LockstepResponse<ActionResultModel> archiveNote(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Notes/{id}");
         r.AddPath("{id}", id.toString());
@@ -71,7 +71,7 @@ public class NotesClient
      * 
      * @param body - The array of notes to be created
      */
-    public LockstepResponse<NoteModel[]> CreateNotes(NoteModel[] body)
+    public LockstepResponse<NoteModel[]> createNotes(NoteModel[] body)
     {
         RestRequest<NoteModel[]> r = new RestRequest<NoteModel[]>(this.client, "POST", "/api/v1/Notes");
         r.AddBody(body);
@@ -91,7 +91,7 @@ public class NotesClient
      * @param pageSize - The page size for results (default 200, maximum of 10,000)
      * @param pageNumber - The page number for results (default 0)
      */
-    public LockstepResponse<FetchResult<NoteModel>> QueryNotes(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<NoteModel>> queryNotes(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<NoteModel>> r = new RestRequest<FetchResult<NoteModel>>(this.client, "GET", "/api/v1/Notes/query");
         r.AddQuery("filter", filter.toString());

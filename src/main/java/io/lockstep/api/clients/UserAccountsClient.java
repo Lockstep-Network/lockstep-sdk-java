@@ -45,7 +45,7 @@ public class UserAccountsClient
      * @param id - The unique ID number of the User to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields, AccountingRole
      */
-    public LockstepResponse<UserAccountModel> RetrieveUser(String id, String include)
+    public LockstepResponse<UserAccountModel> retrieveUser(String id, String include)
     {
         RestRequest<UserAccountModel> r = new RestRequest<UserAccountModel>(this.client, "GET", "/api/v1/UserAccounts/{id}");
         r.AddPath("{id}", id.toString());
@@ -61,7 +61,7 @@ public class UserAccountsClient
      * @param id - The unique ID number of the User to retrieve
      * @param body - A list of changes to apply to this User
      */
-    public LockstepResponse<UserAccountModel> UpdateUser(String id, Object body)
+    public LockstepResponse<UserAccountModel> updateUser(String id, Object body)
     {
         RestRequest<UserAccountModel> r = new RestRequest<UserAccountModel>(this.client, "PATCH", "/api/v1/UserAccounts/{id}");
         r.AddPath("{id}", id.toString());
@@ -76,7 +76,7 @@ public class UserAccountsClient
      * 
      * @param id - The unique Lockstep Platform ID number of this User
      */
-    public LockstepResponse<ActionResultModel> DisableUser(String id)
+    public LockstepResponse<ActionResultModel> disableUser(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/UserAccounts/{id}");
         r.AddPath("{id}", id.toString());
@@ -90,7 +90,7 @@ public class UserAccountsClient
      * 
      * @param id - The unique Lockstep Platform ID number of this User
      */
-    public LockstepResponse<ActionResultModel> ReenableUser(String id)
+    public LockstepResponse<ActionResultModel> reenableUser(String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "POST", "/api/v1/UserAccounts/reenable");
         r.AddQuery("id", id.toString());
@@ -104,7 +104,7 @@ public class UserAccountsClient
      * 
      * @param body - The user to invite
      */
-    public LockstepResponse<InviteModel[]> InviteUser(InviteSubmitModel[] body)
+    public LockstepResponse<InviteModel[]> inviteUser(InviteSubmitModel[] body)
     {
         RestRequest<InviteModel[]> r = new RestRequest<InviteModel[]>(this.client, "POST", "/api/v1/UserAccounts/invite");
         r.AddBody(body);
@@ -117,7 +117,7 @@ public class UserAccountsClient
      * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Insights.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
      * @param code - The code of the invite
      */
-    public LockstepResponse<InviteDataModel> RetrieveInviteData(String code)
+    public LockstepResponse<InviteDataModel> retrieveInviteData(String code)
     {
         RestRequest<InviteDataModel> r = new RestRequest<InviteDataModel>(this.client, "GET", "/api/v1/UserAccounts/invite");
         r.AddQuery("code", code.toString());
@@ -131,7 +131,7 @@ public class UserAccountsClient
      * 
      * @param body - 
      */
-    public LockstepResponse<TransferOwnerModel> TransferOwner(TransferOwnerSubmitModel body)
+    public LockstepResponse<TransferOwnerModel> transferOwner(TransferOwnerSubmitModel body)
     {
         RestRequest<TransferOwnerModel> r = new RestRequest<TransferOwnerModel>(this.client, "POST", "/api/v1/UserAccounts/transfer-owner");
         r.AddBody(body);
@@ -147,7 +147,7 @@ public class UserAccountsClient
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      */
-    public LockstepResponse<FetchResult<UserAccountModel>> QueryUsers(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public LockstepResponse<FetchResult<UserAccountModel>> queryUsers(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
         RestRequest<FetchResult<UserAccountModel>> r = new RestRequest<FetchResult<UserAccountModel>>(this.client, "GET", "/api/v1/UserAccounts/query");
         r.AddQuery("filter", filter.toString());
