@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  *
  * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
+ * @copyright  2021-2022 Lockstep, Inc.
  * @version    2021.39
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
@@ -38,7 +38,7 @@ public class EmailsClient
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      * 
      * @param id - The unique ID number of the Email to retrieve.
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
+     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
      */
     public LockstepResponse<EmailModel> retrieveEmail(String id, String include)
     {
@@ -117,7 +117,7 @@ public class EmailsClient
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      * 
      * @param filter - The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
+     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
      * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
