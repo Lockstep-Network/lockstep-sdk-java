@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  *
  * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
+ * @copyright  2021-2022 Lockstep, Inc.
  * @version    2021.39
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
@@ -43,6 +43,9 @@ public class EmailModel
     private String externalEmailId;
     private String externalThreadId;
     private String emailBcc;
+    private String sendType;
+    private String responseOriginId;
+    private EmailModel responseOrigin;
     private NoteModel[] notes;
     private AttachmentModel[] attachments;
     private CustomFieldDefinitionModel[] customFieldDefinitions;
@@ -248,6 +251,32 @@ public class EmailModel
      * The email address(es) for the BCC recipient(s) of this email
      */
     public void setEmailBcc(String value) { this.emailBcc = value; }
+    /**
+     * The type message being sent (New, Reply, Forward) or null for messages not being sent.
+     */
+    public String getSendType() { return this.sendType; }
+    /**
+     * The type message being sent (New, Reply, Forward) or null for messages not being sent.
+     */
+    public void setSendType(String value) { this.sendType = value; }
+    /**
+     * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
+     * Otherwise null.
+     */
+    public String getResponseOriginId() { return this.responseOriginId; }
+    /**
+     * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
+     * Otherwise null.
+     */
+    public void setResponseOriginId(String value) { this.responseOriginId = value; }
+    /**
+     * The email object associated with the response origin id.
+     */
+    public EmailModel getResponseOrigin() { return this.responseOrigin; }
+    /**
+     * The email object associated with the response origin id.
+     */
+    public void setResponseOrigin(EmailModel value) { this.responseOrigin = value; }
     /**
      * All notes attached to this email.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
