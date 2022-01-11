@@ -36,7 +36,7 @@ jobs:
       run: mvn -B compile --file pom.xml
 
     - name: Publish to Apache Maven Central
-      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+      if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged }}
       run: mvn -Prelease deploy
       env:
         OSSRH_USERNAME: ${{ secrets.MAVEN_USERNAME }}
