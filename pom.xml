@@ -57,6 +57,7 @@
                     		<arg>--pinentry-mode</arg>
                     		<arg>loopback</arg>
                     	</gpgArguments>
+                    </configuration>
                     <executions>
                         <execution>
                             <id>sign-artifacts</id>
