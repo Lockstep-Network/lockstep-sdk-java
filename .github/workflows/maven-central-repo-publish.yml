@@ -37,7 +37,7 @@ jobs:
       uses: crazy-max/ghaction-import-gpg@v1
       env:
         GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-        PASSPHRASE: ${{ secrets.MACEN_GPG_PASSPHRASE }}
+        PASSPHRASE: MAVEN_GPG_PASSPHRASE
       
     - name: Build with Maven
       run: mvn -B compile --file pom.xml
