@@ -32,15 +32,15 @@ jobs:
         gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
         gpg-passphrase: MAVEN_GPG_PASSPHRASE
         settings-path: ${{ github.workspace }}
-        
-    - name: Build with Maven
-      run: mvn -B compile --file pom.xml
-
+  
     - name: Import GPG Key
       uses: crazy-max/ghaction-import-gpg@v1
       env:
         GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-        PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        PASSPHRASE: ${{ secrets.MACEN_GPG_PASSPHRASE }}
+      
+    - name: Build with Maven
+      run: mvn -B compile --file pom.xml
 
     - name: Publish to Apache Maven Central
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
