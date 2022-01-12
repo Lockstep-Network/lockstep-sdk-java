@@ -36,7 +36,7 @@ jobs:
       run: mvn -B compile --file pom.xml
 
     - name: Publish to Apache Maven Central
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push' 
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: mvn -Prelease deploy -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }}
       env:
         OSSRH_USERNAME: ${{ secrets.MAVEN_USERNAME }}
