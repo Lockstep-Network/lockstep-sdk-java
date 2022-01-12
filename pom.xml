@@ -90,8 +90,7 @@
                         <configuration>
                             <!-- Prevent gpg from using pinentry programs -->
                             <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
+                                <arg>--pinentry-mode loopback</arg>
                             </gpgArguments>
                         </configuration>
                     </plugin>
