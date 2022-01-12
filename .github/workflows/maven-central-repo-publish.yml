@@ -40,7 +40,7 @@ jobs:
       uses: crazy-max/ghaction-import-gpg@v1
       env:
         GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-        PASSPHRASE: ${{ secrets.MACEN_GPG_PASSPHRASE }}
+        PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
     - name: Publish to Apache Maven Central
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
