@@ -6,6 +6,10 @@
     <groupId>io.lockstep</groupId>
     <artifactId>lockstepsdk</artifactId>
     <version>2021.39.690</version>
+ 
+    <name>lockstep-sdk-java</name>
+    <description>Java sample project for Lockstep SDK</description>
+    <url>https://developer.lockstep.io/docs</url>
 
     <licenses>
         <license>
@@ -13,6 +17,21 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+    
+    <scm>
+        <url>https://github.com/Lockstep-Network/lockstep-sdk-java</url>
+        <connection>scm:git@github.com:Lockstep-Network/lockstep-sdk-java.git</connection>
+        <developerConnection>scm:git@github.com:Lockstep-Network/lockstep-sdk-java.git</developerConnection>
+    </scm>
+        
+    <developers>
+        <developer>
+            <id>tspence</id>
+            <name>Ted Spence</name>
+            <email>tspence@lockstep.io</email>
+        </developer>
+    </developers>
+
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
