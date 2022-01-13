@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -14,8 +15,6 @@
 
 
 package io.lockstep.api.models;
-
-
 public class InviteModel
 {
     private String email;
@@ -25,34 +24,50 @@ public class InviteModel
 
     /**
      * The invited email address
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getEmail() { return this.email; }
     /**
      * The invited email address
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setEmail(String value) { this.email = value; }
     /**
      * True if the invite was sent successfully
+     *
+     * @return a {@link java.lang.Boolean} object.
      */
     public Boolean getSuccess() { return this.success; }
     /**
      * True if the invite was sent successfully
+     *
+     * @param value a {@link java.lang.Boolean} object.
      */
     public void setSuccess(Boolean value) { this.success = value; }
     /**
      * The invited user, may be null if the user could not be invited
+     *
+     * @return a {@link io.lockstep.api.models.UserAccountModel} object.
      */
     public UserAccountModel getInvitedUser() { return this.invitedUser; }
     /**
      * The invited user, may be null if the user could not be invited
+     *
+     * @param value a {@link io.lockstep.api.models.UserAccountModel} object.
      */
     public void setInvitedUser(UserAccountModel value) { this.invitedUser = value; }
     /**
      * The error message if the invite was not successful
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message if the invite was not successful
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setErrorMessage(String value) { this.errorMessage = value; }
 };

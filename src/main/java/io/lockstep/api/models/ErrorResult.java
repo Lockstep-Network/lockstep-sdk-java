@@ -16,6 +16,9 @@ package io.lockstep.api.models;
 
 /**
  * Represents a failed request.
+ *
+ * @author jkirk
+ * @version $Id: $Id
  */
 public class ErrorResult
 {
@@ -26,42 +29,92 @@ public class ErrorResult
     private String instance;
 
     
+    /**
+     * <p>Getter for the field <code>type</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getType() {
         return this.type;
     }
 
+    /**
+     * <p>Setter for the field <code>type</code>.</p>
+     *
+     * @param type a {@link java.lang.String} object.
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     * <p>Getter for the field <code>title</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getTitle() {
         return this.title;
     }
 
+    /**
+     * <p>Setter for the field <code>title</code>.</p>
+     *
+     * @param title a {@link java.lang.String} object.
+     */
     public void setTitle(String title) {
         this.title = title;
     }
 
+    /**
+     * <p>Getter for the field <code>status</code>.</p>
+     *
+     * @return a {@link java.lang.Integer} object.
+     */
     public Integer getStatus() {
         return this.status;
     }
 
+    /**
+     * <p>Setter for the field <code>status</code>.</p>
+     *
+     * @param status a {@link java.lang.Integer} object.
+     */
     public void setStatus(Integer status) {
         this.status = status;
     }
 
+    /**
+     * <p>Getter for the field <code>detail</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getDetail() {
         return this.detail;
     }
 
+    /**
+     * <p>Setter for the field <code>detail</code>.</p>
+     *
+     * @param detail a {@link java.lang.String} object.
+     */
     public void setDetail(String detail) {
         this.detail = detail;
     }
 
+    /**
+     * <p>Getter for the field <code>instance</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getInstance() {
         return this.instance;
     }
 
+    /**
+     * <p>Setter for the field <code>instance</code>.</p>
+     *
+     * @param instance a {@link java.lang.String} object.
+     */
     public void setInstance(String instance) {
         this.instance = instance;
     }

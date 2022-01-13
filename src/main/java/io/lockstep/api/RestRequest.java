@@ -38,6 +38,9 @@ import io.lockstep.api.models.LockstepResponse;
 
 /**
  * Represents a failed request.
+ *
+ * @author jkirk
+ * @version $Id: $Id
  */
 public class RestRequest<T>
 {
@@ -48,6 +51,13 @@ public class RestRequest<T>
     private Object body;
     private LockstepApi client;
 
+    /**
+     * <p>Constructor for RestRequest.</p>
+     *
+     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param method a {@link java.lang.String} object.
+     * @param path a {@link java.lang.String} object.
+     */
     public RestRequest(LockstepApi client, String method, String path)
     {
         this.client = client;
@@ -57,16 +67,33 @@ public class RestRequest<T>
         pathReplacements = new Hashtable<String, String>();
     }
 
+    /**
+     * <p>AddQuery.</p>
+     *
+     * @param name a {@link java.lang.String} object.
+     * @param value a {@link java.lang.String} object.
+     */
     public void AddQuery(String name, String value)
     {
         this.queryParams.put(name, value);
     }
 
+    /**
+     * <p>AddPath.</p>
+     *
+     * @param name a {@link java.lang.String} object.
+     * @param value a {@link java.lang.String} object.
+     */
     public void AddPath(String name, String value)
     {
         this.pathReplacements.put(name, value);
     }
 
+    /**
+     * <p>AddBody.</p>
+     *
+     * @param body a {@link java.lang.Object} object.
+     */
     public void AddBody(Object body)
     {
         this.body = body;
@@ -74,6 +101,9 @@ public class RestRequest<T>
 
     /**
      * Adapted from Apache simple request client example
+     *
+     * @param classReference a {@link java.lang.reflect.Type} object.
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<T> Call(Type classReference)
     {

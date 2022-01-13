@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -21,19 +22,24 @@ import io.lockstep.api.models.LockstepResponse;
 import io.lockstep.api.models.ProvisioningResponseModel;
 import io.lockstep.api.models.ProvisioningModel;
 import io.lockstep.api.models.ProvisioningFinalizeRequestModel;
-
 public class ProvisioningClient
 {
     private LockstepApi client;
 
+    /**
+     * <p>Constructor for ProvisioningClient.</p>
+     *
+     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     */
     public ProvisioningClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Creates a new User or updates an Invited user based on metadata provided by the User during the onboarding process
-     * 
+     *
      * @param body - Represents a User and their related metadata
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<ProvisioningResponseModel> provisionUserAccount(ProvisioningModel body)
     {
@@ -44,8 +50,9 @@ public class ProvisioningClient
 
     /**
      * Updates user, company and group metadata for a User of status 'Onboarding' and finalizes a user's onboarding process by changing the user status to 'Active'
-     * 
+     *
      * @param body - Represents a User and their related metadata
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<ProvisioningResponseModel> finalizeUserAccountProvisioning(ProvisioningFinalizeRequestModel body)
     {
