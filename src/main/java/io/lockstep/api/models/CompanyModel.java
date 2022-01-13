@@ -447,13 +447,13 @@ public class CompanyModel
      */
     public void setTaxId(String value) { this.taxId = value; }
     /**
-     * Dun & Bradstreet Number
+     * Dun and Bradstreet Number
      *
      * @return a {@link java.lang.String} object.
      */
     public String getDunsNumber() { return this.dunsNumber; }
     /**
-     * Dun & Bradstreet Number
+     * Dun and Bradstreet Number
      *
      * @param value a {@link java.lang.String} object.
      */
