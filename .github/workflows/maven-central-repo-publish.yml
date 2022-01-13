@@ -30,7 +30,7 @@ jobs:
         server-username: OSSRH_USERNAME
         server-password: OSSRH_PASSWORD
         gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-        gpg-passphrase: GPG_PASSPHRASE
+        gpg-passphrase: MAVEN_GPG_PASSPHRASE
         settings-path: ${{ github.workspace }}
 
     - name: Import GPG key
@@ -49,8 +49,9 @@ jobs:
       run: mvn -X -Psign deploy --settings settings.xml
       env:
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
-      #   OSSRH_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-      #   OSSRH_PASSWORD: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+	      MAVEN_GPG_KEY_NAME: ${{ secrets.MAVEN_GPG_KEY_NAME }}
+        OSSRH_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        OSSRH_PASSWORD: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
       #   MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
       #   MAVEN_PASSWORD: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
         
