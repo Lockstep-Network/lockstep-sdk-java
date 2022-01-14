@@ -99,7 +99,7 @@ public class AttachmentModel
     public void setIsArchived(Boolean value) { this.isArchived = value; }
     public String getOriginAttachmentId() { return this.originAttachmentId; }
     /**
-     * @param value - 
+     * @param value -
      */
     public void setOriginAttachmentId(String value) { this.originAttachmentId = value; }
     /**

@@ -30,6 +30,7 @@ public class CustomFieldValuesClient
 
      /**
       * Constructor for method collection
+      *
       * @param client A {@link io.lockstep.api.LockstepApi} platform client
       */
     public CustomFieldValuesClient(LockstepApi client) {
@@ -38,9 +39,9 @@ public class CustomFieldValuesClient
 
     /**
      * Retrieves all Custom Field Definitions.
-     * 
+     *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     * 
+     *
      * @param definitionId - The unique Lockstep Platform ID number of the Custom Field Definition for the Custom Field Value to retrieve.
      * @param recordKey - The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: CustomFieldDefinition
@@ -57,11 +58,11 @@ public class CustomFieldValuesClient
 
     /**
      * Updates an existing Custom Field with the information supplied to this PATCH call.
-     * 
+     *
      * The PATCH method allows you to change specific values on the object while leaving other values alone.  As input you should supply a list of field names and new values.  If you do not provide the name of a field, that field will remain unchanged.  This allows you to ensure that you are only updating the specific fields desired.
-     * 
+     *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     * 
+     *
      * @param definitionId - The unique Lockstep Platform ID number of the Custom Field Definition for the Custom Field Value to retrieve.
      * @param recordKey - The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
      * @param body - A list of changes to apply to this Custom Field
@@ -78,9 +79,9 @@ public class CustomFieldValuesClient
 
     /**
      * Deletes the Custom Field referred to by this unique identifier.
-     * 
+     *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     * 
+     *
      * @param definitionId - The unique Lockstep Platform ID number of the Custom Field Definition for the Custom Field Value to retrieve.
      * @param recordKey - The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -95,7 +96,7 @@ public class CustomFieldValuesClient
 
     /**
      * Creates one or more Custom Fields and returns the records as created.  A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     * 
+     *
      * @param body - The Custom Fields to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -108,11 +109,11 @@ public class CustomFieldValuesClient
 
     /**
      * Queries Custom Fields within the Lockstep platform using the specified filtering, sorting, nested fetch, and pagination rules requested.
-     * 
+     *
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
-     * 
+     *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     * 
+     *
      * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: CustomFieldDefinition
      * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)

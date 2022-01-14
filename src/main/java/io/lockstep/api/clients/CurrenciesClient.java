@@ -29,6 +29,7 @@ public class CurrenciesClient
 
      /**
       * Constructor for method collection
+      *
       * @param client A {@link io.lockstep.api.LockstepApi} platform client
       */
     public CurrenciesClient(LockstepApi client) {
@@ -37,9 +38,9 @@ public class CurrenciesClient
 
     /**
      * Retrieve a currency conversation rate from one currency to another as of the specified date.              Optionally, you can specify which currency data provider to use.
-     * 
+     *
      *              The currency rate model contains all of the information used to make the API call, plus the rate to              use for the conversion.
-     * 
+     *
      * @param sourceCurrency - The ISO 4217 currency code of the origin currency. For a list of currency codes, call List Currencies.
      * @param destinationCurrency - The ISO 4217 currency code of the target currency. For a list of currency codes, call List Currencies.
      * @param date - The date for which we should cto use for this currency conversion.
@@ -58,7 +59,7 @@ public class CurrenciesClient
 
     /**
      * Receives an array of dates and currencies and a destination currency and returns an array of the corresponding currency rates to the given destination currency (Limit X).
-     * 
+     *
      * @param destinationCurrency - The currency to convert to.
      * @param body - A list of dates and source currencies.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results

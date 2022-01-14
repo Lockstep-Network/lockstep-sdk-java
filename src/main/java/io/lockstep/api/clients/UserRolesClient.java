@@ -29,6 +29,7 @@ public class UserRolesClient
 
      /**
       * Constructor for method collection
+      *
       * @param client A {@link io.lockstep.api.LockstepApi} platform client
       */
     public UserRolesClient(LockstepApi client) {
@@ -37,7 +38,7 @@ public class UserRolesClient
 
     /**
      * Retrieves the User Role with this identifier.
-     * 
+     *
      * @param id - The unique ID number of the User Role to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -52,7 +53,7 @@ public class UserRolesClient
 
     /**
      * Queries User Roles for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
-     * 
+     *
      * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)

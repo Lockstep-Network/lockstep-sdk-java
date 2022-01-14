@@ -28,6 +28,7 @@ public class ProvisioningClient
 
      /**
       * Constructor for method collection
+      *
       * @param client A {@link io.lockstep.api.LockstepApi} platform client
       */
     public ProvisioningClient(LockstepApi client) {
@@ -36,7 +37,7 @@ public class ProvisioningClient
 
     /**
      * Creates a new User or updates an Invited user based on metadata provided by the User during the onboarding process
-     * 
+     *
      * @param body - Represents a User and their related metadata
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -49,7 +50,7 @@ public class ProvisioningClient
 
     /**
      * Updates user, company and group metadata for a User of status 'Onboarding' and finalizes a user's onboarding process by changing the user status to 'Active'
-     * 
+     *
      * @param body - Represents a User and their related metadata
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
