@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -30,75 +31,117 @@ public class RiskRateModel
     private Double atRiskPercentage;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The month the risk rate was calculated for
+     * The month the risk rate was calculated for
+     *
+     * @return The field reportPeriod
      */
     public Date getReportPeriod() { return this.reportPeriod; }
     /**
-     * @param value - The month the risk rate was calculated for
+     * The month the risk rate was calculated for
+     *
+     * @param value The new value for reportPeriod
      */
     public void setReportPeriod(Date value) { this.reportPeriod = value; }
     /**
-     * @return The string name of the month the risk rate was calculated for
+     * The string name of the month the risk rate was calculated for
+     *
+     * @return The field invoiceMonthName
      */
     public String getInvoiceMonthName() { return this.invoiceMonthName; }
     /**
-     * @param value - The string name of the month the risk rate was calculated for
+     * The string name of the month the risk rate was calculated for
+     *
+     * @param value The new value for invoiceMonthName
      */
     public void setInvoiceMonthName(String value) { this.invoiceMonthName = value; }
     /**
-     * @return The count of all invoices in the calculation month
+     * The count of all invoices in the calculation month
+     *
+     * @return The field totalInvoiceCount
      */
     public Integer getTotalInvoiceCount() { return this.totalInvoiceCount; }
     /**
-     * @param value - The count of all invoices in the calculation month
+     * The count of all invoices in the calculation month
+     *
+     * @param value The new value for totalInvoiceCount
      */
     public void setTotalInvoiceCount(Integer value) { this.totalInvoiceCount = value; }
     /**
-     * @return The sum of the total amount for invoices in the calculation month
+     * The sum of the total amount for invoices in the calculation month
+     *
+     * @return The field totalInvoiceAmount
      */
     public Double getTotalInvoiceAmount() { return this.totalInvoiceAmount; }
     /**
-     * @param value - The sum of the total amount for invoices in the calculation month
+     * The sum of the total amount for invoices in the calculation month
+     *
+     * @param value The new value for totalInvoiceAmount
      */
     public void setTotalInvoiceAmount(Double value) { this.totalInvoiceAmount = value; }
     /**
-     * @return The count of open invoices over 90 days from the calculation month
+     * The count of open invoices over 90 days from the calculation month
+     *
+     * @return The field atRiskCount
      */
     public Integer getAtRiskCount() { return this.atRiskCount; }
     /**
-     * @param value - The count of open invoices over 90 days from the calculation month
+     * The count of open invoices over 90 days from the calculation month
+     *
+     * @param value The new value for atRiskCount
      */
     public void setAtRiskCount(Integer value) { this.atRiskCount = value; }
     /**
-     * @return The sum of the outstanding balance of open invoices over 90 days from the calculation month
+     * The sum of the outstanding balance of open invoices over 90 days from the calculation month
+     *
+     * @return The field atRiskAmount
      */
     public Double getAtRiskAmount() { return this.atRiskAmount; }
     /**
-     * @param value - The sum of the outstanding balance of open invoices over 90 days from the calculation month
+     * The sum of the outstanding balance of open invoices over 90 days from the calculation month
+     *
+     * @param value The new value for atRiskAmount
      */
     public void setAtRiskAmount(Double value) { this.atRiskAmount = value; }
     /**
-     * @return The percentage of all open invoices for the calculation month that are over 90 days based on count
+     * The percentage of all open invoices for the calculation month that are over 90 days based on count
+     *
+     * @return The field atRiskCountPercentage
      */
     public Double getAtRiskCountPercentage() { return this.atRiskCountPercentage; }
     /**
-     * @param value - The percentage of all open invoices for the calculation month that are over 90 days based on count
+     * The percentage of all open invoices for the calculation month that are over 90 days based on count
+     *
+     * @param value The new value for atRiskCountPercentage
      */
     public void setAtRiskCountPercentage(Double value) { this.atRiskCountPercentage = value; }
     /**
-     * @return The percentage of all open invoices for the calculation month that are over 90 days based on outstanding balance
+     * The percentage of all open invoices for the calculation month that are over 90 days based on outstanding balance
+     *
+     * @return The field atRiskPercentage
      */
     public Double getAtRiskPercentage() { return this.atRiskPercentage; }
     /**
-     * @param value - The percentage of all open invoices for the calculation month that are over 90 days based on outstanding balance
+     * The percentage of all open invoices for the calculation month that are over 90 days based on outstanding balance
+     *
+     * @param value The new value for atRiskPercentage
      */
     public void setAtRiskPercentage(Double value) { this.atRiskPercentage = value; }
 };

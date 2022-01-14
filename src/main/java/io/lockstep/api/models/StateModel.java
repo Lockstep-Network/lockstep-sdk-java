@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -23,27 +24,39 @@ public class StateModel
     private String aliases;
 
     /**
-     * @return Name of the state
+     * Name of the state
+     *
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
-     * @param value - Name of the state
+     * Name of the state
+     *
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
-     * @return 2 letter alphabetic code for the given state
+     * 2 letter alphabetic code for the given state
+     *
+     * @return The field alpha2
      */
     public String getAlpha2() { return this.alpha2; }
     /**
-     * @param value - 2 letter alphabetic code for the given state
+     * 2 letter alphabetic code for the given state
+     *
+     * @param value The new value for alpha2
      */
     public void setAlpha2(String value) { this.alpha2 = value; }
     /**
-     * @return A different name for a state
+     * A different name for a state
+     *
+     * @return The field aliases
      */
     public String getAliases() { return this.aliases; }
     /**
-     * @param value - A different name for a state
+     * A different name for a state
+     *
+     * @param value The new value for aliases
      */
     public void setAliases(String value) { this.aliases = value; }
 };

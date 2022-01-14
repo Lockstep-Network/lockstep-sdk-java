@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -53,259 +54,413 @@ public class UserAccountModel
     private CodeDefinitionModel accountingRoleCodeDefinition;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform. This record provides a link to the user's Azure AD B2C OID.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * This record provides a link to the user's Azure AD B2C OID.
+     *
+     * @return The field userId
      */
     public String getUserId() { return this.userId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform. This record provides a link to the user's Azure AD B2C OID.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * This record provides a link to the user's Azure AD B2C OID.
+     *
+     * @param value The new value for userId
      */
     public void setUserId(String value) { this.userId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The full name of the user
+     * The full name of the user
+     *
+     * @return The field userName
      */
     public String getUserName() { return this.userName; }
     /**
-     * @param value - The full name of the user
+     * The full name of the user
+     *
+     * @param value The new value for userName
      */
     public void setUserName(String value) { this.userName = value; }
     /**
-     * @return The email of the user
+     * The email of the user
+     *
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
-     * @param value - The email of the user
+     * The email of the user
+     *
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
-     * @return The status of the user's account
+     * The status of the user's account
+     *
+     * @return The field status
      */
     public String getStatus() { return this.status; }
     /**
-     * @param value - The status of the user's account
+     * The status of the user's account
+     *
+     * @param value The new value for status
      */
     public void setStatus(String value) { this.status = value; }
     /**
-     * @return The date that the user account was created
+     * The date that the user account was created
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date that the user account was created
+     * The date that the user account was created
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return The ID of the user who created the user account
+     * The ID of the user who created the user account
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - The ID of the user who created the user account
+     * The ID of the user who created the user account
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return The date the user account was last modified
+     * The date the user account was last modified
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - The date the user account was last modified
+     * The date the user account was last modified
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return The ID of the user who last modified the user account
+     * The ID of the user who last modified the user account
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - The ID of the user who last modified the user account
+     * The ID of the user who last modified the user account
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * @return The name of the user who last modified the user account
+     * The name of the user who last modified the user account
+     *
+     * @return The field modifiedUserName
      */
     public String getModifiedUserName() { return this.modifiedUserName; }
     /**
-     * @param value - The name of the user who last modified the user account
+     * The name of the user who last modified the user account
+     *
+     * @param value The new value for modifiedUserName
      */
     public void setModifiedUserName(String value) { this.modifiedUserName = value; }
     /**
-     * @return The ID of the user in Azure B2C
+     * The ID of the user in Azure B2C
+     *
+     * @return The field b2CUserId
      */
     public String getB2CUserId() { return this.b2CUserId; }
     /**
-     * @param value - The ID of the user in Azure B2C
+     * The ID of the user in Azure B2C
+     *
+     * @param value The new value for b2CUserId
      */
     public void setB2CUserId(String value) { this.b2CUserId = value; }
     /**
-     * @return The id of the Permission Level for the user.
+     * The id of the Permission Level for the user.
+     *
+     * @return The field userRole
      */
     public String getUserRole() { return this.userRole; }
     /**
-     * @param value - The id of the Permission Level for the user.
+     * The id of the Permission Level for the user.
+     *
+     * @param value The new value for userRole
      */
     public void setUserRole(String value) { this.userRole = value; }
     /**
-     * @return The date timestamp when the invite was sent to the user.
+     * The date timestamp when the invite was sent to the user.
+     *
+     * @return The field inviteSent
      */
     public Date getInviteSent() { return this.inviteSent; }
     /**
-     * @param value - The date timestamp when the invite was sent to the user.
+     * The date timestamp when the invite was sent to the user.
+     *
+     * @param value The new value for inviteSent
      */
     public void setInviteSent(Date value) { this.inviteSent = value; }
     /**
-     * @return The phone number of the user.
+     * The phone number of the user.
+     *
+     * @return The field phoneNumber
      */
     public String getPhoneNumber() { return this.phoneNumber; }
     /**
-     * @param value - The phone number of the user.
+     * The phone number of the user.
+     *
+     * @param value The new value for phoneNumber
      */
     public void setPhoneNumber(String value) { this.phoneNumber = value; }
     /**
-     * @return The fax number of the user.
+     * The fax number of the user.
+     *
+     * @return The field faxNumber
      */
     public String getFaxNumber() { return this.faxNumber; }
     /**
-     * @param value - The fax number of the user.
+     * The fax number of the user.
+     *
+     * @param value The new value for faxNumber
      */
     public void setFaxNumber(String value) { this.faxNumber = value; }
     /**
-     * @return The title of the user; free text field
+     * The title of the user; free text field
+     *
+     * @return The field title
      */
     public String getTitle() { return this.title; }
     /**
-     * @param value - The title of the user; free text field
+     * The title of the user; free text field
+     *
+     * @param value The new value for title
      */
     public void setTitle(String value) { this.title = value; }
     /**
-     * @return FK to the CodeDefinition table; CodeType = 'AccountingRole'
+     * FK to the CodeDefinition table; CodeType = 'AccountingRole'
+     *
+     * @return The field accountingRoleCodeDefId
      */
     public String getAccountingRoleCodeDefId() { return this.accountingRoleCodeDefId; }
     /**
-     * @param value - FK to the CodeDefinition table; CodeType = 'AccountingRole'
+     * FK to the CodeDefinition table; CodeType = 'AccountingRole'
+     *
+     * @param value The new value for accountingRoleCodeDefId
      */
     public void setAccountingRoleCodeDefId(String value) { this.accountingRoleCodeDefId = value; }
     /**
-     * @return Address Line 1 for this User
+     * Address Line 1 for this User
+     *
+     * @return The field address1
      */
     public String getAddress1() { return this.address1; }
     /**
-     * @param value - Address Line 1 for this User
+     * Address Line 1 for this User
+     *
+     * @param value The new value for address1
      */
     public void setAddress1(String value) { this.address1 = value; }
     /**
-     * @return Address Line 2 for this User
+     * Address Line 2 for this User
+     *
+     * @return The field address2
      */
     public String getAddress2() { return this.address2; }
     /**
-     * @param value - Address Line 2 for this User
+     * Address Line 2 for this User
+     *
+     * @param value The new value for address2
      */
     public void setAddress2(String value) { this.address2 = value; }
     /**
-     * @return Address Line 3 for this User
+     * Address Line 3 for this User
+     *
+     * @return The field address3
      */
     public String getAddress3() { return this.address3; }
     /**
-     * @param value - Address Line 3 for this User
+     * Address Line 3 for this User
+     *
+     * @param value The new value for address3
      */
     public void setAddress3(String value) { this.address3 = value; }
     /**
-     * @return City for this User
+     * City for this User
+     *
+     * @return The field city
      */
     public String getCity() { return this.city; }
     /**
-     * @param value - City for this User
+     * City for this User
+     *
+     * @param value The new value for city
      */
     public void setCity(String value) { this.city = value; }
     /**
-     * @return Region ("state" in the US) for this User
+     * Region ("state" in the US) for this User
+     *
+     * @return The field stateRegion
      */
     public String getStateRegion() { return this.stateRegion; }
     /**
-     * @param value - Region ("state" in the US) for this User
+     * Region ("state" in the US) for this User
+     *
+     * @param value The new value for stateRegion
      */
     public void setStateRegion(String value) { this.stateRegion = value; }
     /**
-     * @return Postal Code this User
+     * Postal Code this User
+     *
+     * @return The field postalCode
      */
     public String getPostalCode() { return this.postalCode; }
     /**
-     * @param value - Postal Code this User
+     * Postal Code this User
+     *
+     * @param value The new value for postalCode
      */
     public void setPostalCode(String value) { this.postalCode = value; }
     /**
-     * @return Country for this User This will be validated by the /api/v1/countries data set
+     * Country for this User This will be validated by the /api/v1/countries data set
+     *
+     * @return The field country
      */
     public String getCountry() { return this.country; }
     /**
-     * @param value - Country for this User This will be validated by the /api/v1/countries data set
+     * Country for this User This will be validated by the /api/v1/countries data set
+     *
+     * @param value The new value for country
      */
     public void setCountry(String value) { this.country = value; }
     /**
-     * @return Image URL for this User
+     * Image URL for this User
+     *
+     * @return The field imageURL
      */
     public String getImageURL() { return this.imageURL; }
     /**
-     * @param value - Image URL for this User
+     * Image URL for this User
+     *
+     * @param value The new value for imageURL
      */
     public void setImageURL(String value) { this.imageURL = value; }
     /**
-     * @return Description for this User.
+     * Description for this User.
+     *
+     * @return The field description
      */
     public String getDescription() { return this.description; }
     /**
-     * @param value - Description for this User.
+     * Description for this User.
+     *
+     * @param value The new value for description
      */
     public void setDescription(String value) { this.description = value; }
     /**
-     * @return Last date time user logged into Azure B2C.
+     * Last date time user logged into Azure B2C.
+     *
+     * @return The field b2CLastLoggedIn
      */
     public Date getB2CLastLoggedIn() { return this.b2CLastLoggedIn; }
     /**
-     * @param value - Last date time user logged into Azure B2C.
+     * Last date time user logged into Azure B2C.
+     *
+     * @param value The new value for b2CLastLoggedIn
      */
     public void setB2CLastLoggedIn(Date value) { this.b2CLastLoggedIn = value; }
     /**
-     * @return The default currency code used by this user entity. This value can be overridden for invoices in a different currency code. For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
+     * The default currency code used by this user entity.  This value can be overridden
+     * for invoices in a different currency code.
+     *
+     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
+     *
+     * @return The field defaultCurrencyCode
      */
     public String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
-     * @param value - The default currency code used by this user entity. This value can be overridden for invoices in a different currency code. For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
+     * The default currency code used by this user entity.  This value can be overridden
+     * for invoices in a different currency code.
+     *
+     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
+     *
+     * @param value The new value for defaultCurrencyCode
      */
     public void setDefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
     /**
-     * @return All notes attached to this User. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this User.
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @return The field notes
      */
     public NoteModel[] getNotes() { return this.notes; }
     /**
-     * @param value - All notes attached to this User. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this User.
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @param value The new value for notes
      */
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
-     * @return All attachments attached to this User. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to this User.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @return The field attachments
      */
     public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
-     * @param value - All attachments attached to this User. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to this User.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @param value The new value for attachments
      */
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
-     * @return All values attached to this User. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to this User.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * @param value - All values attached to this User. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to this User.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
-     * @return Accounting role definition for this User. To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
+     * Accounting role definition for this User.
+     * To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
+     *
+     * @return The field accountingRoleCodeDefinition
      */
     public CodeDefinitionModel getAccountingRoleCodeDefinition() { return this.accountingRoleCodeDefinition; }
     /**
-     * @param value - Accounting role definition for this User. To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
+     * Accounting role definition for this User.
+     * To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
+     *
+     * @param value The new value for accountingRoleCodeDefinition
      */
     public void setAccountingRoleCodeDefinition(CodeDefinitionModel value) { this.accountingRoleCodeDefinition = value; }
 };

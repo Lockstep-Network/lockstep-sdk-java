@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -28,11 +29,11 @@ public class EmailsClient
 {
     private LockstepApi client;
 
-     /**
-      * Constructor for method collection
-      *
-      * @param client A {@link io.lockstep.api.LockstepApi} platform client
-      */
+    /**
+     * Constructor for method collection
+     *
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
+     */
     public EmailsClient(LockstepApi client) {
         this.client = client;
     }
@@ -42,8 +43,9 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     * @param id - The unique ID number of the Email to retrieve.
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
+     *
+     * @param id The unique ID number of the Email to retrieve.
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<EmailModel> retrieveEmail(String id, String include)
@@ -61,8 +63,9 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     * @param id - The unique Lockstep Platform ID number of the email to update
-     * @param body - A list of changes to apply to this Email
+     *
+     * @param id The unique Lockstep Platform ID number of the email to update
+     * @param body A list of changes to apply to this Email
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<EmailModel> updateEmail(String id, Object body)
@@ -78,7 +81,8 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     * @param id - The unique Lockstep Platform ID number of the Email to delete
+     *
+     * @param id The unique Lockstep Platform ID number of the Email to delete
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActionResultModel> deleteEmail(String id)
@@ -92,8 +96,9 @@ public class EmailsClient
      * Retrieves a signature logo for the email with the specified identifier and increments 'ViewCount'.
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
-     * @param emailId - The unique ID number of the Email to retrieve.
-     * @param nonce - The random nonce applied at time of url creation.
+     *
+     * @param emailId The unique ID number of the Email to retrieve.
+     * @param nonce The random nonce applied at time of url creation.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<byte[]> retrieveEmailLogo(String emailId, String nonce)
@@ -109,7 +114,8 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     * @param body - The array of emails to be created
+     *
+     * @param body The array of emails to be created
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<EmailModel[]> createEmails(EmailModel[] body)
@@ -126,11 +132,12 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     * @param filter - The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
-     * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     *
+     * @param filter The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<EmailModel>> queryEmails(String filter, String include, String order, Integer pageSize, Integer pageNumber)

@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -31,83 +32,129 @@ public class CustomerDetailsPaymentModel
     private Double paymentAmount;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return Unique identifier for payment
+     * Unique identifier for payment
+     *
+     * @return The field paymentId
      */
     public String getPaymentId() { return this.paymentId; }
     /**
-     * @param value - Unique identifier for payment
+     * Unique identifier for payment
+     *
+     * @param value The new value for paymentId
      */
     public void setPaymentId(String value) { this.paymentId = value; }
     /**
-     * @return Unique identifier for payment applied
+     * Unique identifier for payment applied
+     *
+     * @return The field paymentAppliedId
      */
     public String getPaymentAppliedId() { return this.paymentAppliedId; }
     /**
-     * @param value - Unique identifier for payment applied
+     * Unique identifier for payment applied
+     *
+     * @param value The new value for paymentAppliedId
      */
     public void setPaymentAppliedId(String value) { this.paymentAppliedId = value; }
     /**
-     * @return Payment type
+     * Payment type
+     *
+     * @return The field paymentType
      */
     public String getPaymentType() { return this.paymentType; }
     /**
-     * @param value - Payment type
+     * Payment type
+     *
+     * @param value The new value for paymentType
      */
     public void setPaymentType(String value) { this.paymentType = value; }
     /**
-     * @return Unique identifier for invoice payment is associated with
+     * Unique identifier for invoice payment is associated with
+     *
+     * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
-     * @param value - Unique identifier for invoice payment is associated with
+     * Unique identifier for invoice payment is associated with
+     *
+     * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
-     * @return Invoice type payment is associated with
+     * Invoice type payment is associated with
+     *
+     * @return The field invoiceTypeCode
      */
     public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
-     * @param value - Invoice type payment is associated with
+     * Invoice type payment is associated with
+     *
+     * @param value The new value for invoiceTypeCode
      */
     public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
     /**
-     * @return Invoice reference code payment is associated with
+     * Invoice reference code payment is associated with
+     *
+     * @return The field invoiceReferenceCode
      */
     public String getInvoiceReferenceCode() { return this.invoiceReferenceCode; }
     /**
-     * @param value - Invoice reference code payment is associated with
+     * Invoice reference code payment is associated with
+     *
+     * @param value The new value for invoiceReferenceCode
      */
     public void setInvoiceReferenceCode(String value) { this.invoiceReferenceCode = value; }
     /**
-     * @return Invoice total amount payment is associated with
+     * Invoice total amount payment is associated with
+     *
+     * @return The field invoiceTotalAmount
      */
     public Double getInvoiceTotalAmount() { return this.invoiceTotalAmount; }
     /**
-     * @param value - Invoice total amount payment is associated with
+     * Invoice total amount payment is associated with
+     *
+     * @param value The new value for invoiceTotalAmount
      */
     public void setInvoiceTotalAmount(Double value) { this.invoiceTotalAmount = value; }
     /**
-     * @return Date payment placed
+     * Date payment placed
+     *
+     * @return The field paymentDate
      */
     public Date getPaymentDate() { return this.paymentDate; }
     /**
-     * @param value - Date payment placed
+     * Date payment placed
+     *
+     * @param value The new value for paymentDate
      */
     public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
-     * @return Amount payment was made for
+     * Amount payment was made for
+     *
+     * @return The field paymentAmount
      */
     public Double getPaymentAmount() { return this.paymentAmount; }
     /**
-     * @param value - Amount payment was made for
+     * Amount payment was made for
+     *
+     * @param value The new value for paymentAmount
      */
     public void setPaymentAmount(Double value) { this.paymentAmount = value; }
 };

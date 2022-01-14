@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -22,19 +23,27 @@ public class InviteDataModel
     private String userStatus;
 
     /**
-     * @return The email address of the invited user.
+     * The email address of the invited user.
+     *
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
-     * @param value - The email address of the invited user.
+     * The email address of the invited user.
+     *
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
-     * @return The status of the user.
+     * The status of the user.
+     *
+     * @return The field userStatus
      */
     public String getUserStatus() { return this.userStatus; }
     /**
-     * @param value - The status of the user.
+     * The status of the user.
+     *
+     * @param value The new value for userStatus
      */
     public void setUserStatus(String value) { this.userStatus = value; }
 };

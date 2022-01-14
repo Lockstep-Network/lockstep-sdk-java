@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -33,99 +34,155 @@ public class CustomFieldDefinitionModel
     private String appEnrollmentId;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field customFieldDefinitionId
      */
     public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for customFieldDefinitionId
      */
     public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
     /**
-     * @return Table to which this definition belongs
+     * Table to which this definition belongs
+     *
+     * @return The field tableKey
      */
     public String getTableKey() { return this.tableKey; }
     /**
-     * @param value - Table to which this definition belongs
+     * Table to which this definition belongs
+     *
+     * @param value The new value for tableKey
      */
     public void setTableKey(String value) { this.tableKey = value; }
     /**
-     * @return Id of app this definition belongs to
+     * Id of app this definition belongs to
+     *
+     * @return The field appId
      */
     public String getAppId() { return this.appId; }
     /**
-     * @param value - Id of app this definition belongs to
+     * Id of app this definition belongs to
+     *
+     * @param value The new value for appId
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * @return Text to display in-application for custom field
+     * Text to display in-application for custom field
+     *
+     * @return The field customFieldLabel
      */
     public String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
-     * @param value - Text to display in-application for custom field
+     * Text to display in-application for custom field
+     *
+     * @param value The new value for customFieldLabel
      */
     public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
     /**
-     * @return Data type of this definition
+     * Data type of this definition
+     *
+     * @return The field dataType
      */
     public String getDataType() { return this.dataType; }
     /**
-     * @param value - Data type of this definition
+     * Data type of this definition
+     *
+     * @param value The new value for dataType
      */
     public void setDataType(String value) { this.dataType = value; }
     /**
-     * @return Used for display logic when multiple custom fields exist
+     * Used for display logic when multiple custom fields exist
+     *
+     * @return The field sortOrder
      */
     public Integer getSortOrder() { return this.sortOrder; }
     /**
-     * @param value - Used for display logic when multiple custom fields exist
+     * Used for display logic when multiple custom fields exist
+     *
+     * @param value The new value for sortOrder
      */
     public void setSortOrder(Integer value) { this.sortOrder = value; }
     /**
-     * @return Date created
+     * Date created
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - Date created
+     * Date created
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return Id of user who created this definition
+     * Id of user who created this definition
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - Id of user who created this definition
+     * Id of user who created this definition
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return Date modified
+     * Date modified
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - Date modified
+     * Date modified
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return Id of user who modified this definition
+     * Id of user who modified this definition
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - Id of user who modified this definition
+     * Id of user who modified this definition
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * @return AppEnrollmentId for this record; used for mapping purposes.
+     * AppEnrollmentId for this record; used for mapping purposes.
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - AppEnrollmentId for this record; used for mapping purposes.
+     * AppEnrollmentId for this record; used for mapping purposes.
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

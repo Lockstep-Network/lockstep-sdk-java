@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -32,91 +33,143 @@ public class NoteModel
     private String appEnrollmentId;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field noteId
      */
     public String getNoteId() { return this.noteId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for noteId
      */
     public void setNoteId(String value) { this.noteId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The name of the table the note is associated with
+     * The name of the table the note is associated with
+     *
+     * @return The field tableKey
      */
     public String getTableKey() { return this.tableKey; }
     /**
-     * @param value - The name of the table the note is associated with
+     * The name of the table the note is associated with
+     *
+     * @param value The new value for tableKey
      */
     public void setTableKey(String value) { this.tableKey = value; }
     /**
-     * @return The ID of the object the note is associated with
+     * The ID of the object the note is associated with
+     *
+     * @return The field objectKey
      */
     public String getObjectKey() { return this.objectKey; }
     /**
-     * @param value - The ID of the object the note is associated with
+     * The ID of the object the note is associated with
+     *
+     * @param value The new value for objectKey
      */
     public void setObjectKey(String value) { this.objectKey = value; }
     /**
-     * @return The text of the note
+     * The text of the note
+     *
+     * @return The field noteText
      */
     public String getNoteText() { return this.noteText; }
     /**
-     * @param value - The text of the note
+     * The text of the note
+     *
+     * @param value The new value for noteText
      */
     public void setNoteText(String value) { this.noteText = value; }
     /**
-     * @return The type of the note
+     * The type of the note
+     *
+     * @return The field noteType
      */
     public String getNoteType() { return this.noteType; }
     /**
-     * @param value - The type of the note
+     * The type of the note
+     *
+     * @param value The new value for noteType
      */
     public void setNoteType(String value) { this.noteType = value; }
     /**
-     * @return Flag indicating if the note has been archived
+     * Flag indicating if the note has been archived
+     *
+     * @return The field isArchived
      */
     public Boolean getIsArchived() { return this.isArchived; }
     /**
-     * @param value - Flag indicating if the note has been archived
+     * Flag indicating if the note has been archived
+     *
+     * @param value The new value for isArchived
      */
     public void setIsArchived(Boolean value) { this.isArchived = value; }
     /**
-     * @return The date the note was created
+     * The date the note was created
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date the note was created
+     * The date the note was created
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return The ID of the user who created the note
+     * The ID of the user who created the note
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - The ID of the user who created the note
+     * The ID of the user who created the note
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return The name of the user who created the note
+     * The name of the user who created the note
+     *
+     * @return The field createdUserName
      */
     public String getCreatedUserName() { return this.createdUserName; }
     /**
-     * @param value - The name of the user who created the note
+     * The name of the user who created the note
+     *
+     * @param value The new value for createdUserName
      */
     public void setCreatedUserName(String value) { this.createdUserName = value; }
     /**
-     * @return AppEnrollmentId for this record; used for mapping purposes.
+     * AppEnrollmentId for this record; used for mapping purposes.
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - AppEnrollmentId for this record; used for mapping purposes.
+     * AppEnrollmentId for this record; used for mapping purposes.
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

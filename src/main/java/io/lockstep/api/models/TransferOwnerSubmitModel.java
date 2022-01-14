@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -21,11 +22,15 @@ public class TransferOwnerSubmitModel
     private String targetUserId;
 
     /**
-     * @return The ID of the user to transfer ownership to.
+     * The ID of the user to transfer ownership to.
+     *
+     * @return The field targetUserId
      */
     public String getTargetUserId() { return this.targetUserId; }
     /**
-     * @param value - The ID of the user to transfer ownership to.
+     * The ID of the user to transfer ownership to.
+     *
+     * @param value The new value for targetUserId
      */
     public void setTargetUserId(String value) { this.targetUserId = value; }
 };

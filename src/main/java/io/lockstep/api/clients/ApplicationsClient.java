@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -28,11 +29,11 @@ public class ApplicationsClient
 {
     private LockstepApi client;
 
-     /**
-      * Constructor for method collection
-      *
-      * @param client A {@link io.lockstep.api.LockstepApi} platform client
-      */
+    /**
+     * Constructor for method collection
+     *
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
+     */
     public ApplicationsClient(LockstepApi client) {
         this.client = client;
     }
@@ -44,8 +45,9 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     * @param id - The unique ID number of the Application to retrieve
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
+     *
+     * @param id The unique ID number of the Application to retrieve
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ApplicationModel> retrieveApplication(String id, String include)
@@ -63,8 +65,9 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     * @param id - The unique ID number of the Application to update
-     * @param body - A list of changes to apply to this Application
+     *
+     * @param id The unique ID number of the Application to update
+     * @param body A list of changes to apply to this Application
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ApplicationModel> updateApplication(String id, Object body)
@@ -80,7 +83,8 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     * @param id - The unique ID number of the Application to delete
+     *
+     * @param id The unique ID number of the Application to delete
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActionResultModel> deleteApplication(String id)
@@ -97,7 +101,8 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     * @param body - The Applications to create
+     *
+     * @param body The Applications to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ApplicationModel[]> createApplications(ApplicationModel[] body)
@@ -114,11 +119,12 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
-     * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     *
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
+     * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<ApplicationModel>> queryApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)

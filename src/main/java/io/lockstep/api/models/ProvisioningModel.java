@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -22,19 +23,27 @@ public class ProvisioningModel
     private ErpInfoModel erp;
 
     /**
-     * @return The full name of the new user
+     * The full name of the new user
+     *
+     * @return The field fullName
      */
     public String getFullName() { return this.fullName; }
     /**
-     * @param value - The full name of the new user
+     * The full name of the new user
+     *
+     * @param value The new value for fullName
      */
     public void setFullName(String value) { this.fullName = value; }
     /**
-     * @return The information necessary to enroll the user in their ERP
+     * The information necessary to enroll the user in their ERP
+     *
+     * @return The field erp
      */
     public ErpInfoModel getErp() { return this.erp; }
     /**
-     * @param value - The information necessary to enroll the user in their ERP
+     * The information necessary to enroll the user in their ERP
+     *
+     * @param value The new value for erp
      */
     public void setErp(ErpInfoModel value) { this.erp = value; }
 };

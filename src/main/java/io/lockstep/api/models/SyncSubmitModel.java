@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -21,11 +22,15 @@ public class SyncSubmitModel
     private String appEnrollmentId;
 
     /**
-     * @return The identifier of the app enrollment
+     * The identifier of the app enrollment
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - The identifier of the app enrollment
+     * The identifier of the app enrollment
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

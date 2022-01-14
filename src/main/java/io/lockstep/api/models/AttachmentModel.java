@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -34,104 +35,165 @@ public class AttachmentModel
     private String createdUserId;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field attachmentId
      */
     public String getAttachmentId() { return this.attachmentId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for attachmentId
      */
     public void setAttachmentId(String value) { this.attachmentId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The name of the table the attachment is associated with
+     * The name of the table the attachment is associated with
+     *
+     * @return The field tableKey
      */
     public String getTableKey() { return this.tableKey; }
     /**
-     * @param value - The name of the table the attachment is associated with
+     * The name of the table the attachment is associated with
+     *
+     * @param value The new value for tableKey
      */
     public void setTableKey(String value) { this.tableKey = value; }
     /**
-     * @return The ID of the object the attachment is associated with
+     * The ID of the object the attachment is associated with
+     *
+     * @return The field objectKey
      */
     public String getObjectKey() { return this.objectKey; }
     /**
-     * @param value - The ID of the object the attachment is associated with
+     * The ID of the object the attachment is associated with
+     *
+     * @param value The new value for objectKey
      */
     public void setObjectKey(String value) { this.objectKey = value; }
     /**
-     * @return Name of the file
+     * Name of the file
+     *
+     * @return The field fileName
      */
     public String getFileName() { return this.fileName; }
     /**
-     * @param value - Name of the file
+     * Name of the file
+     *
+     * @param value The new value for fileName
      */
     public void setFileName(String value) { this.fileName = value; }
     /**
-     * @return Extension type of the file
+     * Extension type of the file
+     *
+     * @return The field fileExt
      */
     public String getFileExt() { return this.fileExt; }
     /**
-     * @param value - Extension type of the file
+     * Extension type of the file
+     *
+     * @param value The new value for fileExt
      */
     public void setFileExt(String value) { this.fileExt = value; }
     /**
-     * @return Corresponding AttachmentType object to describe this attachment
+     * Corresponding AttachmentType object to describe this attachment
+     *
+     * @return The field attachmentTypeId
      */
     public String getAttachmentTypeId() { return this.attachmentTypeId; }
     /**
-     * @param value - Corresponding AttachmentType object to describe this attachment
+     * Corresponding AttachmentType object to describe this attachment
+     *
+     * @param value The new value for attachmentTypeId
      */
     public void setAttachmentTypeId(String value) { this.attachmentTypeId = value; }
     /**
-     * @return Flag indicating the attachment was archived
+     * Flag indicating the attachment was archived
+     *
+     * @return The field isArchived
      */
     public Boolean getIsArchived() { return this.isArchived; }
     /**
-     * @param value - Flag indicating the attachment was archived
+     * Flag indicating the attachment was archived
+     *
+     * @param value The new value for isArchived
      */
     public void setIsArchived(Boolean value) { this.isArchived = value; }
+    /**
+     *
+     * @return The field originAttachmentId
+     */
     public String getOriginAttachmentId() { return this.originAttachmentId; }
     /**
-     * @param value -
+     *
+     * @param value The new value for originAttachmentId
      */
     public void setOriginAttachmentId(String value) { this.originAttachmentId = value; }
     /**
-     * @return Flag for if LS clients can see this file
+     * Flag for if LS clients can see this file
+     *
+     * @return The field viewInternal
      */
     public Boolean getViewInternal() { return this.viewInternal; }
     /**
-     * @param value - Flag for if LS clients can see this file
+     * Flag for if LS clients can see this file
+     *
+     * @param value The new value for viewInternal
      */
     public void setViewInternal(Boolean value) { this.viewInternal = value; }
     /**
-     * @return Flag for if Vendors and customers can see this file
+     * Flag for if Vendors and customers can see this file
+     *
+     * @return The field viewExternal
      */
     public Boolean getViewExternal() { return this.viewExternal; }
     /**
-     * @param value - Flag for if Vendors and customers can see this file
+     * Flag for if Vendors and customers can see this file
+     *
+     * @param value The new value for viewExternal
      */
     public void setViewExternal(Boolean value) { this.viewExternal = value; }
     /**
-     * @return The date the attachment was created
+     * The date the attachment was created
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date the attachment was created
+     * The date the attachment was created
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return Id of the user who made the file
+     * Id of the user who made the file
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - Id of the user who made the file
+     * Id of the user who made the file
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
 };

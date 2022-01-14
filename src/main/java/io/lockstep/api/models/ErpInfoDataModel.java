@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -23,27 +24,41 @@ public class ErpInfoDataModel
     private String redirectUri;
 
     /**
-     * @return The authorization code returned from the first step of the OAuth2 flow https://oauth.net/2/grant-types/authorization-code/
+     * The authorization code returned from the first step of the OAuth2 flow
+     * https://oauth.net/2/grant-types/authorization-code/
+     *
+     * @return The field authCode
      */
     public String getAuthCode() { return this.authCode; }
     /**
-     * @param value - The authorization code returned from the first step of the OAuth2 flow https://oauth.net/2/grant-types/authorization-code/
+     * The authorization code returned from the first step of the OAuth2 flow
+     * https://oauth.net/2/grant-types/authorization-code/
+     *
+     * @param value The new value for authCode
      */
     public void setAuthCode(String value) { this.authCode = value; }
     /**
-     * @return The realm id of the account being granted permissions to access
+     * The realm id of the account being granted permissions to access
+     *
+     * @return The field realmId
      */
     public String getRealmId() { return this.realmId; }
     /**
-     * @param value - The realm id of the account being granted permissions to access
+     * The realm id of the account being granted permissions to access
+     *
+     * @param value The new value for realmId
      */
     public void setRealmId(String value) { this.realmId = value; }
     /**
-     * @return The redirect uri used for step one of the OAuth2.0 flow.
+     * The redirect uri used for step one of the OAuth2.0 flow.
+     *
+     * @return The field redirectUri
      */
     public String getRedirectUri() { return this.redirectUri; }
     /**
-     * @param value - The redirect uri used for step one of the OAuth2.0 flow.
+     * The redirect uri used for step one of the OAuth2.0 flow.
+     *
+     * @param value The new value for redirectUri
      */
     public void setRedirectUri(String value) { this.redirectUri = value; }
 };

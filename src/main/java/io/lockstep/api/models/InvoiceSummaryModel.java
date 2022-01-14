@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -36,123 +37,191 @@ public class InvoiceSummaryModel
     private String[] paymentIds;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     * The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @return The field customerId
      */
     public String getCustomerId() { return this.customerId; }
     /**
-     * @param value - The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     * The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @param value The new value for customerId
      */
     public void setCustomerId(String value) { this.customerId = value; }
     /**
-     * @return The unique ID number of this invoice.
+     * The unique ID number of this invoice.
+     *
+     * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
-     * @param value - The unique ID number of this invoice.
+     * The unique ID number of this invoice.
+     *
+     * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
-     * @return A reference code that is used to identify this invoice. The meaning of this field is specific to the ERP or accounting system used by the user.
+     * A reference code that is used to identify this invoice.
+     * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @return The field invoiceNumber
      */
     public String getInvoiceNumber() { return this.invoiceNumber; }
     /**
-     * @param value - A reference code that is used to identify this invoice. The meaning of this field is specific to the ERP or accounting system used by the user.
+     * A reference code that is used to identify this invoice.
+     * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @param value The new value for invoiceNumber
      */
     public void setInvoiceNumber(String value) { this.invoiceNumber = value; }
     /**
-     * @return The reporting date for this invoice.
+     * The reporting date for this invoice.
+     *
+     * @return The field invoiceDate
      */
     public Date getInvoiceDate() { return this.invoiceDate; }
     /**
-     * @param value - The reporting date for this invoice.
+     * The reporting date for this invoice.
+     *
+     * @param value The new value for invoiceDate
      */
     public void setInvoiceDate(Date value) { this.invoiceDate = value; }
     /**
-     * @return The name of the counterparty for the invoice, for example, a customer or vendor.
+     * The name of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @return The field customerName
      */
     public String getCustomerName() { return this.customerName; }
     /**
-     * @param value - The name of the counterparty for the invoice, for example, a customer or vendor.
+     * The name of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @param value The new value for customerName
      */
     public void setCustomerName(String value) { this.customerName = value; }
     /**
-     * @return The status of the invoice.
+     * The status of the invoice.
+     *
+     * @return The field status
      */
     public String getStatus() { return this.status; }
     /**
-     * @param value - The status of the invoice.
+     * The status of the invoice.
+     *
+     * @param value The new value for status
      */
     public void setStatus(String value) { this.status = value; }
     /**
-     * @return The due date of the invoice.
+     * The due date of the invoice.
+     *
+     * @return The field paymentDueDate
      */
     public Date getPaymentDueDate() { return this.paymentDueDate; }
     /**
-     * @param value - The due date of the invoice.
+     * The due date of the invoice.
+     *
+     * @param value The new value for paymentDueDate
      */
     public void setPaymentDueDate(Date value) { this.paymentDueDate = value; }
     /**
-     * @return The total amount of the Invoice.
+     * The total amount of the Invoice.
+     *
+     * @return The field invoiceAmount
      */
     public Double getInvoiceAmount() { return this.invoiceAmount; }
     /**
-     * @param value - The total amount of the Invoice.
+     * The total amount of the Invoice.
+     *
+     * @param value The new value for invoiceAmount
      */
     public void setInvoiceAmount(Double value) { this.invoiceAmount = value; }
     /**
-     * @return The remaining balance value of this invoice.
+     * The remaining balance value of this invoice.
+     *
+     * @return The field outstandingBalance
      */
     public Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
-     * @param value - The remaining balance value of this invoice.
+     * The remaining balance value of this invoice.
+     *
+     * @param value The new value for outstandingBalance
      */
     public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
     /**
-     * @return A code identifying the type of this Invoice.
+     * A code identifying the type of this Invoice.
+     *
+     * @return The field invoiceTypeCode
      */
     public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
-     * @param value - A code identifying the type of this Invoice.
+     * A code identifying the type of this Invoice.
+     *
+     * @param value The new value for invoiceTypeCode
      */
     public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
     /**
-     * @return The date stamp for the newest Activity on this Invoice.
+     * The date stamp for the newest Activity on this Invoice.
+     *
+     * @return The field newestActivity
      */
     public Date getNewestActivity() { return this.newestActivity; }
     /**
-     * @param value - The date stamp for the newest Activity on this Invoice.
+     * The date stamp for the newest Activity on this Invoice.
+     *
+     * @param value The new value for newestActivity
      */
     public void setNewestActivity(Date value) { this.newestActivity = value; }
     /**
-     * @return The number of days this Invoice is past due.
+     * The number of days this Invoice is past due.
+     *
+     * @return The field daysPastDue
      */
     public Integer getDaysPastDue() { return this.daysPastDue; }
     /**
-     * @param value - The number of days this Invoice is past due.
+     * The number of days this Invoice is past due.
+     *
+     * @param value The new value for daysPastDue
      */
     public void setDaysPastDue(Integer value) { this.daysPastDue = value; }
     /**
-     * @return The memo text of the payments associated to this invoice.
+     * The memo text of the payments associated to this invoice.
+     *
+     * @return The field paymentNumbers
      */
     public String[] getPaymentNumbers() { return this.paymentNumbers; }
     /**
-     * @param value - The memo text of the payments associated to this invoice.
+     * The memo text of the payments associated to this invoice.
+     *
+     * @param value The new value for paymentNumbers
      */
     public void setPaymentNumbers(String[] value) { this.paymentNumbers = value; }
     /**
-     * @return The ids of the payments associated to this invoice.
+     * The ids of the payments associated to this invoice.
+     *
+     * @return The field paymentIds
      */
     public String[] getPaymentIds() { return this.paymentIds; }
     /**
-     * @param value - The ids of the payments associated to this invoice.
+     * The ids of the payments associated to this invoice.
+     *
+     * @param value The new value for paymentIds
      */
     public void setPaymentIds(String[] value) { this.paymentIds = value; }
 };

@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -25,43 +26,63 @@ public class SyncEntityResultModel
     private Object errors;
 
     /**
-     * @return The number of entities inserted
+     * The number of entities inserted
+     *
+     * @return The field insertCount
      */
     public Integer getInsertCount() { return this.insertCount; }
     /**
-     * @param value - The number of entities inserted
+     * The number of entities inserted
+     *
+     * @param value The new value for insertCount
      */
     public void setInsertCount(Integer value) { this.insertCount = value; }
     /**
-     * @return The number of entities updated
+     * The number of entities updated
+     *
+     * @return The field updateCount
      */
     public Integer getUpdateCount() { return this.updateCount; }
     /**
-     * @param value - The number of entities updated
+     * The number of entities updated
+     *
+     * @param value The new value for updateCount
      */
     public void setUpdateCount(Integer value) { this.updateCount = value; }
     /**
-     * @return The number of entities skipped
+     * The number of entities skipped
+     *
+     * @return The field skipCount
      */
     public Integer getSkipCount() { return this.skipCount; }
     /**
-     * @param value - The number of entities skipped
+     * The number of entities skipped
+     *
+     * @param value The new value for skipCount
      */
     public void setSkipCount(Integer value) { this.skipCount = value; }
     /**
-     * @return The number of errors encountered during sync
+     * The number of errors encountered during sync
+     *
+     * @return The field errorCount
      */
     public Integer getErrorCount() { return this.errorCount; }
     /**
-     * @param value - The number of errors encountered during sync
+     * The number of errors encountered during sync
+     *
+     * @param value The new value for errorCount
      */
     public void setErrorCount(Integer value) { this.errorCount = value; }
     /**
-     * @return The errors encountered during sync keyed by ERP key
+     * The errors encountered during sync keyed by ERP key
+     *
+     * @return The field errors
      */
     public Object getErrors() { return this.errors; }
     /**
-     * @param value - The errors encountered during sync keyed by ERP key
+     * The errors encountered during sync keyed by ERP key
+     *
+     * @param value The new value for errors
      */
     public void setErrors(Object value) { this.errors = value; }
 };

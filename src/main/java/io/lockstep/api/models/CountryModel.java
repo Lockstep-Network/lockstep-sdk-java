@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -32,99 +33,147 @@ public class CountryModel
     private String aliases;
 
     /**
-     * @return Name of the country
+     * Name of the country
+     *
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
-     * @param value - Name of the country
+     * Name of the country
+     *
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
-     * @return 2 letter alphabetic code for the given country
+     * 2 letter alphabetic code for the given country
+     *
+     * @return The field alpha2
      */
     public String getAlpha2() { return this.alpha2; }
     /**
-     * @param value - 2 letter alphabetic code for the given country
+     * 2 letter alphabetic code for the given country
+     *
+     * @param value The new value for alpha2
      */
     public void setAlpha2(String value) { this.alpha2 = value; }
     /**
-     * @return 3 letter alphabetic code for the given country
+     * 3 letter alphabetic code for the given country
+     *
+     * @return The field alpha3
      */
     public String getAlpha3() { return this.alpha3; }
     /**
-     * @param value - 3 letter alphabetic code for the given country
+     * 3 letter alphabetic code for the given country
+     *
+     * @param value The new value for alpha3
      */
     public void setAlpha3(String value) { this.alpha3 = value; }
     /**
-     * @return Unique 3 digit number for the given country
+     * Unique 3 digit number for the given country
+     *
+     * @return The field countryCode
      */
     public Integer getCountryCode() { return this.countryCode; }
     /**
-     * @param value - Unique 3 digit number for the given country
+     * Unique 3 digit number for the given country
+     *
+     * @param value The new value for countryCode
      */
     public void setCountryCode(Integer value) { this.countryCode = value; }
     /**
-     * @return Region of the country
+     * Region of the country
+     *
+     * @return The field region
      */
     public String getRegion() { return this.region; }
     /**
-     * @param value - Region of the country
+     * Region of the country
+     *
+     * @param value The new value for region
      */
     public void setRegion(String value) { this.region = value; }
     /**
-     * @return Subregion of the country
+     * Subregion of the country
+     *
+     * @return The field subRegion
      */
     public String getSubRegion() { return this.subRegion; }
     /**
-     * @param value - Subregion of the country
+     * Subregion of the country
+     *
+     * @param value The new value for subRegion
      */
     public void setSubRegion(String value) { this.subRegion = value; }
     /**
-     * @return Intermediate region of the country
+     * Intermediate region of the country
+     *
+     * @return The field intermediateRegion
      */
     public String getIntermediateRegion() { return this.intermediateRegion; }
     /**
-     * @param value - Intermediate region of the country
+     * Intermediate region of the country
+     *
+     * @param value The new value for intermediateRegion
      */
     public void setIntermediateRegion(String value) { this.intermediateRegion = value; }
     /**
-     * @return Numeric code for a region
+     * Numeric code for a region
+     *
+     * @return The field regionCode
      */
     public Integer getRegionCode() { return this.regionCode; }
     /**
-     * @param value - Numeric code for a region
+     * Numeric code for a region
+     *
+     * @param value The new value for regionCode
      */
     public void setRegionCode(Integer value) { this.regionCode = value; }
     /**
-     * @return Numeric code for a subregion
+     * Numeric code for a subregion
+     *
+     * @return The field subRegionCode
      */
     public Integer getSubRegionCode() { return this.subRegionCode; }
     /**
-     * @param value - Numeric code for a subregion
+     * Numeric code for a subregion
+     *
+     * @param value The new value for subRegionCode
      */
     public void setSubRegionCode(Integer value) { this.subRegionCode = value; }
     /**
-     * @return Numeric code for an intermediate region
+     * Numeric code for an intermediate region
+     *
+     * @return The field intermediateRegionCode
      */
     public Integer getIntermediateRegionCode() { return this.intermediateRegionCode; }
     /**
-     * @param value - Numeric code for an intermediate region
+     * Numeric code for an intermediate region
+     *
+     * @param value The new value for intermediateRegionCode
      */
     public void setIntermediateRegionCode(Integer value) { this.intermediateRegionCode = value; }
     /**
-     * @return French name of the country
+     * French name of the country
+     *
+     * @return The field frenchName
      */
     public String getFrenchName() { return this.frenchName; }
     /**
-     * @param value - French name of the country
+     * French name of the country
+     *
+     * @param value The new value for frenchName
      */
     public void setFrenchName(String value) { this.frenchName = value; }
     /**
-     * @return A different name for a country
+     * A different name for a country
+     *
+     * @return The field aliases
      */
     public String getAliases() { return this.aliases; }
     /**
-     * @param value - A different name for a country
+     * A different name for a country
+     *
+     * @param value The new value for aliases
      */
     public void setAliases(String value) { this.aliases = value; }
 };

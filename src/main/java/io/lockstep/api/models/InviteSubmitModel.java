@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -21,11 +22,15 @@ public class InviteSubmitModel
     private String email;
 
     /**
-     * @return The email address of the user to invite
+     * The email address of the user to invite
+     *
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
-     * @param value - The email address of the user to invite
+     * The email address of the user to invite
+     *
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
 };

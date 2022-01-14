@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -27,59 +28,87 @@ public class ProvisioningResponseModel
     private String errorMessage;
 
     /**
-     * @return If provisioning is successful, contains the username of the created user.
+     * If provisioning is successful, contains the username of the created user.
+     *
+     * @return The field userName
      */
     public String getUserName() { return this.userName; }
     /**
-     * @param value - If provisioning is successful, contains the username of the created user.
+     * If provisioning is successful, contains the username of the created user.
+     *
+     * @param value The new value for userName
      */
     public void setUserName(String value) { this.userName = value; }
     /**
-     * @return If provisioning is successful, contains subscription account name of created user.
+     * If provisioning is successful, contains subscription account name of created user.
+     *
+     * @return The field accountName
      */
     public String getAccountName() { return this.accountName; }
     /**
-     * @param value - If provisioning is successful, contains subscription account name of created user.
+     * If provisioning is successful, contains subscription account name of created user.
+     *
+     * @param value The new value for accountName
      */
     public void setAccountName(String value) { this.accountName = value; }
     /**
-     * @return If provisioning is successful, contains the unique identifier of the created user.
+     * If provisioning is successful, contains the unique identifier of the created user.
+     *
+     * @return The field userId
      */
     public String getUserId() { return this.userId; }
     /**
-     * @param value - If provisioning is successful, contains the unique identifier of the created user.
+     * If provisioning is successful, contains the unique identifier of the created user.
+     *
+     * @param value The new value for userId
      */
     public void setUserId(String value) { this.userId = value; }
     /**
-     * @return If provisioning is successful, contains the group key of the created user.
+     * If provisioning is successful, contains the group key of the created user.
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - If provisioning is successful, contains the group key of the created user.
+     * If provisioning is successful, contains the group key of the created user.
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return If provisioning is successful, contains the app enrollment id of the created app enrollment.
+     * If provisioning is successful, contains the app enrollment id of the created app enrollment.
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - If provisioning is successful, contains the app enrollment id of the created app enrollment.
+     * If provisioning is successful, contains the app enrollment id of the created app enrollment.
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
-     * @return if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
+     * if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
+     *
+     * @return The field syncRequestId
      */
     public String getSyncRequestId() { return this.syncRequestId; }
     /**
-     * @param value - if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
+     * if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
+     *
+     * @param value The new value for syncRequestId
      */
     public void setSyncRequestId(String value) { this.syncRequestId = value; }
     /**
-     * @return The error message(s).
+     * The error message(s).
+     *
+     * @return The field errorMessage
      */
     public String getErrorMessage() { return this.errorMessage; }
     /**
-     * @param value - The error message(s).
+     * The error message(s).
+     *
+     * @param value The new value for errorMessage
      */
     public void setErrorMessage(String value) { this.errorMessage = value; }
 };

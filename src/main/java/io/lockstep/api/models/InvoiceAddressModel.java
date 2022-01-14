@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -37,131 +38,203 @@ public class InvoiceAddressModel
     private String modifiedUserId;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field invoiceAddressId
      */
     public String getInvoiceAddressId() { return this.invoiceAddressId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for invoiceAddressId
      */
     public void setInvoiceAddressId(String value) { this.invoiceAddressId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The ID number of the invoice this address belongs to
+     * The ID number of the invoice this address belongs to
+     *
+     * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
-     * @param value - The ID number of the invoice this address belongs to
+     * The ID number of the invoice this address belongs to
+     *
+     * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
-     * @return The first line of the address.
+     * The first line of the address.
+     *
+     * @return The field line1
      */
     public String getLine1() { return this.line1; }
     /**
-     * @param value - The first line of the address.
+     * The first line of the address.
+     *
+     * @param value The new value for line1
      */
     public void setLine1(String value) { this.line1 = value; }
     /**
-     * @return The second line of the address.
+     * The second line of the address.
+     *
+     * @return The field line2
      */
     public String getLine2() { return this.line2; }
     /**
-     * @param value - The second line of the address.
+     * The second line of the address.
+     *
+     * @param value The new value for line2
      */
     public void setLine2(String value) { this.line2 = value; }
     /**
-     * @return The third line of the address.
+     * The third line of the address.
+     *
+     * @return The field line3
      */
     public String getLine3() { return this.line3; }
     /**
-     * @param value - The third line of the address.
+     * The third line of the address.
+     *
+     * @param value The new value for line3
      */
     public void setLine3(String value) { this.line3 = value; }
     /**
-     * @return The name of the city for this address.
+     * The name of the city for this address.
+     *
+     * @return The field city
      */
     public String getCity() { return this.city; }
     /**
-     * @param value - The name of the city for this address.
+     * The name of the city for this address.
+     *
+     * @param value The new value for city
      */
     public void setCity(String value) { this.city = value; }
     /**
-     * @return The state or region part of this address.
+     * The state or region part of this address.
+     *
+     * @return The field region
      */
     public String getRegion() { return this.region; }
     /**
-     * @param value - The state or region part of this address.
+     * The state or region part of this address.
+     *
+     * @param value The new value for region
      */
     public void setRegion(String value) { this.region = value; }
     /**
-     * @return The postal code for this address.
+     * The postal code for this address.
+     *
+     * @return The field postalCode
      */
     public String getPostalCode() { return this.postalCode; }
     /**
-     * @param value - The postal code for this address.
+     * The postal code for this address.
+     *
+     * @param value The new value for postalCode
      */
     public void setPostalCode(String value) { this.postalCode = value; }
     /**
-     * @return The country for this address.
+     * The country for this address.
+     *
+     * @return The field country
      */
     public String getCountry() { return this.country; }
     /**
-     * @param value - The country for this address.
+     * The country for this address.
+     *
+     * @param value The new value for country
      */
     public void setCountry(String value) { this.country = value; }
     /**
-     * @return The latitude of this address, if available.
+     * The latitude of this address, if available.
+     *
+     * @return The field latitude
      */
     public Float getLatitude() { return this.latitude; }
     /**
-     * @param value - The latitude of this address, if available.
+     * The latitude of this address, if available.
+     *
+     * @param value The new value for latitude
      */
     public void setLatitude(Float value) { this.latitude = value; }
     /**
-     * @return The longitude of this address, if available.
+     * The longitude of this address, if available.
+     *
+     * @return The field longitude
      */
     public Float getLongitude() { return this.longitude; }
     /**
-     * @param value - The longitude of this address, if available.
+     * The longitude of this address, if available.
+     *
+     * @param value The new value for longitude
      */
     public void setLongitude(Float value) { this.longitude = value; }
     /**
-     * @return The date on which this address record was created.
+     * The date on which this address record was created.
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date on which this address record was created.
+     * The date on which this address record was created.
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return The ID number of the user who created this address.
+     * The ID number of the user who created this address.
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - The ID number of the user who created this address.
+     * The ID number of the user who created this address.
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return The date on which this address record was last modified.
+     * The date on which this address record was last modified.
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - The date on which this address record was last modified.
+     * The date on which this address record was last modified.
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return The ID number of the user who most recently modified this address.
+     * The ID number of the user who most recently modified this address.
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - The ID number of the user who most recently modified this address.
+     * The ID number of the user who most recently modified this address.
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
 };

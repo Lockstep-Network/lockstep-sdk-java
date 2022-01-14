@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -33,99 +34,157 @@ public class CreditMemoInvoiceModel
     private Double outstandingBalanceAmount;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field creditMemoAppliedId
      */
     public String getCreditMemoAppliedId() { return this.creditMemoAppliedId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for creditMemoAppliedId
      */
     public void setCreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
     /**
-     * @return The id of the invoice
+     * The id of the invoice
+     *
+     * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
-     * @param value - The id of the invoice
+     * The id of the invoice
+     *
+     * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
-     * @return The id of the credit memo invoice
+     * The id of the credit memo invoice
+     *
+     * @return The field creditMemoInvoiceId
      */
     public String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
     /**
-     * @param value - The id of the credit memo invoice
+     * The id of the credit memo invoice
+     *
+     * @param value The new value for creditMemoInvoiceId
      */
     public void setCreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
     /**
-     * @return Date invoice applied to credit memo.
+     * Date invoice applied to credit memo.
+     *
+     * @return The field applyToInvoiceDate
      */
     public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
-     * @param value - Date invoice applied to credit memo.
+     * Date invoice applied to credit memo.
+     *
+     * @param value The new value for applyToInvoiceDate
      */
     public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
-     * @return Amount applied to credit memo.
+     * Amount applied to credit memo.
+     *
+     * @return The field creditMemoAppliedAmount
      */
     public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
-     * @param value - Amount applied to credit memo.
+     * Amount applied to credit memo.
+     *
+     * @param value The new value for creditMemoAppliedAmount
      */
     public void setCreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
     /**
-     * @return An additional reference code that is sometimes used to identify this invoice. The meaning of this field is specific to the ERP or accounting system used by the user.
+     * An additional reference code that is sometimes used to identify this invoice.
+     * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @return The field referenceCode
      */
     public String getReferenceCode() { return this.referenceCode; }
     /**
-     * @param value - An additional reference code that is sometimes used to identify this invoice. The meaning of this field is specific to the ERP or accounting system used by the user.
+     * An additional reference code that is sometimes used to identify this invoice.
+     * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @param value The new value for referenceCode
      */
     public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
-     * @return The ID number of the company that created this invoice.
+     * The ID number of the company that created this invoice.
+     *
+     * @return The field companyId
      */
     public String getCompanyId() { return this.companyId; }
     /**
-     * @param value - The ID number of the company that created this invoice.
+     * The ID number of the company that created this invoice.
+     *
+     * @param value The new value for companyId
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
-     * @return The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     * The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @return The field customerId
      */
     public String getCustomerId() { return this.customerId; }
     /**
-     * @param value - The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     * The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @param value The new value for customerId
      */
     public void setCustomerId(String value) { this.customerId = value; }
     /**
-     * @return A code identifying the status of this invoice.
+     * A code identifying the status of this invoice.
+     *
+     * @return The field invoiceStatusCode
      */
     public String getInvoiceStatusCode() { return this.invoiceStatusCode; }
     /**
-     * @param value - A code identifying the status of this invoice.
+     * A code identifying the status of this invoice.
+     *
+     * @param value The new value for invoiceStatusCode
      */
     public void setInvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
     /**
-     * @return The total value of this invoice, inclusive of all taxes and line items.
+     * The total value of this invoice, inclusive of all taxes and line items.
+     *
+     * @return The field totalAmount
      */
     public Double getTotalAmount() { return this.totalAmount; }
     /**
-     * @param value - The total value of this invoice, inclusive of all taxes and line items.
+     * The total value of this invoice, inclusive of all taxes and line items.
+     *
+     * @param value The new value for totalAmount
      */
     public void setTotalAmount(Double value) { this.totalAmount = value; }
     /**
-     * @return The remaining balance value of this invoice.
+     * The remaining balance value of this invoice.
+     *
+     * @return The field outstandingBalanceAmount
      */
     public Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
     /**
-     * @param value - The remaining balance value of this invoice.
+     * The remaining balance value of this invoice.
+     *
+     * @param value The new value for outstandingBalanceAmount
      */
     public void setOutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
 };

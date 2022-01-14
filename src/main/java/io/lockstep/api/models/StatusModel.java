@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -35,115 +36,173 @@ public class StatusModel
     private Object dependencies;
 
     /**
-     * @return If authentication is successful, contains the username of the logged-in user.
+     * If authentication is successful, contains the username of the logged-in user.
+     *
+     * @return The field userName
      */
     public String getUserName() { return this.userName; }
     /**
-     * @param value - If authentication is successful, contains the username of the logged-in user.
+     * If authentication is successful, contains the username of the logged-in user.
+     *
+     * @param value The new value for userName
      */
     public void setUserName(String value) { this.userName = value; }
     /**
-     * @return If authentication is successful, contains subscription account name of logged-in user.
+     * If authentication is successful, contains subscription account name of logged-in user.
+     *
+     * @return The field accountName
      */
     public String getAccountName() { return this.accountName; }
     /**
-     * @param value - If authentication is successful, contains subscription account name of logged-in user.
+     * If authentication is successful, contains subscription account name of logged-in user.
+     *
+     * @param value The new value for accountName
      */
     public void setAccountName(String value) { this.accountName = value; }
     /**
-     * @return If authentication is successful, contains subscription account company id of logged-in user.
+     * If authentication is successful, contains subscription account company id of logged-in user.
+     *
+     * @return The field accountCompanyId
      */
     public String getAccountCompanyId() { return this.accountCompanyId; }
     /**
-     * @param value - If authentication is successful, contains subscription account company id of logged-in user.
+     * If authentication is successful, contains subscription account company id of logged-in user.
+     *
+     * @param value The new value for accountCompanyId
      */
     public void setAccountCompanyId(String value) { this.accountCompanyId = value; }
     /**
-     * @return If authentication is successful, contains the unique identifier of the logged-in user.
+     * If authentication is successful, contains the unique identifier of the logged-in user.
+     *
+     * @return The field userId
      */
     public String getUserId() { return this.userId; }
     /**
-     * @param value - If authentication is successful, contains the unique identifier of the logged-in user.
+     * If authentication is successful, contains the unique identifier of the logged-in user.
+     *
+     * @param value The new value for userId
      */
     public void setUserId(String value) { this.userId = value; }
     /**
-     * @return If authentication is successful, contains the group key of the logged-in user.
+     * If authentication is successful, contains the group key of the logged-in user.
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - If authentication is successful, contains the group key of the logged-in user.
+     * If authentication is successful, contains the group key of the logged-in user.
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return Returns true if authentication for this API was successful.
+     * Returns true if authentication for this API was successful.
+     *
+     * @return The field loggedIn
      */
     public Boolean getLoggedIn() { return this.loggedIn; }
     /**
-     * @param value - Returns true if authentication for this API was successful.
+     * Returns true if authentication for this API was successful.
+     *
+     * @param value The new value for loggedIn
      */
     public void setLoggedIn(Boolean value) { this.loggedIn = value; }
     /**
-     * @return The error message.
+     * The error message.
+     *
+     * @return The field errorMessage
      */
     public String getErrorMessage() { return this.errorMessage; }
     /**
-     * @param value - The error message.
+     * The error message.
+     *
+     * @param value The new value for errorMessage
      */
     public void setErrorMessage(String value) { this.errorMessage = value; }
     /**
-     * @return The set of roles for this user.
+     * The set of roles for this user.
+     *
+     * @return The field roles
      */
     public String[] getRoles() { return this.roles; }
     /**
-     * @param value - The set of roles for this user.
+     * The set of roles for this user.
+     *
+     * @param value The new value for roles
      */
     public void setRoles(String[] value) { this.roles = value; }
     /**
-     * @return Date and time user has last logged into Azure B2C.
+     * Date and time user has last logged into Azure B2C.
+     *
+     * @return The field lastLoggedIn
      */
     public Date getLastLoggedIn() { return this.lastLoggedIn; }
     /**
-     * @param value - Date and time user has last logged into Azure B2C.
+     * Date and time user has last logged into Azure B2C.
+     *
+     * @param value The new value for lastLoggedIn
      */
     public void setLastLoggedIn(Date value) { this.lastLoggedIn = value; }
     /**
-     * @return The id of the API key used to authenticate.
+     * The id of the API key used to authenticate.
+     *
+     * @return The field apiKeyId
      */
     public String getApiKeyId() { return this.apiKeyId; }
     /**
-     * @param value - The id of the API key used to authenticate.
+     * The id of the API key used to authenticate.
+     *
+     * @param value The new value for apiKeyId
      */
     public void setApiKeyId(String value) { this.apiKeyId = value; }
     /**
-     * @return If authentication is successful, contains the user status of the logged-in user.
+     * If authentication is successful, contains the user status of the logged-in user.
+     *
+     * @return The field userStatus
      */
     public String getUserStatus() { return this.userStatus; }
     /**
-     * @param value - If authentication is successful, contains the user status of the logged-in user.
+     * If authentication is successful, contains the user status of the logged-in user.
+     *
+     * @param value The new value for userStatus
      */
     public void setUserStatus(String value) { this.userStatus = value; }
     /**
-     * @return The environment currently being used
+     * The environment currently being used
+     *
+     * @return The field environment
      */
     public String getEnvironment() { return this.environment; }
     /**
-     * @param value - The environment currently being used
+     * The environment currently being used
+     *
+     * @param value The new value for environment
      */
     public void setEnvironment(String value) { this.environment = value; }
     /**
-     * @return The version currently being used
+     * The version currently being used
+     *
+     * @return The field version
      */
     public String getVersion() { return this.version; }
     /**
-     * @param value - The version currently being used
+     * The version currently being used
+     *
+     * @param value The new value for version
      */
     public void setVersion(String value) { this.version = value; }
     /**
-     * @return Statuses for the dependencies of this api. OK if the dependency is working.
+     * Statuses for the dependencies of this api.
+     * OK if the dependency is working.
+     *
+     * @return The field dependencies
      */
     public Object getDependencies() { return this.dependencies; }
     /**
-     * @param value - Statuses for the dependencies of this api. OK if the dependency is working.
+     * Statuses for the dependencies of this api.
+     * OK if the dependency is working.
+     *
+     * @param value The new value for dependencies
      */
     public void setDependencies(Object value) { this.dependencies = value; }
 };

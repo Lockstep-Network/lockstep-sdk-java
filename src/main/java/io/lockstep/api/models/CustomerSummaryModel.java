@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -36,123 +37,189 @@ public class CustomerSummaryModel
     private Date newestActivity;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The unique ID of this company.
+     * The unique ID of this company.
+     *
+     * @return The field companyId
      */
     public String getCompanyId() { return this.companyId; }
     /**
-     * @param value - The unique ID of this company.
+     * The unique ID of this company.
+     *
+     * @param value The new value for companyId
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
-     * @return The name of the company.
+     * The name of the company.
+     *
+     * @return The field companyName
      */
     public String getCompanyName() { return this.companyName; }
     /**
-     * @param value - The name of the company.
+     * The name of the company.
+     *
+     * @param value The new value for companyName
      */
     public void setCompanyName(String value) { this.companyName = value; }
     /**
-     * @return The name of the primary contact.
+     * The name of the primary contact.
+     *
+     * @return The field primaryContact
      */
     public String getPrimaryContact() { return this.primaryContact; }
     /**
-     * @param value - The name of the primary contact.
+     * The name of the primary contact.
+     *
+     * @param value The new value for primaryContact
      */
     public void setPrimaryContact(String value) { this.primaryContact = value; }
     /**
-     * @return The number of outstanding invoices for this customer.
+     * The number of outstanding invoices for this customer.
+     *
+     * @return The field outstandingInvoices
      */
     public Integer getOutstandingInvoices() { return this.outstandingInvoices; }
     /**
-     * @param value - The number of outstanding invoices for this customer.
+     * The number of outstanding invoices for this customer.
+     *
+     * @param value The new value for outstandingInvoices
      */
     public void setOutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
     /**
-     * @return The number of open invoices.
+     * The number of open invoices.
+     *
+     * @return The field totalInvoicesOpen
      */
     public Integer getTotalInvoicesOpen() { return this.totalInvoicesOpen; }
     /**
-     * @param value - The number of open invoices.
+     * The number of open invoices.
+     *
+     * @param value The new value for totalInvoicesOpen
      */
     public void setTotalInvoicesOpen(Integer value) { this.totalInvoicesOpen = value; }
     /**
-     * @return The number of past due invoices.
+     * The number of past due invoices.
+     *
+     * @return The field totalInvoicesPastDue
      */
     public Integer getTotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
     /**
-     * @param value - The number of past due invoices.
+     * The number of past due invoices.
+     *
+     * @param value The new value for totalInvoicesPastDue
      */
     public void setTotalInvoicesPastDue(Integer value) { this.totalInvoicesPastDue = value; }
     /**
-     * @return The number of closed invoices for this customer.
+     * The number of closed invoices for this customer.
+     *
+     * @return The field closedInvoices
      */
     public Integer getClosedInvoices() { return this.closedInvoices; }
     /**
-     * @param value - The number of closed invoices for this customer.
+     * The number of closed invoices for this customer.
+     *
+     * @param value The new value for closedInvoices
      */
     public void setClosedInvoices(Integer value) { this.closedInvoices = value; }
     /**
-     * @return The total from collected payments.
+     * The total from collected payments.
+     *
+     * @return The field amountCollected
      */
     public Double getAmountCollected() { return this.amountCollected; }
     /**
-     * @param value - The total from collected payments.
+     * The total from collected payments.
+     *
+     * @param value The new value for amountCollected
      */
     public void setAmountCollected(Double value) { this.amountCollected = value; }
     /**
-     * @return The total balance of outstanding invoices.
+     * The total balance of outstanding invoices.
+     *
+     * @return The field outstandingAmount
      */
     public Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
-     * @param value - The total balance of outstanding invoices.
+     * The total balance of outstanding invoices.
+     *
+     * @param value The new value for outstandingAmount
      */
     public void setOutstandingAmount(Double value) { this.outstandingAmount = value; }
     /**
-     * @return The total amount past due for this customer.
+     * The total amount past due for this customer.
+     *
+     * @return The field amountPastDue
      */
     public Double getAmountPastDue() { return this.amountPastDue; }
     /**
-     * @param value - The total amount past due for this customer.
+     * The total amount past due for this customer.
+     *
+     * @param value The new value for amountPastDue
      */
     public void setAmountPastDue(Double value) { this.amountPastDue = value; }
     /**
-     * @return The total value of unapplied Payments for this Customer.
+     * The total value of unapplied Payments for this Customer.
+     *
+     * @return The field unappliedPayments
      */
     public Double getUnappliedPayments() { return this.unappliedPayments; }
     /**
-     * @param value - The total value of unapplied Payments for this Customer.
+     * The total value of unapplied Payments for this Customer.
+     *
+     * @param value The new value for unappliedPayments
      */
     public void setUnappliedPayments(Double value) { this.unappliedPayments = value; }
     /**
-     * @return Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
+     * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
+     *
+     * @return The field percentOfTotalAr
      */
     public Double getPercentOfTotalAr() { return this.percentOfTotalAr; }
     /**
-     * @param value - Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
+     * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
+     *
+     * @param value The new value for percentOfTotalAr
      */
     public void setPercentOfTotalAr(Double value) { this.percentOfTotalAr = value; }
     /**
-     * @return Daily sales outstanding value for this Customer.
+     * Daily sales outstanding value for this Customer.
+     *
+     * @return The field dso
      */
     public Double getDso() { return this.dso; }
     /**
-     * @param value - Daily sales outstanding value for this Customer.
+     * Daily sales outstanding value for this Customer.
+     *
+     * @param value The new value for dso
      */
     public void setDso(Double value) { this.dso = value; }
     /**
-     * @return The date stamp for the newest Activity on this Customer.
+     * The date stamp for the newest Activity on this Customer.
+     *
+     * @return The field newestActivity
      */
     public Date getNewestActivity() { return this.newestActivity; }
     /**
-     * @param value - The date stamp for the newest Activity on this Customer.
+     * The date stamp for the newest Activity on this Customer.
+     *
+     * @param value The new value for newestActivity
      */
     public void setNewestActivity(Date value) { this.newestActivity = value; }
 };

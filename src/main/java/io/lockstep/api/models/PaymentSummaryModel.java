@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -35,115 +36,177 @@ public class PaymentSummaryModel
     private String customerId;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The id of the payment
+     * The id of the payment
+     *
+     * @return The field paymentId
      */
     public String getPaymentId() { return this.paymentId; }
     /**
-     * @param value - The id of the payment
+     * The id of the payment
+     *
+     * @param value The new value for paymentId
      */
     public void setPaymentId(String value) { this.paymentId = value; }
     /**
-     * @return Memo or reference text (ex. memo field on a check).
+     * Memo or reference text (ex. memo field on a check).
+     *
+     * @return The field memoText
      */
     public String getMemoText() { return this.memoText; }
     /**
-     * @param value - Memo or reference text (ex. memo field on a check).
+     * Memo or reference text (ex. memo field on a check).
+     *
+     * @param value The new value for memoText
      */
     public void setMemoText(String value) { this.memoText = value; }
     /**
-     * @return Reference code for the payment for the given Erp system.
+     * Reference code for the payment for the given Erp system.
+     *
+     * @return The field referenceCode
      */
     public String getReferenceCode() { return this.referenceCode; }
     /**
-     * @param value - Reference code for the payment for the given Erp system.
+     * Reference code for the payment for the given Erp system.
+     *
+     * @param value The new value for referenceCode
      */
     public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
-     * @return The type of payment, Payment or AP Payment.
+     * The type of payment, Payment or AP Payment.
+     *
+     * @return The field paymentType
      */
     public String getPaymentType() { return this.paymentType; }
     /**
-     * @param value - The type of payment, Payment or AP Payment.
+     * The type of payment, Payment or AP Payment.
+     *
+     * @param value The new value for paymentType
      */
     public void setPaymentType(String value) { this.paymentType = value; }
     /**
-     * @return The date of this payment.
+     * The date of this payment.
+     *
+     * @return The field paymentDate
      */
     public Date getPaymentDate() { return this.paymentDate; }
     /**
-     * @param value - The date of this payment.
+     * The date of this payment.
+     *
+     * @param value The new value for paymentDate
      */
     public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
-     * @return Total amount of this payment.
+     * Total amount of this payment.
+     *
+     * @return The field paymentAmount
      */
     public Double getPaymentAmount() { return this.paymentAmount; }
     /**
-     * @param value - Total amount of this payment.
+     * Total amount of this payment.
+     *
+     * @param value The new value for paymentAmount
      */
     public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
-     * @return Unapplied balance of this payment.
+     * Unapplied balance of this payment.
+     *
+     * @return The field unappliedAmount
      */
     public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
-     * @param value - Unapplied balance of this payment.
+     * Unapplied balance of this payment.
+     *
+     * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
-     * @return The number of invoices associated to this payment.
+     * The number of invoices associated to this payment.
+     *
+     * @return The field invoiceCount
      */
     public Integer getInvoiceCount() { return this.invoiceCount; }
     /**
-     * @param value - The number of invoices associated to this payment.
+     * The number of invoices associated to this payment.
+     *
+     * @param value The new value for invoiceCount
      */
     public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
     /**
-     * @return The number of payments applied to this payment.
+     * The number of payments applied to this payment.
+     *
+     * @return The field totalPaymentsApplied
      */
     public Double getTotalPaymentsApplied() { return this.totalPaymentsApplied; }
     /**
-     * @param value - The number of payments applied to this payment.
+     * The number of payments applied to this payment.
+     *
+     * @param value The new value for totalPaymentsApplied
      */
     public void setTotalPaymentsApplied(Double value) { this.totalPaymentsApplied = value; }
     /**
-     * @return The reference codes of the invoices associated to this payment.
+     * The reference codes of the invoices associated to this payment.
+     *
+     * @return The field invoiceList
      */
     public String[] getInvoiceList() { return this.invoiceList; }
     /**
-     * @param value - The reference codes of the invoices associated to this payment.
+     * The reference codes of the invoices associated to this payment.
+     *
+     * @param value The new value for invoiceList
      */
     public void setInvoiceList(String[] value) { this.invoiceList = value; }
     /**
-     * @return The ids of the invoices associated to this payment.
+     * The ids of the invoices associated to this payment.
+     *
+     * @return The field invoiceIdList
      */
     public String[] getInvoiceIdList() { return this.invoiceIdList; }
     /**
-     * @param value - The ids of the invoices associated to this payment.
+     * The ids of the invoices associated to this payment.
+     *
+     * @param value The new value for invoiceIdList
      */
     public void setInvoiceIdList(String[] value) { this.invoiceIdList = value; }
     /**
-     * @return The name of the customer for this payment.
+     * The name of the customer for this payment.
+     *
+     * @return The field customerName
      */
     public String getCustomerName() { return this.customerName; }
     /**
-     * @param value - The name of the customer for this payment.
+     * The name of the customer for this payment.
+     *
+     * @param value The new value for customerName
      */
     public void setCustomerName(String value) { this.customerName = value; }
     /**
-     * @return The id of the customer for this payment.
+     * The id of the customer for this payment.
+     *
+     * @return The field customerId
      */
     public String getCustomerId() { return this.customerId; }
     /**
-     * @param value - The id of the customer for this payment.
+     * The id of the customer for this payment.
+     *
+     * @param value The new value for customerId
      */
     public void setCustomerId(String value) { this.customerId = value; }
 };

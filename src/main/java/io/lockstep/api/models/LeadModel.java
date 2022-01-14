@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -25,43 +26,65 @@ public class LeadModel
     private String erpSystem;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field leadId
      */
     public String getLeadId() { return this.leadId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for leadId
      */
     public void setLeadId(String value) { this.leadId = value; }
     /**
-     * @return Name of lead
+     * Name of lead
+     *
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
-     * @param value - Name of lead
+     * Name of lead
+     *
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
-     * @return Name of company of lead
+     * Name of company of lead
+     *
+     * @return The field company
      */
     public String getCompany() { return this.company; }
     /**
-     * @param value - Name of company of lead
+     * Name of company of lead
+     *
+     * @param value The new value for company
      */
     public void setCompany(String value) { this.company = value; }
     /**
-     * @return Email of lead
+     * Email of lead
+     *
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
-     * @param value - Email of lead
+     * Email of lead
+     *
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
-     * @return Requested ERP of lead
+     * Requested ERP of lead
+     *
+     * @return The field erpSystem
      */
     public String getErpSystem() { return this.erpSystem; }
     /**
-     * @param value - Requested ERP of lead
+     * Requested ERP of lead
+     *
+     * @param value The new value for erpSystem
      */
     public void setErpSystem(String value) { this.erpSystem = value; }
 };

@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -54,267 +55,421 @@ public class EmailModel
     private CustomFieldValueModel[] customFieldValues;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field emailId
      */
     public String getEmailId() { return this.emailId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for emailId
      */
     public void setEmailId(String value) { this.emailId = value; }
     /**
-     * @return The unique ID number of this email's conversation thread.
+     * The unique ID number of this email's conversation thread.
+     *
+     * @return The field threadId
      */
     public String getThreadId() { return this.threadId; }
     /**
-     * @param value - The unique ID number of this email's conversation thread.
+     * The unique ID number of this email's conversation thread.
+     *
+     * @param value The new value for threadId
      */
     public void setThreadId(String value) { this.threadId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The ID number of the company that created this email.
+     * The ID number of the company that created this email.
+     *
+     * @return The field companyId
      */
     public String getCompanyId() { return this.companyId; }
     /**
-     * @param value - The ID number of the company that created this email.
+     * The ID number of the company that created this email.
+     *
+     * @param value The new value for companyId
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
-     * @return The email address for the sender of this email.
+     * The email address for the sender of this email.
+     *
+     * @return The field emailFrom
      */
     public String getEmailFrom() { return this.emailFrom; }
     /**
-     * @param value - The email address for the sender of this email.
+     * The email address for the sender of this email.
+     *
+     * @param value The new value for emailFrom
      */
     public void setEmailFrom(String value) { this.emailFrom = value; }
     /**
-     * @return The email address for the recipient(s) of this email.
+     * The email address for the recipient(s) of this email.
+     *
+     * @return The field emailTo
      */
     public String getEmailTo() { return this.emailTo; }
     /**
-     * @param value - The email address for the recipient(s) of this email.
+     * The email address for the recipient(s) of this email.
+     *
+     * @param value The new value for emailTo
      */
     public void setEmailTo(String value) { this.emailTo = value; }
     /**
-     * @return The email address for the CC recipient(s) of this email
+     * The email address for the CC recipient(s) of this email
+     *
+     * @return The field emailCC
      */
     public String getEmailCC() { return this.emailCC; }
     /**
-     * @param value - The email address for the CC recipient(s) of this email
+     * The email address for the CC recipient(s) of this email
+     *
+     * @param value The new value for emailCC
      */
     public void setEmailCC(String value) { this.emailCC = value; }
     /**
-     * @return The subject line of this email.
+     * The subject line of this email.
+     *
+     * @return The field emailSubject
      */
     public String getEmailSubject() { return this.emailSubject; }
     /**
-     * @param value - The subject line of this email.
+     * The subject line of this email.
+     *
+     * @param value The new value for emailSubject
      */
     public void setEmailSubject(String value) { this.emailSubject = value; }
     /**
-     * @return The body content of this email.
+     * The body content of this email.
+     *
+     * @return The field emailBody
      */
     public String getEmailBody() { return this.emailBody; }
     /**
-     * @param value - The body content of this email.
+     * The body content of this email.
+     *
+     * @param value The new value for emailBody
      */
     public void setEmailBody(String value) { this.emailBody = value; }
     /**
-     * @return The date on which this email was sent.
+     * The date on which this email was sent.
+     *
+     * @return The field sentDate
      */
     public Date getSentDate() { return this.sentDate; }
     /**
-     * @param value - The date on which this email was sent.
+     * The date on which this email was sent.
+     *
+     * @param value The new value for sentDate
      */
     public void setSentDate(Date value) { this.sentDate = value; }
     /**
-     * @return A status flag indicating if this email is unread.
+     * A status flag indicating if this email is unread.
+     *
+     * @return The field isUnread
      */
     public Boolean getIsUnread() { return this.isUnread; }
     /**
-     * @param value - A status flag indicating if this email is unread.
+     * A status flag indicating if this email is unread.
+     *
+     * @param value The new value for isUnread
      */
     public void setIsUnread(Boolean value) { this.isUnread = value; }
     /**
-     * @return A status flag indicating if this email is priority status.
+     * A status flag indicating if this email is priority status.
+     *
+     * @return The field isPriority
      */
     public Boolean getIsPriority() { return this.isPriority; }
     /**
-     * @param value - A status flag indicating if this email is priority status.
+     * A status flag indicating if this email is priority status.
+     *
+     * @param value The new value for isPriority
      */
     public void setIsPriority(Boolean value) { this.isPriority = value; }
     /**
-     * @return A status flag indicating if this email is marked as spam.
+     * A status flag indicating if this email is marked as spam.
+     *
+     * @return The field isSpam
      */
     public Boolean getIsSpam() { return this.isSpam; }
     /**
-     * @param value - A status flag indicating if this email is marked as spam.
+     * A status flag indicating if this email is marked as spam.
+     *
+     * @param value The new value for isSpam
      */
     public void setIsSpam(Boolean value) { this.isSpam = value; }
     /**
-     * @return The date on which this email was created.
+     * The date on which this email was created.
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date on which this email was created.
+     * The date on which this email was created.
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return The ID number of the user who created this email.
+     * The ID number of the user who created this email.
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - The ID number of the user who created this email.
+     * The ID number of the user who created this email.
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return A status flag indicating if this email is to be sent.
+     * A status flag indicating if this email is to be sent.
+     *
+     * @return The field toBeSent
      */
     public Boolean getToBeSent() { return this.toBeSent; }
     /**
-     * @param value - A status flag indicating if this email is to be sent.
+     * A status flag indicating if this email is to be sent.
+     *
+     * @param value The new value for toBeSent
      */
     public void setToBeSent(Boolean value) { this.toBeSent = value; }
     /**
-     * @return The ID number of the customer that sent this email.
+     * The ID number of the customer that sent this email.
+     *
+     * @return The field customerId
      */
     public String getCustomerId() { return this.customerId; }
     /**
-     * @param value - The ID number of the customer that sent this email.
+     * The ID number of the customer that sent this email.
+     *
+     * @param value The new value for customerId
      */
     public void setCustomerId(String value) { this.customerId = value; }
     /**
-     * @return The date on which this email was received.
+     * The date on which this email was received.
+     *
+     * @return The field receivedTimeStamp
      */
     public Date getReceivedTimeStamp() { return this.receivedTimeStamp; }
     /**
-     * @param value - The date on which this email was received.
+     * The date on which this email was received.
+     *
+     * @param value The new value for receivedTimeStamp
      */
     public void setReceivedTimeStamp(Date value) { this.receivedTimeStamp = value; }
     /**
-     * @return The date on which this email was opened.
+     * The date on which this email was opened.
+     *
+     * @return The field openedTimestamp
      */
     public Date getOpenedTimestamp() { return this.openedTimestamp; }
     /**
-     * @param value - The date on which this email was opened.
+     * The date on which this email was opened.
+     *
+     * @param value The new value for openedTimestamp
      */
     public void setOpenedTimestamp(Date value) { this.openedTimestamp = value; }
     /**
-     * @return The number of times this email was viewed.
+     * The number of times this email was viewed.
+     *
+     * @return The field viewCount
      */
     public Integer getViewCount() { return this.viewCount; }
     /**
-     * @param value - The number of times this email was viewed.
+     * The number of times this email was viewed.
+     *
+     * @param value The new value for viewCount
      */
     public void setViewCount(Integer value) { this.viewCount = value; }
     /**
-     * @return AppEnrollmentId for this record; used for mapping purposes.
+     * AppEnrollmentId for this record; used for mapping purposes.
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - AppEnrollmentId for this record; used for mapping purposes.
+     * AppEnrollmentId for this record; used for mapping purposes.
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
-     * @return The id of the email in an external system if imported.
+     * The id of the email in an external system if imported.
+     *
+     * @return The field externalEmailId
      */
     public String getExternalEmailId() { return this.externalEmailId; }
     /**
-     * @param value - The id of the email in an external system if imported.
+     * The id of the email in an external system if imported.
+     *
+     * @param value The new value for externalEmailId
      */
     public void setExternalEmailId(String value) { this.externalEmailId = value; }
     /**
-     * @return The id of the email thread in an external system if imported.
+     * The id of the email thread in an external system if imported.
+     *
+     * @return The field externalThreadId
      */
     public String getExternalThreadId() { return this.externalThreadId; }
     /**
-     * @param value - The id of the email thread in an external system if imported.
+     * The id of the email thread in an external system if imported.
+     *
+     * @param value The new value for externalThreadId
      */
     public void setExternalThreadId(String value) { this.externalThreadId = value; }
     /**
-     * @return The email address(es) for the BCC recipient(s) of this email
+     * The email address(es) for the BCC recipient(s) of this email
+     *
+     * @return The field emailBcc
      */
     public String getEmailBcc() { return this.emailBcc; }
     /**
-     * @param value - The email address(es) for the BCC recipient(s) of this email
+     * The email address(es) for the BCC recipient(s) of this email
+     *
+     * @param value The new value for emailBcc
      */
     public void setEmailBcc(String value) { this.emailBcc = value; }
     /**
-     * @return The type message being sent (New, Reply, Forward) or null for messages not being sent.
+     * The type message being sent (New, Reply, Forward) or null for messages not being sent.
+     *
+     * @return The field sendType
      */
     public String getSendType() { return this.sendType; }
     /**
-     * @param value - The type message being sent (New, Reply, Forward) or null for messages not being sent.
+     * The type message being sent (New, Reply, Forward) or null for messages not being sent.
+     *
+     * @param value The new value for sendType
      */
     public void setSendType(String value) { this.sendType = value; }
     /**
-     * @return The date on which this email was modified. Email modification should only be done by internal services.
+     * The date on which this email was modified.
+     * Email modification should only be done by internal services.
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - The date on which this email was modified. Email modification should only be done by internal services.
+     * The date on which this email was modified.
+     * Email modification should only be done by internal services.
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return The ID of the user who modified this email. Email modification should only be done by internal services.
+     * The ID of the user who modified this email.
+     * Email modification should only be done by internal services.
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - The ID of the user who modified this email. Email modification should only be done by internal services.
+     * The ID of the user who modified this email.
+     * Email modification should only be done by internal services.
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * @return If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded. Otherwise null.
+     * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
+     * Otherwise null.
+     *
+     * @return The field responseOriginId
      */
     public String getResponseOriginId() { return this.responseOriginId; }
     /**
-     * @param value - If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded. Otherwise null.
+     * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
+     * Otherwise null.
+     *
+     * @param value The new value for responseOriginId
      */
     public void setResponseOriginId(String value) { this.responseOriginId = value; }
     /**
-     * @return The email object associated with the response origin id.
+     * The email object associated with the response origin id.
+     *
+     * @return The field responseOrigin
      */
     public EmailModel getResponseOrigin() { return this.responseOrigin; }
     /**
-     * @param value - The email object associated with the response origin id.
+     * The email object associated with the response origin id.
+     *
+     * @param value The new value for responseOrigin
      */
     public void setResponseOrigin(EmailModel value) { this.responseOrigin = value; }
     /**
-     * @return All notes attached to this email. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this email.
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @return The field notes
      */
     public NoteModel[] getNotes() { return this.notes; }
     /**
-     * @param value - All notes attached to this email. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this email.
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @param value The new value for notes
      */
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
-     * @return All attachments attached to this email. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to this email.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @return The field attachments
      */
     public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
-     * @param value - All attachments attached to this email. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to this email.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @param value The new value for attachments
      */
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
-     * @return All definitions attached to this email. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to this email.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * @param value - All definitions attached to this email. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to this email.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * @return All values attached to this email. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All values attached to this email.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * @param value - All values attached to this email. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All values attached to this email.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

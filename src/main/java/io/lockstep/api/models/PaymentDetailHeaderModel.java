@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -26,51 +27,81 @@ public class PaymentDetailHeaderModel
     private Integer openInvoiceCount;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The total number of Customers.
+     * The total number of Customers.
+     *
+     * @return The field customerCount
      */
     public Integer getCustomerCount() { return this.customerCount; }
     /**
-     * @param value - The total number of Customers.
+     * The total number of Customers.
+     *
+     * @param value The new value for customerCount
      */
     public void setCustomerCount(Integer value) { this.customerCount = value; }
     /**
-     * @return The total amount collected.
+     * The total amount collected.
+     *
+     * @return The field amountCollected
      */
     public Double getAmountCollected() { return this.amountCollected; }
     /**
-     * @param value - The total amount collected.
+     * The total amount collected.
+     *
+     * @param value The new value for amountCollected
      */
     public void setAmountCollected(Double value) { this.amountCollected = value; }
     /**
-     * @return The total unapplied amount.
+     * The total unapplied amount.
+     *
+     * @return The field unappliedAmount
      */
     public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
-     * @param value - The total unapplied amount.
+     * The total unapplied amount.
+     *
+     * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
-     * @return The number of paid invoices.
+     * The number of paid invoices.
+     *
+     * @return The field paidInvoiceCount
      */
     public Integer getPaidInvoiceCount() { return this.paidInvoiceCount; }
     /**
-     * @param value - The number of paid invoices.
+     * The number of paid invoices.
+     *
+     * @param value The new value for paidInvoiceCount
      */
     public void setPaidInvoiceCount(Integer value) { this.paidInvoiceCount = value; }
     /**
-     * @return The number of open invoices.
+     * The number of open invoices.
+     *
+     * @return The field openInvoiceCount
      */
     public Integer getOpenInvoiceCount() { return this.openInvoiceCount; }
     /**
-     * @param value - The number of open invoices.
+     * The number of open invoices.
+     *
+     * @param value The new value for openInvoiceCount
      */
     public void setOpenInvoiceCount(Integer value) { this.openInvoiceCount = value; }
 };

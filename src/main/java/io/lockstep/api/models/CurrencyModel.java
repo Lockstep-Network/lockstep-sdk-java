@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -25,43 +26,63 @@ public class CurrencyModel
     private String symbol;
 
     /**
-     * @return Alphabetic code for the given currency
+     * Alphabetic code for the given currency
+     *
+     * @return The field alphaCode
      */
     public String getAlphaCode() { return this.alphaCode; }
     /**
-     * @param value - Alphabetic code for the given currency
+     * Alphabetic code for the given currency
+     *
+     * @param value The new value for alphaCode
      */
     public void setAlphaCode(String value) { this.alphaCode = value; }
     /**
-     * @return Numeric code for the given currency
+     * Numeric code for the given currency
+     *
+     * @return The field numericCode
      */
     public String getNumericCode() { return this.numericCode; }
     /**
-     * @param value - Numeric code for the given currency
+     * Numeric code for the given currency
+     *
+     * @param value The new value for numericCode
      */
     public void setNumericCode(String value) { this.numericCode = value; }
     /**
-     * @return Name of currency
+     * Name of currency
+     *
+     * @return The field currencyName
      */
     public String getCurrencyName() { return this.currencyName; }
     /**
-     * @param value - Name of currency
+     * Name of currency
+     *
+     * @param value The new value for currencyName
      */
     public void setCurrencyName(String value) { this.currencyName = value; }
     /**
-     * @return Number of places after the decimal for this currency
+     * Number of places after the decimal for this currency
+     *
+     * @return The field minorUnit
      */
     public Integer getMinorUnit() { return this.minorUnit; }
     /**
-     * @param value - Number of places after the decimal for this currency
+     * Number of places after the decimal for this currency
+     *
+     * @param value The new value for minorUnit
      */
     public void setMinorUnit(Integer value) { this.minorUnit = value; }
     /**
-     * @return Symbol for the given currency
+     * Symbol for the given currency
+     *
+     * @return The field symbol
      */
     public String getSymbol() { return this.symbol; }
     /**
-     * @param value - Symbol for the given currency
+     * Symbol for the given currency
+     *
+     * @param value The new value for symbol
      */
     public void setSymbol(String value) { this.symbol = value; }
 };

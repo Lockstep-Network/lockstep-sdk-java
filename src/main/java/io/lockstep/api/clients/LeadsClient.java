@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -24,11 +25,11 @@ public class LeadsClient
 {
     private LockstepApi client;
 
-     /**
-      * Constructor for method collection
-      *
-      * @param client A {@link io.lockstep.api.LockstepApi} platform client
-      */
+    /**
+     * Constructor for method collection
+     *
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
+     */
     public LeadsClient(LockstepApi client) {
         this.client = client;
     }
@@ -37,7 +38,8 @@ public class LeadsClient
      * Creates one or more Leads within the Lockstep platform and returns the records as created.
      *
      * A Lead is a person who is interested in the Lockstep platform but needs certain new features in order to use it. If you are interested in the Lockstep platform, you can create a lead with your information and our team will prioritize the feature you need.
-     * @param body - The Leads to create
+     *
+     * @param body The Leads to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<LeadModel[]> createLeads(LeadModel[] body)

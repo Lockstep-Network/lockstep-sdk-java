@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -24,27 +25,39 @@ public class DailySalesOutstandingReportModel
     private Double dailySalesOutstanding;
 
     /**
-     * @return Timeframe (month) the daily sales outstanding values are associated with
+     * Timeframe (month) the daily sales outstanding values are associated with
+     *
+     * @return The field timeframe
      */
     public Date getTimeframe() { return this.timeframe; }
     /**
-     * @param value - Timeframe (month) the daily sales outstanding values are associated with
+     * Timeframe (month) the daily sales outstanding values are associated with
+     *
+     * @param value The new value for timeframe
      */
     public void setTimeframe(Date value) { this.timeframe = value; }
     /**
-     * @return Number of invoices the average daily sales outstanding is calculated on
+     * Number of invoices the average daily sales outstanding is calculated on
+     *
+     * @return The field invoiceCount
      */
     public Integer getInvoiceCount() { return this.invoiceCount; }
     /**
-     * @param value - Number of invoices the average daily sales outstanding is calculated on
+     * Number of invoices the average daily sales outstanding is calculated on
+     *
+     * @param value The new value for invoiceCount
      */
     public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
     /**
-     * @return Time (in days) between an invoice was completed paid off and when the invoice was issued
+     * Time (in days) between an invoice was completed paid off and when the invoice was issued
+     *
+     * @return The field dailySalesOutstanding
      */
     public Double getDailySalesOutstanding() { return this.dailySalesOutstanding; }
     /**
-     * @param value - Time (in days) between an invoice was completed paid off and when the invoice was issued
+     * Time (in days) between an invoice was completed paid off and when the invoice was issued
+     *
+     * @param value The new value for dailySalesOutstanding
      */
     public void setDailySalesOutstanding(Double value) { this.dailySalesOutstanding = value; }
 };

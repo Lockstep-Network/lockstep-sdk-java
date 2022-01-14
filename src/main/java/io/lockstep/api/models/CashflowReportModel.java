@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -25,43 +26,63 @@ public class CashflowReportModel
     private Integer invoicesBilledCount;
 
     /**
-     * @return Timeframe in days the cashflow report is generated on
+     * Timeframe in days the cashflow report is generated on
+     *
+     * @return The field timeframe
      */
     public Integer getTimeframe() { return this.timeframe; }
     /**
-     * @param value - Timeframe in days the cashflow report is generated on
+     * Timeframe in days the cashflow report is generated on
+     *
+     * @param value The new value for timeframe
      */
     public void setTimeframe(Integer value) { this.timeframe = value; }
     /**
-     * @return Amount of payments collected based in the timeframe
+     * Amount of payments collected based in the timeframe
+     *
+     * @return The field paymentsCollected
      */
     public Double getPaymentsCollected() { return this.paymentsCollected; }
     /**
-     * @param value - Amount of payments collected based in the timeframe
+     * Amount of payments collected based in the timeframe
+     *
+     * @param value The new value for paymentsCollected
      */
     public void setPaymentsCollected(Double value) { this.paymentsCollected = value; }
     /**
-     * @return Number of payments collected based in the timeframe
+     * Number of payments collected based in the timeframe
+     *
+     * @return The field paymentsCollectedCount
      */
     public Integer getPaymentsCollectedCount() { return this.paymentsCollectedCount; }
     /**
-     * @param value - Number of payments collected based in the timeframe
+     * Number of payments collected based in the timeframe
+     *
+     * @param value The new value for paymentsCollectedCount
      */
     public void setPaymentsCollectedCount(Integer value) { this.paymentsCollectedCount = value; }
     /**
-     * @return Amount of invoices billed based in the timeframe
+     * Amount of invoices billed based in the timeframe
+     *
+     * @return The field invoicesBilled
      */
     public Double getInvoicesBilled() { return this.invoicesBilled; }
     /**
-     * @param value - Amount of invoices billed based in the timeframe
+     * Amount of invoices billed based in the timeframe
+     *
+     * @param value The new value for invoicesBilled
      */
     public void setInvoicesBilled(Double value) { this.invoicesBilled = value; }
     /**
-     * @return Number of invoices billed in the timeframe
+     * Number of invoices billed in the timeframe
+     *
+     * @return The field invoicesBilledCount
      */
     public Integer getInvoicesBilledCount() { return this.invoicesBilledCount; }
     /**
-     * @param value - Number of invoices billed in the timeframe
+     * Number of invoices billed in the timeframe
+     *
+     * @param value The new value for invoicesBilledCount
      */
     public void setInvoicesBilledCount(Integer value) { this.invoicesBilledCount = value; }
 };

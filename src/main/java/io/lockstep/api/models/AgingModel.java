@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -23,27 +24,39 @@ public class AgingModel
     private Double outstandingBalance;
 
     /**
-     * @return Aging bucket of outstanding balance data (days past due date of invoice)
+     * Aging bucket of outstanding balance data (days past due date of invoice)
+     *
+     * @return The field bucket
      */
     public Integer getBucket() { return this.bucket; }
     /**
-     * @param value - Aging bucket of outstanding balance data (days past due date of invoice)
+     * Aging bucket of outstanding balance data (days past due date of invoice)
+     *
+     * @param value The new value for bucket
      */
     public void setBucket(Integer value) { this.bucket = value; }
     /**
-     * @return Currency code of aging bucket
+     * Currency code of aging bucket
+     *
+     * @return The field currencyCode
      */
     public String getCurrencyCode() { return this.currencyCode; }
     /**
-     * @param value - Currency code of aging bucket
+     * Currency code of aging bucket
+     *
+     * @param value The new value for currencyCode
      */
     public void setCurrencyCode(String value) { this.currencyCode = value; }
     /**
-     * @return Outstanding balance for the given aging bucket
+     * Outstanding balance for the given aging bucket
+     *
+     * @return The field outstandingBalance
      */
     public Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
-     * @param value - Outstanding balance for the given aging bucket
+     * Outstanding balance for the given aging bucket
+     *
+     * @param value The new value for outstandingBalance
      */
     public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
 };

@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -24,35 +25,51 @@ public class InviteModel
     private String errorMessage;
 
     /**
-     * @return The invited email address
+     * The invited email address
+     *
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
-     * @param value - The invited email address
+     * The invited email address
+     *
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
-     * @return True if the invite was sent successfully
+     * True if the invite was sent successfully
+     *
+     * @return The field success
      */
     public Boolean getSuccess() { return this.success; }
     /**
-     * @param value - True if the invite was sent successfully
+     * True if the invite was sent successfully
+     *
+     * @param value The new value for success
      */
     public void setSuccess(Boolean value) { this.success = value; }
     /**
-     * @return The invited user, may be null if the user could not be invited
+     * The invited user, may be null if the user could not be invited
+     *
+     * @return The field invitedUser
      */
     public UserAccountModel getInvitedUser() { return this.invitedUser; }
     /**
-     * @param value - The invited user, may be null if the user could not be invited
+     * The invited user, may be null if the user could not be invited
+     *
+     * @param value The new value for invitedUser
      */
     public void setInvitedUser(UserAccountModel value) { this.invitedUser = value; }
     /**
-     * @return The error message if the invite was not successful
+     * The error message if the invite was not successful
+     *
+     * @return The field errorMessage
      */
     public String getErrorMessage() { return this.errorMessage; }
     /**
-     * @param value - The error message if the invite was not successful
+     * The error message if the invite was not successful
+     *
+     * @param value The new value for errorMessage
      */
     public void setErrorMessage(String value) { this.errorMessage = value; }
 };

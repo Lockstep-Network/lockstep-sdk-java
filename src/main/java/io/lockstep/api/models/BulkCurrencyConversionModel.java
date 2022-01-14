@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -23,19 +24,27 @@ public class BulkCurrencyConversionModel
     private String sourceCurrency;
 
     /**
-     * @return The date for the currency rate
+     * The date for the currency rate
+     *
+     * @return The field date
      */
     public Date getDate() { return this.date; }
     /**
-     * @param value - The date for the currency rate
+     * The date for the currency rate
+     *
+     * @param value The new value for date
      */
     public void setDate(Date value) { this.date = value; }
     /**
-     * @return The currency code This will be validated by the /api/v1/currencies data set
+     * The currency code This will be validated by the /api/v1/currencies data set
+     *
+     * @return The field sourceCurrency
      */
     public String getSourceCurrency() { return this.sourceCurrency; }
     /**
-     * @param value - The currency code This will be validated by the /api/v1/currencies data set
+     * The currency code This will be validated by the /api/v1/currencies data set
+     *
+     * @param value The new value for sourceCurrency
      */
     public void setSourceCurrency(String value) { this.sourceCurrency = value; }
 };

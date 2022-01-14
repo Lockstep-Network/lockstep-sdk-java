@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -36,123 +37,215 @@ public class AppEnrollmentModel
     private ConnectorInfoModel connectorInfo;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
-     * @return The ID number of the Application that this enrollment represents. You can fetch information about this Application object by specifying `App` in the "Include" parameter for your request.
+     * The ID number of the Application that this enrollment represents.  You can fetch information
+     * about this Application object by specifying `App` in the "Include" parameter for your request.
+     *
+     * @return The field appId
      */
     public String getAppId() { return this.appId; }
     /**
-     * @param value - The ID number of the Application that this enrollment represents. You can fetch information about this Application object by specifying `App` in the "Include" parameter for your request.
+     * The ID number of the Application that this enrollment represents.  You can fetch information
+     * about this Application object by specifying `App` in the "Include" parameter for your request.
+     *
+     * @param value The new value for appId
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return Determines whether the app enrollment is in use
+     * Determines whether the app enrollment is in use
+     *
+     * @return The field isActive
      */
     public Boolean getIsActive() { return this.isActive; }
     /**
-     * @param value - Determines whether the app enrollment is in use
+     * Determines whether the app enrollment is in use
+     *
+     * @param value The new value for isActive
      */
     public void setIsActive(Boolean value) { this.isActive = value; }
     /**
-     * @return Created date
+     * Created date
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - Created date
+     * Created date
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return Created user ID
+     * Created user ID
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - Created user ID
+     * Created user ID
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return Last modified date
+     * Last modified date
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - Last modified date
+     * Last modified date
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return Last user ID to modify
+     * Last user ID to modify
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - Last user ID to modify
+     * Last user ID to modify
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * @return Stores schedule information for the application enrollment see https://en.wikipedia.org/wiki/Cron
+     * Stores schedule information for the application enrollment
+     * see https://en.wikipedia.org/wiki/Cron
+     *
+     * @return The field cronSettings
      */
     public String getCronSettings() { return this.cronSettings; }
     /**
-     * @param value - Stores schedule information for the application enrollment see https://en.wikipedia.org/wiki/Cron
+     * Stores schedule information for the application enrollment
+     * see https://en.wikipedia.org/wiki/Cron
+     *
+     * @param value The new value for cronSettings
      */
     public void setCronSettings(String value) { this.cronSettings = value; }
     /**
-     * @return Flag indicating if the Sync process should be ran on the specified schedule
+     * Flag indicating if the Sync process should be ran on the specified schedule
+     *
+     * @return The field syncScheduleIsActive
      */
     public Boolean getSyncScheduleIsActive() { return this.syncScheduleIsActive; }
     /**
-     * @param value - Flag indicating if the Sync process should be ran on the specified schedule
+     * Flag indicating if the Sync process should be ran on the specified schedule
+     *
+     * @param value The new value for syncScheduleIsActive
      */
     public void setSyncScheduleIsActive(Boolean value) { this.syncScheduleIsActive = value; }
     /**
-     * @return The Application to which this AppEnrollment belongs. Contains general name, description, logo, and other metadata about this application. To retrieve this object, specify `App` in the "Include" parameter for your query.
+     * The Application to which this AppEnrollment belongs.  Contains general name, description,
+     * logo, and other metadata about this application.
+     *
+     * To retrieve this object, specify `App` in the "Include" parameter for your query.
+     *
+     * @return The field app
      */
     public ApplicationModel getApp() { return this.app; }
     /**
-     * @param value - The Application to which this AppEnrollment belongs. Contains general name, description, logo, and other metadata about this application. To retrieve this object, specify `App` in the "Include" parameter for your query.
+     * The Application to which this AppEnrollment belongs.  Contains general name, description,
+     * logo, and other metadata about this application.
+     *
+     * To retrieve this object, specify `App` in the "Include" parameter for your query.
+     *
+     * @param value The new value for app
      */
     public void setApp(ApplicationModel value) { this.app = value; }
     /**
-     * @return All definitions attached to this app. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to this app.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * @param value - All definitions attached to this app. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to this app.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * @return All values attached to this app. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to this app.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * @param value - All values attached to this app. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to this app.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
-     * @return Data about the last sync attached to this app enrollment To retrieve this collection, specify `LastSync` in the "Include" parameter for your query.
+     * Data about the last sync attached to this app enrollment
+     *
+     * To retrieve this collection, specify `LastSync` in the "Include" parameter for your query.
+     *
+     * @return The field lastSync
      */
     public SyncRequestModel getLastSync() { return this.lastSync; }
     /**
-     * @param value - Data about the last sync attached to this app enrollment To retrieve this collection, specify `LastSync` in the "Include" parameter for your query.
+     * Data about the last sync attached to this app enrollment
+     *
+     * To retrieve this collection, specify `LastSync` in the "Include" parameter for your query.
+     *
+     * @param value The new value for lastSync
      */
     public void setLastSync(SyncRequestModel value) { this.lastSync = value; }
     /**
-     * @return Optional data necessary to create an app enrollment for a supported connector. Only enter relevant fields for the given connector.
+     * Optional data necessary to create an app enrollment for a supported connector.
+     * Only enter relevant fields for the given connector.
+     *
+     * @return The field connectorInfo
      */
     public ConnectorInfoModel getConnectorInfo() { return this.connectorInfo; }
     /**
-     * @param value - Optional data necessary to create an app enrollment for a supported connector. Only enter relevant fields for the given connector.
+     * Optional data necessary to create an app enrollment for a supported connector.
+     * Only enter relevant fields for the given connector.
+     *
+     * @param value The new value for connectorInfo
      */
     public void setConnectorInfo(ConnectorInfoModel value) { this.connectorInfo = value; }
 };

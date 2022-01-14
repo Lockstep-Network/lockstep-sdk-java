@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -42,171 +43,261 @@ public class ArHeaderInfoModel
     private Double percentageOfTotalAr90DaysPastDue;
 
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The date of the report
+     * The date of the report
+     *
+     * @return The field reportPeriod
      */
     public Date getReportPeriod() { return this.reportPeriod; }
     /**
-     * @param value - The date of the report
+     * The date of the report
+     *
+     * @param value The new value for reportPeriod
      */
     public void setReportPeriod(Date value) { this.reportPeriod = value; }
     /**
-     * @return The total number of customers.
+     * The total number of customers.
+     *
+     * @return The field totalCustomers
      */
     public Integer getTotalCustomers() { return this.totalCustomers; }
     /**
-     * @param value - The total number of customers.
+     * The total number of customers.
+     *
+     * @param value The new value for totalCustomers
      */
     public void setTotalCustomers(Integer value) { this.totalCustomers = value; }
     /**
-     * @return The total number of invoices.
+     * The total number of invoices.
+     *
+     * @return The field totalInvoices
      */
     public Integer getTotalInvoices() { return this.totalInvoices; }
     /**
-     * @param value - The total number of invoices.
+     * The total number of invoices.
+     *
+     * @param value The new value for totalInvoices
      */
     public void setTotalInvoices(Integer value) { this.totalInvoices = value; }
     /**
-     * @return The total amount invoiced.
+     * The total amount invoiced.
+     *
+     * @return The field totalInvoicedAmount
      */
     public Double getTotalInvoicedAmount() { return this.totalInvoicedAmount; }
     /**
-     * @param value - The total amount invoiced.
+     * The total amount invoiced.
+     *
+     * @param value The new value for totalInvoicedAmount
      */
     public void setTotalInvoicedAmount(Double value) { this.totalInvoicedAmount = value; }
     /**
-     * @return The total number of unapplied payments.
+     * The total number of unapplied payments.
+     *
+     * @return The field totalUnappliedPayments
      */
     public Double getTotalUnappliedPayments() { return this.totalUnappliedPayments; }
     /**
-     * @param value - The total number of unapplied payments.
+     * The total number of unapplied payments.
+     *
+     * @param value The new value for totalUnappliedPayments
      */
     public void setTotalUnappliedPayments(Double value) { this.totalUnappliedPayments = value; }
     /**
-     * @return The total amount of collected payments.
+     * The total amount of collected payments.
+     *
+     * @return The field totalCollected
      */
     public Double getTotalCollected() { return this.totalCollected; }
     /**
-     * @param value - The total amount of collected payments.
+     * The total amount of collected payments.
+     *
+     * @param value The new value for totalCollected
      */
     public void setTotalCollected(Double value) { this.totalCollected = value; }
     /**
-     * @return The total accounts receivable amount.
+     * The total accounts receivable amount.
+     *
+     * @return The field totalArAmount
      */
     public Double getTotalArAmount() { return this.totalArAmount; }
     /**
-     * @param value - The total accounts receivable amount.
+     * The total accounts receivable amount.
+     *
+     * @param value The new value for totalArAmount
      */
     public void setTotalArAmount(Double value) { this.totalArAmount = value; }
     /**
-     * @return The number of paid invoices.
+     * The number of paid invoices.
+     *
+     * @return The field totalInvoicesPaid
      */
     public Integer getTotalInvoicesPaid() { return this.totalInvoicesPaid; }
     /**
-     * @param value - The number of paid invoices.
+     * The number of paid invoices.
+     *
+     * @param value The new value for totalInvoicesPaid
      */
     public void setTotalInvoicesPaid(Integer value) { this.totalInvoicesPaid = value; }
     /**
-     * @return The number of past due invoices.
+     * The number of past due invoices.
+     *
+     * @return The field totalInvoicesPastDue
      */
     public Integer getTotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
     /**
-     * @param value - The number of past due invoices.
+     * The number of past due invoices.
+     *
+     * @param value The new value for totalInvoicesPastDue
      */
     public void setTotalInvoicesPastDue(Integer value) { this.totalInvoicesPastDue = value; }
     /**
-     * @return The number of past due invoices for the last 90 days.
+     * The number of past due invoices for the last 90 days.
+     *
+     * @return The field totalInvoices90DaysPastDue
      */
     public Integer getTotalInvoices90DaysPastDue() { return this.totalInvoices90DaysPastDue; }
     /**
-     * @param value - The number of past due invoices for the last 90 days.
+     * The number of past due invoices for the last 90 days.
+     *
+     * @param value The new value for totalInvoices90DaysPastDue
      */
     public void setTotalInvoices90DaysPastDue(Integer value) { this.totalInvoices90DaysPastDue = value; }
     /**
-     * @return The total amount past due.
+     * The total amount past due.
+     *
+     * @return The field totalPastDueAmount
      */
     public Double getTotalPastDueAmount() { return this.totalPastDueAmount; }
     /**
-     * @param value - The total amount past due.
+     * The total amount past due.
+     *
+     * @param value The new value for totalPastDueAmount
      */
     public void setTotalPastDueAmount(Double value) { this.totalPastDueAmount = value; }
     /**
-     * @return The total past due for the past 90 days.
+     * The total past due for the past 90 days.
+     *
+     * @return The field totalPastDueAmount90Days
      */
     public Double getTotalPastDueAmount90Days() { return this.totalPastDueAmount90Days; }
     /**
-     * @param value - The total past due for the past 90 days.
+     * The total past due for the past 90 days.
+     *
+     * @param value The new value for totalPastDueAmount90Days
      */
     public void setTotalPastDueAmount90Days(Double value) { this.totalPastDueAmount90Days = value; }
     /**
-     * @return Portion of Total AR that is Past due.
+     * Portion of Total AR that is Past due.
+     *
+     * @return The field percentageOfTotalAr
      */
     public Double getPercentageOfTotalAr() { return this.percentageOfTotalAr; }
     /**
-     * @param value - Portion of Total AR that is Past due.
+     * Portion of Total AR that is Past due.
+     *
+     * @param value The new value for percentageOfTotalAr
      */
     public void setPercentageOfTotalAr(Double value) { this.percentageOfTotalAr = value; }
     /**
-     * @return Daily sales outstanding.
+     * Daily sales outstanding.
+     *
+     * @return The field dso
      */
     public Double getDso() { return this.dso; }
     /**
-     * @param value - Daily sales outstanding.
+     * Daily sales outstanding.
+     *
+     * @param value The new value for dso
      */
     public void setDso(Double value) { this.dso = value; }
     /**
-     * @return The total amount invoiced, due this year.
+     * The total amount invoiced, due this year.
+     *
+     * @return The field totalInvoiceAmountCurrentYear
      */
     public Double getTotalInvoiceAmountCurrentYear() { return this.totalInvoiceAmountCurrentYear; }
     /**
-     * @param value - The total amount invoiced, due this year.
+     * The total amount invoiced, due this year.
+     *
+     * @param value The new value for totalInvoiceAmountCurrentYear
      */
     public void setTotalInvoiceAmountCurrentYear(Double value) { this.totalInvoiceAmountCurrentYear = value; }
     /**
-     * @return The total amount invoiced, due last year.
+     * The total amount invoiced, due last year.
+     *
+     * @return The field totalInvoiceAmountPreviousYear
      */
     public Double getTotalInvoiceAmountPreviousYear() { return this.totalInvoiceAmountPreviousYear; }
     /**
-     * @param value - The total amount invoiced, due last year.
+     * The total amount invoiced, due last year.
+     *
+     * @param value The new value for totalInvoiceAmountPreviousYear
      */
     public void setTotalInvoiceAmountPreviousYear(Double value) { this.totalInvoiceAmountPreviousYear = value; }
     /**
-     * @return The total of all payments received this year.
+     * The total of all payments received this year.
+     *
+     * @return The field totalPaymentAmountCurrentYear
      */
     public Double getTotalPaymentAmountCurrentYear() { return this.totalPaymentAmountCurrentYear; }
     /**
-     * @param value - The total of all payments received this year.
+     * The total of all payments received this year.
+     *
+     * @param value The new value for totalPaymentAmountCurrentYear
      */
     public void setTotalPaymentAmountCurrentYear(Double value) { this.totalPaymentAmountCurrentYear = value; }
     /**
-     * @return The total amount of payments received in the last 30 days
+     * The total amount of payments received in the last 30 days
+     *
+     * @return The field totalCollectedPastThirtyDays
      */
     public Integer getTotalCollectedPastThirtyDays() { return this.totalCollectedPastThirtyDays; }
     /**
-     * @param value - The total amount of payments received in the last 30 days
+     * The total amount of payments received in the last 30 days
+     *
+     * @param value The new value for totalCollectedPastThirtyDays
      */
     public void setTotalCollectedPastThirtyDays(Integer value) { this.totalCollectedPastThirtyDays = value; }
     /**
-     * @return The total amount of Invoices paid in the last 30 days
+     * The total amount of Invoices paid in the last 30 days
+     *
+     * @return The field totalInvoicesPaidPastThirtyDays
      */
     public Integer getTotalInvoicesPaidPastThirtyDays() { return this.totalInvoicesPaidPastThirtyDays; }
     /**
-     * @param value - The total amount of Invoices paid in the last 30 days
+     * The total amount of Invoices paid in the last 30 days
+     *
+     * @param value The new value for totalInvoicesPaidPastThirtyDays
      */
     public void setTotalInvoicesPaidPastThirtyDays(Integer value) { this.totalInvoicesPaidPastThirtyDays = value; }
     /**
-     * @return Portion of Total AR that is 90+ days Past due.
+     * Portion of Total AR that is 90+ days Past due.
+     *
+     * @return The field percentageOfTotalAr90DaysPastDue
      */
     public Double getPercentageOfTotalAr90DaysPastDue() { return this.percentageOfTotalAr90DaysPastDue; }
     /**
-     * @param value - Portion of Total AR that is 90+ days Past due.
+     * Portion of Total AR that is 90+ days Past due.
+     *
+     * @param value The new value for percentageOfTotalAr90DaysPastDue
      */
     public void setPercentageOfTotalAr90DaysPastDue(Double value) { this.percentageOfTotalAr90DaysPastDue = value; }
 };

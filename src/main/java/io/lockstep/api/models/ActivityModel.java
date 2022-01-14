@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -48,219 +49,369 @@ public class ActivityModel
     private CustomFieldValueModel[] customFieldValues;
 
     /**
-     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field activityId
      */
     public String getActivityId() { return this.activityId; }
     /**
-     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for activityId
      */
     public void setActivityId(String value) { this.activityId = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return The ID of the company to which this activity belongs.
+     * The ID of the company to which this activity belongs.
+     *
+     * @return The field companyId
      */
     public String getCompanyId() { return this.companyId; }
     /**
-     * @param value - The ID of the company to which this activity belongs.
+     * The ID of the company to which this activity belongs.
+     *
+     * @param value The new value for companyId
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
-     * @return The type code of the activity
+     * The type code of the activity
+     *
+     * @return The field activityTypeCode
      */
     public String getActivityTypeCode() { return this.activityTypeCode; }
     /**
-     * @param value - The type code of the activity
+     * The type code of the activity
+     *
+     * @param value The new value for activityTypeCode
      */
     public void setActivityTypeCode(String value) { this.activityTypeCode = value; }
     /**
-     * @return The name of the activity. The name is a short name provided by the person who created the activity that can be displayed in a list.
+     * The name of the activity.  The name is a short name provided by the
+     * person who created the activity that can be displayed in a list.
+     *
+     * @return The field activityName
      */
     public String getActivityName() { return this.activityName; }
     /**
-     * @param value - The name of the activity. The name is a short name provided by the person who created the activity that can be displayed in a list.
+     * The name of the activity.  The name is a short name provided by the
+     * person who created the activity that can be displayed in a list.
+     *
+     * @param value The new value for activityName
      */
     public void setActivityName(String value) { this.activityName = value; }
     /**
-     * @return A description of the activity. This field contains more detailed text about the activity and can be lengthy.
+     * A description of the activity.  This field contains more detailed text about the
+     * activity and can be lengthy.
+     *
+     * @return The field activityDescription
      */
     public String getActivityDescription() { return this.activityDescription; }
     /**
-     * @param value - A description of the activity. This field contains more detailed text about the activity and can be lengthy.
+     * A description of the activity.  This field contains more detailed text about the
+     * activity and can be lengthy.
+     *
+     * @param value The new value for activityDescription
      */
     public void setActivityDescription(String value) { this.activityDescription = value; }
     /**
-     * @return The status of the activity.
+     * The status of the activity.
+     *
+     * @return The field activityStatus
      */
     public String getActivityStatus() { return this.activityStatus; }
     /**
-     * @param value - The status of the activity.
+     * The status of the activity.
+     *
+     * @param value The new value for activityStatus
      */
     public void setActivityStatus(String value) { this.activityStatus = value; }
     /**
-     * @return True if this activity is currently "open", which indicates that the activitiy is currently in progress.
+     * True if this activity is currently "open", which indicates that the activitiy is
+     * currently in progress.
+     *
+     * @return The field isOpen
      */
     public Boolean getIsOpen() { return this.isOpen; }
     /**
-     * @param value - True if this activity is currently "open", which indicates that the activitiy is currently in progress.
+     * True if this activity is currently "open", which indicates that the activitiy is
+     * currently in progress.
+     *
+     * @param value The new value for isOpen
      */
     public void setIsOpen(Boolean value) { this.isOpen = value; }
     /**
-     * @return The priority of the activity.
+     * The priority of the activity.
+     *
+     * @return The field priority
      */
     public String getPriority() { return this.priority; }
     /**
-     * @param value - The priority of the activity.
+     * The priority of the activity.
+     *
+     * @param value The new value for priority
      */
     public void setPriority(String value) { this.priority = value; }
     /**
-     * @return The ID of the user the activity is assigned to.
+     * The ID of the user the activity is assigned to.
+     *
+     * @return The field userAssignedTo
      */
     public String getUserAssignedTo() { return this.userAssignedTo; }
     /**
-     * @param value - The ID of the user the activity is assigned to.
+     * The ID of the user the activity is assigned to.
+     *
+     * @param value The new value for userAssignedTo
      */
     public void setUserAssignedTo(String value) { this.userAssignedTo = value; }
     /**
-     * @return The date the activity was assigned.
+     * The date the activity was assigned.
+     *
+     * @return The field dateAssigned
      */
     public Date getDateAssigned() { return this.dateAssigned; }
     /**
-     * @param value - The date the activity was assigned.
+     * The date the activity was assigned.
+     *
+     * @param value The new value for dateAssigned
      */
     public void setDateAssigned(Date value) { this.dateAssigned = value; }
     /**
-     * @return The date the activity was closed.
+     * The date the activity was closed.
+     *
+     * @return The field dateClosed
      */
     public Date getDateClosed() { return this.dateClosed; }
     /**
-     * @param value - The date the activity was closed.
+     * The date the activity was closed.
+     *
+     * @param value The new value for dateClosed
      */
     public void setDateClosed(Date value) { this.dateClosed = value; }
     /**
-     * @return If this activity has been "snoozed", this field will be non-null and will contain the date when the activity will be displayed. Until that date arrives, the activity will remain hidden.
+     * If this activity has been "snoozed", this field will be non-null and will contain
+     * the date when the activity will be displayed.  Until that date arrives, the activity
+     * will remain hidden.
+     *
+     * @return The field snoozeUntilDate
      */
     public Date getSnoozeUntilDate() { return this.snoozeUntilDate; }
     /**
-     * @param value - If this activity has been "snoozed", this field will be non-null and will contain the date when the activity will be displayed. Until that date arrives, the activity will remain hidden.
+     * If this activity has been "snoozed", this field will be non-null and will contain
+     * the date when the activity will be displayed.  Until that date arrives, the activity
+     * will remain hidden.
+     *
+     * @param value The new value for snoozeUntilDate
      */
     public void setSnoozeUntilDate(Date value) { this.snoozeUntilDate = value; }
     /**
-     * @return The date on which this activity was created.
+     * The date on which this activity was created.
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date on which this activity was created.
+     * The date on which this activity was created.
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return The ID of the user who created this activity.
+     * The ID of the user who created this activity.
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - The ID of the user who created this activity.
+     * The ID of the user who created this activity.
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return The date on which this activity was last modified.
+     * The date on which this activity was last modified.
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - The date on which this activity was last modified.
+     * The date on which this activity was last modified.
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return The ID of the user who last modified this activity.
+     * The ID of the user who last modified this activity.
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - The ID of the user who last modified this activity.
+     * The ID of the user who last modified this activity.
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * @return Amount collected (if any) for the activity.
+     * Amount collected (if any) for the activity.
+     *
+     * @return The field amountCollected
      */
     public Double getAmountCollected() { return this.amountCollected; }
     /**
-     * @param value - Amount collected (if any) for the activity.
+     * Amount collected (if any) for the activity.
+     *
+     * @param value The new value for amountCollected
      */
     public void setAmountCollected(Double value) { this.amountCollected = value; }
     /**
-     * @return Amount paid (if any) for the activity.
+     * Amount paid (if any) for the activity.
+     *
+     * @return The field amountPaid
      */
     public Double getAmountPaid() { return this.amountPaid; }
     /**
-     * @param value - Amount paid (if any) for the activity.
+     * Amount paid (if any) for the activity.
+     *
+     * @param value The new value for amountPaid
      */
     public void setAmountPaid(Double value) { this.amountPaid = value; }
     /**
-     * @return Credit given (if any) for the activity.
+     * Credit given (if any) for the activity.
+     *
+     * @return The field creditGiven
      */
     public Double getCreditGiven() { return this.creditGiven; }
     /**
-     * @param value - Credit given (if any) for the activity.
+     * Credit given (if any) for the activity.
+     *
+     * @param value The new value for creditGiven
      */
     public void setCreditGiven(Double value) { this.creditGiven = value; }
     /**
-     * @return True if this activity is to be shown in an "unread" state. When an activity is read by a person it is assigned to, this flag is set to false.
+     * True if this activity is to be shown in an "unread" state.  When an activity
+     * is read by a person it is assigned to, this flag is set to false.
+     *
+     * @return The field isUnread
      */
     public Boolean getIsUnread() { return this.isUnread; }
     /**
-     * @param value - True if this activity is to be shown in an "unread" state. When an activity is read by a person it is assigned to, this flag is set to false.
+     * True if this activity is to be shown in an "unread" state.  When an activity
+     * is read by a person it is assigned to, this flag is set to false.
+     *
+     * @param value The new value for isUnread
      */
     public void setIsUnread(Boolean value) { this.isUnread = value; }
     /**
-     * @return Activities may be archived when they should be hidden from the user. When this flag is true, this activity should be hidden.
+     * Activities may be archived when they should be hidden from the user.  When
+     * this flag is true, this activity should be hidden.
+     *
+     * @return The field isArchived
      */
     public Boolean getIsArchived() { return this.isArchived; }
     /**
-     * @param value - Activities may be archived when they should be hidden from the user. When this flag is true, this activity should be hidden.
+     * Activities may be archived when they should be hidden from the user.  When
+     * this flag is true, this activity should be hidden.
+     *
+     * @param value The new value for isArchived
      */
     public void setIsArchived(Boolean value) { this.isArchived = value; }
     /**
-     * @return The company associated with the activity To retrieve this collection, specify `Company` in the "Include" parameter for your query.
+     * The company associated with the activity
+     *
+     * To retrieve this collection, specify `Company` in the "Include" parameter for your query.
+     *
+     * @return The field company
      */
     public CompanyModel getCompany() { return this.company; }
     /**
-     * @param value - The company associated with the activity To retrieve this collection, specify `Company` in the "Include" parameter for your query.
+     * The company associated with the activity
+     *
+     * To retrieve this collection, specify `Company` in the "Include" parameter for your query.
+     *
+     * @param value The new value for company
      */
     public void setCompany(CompanyModel value) { this.company = value; }
     /**
-     * @return All attachments attached to applied activity. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to applied activity.
+     *
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @return The field attachments
      */
     public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
-     * @param value - All attachments attached to applied activity. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to applied activity.
+     *
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @param value The new value for attachments
      */
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
-     * @return All notes attached to this applied activity. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this applied activity.
+     *
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @return The field notes
      */
     public NoteModel[] getNotes() { return this.notes; }
     /**
-     * @param value - All notes attached to this applied activity. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this applied activity.
+     *
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @param value The new value for notes
      */
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
-     * @return All definitions attached to this applied activity. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to this applied activity.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * @param value - All definitions attached to this applied activity. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to this applied activity.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * @return All values attached to this activity. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to this activity.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * @param value - All values attached to this activity. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to this activity.
+     *
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

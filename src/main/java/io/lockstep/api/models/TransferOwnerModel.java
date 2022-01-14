@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -22,19 +23,27 @@ public class TransferOwnerModel
     private UserAccountModel newOwner;
 
     /**
-     * @return The previous owner of the account.
+     * The previous owner of the account.
+     *
+     * @return The field previousOwner
      */
     public UserAccountModel getPreviousOwner() { return this.previousOwner; }
     /**
-     * @param value - The previous owner of the account.
+     * The previous owner of the account.
+     *
+     * @param value The new value for previousOwner
      */
     public void setPreviousOwner(UserAccountModel value) { this.previousOwner = value; }
     /**
-     * @return The new owner of the account.
+     * The new owner of the account.
+     *
+     * @return The field newOwner
      */
     public UserAccountModel getNewOwner() { return this.newOwner; }
     /**
-     * @param value - The new owner of the account.
+     * The new owner of the account.
+     *
+     * @param value The new value for newOwner
      */
     public void setNewOwner(UserAccountModel value) { this.newOwner = value; }
 };

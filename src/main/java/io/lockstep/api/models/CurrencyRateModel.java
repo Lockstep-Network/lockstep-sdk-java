@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -25,35 +26,51 @@ public class CurrencyRateModel
     private Double currencyRate;
 
     /**
-     * @return The source currency
+     * The source currency
+     *
+     * @return The field sourceCurrency
      */
     public String getSourceCurrency() { return this.sourceCurrency; }
     /**
-     * @param value - The source currency
+     * The source currency
+     *
+     * @param value The new value for sourceCurrency
      */
     public void setSourceCurrency(String value) { this.sourceCurrency = value; }
     /**
-     * @return The destination currency
+     * The destination currency
+     *
+     * @return The field destinationCurrency
      */
     public String getDestinationCurrency() { return this.destinationCurrency; }
     /**
-     * @param value - The destination currency
+     * The destination currency
+     *
+     * @param value The new value for destinationCurrency
      */
     public void setDestinationCurrency(String value) { this.destinationCurrency = value; }
     /**
-     * @return The date for the currency rate
+     * The date for the currency rate
+     *
+     * @return The field date
      */
     public Date getDate() { return this.date; }
     /**
-     * @param value - The date for the currency rate
+     * The date for the currency rate
+     *
+     * @param value The new value for date
      */
     public void setDate(Date value) { this.date = value; }
     /**
-     * @return The currency rate value
+     * The currency rate value
+     *
+     * @return The field currencyRate
      */
     public Double getCurrencyRate() { return this.currencyRate; }
     /**
-     * @param value - The currency rate value
+     * The currency rate value
+     *
+     * @param value The new value for currencyRate
      */
     public void setCurrencyRate(Double value) { this.currencyRate = value; }
 };

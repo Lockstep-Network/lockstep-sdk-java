@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -25,43 +26,63 @@ public class ProvisioningFinalizeRequestModel
     private ErpInfoModel emailConnector;
 
     /**
-     * @return The full name of the user
+     * The full name of the user
+     *
+     * @return The field fullName
      */
     public String getFullName() { return this.fullName; }
     /**
-     * @param value - The full name of the user
+     * The full name of the user
+     *
+     * @param value The new value for fullName
      */
     public void setFullName(String value) { this.fullName = value; }
     /**
-     * @return The time zone of the user
+     * The time zone of the user
+     *
+     * @return The field timeZone
      */
     public String getTimeZone() { return this.timeZone; }
     /**
-     * @param value - The time zone of the user
+     * The time zone of the user
+     *
+     * @param value The new value for timeZone
      */
     public void setTimeZone(String value) { this.timeZone = value; }
     /**
-     * @return The default currency of the user
+     * The default currency of the user
+     *
+     * @return The field defaultCurrency
      */
     public String getDefaultCurrency() { return this.defaultCurrency; }
     /**
-     * @param value - The default currency of the user
+     * The default currency of the user
+     *
+     * @param value The new value for defaultCurrency
      */
     public void setDefaultCurrency(String value) { this.defaultCurrency = value; }
     /**
-     * @return The company information for the user and group
+     * The company information for the user and group
+     *
+     * @return The field company
      */
     public CompanyModel getCompany() { return this.company; }
     /**
-     * @param value - The company information for the user and group
+     * The company information for the user and group
+     *
+     * @param value The new value for company
      */
     public void setCompany(CompanyModel value) { this.company = value; }
     /**
-     * @return Optional connector information needed to enroll user to their email connector
+     * Optional connector information needed to enroll user to their email connector
+     *
+     * @return The field emailConnector
      */
     public ErpInfoModel getEmailConnector() { return this.emailConnector; }
     /**
-     * @param value - Optional connector information needed to enroll user to their email connector
+     * Optional connector information needed to enroll user to their email connector
+     *
+     * @param value The new value for emailConnector
      */
     public void setEmailConnector(ErpInfoModel value) { this.emailConnector = value; }
 };

@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -40,155 +41,245 @@ public class ApplicationModel
     private CustomFieldValueModel[] customFieldValues;
 
     /**
-     * @return A unique code identifying this application
+     * A unique code identifying this application
+     *
+     * @return The field appId
      */
     public String getAppId() { return this.appId; }
     /**
-     * @param value - A unique code identifying this application
+     * A unique code identifying this application
+     *
+     * @param value The new value for appId
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * @return The name of this application
+     * The name of this application
+     *
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
-     * @param value - The name of this application
+     * The name of this application
+     *
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
-     * @return Brief summary of this application shown as a subtitle
+     * Brief summary of this application shown as a subtitle
+     *
+     * @return The field description
      */
     public String getDescription() { return this.description; }
     /**
-     * @param value - Brief summary of this application shown as a subtitle
+     * Brief summary of this application shown as a subtitle
+     *
+     * @param value The new value for description
      */
     public void setDescription(String value) { this.description = value; }
     /**
-     * @return Tag for what type of app this is
+     * Tag for what type of app this is
+     *
+     * @return The field appType
      */
     public String getAppType() { return this.appType; }
     /**
-     * @param value - Tag for what type of app this is
+     * Tag for what type of app this is
+     *
+     * @param value The new value for appType
      */
     public void setAppType(String value) { this.appType = value; }
     /**
-     * @return The ID of the owner
+     * The ID of the owner
+     *
+     * @return The field ownerId
      */
     public String getOwnerId() { return this.ownerId; }
     /**
-     * @param value - The ID of the owner
+     * The ID of the owner
+     *
+     * @param value The new value for ownerId
      */
     public void setOwnerId(String value) { this.ownerId = value; }
     /**
-     * @return The URL to visit for more information about this application
+     * The URL to visit for more information about this application
+     *
+     * @return The field projectUrl
      */
     public String getProjectUrl() { return this.projectUrl; }
     /**
-     * @param value - The URL to visit for more information about this application
+     * The URL to visit for more information about this application
+     *
+     * @param value The new value for projectUrl
      */
     public void setProjectUrl(String value) { this.projectUrl = value; }
     /**
-     * @return The URL for the icon for this application
+     * The URL for the icon for this application
+     *
+     * @return The field iconUrl
      */
     public String getIconUrl() { return this.iconUrl; }
     /**
-     * @param value - The URL for the icon for this application
+     * The URL for the icon for this application
+     *
+     * @param value The new value for iconUrl
      */
     public void setIconUrl(String value) { this.iconUrl = value; }
     /**
-     * @return The description of the price for this application
+     * The description of the price for this application
+     *
+     * @return The field priceTerms
      */
     public String getPriceTerms() { return this.priceTerms; }
     /**
-     * @param value - The description of the price for this application
+     * The description of the price for this application
+     *
+     * @param value The new value for priceTerms
      */
     public void setPriceTerms(String value) { this.priceTerms = value; }
     /**
-     * @return The ID of the user who created this application
+     * The ID of the user who created this application
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * @param value - The ID of the user who created this application
+     * The ID of the user who created this application
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * @return The ID of the user who last modified this application
+     * The ID of the user who last modified this application
+     *
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * @param value - The ID of the user who last modified this application
+     * The ID of the user who last modified this application
+     *
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * @return The date this application was created
+     * The date this application was created
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
-     * @param value - The date this application was created
+     * The date this application was created
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * @return The date this application was last modified
+     * The date this application was last modified
+     *
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * @param value - The date this application was last modified
+     * The date this application was last modified
+     *
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * @return Flag indicating if the application is active.
+     * Flag indicating if the application is active.
+     *
+     * @return The field isActive
      */
     public Boolean getIsActive() { return this.isActive; }
     /**
-     * @param value - Flag indicating if the application is active.
+     * Flag indicating if the application is active.
+     *
+     * @param value The new value for isActive
      */
     public void setIsActive(Boolean value) { this.isActive = value; }
     /**
-     * @return URL to the Wiki for the Application
+     * URL to the Wiki for the Application
+     *
+     * @return The field wikiURL
      */
     public String getWikiURL() { return this.wikiURL; }
     /**
-     * @param value - URL to the Wiki for the Application
+     * URL to the Wiki for the Application
+     *
+     * @param value The new value for wikiURL
      */
     public void setWikiURL(String value) { this.wikiURL = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return All notes attached to this app. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this app.
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @return The field notes
      */
     public NoteModel[] getNotes() { return this.notes; }
     /**
-     * @param value - All notes attached to this app. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * All notes attached to this app.
+     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     *
+     * @param value The new value for notes
      */
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
-     * @return All attachments attached to this app. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to this app.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @return The field attachments
      */
     public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
-     * @param value - All attachments attached to this app. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * All attachments attached to this app.
+     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     *
+     * @param value The new value for attachments
      */
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
-     * @return All definitions attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to the application.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * @param value - All definitions attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All definitions attached to the application.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * @return All values attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to the application.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * @param value - All values attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * All values attached to the application.
+     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

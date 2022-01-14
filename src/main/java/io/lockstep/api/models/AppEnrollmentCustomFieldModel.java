@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -31,91 +32,141 @@ public class AppEnrollmentCustomFieldModel
     private Double numericValue;
 
     /**
-     * @return Unique id for the app enrollment
+     * Unique id for the app enrollment
+     *
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * @param value - Unique id for the app enrollment
+     * Unique id for the app enrollment
+     *
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
-     * @return Id of enrolled app
+     * Id of enrolled app
+     *
+     * @return The field appId
      */
     public String getAppId() { return this.appId; }
     /**
-     * @param value - Id of enrolled app
+     * Id of enrolled app
+     *
+     * @param value The new value for appId
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * @return The name of the application
+     * The name of the application
+     *
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
-     * @param value - The name of the application
+     * The name of the application
+     *
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
-     * @return Tag for what type of app the application is
+     * Tag for what type of app the application is
+     *
+     * @return The field appType
      */
     public String getAppType() { return this.appType; }
     /**
-     * @param value - Tag for what type of app the application is
+     * Tag for what type of app the application is
+     *
+     * @param value The new value for appType
      */
     public void setAppType(String value) { this.appType = value; }
     /**
-     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
+     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
+     *
+     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * @return Unique Id for the custom field definition
+     * Unique Id for the custom field definition
+     *
+     * @return The field customFieldDefinitionId
      */
     public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
-     * @param value - Unique Id for the custom field definition
+     * Unique Id for the custom field definition
+     *
+     * @param value The new value for customFieldDefinitionId
      */
     public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
     /**
-     * @return Text to display in-application for custom field
+     * Text to display in-application for custom field
+     *
+     * @return The field customFieldLabel
      */
     public String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
-     * @param value - Text to display in-application for custom field
+     * Text to display in-application for custom field
+     *
+     * @param value The new value for customFieldLabel
      */
     public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
     /**
-     * @return Data type of the custom field definition
+     * Data type of the custom field definition
+     *
+     * @return The field dataType
      */
     public String getDataType() { return this.dataType; }
     /**
-     * @param value - Data type of the custom field definition
+     * Data type of the custom field definition
+     *
+     * @param value The new value for dataType
      */
     public void setDataType(String value) { this.dataType = value; }
     /**
-     * @return Used for display logic when multiple app enrollment custom fields exist
+     * Used for display logic when multiple app enrollment custom fields exist
+     *
+     * @return The field sortOrder
      */
     public Integer getSortOrder() { return this.sortOrder; }
     /**
-     * @param value - Used for display logic when multiple app enrollment custom fields exist
+     * Used for display logic when multiple app enrollment custom fields exist
+     *
+     * @param value The new value for sortOrder
      */
     public void setSortOrder(Integer value) { this.sortOrder = value; }
     /**
-     * @return String of data for field
+     * String of data for field
+     *
+     * @return The field stringValue
      */
     public String getStringValue() { return this.stringValue; }
     /**
-     * @param value - String of data for field
+     * String of data for field
+     *
+     * @param value The new value for stringValue
      */
     public void setStringValue(String value) { this.stringValue = value; }
     /**
-     * @return Number data for field
+     * Number data for field
+     *
+     * @return The field numericValue
      */
     public Double getNumericValue() { return this.numericValue; }
     /**
-     * @param value - Number data for field
+     * Number data for field
+     *
+     * @param value The new value for numericValue
      */
     public void setNumericValue(Double value) { this.numericValue = value; }
 };
