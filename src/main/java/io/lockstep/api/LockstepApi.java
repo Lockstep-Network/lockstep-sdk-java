@@ -301,7 +301,7 @@ public class LockstepApi {
 
     /**
      * Configure this Lockstep API client to use a JWT bearer token.
-     * More documentation is available on [JWT Bearer Tokens](https://developer.lockstep.io/docs/jwt-bearer-tokens). 
+     * More documentation is available on [JWT Bearer Tokens](https://developer.lockstep.io/docs/jwt-bearer-tokens).
      *
      * @param token The JWT bearer token to use for this API session
      * @return The Lockstep API client to use
@@ -315,7 +315,7 @@ public class LockstepApi {
 
     /**
      * Configures this Lockstep API client to use an API Key.
-     * More documentation is available on [API Keys](https://developer.lockstep.io/docs/api-keys). 
+     * More documentation is available on [API Keys](https://developer.lockstep.io/docs/api-keys).
      *
      * @param apiKey The API key to use for this API session
      * @return The Lockstep API client to use
