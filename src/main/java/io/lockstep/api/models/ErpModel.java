@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Represents unsupported ERP systems
+ */
 public class ErpModel
 {
     private String erpSystemId;
@@ -24,37 +29,37 @@ public class ErpModel
     /**
      * Unique ID for this ERP
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field erpSystemId
      */
     public String getErpSystemId() { return this.erpSystemId; }
     /**
      * Unique ID for this ERP
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for erpSystemId
      */
     public void setErpSystemId(String value) { this.erpSystemId = value; }
     /**
      * Name of ERP
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
      * Name of ERP
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
      * Flag to indicate if ERP is supported
      *
-     * @return a {@link java.lang.Boolean} object.
+     * @return The field isSupported
      */
     public Boolean getIsSupported() { return this.isSupported; }
     /**
      * Flag to indicate if ERP is supported
      *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value The new value for isSupported
      */
     public void setIsSupported(Boolean value) { this.isSupported = value; }
 };

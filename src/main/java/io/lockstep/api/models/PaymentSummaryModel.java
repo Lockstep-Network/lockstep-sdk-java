@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Contains summary information for a Payment
+ */
 public class PaymentSummaryModel
 {
     private String groupKey;
@@ -40,7 +44,7 @@ public class PaymentSummaryModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -49,163 +53,163 @@ public class PaymentSummaryModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The id of the payment
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentId
      */
     public String getPaymentId() { return this.paymentId; }
     /**
      * The id of the payment
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentId
      */
     public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field memoText
      */
     public String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for memoText
      */
     public void setMemoText(String value) { this.memoText = value; }
     /**
      * Reference code for the payment for the given Erp system.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field referenceCode
      */
     public String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for referenceCode
      */
     public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The type of payment, Payment or AP Payment.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentType
      */
     public String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, Payment or AP Payment.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentType
      */
     public void setPaymentType(String value) { this.paymentType = value; }
     /**
      * The date of this payment.
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field paymentDate
      */
     public Date getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this payment.
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for paymentDate
      */
     public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
      * Total amount of this payment.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field paymentAmount
      */
     public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this payment.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for paymentAmount
      */
     public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this payment.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field unappliedAmount
      */
     public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this payment.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
      * The number of invoices associated to this payment.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field invoiceCount
      */
     public Integer getInvoiceCount() { return this.invoiceCount; }
     /**
      * The number of invoices associated to this payment.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for invoiceCount
      */
     public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
     /**
      * The number of payments applied to this payment.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field totalPaymentsApplied
      */
     public Double getTotalPaymentsApplied() { return this.totalPaymentsApplied; }
     /**
      * The number of payments applied to this payment.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for totalPaymentsApplied
      */
     public void setTotalPaymentsApplied(Double value) { this.totalPaymentsApplied = value; }
     /**
      * The reference codes of the invoices associated to this payment.
      *
-     * @return an array of {@link java.lang.String} objects.
+     * @return The field invoiceList
      */
     public String[] getInvoiceList() { return this.invoiceList; }
     /**
      * The reference codes of the invoices associated to this payment.
      *
-     * @param value an array of {@link java.lang.String} objects.
+     * @param value The new value for invoiceList
      */
     public void setInvoiceList(String[] value) { this.invoiceList = value; }
     /**
      * The ids of the invoices associated to this payment.
      *
-     * @return an array of {@link java.lang.String} objects.
+     * @return The field invoiceIdList
      */
     public String[] getInvoiceIdList() { return this.invoiceIdList; }
     /**
      * The ids of the invoices associated to this payment.
      *
-     * @param value an array of {@link java.lang.String} objects.
+     * @param value The new value for invoiceIdList
      */
     public void setInvoiceIdList(String[] value) { this.invoiceIdList = value; }
     /**
      * The name of the customer for this payment.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field customerName
      */
     public String getCustomerName() { return this.customerName; }
     /**
      * The name of the customer for this payment.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for customerName
      */
     public void setCustomerName(String value) { this.customerName = value; }
     /**
      * The id of the customer for this payment.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field customerId
      */
     public String getCustomerId() { return this.customerId; }
     /**
      * The id of the customer for this payment.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for customerId
      */
     public void setCustomerId(String value) { this.customerId = value; }
 };

@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Model used to submit a transfer ownership request
+ */
 public class TransferOwnerSubmitModel
 {
     private String targetUserId;
@@ -22,13 +27,13 @@ public class TransferOwnerSubmitModel
     /**
      * The ID of the user to transfer ownership to.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field targetUserId
      */
     public String getTargetUserId() { return this.targetUserId; }
     /**
      * The ID of the user to transfer ownership to.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for targetUserId
      */
     public void setTargetUserId(String value) { this.targetUserId = value; }
 };

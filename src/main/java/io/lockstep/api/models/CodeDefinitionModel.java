@@ -17,6 +17,11 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Represents a Code Definition.  Codes can be used as shortened, human readable strings.
+ * Additionally, this table can be used to store lists of system values for Lockstep objects.
+ */
 public class CodeDefinitionModel
 {
     private String codeDefinitionId;
@@ -33,14 +38,14 @@ public class CodeDefinitionModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field codeDefinitionId
      */
     public String getCodeDefinitionId() { return this.codeDefinitionId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for codeDefinitionId
      */
     public void setCodeDefinitionId(String value) { this.codeDefinitionId = value; }
     /**
@@ -49,7 +54,7 @@ public class CodeDefinitionModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -58,91 +63,91 @@ public class CodeDefinitionModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The type of the Code Definition
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field codeType
      */
     public String getCodeType() { return this.codeType; }
     /**
      * The type of the Code Definition
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for codeType
      */
     public void setCodeType(String value) { this.codeType = value; }
     /**
      * The Code to be defined.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field code
      */
     public String getCode() { return this.code; }
     /**
      * The Code to be defined.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for code
      */
     public void setCode(String value) { this.code = value; }
     /**
      * The definition of the Code
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field codeDescription
      */
     public String getCodeDescription() { return this.codeDescription; }
     /**
      * The definition of the Code
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for codeDescription
      */
     public void setCodeDescription(String value) { this.codeDescription = value; }
     /**
      * The date that the Code Definition was created
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
      * The date that the Code Definition was created
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created the Code Definition
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the Code Definition
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date the Code Definition was last modified
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
      * The date the Code Definition was last modified
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified the Code Definition
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the Code Definition
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
 };

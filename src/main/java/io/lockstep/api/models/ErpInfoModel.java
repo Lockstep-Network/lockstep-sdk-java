@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Represents the ERP object sent in a provisioning request
+ */
 public class ErpInfoModel
 {
     private String appId;
@@ -23,25 +28,25 @@ public class ErpInfoModel
     /**
      * The id of the ERP's App
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field appId
      */
     public String getAppId() { return this.appId; }
     /**
      * The id of the ERP's App
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for appId
      */
     public void setAppId(String value) { this.appId = value; }
     /**
      * The data required to store for connector access
      *
-     * @return a {@link io.lockstep.api.models.ConnectorInfoModel} object.
+     * @return The field data
      */
     public ConnectorInfoModel getData() { return this.data; }
     /**
      * The data required to store for connector access
      *
-     * @param value a {@link io.lockstep.api.models.ConnectorInfoModel} object.
+     * @param value The new value for data
      */
     public void setData(ConnectorInfoModel value) { this.data = value; }
 };

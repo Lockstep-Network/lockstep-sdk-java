@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Represents a user uploaded attachment
+ */
 public class AttachmentModel
 {
     private String attachmentId;
@@ -37,14 +41,14 @@ public class AttachmentModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field attachmentId
      */
     public String getAttachmentId() { return this.attachmentId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for attachmentId
      */
     public void setAttachmentId(String value) { this.attachmentId = value; }
     /**
@@ -53,7 +57,7 @@ public class AttachmentModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -62,139 +66,137 @@ public class AttachmentModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The name of the table the attachment is associated with
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field tableKey
      */
     public String getTableKey() { return this.tableKey; }
     /**
      * The name of the table the attachment is associated with
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for tableKey
      */
     public void setTableKey(String value) { this.tableKey = value; }
     /**
      * The ID of the object the attachment is associated with
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field objectKey
      */
     public String getObjectKey() { return this.objectKey; }
     /**
      * The ID of the object the attachment is associated with
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for objectKey
      */
     public void setObjectKey(String value) { this.objectKey = value; }
     /**
      * Name of the file
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field fileName
      */
     public String getFileName() { return this.fileName; }
     /**
      * Name of the file
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for fileName
      */
     public void setFileName(String value) { this.fileName = value; }
     /**
      * Extension type of the file
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field fileExt
      */
     public String getFileExt() { return this.fileExt; }
     /**
      * Extension type of the file
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for fileExt
      */
     public void setFileExt(String value) { this.fileExt = value; }
     /**
      * Corresponding AttachmentType object to describe this attachment
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field attachmentTypeId
      */
     public String getAttachmentTypeId() { return this.attachmentTypeId; }
     /**
      * Corresponding AttachmentType object to describe this attachment
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for attachmentTypeId
      */
     public void setAttachmentTypeId(String value) { this.attachmentTypeId = value; }
     /**
      * Flag indicating the attachment was archived
      *
-     * @return a {@link java.lang.Boolean} object.
+     * @return The field isArchived
      */
     public Boolean getIsArchived() { return this.isArchived; }
     /**
      * Flag indicating the attachment was archived
      *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value The new value for isArchived
      */
     public void setIsArchived(Boolean value) { this.isArchived = value; }
     /**
-     * <p>Getter for the field <code>originAttachmentId</code>.</p>
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field originAttachmentId
      */
     public String getOriginAttachmentId() { return this.originAttachmentId; }
     /**
-     * <p>Setter for the field <code>originAttachmentId</code>.</p>
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for originAttachmentId
      */
     public void setOriginAttachmentId(String value) { this.originAttachmentId = value; }
     /**
      * Flag for if LS clients can see this file
      *
-     * @return a {@link java.lang.Boolean} object.
+     * @return The field viewInternal
      */
     public Boolean getViewInternal() { return this.viewInternal; }
     /**
      * Flag for if LS clients can see this file
      *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value The new value for viewInternal
      */
     public void setViewInternal(Boolean value) { this.viewInternal = value; }
     /**
      * Flag for if Vendors and customers can see this file
      *
-     * @return a {@link java.lang.Boolean} object.
+     * @return The field viewExternal
      */
     public Boolean getViewExternal() { return this.viewExternal; }
     /**
      * Flag for if Vendors and customers can see this file
      *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value The new value for viewExternal
      */
     public void setViewExternal(Boolean value) { this.viewExternal = value; }
     /**
      * The date the attachment was created
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
      * The date the attachment was created
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
      * Id of the user who made the file
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
      * Id of the user who made the file
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
 };

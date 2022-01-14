@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Contains summarized data for a customer
+ */
 public class CustomerSummaryModel
 {
     private String groupKey;
@@ -41,7 +45,7 @@ public class CustomerSummaryModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -50,175 +54,175 @@ public class CustomerSummaryModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this company.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field companyId
      */
     public String getCompanyId() { return this.companyId; }
     /**
      * The unique ID of this company.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for companyId
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The name of the company.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field companyName
      */
     public String getCompanyName() { return this.companyName; }
     /**
      * The name of the company.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for companyName
      */
     public void setCompanyName(String value) { this.companyName = value; }
     /**
      * The name of the primary contact.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field primaryContact
      */
     public String getPrimaryContact() { return this.primaryContact; }
     /**
      * The name of the primary contact.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for primaryContact
      */
     public void setPrimaryContact(String value) { this.primaryContact = value; }
     /**
      * The number of outstanding invoices for this customer.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field outstandingInvoices
      */
     public Integer getOutstandingInvoices() { return this.outstandingInvoices; }
     /**
      * The number of outstanding invoices for this customer.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for outstandingInvoices
      */
     public void setOutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
     /**
      * The number of open invoices.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalInvoicesOpen
      */
     public Integer getTotalInvoicesOpen() { return this.totalInvoicesOpen; }
     /**
      * The number of open invoices.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalInvoicesOpen
      */
     public void setTotalInvoicesOpen(Integer value) { this.totalInvoicesOpen = value; }
     /**
      * The number of past due invoices.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalInvoicesPastDue
      */
     public Integer getTotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
     /**
      * The number of past due invoices.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalInvoicesPastDue
      */
     public void setTotalInvoicesPastDue(Integer value) { this.totalInvoicesPastDue = value; }
     /**
      * The number of closed invoices for this customer.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field closedInvoices
      */
     public Integer getClosedInvoices() { return this.closedInvoices; }
     /**
      * The number of closed invoices for this customer.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for closedInvoices
      */
     public void setClosedInvoices(Integer value) { this.closedInvoices = value; }
     /**
      * The total from collected payments.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field amountCollected
      */
     public Double getAmountCollected() { return this.amountCollected; }
     /**
      * The total from collected payments.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for amountCollected
      */
     public void setAmountCollected(Double value) { this.amountCollected = value; }
     /**
      * The total balance of outstanding invoices.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field outstandingAmount
      */
     public Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
      * The total balance of outstanding invoices.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for outstandingAmount
      */
     public void setOutstandingAmount(Double value) { this.outstandingAmount = value; }
     /**
      * The total amount past due for this customer.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field amountPastDue
      */
     public Double getAmountPastDue() { return this.amountPastDue; }
     /**
      * The total amount past due for this customer.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for amountPastDue
      */
     public void setAmountPastDue(Double value) { this.amountPastDue = value; }
     /**
      * The total value of unapplied Payments for this Customer.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field unappliedPayments
      */
     public Double getUnappliedPayments() { return this.unappliedPayments; }
     /**
      * The total value of unapplied Payments for this Customer.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for unappliedPayments
      */
     public void setUnappliedPayments(Double value) { this.unappliedPayments = value; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field percentOfTotalAr
      */
     public Double getPercentOfTotalAr() { return this.percentOfTotalAr; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for percentOfTotalAr
      */
     public void setPercentOfTotalAr(Double value) { this.percentOfTotalAr = value; }
     /**
      * Daily sales outstanding value for this Customer.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field dso
      */
     public Double getDso() { return this.dso; }
     /**
      * Daily sales outstanding value for this Customer.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for dso
      */
     public void setDso(Double value) { this.dso = value; }
     /**
      * The date stamp for the newest Activity on this Customer.
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field newestActivity
      */
     public Date getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Customer.
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for newestActivity
      */
     public void setNewestActivity(Date value) { this.newestActivity = value; }
 };

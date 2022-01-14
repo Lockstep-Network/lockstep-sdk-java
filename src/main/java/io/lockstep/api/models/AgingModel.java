@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Represents an aging record
+ */
 public class AgingModel
 {
     private Integer bucket;
@@ -24,37 +29,37 @@ public class AgingModel
     /**
      * Aging bucket of outstanding balance data (days past due date of invoice)
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field bucket
      */
     public Integer getBucket() { return this.bucket; }
     /**
      * Aging bucket of outstanding balance data (days past due date of invoice)
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for bucket
      */
     public void setBucket(Integer value) { this.bucket = value; }
     /**
      * Currency code of aging bucket
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field currencyCode
      */
     public String getCurrencyCode() { return this.currencyCode; }
     /**
      * Currency code of aging bucket
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for currencyCode
      */
     public void setCurrencyCode(String value) { this.currencyCode = value; }
     /**
      * Outstanding balance for the given aging bucket
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field outstandingBalance
      */
     public Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
      * Outstanding balance for the given aging bucket
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for outstandingBalance
      */
     public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
 };

@@ -23,14 +23,18 @@ import io.lockstep.api.models.CodeDefinitionModel;
 
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+
+/**
+ * Contains all methods related to CodeDefinitions
+ */
 public class CodeDefinitionsClient
 {
     private LockstepApi client;
 
     /**
-     * <p>Constructor for CodeDefinitionsClient.</p>
+     * Constructor for method collection
      *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public CodeDefinitionsClient(LockstepApi client) {
         this.client = client;
@@ -41,9 +45,9 @@ public class CodeDefinitionsClient
      *
      * A CodeDefinition contains information around system code values and their definitions.
      *
-     * @param id - The unique Lockstep Platform ID number of this CodeDefinition
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this CodeDefinition
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CodeDefinitionModel> retrieveCodeDefinition(String id, String include)
     {
@@ -55,17 +59,17 @@ public class CodeDefinitionsClient
 
     /**
      * Queries CodeDefinitions for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
-     * 
+     *
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
-     * 
+     *
      * A CodeDefinition contains information around system code values and their definitions.
      *
-     * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
-     * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<CodeDefinitionModel>> queryCodeDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

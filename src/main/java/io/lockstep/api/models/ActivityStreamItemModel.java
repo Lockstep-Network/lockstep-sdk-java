@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -17,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents an item belonging to the activity stream.
+ */
 public class ActivityStreamItemModel
 {
     private String objectKey;
@@ -32,88 +36,128 @@ public class ActivityStreamItemModel
 
     /**
      * The object key of the activity stream item.
+     *
+     * @return The field objectKey
      */
     public String getObjectKey() { return this.objectKey; }
     /**
      * The object key of the activity stream item.
+     *
+     * @param value The new value for objectKey
      */
     public void setObjectKey(String value) { this.objectKey = value; }
     /**
      * The type code of the activity stream item.
+     *
+     * @return The field activityType
      */
     public String getActivityType() { return this.activityType; }
     /**
      * The type code of the activity stream item.
+     *
+     * @param value The new value for activityType
      */
     public void setActivityType(String value) { this.activityType = value; }
     /**
      * The text body description for this Activity Stream Item.
+     *
+     * @return The field textValue
      */
     public String getTextValue() { return this.textValue; }
     /**
      * The text body description for this Activity Stream Item.
+     *
+     * @param value The new value for textValue
      */
     public void setTextValue(String value) { this.textValue = value; }
     /**
      * The date on which this activity stream item was created.
+     *
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
      * The date on which this activity stream item was created.
+     *
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created this activity.
+     *
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this activity.
+     *
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     * 
+     *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     * 
+     *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The sender's email address if activity stream item is an Email.
+     *
+     * @return The field fromEmailAddress
      */
     public String getFromEmailAddress() { return this.fromEmailAddress; }
     /**
      * The sender's email address if activity stream item is an Email.
+     *
+     * @param value The new value for fromEmailAddress
      */
     public void setFromEmailAddress(String value) { this.fromEmailAddress = value; }
     /**
      * The recipient's email address if activity stream item is an Email.
+     *
+     * @return The field toEmailAddress
      */
     public String getToEmailAddress() { return this.toEmailAddress; }
     /**
      * The recipient's email address if activity stream item is an Email.
+     *
+     * @param value The new value for toEmailAddress
      */
     public void setToEmailAddress(String value) { this.toEmailAddress = value; }
     /**
      * The name of the contact sending the activity otherwise null.
+     *
+     * @return The field fromContactName
      */
     public String getFromContactName() { return this.fromContactName; }
     /**
      * The name of the contact sending the activity otherwise null.
+     *
+     * @param value The new value for fromContactName
      */
     public void setFromContactName(String value) { this.fromContactName = value; }
     /**
      * The name of the contact sending the activity otherwise null.
+     *
+     * @return The field toContactName
      */
     public String getToContactName() { return this.toContactName; }
     /**
      * The name of the contact sending the activity otherwise null.
+     *
+     * @param value The new value for toContactName
      */
     public void setToContactName(String value) { this.toContactName = value; }
 };

@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Aggregated Accounts Receivable Aging information.
+ */
 public class ArAgingHeaderInfoModel
 {
     private String groupKey;
@@ -31,7 +36,7 @@ public class ArAgingHeaderInfoModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -40,79 +45,79 @@ public class ArAgingHeaderInfoModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The aging bucket this data belongs to.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field reportBucket
      */
     public String getReportBucket() { return this.reportBucket; }
     /**
      * The aging bucket this data belongs to.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for reportBucket
      */
     public void setReportBucket(String value) { this.reportBucket = value; }
     /**
      * The total number of customers.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalCustomers
      */
     public Integer getTotalCustomers() { return this.totalCustomers; }
     /**
      * The total number of customers.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalCustomers
      */
     public void setTotalCustomers(Integer value) { this.totalCustomers = value; }
     /**
      * The total number of invoices outstanding.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalInvoicesOutstanding
      */
     public Integer getTotalInvoicesOutstanding() { return this.totalInvoicesOutstanding; }
     /**
      * The total number of invoices outstanding.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalInvoicesOutstanding
      */
     public void setTotalInvoicesOutstanding(Integer value) { this.totalInvoicesOutstanding = value; }
     /**
      * The total amount outstanding.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field totalOutstandingAmount
      */
     public Double getTotalOutstandingAmount() { return this.totalOutstandingAmount; }
     /**
      * The total amount outstanding.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for totalOutstandingAmount
      */
     public void setTotalOutstandingAmount(Double value) { this.totalOutstandingAmount = value; }
     /**
      * The total amount for AR.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field totalArAmount
      */
     public Double getTotalArAmount() { return this.totalArAmount; }
     /**
      * The total amount for AR.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for totalArAmount
      */
     public void setTotalArAmount(Double value) { this.totalArAmount = value; }
     /**
      * Portion of Total AR this data represents.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field percentageOfTotalAr
      */
     public Double getPercentageOfTotalAr() { return this.percentageOfTotalAr; }
     /**
      * Portion of Total AR this data represents.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for percentageOfTotalAr
      */
     public void setPercentageOfTotalAr(Double value) { this.percentageOfTotalAr = value; }
 };

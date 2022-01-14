@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Aggregated Attachment status information.
+ */
 public class AttachmentHeaderInfoModel
 {
     private String groupKey;
@@ -29,7 +34,7 @@ public class AttachmentHeaderInfoModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -38,57 +43,57 @@ public class AttachmentHeaderInfoModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The CompanyId associated with the attachment status report. Providing a null value will
      * return an attachment summary for all attachments associated to the provided GroupKey
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field companyId
      */
     public String getCompanyId() { return this.companyId; }
     /**
      * The CompanyId associated with the attachment status report. Providing a null value will
      * return an attachment summary for all attachments associated to the provided GroupKey
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for companyId
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The total number of attachments associated with the provided GroupKey and CompanyId.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalAttachments
      */
     public Integer getTotalAttachments() { return this.totalAttachments; }
     /**
      * The total number of attachments associated with the provided GroupKey and CompanyId.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalAttachments
      */
     public void setTotalAttachments(Integer value) { this.totalAttachments = value; }
     /**
      * The total number of archived attachments associated with the provided GroupKey and CompanyId.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalArchived
      */
     public Integer getTotalArchived() { return this.totalArchived; }
     /**
      * The total number of archived attachments associated with the provided GroupKey and CompanyId.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalArchived
      */
     public void setTotalArchived(Integer value) { this.totalArchived = value; }
     /**
      * The total number of active attachments associated with the provided GroupKey and CompanyId.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field totalActive
      */
     public Integer getTotalActive() { return this.totalActive; }
     /**
      * The total number of active attachments associated with the provided GroupKey and CompanyId.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for totalActive
      */
     public void setTotalActive(Integer value) { this.totalActive = value; }
 };

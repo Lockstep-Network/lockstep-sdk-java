@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Model to invite a new user to your accounting group
+ */
 public class InviteSubmitModel
 {
     private String email;
@@ -22,13 +27,13 @@ public class InviteSubmitModel
     /**
      * The email address of the user to invite
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
      * The email address of the user to invite
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
 };

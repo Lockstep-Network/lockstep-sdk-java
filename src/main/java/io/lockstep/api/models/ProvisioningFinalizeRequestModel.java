@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Represents the data to finalize onboarding for a user
+ */
 public class ProvisioningFinalizeRequestModel
 {
     private String fullName;
@@ -26,61 +31,61 @@ public class ProvisioningFinalizeRequestModel
     /**
      * The full name of the user
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field fullName
      */
     public String getFullName() { return this.fullName; }
     /**
      * The full name of the user
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for fullName
      */
     public void setFullName(String value) { this.fullName = value; }
     /**
      * The time zone of the user
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field timeZone
      */
     public String getTimeZone() { return this.timeZone; }
     /**
      * The time zone of the user
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for timeZone
      */
     public void setTimeZone(String value) { this.timeZone = value; }
     /**
      * The default currency of the user
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field defaultCurrency
      */
     public String getDefaultCurrency() { return this.defaultCurrency; }
     /**
      * The default currency of the user
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for defaultCurrency
      */
     public void setDefaultCurrency(String value) { this.defaultCurrency = value; }
     /**
      * The company information for the user and group
      *
-     * @return a {@link io.lockstep.api.models.CompanyModel} object.
+     * @return The field company
      */
     public CompanyModel getCompany() { return this.company; }
     /**
      * The company information for the user and group
      *
-     * @param value a {@link io.lockstep.api.models.CompanyModel} object.
+     * @param value The new value for company
      */
     public void setCompany(CompanyModel value) { this.company = value; }
     /**
      * Optional connector information needed to enroll user to their email connector
      *
-     * @return a {@link io.lockstep.api.models.ErpInfoModel} object.
+     * @return The field emailConnector
      */
     public ErpInfoModel getEmailConnector() { return this.emailConnector; }
     /**
      * Optional connector information needed to enroll user to their email connector
      *
-     * @param value a {@link io.lockstep.api.models.ErpInfoModel} object.
+     * @param value The new value for emailConnector
      */
     public void setEmailConnector(ErpInfoModel value) { this.emailConnector = value; }
 };

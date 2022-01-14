@@ -24,14 +24,18 @@ import io.lockstep.api.models.NoteModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+
+/**
+ * Contains all methods related to Notes
+ */
 public class NotesClient
 {
     private LockstepApi client;
 
     /**
-     * <p>Constructor for NotesClient.</p>
+     * Constructor for method collection
      *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public NotesClient(LockstepApi client) {
         this.client = client;
@@ -42,9 +46,9 @@ public class NotesClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique ID number of the Note to retrieve
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique ID number of the Note to retrieve
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<NoteModel> retrieveNote(String id, String include)
     {
@@ -59,8 +63,8 @@ public class NotesClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - Note id to be archived
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id Note id to be archived
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActionResultModel> archiveNote(String id)
     {
@@ -76,8 +80,8 @@ public class NotesClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param body - The array of notes to be created
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param body The array of notes to be created
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<NoteModel[]> createNotes(NoteModel[] body)
     {
@@ -93,12 +97,12 @@ public class NotesClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param filter - The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
-     * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize - The page size for results (default 200, maximum of 10,000)
-     * @param pageNumber - The page number for results (default 0)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<NoteModel>> queryNotes(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

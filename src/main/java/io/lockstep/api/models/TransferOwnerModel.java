@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Model from the transfer ownership process.
+ */
 public class TransferOwnerModel
 {
     private UserAccountModel previousOwner;
@@ -23,25 +28,25 @@ public class TransferOwnerModel
     /**
      * The previous owner of the account.
      *
-     * @return a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @return The field previousOwner
      */
     public UserAccountModel getPreviousOwner() { return this.previousOwner; }
     /**
      * The previous owner of the account.
      *
-     * @param value a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @param value The new value for previousOwner
      */
     public void setPreviousOwner(UserAccountModel value) { this.previousOwner = value; }
     /**
      * The new owner of the account.
      *
-     * @return a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @return The field newOwner
      */
     public UserAccountModel getNewOwner() { return this.newOwner; }
     /**
      * The new owner of the account.
      *
-     * @param value a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @param value The new value for newOwner
      */
     public void setNewOwner(UserAccountModel value) { this.newOwner = value; }
 };

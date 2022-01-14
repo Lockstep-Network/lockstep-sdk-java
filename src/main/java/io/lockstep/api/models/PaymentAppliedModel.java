@@ -17,6 +17,13 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * A Payment Application is created by a business who receives a Payment from a customer.  A customer may make
+ * a single Payment to match an Invoice exactly, a partial Payment for an Invoice, or a single Payment may be
+ * made for multiple smaller Invoices.  The Payment Application contains information about which Invoices are connected
+ * to which Payments and for which amounts.
+ */
 public class PaymentAppliedModel
 {
     private String groupKey;
@@ -40,7 +47,7 @@ public class PaymentAppliedModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -49,7 +56,7 @@ public class PaymentAppliedModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
@@ -58,7 +65,7 @@ public class PaymentAppliedModel
      *
      * For the ID of this record in its originating financial system, see `ErpKey`.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentAppliedId
      */
     public String getPaymentAppliedId() { return this.paymentAppliedId; }
     /**
@@ -67,31 +74,31 @@ public class PaymentAppliedModel
      *
      * For the ID of this record in its originating financial system, see `ErpKey`.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentAppliedId
      */
     public void setPaymentAppliedId(String value) { this.paymentAppliedId = value; }
     /**
      * The Invoice this payment is applied to.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
      * The Invoice this payment is applied to.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The Payment applied to the invoice.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentId
      */
     public String getPaymentId() { return this.paymentId; }
     /**
      * The Payment applied to the invoice.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentId
      */
     public void setPaymentId(String value) { this.paymentId = value; }
     /**
@@ -103,7 +110,7 @@ public class PaymentAppliedModel
      *
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field erpKey
      */
     public String getErpKey() { return this.erpKey; }
     /**
@@ -115,115 +122,115 @@ public class PaymentAppliedModel
      *
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for erpKey
      */
     public void setErpKey(String value) { this.erpKey = value; }
     /**
      * Reference number for the payment applied.
      *
-     * @return a {@link java.lang.Integer} object.
+     * @return The field entryNumber
      */
     public Integer getEntryNumber() { return this.entryNumber; }
     /**
      * Reference number for the payment applied.
      *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value The new value for entryNumber
      */
     public void setEntryNumber(Integer value) { this.entryNumber = value; }
     /**
      * Date payment applied to invoice.
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field applyToInvoiceDate
      */
     public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date payment applied to invoice.
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for applyToInvoiceDate
      */
     public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to invoice.
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field paymentAppliedAmount
      */
     public Double getPaymentAppliedAmount() { return this.paymentAppliedAmount; }
     /**
      * Amount applied to invoice.
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for paymentAppliedAmount
      */
     public void setPaymentAppliedAmount(Double value) { this.paymentAppliedAmount = value; }
     /**
      * Date payment applied record was created.
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
      * Date payment applied record was created.
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
      * The id of the user who created this applied payment.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The id of the user who created this applied payment.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * Date payment applied record was modified.
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
      * Date payment applied record was modified.
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
      * The id of the user who modified this applied payment.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The id of the user who modified this applied payment.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * AppEnrollmentId for this record; used for mapping purposes.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * The invoice associated with this applied payment.
      *
-     * @return a {@link io.lockstep.api.models.InvoiceModel} object.
+     * @return The field invoice
      */
     public InvoiceModel getInvoice() { return this.invoice; }
     /**
      * The invoice associated with this applied payment.
      *
-     * @param value a {@link io.lockstep.api.models.InvoiceModel} object.
+     * @param value The new value for invoice
      */
     public void setInvoice(InvoiceModel value) { this.invoice = value; }
 };

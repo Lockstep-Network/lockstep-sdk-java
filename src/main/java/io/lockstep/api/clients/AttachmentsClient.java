@@ -25,14 +25,18 @@ import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.UriModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+
+/**
+ * Contains all methods related to Attachments
+ */
 public class AttachmentsClient
 {
     private LockstepApi client;
 
     /**
-     * <p>Constructor for AttachmentsClient.</p>
+     * Constructor for method collection
      *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public AttachmentsClient(LockstepApi client) {
         this.client = client;
@@ -45,9 +49,9 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique ID number of the Attachment to retrieve
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique ID number of the Attachment to retrieve
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<AttachmentModel> retrieveAttachment(String id, String include)
     {
@@ -66,9 +70,9 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of the attachment to update
-     * @param body - A list of changes to apply to this Attachment
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of the attachment to update
+     * @param body A list of changes to apply to this Attachment
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<AttachmentModel> updateAttachment(String id, Object body)
     {
@@ -85,8 +89,8 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique ID number of the Attachment to be archived
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique ID number of the Attachment to be archived
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActionResultModel> archiveAttachment(String id)
     {
@@ -102,8 +106,8 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique ID number of the Attachment whose URI will be returned
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique ID number of the Attachment whose URI will be returned
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<UriModel> downloadAttachment(String id)
     {
@@ -119,9 +123,9 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param tableName - The name of the type of object to which this Attachment will be linked
-     * @param objectId - The unique ID of the object to which this Attachment will be linked
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param tableName The name of the type of object to which this Attachment will be linked
+     * @param objectId The unique ID of the object to which this Attachment will be linked
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<AttachmentModel[]> uploadAttachment(String tableName, String objectId)
     {
@@ -140,12 +144,12 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param filter - The filter to use to select from the list of available Attachments, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
-     * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize - The page size for results (default 200, maximum of 10,000)
-     * @param pageNumber - The page number for results (default 0)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter to use to select from the list of available Attachments, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<AttachmentModel>> queryAttachments(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Customer payment collected information
+ */
 public class CustomerDetailsPaymentModel
 {
     private String groupKey;
@@ -36,7 +40,7 @@ public class CustomerDetailsPaymentModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -45,115 +49,115 @@ public class CustomerDetailsPaymentModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * Unique identifier for payment
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentId
      */
     public String getPaymentId() { return this.paymentId; }
     /**
      * Unique identifier for payment
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentId
      */
     public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * Unique identifier for payment applied
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentAppliedId
      */
     public String getPaymentAppliedId() { return this.paymentAppliedId; }
     /**
      * Unique identifier for payment applied
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentAppliedId
      */
     public void setPaymentAppliedId(String value) { this.paymentAppliedId = value; }
     /**
      * Payment type
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field paymentType
      */
     public String getPaymentType() { return this.paymentType; }
     /**
      * Payment type
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for paymentType
      */
     public void setPaymentType(String value) { this.paymentType = value; }
     /**
      * Unique identifier for invoice payment is associated with
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
      * Unique identifier for invoice payment is associated with
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * Invoice type payment is associated with
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field invoiceTypeCode
      */
     public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
      * Invoice type payment is associated with
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for invoiceTypeCode
      */
     public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
     /**
      * Invoice reference code payment is associated with
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field invoiceReferenceCode
      */
     public String getInvoiceReferenceCode() { return this.invoiceReferenceCode; }
     /**
      * Invoice reference code payment is associated with
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for invoiceReferenceCode
      */
     public void setInvoiceReferenceCode(String value) { this.invoiceReferenceCode = value; }
     /**
      * Invoice total amount payment is associated with
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field invoiceTotalAmount
      */
     public Double getInvoiceTotalAmount() { return this.invoiceTotalAmount; }
     /**
      * Invoice total amount payment is associated with
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for invoiceTotalAmount
      */
     public void setInvoiceTotalAmount(Double value) { this.invoiceTotalAmount = value; }
     /**
      * Date payment placed
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field paymentDate
      */
     public Date getPaymentDate() { return this.paymentDate; }
     /**
      * Date payment placed
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for paymentDate
      */
     public void setPaymentDate(Date value) { this.paymentDate = value; }
     /**
      * Amount payment was made for
      *
-     * @return a {@link java.lang.Double} object.
+     * @return The field paymentAmount
      */
     public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Amount payment was made for
      *
-     * @param value a {@link java.lang.Double} object.
+     * @param value The new value for paymentAmount
      */
     public void setPaymentAmount(Double value) { this.paymentAmount = value; }
 };

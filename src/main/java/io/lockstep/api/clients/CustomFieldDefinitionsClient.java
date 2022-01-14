@@ -23,14 +23,18 @@ import io.lockstep.api.models.CustomFieldDefinitionModel;
 
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+
+/**
+ * Contains all methods related to CustomFieldDefinitions
+ */
 public class CustomFieldDefinitionsClient
 {
     private LockstepApi client;
 
     /**
-     * <p>Constructor for CustomFieldDefinitionsClient.</p>
+     * Constructor for method collection
      *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public CustomFieldDefinitionsClient(LockstepApi client) {
         this.client = client;
@@ -41,9 +45,9 @@ public class CustomFieldDefinitionsClient
      *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of this Custom Field Definition
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this Custom Field Definition
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CustomFieldDefinitionModel> retrieveFieldDefinition(String id, String include)
     {
@@ -60,9 +64,9 @@ public class CustomFieldDefinitionsClient
      *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of the Custom Field Definition to update
-     * @param body - A list of changes to apply to this Custom Field Definition
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of the Custom Field Definition to update
+     * @param body A list of changes to apply to this Custom Field Definition
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CustomFieldDefinitionModel> updateFieldDefinition(String id, Object body)
     {
@@ -77,8 +81,8 @@ public class CustomFieldDefinitionsClient
      *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of the Custom Field Definition to delete
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of the Custom Field Definition to delete
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CustomFieldDefinitionModel> deleteFieldDefinition(String id)
     {
@@ -90,8 +94,8 @@ public class CustomFieldDefinitionsClient
     /**
      * Creates one or more Custom Field Definitions and returns the records as created.  A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param body - The Custom Field Definitions to create
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param body The Custom Field Definitions to create
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CustomFieldDefinitionModel[]> createFieldDefinitions(CustomFieldDefinitionModel[] body)
     {
@@ -107,12 +111,12 @@ public class CustomFieldDefinitionsClient
      *
      * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a core definition for each object.  The core definition is intended to represent a level of compatibility that provides support across most accounting systems and products.  When a user or developer requires information beyond this core definition, you can use Custom Fields to represent this information.  See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
-     * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
+     * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<CustomFieldDefinitionModel>> queryFieldDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

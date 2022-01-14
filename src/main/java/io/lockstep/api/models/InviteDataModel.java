@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Model containing information about a user for the invite/onboarding process.
+ */
 public class InviteDataModel
 {
     private String email;
@@ -23,25 +28,25 @@ public class InviteDataModel
     /**
      * The email address of the invited user.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
      * The email address of the invited user.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
      * The status of the user.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field userStatus
      */
     public String getUserStatus() { return this.userStatus; }
     /**
      * The status of the user.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for userStatus
      */
     public void setUserStatus(String value) { this.userStatus = value; }
 };

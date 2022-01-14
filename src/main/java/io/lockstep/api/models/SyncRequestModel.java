@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Represents a user request to sync data
+ */
 public class SyncRequestModel
 {
     private String syncRequestId;
@@ -33,14 +37,14 @@ public class SyncRequestModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field syncRequestId
      */
     public String getSyncRequestId() { return this.syncRequestId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for syncRequestId
      */
     public void setSyncRequestId(String value) { this.syncRequestId = value; }
     /**
@@ -49,7 +53,7 @@ public class SyncRequestModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -58,93 +62,93 @@ public class SyncRequestModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * Potential values = Cancelled, Ready, In Progress, Success, Failed
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field statusCode
      */
     public String getStatusCode() { return this.statusCode; }
     /**
      * Potential values = Cancelled, Ready, In Progress, Success, Failed
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for statusCode
      */
     public void setStatusCode(String value) { this.statusCode = value; }
     /**
      * Message containing information about the sync request results
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field processResultMessage
      */
     public String getProcessResultMessage() { return this.processResultMessage; }
     /**
      * Message containing information about the sync request results
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for processResultMessage
      */
     public void setProcessResultMessage(String value) { this.processResultMessage = value; }
     /**
      * App enrollment sync request is for
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * App enrollment sync request is for
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * The date this sync request was created
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
      * The date this sync request was created
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
      * The date this sync request was last modified
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
      * The date this sync request was last modified
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this sync request.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this sync request.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * The detailed results from the sync.
      * To retrieve this collection, set `includeDetails` to true in your GET requests.
      *
-     * @return a {@link java.lang.Object} object.
+     * @return The field details
      */
     public Object getDetails() { return this.details; }
     /**
      * The detailed results from the sync.
      * To retrieve this collection, set `includeDetails` to true in your GET requests.
      *
-     * @param value a {@link java.lang.Object} object.
+     * @param value The new value for details
      */
     public void setDetails(Object value) { this.details = value; }
 };

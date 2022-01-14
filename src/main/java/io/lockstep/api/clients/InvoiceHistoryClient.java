@@ -22,14 +22,19 @@ import io.lockstep.api.models.LockstepResponse;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.InvoiceHistoryModel;
+
+
+/**
+ * Contains all methods related to InvoiceHistory
+ */
 public class InvoiceHistoryClient
 {
     private LockstepApi client;
 
     /**
-     * <p>Constructor for InvoiceHistoryClient.</p>
+     * Constructor for method collection
      *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public InvoiceHistoryClient(LockstepApi client) {
         this.client = client;
@@ -40,8 +45,8 @@ public class InvoiceHistoryClient
      *
      * An Invoice represents a bill sent from one company to another.  The Lockstep Platform tracks changes to each Invoice so that you can observe the changes over time.  You can view the InvoiceHistory list to monitor and observe the changes of this Invoice and track the dates when changes occurred.
      *
-     * @param id - The unique Lockstep Platform ID number of this invoice; NOT the customer's ERP key
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this invoice; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<InvoiceHistoryModel>> retrieveInvoiceHistory(String id)
     {
@@ -55,12 +60,12 @@ public class InvoiceHistoryClient
      *
      * An Invoice represents a bill sent from one company to another.  The Lockstep Platform tracks changes to each Invoice so that you can observe the changes over time.  You can view the InvoiceHistory list to monitor and observe the changes of this Invoice and track the dates when changes occurred.
      *
-     * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
-     * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
+     * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<InvoiceHistoryModel>> queryInvoiceHistory(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

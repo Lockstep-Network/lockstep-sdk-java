@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Represents leads for creating new ERP connectors
+ */
 public class LeadModel
 {
     private String leadId;
@@ -27,62 +32,62 @@ public class LeadModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field leadId
      */
     public String getLeadId() { return this.leadId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for leadId
      */
     public void setLeadId(String value) { this.leadId = value; }
     /**
      * Name of lead
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field name
      */
     public String getName() { return this.name; }
     /**
      * Name of lead
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
     /**
      * Name of company of lead
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field company
      */
     public String getCompany() { return this.company; }
     /**
      * Name of company of lead
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for company
      */
     public void setCompany(String value) { this.company = value; }
     /**
      * Email of lead
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
      * Email of lead
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
      * Requested ERP of lead
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field erpSystem
      */
     public String getErpSystem() { return this.erpSystem; }
     /**
      * Requested ERP of lead
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for erpSystem
      */
     public void setErpSystem(String value) { this.erpSystem = value; }
 };

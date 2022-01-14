@@ -1,0 +1,7 @@
+Invoking Maven for the goals: [org.codehaus.mojo:clirr-maven-plugin:2.2.2:check] with properties={failOnError=false, textOutputFile=C:\git\lockstep-sdk-java\target\clirr900195467.txt, comparisonVersion=(,2022.2.93.0)}
+
+M2_HOME=C:\Program Files\apache-maven-3.8.4
+MAVEN_OPTS=null
+JAVA_HOME=C:\Progra~1\RedHat\java-1.8.0-openjdk-1.8.0.312-2\jre\..
+JAVA_OPTS=null
+

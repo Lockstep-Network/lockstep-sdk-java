@@ -15,6 +15,11 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Model from the User invite process
+ */
 public class InviteModel
 {
     private String email;
@@ -25,49 +30,49 @@ public class InviteModel
     /**
      * The invited email address
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field email
      */
     public String getEmail() { return this.email; }
     /**
      * The invited email address
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for email
      */
     public void setEmail(String value) { this.email = value; }
     /**
      * True if the invite was sent successfully
      *
-     * @return a {@link java.lang.Boolean} object.
+     * @return The field success
      */
     public Boolean getSuccess() { return this.success; }
     /**
      * True if the invite was sent successfully
      *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value The new value for success
      */
     public void setSuccess(Boolean value) { this.success = value; }
     /**
      * The invited user, may be null if the user could not be invited
      *
-     * @return a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @return The field invitedUser
      */
     public UserAccountModel getInvitedUser() { return this.invitedUser; }
     /**
      * The invited user, may be null if the user could not be invited
      *
-     * @param value a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @param value The new value for invitedUser
      */
     public void setInvitedUser(UserAccountModel value) { this.invitedUser = value; }
     /**
      * The error message if the invite was not successful
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field errorMessage
      */
     public String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message if the invite was not successful
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for errorMessage
      */
     public void setErrorMessage(String value) { this.errorMessage = value; }
 };

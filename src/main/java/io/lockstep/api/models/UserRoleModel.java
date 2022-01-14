@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
+/**
+ * Represents a role for a user
+ */
 public class UserRoleModel
 {
     private String userRoleId;
@@ -31,14 +35,14 @@ public class UserRoleModel
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field userRoleId
      */
     public String getUserRoleId() { return this.userRoleId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for userRoleId
      */
     public void setUserRoleId(String value) { this.userRoleId = value; }
     /**
@@ -47,7 +51,7 @@ public class UserRoleModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field groupKey
      */
     public String getGroupKey() { return this.groupKey; }
     /**
@@ -56,67 +60,67 @@ public class UserRoleModel
      *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for groupKey
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The name of the user role
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field userRoleName
      */
     public String getUserRoleName() { return this.userRoleName; }
     /**
      * The name of the user role
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for userRoleName
      */
     public void setUserRoleName(String value) { this.userRoleName = value; }
     /**
      * The date that the user role was created
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field created
      */
     public Date getCreated() { return this.created; }
     /**
      * The date that the user role was created
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
      * The ID of the user who created the user role
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the user role
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
      * The date the user role was last modified
      *
-     * @return a {@link java.util.Date} object.
+     * @return The field modified
      */
     public Date getModified() { return this.modified; }
     /**
      * The date the user role was last modified
      *
-     * @param value a {@link java.util.Date} object.
+     * @param value The new value for modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
      * The ID of the user who last modified the user role
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the user role
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
 };

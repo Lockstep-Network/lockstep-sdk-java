@@ -26,14 +26,18 @@ import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CustomerSummaryModel;
 import io.lockstep.api.models.CustomerDetailsModel;
+
+/**
+ * Contains all methods related to Companies
+ */
 public class CompaniesClient
 {
     private LockstepApi client;
 
     /**
-     * <p>Constructor for CompaniesClient.</p>
+     * Constructor for method collection
      *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public CompaniesClient(LockstepApi client) {
         this.client = client;
@@ -44,9 +48,9 @@ public class CompaniesClient
      *
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CompanyModel> retrieveCompany(String id, String include)
     {
@@ -63,9 +67,9 @@ public class CompaniesClient
      *
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
-     * @param body - A list of changes to apply to this Company
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @param body A list of changes to apply to this Company
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CompanyModel> updateCompany(String id, Object body)
     {
@@ -82,8 +86,8 @@ public class CompaniesClient
      *
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActionResultModel> disableCompany(String id)
     {
@@ -97,8 +101,8 @@ public class CompaniesClient
      *
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param body - The Companies to create
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param body The Companies to create
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CompanyModel[]> createCompanies(CompanyModel[] body)
     {
@@ -114,12 +118,12 @@ public class CompaniesClient
      *
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
-     * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize - The page size for results (default 200, maximum of 10,000)
-     * @param pageNumber - The page number for results (default 0)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<CompanyModel>> queryCompanies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
@@ -137,12 +141,12 @@ public class CompaniesClient
      *
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.  The Customer Summary View represents a slightly different view of the data and includes some extra fields that might be useful. For more information, see the data format of the Customer Summary Model.  See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
-     * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize - The page size for results (default 200, maximum of 10,000)
-     * @param pageNumber - The page number for results (default 0)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
@@ -158,8 +162,8 @@ public class CompaniesClient
     /**
      * Retrieves the Customer Details specified by this unique identifier, optionally including nested data sets.  The Customer Detail View represents a slightly different view of the data and includes some extra fields that might be useful. For more information, see the data format of the Customer Detail Model.  See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
-     * @param id - The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CustomerDetailsModel> retrieveCustomerDetail(String id)
     {

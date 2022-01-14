@@ -15,6 +15,12 @@
 
 
 package io.lockstep.api.models;
+
+
+/**
+ * Represents all the possible data sent as a part of the provisioning post.
+ * Only send required fields for the given connector.
+ */
 public class ErpInfoDataModel
 {
     private String authCode;
@@ -25,38 +31,38 @@ public class ErpInfoDataModel
      * The authorization code returned from the first step of the OAuth2 flow
      * https://oauth.net/2/grant-types/authorization-code/
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field authCode
      */
     public String getAuthCode() { return this.authCode; }
     /**
      * The authorization code returned from the first step of the OAuth2 flow
      * https://oauth.net/2/grant-types/authorization-code/
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for authCode
      */
     public void setAuthCode(String value) { this.authCode = value; }
     /**
      * The realm id of the account being granted permissions to access
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field realmId
      */
     public String getRealmId() { return this.realmId; }
     /**
      * The realm id of the account being granted permissions to access
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for realmId
      */
     public void setRealmId(String value) { this.realmId = value; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field redirectUri
      */
     public String getRedirectUri() { return this.redirectUri; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *
-     * @param value a {@link java.lang.String} object.
+     * @param value The new value for redirectUri
      */
     public void setRedirectUri(String value) { this.redirectUri = value; }
 };
