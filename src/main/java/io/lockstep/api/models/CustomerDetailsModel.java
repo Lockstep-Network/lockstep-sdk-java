@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Contains customer details data
+ */
 public class CustomerDetailsModel
 {
     private String groupKey;

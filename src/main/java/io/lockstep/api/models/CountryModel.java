@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Country model for ISO-3166
+ */
 public class CountryModel
 {
     private String name;

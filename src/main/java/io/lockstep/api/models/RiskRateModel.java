@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents a risk rate calculation for a single month
+ */
 public class RiskRateModel
 {
     private String groupKey;

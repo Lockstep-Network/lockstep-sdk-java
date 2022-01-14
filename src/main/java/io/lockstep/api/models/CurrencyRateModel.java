@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents a currency rate for specific currencies and date
+ */
 public class CurrencyRateModel
 {
     private String sourceCurrency;

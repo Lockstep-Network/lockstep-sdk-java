@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents an aging record
+ */
 public class AgingModel
 {
     private Integer bucket;

@@ -27,6 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CustomerSummaryModel;
 import io.lockstep.api.models.CustomerDetailsModel;
 
+/**
+ * Contains all methods related to Companies
+ */
 public class CompaniesClient
 {
     private LockstepApi client;

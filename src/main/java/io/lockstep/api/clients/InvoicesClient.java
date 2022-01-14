@@ -27,6 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.InvoiceSummaryModel;
 import io.lockstep.api.models.AtRiskInvoiceSummaryModel;
 
+/**
+ * Contains all methods related to Invoices
+ */
 public class InvoicesClient
 {
     private LockstepApi client;

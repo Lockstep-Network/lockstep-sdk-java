@@ -21,6 +21,9 @@ import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
 import io.lockstep.api.models.LeadModel;
 
+/**
+ * Contains all methods related to Leads
+ */
 public class LeadsClient
 {
     private LockstepApi client;

@@ -27,6 +27,9 @@ import io.lockstep.api.models.CurrencyModel;
 import io.lockstep.api.models.StateModel;
 import io.lockstep.api.models.ErpModel;
 
+/**
+ * Contains all methods related to Definitions
+ */
 public class DefinitionsClient
 {
     private LockstepApi client;

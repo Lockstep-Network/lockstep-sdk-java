@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Model used to submit a transfer ownership request
+ */
 public class TransferOwnerSubmitModel
 {
     private String targetUserId;

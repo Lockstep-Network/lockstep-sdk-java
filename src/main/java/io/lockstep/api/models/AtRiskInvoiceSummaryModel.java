@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Contains summarized data for an invoice
+ */
 public class AtRiskInvoiceSummaryModel
 {
     private Date reportDate;

@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Contains information about a credit memo invoice
+ */
 public class CreditMemoInvoiceModel
 {
     private String groupKey;

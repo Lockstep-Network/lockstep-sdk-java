@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Model to invite a new user to your accounting group
+ */
 public class InviteSubmitModel
 {
     private String email;

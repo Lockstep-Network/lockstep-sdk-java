@@ -25,6 +25,9 @@ import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.ActivityStreamItemModel;
 
+/**
+ * Contains all methods related to Activities
+ */
 public class ActivitiesClient
 {
     private LockstepApi client;

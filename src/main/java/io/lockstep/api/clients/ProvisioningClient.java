@@ -23,6 +23,9 @@ import io.lockstep.api.models.ProvisioningResponseModel;
 import io.lockstep.api.models.ProvisioningModel;
 import io.lockstep.api.models.ProvisioningFinalizeRequestModel;
 
+/**
+ * Contains all methods related to Provisioning
+ */
 public class ProvisioningClient
 {
     private LockstepApi client;

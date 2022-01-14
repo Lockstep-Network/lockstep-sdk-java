@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Contains group level payment data.
+ */
 public class PaymentDetailHeaderModel
 {
     private String groupKey;

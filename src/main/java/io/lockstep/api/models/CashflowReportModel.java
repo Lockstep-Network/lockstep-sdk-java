@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents the cashflow report based on a timeframe
+ */
 public class CashflowReportModel
 {
     private Integer timeframe;

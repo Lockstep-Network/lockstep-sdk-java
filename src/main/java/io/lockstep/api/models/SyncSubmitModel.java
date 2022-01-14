@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Model representing information for a sync request
+ */
 public class SyncSubmitModel
 {
     private String appEnrollmentId;

@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents an ISO-4217 currency code definition
+ */
 public class CurrencyModel
 {
     private String alphaCode;

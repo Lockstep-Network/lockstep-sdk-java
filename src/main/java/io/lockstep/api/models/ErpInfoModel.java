@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents the ERP object sent in a provisioning request
+ */
 public class ErpInfoModel
 {
     private String appId;

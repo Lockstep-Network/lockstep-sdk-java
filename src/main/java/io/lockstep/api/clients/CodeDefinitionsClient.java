@@ -24,6 +24,9 @@ import io.lockstep.api.models.CodeDefinitionModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to CodeDefinitions
+ */
 public class CodeDefinitionsClient
 {
     private LockstepApi client;

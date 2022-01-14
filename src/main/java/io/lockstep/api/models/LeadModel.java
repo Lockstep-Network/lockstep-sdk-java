@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents leads for creating new ERP connectors
+ */
 public class LeadModel
 {
     private String leadId;

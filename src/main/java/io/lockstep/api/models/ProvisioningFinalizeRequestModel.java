@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents the data to finalize onboarding for a user
+ */
 public class ProvisioningFinalizeRequestModel
 {
     private String fullName;

@@ -24,6 +24,9 @@ import io.lockstep.api.models.ApiKeyModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to ApiKeys
+ */
 public class ApiKeysClient
 {
     private LockstepApi client;

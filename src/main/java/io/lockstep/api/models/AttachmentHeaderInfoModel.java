@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Aggregated Attachment status information.
+ */
 public class AttachmentHeaderInfoModel
 {
     private String groupKey;

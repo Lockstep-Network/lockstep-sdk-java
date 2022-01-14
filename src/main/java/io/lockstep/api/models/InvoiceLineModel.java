@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents a line in an invoice
+ */
 public class InvoiceLineModel
 {
     private String invoiceLineId;

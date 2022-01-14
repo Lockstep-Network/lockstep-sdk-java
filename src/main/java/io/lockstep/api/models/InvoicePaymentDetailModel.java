@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * View to return Payment Detail information for a given Invoice record.
+ */
 public class InvoicePaymentDetailModel
 {
     private String groupKey;

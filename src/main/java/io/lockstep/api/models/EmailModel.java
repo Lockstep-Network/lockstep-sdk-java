@@ -18,6 +18,12 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * An Email represents a communication sent from one company to another.  The creator of the email is identified
+ * by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field.
+ * The Email Model represents an email and a number of different metadata attributes related to the creation,
+ * storage, and ownership of the email.
+ */
 public class EmailModel
 {
     private String emailId;

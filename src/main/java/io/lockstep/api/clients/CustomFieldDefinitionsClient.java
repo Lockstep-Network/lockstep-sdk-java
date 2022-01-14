@@ -24,6 +24,9 @@ import io.lockstep.api.models.CustomFieldDefinitionModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to CustomFieldDefinitions
+ */
 public class CustomFieldDefinitionsClient
 {
     private LockstepApi client;

@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents the daily sales outstanding report
+ */
 public class DailySalesOutstandingReportModel
 {
     private Date timeframe;

@@ -18,6 +18,12 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * A Contact contains information about a person or role within a Company.
+ * You can use Contacts to track information about who is responsible for a specific project,
+ * who handles invoices, or information about which role at a particular customer or
+ * vendor you should speak with about invoices.
+ */
 public class ContactModel
 {
     private String contactId;

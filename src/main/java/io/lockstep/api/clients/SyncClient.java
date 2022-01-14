@@ -25,6 +25,9 @@ import io.lockstep.api.models.SyncSubmitModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to Sync
+ */
 public class SyncClient
 {
     private LockstepApi client;

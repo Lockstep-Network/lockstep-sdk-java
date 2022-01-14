@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents the data sent during the onboarding flow
+ */
 public class ProvisioningModel
 {
     private String fullName;

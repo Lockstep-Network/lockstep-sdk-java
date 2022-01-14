@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Aggregated Accounts Receivable information.
+ */
 public class ArHeaderInfoModel
 {
     private String groupKey;

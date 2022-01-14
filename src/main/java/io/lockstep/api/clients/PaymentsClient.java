@@ -28,6 +28,9 @@ import io.lockstep.api.models.PaymentSummaryModel;
 import io.lockstep.api.models.PaymentDetailHeaderModel;
 import io.lockstep.api.models.PaymentDetailModel;
 
+/**
+ * Contains all methods related to Payments
+ */
 public class PaymentsClient
 {
     private LockstepApi client;

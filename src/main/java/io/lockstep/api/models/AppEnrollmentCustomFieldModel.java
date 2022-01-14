@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * App enrollment and custom field merged into one
+ */
 public class AppEnrollmentCustomFieldModel
 {
     private String appEnrollmentId;

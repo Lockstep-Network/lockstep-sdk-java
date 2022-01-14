@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents unsupported ERP systems
+ */
 public class ErpModel
 {
     private String erpSystemId;

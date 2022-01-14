@@ -17,6 +17,10 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents all the possible data sent as a part of the provisioning post.
+ * Only send required fields for the given connector.
+ */
 public class ErpInfoDataModel
 {
     private String authCode;

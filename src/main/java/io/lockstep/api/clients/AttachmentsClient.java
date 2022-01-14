@@ -26,6 +26,9 @@ import io.lockstep.api.models.UriModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to Attachments
+ */
 public class AttachmentsClient
 {
     private LockstepApi client;

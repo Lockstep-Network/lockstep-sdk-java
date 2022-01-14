@@ -24,6 +24,9 @@ import io.lockstep.api.models.UserRoleModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to UserRoles
+ */
 public class UserRolesClient
 {
     private LockstepApi client;

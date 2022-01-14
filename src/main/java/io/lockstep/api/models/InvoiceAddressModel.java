@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents a single address for an invoice
+ */
 public class InvoiceAddressModel
 {
     private String invoiceAddressId;

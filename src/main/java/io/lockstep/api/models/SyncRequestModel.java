@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Represents a user request to sync data
+ */
 public class SyncRequestModel
 {
     private String syncRequestId;

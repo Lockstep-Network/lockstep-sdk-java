@@ -29,6 +29,9 @@ import io.lockstep.api.models.AgingModel;
 import io.lockstep.api.models.ArAgingHeaderInfoModel;
 import io.lockstep.api.models.AttachmentHeaderInfoModel;
 
+/**
+ * Contains all methods related to Reports
+ */
 public class ReportsClient
 {
     private LockstepApi client;

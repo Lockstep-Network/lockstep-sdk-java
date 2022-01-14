@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * State model for ISO-3166-2
+ */
 public class StateModel
 {
     private String name;

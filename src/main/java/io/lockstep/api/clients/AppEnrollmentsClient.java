@@ -26,6 +26,9 @@ import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.AppEnrollmentCustomFieldModel;
 
+/**
+ * Contains all methods related to AppEnrollments
+ */
 public class AppEnrollmentsClient
 {
     private LockstepApi client;

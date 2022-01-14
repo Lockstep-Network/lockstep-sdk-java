@@ -18,6 +18,13 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * A Company represents a customer, a vendor, or a company within the organization of the account holder.
+ * Companies can have parents and children, representing an organizational hierarchy of corporate entities.
+ * You can use Companies to track projects and financial data under this Company label.
+ *
+ * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
+ */
 public class CompanyModel
 {
     private String companyId;

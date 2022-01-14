@@ -18,6 +18,14 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * An AppEnrollment represents an app that has been enrolled to the current account.  When you sign up for an
+ * app using the Lockstep Platform, you obtain an enrollment record for that app.  Example types of apps include
+ * connectors and feature enhancement apps. The App Enrollment object contains information about this app, its
+ * configuration, and settings.
+ *
+ * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
+ */
 public class AppEnrollmentModel
 {
     private String appEnrollmentId;

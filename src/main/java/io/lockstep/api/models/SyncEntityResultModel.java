@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Contains information about a sync process for an entity.
+ */
 public class SyncEntityResultModel
 {
     private Integer insertCount;

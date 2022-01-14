@@ -24,6 +24,9 @@ import io.lockstep.api.models.CurrencyRateModel;
 import java.util.Date;
 import io.lockstep.api.models.BulkCurrencyConversionModel;
 
+/**
+ * Contains all methods related to Currencies
+ */
 public class CurrenciesClient
 {
     private LockstepApi client;

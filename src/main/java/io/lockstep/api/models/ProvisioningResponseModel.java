@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents the response to either a successful or failed account provisioning
+ */
 public class ProvisioningResponseModel
 {
     private String userName;

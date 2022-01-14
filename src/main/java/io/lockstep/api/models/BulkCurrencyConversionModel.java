@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Input format used for bulk conversion route
+ */
 public class BulkCurrencyConversionModel
 {
     private Date date;

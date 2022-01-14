@@ -24,6 +24,9 @@ import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.InvoiceHistoryModel;
 
 
+/**
+ * Contains all methods related to InvoiceHistory
+ */
 public class InvoiceHistoryClient
 {
     private LockstepApi client;

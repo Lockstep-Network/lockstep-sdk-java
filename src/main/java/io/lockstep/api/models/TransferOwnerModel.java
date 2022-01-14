@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Model from the transfer ownership process.
+ */
 public class TransferOwnerModel
 {
     private UserAccountModel previousOwner;

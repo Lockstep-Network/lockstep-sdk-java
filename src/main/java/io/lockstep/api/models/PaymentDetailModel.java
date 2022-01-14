@@ -18,6 +18,9 @@ package io.lockstep.api.models;
 
 import java.util.Date;
 
+/**
+ * Contains detailed information about a Payment.
+ */
 public class PaymentDetailModel
 {
     private String groupKey;

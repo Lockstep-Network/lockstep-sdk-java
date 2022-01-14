@@ -30,6 +30,9 @@ import io.lockstep.api.models.TransferOwnerSubmitModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to UserAccounts
+ */
 public class UserAccountsClient
 {
     private LockstepApi client;

@@ -23,6 +23,9 @@ import io.lockstep.api.models.StatusModel;
 import io.lockstep.api.models.TestTimeoutException;
 
 
+/**
+ * Contains all methods related to Status
+ */
 public class StatusClient
 {
     private LockstepApi client;

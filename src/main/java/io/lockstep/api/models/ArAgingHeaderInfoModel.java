@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Aggregated Accounts Receivable Aging information.
+ */
 public class ArAgingHeaderInfoModel
 {
     private String groupKey;

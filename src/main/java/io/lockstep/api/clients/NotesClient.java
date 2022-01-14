@@ -25,6 +25,9 @@ import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to Notes
+ */
 public class NotesClient
 {
     private LockstepApi client;

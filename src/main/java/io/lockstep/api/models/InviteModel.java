@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Model from the User invite process
+ */
 public class InviteModel
 {
     private String email;

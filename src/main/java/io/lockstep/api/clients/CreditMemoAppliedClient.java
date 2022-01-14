@@ -24,6 +24,9 @@ import io.lockstep.api.models.CreditMemoAppliedModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Contains all methods related to CreditMemoApplied
+ */
 public class CreditMemoAppliedClient
 {
     private LockstepApi client;

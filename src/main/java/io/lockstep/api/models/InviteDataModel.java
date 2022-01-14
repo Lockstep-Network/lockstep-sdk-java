@@ -17,6 +17,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Model containing information about a user for the invite/onboarding process.
+ */
 public class InviteDataModel
 {
     private String email;
