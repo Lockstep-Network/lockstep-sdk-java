@@ -109,106 +109,158 @@ public class LockstepApi {
     }
 
     /**
+     * A collection of Lockstep API methods relating to Activities
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Activities client} methods in the Lockstep Platform API.
      */
     public ActivitiesClient getActivitiesClient() { return this.activities; }
     /**
+     * A collection of Lockstep API methods relating to ApiKeys
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.ApiKeys client} methods in the Lockstep Platform API.
      */
     public ApiKeysClient getApiKeysClient() { return this.apiKeys; }
     /**
+     * A collection of Lockstep API methods relating to AppEnrollments
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.AppEnrollments client} methods in the Lockstep Platform API.
      */
     public AppEnrollmentsClient getAppEnrollmentsClient() { return this.appEnrollments; }
     /**
+     * A collection of Lockstep API methods relating to Applications
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Applications client} methods in the Lockstep Platform API.
      */
     public ApplicationsClient getApplicationsClient() { return this.applications; }
     /**
+     * A collection of Lockstep API methods relating to Attachments
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Attachments client} methods in the Lockstep Platform API.
      */
     public AttachmentsClient getAttachmentsClient() { return this.attachments; }
     /**
+     * A collection of Lockstep API methods relating to CodeDefinitions
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.CodeDefinitions client} methods in the Lockstep Platform API.
      */
     public CodeDefinitionsClient getCodeDefinitionsClient() { return this.codeDefinitions; }
     /**
+     * A collection of Lockstep API methods relating to Companies
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Companies client} methods in the Lockstep Platform API.
      */
     public CompaniesClient getCompaniesClient() { return this.companies; }
     /**
+     * A collection of Lockstep API methods relating to Contacts
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Contacts client} methods in the Lockstep Platform API.
      */
     public ContactsClient getContactsClient() { return this.contacts; }
     /**
+     * A collection of Lockstep API methods relating to CreditMemoApplied
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.CreditMemoApplied client} methods in the Lockstep Platform API.
      */
     public CreditMemoAppliedClient getCreditMemoAppliedClient() { return this.creditMemoApplied; }
     /**
+     * A collection of Lockstep API methods relating to Currencies
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Currencies client} methods in the Lockstep Platform API.
      */
     public CurrenciesClient getCurrenciesClient() { return this.currencies; }
     /**
+     * A collection of Lockstep API methods relating to CustomFieldDefinitions
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldDefinitions client} methods in the Lockstep Platform API.
      */
     public CustomFieldDefinitionsClient getCustomFieldDefinitionsClient() { return this.customFieldDefinitions; }
     /**
+     * A collection of Lockstep API methods relating to CustomFieldValues
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldValues client} methods in the Lockstep Platform API.
      */
     public CustomFieldValuesClient getCustomFieldValuesClient() { return this.customFieldValues; }
     /**
+     * A collection of Lockstep API methods relating to Definitions
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Definitions client} methods in the Lockstep Platform API.
      */
     public DefinitionsClient getDefinitionsClient() { return this.definitions; }
     /**
+     * A collection of Lockstep API methods relating to Emails
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Emails client} methods in the Lockstep Platform API.
      */
     public EmailsClient getEmailsClient() { return this.emails; }
     /**
+     * A collection of Lockstep API methods relating to InvoiceHistory
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistory client} methods in the Lockstep Platform API.
      */
     public InvoiceHistoryClient getInvoiceHistoryClient() { return this.invoiceHistory; }
     /**
+     * A collection of Lockstep API methods relating to Invoices
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Invoices client} methods in the Lockstep Platform API.
      */
     public InvoicesClient getInvoicesClient() { return this.invoices; }
     /**
+     * A collection of Lockstep API methods relating to Leads
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Leads client} methods in the Lockstep Platform API.
      */
     public LeadsClient getLeadsClient() { return this.leads; }
     /**
+     * A collection of Lockstep API methods relating to Notes
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Notes client} methods in the Lockstep Platform API.
      */
     public NotesClient getNotesClient() { return this.notes; }
     /**
+     * A collection of Lockstep API methods relating to PaymentApplications
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.PaymentApplications client} methods in the Lockstep Platform API.
      */
     public PaymentApplicationsClient getPaymentApplicationsClient() { return this.paymentApplications; }
     /**
+     * A collection of Lockstep API methods relating to Payments
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Payments client} methods in the Lockstep Platform API.
      */
     public PaymentsClient getPaymentsClient() { return this.payments; }
     /**
+     * A collection of Lockstep API methods relating to Provisioning
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Provisioning client} methods in the Lockstep Platform API.
      */
     public ProvisioningClient getProvisioningClient() { return this.provisioning; }
     /**
+     * A collection of Lockstep API methods relating to Reports
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Reports client} methods in the Lockstep Platform API.
      */
     public ReportsClient getReportsClient() { return this.reports; }
     /**
+     * A collection of Lockstep API methods relating to Status
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Status client} methods in the Lockstep Platform API.
      */
     public StatusClient getStatusClient() { return this.status; }
     /**
+     * A collection of Lockstep API methods relating to Sync
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.Sync client} methods in the Lockstep Platform API.
      */
     public SyncClient getSyncClient() { return this.sync; }
     /**
+     * A collection of Lockstep API methods relating to UserAccounts
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.UserAccounts client} methods in the Lockstep Platform API.
      */
     public UserAccountsClient getUserAccountsClient() { return this.userAccounts; }
     /**
+     * A collection of Lockstep API methods relating to UserRoles
+     *
      * @return A collection containing the {@link io.lockstep.api.clients.UserRoles client} methods in the Lockstep Platform API.
      */
     public UserRolesClient getUserRolesClient() { return this.userRoles; }
