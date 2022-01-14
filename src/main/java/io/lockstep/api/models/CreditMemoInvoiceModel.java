@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -16,7 +17,6 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
-
 public class CreditMemoInvoiceModel
 {
     private String groupKey;
@@ -35,107 +35,155 @@ public class CreditMemoInvoiceModel
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     * 
+     *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     * 
+     *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getCreditMemoAppliedId() { return this.creditMemoAppliedId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setCreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
     /**
      * The id of the invoice
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
      * The id of the invoice
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The id of the credit memo invoice
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
     /**
      * The id of the credit memo invoice
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setCreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
     /**
      * Date invoice applied to credit memo.
+     *
+     * @return a {@link java.util.Date} object.
      */
     public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date invoice applied to credit memo.
+     *
+     * @param value a {@link java.util.Date} object.
      */
     public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to credit memo.
+     *
+     * @return a {@link java.lang.Double} object.
      */
     public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
      * Amount applied to credit memo.
+     *
+     * @param value a {@link java.lang.Double} object.
      */
     public void setCreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getReferenceCode() { return this.referenceCode; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The ID number of the company that created this invoice.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the company that created this invoice.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setCustomerId(String value) { this.customerId = value; }
     /**
      * A code identifying the status of this invoice.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getInvoiceStatusCode() { return this.invoiceStatusCode; }
     /**
      * A code identifying the status of this invoice.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setInvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
+     *
+     * @return a {@link java.lang.Double} object.
      */
     public Double getTotalAmount() { return this.totalAmount; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
+     *
+     * @param value a {@link java.lang.Double} object.
      */
     public void setTotalAmount(Double value) { this.totalAmount = value; }
     /**
      * The remaining balance value of this invoice.
+     *
+     * @return a {@link java.lang.Double} object.
      */
     public Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
     /**
      * The remaining balance value of this invoice.
+     *
+     * @param value a {@link java.lang.Double} object.
      */
     public void setOutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
 };

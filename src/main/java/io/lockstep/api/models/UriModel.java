@@ -16,14 +16,27 @@ package io.lockstep.api.models;
 
 /**
  * Not intended to be used
+ *
+ * @author jkirk
+ * @version $Id: $Id
  */
 public class UriModel {
     private String uri;   
 
+    /**
+     * <p>Getter for the field <code>uri</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getUri() {
         return this.uri;
     }
 
+    /**
+     * <p>Setter for the field <code>uri</code>.</p>
+     *
+     * @param uri a {@link java.lang.String} object.
+     */
     public void setUri(String uri) {
         this.uri = uri;
     }

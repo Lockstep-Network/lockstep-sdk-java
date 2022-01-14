@@ -16,15 +16,28 @@ package io.lockstep.api.models;
 
 /**
  * Represents a failed request.
+ *
+ * @author jkirk
+ * @version $Id: $Id
  */
 public class ActionResultModel
 {
     private String[] messages;
 
+    /**
+     * <p>Getter for the field <code>messages</code>.</p>
+     *
+     * @return an array of {@link java.lang.String} objects.
+     */
     public String[] getMessages() {
         return this.messages;
     }
 
+    /**
+     * <p>Setter for the field <code>messages</code>.</p>
+     *
+     * @param messages an array of {@link java.lang.String} objects.
+     */
     public void setMessages(String[] messages) {
         this.messages = messages;
     }

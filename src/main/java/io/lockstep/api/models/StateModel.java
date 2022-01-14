@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -14,8 +15,6 @@
 
 
 package io.lockstep.api.models;
-
-
 public class StateModel
 {
     private String name;
@@ -24,26 +23,38 @@ public class StateModel
 
     /**
      * Name of the state
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getName() { return this.name; }
     /**
      * Name of the state
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setName(String value) { this.name = value; }
     /**
      * 2 letter alphabetic code for the given state
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getAlpha2() { return this.alpha2; }
     /**
      * 2 letter alphabetic code for the given state
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setAlpha2(String value) { this.alpha2 = value; }
     /**
      * A different name for a state
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getAliases() { return this.aliases; }
     /**
      * A different name for a state
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setAliases(String value) { this.aliases = value; }
 };

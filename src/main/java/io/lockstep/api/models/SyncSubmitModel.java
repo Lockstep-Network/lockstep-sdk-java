@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -14,18 +15,20 @@
 
 
 package io.lockstep.api.models;
-
-
 public class SyncSubmitModel
 {
     private String appEnrollmentId;
 
     /**
      * The identifier of the app enrollment
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The identifier of the app enrollment
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

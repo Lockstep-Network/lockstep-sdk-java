@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -14,8 +15,6 @@
 
 
 package io.lockstep.api.models;
-
-
 public class ErpModel
 {
     private String erpSystemId;
@@ -24,26 +23,38 @@ public class ErpModel
 
     /**
      * Unique ID for this ERP
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getErpSystemId() { return this.erpSystemId; }
     /**
      * Unique ID for this ERP
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setErpSystemId(String value) { this.erpSystemId = value; }
     /**
      * Name of ERP
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getName() { return this.name; }
     /**
      * Name of ERP
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setName(String value) { this.name = value; }
     /**
      * Flag to indicate if ERP is supported
+     *
+     * @return a {@link java.lang.Boolean} object.
      */
     public Boolean getIsSupported() { return this.isSupported; }
     /**
      * Flag to indicate if ERP is supported
+     *
+     * @param value a {@link java.lang.Boolean} object.
      */
     public void setIsSupported(Boolean value) { this.isSupported = value; }
 };

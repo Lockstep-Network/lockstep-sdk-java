@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -14,8 +15,6 @@
 
 
 package io.lockstep.api.models;
-
-
 public class ProvisioningFinalizeRequestModel
 {
     private String fullName;
@@ -26,42 +25,62 @@ public class ProvisioningFinalizeRequestModel
 
     /**
      * The full name of the user
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getFullName() { return this.fullName; }
     /**
      * The full name of the user
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setFullName(String value) { this.fullName = value; }
     /**
      * The time zone of the user
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getTimeZone() { return this.timeZone; }
     /**
      * The time zone of the user
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setTimeZone(String value) { this.timeZone = value; }
     /**
      * The default currency of the user
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getDefaultCurrency() { return this.defaultCurrency; }
     /**
      * The default currency of the user
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setDefaultCurrency(String value) { this.defaultCurrency = value; }
     /**
      * The company information for the user and group
+     *
+     * @return a {@link io.lockstep.api.models.CompanyModel} object.
      */
     public CompanyModel getCompany() { return this.company; }
     /**
      * The company information for the user and group
+     *
+     * @param value a {@link io.lockstep.api.models.CompanyModel} object.
      */
     public void setCompany(CompanyModel value) { this.company = value; }
     /**
      * Optional connector information needed to enroll user to their email connector
+     *
+     * @return a {@link io.lockstep.api.models.ErpInfoModel} object.
      */
     public ErpInfoModel getEmailConnector() { return this.emailConnector; }
     /**
      * Optional connector information needed to enroll user to their email connector
+     *
+     * @param value a {@link io.lockstep.api.models.ErpInfoModel} object.
      */
     public void setEmailConnector(ErpInfoModel value) { this.emailConnector = value; }
 };

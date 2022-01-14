@@ -16,6 +16,9 @@ package io.lockstep.api.models;
 
 /**
  * Not intended to be used
+ *
+ * @author jkirk
+ * @version $Id: $Id
  */
 public class TestTimeoutException extends ErrorResult
 {

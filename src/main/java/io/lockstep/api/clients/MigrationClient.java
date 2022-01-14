@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -20,18 +21,23 @@ import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
 import io.lockstep.api.models.MigrationResultModel;
 import io.lockstep.api.models.AvailableMigrationsModel;
-
 public class MigrationClient
 {
     private LockstepApi client;
 
+    /**
+     * <p>Constructor for MigrationClient.</p>
+     *
+     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     */
     public MigrationClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Migrates all customer data from the Lockstep Collect system to the API, including all stored data for contacts, companies, payments, and invoices.
-     * 
+     *
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<MigrationResultModel> migrateData()
     {
@@ -41,7 +47,8 @@ public class MigrationClient
 
     /**
      * Lists all of the customer, contact, payment, and invoice data currently available for Migration.
-     * 
+     *
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<AvailableMigrationsModel> listMigrations()
     {

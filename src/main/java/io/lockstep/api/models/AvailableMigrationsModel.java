@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -14,18 +15,20 @@
 
 
 package io.lockstep.api.models;
-
-
 public class AvailableMigrationsModel
 {
     private AvailableGroup[] migrations;
 
     /**
      * Indicates which records are available for migration
+     *
+     * @return an array of {@link io.lockstep.api.models.AvailableGroup} objects.
      */
     public AvailableGroup[] getMigrations() { return this.migrations; }
     /**
      * Indicates which records are available for migration
+     *
+     * @param value an array of {@link io.lockstep.api.models.AvailableGroup} objects.
      */
     public void setMigrations(AvailableGroup[] value) { this.migrations = value; }
 };

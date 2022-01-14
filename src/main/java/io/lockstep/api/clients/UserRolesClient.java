@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -22,20 +23,25 @@ import io.lockstep.api.models.UserRoleModel;
 
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
-
 public class UserRolesClient
 {
     private LockstepApi client;
 
+    /**
+     * <p>Constructor for UserRolesClient.</p>
+     *
+     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     */
     public UserRolesClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Retrieves the User Role with this identifier.
-     * 
+     *
      * @param id - The unique ID number of the User Role to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<UserRoleModel> retrieveUserRole(String id, String include)
     {
@@ -47,12 +53,13 @@ public class UserRolesClient
 
     /**
      * Queries User Roles for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
-     * 
+     *
      * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<FetchResult<UserRoleModel>> queryUserRoles(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

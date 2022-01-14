@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -23,21 +24,26 @@ import io.lockstep.api.models.SyncSubmitModel;
 
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
-
 public class SyncClient
 {
     private LockstepApi client;
 
+    /**
+     * <p>Constructor for SyncClient.</p>
+     *
+     * @param client a {@link io.lockstep.api.LockstepApi} object.
+     */
     public SyncClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Requests a new Sync task from the Application specified in the request and returns a token that can be used to check the progress and status of the task.
-     * 
+     *
      * A Sync task represents an action performed by an Application for a particular account.  An Application can provide many different tasks as part of their capabilities.  Sync tasks are executed in the background and will continue running after they are created.  Use one of the creation APIs to request execution of a task. To check on the progress of the task, call GetSync or QuerySync.
-     * 
+     *
      * @param body - Information about the Sync to execute
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<SyncRequestModel> createSync(SyncSubmitModel body)
     {
@@ -48,9 +54,10 @@ public class SyncClient
 
     /**
      * Requests a new Sync task from a ZIP file you provide.  This ZIP file can contain one or more files with data from the customer's platform.  Individual files can be in the format CSV or JSONL (JSON with Lines).
-     * 
+     *
      * A Sync task represents an action performed by an Application for a particular account.  An Application can provide many different tasks as part of their capabilities.  Sync tasks are executed in the background and will continue running after they are created.  Use one of the creation APIs to request execution of a task. To check on the progress of the task, call GetSync or QuerySync.
-     * 
+     *
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<SyncRequestModel> uploadSyncFile()
     {
@@ -60,7 +67,7 @@ public class SyncClient
 
     /**
      * Updates an existing Sync with the information supplied to this PATCH call.
-     * 
+     *
      * This API is restricted to internal service users and may not be called by customers or partners.
      * 
      * The PATCH method allows you to change specific values on the object while leaving other values alone.  As input you should supply a list of field names and new values.  For example, you can provide the field name "IsActive" and specify the new value "False"; this API will then change the value of IsActive to false.
@@ -69,6 +76,7 @@ public class SyncClient
      * 
      * @param id - The unique ID number of the Sync to update
      * @param body - A list of changes to apply to this Application
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<SyncRequestModel> updateSync(String id, Object body)
     {
@@ -85,6 +93,7 @@ public class SyncClient
      * 
      * @param id - The unique ID number of the Sync task to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Details
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<SyncRequestModel> retrieveSync(String id, String include)
     {
@@ -106,6 +115,7 @@ public class SyncClient
      * @param order - The sort order for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
     public LockstepResponse<FetchResult<SyncRequestModel>> querySyncs(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

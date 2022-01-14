@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -16,7 +17,6 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
-
 public class InvoicePaymentDetailModel
 {
     private String groupKey;
@@ -33,89 +33,129 @@ public class InvoicePaymentDetailModel
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     * 
+     *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     * 
+     *
      * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
      * The unique identifier of this PaymentApplied record.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getPaymentAppliedId() { return this.paymentAppliedId; }
     /**
      * The unique identifier of this PaymentApplied record.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setPaymentAppliedId(String value) { this.paymentAppliedId = value; }
     /**
      * The database id of the invoice
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
      * The database id of the invoice
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
      * The database id of the Payment.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getPaymentId() { return this.paymentId; }
     /**
      * The database id of the Payment.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setPaymentId(String value) { this.paymentId = value; }
     /**
      * Date Payment applied to Invoice.
+     *
+     * @return a {@link java.util.Date} object.
      */
     public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date Payment applied to Invoice.
+     *
+     * @param value a {@link java.util.Date} object.
      */
     public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to Invoice.
+     *
+     * @return a {@link java.lang.Double} object.
      */
     public Double getPaymentAppliedAmount() { return this.paymentAppliedAmount; }
     /**
      * Amount applied to Invoice.
+     *
+     * @param value a {@link java.lang.Double} object.
      */
     public void setPaymentAppliedAmount(Double value) { this.paymentAppliedAmount = value; }
     /**
      * An additional reference code that is sometimes used to identify this Payment.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getReferenceCode() { return this.referenceCode; }
     /**
      * An additional reference code that is sometimes used to identify this Payment.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setReferenceCode(String value) { this.referenceCode = value; }
     /**
      * The ID number of the Company (CompanyType = "Customer") that created this Payment.
+     *
+     * @return a {@link java.lang.String} object.
      */
     public String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the Company (CompanyType = "Customer") that created this Payment.
+     *
+     * @param value a {@link java.lang.String} object.
      */
     public void setCompanyId(String value) { this.companyId = value; }
     /**
      * The total value of this Payment.
+     *
+     * @return a {@link java.lang.Double} object.
      */
     public Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * The total value of this Payment.
+     *
+     * @param value a {@link java.lang.Double} object.
      */
     public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
      * The remaining balance value of this Payment.
+     *
+     * @return a {@link java.lang.Double} object.
      */
     public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * The remaining balance value of this Payment.
+     *
+     * @param value a {@link java.lang.Double} object.
      */
     public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
 };
