@@ -42,7 +42,6 @@ public class InvoiceHistoryClient
      *
      * An Invoice represents a bill sent from one company to another.  The Lockstep Platform tracks changes to each Invoice so that you can observe the changes over time.  You can view the InvoiceHistory list to monitor and observe the changes of this Invoice and track the dates when changes occurred.
      *
-     *
      * @param id The unique Lockstep Platform ID number of this invoice; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -57,7 +56,6 @@ public class InvoiceHistoryClient
      * Queries Invoice History for this account using the specified filtering, sorting, and pagination rules requested.
      *
      * An Invoice represents a bill sent from one company to another.  The Lockstep Platform tracks changes to each Invoice so that you can observe the changes over time.  You can view the InvoiceHistory list to monitor and observe the changes of this Invoice and track the dates when changes occurred.
-     *
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.

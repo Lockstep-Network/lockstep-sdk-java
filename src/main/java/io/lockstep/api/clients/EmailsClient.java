@@ -43,7 +43,6 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     *
      * @param id The unique ID number of the Email to retrieve.
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -63,7 +62,6 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     *
      * @param id The unique Lockstep Platform ID number of the email to update
      * @param body A list of changes to apply to this Email
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -80,7 +78,6 @@ public class EmailsClient
      * Deletes the Email referred to by this unique identifier.
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
-     *
      *
      * @param id The unique Lockstep Platform ID number of the Email to delete
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -114,7 +111,6 @@ public class EmailsClient
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
      *
-     *
      * @param body The array of emails to be created
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -131,7 +127,6 @@ public class EmailsClient
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
      *
      * An Email represents a communication sent from one company to another.  The creator of the email is identified by the `CompanyId` field, recipient(s) by the `EmailTo` field, and cc recipient(s) by the 'EmailCC' field. The Email Model represents an email and a number of different metadata attributes related to the creation, storage, and ownership of the email.
-     *
      *
      * @param filter The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, ResponseOrigin

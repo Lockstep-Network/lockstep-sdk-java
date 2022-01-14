@@ -43,7 +43,6 @@ public class NotesClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     *
      * @param id The unique ID number of the Note to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -60,7 +59,6 @@ public class NotesClient
      * Archives the Note with the unique ID specified.  A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
      *
      * @param id Note id to be archived
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -79,7 +77,6 @@ public class NotesClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     *
      * @param body The array of notes to be created
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -96,7 +93,6 @@ public class NotesClient
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.  A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
      *
      * @param filter The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future

@@ -46,7 +46,6 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     *
      * @param id The unique ID number of the Attachment to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -68,7 +67,6 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     *
      * @param id The unique Lockstep Platform ID number of the attachment to update
      * @param body A list of changes to apply to this Attachment
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -88,7 +86,6 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     *
      * @param id The unique ID number of the Attachment to be archived
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -106,7 +103,6 @@ public class AttachmentsClient
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
-     *
      * @param id The unique ID number of the Attachment whose URI will be returned
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -123,7 +119,6 @@ public class AttachmentsClient
      * An Attachment is a file that can be attached to various account attributes within Lockstep. Attachments can be used for invoices, bills, or any other external files that you wish to track and have access to. Attachments represents an Attachment and a number of different metadata attributes related to the creation, storage, and ownership of the Attachment.
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
      *
      * @param tableName The name of the type of object to which this Attachment will be linked
      * @param objectId The unique ID of the object to which this Attachment will be linked
@@ -145,7 +140,6 @@ public class AttachmentsClient
      * An Attachment is a file that can be attached to various account attributes within Lockstep. Attachments can be used for invoices, bills, or any other external files that you wish to track and have access to. Attachments represents an Attachment and a number of different metadata attributes related to the creation, storage, and ownership of the Attachment.
      *
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
      *
      * @param filter The filter to use to select from the list of available Attachments, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.

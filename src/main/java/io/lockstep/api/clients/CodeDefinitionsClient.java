@@ -42,7 +42,6 @@ public class CodeDefinitionsClient
      *
      * A CodeDefinition contains information around system code values and their definitions.
      *
-     *
      * @param id The unique Lockstep Platform ID number of this CodeDefinition
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -61,7 +60,6 @@ public class CodeDefinitionsClient
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
      *
      * A CodeDefinition contains information around system code values and their definitions.
-     *
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future

@@ -46,7 +46,6 @@ public class AppEnrollmentsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     *
      * @param id The unique ID number of the App Enrollment to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -68,7 +67,6 @@ public class AppEnrollmentsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     *
      * @param id The unique ID number of the App Enrollment to update
      * @param body A list of changes to apply to this App Enrollment
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -85,7 +83,6 @@ public class AppEnrollmentsClient
      * Deletes the App Enrollment referred to by this unique identifier. An App Enrollment represents an app that has been enrolled to the current account.  When you sign up for an app using the Lockstep Platform, you obtain an enrollment record for that app.  Example types of apps include connectors and feature enhancement apps. The App Enrollment object contains information about this app, its configuration, and settings.
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
-     *
      *
      * @param id The unique ID number of the App Enrollment to delete
      * @param removeEnrollmentData Option to remove all associated app enrollment data when deleting app enrollment (default false)
@@ -106,7 +103,6 @@ public class AppEnrollmentsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     *
      * @param body The App Enrollments to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -125,7 +121,6 @@ public class AppEnrollmentsClient
      * An App Enrollment represents an app that has been enrolled to the current account.  When you sign up for an app using the Lockstep Platform, you obtain an enrollment record for that app.  Example types of apps include connectors and feature enhancement apps. The App Enrollment object contains information about this app, its configuration, and settings.
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
-     *
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields, LastSync
@@ -153,7 +148,6 @@ public class AppEnrollmentsClient
      * An App Enrollment represents an app that has been enrolled to the current account.  When you sign up for an app using the Lockstep Platform, you obtain an enrollment record for that app.  Example types of apps include connectors and feature enhancement apps. The App Enrollment object contains information about this app, its configuration, and settings.
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
-     *
      *
      * @param id The unique ID number of the App Enrollment for which we retrieve custom fields
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results

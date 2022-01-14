@@ -45,7 +45,6 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     *
      * @param id The unique ID number of the Application to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -65,7 +64,6 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     *
      * @param id The unique ID number of the Application to update
      * @param body A list of changes to apply to this Application
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -82,7 +80,6 @@ public class ApplicationsClient
      * Deletes the Application referred to by this unique identifier.  Information about this Application is retained but after the DELETE call, this Application is no longer available for use on the Lockstep Platform.  An Application represents a feature available to customers within the Lockstep Platform.  You can create Applications by working with your Lockstep business development manager and publish them on the platform so that customers can browse and find your Application on the Lockstep Platform Marketplace.  When a customer adds an Application to their account, they obtain an AppEnrollment which represents that customer's instance of this Application.  The customer-specific AppEnrollment contains a customer's configuration data for the Application, which is not customer-specific.
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
-     *
      *
      * @param id The unique ID number of the Application to delete
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -101,7 +98,6 @@ public class ApplicationsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
-     *
      * @param body The Applications to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
@@ -118,7 +114,6 @@ public class ApplicationsClient
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.  An Application represents a feature available to customers within the Lockstep Platform.  You can create Applications by working with your Lockstep business development manager and publish them on the platform so that customers can browse and find your Application on the Lockstep Platform Marketplace.  When a customer adds an Application to their account, they obtain an AppEnrollment which represents that customer's instance of this Application.  The customer-specific AppEnrollment contains a customer's configuration data for the Application, which is not customer-specific.
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
-     *
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
