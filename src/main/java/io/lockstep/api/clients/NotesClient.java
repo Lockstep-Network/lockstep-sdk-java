@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -24,27 +23,27 @@ import io.lockstep.api.models.NoteModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+
 public class NotesClient
 {
     private LockstepApi client;
 
-    /**
-     * <p>Constructor for NotesClient.</p>
-     *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
-     */
+     /**
+      * Constructor for method collection
+      * @param client A {@link io.lockstep.api.LockstepApi} platform client
+      */
     public NotesClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Retrieves the note with the specified note identifier.  A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
-     *
+     * 
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
+     * 
      * @param id - The unique ID number of the Note to retrieve
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<NoteModel> retrieveNote(String id, String include)
     {
@@ -56,11 +55,11 @@ public class NotesClient
 
     /**
      * Archives the Note with the unique ID specified.  A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
-     *
+     * 
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
+     * 
      * @param id - Note id to be archived
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActionResultModel> archiveNote(String id)
     {
@@ -71,13 +70,13 @@ public class NotesClient
 
     /**
      * Creates one or more notes from the specified array of Note Models
-     *
+     * 
      * A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
-     *
+     * 
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
+     * 
      * @param body - The array of notes to be created
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<NoteModel[]> createNotes(NoteModel[] body)
     {
@@ -88,17 +87,17 @@ public class NotesClient
 
     /**
      * Queries Notes on the Lockstep Platform using the specified filtering, sorting, nested fetch, and pagination rules requested.
-     *
+     * 
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.  A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
-     *
+     * 
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
-     *
+     * 
      * @param filter - The filter to use to select from the list of available applications, in the [Searchlight query syntax](https://github.com/tspence/csharp-searchlight).
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order - The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize - The page size for results (default 200, maximum of 10,000)
      * @param pageNumber - The page number for results (default 0)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<NoteModel>> queryNotes(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {

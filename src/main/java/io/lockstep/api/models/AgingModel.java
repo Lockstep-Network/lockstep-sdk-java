@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class AgingModel
 {
     private Integer bucket;
@@ -22,39 +23,27 @@ public class AgingModel
     private Double outstandingBalance;
 
     /**
-     * Aging bucket of outstanding balance data (days past due date of invoice)
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Aging bucket of outstanding balance data (days past due date of invoice)
      */
     public Integer getBucket() { return this.bucket; }
     /**
-     * Aging bucket of outstanding balance data (days past due date of invoice)
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Aging bucket of outstanding balance data (days past due date of invoice)
      */
     public void setBucket(Integer value) { this.bucket = value; }
     /**
-     * Currency code of aging bucket
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Currency code of aging bucket
      */
     public String getCurrencyCode() { return this.currencyCode; }
     /**
-     * Currency code of aging bucket
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Currency code of aging bucket
      */
     public void setCurrencyCode(String value) { this.currencyCode = value; }
     /**
-     * Outstanding balance for the given aging bucket
-     *
-     * @return a {@link java.lang.Double} object.
+     * @return Outstanding balance for the given aging bucket
      */
     public Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
-     * Outstanding balance for the given aging bucket
-     *
-     * @param value a {@link java.lang.Double} object.
+     * @param value - Outstanding balance for the given aging bucket
      */
     public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
 };

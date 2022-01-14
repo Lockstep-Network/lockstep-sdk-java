@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,33 +14,27 @@
 
 
 package io.lockstep.api.models;
+
+
 public class ErpInfoModel
 {
     private String appId;
     private ConnectorInfoModel data;
 
     /**
-     * The id of the ERP's App
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The id of the ERP's App
      */
     public String getAppId() { return this.appId; }
     /**
-     * The id of the ERP's App
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The id of the ERP's App
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * The data required to store for connector access
-     *
-     * @return a {@link io.lockstep.api.models.ConnectorInfoModel} object.
+     * @return The data required to store for connector access
      */
     public ConnectorInfoModel getData() { return this.data; }
     /**
-     * The data required to store for connector access
-     *
-     * @param value a {@link io.lockstep.api.models.ConnectorInfoModel} object.
+     * @param value - The data required to store for connector access
      */
     public void setData(ConnectorInfoModel value) { this.data = value; }
 };

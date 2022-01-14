@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -17,6 +16,7 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
 public class CustomFieldValueModel
 {
     private String groupKey;
@@ -32,143 +32,91 @@ public class CustomFieldValueModel
     private CustomFieldDefinitionModel customFieldDefinition;
 
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
      */
     public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
      */
     public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
     /**
-     * Additional key if source table doesn't have a unique id
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Additional key if source table doesn't have a unique id
      */
     public String getRecordKey() { return this.recordKey; }
     /**
-     * Additional key if source table doesn't have a unique id
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Additional key if source table doesn't have a unique id
      */
     public void setRecordKey(String value) { this.recordKey = value; }
     /**
-     * String of data for field
-     *
-     * @return a {@link java.lang.String} object.
+     * @return String of data for field
      */
     public String getStringValue() { return this.stringValue; }
     /**
-     * String of data for field
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - String of data for field
      */
     public void setStringValue(String value) { this.stringValue = value; }
     /**
-     * Number data for field
-     *
-     * @return a {@link java.lang.Double} object.
+     * @return Number data for field
      */
     public Double getNumericValue() { return this.numericValue; }
     /**
-     * Number data for field
-     *
-     * @param value a {@link java.lang.Double} object.
+     * @param value - Number data for field
      */
     public void setNumericValue(Double value) { this.numericValue = value; }
     /**
-     * Date created
-     *
-     * @return a {@link java.util.Date} object.
+     * @return Date created
      */
     public Date getCreated() { return this.created; }
     /**
-     * Date created
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - Date created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * Id of user who created this value
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Id of user who created this value
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * Id of user who created this value
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Id of user who created this value
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * Date modified
-     *
-     * @return a {@link java.util.Date} object.
+     * @return Date modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * Date modified
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - Date modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * Id of user who modified this value
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Id of user who modified this value
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * Id of user who modified this value
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Id of user who modified this value
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * AppEnrollmentId for this record; used for mapping purposes.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return AppEnrollmentId for this record; used for mapping purposes.
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * AppEnrollmentId for this record; used for mapping purposes.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - AppEnrollmentId for this record; used for mapping purposes.
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
-     * Definition of the value
-     *
-     * @return a {@link io.lockstep.api.models.CustomFieldDefinitionModel} object.
+     * @return Definition of the value
      */
     public CustomFieldDefinitionModel getCustomFieldDefinition() { return this.customFieldDefinition; }
     /**
-     * Definition of the value
-     *
-     * @param value a {@link io.lockstep.api.models.CustomFieldDefinitionModel} object.
+     * @param value - Definition of the value
      */
     public void setCustomFieldDefinition(CustomFieldDefinitionModel value) { this.customFieldDefinition = value; }
 };

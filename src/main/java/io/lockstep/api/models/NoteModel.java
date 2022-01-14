@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -17,6 +16,7 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
 public class NoteModel
 {
     private String noteId;
@@ -32,143 +32,91 @@ public class NoteModel
     private String appEnrollmentId;
 
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
      */
     public String getNoteId() { return this.noteId; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
      */
     public void setNoteId(String value) { this.noteId = value; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * The name of the table the note is associated with
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The name of the table the note is associated with
      */
     public String getTableKey() { return this.tableKey; }
     /**
-     * The name of the table the note is associated with
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The name of the table the note is associated with
      */
     public void setTableKey(String value) { this.tableKey = value; }
     /**
-     * The ID of the object the note is associated with
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the object the note is associated with
      */
     public String getObjectKey() { return this.objectKey; }
     /**
-     * The ID of the object the note is associated with
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the object the note is associated with
      */
     public void setObjectKey(String value) { this.objectKey = value; }
     /**
-     * The text of the note
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The text of the note
      */
     public String getNoteText() { return this.noteText; }
     /**
-     * The text of the note
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The text of the note
      */
     public void setNoteText(String value) { this.noteText = value; }
     /**
-     * The type of the note
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The type of the note
      */
     public String getNoteType() { return this.noteType; }
     /**
-     * The type of the note
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The type of the note
      */
     public void setNoteType(String value) { this.noteType = value; }
     /**
-     * Flag indicating if the note has been archived
-     *
-     * @return a {@link java.lang.Boolean} object.
+     * @return Flag indicating if the note has been archived
      */
     public Boolean getIsArchived() { return this.isArchived; }
     /**
-     * Flag indicating if the note has been archived
-     *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value - Flag indicating if the note has been archived
      */
     public void setIsArchived(Boolean value) { this.isArchived = value; }
     /**
-     * The date the note was created
-     *
-     * @return a {@link java.util.Date} object.
+     * @return The date the note was created
      */
     public Date getCreated() { return this.created; }
     /**
-     * The date the note was created
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - The date the note was created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * The ID of the user who created the note
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the user who created the note
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * The ID of the user who created the note
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the user who created the note
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * The name of the user who created the note
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The name of the user who created the note
      */
     public String getCreatedUserName() { return this.createdUserName; }
     /**
-     * The name of the user who created the note
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The name of the user who created the note
      */
     public void setCreatedUserName(String value) { this.createdUserName = value; }
     /**
-     * AppEnrollmentId for this record; used for mapping purposes.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return AppEnrollmentId for this record; used for mapping purposes.
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * AppEnrollmentId for this record; used for mapping purposes.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - AppEnrollmentId for this record; used for mapping purposes.
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };

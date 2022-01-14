@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -17,6 +16,7 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
 public class UserRoleModel
 {
     private String userRoleId;
@@ -28,95 +28,59 @@ public class UserRoleModel
     private String modifiedUserId;
 
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
      */
     public String getUserRoleId() { return this.userRoleId; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The unique ID of this record, automatically assigned by Lockstep when this record is added to the Lockstep platform.
      */
     public void setUserRoleId(String value) { this.userRoleId = value; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * The name of the user role
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The name of the user role
      */
     public String getUserRoleName() { return this.userRoleName; }
     /**
-     * The name of the user role
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The name of the user role
      */
     public void setUserRoleName(String value) { this.userRoleName = value; }
     /**
-     * The date that the user role was created
-     *
-     * @return a {@link java.util.Date} object.
+     * @return The date that the user role was created
      */
     public Date getCreated() { return this.created; }
     /**
-     * The date that the user role was created
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - The date that the user role was created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * The ID of the user who created the user role
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the user who created the user role
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * The ID of the user who created the user role
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the user who created the user role
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * The date the user role was last modified
-     *
-     * @return a {@link java.util.Date} object.
+     * @return The date the user role was last modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * The date the user role was last modified
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - The date the user role was last modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * The ID of the user who last modified the user role
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the user who last modified the user role
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * The ID of the user who last modified the user role
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the user who last modified the user role
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
 };

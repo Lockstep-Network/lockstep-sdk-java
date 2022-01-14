@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -17,6 +16,7 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
 public class DailySalesOutstandingReportModel
 {
     private Date timeframe;
@@ -24,39 +24,27 @@ public class DailySalesOutstandingReportModel
     private Double dailySalesOutstanding;
 
     /**
-     * Timeframe (month) the daily sales outstanding values are associated with
-     *
-     * @return a {@link java.util.Date} object.
+     * @return Timeframe (month) the daily sales outstanding values are associated with
      */
     public Date getTimeframe() { return this.timeframe; }
     /**
-     * Timeframe (month) the daily sales outstanding values are associated with
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - Timeframe (month) the daily sales outstanding values are associated with
      */
     public void setTimeframe(Date value) { this.timeframe = value; }
     /**
-     * Number of invoices the average daily sales outstanding is calculated on
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Number of invoices the average daily sales outstanding is calculated on
      */
     public Integer getInvoiceCount() { return this.invoiceCount; }
     /**
-     * Number of invoices the average daily sales outstanding is calculated on
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Number of invoices the average daily sales outstanding is calculated on
      */
     public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
     /**
-     * Time (in days) between an invoice was completed paid off and when the invoice was issued
-     *
-     * @return a {@link java.lang.Double} object.
+     * @return Time (in days) between an invoice was completed paid off and when the invoice was issued
      */
     public Double getDailySalesOutstanding() { return this.dailySalesOutstanding; }
     /**
-     * Time (in days) between an invoice was completed paid off and when the invoice was issued
-     *
-     * @param value a {@link java.lang.Double} object.
+     * @param value - Time (in days) between an invoice was completed paid off and when the invoice was issued
      */
     public void setDailySalesOutstanding(Double value) { this.dailySalesOutstanding = value; }
 };

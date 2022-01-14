@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class InviteModel
 {
     private String email;
@@ -23,51 +24,35 @@ public class InviteModel
     private String errorMessage;
 
     /**
-     * The invited email address
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The invited email address
      */
     public String getEmail() { return this.email; }
     /**
-     * The invited email address
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The invited email address
      */
     public void setEmail(String value) { this.email = value; }
     /**
-     * True if the invite was sent successfully
-     *
-     * @return a {@link java.lang.Boolean} object.
+     * @return True if the invite was sent successfully
      */
     public Boolean getSuccess() { return this.success; }
     /**
-     * True if the invite was sent successfully
-     *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value - True if the invite was sent successfully
      */
     public void setSuccess(Boolean value) { this.success = value; }
     /**
-     * The invited user, may be null if the user could not be invited
-     *
-     * @return a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @return The invited user, may be null if the user could not be invited
      */
     public UserAccountModel getInvitedUser() { return this.invitedUser; }
     /**
-     * The invited user, may be null if the user could not be invited
-     *
-     * @param value a {@link io.lockstep.api.models.UserAccountModel} object.
+     * @param value - The invited user, may be null if the user could not be invited
      */
     public void setInvitedUser(UserAccountModel value) { this.invitedUser = value; }
     /**
-     * The error message if the invite was not successful
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The error message if the invite was not successful
      */
     public String getErrorMessage() { return this.errorMessage; }
     /**
-     * The error message if the invite was not successful
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The error message if the invite was not successful
      */
     public void setErrorMessage(String value) { this.errorMessage = value; }
 };

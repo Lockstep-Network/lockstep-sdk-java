@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class ErpInfoDataModel
 {
     private String authCode;
@@ -22,41 +23,27 @@ public class ErpInfoDataModel
     private String redirectUri;
 
     /**
-     * The authorization code returned from the first step of the OAuth2 flow
-     * https://oauth.net/2/grant-types/authorization-code/
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The authorization code returned from the first step of the OAuth2 flow https://oauth.net/2/grant-types/authorization-code/
      */
     public String getAuthCode() { return this.authCode; }
     /**
-     * The authorization code returned from the first step of the OAuth2 flow
-     * https://oauth.net/2/grant-types/authorization-code/
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The authorization code returned from the first step of the OAuth2 flow https://oauth.net/2/grant-types/authorization-code/
      */
     public void setAuthCode(String value) { this.authCode = value; }
     /**
-     * The realm id of the account being granted permissions to access
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The realm id of the account being granted permissions to access
      */
     public String getRealmId() { return this.realmId; }
     /**
-     * The realm id of the account being granted permissions to access
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The realm id of the account being granted permissions to access
      */
     public void setRealmId(String value) { this.realmId = value; }
     /**
-     * The redirect uri used for step one of the OAuth2.0 flow.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The redirect uri used for step one of the OAuth2.0 flow.
      */
     public String getRedirectUri() { return this.redirectUri; }
     /**
-     * The redirect uri used for step one of the OAuth2.0 flow.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The redirect uri used for step one of the OAuth2.0 flow.
      */
     public void setRedirectUri(String value) { this.redirectUri = value; }
 };

@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -23,29 +22,29 @@ import io.lockstep.api.models.CurrencyRateModel;
 
 import java.util.Date;
 import io.lockstep.api.models.BulkCurrencyConversionModel;
+
 public class CurrenciesClient
 {
     private LockstepApi client;
 
-    /**
-     * <p>Constructor for CurrenciesClient.</p>
-     *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
-     */
+     /**
+      * Constructor for method collection
+      * @param client A {@link io.lockstep.api.LockstepApi} platform client
+      */
     public CurrenciesClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Retrieve a currency conversation rate from one currency to another as of the specified date.              Optionally, you can specify which currency data provider to use.
-     *
+     * 
      *              The currency rate model contains all of the information used to make the API call, plus the rate to              use for the conversion.
-     *
+     * 
      * @param sourceCurrency - The ISO 4217 currency code of the origin currency. For a list of currency codes, call List Currencies.
      * @param destinationCurrency - The ISO 4217 currency code of the target currency. For a list of currency codes, call List Currencies.
      * @param date - The date for which we should cto use for this currency conversion.
      * @param dataProvider - Optionally, you can specify a data provider.
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CurrencyRateModel> retrievecurrencyrate(String sourceCurrency, String destinationCurrency, Date date, String dataProvider)
     {
@@ -59,10 +58,10 @@ public class CurrenciesClient
 
     /**
      * Receives an array of dates and currencies and a destination currency and returns an array of the corresponding currency rates to the given destination currency (Limit X).
-     *
+     * 
      * @param destinationCurrency - The currency to convert to.
      * @param body - A list of dates and source currencies.
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<CurrencyRateModel[]> bulkcurrencydata(String destinationCurrency, BulkCurrencyConversionModel[] body)
     {

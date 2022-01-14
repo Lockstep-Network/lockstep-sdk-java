@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class AppEnrollmentCustomFieldModel
 {
     private String appEnrollmentId;
@@ -30,141 +31,91 @@ public class AppEnrollmentCustomFieldModel
     private Double numericValue;
 
     /**
-     * Unique id for the app enrollment
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Unique id for the app enrollment
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * Unique id for the app enrollment
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Unique id for the app enrollment
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
-     * Id of enrolled app
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Id of enrolled app
      */
     public String getAppId() { return this.appId; }
     /**
-     * Id of enrolled app
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Id of enrolled app
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * The name of the application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The name of the application
      */
     public String getName() { return this.name; }
     /**
-     * The name of the application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The name of the application
      */
     public void setName(String value) { this.name = value; }
     /**
-     * Tag for what type of app the application is
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Tag for what type of app the application is
      */
     public String getAppType() { return this.appType; }
     /**
-     * Tag for what type of app the application is
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Tag for what type of app the application is
      */
     public void setAppType(String value) { this.appType = value; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * Unique Id for the custom field definition
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Unique Id for the custom field definition
      */
     public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
-     * Unique Id for the custom field definition
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Unique Id for the custom field definition
      */
     public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
     /**
-     * Text to display in-application for custom field
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Text to display in-application for custom field
      */
     public String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
-     * Text to display in-application for custom field
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Text to display in-application for custom field
      */
     public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
     /**
-     * Data type of the custom field definition
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Data type of the custom field definition
      */
     public String getDataType() { return this.dataType; }
     /**
-     * Data type of the custom field definition
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Data type of the custom field definition
      */
     public void setDataType(String value) { this.dataType = value; }
     /**
-     * Used for display logic when multiple app enrollment custom fields exist
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Used for display logic when multiple app enrollment custom fields exist
      */
     public Integer getSortOrder() { return this.sortOrder; }
     /**
-     * Used for display logic when multiple app enrollment custom fields exist
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Used for display logic when multiple app enrollment custom fields exist
      */
     public void setSortOrder(Integer value) { this.sortOrder = value; }
     /**
-     * String of data for field
-     *
-     * @return a {@link java.lang.String} object.
+     * @return String of data for field
      */
     public String getStringValue() { return this.stringValue; }
     /**
-     * String of data for field
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - String of data for field
      */
     public void setStringValue(String value) { this.stringValue = value; }
     /**
-     * Number data for field
-     *
-     * @return a {@link java.lang.Double} object.
+     * @return Number data for field
      */
     public Double getNumericValue() { return this.numericValue; }
     /**
-     * Number data for field
-     *
-     * @param value a {@link java.lang.Double} object.
+     * @param value - Number data for field
      */
     public void setNumericValue(Double value) { this.numericValue = value; }
 };

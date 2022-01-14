@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class CashflowReportModel
 {
     private Integer timeframe;
@@ -24,63 +25,43 @@ public class CashflowReportModel
     private Integer invoicesBilledCount;
 
     /**
-     * Timeframe in days the cashflow report is generated on
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Timeframe in days the cashflow report is generated on
      */
     public Integer getTimeframe() { return this.timeframe; }
     /**
-     * Timeframe in days the cashflow report is generated on
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Timeframe in days the cashflow report is generated on
      */
     public void setTimeframe(Integer value) { this.timeframe = value; }
     /**
-     * Amount of payments collected based in the timeframe
-     *
-     * @return a {@link java.lang.Double} object.
+     * @return Amount of payments collected based in the timeframe
      */
     public Double getPaymentsCollected() { return this.paymentsCollected; }
     /**
-     * Amount of payments collected based in the timeframe
-     *
-     * @param value a {@link java.lang.Double} object.
+     * @param value - Amount of payments collected based in the timeframe
      */
     public void setPaymentsCollected(Double value) { this.paymentsCollected = value; }
     /**
-     * Number of payments collected based in the timeframe
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Number of payments collected based in the timeframe
      */
     public Integer getPaymentsCollectedCount() { return this.paymentsCollectedCount; }
     /**
-     * Number of payments collected based in the timeframe
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Number of payments collected based in the timeframe
      */
     public void setPaymentsCollectedCount(Integer value) { this.paymentsCollectedCount = value; }
     /**
-     * Amount of invoices billed based in the timeframe
-     *
-     * @return a {@link java.lang.Double} object.
+     * @return Amount of invoices billed based in the timeframe
      */
     public Double getInvoicesBilled() { return this.invoicesBilled; }
     /**
-     * Amount of invoices billed based in the timeframe
-     *
-     * @param value a {@link java.lang.Double} object.
+     * @param value - Amount of invoices billed based in the timeframe
      */
     public void setInvoicesBilled(Double value) { this.invoicesBilled = value; }
     /**
-     * Number of invoices billed in the timeframe
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Number of invoices billed in the timeframe
      */
     public Integer getInvoicesBilledCount() { return this.invoicesBilledCount; }
     /**
-     * Number of invoices billed in the timeframe
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Number of invoices billed in the timeframe
      */
     public void setInvoicesBilledCount(Integer value) { this.invoicesBilledCount = value; }
 };

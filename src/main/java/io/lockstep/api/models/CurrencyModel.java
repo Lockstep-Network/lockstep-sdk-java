@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class CurrencyModel
 {
     private String alphaCode;
@@ -24,63 +25,43 @@ public class CurrencyModel
     private String symbol;
 
     /**
-     * Alphabetic code for the given currency
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Alphabetic code for the given currency
      */
     public String getAlphaCode() { return this.alphaCode; }
     /**
-     * Alphabetic code for the given currency
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Alphabetic code for the given currency
      */
     public void setAlphaCode(String value) { this.alphaCode = value; }
     /**
-     * Numeric code for the given currency
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Numeric code for the given currency
      */
     public String getNumericCode() { return this.numericCode; }
     /**
-     * Numeric code for the given currency
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Numeric code for the given currency
      */
     public void setNumericCode(String value) { this.numericCode = value; }
     /**
-     * Name of currency
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Name of currency
      */
     public String getCurrencyName() { return this.currencyName; }
     /**
-     * Name of currency
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Name of currency
      */
     public void setCurrencyName(String value) { this.currencyName = value; }
     /**
-     * Number of places after the decimal for this currency
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return Number of places after the decimal for this currency
      */
     public Integer getMinorUnit() { return this.minorUnit; }
     /**
-     * Number of places after the decimal for this currency
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - Number of places after the decimal for this currency
      */
     public void setMinorUnit(Integer value) { this.minorUnit = value; }
     /**
-     * Symbol for the given currency
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Symbol for the given currency
      */
     public String getSymbol() { return this.symbol; }
     /**
-     * Symbol for the given currency
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Symbol for the given currency
      */
     public void setSymbol(String value) { this.symbol = value; }
 };

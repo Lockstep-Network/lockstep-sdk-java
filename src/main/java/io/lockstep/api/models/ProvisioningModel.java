@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,33 +14,27 @@
 
 
 package io.lockstep.api.models;
+
+
 public class ProvisioningModel
 {
     private String fullName;
     private ErpInfoModel erp;
 
     /**
-     * The full name of the new user
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The full name of the new user
      */
     public String getFullName() { return this.fullName; }
     /**
-     * The full name of the new user
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The full name of the new user
      */
     public void setFullName(String value) { this.fullName = value; }
     /**
-     * The information necessary to enroll the user in their ERP
-     *
-     * @return a {@link io.lockstep.api.models.ErpInfoModel} object.
+     * @return The information necessary to enroll the user in their ERP
      */
     public ErpInfoModel getErp() { return this.erp; }
     /**
-     * The information necessary to enroll the user in their ERP
-     *
-     * @param value a {@link io.lockstep.api.models.ErpInfoModel} object.
+     * @param value - The information necessary to enroll the user in their ERP
      */
     public void setErp(ErpInfoModel value) { this.erp = value; }
 };

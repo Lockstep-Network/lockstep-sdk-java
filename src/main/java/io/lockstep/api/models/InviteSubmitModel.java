@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,20 +14,18 @@
 
 
 package io.lockstep.api.models;
+
+
 public class InviteSubmitModel
 {
     private String email;
 
     /**
-     * The email address of the user to invite
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The email address of the user to invite
      */
     public String getEmail() { return this.email; }
     /**
-     * The email address of the user to invite
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The email address of the user to invite
      */
     public void setEmail(String value) { this.email = value; }
 };

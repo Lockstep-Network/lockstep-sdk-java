@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -17,6 +16,7 @@
 package io.lockstep.api.models;
 
 import java.util.Date;
+
 public class ApplicationModel
 {
     private String appId;
@@ -40,245 +40,155 @@ public class ApplicationModel
     private CustomFieldValueModel[] customFieldValues;
 
     /**
-     * A unique code identifying this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return A unique code identifying this application
      */
     public String getAppId() { return this.appId; }
     /**
-     * A unique code identifying this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - A unique code identifying this application
      */
     public void setAppId(String value) { this.appId = value; }
     /**
-     * The name of this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The name of this application
      */
     public String getName() { return this.name; }
     /**
-     * The name of this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The name of this application
      */
     public void setName(String value) { this.name = value; }
     /**
-     * Brief summary of this application shown as a subtitle
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Brief summary of this application shown as a subtitle
      */
     public String getDescription() { return this.description; }
     /**
-     * Brief summary of this application shown as a subtitle
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Brief summary of this application shown as a subtitle
      */
     public void setDescription(String value) { this.description = value; }
     /**
-     * Tag for what type of app this is
-     *
-     * @return a {@link java.lang.String} object.
+     * @return Tag for what type of app this is
      */
     public String getAppType() { return this.appType; }
     /**
-     * Tag for what type of app this is
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - Tag for what type of app this is
      */
     public void setAppType(String value) { this.appType = value; }
     /**
-     * The ID of the owner
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the owner
      */
     public String getOwnerId() { return this.ownerId; }
     /**
-     * The ID of the owner
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the owner
      */
     public void setOwnerId(String value) { this.ownerId = value; }
     /**
-     * The URL to visit for more information about this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The URL to visit for more information about this application
      */
     public String getProjectUrl() { return this.projectUrl; }
     /**
-     * The URL to visit for more information about this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The URL to visit for more information about this application
      */
     public void setProjectUrl(String value) { this.projectUrl = value; }
     /**
-     * The URL for the icon for this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The URL for the icon for this application
      */
     public String getIconUrl() { return this.iconUrl; }
     /**
-     * The URL for the icon for this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The URL for the icon for this application
      */
     public void setIconUrl(String value) { this.iconUrl = value; }
     /**
-     * The description of the price for this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The description of the price for this application
      */
     public String getPriceTerms() { return this.priceTerms; }
     /**
-     * The description of the price for this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The description of the price for this application
      */
     public void setPriceTerms(String value) { this.priceTerms = value; }
     /**
-     * The ID of the user who created this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the user who created this application
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * The ID of the user who created this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the user who created this application
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * The ID of the user who last modified this application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The ID of the user who last modified this application
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * The ID of the user who last modified this application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The ID of the user who last modified this application
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * The date this application was created
-     *
-     * @return a {@link java.util.Date} object.
+     * @return The date this application was created
      */
     public Date getCreated() { return this.created; }
     /**
-     * The date this application was created
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - The date this application was created
      */
     public void setCreated(Date value) { this.created = value; }
     /**
-     * The date this application was last modified
-     *
-     * @return a {@link java.util.Date} object.
+     * @return The date this application was last modified
      */
     public Date getModified() { return this.modified; }
     /**
-     * The date this application was last modified
-     *
-     * @param value a {@link java.util.Date} object.
+     * @param value - The date this application was last modified
      */
     public void setModified(Date value) { this.modified = value; }
     /**
-     * Flag indicating if the application is active.
-     *
-     * @return a {@link java.lang.Boolean} object.
+     * @return Flag indicating if the application is active.
      */
     public Boolean getIsActive() { return this.isActive; }
     /**
-     * Flag indicating if the application is active.
-     *
-     * @param value a {@link java.lang.Boolean} object.
+     * @param value - Flag indicating if the application is active.
      */
     public void setIsActive(Boolean value) { this.isActive = value; }
     /**
-     * URL to the Wiki for the Application
-     *
-     * @return a {@link java.lang.String} object.
+     * @return URL to the Wiki for the Application
      */
     public String getWikiURL() { return this.wikiURL; }
     /**
-     * URL to the Wiki for the Application
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - URL to the Wiki for the Application
      */
     public void setWikiURL(String value) { this.wikiURL = value; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public String getGroupKey() { return this.groupKey; }
     /**
-     * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
-     * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
-     *
-     * For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The GroupKey uniquely identifies a single Lockstep Platform account. All records for this account will share the same GroupKey value. GroupKey values cannot be changed once created. For more information, see [Accounts and GroupKeys](https://developer.lockstep.io/docs/accounts-and-groupkeys).
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * All notes attached to this app.
-     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
-     *
-     * @return an array of {@link io.lockstep.api.models.NoteModel} objects.
+     * @return All notes attached to this app. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
     public NoteModel[] getNotes() { return this.notes; }
     /**
-     * All notes attached to this app.
-     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
-     *
-     * @param value an array of {@link io.lockstep.api.models.NoteModel} objects.
+     * @param value - All notes attached to this app. To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      */
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
-     * All attachments attached to this app.
-     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
-     *
-     * @return an array of {@link io.lockstep.api.models.AttachmentModel} objects.
+     * @return All attachments attached to this app. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
     public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
-     * All attachments attached to this app.
-     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
-     *
-     * @param value an array of {@link io.lockstep.api.models.AttachmentModel} objects.
+     * @param value - All attachments attached to this app. To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
      */
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
-     * All definitions attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
-     *
-     * @return an array of {@link io.lockstep.api.models.CustomFieldDefinitionModel} objects.
+     * @return All definitions attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * All definitions attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
-     *
-     * @param value an array of {@link io.lockstep.api.models.CustomFieldDefinitionModel} objects.
+     * @param value - All definitions attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * All values attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
-     *
-     * @return an array of {@link io.lockstep.api.models.CustomFieldValueModel} objects.
+     * @return All values attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * All values attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
-     *
-     * @param value an array of {@link io.lockstep.api.models.CustomFieldValueModel} objects.
+     * @param value - All values attached to the application. To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

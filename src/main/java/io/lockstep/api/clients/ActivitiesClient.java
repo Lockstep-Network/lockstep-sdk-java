@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -29,23 +28,22 @@ public class ActivitiesClient
 {
     private LockstepApi client;
 
-    /**
-     * <p>Constructor for ActivitiesClient.</p>
-     *
-     * @param client a {@link io.lockstep.api.LockstepApi} object.
-     */
+     /**
+      * Constructor for method collection
+      * @param client A {@link io.lockstep.api.LockstepApi} platform client
+      */
     public ActivitiesClient(LockstepApi client) {
         this.client = client;
     }
 
     /**
      * Retrieves the Activity specified by this unique identifier, optionally including nested data sets.
-     *
+     * 
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
-     *
+     * 
      * @param id - The unique Lockstep Platform ID number of this Activity
-     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, and Notes
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Company, Attachments, CustomFields, and Notes
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityModel> retrieveActivity(String id, String include)
     {
@@ -57,14 +55,14 @@ public class ActivitiesClient
 
     /**
      * Updates an activity that matches the specified id with the requested information.
-     *
+     * 
      * The PATCH method allows you to change specific values on the object while leaving other values alone.  As input you should supply a list of field names and new values.  If you do not provide the name of a field, that field will remain unchanged.  This allows you to ensure that you are only updating the specific fields desired.
-     *
+     * 
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
-     *
+     * 
      * @param id - The unique Lockstep Platform ID number of the Activity to update
      * @param body - A list of changes to apply to this Activity
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityModel> updateActivity(String id, Object body)
     {
@@ -76,11 +74,11 @@ public class ActivitiesClient
 
     /**
      * Delete the Activity referred to by this unique identifier.
-     *
+     * 
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
-     *
+     * 
      * @param id - The unique Lockstep Platform ID number of the Activity to delete
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityModel> deleteActivity(String id)
     {
@@ -91,11 +89,11 @@ public class ActivitiesClient
 
     /**
      * Creates one or more activities from a given model.
-     *
+     * 
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
-     *
+     * 
      * @param body - The Activities to create
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityModel[]> createActivities(ActivityModel[] body)
     {
@@ -106,17 +104,17 @@ public class ActivitiesClient
 
     /**
      * Queries Activities for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
-     *
+     * 
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
-     *
+     * 
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
-     *
+     * 
      * @param filter - The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include - To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Company, Attachments, CustomFields, and Notes
      * @param order - The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize - The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber - The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<FetchResult<ActivityModel>> queryActivities(String filter, String include, String order, Integer pageSize, Integer pageNumber)
     {
@@ -135,6 +133,7 @@ public class ActivitiesClient
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
      * 
      * @param id - The unique Lockstep Platform ID number of this Activity
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityStreamItemModel[]> retrieveActivityStream(String id)
     {

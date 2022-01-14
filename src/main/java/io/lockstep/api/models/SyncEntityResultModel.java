@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,6 +14,8 @@
 
 
 package io.lockstep.api.models;
+
+
 public class SyncEntityResultModel
 {
     private Integer insertCount;
@@ -24,63 +25,43 @@ public class SyncEntityResultModel
     private Object errors;
 
     /**
-     * The number of entities inserted
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return The number of entities inserted
      */
     public Integer getInsertCount() { return this.insertCount; }
     /**
-     * The number of entities inserted
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - The number of entities inserted
      */
     public void setInsertCount(Integer value) { this.insertCount = value; }
     /**
-     * The number of entities updated
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return The number of entities updated
      */
     public Integer getUpdateCount() { return this.updateCount; }
     /**
-     * The number of entities updated
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - The number of entities updated
      */
     public void setUpdateCount(Integer value) { this.updateCount = value; }
     /**
-     * The number of entities skipped
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return The number of entities skipped
      */
     public Integer getSkipCount() { return this.skipCount; }
     /**
-     * The number of entities skipped
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - The number of entities skipped
      */
     public void setSkipCount(Integer value) { this.skipCount = value; }
     /**
-     * The number of errors encountered during sync
-     *
-     * @return a {@link java.lang.Integer} object.
+     * @return The number of errors encountered during sync
      */
     public Integer getErrorCount() { return this.errorCount; }
     /**
-     * The number of errors encountered during sync
-     *
-     * @param value a {@link java.lang.Integer} object.
+     * @param value - The number of errors encountered during sync
      */
     public void setErrorCount(Integer value) { this.errorCount = value; }
     /**
-     * The errors encountered during sync keyed by ERP key
-     *
-     * @return a {@link java.lang.Object} object.
+     * @return The errors encountered during sync keyed by ERP key
      */
     public Object getErrors() { return this.errors; }
     /**
-     * The errors encountered during sync keyed by ERP key
-     *
-     * @param value a {@link java.lang.Object} object.
+     * @param value - The errors encountered during sync keyed by ERP key
      */
     public void setErrors(Object value) { this.errors = value; }
 };

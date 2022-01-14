@@ -42,10 +42,7 @@ import io.lockstep.api.clients.UserAccountsClient;
 import io.lockstep.api.clients.UserRolesClient;
 
 /**
- * Represents a failed request.
- *
- * @author jkirk
- * @version $Id: $Id
+ * A client object that can be used to work with the Lockstep Platform API
  */
 public class LockstepApi {
     private String serverUri;
@@ -112,171 +109,113 @@ public class LockstepApi {
     }
 
     /**
-     * <p>getActivitiesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.ActivitiesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Activities client} methods in the Lockstep Platform API.
      */
     public ActivitiesClient getActivitiesClient() { return this.activities; }
     /**
-     * <p>getApiKeysClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.ApiKeysClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.ApiKeys client} methods in the Lockstep Platform API.
      */
     public ApiKeysClient getApiKeysClient() { return this.apiKeys; }
     /**
-     * <p>getAppEnrollmentsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.AppEnrollmentsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.AppEnrollments client} methods in the Lockstep Platform API.
      */
     public AppEnrollmentsClient getAppEnrollmentsClient() { return this.appEnrollments; }
     /**
-     * <p>getApplicationsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.ApplicationsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Applications client} methods in the Lockstep Platform API.
      */
     public ApplicationsClient getApplicationsClient() { return this.applications; }
     /**
-     * <p>getAttachmentsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.AttachmentsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Attachments client} methods in the Lockstep Platform API.
      */
     public AttachmentsClient getAttachmentsClient() { return this.attachments; }
     /**
-     * <p>getCodeDefinitionsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.CodeDefinitionsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.CodeDefinitions client} methods in the Lockstep Platform API.
      */
     public CodeDefinitionsClient getCodeDefinitionsClient() { return this.codeDefinitions; }
     /**
-     * <p>getCompaniesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.CompaniesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Companies client} methods in the Lockstep Platform API.
      */
     public CompaniesClient getCompaniesClient() { return this.companies; }
     /**
-     * <p>getContactsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.ContactsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Contacts client} methods in the Lockstep Platform API.
      */
     public ContactsClient getContactsClient() { return this.contacts; }
     /**
-     * <p>getCreditMemoAppliedClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.CreditMemoAppliedClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.CreditMemoApplied client} methods in the Lockstep Platform API.
      */
     public CreditMemoAppliedClient getCreditMemoAppliedClient() { return this.creditMemoApplied; }
     /**
-     * <p>getCurrenciesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.CurrenciesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Currencies client} methods in the Lockstep Platform API.
      */
     public CurrenciesClient getCurrenciesClient() { return this.currencies; }
     /**
-     * <p>getCustomFieldDefinitionsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.CustomFieldDefinitionsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldDefinitions client} methods in the Lockstep Platform API.
      */
     public CustomFieldDefinitionsClient getCustomFieldDefinitionsClient() { return this.customFieldDefinitions; }
     /**
-     * <p>getCustomFieldValuesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.CustomFieldValuesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldValues client} methods in the Lockstep Platform API.
      */
     public CustomFieldValuesClient getCustomFieldValuesClient() { return this.customFieldValues; }
     /**
-     * <p>getDefinitionsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.DefinitionsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Definitions client} methods in the Lockstep Platform API.
      */
     public DefinitionsClient getDefinitionsClient() { return this.definitions; }
     /**
-     * <p>getEmailsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.EmailsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Emails client} methods in the Lockstep Platform API.
      */
     public EmailsClient getEmailsClient() { return this.emails; }
     /**
-     * <p>getInvoiceHistoryClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.InvoiceHistoryClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistory client} methods in the Lockstep Platform API.
      */
     public InvoiceHistoryClient getInvoiceHistoryClient() { return this.invoiceHistory; }
     /**
-     * <p>getInvoicesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.InvoicesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Invoices client} methods in the Lockstep Platform API.
      */
     public InvoicesClient getInvoicesClient() { return this.invoices; }
     /**
-     * <p>getLeadsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.LeadsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Leads client} methods in the Lockstep Platform API.
      */
     public LeadsClient getLeadsClient() { return this.leads; }
     /**
-     * <p>getMigrationClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.MigrationClient} object.
-     */
-    public MigrationClient getMigrationClient() { return this.migration; }
-    /**
-     * <p>getNotesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.NotesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Notes client} methods in the Lockstep Platform API.
      */
     public NotesClient getNotesClient() { return this.notes; }
     /**
-     * <p>getPaymentApplicationsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.PaymentApplicationsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.PaymentApplications client} methods in the Lockstep Platform API.
      */
     public PaymentApplicationsClient getPaymentApplicationsClient() { return this.paymentApplications; }
     /**
-     * <p>getPaymentsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.PaymentsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Payments client} methods in the Lockstep Platform API.
      */
     public PaymentsClient getPaymentsClient() { return this.payments; }
     /**
-     * <p>getProvisioningClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.ProvisioningClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Provisioning client} methods in the Lockstep Platform API.
      */
     public ProvisioningClient getProvisioningClient() { return this.provisioning; }
     /**
-     * <p>getReportsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.ReportsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Reports client} methods in the Lockstep Platform API.
      */
     public ReportsClient getReportsClient() { return this.reports; }
     /**
-     * <p>getStatusClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.StatusClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Status client} methods in the Lockstep Platform API.
      */
     public StatusClient getStatusClient() { return this.status; }
     /**
-     * <p>getSyncClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.SyncClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.Sync client} methods in the Lockstep Platform API.
      */
     public SyncClient getSyncClient() { return this.sync; }
     /**
-     * <p>getUserAccountsClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.UserAccountsClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.UserAccounts client} methods in the Lockstep Platform API.
      */
     public UserAccountsClient getUserAccountsClient() { return this.userAccounts; }
     /**
-     * <p>getUserRolesClient.</p>
-     *
-     * @return a {@link io.lockstep.api.clients.UserRolesClient} object.
+     * @return A collection containing the {@link io.lockstep.api.clients.UserRoles client} methods in the Lockstep Platform API.
      */
     public UserRolesClient getUserRolesClient() { return this.userRoles; }
   
     /**
      * Construct a new Lockstep API client to target the specific environment.
-     *
+     * 
      * @param env The environment to use, either "prd" for production or "sbx" for sandbox.
      * @return The Lockstep API client to use
      */
@@ -299,9 +238,9 @@ public class LockstepApi {
      * Construct an unsafe client that uses a non-standard server; this can be necessary
      * when using proxy servers or an API gateway.  Please be careful when using this
      * mode.  You should prefer to use `withEnvironment()` instead wherever possible.
-     *
+     * 
+     * @param unsafeUrl The non-Lockstep URL to use for this client
      * @return The Lockstep API client to use
-     * @param unsafeUrl a {@link java.lang.String} object.
      */
     public static LockstepApi withCustomEnvironment(String unsafeUrl)
     {
@@ -310,10 +249,10 @@ public class LockstepApi {
 
     /**
      * Configure this Lockstep API client to use a JWT bearer token.
-     * More documentation is available on [JWT Bearer Tokens](https://developer.lockstep.io/docs/jwt-bearer-tokens).
-     *
+     * More documentation is available on [JWT Bearer Tokens](https://developer.lockstep.io/docs/jwt-bearer-tokens). 
+     * 
+     * @param token The JWT bearer token to use for this API session
      * @return The Lockstep API client to use
-     * @param token a {@link java.lang.String} object.
      */
     public LockstepApi withBearerToken(String token)
     {
@@ -324,10 +263,10 @@ public class LockstepApi {
 
     /**
      * Configures this Lockstep API client to use an API Key.
-     * More documentation is available on [API Keys](https://developer.lockstep.io/docs/api-keys).
-     *
+     * More documentation is available on [API Keys](https://developer.lockstep.io/docs/api-keys). 
+     * 
+     * @param apiKey The API key to use for this API session
      * @return The Lockstep API client to use
-     * @param apiKey a {@link java.lang.String} object.
      */
     public LockstepApi withApiKey(String apiKey)
     {
@@ -336,29 +275,22 @@ public class LockstepApi {
         return this;
     }
 
-
     /**
-     * Getters and setters
-     *
-     * @return a {@link java.lang.String} object.
+     * Returns the server URI to which this client connects
      */
     public String getServerUri() {
         return this.serverUri;
     }
 
     /**
-     * <p>Getter for the field <code>apiKey</code>.</p>
-     *
-     * @return a {@link java.lang.String} object.
+     * Returns the currently selected API key
      */
     public String getApiKey() {
         return this.apiKey;
     }
 
     /**
-     * <p>Getter for the field <code>bearerToken</code>.</p>
-     *
-     * @return a {@link java.lang.String} object.
+     * Returns the currently selected bearer token
      */
     public String getBearerToken() {
         return this.bearerToken;

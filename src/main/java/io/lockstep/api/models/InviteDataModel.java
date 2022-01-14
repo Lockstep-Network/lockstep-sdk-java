@@ -1,4 +1,3 @@
-
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -15,33 +14,27 @@
 
 
 package io.lockstep.api.models;
+
+
 public class InviteDataModel
 {
     private String email;
     private String userStatus;
 
     /**
-     * The email address of the invited user.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The email address of the invited user.
      */
     public String getEmail() { return this.email; }
     /**
-     * The email address of the invited user.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The email address of the invited user.
      */
     public void setEmail(String value) { this.email = value; }
     /**
-     * The status of the user.
-     *
-     * @return a {@link java.lang.String} object.
+     * @return The status of the user.
      */
     public String getUserStatus() { return this.userStatus; }
     /**
-     * The status of the user.
-     *
-     * @param value a {@link java.lang.String} object.
+     * @param value - The status of the user.
      */
     public void setUserStatus(String value) { this.userStatus = value; }
 };
