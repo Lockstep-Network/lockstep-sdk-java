@@ -267,7 +267,7 @@ public class LockstepApi {
   
     /**
      * Construct a new Lockstep API client to target the specific environment.
-     * 
+     *
      * @param env The environment to use, either "prd" for production or "sbx" for sandbox.
      * @return The Lockstep API client to use
      */
@@ -290,7 +290,7 @@ public class LockstepApi {
      * Construct an unsafe client that uses a non-standard server; this can be necessary
      * when using proxy servers or an API gateway.  Please be careful when using this
      * mode.  You should prefer to use `withEnvironment()` instead wherever possible.
-     * 
+     *
      * @param unsafeUrl The non-Lockstep URL to use for this client
      * @return The Lockstep API client to use
      */
@@ -302,7 +302,7 @@ public class LockstepApi {
     /**
      * Configure this Lockstep API client to use a JWT bearer token.
      * More documentation is available on [JWT Bearer Tokens](https://developer.lockstep.io/docs/jwt-bearer-tokens). 
-     * 
+     *
      * @param token The JWT bearer token to use for this API session
      * @return The Lockstep API client to use
      */
@@ -316,7 +316,7 @@ public class LockstepApi {
     /**
      * Configures this Lockstep API client to use an API Key.
      * More documentation is available on [API Keys](https://developer.lockstep.io/docs/api-keys). 
-     * 
+     *
      * @param apiKey The API key to use for this API session
      * @return The Lockstep API client to use
      */
@@ -328,7 +328,9 @@ public class LockstepApi {
     }
 
     /**
-     * Returns the server URI to which this client connects
+     * The server URI to which this client connects
+     *
+     * @return The server URI
      */
     public String getServerUri() {
         return this.serverUri;
@@ -336,6 +338,8 @@ public class LockstepApi {
 
     /**
      * Returns the currently selected API key
+     *
+     * @return The API Key
      */
     public String getApiKey() {
         return this.apiKey;
@@ -343,6 +347,8 @@ public class LockstepApi {
 
     /**
      * Returns the currently selected bearer token
+     *
+     * @return The bearer token
      */
     public String getBearerToken() {
         return this.bearerToken;
