@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.2
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -30,6 +30,8 @@ public class StatusModel
     private Date lastLoggedIn;
     private String apiKeyId;
     private String userStatus;
+    private String environment;
+    private String version;
     private Object dependencies;
 
     /**
@@ -120,6 +122,22 @@ public class StatusModel
      * If authentication is successful, contains the user status of the logged-in user.
      */
     public void setUserStatus(String value) { this.userStatus = value; }
+    /**
+     * The environment currently being used
+     */
+    public String getEnvironment() { return this.environment; }
+    /**
+     * The environment currently being used
+     */
+    public void setEnvironment(String value) { this.environment = value; }
+    /**
+     * The version currently being used
+     */
+    public String getVersion() { return this.version; }
+    /**
+     * The version currently being used
+     */
+    public void setVersion(String value) { this.version = value; }
     /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.

@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.2
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -44,6 +44,8 @@ public class EmailModel
     private String externalThreadId;
     private String emailBcc;
     private String sendType;
+    private Date modified;
+    private String modifiedUserId;
     private String responseOriginId;
     private EmailModel responseOrigin;
     private NoteModel[] notes;
@@ -259,6 +261,26 @@ public class EmailModel
      * The type message being sent (New, Reply, Forward) or null for messages not being sent.
      */
     public void setSendType(String value) { this.sendType = value; }
+    /**
+     * The date on which this email was modified.
+     * Email modification should only be done by internal services.
+     */
+    public Date getModified() { return this.modified; }
+    /**
+     * The date on which this email was modified.
+     * Email modification should only be done by internal services.
+     */
+    public void setModified(Date value) { this.modified = value; }
+    /**
+     * The ID of the user who modified this email.
+     * Email modification should only be done by internal services.
+     */
+    public String getModifiedUserId() { return this.modifiedUserId; }
+    /**
+     * The ID of the user who modified this email.
+     * Email modification should only be done by internal services.
+     */
+    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
      * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
      * Otherwise null.

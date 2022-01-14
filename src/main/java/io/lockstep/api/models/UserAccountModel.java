@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.2
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -284,14 +284,14 @@ public class UserAccountModel
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
      * 
-     * For a list of defined currency codes, see [TODO]()
+     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
      */
     public String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
      * 
-     * For a list of defined currency codes, see [TODO]()
+     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
      */
     public void setDefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
     /**

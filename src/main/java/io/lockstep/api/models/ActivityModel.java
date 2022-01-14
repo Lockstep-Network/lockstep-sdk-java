@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.2
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -41,6 +41,7 @@ public class ActivityModel
     private Double creditGiven;
     private Boolean isUnread;
     private Boolean isArchived;
+    private CompanyModel company;
     private AttachmentModel[] attachments;
     private NoteModel[] notes;
     private CustomFieldDefinitionModel[] customFieldDefinitions;
@@ -244,6 +245,18 @@ public class ActivityModel
      * this flag is true, this activity should be hidden.
      */
     public void setIsArchived(Boolean value) { this.isArchived = value; }
+    /**
+     * The company associated with the activity
+     * 
+     * To retrieve this collection, specify `Company` in the "Include" parameter for your query.
+     */
+    public CompanyModel getCompany() { return this.company; }
+    /**
+     * The company associated with the activity
+     * 
+     * To retrieve this collection, specify `Company` in the "Include" parameter for your query.
+     */
+    public void setCompany(CompanyModel value) { this.company = value; }
     /**
      * All attachments attached to applied activity.
      * 
