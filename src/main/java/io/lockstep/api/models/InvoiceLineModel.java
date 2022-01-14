@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.2
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -41,6 +41,7 @@ public class InvoiceLineModel
     private String createdUserId;
     private Date modified;
     private String modifiedUserId;
+    private String appEnrollmentId;
     private NoteModel[] notes;
     private AttachmentModel[] attachments;
 
@@ -340,6 +341,14 @@ public class InvoiceLineModel
      * @param value a {@link java.lang.String} object.
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    /**
+     * AppEnrollmentId for this record; used for mapping purposes.
+     */
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    /**
+     * AppEnrollmentId for this record; used for mapping purposes.
+     */
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * All notes attached to this company.
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.

@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.2.93.0
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -31,7 +31,6 @@ import io.lockstep.api.clients.EmailsClient;
 import io.lockstep.api.clients.InvoiceHistoryClient;
 import io.lockstep.api.clients.InvoicesClient;
 import io.lockstep.api.clients.LeadsClient;
-import io.lockstep.api.clients.MigrationClient;
 import io.lockstep.api.clients.NotesClient;
 import io.lockstep.api.clients.PaymentApplicationsClient;
 import io.lockstep.api.clients.PaymentsClient;
@@ -70,7 +69,6 @@ public class LockstepApi {
     private InvoiceHistoryClient invoiceHistory;
     private InvoicesClient invoices;
     private LeadsClient leads;
-    private MigrationClient migration;
     private NotesClient notes;
     private PaymentApplicationsClient paymentApplications;
     private PaymentsClient payments;
@@ -102,7 +100,6 @@ public class LockstepApi {
         this.invoiceHistory = new InvoiceHistoryClient(this);
         this.invoices = new InvoicesClient(this);
         this.leads = new LeadsClient(this);
-        this.migration = new MigrationClient(this);
         this.notes = new NotesClient(this);
         this.paymentApplications = new PaymentApplicationsClient(this);
         this.payments = new PaymentsClient(this);
