@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -22,6 +22,8 @@ import io.lockstep.api.models.LockstepResponse;
 import io.lockstep.api.models.ProvisioningResponseModel;
 import io.lockstep.api.models.ProvisioningModel;
 import io.lockstep.api.models.ProvisioningFinalizeRequestModel;
+import io.lockstep.api.models.ActionResultModel;
+import io.lockstep.api.models.DeveloperAccountSubmitModel;
 
 /**
  * Contains all methods related to Provisioning
@@ -63,5 +65,17 @@ public class ProvisioningClient
         RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning/finalize");
         r.AddBody(body);
         return r.Call(ProvisioningResponseModel.class);
+    }
+
+    /**
+     *
+     * @param body
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public LockstepResponse<ActionResultModel> provisionFreeDeveloperAccount(DeveloperAccountSubmitModel body)
+    {
+        RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "POST", "/api/v1/Provisioning/free-account");
+        r.AddBody(body);
+        return r.Call(ActionResultModel.class);
     }
 }

@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents the status of a user's credentials
@@ -31,7 +30,7 @@ public class StatusModel
     private Boolean loggedIn;
     private String errorMessage;
     private String[] roles;
-    private Date lastLoggedIn;
+    private String lastLoggedIn;
     private String apiKeyId;
     private String userStatus;
     private String environment;
@@ -139,13 +138,13 @@ public class StatusModel
      *
      * @return The field lastLoggedIn
      */
-    public Date getLastLoggedIn() { return this.lastLoggedIn; }
+    public String getLastLoggedIn() { return this.lastLoggedIn; }
     /**
      * Date and time user has last logged into Azure B2C.
      *
      * @param value The new value for lastLoggedIn
      */
-    public void setLastLoggedIn(Date value) { this.lastLoggedIn = value; }
+    public void setLastLoggedIn(String value) { this.lastLoggedIn = value; }
     /**
      * The id of the API key used to authenticate.
      *

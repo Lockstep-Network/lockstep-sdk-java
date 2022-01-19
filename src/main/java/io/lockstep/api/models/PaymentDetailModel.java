@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Contains detailed information about a Payment.
@@ -34,8 +33,8 @@ public class PaymentDetailModel
     private Double paymentAmount;
     private Double unappliedAmount;
     private String paymentType;
-    private Date paymentDate;
-    private Date postDate;
+    private String paymentDate;
+    private String postDate;
     private String phone;
     private String fax;
     private String address1;
@@ -189,25 +188,25 @@ public class PaymentDetailModel
      *
      * @return The field paymentDate
      */
-    public Date getPaymentDate() { return this.paymentDate; }
+    public String getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this Payment.
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(Date value) { this.paymentDate = value; }
+    public void setPaymentDate(String value) { this.paymentDate = value; }
     /**
      * Payment post date.
      *
      * @return The field postDate
      */
-    public Date getPostDate() { return this.postDate; }
+    public String getPostDate() { return this.postDate; }
     /**
      * Payment post date.
      *
      * @param value The new value for postDate
      */
-    public void setPostDate(Date value) { this.postDate = value; }
+    public void setPostDate(String value) { this.postDate = value; }
     /**
      * The phone number of the Customer's Primary Contact.
      *

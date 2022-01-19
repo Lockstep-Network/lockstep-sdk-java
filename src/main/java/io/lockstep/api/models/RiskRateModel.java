@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents a risk rate calculation for a single month
@@ -24,7 +23,7 @@ import java.util.Date;
 public class RiskRateModel
 {
     private String groupKey;
-    private Date reportPeriod;
+    private String reportPeriod;
     private String invoiceMonthName;
     private Integer totalInvoiceCount;
     private Double totalInvoiceAmount;
@@ -56,13 +55,13 @@ public class RiskRateModel
      *
      * @return The field reportPeriod
      */
-    public Date getReportPeriod() { return this.reportPeriod; }
+    public String getReportPeriod() { return this.reportPeriod; }
     /**
      * The month the risk rate was calculated for
      *
      * @param value The new value for reportPeriod
      */
-    public void setReportPeriod(Date value) { this.reportPeriod = value; }
+    public void setReportPeriod(String value) { this.reportPeriod = value; }
     /**
      * The string name of the month the risk rate was calculated for
      *

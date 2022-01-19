@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents a line in an invoice
@@ -37,13 +36,13 @@ public class InvoiceLineModel
     private Double quantityReceived;
     private Double totalAmount;
     private String exemptionCode;
-    private Date reportingDate;
+    private String reportingDate;
     private String overrideOriginAddressId;
     private String overrideBillToAddressId;
     private String overrideShipToAddressId;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private String appEnrollmentId;
     private NoteModel[] notes;
@@ -253,14 +252,14 @@ public class InvoiceLineModel
      *
      * @return The field reportingDate
      */
-    public Date getReportingDate() { return this.reportingDate; }
+    public String getReportingDate() { return this.reportingDate; }
     /**
      * If null, the products specified on this line were delivered on the same date as all other lines.
      * If not null, this line was delivered or finalized on a different date than the overall invoice.
      *
      * @param value The new value for reportingDate
      */
-    public void setReportingDate(Date value) { this.reportingDate = value; }
+    public void setReportingDate(String value) { this.reportingDate = value; }
     /**
      * An optional ID number for the line's origin address.
      *
@@ -302,13 +301,13 @@ public class InvoiceLineModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date on which this line was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID number of the user who created this line.
      *
@@ -326,13 +325,13 @@ public class InvoiceLineModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date on which this line was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this line.
      *

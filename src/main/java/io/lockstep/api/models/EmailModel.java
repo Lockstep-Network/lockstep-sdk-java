@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * An Email represents a communication sent from one company to another.  The creator of the email is identified
@@ -35,23 +34,23 @@ public class EmailModel
     private String emailCC;
     private String emailSubject;
     private String emailBody;
-    private Date sentDate;
+    private String sentDate;
     private Boolean isUnread;
     private Boolean isPriority;
     private Boolean isSpam;
-    private Date created;
+    private String created;
     private String createdUserId;
     private Boolean toBeSent;
     private String customerId;
-    private Date receivedTimeStamp;
-    private Date openedTimestamp;
+    private String receivedTimeStamp;
+    private String openedTimestamp;
     private Integer viewCount;
     private String appEnrollmentId;
     private String externalEmailId;
     private String externalThreadId;
     private String emailBcc;
     private String sendType;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private String responseOriginId;
     private EmailModel responseOrigin;
@@ -181,13 +180,13 @@ public class EmailModel
      *
      * @return The field sentDate
      */
-    public Date getSentDate() { return this.sentDate; }
+    public String getSentDate() { return this.sentDate; }
     /**
      * The date on which this email was sent.
      *
      * @param value The new value for sentDate
      */
-    public void setSentDate(Date value) { this.sentDate = value; }
+    public void setSentDate(String value) { this.sentDate = value; }
     /**
      * A status flag indicating if this email is unread.
      *
@@ -229,13 +228,13 @@ public class EmailModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date on which this email was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID number of the user who created this email.
      *
@@ -277,25 +276,25 @@ public class EmailModel
      *
      * @return The field receivedTimeStamp
      */
-    public Date getReceivedTimeStamp() { return this.receivedTimeStamp; }
+    public String getReceivedTimeStamp() { return this.receivedTimeStamp; }
     /**
      * The date on which this email was received.
      *
      * @param value The new value for receivedTimeStamp
      */
-    public void setReceivedTimeStamp(Date value) { this.receivedTimeStamp = value; }
+    public void setReceivedTimeStamp(String value) { this.receivedTimeStamp = value; }
     /**
      * The date on which this email was opened.
      *
      * @return The field openedTimestamp
      */
-    public Date getOpenedTimestamp() { return this.openedTimestamp; }
+    public String getOpenedTimestamp() { return this.openedTimestamp; }
     /**
      * The date on which this email was opened.
      *
      * @param value The new value for openedTimestamp
      */
-    public void setOpenedTimestamp(Date value) { this.openedTimestamp = value; }
+    public void setOpenedTimestamp(String value) { this.openedTimestamp = value; }
     /**
      * The number of times this email was viewed.
      *
@@ -374,14 +373,14 @@ public class EmailModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date on which this email was modified.
      * Email modification should only be done by internal services.
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID of the user who modified this email.
      * Email modification should only be done by internal services.

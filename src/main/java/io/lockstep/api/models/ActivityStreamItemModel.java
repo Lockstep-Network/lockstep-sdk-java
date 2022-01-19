@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents an item belonging to the activity stream.
@@ -24,9 +23,9 @@ import java.util.Date;
 public class ActivityStreamItemModel
 {
     private String objectKey;
-    private String activityType;
+    private String activityStreamType;
     private String textValue;
-    private Date created;
+    private String created;
     private String createdUserId;
     private String groupKey;
     private String fromEmailAddress;
@@ -49,15 +48,15 @@ public class ActivityStreamItemModel
     /**
      * The type code of the activity stream item.
      *
-     * @return The field activityType
+     * @return The field activityStreamType
      */
-    public String getActivityType() { return this.activityType; }
+    public String getActivityStreamType() { return this.activityStreamType; }
     /**
      * The type code of the activity stream item.
      *
-     * @param value The new value for activityType
+     * @param value The new value for activityStreamType
      */
-    public void setActivityType(String value) { this.activityType = value; }
+    public void setActivityStreamType(String value) { this.activityStreamType = value; }
     /**
      * The text body description for this Activity Stream Item.
      *
@@ -75,13 +74,13 @@ public class ActivityStreamItemModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date on which this activity stream item was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID of the user who created this activity.
      *

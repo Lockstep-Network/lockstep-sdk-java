@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * An Invoice represents a bill sent from one company to another.  The Lockstep Platform tracks changes to
@@ -44,18 +43,18 @@ public class InvoiceHistoryModel
     private Double salesTaxAmount;
     private Double discountAmount;
     private Double outstandingBalanceAmount;
-    private Date invoiceDate;
-    private Date discountDate;
-    private Date postedDate;
-    private Date invoiceClosedDate;
-    private Date paymentDueDate;
-    private Date importedDate;
+    private String invoiceDate;
+    private String discountDate;
+    private String postedDate;
+    private String invoiceClosedDate;
+    private String paymentDueDate;
+    private String importedDate;
     private String primaryOriginAddressId;
     private String primaryBillToAddressId;
     private String primaryShipToAddressId;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
 
     /**
@@ -317,75 +316,75 @@ public class InvoiceHistoryModel
      *
      * @return The field invoiceDate
      */
-    public Date getInvoiceDate() { return this.invoiceDate; }
+    public String getInvoiceDate() { return this.invoiceDate; }
     /**
      * The reporting date for this invoice.
      *
      * @param value The new value for invoiceDate
      */
-    public void setInvoiceDate(Date value) { this.invoiceDate = value; }
+    public void setInvoiceDate(String value) { this.invoiceDate = value; }
     /**
      * The date when discounts were adjusted for this invoice.
      *
      * @return The field discountDate
      */
-    public Date getDiscountDate() { return this.discountDate; }
+    public String getDiscountDate() { return this.discountDate; }
     /**
      * The date when discounts were adjusted for this invoice.
      *
      * @param value The new value for discountDate
      */
-    public void setDiscountDate(Date value) { this.discountDate = value; }
+    public void setDiscountDate(String value) { this.discountDate = value; }
     /**
      * The date when this invoice posted to the company's general ledger.
      *
      * @return The field postedDate
      */
-    public Date getPostedDate() { return this.postedDate; }
+    public String getPostedDate() { return this.postedDate; }
     /**
      * The date when this invoice posted to the company's general ledger.
      *
      * @param value The new value for postedDate
      */
-    public void setPostedDate(Date value) { this.postedDate = value; }
+    public void setPostedDate(String value) { this.postedDate = value; }
     /**
      * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
      * services.
      *
      * @return The field invoiceClosedDate
      */
-    public Date getInvoiceClosedDate() { return this.invoiceClosedDate; }
+    public String getInvoiceClosedDate() { return this.invoiceClosedDate; }
     /**
      * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
      * services.
      *
      * @param value The new value for invoiceClosedDate
      */
-    public void setInvoiceClosedDate(Date value) { this.invoiceClosedDate = value; }
+    public void setInvoiceClosedDate(String value) { this.invoiceClosedDate = value; }
     /**
      * The date when the remaining outstanding balance is due.
      *
      * @return The field paymentDueDate
      */
-    public Date getPaymentDueDate() { return this.paymentDueDate; }
+    public String getPaymentDueDate() { return this.paymentDueDate; }
     /**
      * The date when the remaining outstanding balance is due.
      *
      * @param value The new value for paymentDueDate
      */
-    public void setPaymentDueDate(Date value) { this.paymentDueDate = value; }
+    public void setPaymentDueDate(String value) { this.paymentDueDate = value; }
     /**
      * The date and time when this record was imported from the user's ERP or accounting system.
      *
      * @return The field importedDate
      */
-    public Date getImportedDate() { return this.importedDate; }
+    public String getImportedDate() { return this.importedDate; }
     /**
      * The date and time when this record was imported from the user's ERP or accounting system.
      *
      * @param value The new value for importedDate
      */
-    public void setImportedDate(Date value) { this.importedDate = value; }
+    public void setImportedDate(String value) { this.importedDate = value; }
     /**
      * The ID number of the invoice's origination address
      *
@@ -427,13 +426,13 @@ public class InvoiceHistoryModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date on which this invoice record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID number of the user who created this invoice.
      *
@@ -451,13 +450,13 @@ public class InvoiceHistoryModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date on which this invoice record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this invoice.
      *

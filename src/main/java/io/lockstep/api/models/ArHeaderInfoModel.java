@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Aggregated Accounts Receivable information.
@@ -24,7 +23,7 @@ import java.util.Date;
 public class ArHeaderInfoModel
 {
     private String groupKey;
-    private Date reportPeriod;
+    private String reportPeriod;
     private Integer totalCustomers;
     private Integer totalInvoices;
     private Double totalInvoicedAmount;
@@ -68,13 +67,13 @@ public class ArHeaderInfoModel
      *
      * @return The field reportPeriod
      */
-    public Date getReportPeriod() { return this.reportPeriod; }
+    public String getReportPeriod() { return this.reportPeriod; }
     /**
      * The date of the report
      *
      * @param value The new value for reportPeriod
      */
-    public void setReportPeriod(Date value) { this.reportPeriod = value; }
+    public void setReportPeriod(String value) { this.reportPeriod = value; }
     /**
      * The total number of customers.
      *

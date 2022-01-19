@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -50,7 +50,7 @@ public class AppEnrollmentsClient
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
      * @param id The unique ID number of the App Enrollment to retrieve
-     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields, LastSync, LastSuccessfulSync
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<AppEnrollmentModel> retrieveAppEnrollment(String id, String include)
@@ -126,7 +126,7 @@ public class AppEnrollmentsClient
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields, LastSync
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields, LastSync, LastSuccessfulSync
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)

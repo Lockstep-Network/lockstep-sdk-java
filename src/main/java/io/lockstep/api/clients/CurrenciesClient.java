@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -21,7 +21,6 @@ import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
 import io.lockstep.api.models.CurrencyRateModel;
 
-import java.util.Date;
 import io.lockstep.api.models.BulkCurrencyConversionModel;
 
 /**
@@ -51,7 +50,7 @@ public class CurrenciesClient
      * @param dataProvider Optionally, you can specify a data provider.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CurrencyRateModel> retrievecurrencyrate(String sourceCurrency, String destinationCurrency, Date date, String dataProvider)
+    public LockstepResponse<CurrencyRateModel> retrievecurrencyrate(String sourceCurrency, String destinationCurrency, String date, String dataProvider)
     {
         RestRequest<CurrencyRateModel> r = new RestRequest<CurrencyRateModel>(this.client, "GET", "/api/v1/Currencies/{sourceCurrency}/{destinationCurrency}");
         r.AddPath("{sourceCurrency}", sourceCurrency.toString());

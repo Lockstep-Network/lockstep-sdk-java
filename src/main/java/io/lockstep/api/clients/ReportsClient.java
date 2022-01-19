@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -24,7 +24,6 @@ import io.lockstep.api.models.CashflowReportModel;
 import io.lockstep.api.models.DailySalesOutstandingReportModel;
 import io.lockstep.api.models.RiskRateModel;
 import io.lockstep.api.models.ArHeaderInfoModel;
-import java.util.Date;
 import io.lockstep.api.models.AgingModel;
 import io.lockstep.api.models.ArAgingHeaderInfoModel;
 import io.lockstep.api.models.AttachmentHeaderInfoModel;
@@ -93,7 +92,7 @@ public class ReportsClient
      * @param companyId Include a company to get AR data for a specific company, leave as null to include all Companies.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ArHeaderInfoModel> accountsReceivableHeader(Date reportDate, String companyId)
+    public LockstepResponse<ArHeaderInfoModel> accountsReceivableHeader(String reportDate, String companyId)
     {
         RestRequest<ArHeaderInfoModel> r = new RestRequest<ArHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/ar-header");
         r.AddQuery("reportDate", reportDate.toString());

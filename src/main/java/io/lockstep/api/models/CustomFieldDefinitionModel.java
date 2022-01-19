@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a
@@ -35,9 +34,9 @@ public class CustomFieldDefinitionModel
     private String customFieldLabel;
     private String dataType;
     private Integer sortOrder;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private String appEnrollmentId;
 
@@ -138,13 +137,13 @@ public class CustomFieldDefinitionModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * Date created
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * Id of user who created this definition
      *
@@ -162,13 +161,13 @@ public class CustomFieldDefinitionModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * Date modified
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * Id of user who modified this definition
      *

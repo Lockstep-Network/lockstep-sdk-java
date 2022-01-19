@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Contains information about a credit memo invoice
@@ -27,7 +26,7 @@ public class CreditMemoInvoiceModel
     private String creditMemoAppliedId;
     private String invoiceId;
     private String creditMemoInvoiceId;
-    private Date applyToInvoiceDate;
+    private String applyToInvoiceDate;
     private Double creditMemoAppliedAmount;
     private String referenceCode;
     private String companyId;
@@ -97,13 +96,13 @@ public class CreditMemoInvoiceModel
      *
      * @return The field applyToInvoiceDate
      */
-    public Date getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * Date invoice applied to credit memo.
      *
      * @param value The new value for applyToInvoiceDate
      */
-    public void setApplyToInvoiceDate(Date value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(String value) { this.applyToInvoiceDate = value; }
     /**
      * Amount applied to credit memo.
      *

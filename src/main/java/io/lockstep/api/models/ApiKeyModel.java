@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * An API Key is an authentication token that you may use with the Lockstep API.  Because API Keys
@@ -34,11 +33,11 @@ public class ApiKeyModel
     private String name;
     private String apiKey;
     private String keyPrefix;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date revoked;
+    private String revoked;
     private String revokedUserId;
-    private Date expires;
+    private String expires;
 
     /**
      * The unique identifier for the API key.
@@ -119,13 +118,13 @@ public class ApiKeyModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date the API key was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The user that created the API key.
      *
@@ -143,13 +142,13 @@ public class ApiKeyModel
      *
      * @return The field revoked
      */
-    public Date getRevoked() { return this.revoked; }
+    public String getRevoked() { return this.revoked; }
     /**
      * The date the API key was revoked.
      *
      * @param value The new value for revoked
      */
-    public void setRevoked(Date value) { this.revoked = value; }
+    public void setRevoked(String value) { this.revoked = value; }
     /**
      * The user who revoked the API key.
      *
@@ -167,11 +166,11 @@ public class ApiKeyModel
      *
      * @return The field expires
      */
-    public Date getExpires() { return this.expires; }
+    public String getExpires() { return this.expires; }
     /**
      * The UTC datetime when the API key expires.
      *
      * @param value The new value for expires
      */
-    public void setExpires(Date value) { this.expires = value; }
+    public void setExpires(String value) { this.expires = value; }
 };

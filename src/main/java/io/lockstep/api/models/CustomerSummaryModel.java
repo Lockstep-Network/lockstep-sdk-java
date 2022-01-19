@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Contains summarized data for a customer
@@ -37,7 +36,7 @@ public class CustomerSummaryModel
     private Double unappliedPayments;
     private Double percentOfTotalAr;
     private Double dso;
-    private Date newestActivity;
+    private String newestActivity;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -218,11 +217,11 @@ public class CustomerSummaryModel
      *
      * @return The field newestActivity
      */
-    public Date getNewestActivity() { return this.newestActivity; }
+    public String getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Customer.
      *
      * @param value The new value for newestActivity
      */
-    public void setNewestActivity(Date value) { this.newestActivity = value; }
+    public void setNewestActivity(String value) { this.newestActivity = value; }
 };

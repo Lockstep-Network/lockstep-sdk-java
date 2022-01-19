@@ -9,21 +9,20 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents the daily sales outstanding report
  */
 public class DailySalesOutstandingReportModel
 {
-    private Date timeframe;
+    private String timeframe;
     private Integer invoiceCount;
     private Double dailySalesOutstanding;
 
@@ -32,13 +31,13 @@ public class DailySalesOutstandingReportModel
      *
      * @return The field timeframe
      */
-    public Date getTimeframe() { return this.timeframe; }
+    public String getTimeframe() { return this.timeframe; }
     /**
      * Timeframe (month) the daily sales outstanding values are associated with
      *
      * @param value The new value for timeframe
      */
-    public void setTimeframe(Date value) { this.timeframe = value; }
+    public void setTimeframe(String value) { this.timeframe = value; }
     /**
      * Number of invoices the average daily sales outstanding is calculated on
      *

@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * An Activity contains information about work being done on a specific accounting task.
@@ -36,12 +35,12 @@ public class ActivityModel
     private Boolean isOpen;
     private String priority;
     private String userAssignedTo;
-    private Date dateAssigned;
-    private Date dateClosed;
-    private Date snoozeUntilDate;
-    private Date created;
+    private String dateAssigned;
+    private String dateClosed;
+    private String snoozeUntilDate;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private Double amountCollected;
     private Double amountPaid;
@@ -49,10 +48,12 @@ public class ActivityModel
     private Boolean isUnread;
     private Boolean isArchived;
     private CompanyModel company;
+    private String userAssignedToName;
     private AttachmentModel[] attachments;
     private NoteModel[] notes;
     private CustomFieldDefinitionModel[] customFieldDefinitions;
     private CustomFieldValueModel[] customFieldValues;
+    private ActivityXRefModel[] references;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -193,25 +194,25 @@ public class ActivityModel
      *
      * @return The field dateAssigned
      */
-    public Date getDateAssigned() { return this.dateAssigned; }
+    public String getDateAssigned() { return this.dateAssigned; }
     /**
      * The date the activity was assigned.
      *
      * @param value The new value for dateAssigned
      */
-    public void setDateAssigned(Date value) { this.dateAssigned = value; }
+    public void setDateAssigned(String value) { this.dateAssigned = value; }
     /**
      * The date the activity was closed.
      *
      * @return The field dateClosed
      */
-    public Date getDateClosed() { return this.dateClosed; }
+    public String getDateClosed() { return this.dateClosed; }
     /**
      * The date the activity was closed.
      *
      * @param value The new value for dateClosed
      */
-    public void setDateClosed(Date value) { this.dateClosed = value; }
+    public void setDateClosed(String value) { this.dateClosed = value; }
     /**
      * If this activity has been "snoozed", this field will be non-null and will contain
      * the date when the activity will be displayed.  Until that date arrives, the activity
@@ -219,7 +220,7 @@ public class ActivityModel
      *
      * @return The field snoozeUntilDate
      */
-    public Date getSnoozeUntilDate() { return this.snoozeUntilDate; }
+    public String getSnoozeUntilDate() { return this.snoozeUntilDate; }
     /**
      * If this activity has been "snoozed", this field will be non-null and will contain
      * the date when the activity will be displayed.  Until that date arrives, the activity
@@ -227,19 +228,19 @@ public class ActivityModel
      *
      * @param value The new value for snoozeUntilDate
      */
-    public void setSnoozeUntilDate(Date value) { this.snoozeUntilDate = value; }
+    public void setSnoozeUntilDate(String value) { this.snoozeUntilDate = value; }
     /**
      * The date on which this activity was created.
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date on which this activity was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID of the user who created this activity.
      *
@@ -257,13 +258,13 @@ public class ActivityModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date on which this activity was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID of the user who last modified this activity.
      *
@@ -357,6 +358,18 @@ public class ActivityModel
      */
     public void setCompany(CompanyModel value) { this.company = value; }
     /**
+     * The name of the user the activity is assigned to
+     *
+     * @return The field userAssignedToName
+     */
+    public String getUserAssignedToName() { return this.userAssignedToName; }
+    /**
+     * The name of the user the activity is assigned to
+     *
+     * @param value The new value for userAssignedToName
+     */
+    public void setUserAssignedToName(String value) { this.userAssignedToName = value; }
+    /**
      * All attachments attached to applied activity.
      *
      * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
@@ -420,4 +433,20 @@ public class ActivityModel
      * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    /**
+     * All references attached to this applied activity.
+     *
+     * To retrieve this collection, specify `References` in the "Include" parameter for your query.
+     *
+     * @return The field references
+     */
+    public ActivityXRefModel[] getReferences() { return this.references; }
+    /**
+     * All references attached to this applied activity.
+     *
+     * To retrieve this collection, specify `References` in the "Include" parameter for your query.
+     *
+     * @param value The new value for references
+     */
+    public void setReferences(ActivityXRefModel[] value) { this.references = value; }
 };
