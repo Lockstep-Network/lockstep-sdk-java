@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents a user uploaded attachment
@@ -34,7 +33,7 @@ public class AttachmentModel
     private String originAttachmentId;
     private Boolean viewInternal;
     private Boolean viewExternal;
-    private Date created;
+    private String created;
     private String createdUserId;
 
     /**
@@ -180,13 +179,13 @@ public class AttachmentModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date the attachment was created
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * Id of the user who made the file
      *

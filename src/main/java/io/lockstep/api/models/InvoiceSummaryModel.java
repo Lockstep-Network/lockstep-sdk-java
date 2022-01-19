@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Contains summarized data for an invoice
@@ -27,14 +26,14 @@ public class InvoiceSummaryModel
     private String customerId;
     private String invoiceId;
     private String invoiceNumber;
-    private Date invoiceDate;
+    private String invoiceDate;
     private String customerName;
     private String status;
-    private Date paymentDueDate;
+    private String paymentDueDate;
     private Double invoiceAmount;
     private Double outstandingBalance;
     private String invoiceTypeCode;
-    private Date newestActivity;
+    private String newestActivity;
     private Integer daysPastDue;
     private String[] paymentNumbers;
     private String[] paymentIds;
@@ -100,13 +99,13 @@ public class InvoiceSummaryModel
      *
      * @return The field invoiceDate
      */
-    public Date getInvoiceDate() { return this.invoiceDate; }
+    public String getInvoiceDate() { return this.invoiceDate; }
     /**
      * The reporting date for this invoice.
      *
      * @param value The new value for invoiceDate
      */
-    public void setInvoiceDate(Date value) { this.invoiceDate = value; }
+    public void setInvoiceDate(String value) { this.invoiceDate = value; }
     /**
      * The name of the counterparty for the invoice, for example, a customer or vendor.
      *
@@ -136,13 +135,13 @@ public class InvoiceSummaryModel
      *
      * @return The field paymentDueDate
      */
-    public Date getPaymentDueDate() { return this.paymentDueDate; }
+    public String getPaymentDueDate() { return this.paymentDueDate; }
     /**
      * The due date of the invoice.
      *
      * @param value The new value for paymentDueDate
      */
-    public void setPaymentDueDate(Date value) { this.paymentDueDate = value; }
+    public void setPaymentDueDate(String value) { this.paymentDueDate = value; }
     /**
      * The total amount of the Invoice.
      *
@@ -184,13 +183,13 @@ public class InvoiceSummaryModel
      *
      * @return The field newestActivity
      */
-    public Date getNewestActivity() { return this.newestActivity; }
+    public String getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Invoice.
      *
      * @param value The new value for newestActivity
      */
-    public void setNewestActivity(Date value) { this.newestActivity = value; }
+    public void setNewestActivity(String value) { this.newestActivity = value; }
     /**
      * The number of days this Invoice is past due.
      *

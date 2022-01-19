@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Contains summary information for a Payment
@@ -28,7 +27,7 @@ public class PaymentSummaryModel
     private String memoText;
     private String referenceCode;
     private String paymentType;
-    private Date paymentDate;
+    private String paymentDate;
     private Double paymentAmount;
     private Double unappliedAmount;
     private Integer invoiceCount;
@@ -109,13 +108,13 @@ public class PaymentSummaryModel
      *
      * @return The field paymentDate
      */
-    public Date getPaymentDate() { return this.paymentDate; }
+    public String getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this payment.
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(Date value) { this.paymentDate = value; }
+    public void setPaymentDate(String value) { this.paymentDate = value; }
     /**
      * Total amount of this payment.
      *

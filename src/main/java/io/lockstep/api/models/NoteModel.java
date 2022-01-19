@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * A note is a customizable text string that can be attached to various account attributes
@@ -35,10 +34,11 @@ public class NoteModel
     private String noteText;
     private String noteType;
     private Boolean isArchived;
-    private Date created;
+    private String created;
     private String createdUserId;
     private String createdUserName;
     private String appEnrollmentId;
+    private String recipientName;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -137,13 +137,13 @@ public class NoteModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date the note was created
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID of the user who created the note
      *
@@ -180,4 +180,16 @@ public class NoteModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    /**
+     * The person to whom this note is intended for.
+     *
+     * @return The field recipientName
+     */
+    public String getRecipientName() { return this.recipientName; }
+    /**
+     * The person to whom this note is intended for.
+     *
+     * @param value The new value for recipientName
+     */
+    public void setRecipientName(String value) { this.recipientName = value; }
 };

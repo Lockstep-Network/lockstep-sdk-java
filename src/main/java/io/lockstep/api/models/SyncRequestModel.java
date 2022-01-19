@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Represents a user request to sync data
@@ -28,8 +27,8 @@ public class SyncRequestModel
     private String statusCode;
     private String processResultMessage;
     private String appEnrollmentId;
-    private Date created;
-    private Date modified;
+    private String created;
+    private String modified;
     private String modifiedUserId;
     private Object details;
 
@@ -106,25 +105,25 @@ public class SyncRequestModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date this sync request was created
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The date this sync request was last modified
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date this sync request was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this sync request.
      *

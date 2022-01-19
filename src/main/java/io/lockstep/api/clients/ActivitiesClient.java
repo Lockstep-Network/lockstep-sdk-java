@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -47,7 +47,7 @@ public class ActivitiesClient
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
      *
      * @param id The unique Lockstep Platform ID number of this Activity
-     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Company, Attachments, CustomFields, and Notes
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Company, Attachments, CustomFields, Notes, References, and UserAssignedToName
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityModel> retrieveActivity(String id, String include)
@@ -115,7 +115,7 @@ public class ActivitiesClient
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Company, Attachments, CustomFields, and Notes
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Company, Attachments, CustomFields, Notes, References, and UserAssignedToName
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
@@ -145,5 +145,22 @@ public class ActivitiesClient
         RestRequest<ActivityStreamItemModel[]> r = new RestRequest<ActivityStreamItemModel[]>(this.client, "GET", "/api/v1/Activities/{id}/stream");
         r.AddPath("{id}", id.toString());
         return r.Call(ActivityStreamItemModel[].class);
+    }
+
+    /**
+     * Forwards an activity by creating a new activity with all child references and assigning the new activity to a new user.
+     *
+     * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
+     *
+     * @param activityId
+     * @param userId
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public LockstepResponse<ActivityModel> forwardActivity(String activityId, String userId)
+    {
+        RestRequest<ActivityModel> r = new RestRequest<ActivityModel>(this.client, "POST", "/api/v1/Activities/{activityId}/forward/{userId}");
+        r.AddPath("{activityId}", activityId.toString());
+        r.AddPath("{userId}", userId.toString());
+        return r.Call(ActivityModel.class);
     }
 }

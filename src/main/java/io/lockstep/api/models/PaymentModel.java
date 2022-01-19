@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * A Payment represents money sent from one company to another.  A single payment may contain payments for
@@ -37,15 +36,15 @@ public class PaymentModel
     private String tenderType;
     private Boolean isOpen;
     private String memoText;
-    private Date paymentDate;
-    private Date postDate;
+    private String paymentDate;
+    private String postDate;
     private Double paymentAmount;
     private Double unappliedAmount;
     private String currencyCode;
     private String referenceCode;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private String appEnrollmentId;
     private Boolean isVoided;
@@ -181,25 +180,25 @@ public class PaymentModel
      *
      * @return The field paymentDate
      */
-    public Date getPaymentDate() { return this.paymentDate; }
+    public String getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this payment.
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(Date value) { this.paymentDate = value; }
+    public void setPaymentDate(String value) { this.paymentDate = value; }
     /**
      * Payment post date.
      *
      * @return The field postDate
      */
-    public Date getPostDate() { return this.postDate; }
+    public String getPostDate() { return this.postDate; }
     /**
      * Payment post date.
      *
      * @param value The new value for postDate
      */
-    public void setPostDate(Date value) { this.postDate = value; }
+    public void setPostDate(String value) { this.postDate = value; }
     /**
      * Total amount of this payment.
      *
@@ -253,13 +252,13 @@ public class PaymentModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date on which this record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID of the user who created this payment.
      *
@@ -277,13 +276,13 @@ public class PaymentModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date on which this record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID of the user who last modified this payment.
      *

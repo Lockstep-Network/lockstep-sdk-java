@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * A User represents a person who has the ability to authenticate against the Lockstep Platform and use
@@ -32,14 +31,14 @@ public class UserAccountModel
     private String userName;
     private String email;
     private String status;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private String modifiedUserName;
     private String b2CUserId;
     private String userRole;
-    private Date inviteSent;
+    private String inviteSent;
     private String phoneNumber;
     private String faxNumber;
     private String title;
@@ -53,7 +52,7 @@ public class UserAccountModel
     private String country;
     private String imageURL;
     private String description;
-    private Date b2CLastLoggedIn;
+    private String b2CLastLoggedIn;
     private String defaultCurrencyCode;
     private NoteModel[] notes;
     private AttachmentModel[] attachments;
@@ -137,13 +136,13 @@ public class UserAccountModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * The date that the user account was created
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * The ID of the user who created the user account
      *
@@ -161,13 +160,13 @@ public class UserAccountModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * The date the user account was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * The ID of the user who last modified the user account
      *
@@ -221,13 +220,13 @@ public class UserAccountModel
      *
      * @return The field inviteSent
      */
-    public Date getInviteSent() { return this.inviteSent; }
+    public String getInviteSent() { return this.inviteSent; }
     /**
      * The date timestamp when the invite was sent to the user.
      *
      * @param value The new value for inviteSent
      */
-    public void setInviteSent(Date value) { this.inviteSent = value; }
+    public void setInviteSent(String value) { this.inviteSent = value; }
     /**
      * The phone number of the user.
      *
@@ -389,13 +388,13 @@ public class UserAccountModel
      *
      * @return The field b2CLastLoggedIn
      */
-    public Date getB2CLastLoggedIn() { return this.b2CLastLoggedIn; }
+    public String getB2CLastLoggedIn() { return this.b2CLastLoggedIn; }
     /**
      * Last date time user logged into Azure B2C.
      *
      * @param value The new value for b2CLastLoggedIn
      */
-    public void setB2CLastLoggedIn(Date value) { this.b2CLastLoggedIn = value; }
+    public void setB2CLastLoggedIn(String value) { this.b2CLastLoggedIn = value; }
     /**
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.

@@ -9,14 +9,13 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * An AppEnrollment represents an app that has been enrolled to the current account.  When you sign up for an
@@ -32,9 +31,9 @@ public class AppEnrollmentModel
     private String appId;
     private String groupKey;
     private Boolean isActive;
-    private Date created;
+    private String created;
     private String createdUserId;
-    private Date modified;
+    private String modified;
     private String modifiedUserId;
     private String cronSettings;
     private Boolean syncScheduleIsActive;
@@ -42,6 +41,7 @@ public class AppEnrollmentModel
     private CustomFieldDefinitionModel[] customFieldDefinitions;
     private CustomFieldValueModel[] customFieldValues;
     private SyncRequestModel lastSync;
+    private SyncRequestModel lastSuccessfulSync;
     private ConnectorInfoModel connectorInfo;
 
     /**
@@ -107,13 +107,13 @@ public class AppEnrollmentModel
      *
      * @return The field created
      */
-    public Date getCreated() { return this.created; }
+    public String getCreated() { return this.created; }
     /**
      * Created date
      *
      * @param value The new value for created
      */
-    public void setCreated(Date value) { this.created = value; }
+    public void setCreated(String value) { this.created = value; }
     /**
      * Created user ID
      *
@@ -131,13 +131,13 @@ public class AppEnrollmentModel
      *
      * @return The field modified
      */
-    public Date getModified() { return this.modified; }
+    public String getModified() { return this.modified; }
     /**
      * Last modified date
      *
      * @param value The new value for modified
      */
-    public void setModified(Date value) { this.modified = value; }
+    public void setModified(String value) { this.modified = value; }
     /**
      * Last user ID to modify
      *
@@ -242,6 +242,18 @@ public class AppEnrollmentModel
      * @param value The new value for lastSync
      */
     public void setLastSync(SyncRequestModel value) { this.lastSync = value; }
+    /**
+     * Data about the last successful sync associated with this enrollment
+     *
+     * @return The field lastSuccessfulSync
+     */
+    public SyncRequestModel getLastSuccessfulSync() { return this.lastSuccessfulSync; }
+    /**
+     * Data about the last successful sync associated with this enrollment
+     *
+     * @param value The new value for lastSuccessfulSync
+     */
+    public void setLastSuccessfulSync(SyncRequestModel value) { this.lastSuccessfulSync = value; }
     /**
      * Optional data necessary to create an app enrollment for a supported connector.
      * Only enter relevant fields for the given connector.

@@ -9,21 +9,20 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.2
+ * @version    2022.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api.models;
 
-import java.util.Date;
 
 /**
  * Input format used for bulk conversion route
  */
 public class BulkCurrencyConversionModel
 {
-    private Date date;
+    private String date;
     private String sourceCurrency;
 
     /**
@@ -31,13 +30,13 @@ public class BulkCurrencyConversionModel
      *
      * @return The field date
      */
-    public Date getDate() { return this.date; }
+    public String getDate() { return this.date; }
     /**
      * The date for the currency rate
      *
      * @param value The new value for date
      */
-    public void setDate(Date value) { this.date = value; }
+    public void setDate(String value) { this.date = value; }
     /**
      * The currency code This will be validated by the /api/v1/currencies data set
      *
