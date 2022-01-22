@@ -48,6 +48,7 @@ public class LockstepApi {
     private String serverUri;
     private String apiKey;
     private String bearerToken;
+    private String appName;
 
     private ActivitiesClient activities;
     private ApiKeysClient apiKeys;
@@ -328,6 +329,17 @@ public class LockstepApi {
     }
 
     /**
+     * Configures this Lockstep API client to use an application name.
+     * 
+     * @param appName The Application name to use for this API session
+     * @return The Lockstep API client to use
+     */
+    public LockstepApi withApplicationName (String appName) {
+        this.appName = appName;
+        return this;
+    }
+
+    /**
      * The server URI to which this client connects
      *
      * @return The server URI
@@ -352,5 +364,14 @@ public class LockstepApi {
      */
     public String getBearerToken() {
         return this.bearerToken;
+    }
+
+    /**
+     * Returns the currently selected application name
+     * 
+     * @return The application name
+     */
+    public String getAppName() {
+        return this.appName;
     }
 }
