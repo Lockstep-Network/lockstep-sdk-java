@@ -146,17 +146,7 @@ public class RestRequest<T>
                     request = new HttpGet(uri);
                     break;
             }
-            
-            // Add authentication
-            String apiKey = this.client.getApiKey();
-            if (apiKey != null) {
-                request.addHeader("Api-Key", apiKey);
-            }
-            String bearerToken = this.client.getBearerToken();
-            if (apiKey != null) {
-                request.addHeader("Authorization", "Bearer " + bearerToken);
-            }
-
+        
             request.addHeader("SdkName", "Java");
             request.addHeader("SdkVersion", "2022.3.32.0");
             
@@ -170,6 +160,17 @@ public class RestRequest<T>
             
             if (machineName != null) {
                 request.addHeader("MachineName", machineName);
+            }
+
+            String bearerToken = this.client.getBearerToken();
+            if (bearerToken != null) {
+                request.addHeader("Authorization", "Bearer " + bearerToken);
+            }
+
+            // Add authentication
+            String apiKey = this.client.getApiKey();
+            if (apiKey != null) {
+                request.addHeader("Api-Key", apiKey);
             }
 
             // If we have a request body
