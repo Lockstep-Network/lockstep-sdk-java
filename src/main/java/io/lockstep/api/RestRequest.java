@@ -15,6 +15,7 @@
 package io.lockstep.api;
 
 import java.lang.reflect.Type;
+import java.net.InetAddress;
 import java.net.URI;
 import java.util.Hashtable;
 import java.util.Map.Entry;
@@ -145,15 +146,31 @@ public class RestRequest<T>
                     request = new HttpGet(uri);
                     break;
             }
+        
+            request.addHeader("SdkName", "Java");
+            request.addHeader("SdkVersion", "2022.3.32.0");
             
+            String applicationName = this.client.getAppName();
+
+            if (applicationName != null) {
+                request.addHeader("ApplicationName", applicationName);
+            }
+
+            String machineName = InetAddress.getLocalHost().getHostName();
+            
+            if (machineName != null) {
+                request.addHeader("MachineName", machineName);
+            }
+
+            String bearerToken = this.client.getBearerToken();
+            if (bearerToken != null) {
+                request.addHeader("Authorization", "Bearer " + bearerToken);
+            }
+
             // Add authentication
             String apiKey = this.client.getApiKey();
             if (apiKey != null) {
                 request.addHeader("Api-Key", apiKey);
-            }
-            String bearerToken = this.client.getBearerToken();
-            if (apiKey != null) {
-                request.addHeader("Authorization", "Bearer " + bearerToken);
             }
 
             // If we have a request body
