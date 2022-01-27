@@ -84,4 +84,4 @@ for (InvoiceModel currentInvoice : InvoiceModel) {
 ```
 
 # Sample Project 
-Fetch Invoice Sample Java Project {INSERT REFERENCE TO READ ME}
+(Collections Report Sample Java Project)[https://github.com/Lockstep-Network/lockstep-sdk-examples/blob/main/JavaExample/src/main/java/io/lockstep/CollectionsReport.java]
