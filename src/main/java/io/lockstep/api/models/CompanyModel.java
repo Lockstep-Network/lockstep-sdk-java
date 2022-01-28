@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.3
+ * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -125,13 +125,14 @@ public class CompanyModel
     public void setErpKey(String value) { this.erpKey = value; }
     /**
      * This field indicates the type of company.  It can be one of a limited number of values:
-     * Company, Customer, Group, or Vendor.  A company that represents both a customer and a vendor
+     * Company, Customer, Group, Vendor, or Third Party.  A company that represents both a customer and a vendor
      * is identified as a CustomerVendor.
      *
      * * `Company` - This record represents a company that is part of the organization of the account holder.
      * * `Customer` - This record represents a business entity that purchases things from the account holder.
      * * `Group` - Only one record of type `GROUP` exists in each account.  Contains your account profile.
      * * `Vendor` - This record represents a business entity that sells things to the account holder.
+     * * `Third Party` - This record represents a business entity that is neither a customer nor vendor.
      * * `CustomerVendor` - Both a customer and a vendor.
      *
      * @return The field companyType
@@ -139,13 +140,14 @@ public class CompanyModel
     public String getCompanyType() { return this.companyType; }
     /**
      * This field indicates the type of company.  It can be one of a limited number of values:
-     * Company, Customer, Group, or Vendor.  A company that represents both a customer and a vendor
+     * Company, Customer, Group, Vendor, or Third Party.  A company that represents both a customer and a vendor
      * is identified as a CustomerVendor.
      *
      * * `Company` - This record represents a company that is part of the organization of the account holder.
      * * `Customer` - This record represents a business entity that purchases things from the account holder.
      * * `Group` - Only one record of type `GROUP` exists in each account.  Contains your account profile.
      * * `Vendor` - This record represents a business entity that sells things to the account holder.
+     * * `Third Party` - This record represents a business entity that is neither a customer nor vendor.
      * * `CustomerVendor` - Both a customer and a vendor.
      *
      * @param value The new value for companyType
