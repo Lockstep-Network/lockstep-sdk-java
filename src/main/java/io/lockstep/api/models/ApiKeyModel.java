@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.3
+ * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -31,6 +31,7 @@ public class ApiKeyModel
     private String apiKeyId;
     private String groupKey;
     private String name;
+    private String environment;
     private String apiKey;
     private String keyPrefix;
     private String created;
@@ -81,6 +82,22 @@ public class ApiKeyModel
      * @param value The new value for name
      */
     public void setName(String value) { this.name = value; }
+    /**
+     * For convenience, a call to createApiKey will contain the name of the environment for this API key,
+     * typically SBX or PRD. This can help you distinguish between keys created on the Sandbox environment
+     * from those created on Production.
+     *
+     * @return The field environment
+     */
+    public String getEnvironment() { return this.environment; }
+    /**
+     * For convenience, a call to createApiKey will contain the name of the environment for this API key,
+     * typically SBX or PRD. This can help you distinguish between keys created on the Sandbox environment
+     * from those created on Production.
+     *
+     * @param value The new value for environment
+     */
+    public void setEnvironment(String value) { this.environment = value; }
     /**
      * The API key to use for authentication. This will only be returned upon creation of the API key.
      * All other times, this value will be `null`.

@@ -9,7 +9,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.3
+ * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -35,11 +35,12 @@ public class CompaniesClient
     private LockstepApi client;
 
     /**
-     * Constructor for method collection
+     * Constructor for the Companies API collection
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
     public CompaniesClient(LockstepApi client) {
+        super();
         this.client = client;
     }
 
