@@ -72,7 +72,7 @@ public class RestRequest<T>
     }
 
     /**
-     * <p>AddQuery.</p>
+     * Adds a query.
      *
      * @param name a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
@@ -83,7 +83,7 @@ public class RestRequest<T>
     }
 
     /**
-     * <p>AddPath.</p>
+     * Adds a path.
      *
      * @param name a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
@@ -94,7 +94,7 @@ public class RestRequest<T>
     }
 
     /**
-     * <p>AddBody.</p>
+     * Adds a body
      *
      * @param body a {@link java.lang.Object} object.
      */
