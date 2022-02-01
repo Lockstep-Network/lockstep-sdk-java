@@ -1,3 +1,4 @@
+
 /**
  * Lockstep Software Development Kit for Java
  *
@@ -7,37 +8,31 @@
  * file that was distributed with this source code.
  *
  * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
- * @version    2021.39
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
+
 
 package io.lockstep.api.models;
 
+
 /**
- * Not intended to be used
- *
- * @author jkirk
- * @version $Id: $Id
+ * Represents a Uri for download link
  */
-public class UriModel {
-    private String uri;   
+public class UriModel
+{
+    private String downloadLink;
 
     /**
-     * <p>Getter for the field <code>uri</code>.</p>
+     * Represents the download link
      *
-     * @return a {@link java.lang.String} object.
+     * @return The field downloadLink
      */
-    public String getUri() {
-        return this.uri;
-    }
-
+    public String getDownloadLink() { return this.downloadLink; }
     /**
-     * <p>Setter for the field <code>uri</code>.</p>
+     * Represents the download link
      *
-     * @param uri a {@link java.lang.String} object.
+     * @param value The new value for downloadLink
      */
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
+    public void setDownloadLink(String value) { this.downloadLink = value; }
 };
