@@ -30,7 +30,6 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.ClassicHttpRequest;
-import org.apache.hc.core5.http.Header;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
 import org.apache.hc.core5.http.io.entity.StringEntity;
 import org.apache.hc.core5.net.URIBuilder;
@@ -38,7 +37,6 @@ import com.google.gson.Gson;
 
 import io.lockstep.api.models.ErrorResult;
 import io.lockstep.api.models.LockstepResponse;
-
 
 /**
  * Represents a failed request.
@@ -72,7 +70,7 @@ public class RestRequest<T>
     }
 
     /**
-     * Adds a query.
+     * <p>AddQuery.</p>
      *
      * @param name a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
@@ -83,7 +81,7 @@ public class RestRequest<T>
     }
 
     /**
-     * Adds a path.
+     * <p>AddPath.</p>
      *
      * @param name a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
@@ -94,7 +92,7 @@ public class RestRequest<T>
     }
 
     /**
-     * Adds a body
+     * <p>AddBody.</p>
      *
      * @param body a {@link java.lang.Object} object.
      */
@@ -114,6 +112,7 @@ public class RestRequest<T>
         Instant start = Instant.now();
         LockstepResponse<T> lockstepResponse = new LockstepResponse<T>();
         try {
+
             CloseableHttpClient httpclient = HttpClients.createDefault();
 
             // Add query parameters
@@ -191,27 +190,19 @@ public class RestRequest<T>
 
             // Did we succeed?
             int code = response.getCode();
-            String serverDuration = null;
+            long serverDuration = 0;
 
             if (response.getHeader("ServerDuration") != null) {
-                serverDuration = response.getHeader("ServerDuration").getValue();
+                serverDuration = Long.parseLong(response.getHeader("ServerDuration").getValue());
             }
 
             String content = EntityUtils.toString(response.getEntity());
 
-            char quotation = '"'; 
-
-            String toAdd = "," + quotation + "roundTripTime" + quotation + ":" + quotation + roundTripTime + quotation;
-
-            if (serverDuration != null) {
-                toAdd += "," + quotation + "serverDuration" + quotation + ":" + quotation + serverDuration + quotation;
-            }
-
-            content = content.substring(0, content.length() - 1) + toAdd + "}";
-
             if (code >= 200 && code < 300) {
-                T t = gson.fromJson(content, classReference);     
+                T t = gson.fromJson(content, classReference);
                 lockstepResponse.setValue(t);
+                lockstepResponse.setServerDuration(serverDuration);
+                lockstepResponse.setRoundTripTime(roundTripTime);
                 lockstepResponse.setSuccess(true);
             } else {
                 ErrorResult errorResult = gson.fromJson(content, ErrorResult.class);
