@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2021 Lockstep, Inc.
- * @version    2021.39
+ * @version    2022.4.32.0
  * @link       https://github.com/tspence/lockstep-sdk-java
  */
 
@@ -17,6 +17,8 @@ package io.lockstep.api;
 import java.lang.reflect.Type;
 import java.net.InetAddress;
 import java.net.URI;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Hashtable;
 import java.util.Map.Entry;
 import org.apache.hc.client5.http.classic.methods.HttpDelete;
@@ -35,7 +37,6 @@ import com.google.gson.Gson;
 
 import io.lockstep.api.models.ErrorResult;
 import io.lockstep.api.models.LockstepResponse;
-
 
 /**
  * Represents a failed request.
@@ -108,8 +109,10 @@ public class RestRequest<T>
      */
     public LockstepResponse<T> Call(Type classReference)
     {
+        Instant start = Instant.now();
         LockstepResponse<T> lockstepResponse = new LockstepResponse<T>();
         try {
+
             CloseableHttpClient httpclient = HttpClients.createDefault();
 
             // Add query parameters
@@ -146,9 +149,9 @@ public class RestRequest<T>
                     request = new HttpGet(uri);
                     break;
             }
-        
+
             request.addHeader("SdkName", "Java");
-            request.addHeader("SdkVersion", "2022.3.32.0");
+            request.addHeader("SdkVersion", "2022.4.32.0");
             
             String applicationName = this.client.getAppName();
 
@@ -179,25 +182,35 @@ public class RestRequest<T>
                 StringEntity stringEntity = new StringEntity(gson.toJson(body));
                 request.setEntity(stringEntity);
             }
-
             // Execute and parse results
             final CloseableHttpResponse response = httpclient.execute(request);
 
+            //get round trip time
+            long roundTripTime = Duration.between(start, Instant.now()).toMillis();
+
             // Did we succeed?
             int code = response.getCode();
+            long serverDuration = 0;
+
+            if (response.getHeader("ServerDuration") != null) {
+                serverDuration = Long.parseLong(response.getHeader("ServerDuration").getValue());
+            }
+
+            String content = EntityUtils.toString(response.getEntity());
+
             if (code >= 200 && code < 300) {
-                String content = EntityUtils.toString(response.getEntity());
                 T t = gson.fromJson(content, classReference);
                 lockstepResponse.setValue(t);
+                lockstepResponse.setServerDuration(serverDuration);
+                lockstepResponse.setRoundTripTime(roundTripTime);
                 lockstepResponse.setSuccess(true);
             } else {
-                String content = EntityUtils.toString(response.getEntity());
                 ErrorResult errorResult = gson.fromJson(content, ErrorResult.class);
                 lockstepResponse.setError(errorResult);
                 lockstepResponse.setSuccess(false);
             }
             return lockstepResponse;
-        } catch (Exception e) {
+        } catch (Exception e) { 
             lockstepResponse.setSuccess(false);
             lockstepResponse.setException(e);
         }

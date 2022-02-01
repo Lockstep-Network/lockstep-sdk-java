@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2021 Lockstep, Inc.
- * @version    2021.39
+ * @version    2021.4.32.0
  * @link       https://github.com/tspence/lockstep-sdk-java
  */
 
@@ -26,6 +26,8 @@ public class LockstepResponse<T>
     private T value;
     private ErrorResult error;
     private Exception exception;
+    private long roundTripDuration;
+    private long serverDuration;
 
     /**
      * <p>isSuccess.</p>
@@ -106,5 +108,41 @@ public class LockstepResponse<T>
      */
     public Exception getException() {
         return this.exception;
+    }
+
+    /**
+     * Setter for the field serverDuration
+     * 
+     * @param serverDuration a long primitive
+     */
+    public void setServerDuration(long serverDuration) {
+        this.serverDuration = serverDuration;
+    }
+
+    /**
+     * Getter for the field serverDuration
+     * 
+     * @return serverDuration a long primitive
+     */
+    public long getServerDuration() {
+        return serverDuration;
+    }
+
+    /**
+     * Setter for the field roundTripDuration
+     * 
+     * @param serverDuration a long primitive
+     */
+    public void setRoundTripTime(long roundTripDuration) {
+        this.roundTripDuration = roundTripDuration;
+    }  
+
+    /**
+     * Getter for the field serverDuration
+     * 
+     * @return roundTripDuration a long primitive
+     */
+    public long getRoundTripTime() {
+        return roundTripDuration;
     }
 }
