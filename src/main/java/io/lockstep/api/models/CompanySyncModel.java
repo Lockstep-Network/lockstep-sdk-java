@@ -45,8 +45,8 @@ public class CompanySyncModel
     private String stateRegion;
     private String postalCode;
     private String country;
-    private string phoneNumber;
-    private string faxNumber;
+    private String phoneNumber;
+    private String faxNumber;
     private String created;
     private String modified;
     private String taxId;
@@ -307,25 +307,25 @@ public class CompanySyncModel
      *
      * @return The field phoneNumber
      */
-    public string getPhoneNumber() { return this.phoneNumber; }
+    public String getPhoneNumber() { return this.phoneNumber; }
     /**
      * The main phone number of this company.
      *
      * @param value The new value for phoneNumber
      */
-    public void setPhoneNumber(string value) { this.phoneNumber = value; }
+    public void setPhoneNumber(String value) { this.phoneNumber = value; }
     /**
      * The main fax number of this company.
      *
      * @return The field faxNumber
      */
-    public string getFaxNumber() { return this.faxNumber; }
+    public String getFaxNumber() { return this.faxNumber; }
     /**
      * The main fax number of this company.
      *
      * @param value The new value for faxNumber
      */
-    public void setFaxNumber(string value) { this.faxNumber = value; }
+    public void setFaxNumber(String value) { this.faxNumber = value; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
