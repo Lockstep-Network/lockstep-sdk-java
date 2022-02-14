@@ -152,8 +152,8 @@ public class ActivitiesClient
      *
      * An Activity contains information about work being done on a specific accounting task. You can use Activities to track information about who has been assigned a specific task, the current status of the task, the name and description given for the particular task, the priority of the task, and any amounts collected, paid, or credited for the task.
      *
-     * @param activityId
-     * @param userId
+     * @param activityId Documentation pending
+     * @param userId Documentation pending
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public LockstepResponse<ActivityModel> forwardActivity(String activityId, String userId)

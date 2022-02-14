@@ -113,7 +113,7 @@ public class LockstepResponse<T>
     /**
      * Setter for the field serverDuration
      * 
-     * @param serverDuration a long primitive
+     * @param serverDuration Lockstep Platform server processing time in milliseconds
      */
     public void setServerDuration(long serverDuration) {
         this.serverDuration = serverDuration;
@@ -122,7 +122,7 @@ public class LockstepResponse<T>
     /**
      * Getter for the field serverDuration
      * 
-     * @return serverDuration a long primitive
+     * @return Lockstep Platform server processing time in milliseconds
      */
     public long getServerDuration() {
         return serverDuration;
@@ -131,7 +131,7 @@ public class LockstepResponse<T>
     /**
      * Setter for the field roundTripDuration
      * 
-     * @param serverDuration a long primitive
+     * @param roundTripDuration Total time processing the request in milliseconds
      */
     public void setRoundTripTime(long roundTripDuration) {
         this.roundTripDuration = roundTripDuration;
@@ -140,7 +140,7 @@ public class LockstepResponse<T>
     /**
      * Getter for the field serverDuration
      * 
-     * @return roundTripDuration a long primitive
+     * @return Total time processing the request in milliseconds
      */
     public long getRoundTripTime() {
         return roundTripDuration;
