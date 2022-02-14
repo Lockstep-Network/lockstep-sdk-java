@@ -26,4 +26,4 @@ src/main/java/io/lockstep/api/ApiClientList.txt
 target/classes/io/lockstep/api/ApiClientList.txt
 
 # Ignore maven plugin run logs
-target/invoker/*.txt
+target/
