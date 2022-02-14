@@ -1,0 +1,137 @@
+
+/**
+ * Lockstep Software Development Kit for Java
+ *
+ * (c) 2021-2022 Lockstep, Inc.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author     Ted Spence <tspence@lockstep.io>
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
+ */
+
+
+package io.lockstep.api.models;
+
+
+/**
+ * A BatchSyncModel contains a collection of records to load into the Lockstep Platform.  Data contained
+ * in this batch will be merged with your existing data.  Each record will be matched with existing data inside
+ * the Lockstep Platform using the [Identity Column](https://developer.lockstep.io/docs/identity-columns) rules.
+ * Any record that represents a new AppEnrollmentId+ErpKey will be inserted.  A record that matches an existing
+ * AppEnrollmentId+ErpKey will be updated, but only if the data has changed.
+ *
+ * A Sync process permits either a complete data file or a partial / delta data file.  Lockstep recommends
+ * using a sliding time window to avoid the risk of clock skew errors that might accidentally omit records.
+ * Best practice is to run a Sync process daily, and to export all data that has changed in the past 48 hours.
+ */
+public class BatchSyncModel
+{
+    private CompanySyncModel[] companies;
+    private ContactSyncModel[] contacts;
+    private CreditMemoAppliedSyncModel[] creditMemoApplications;
+    private InvoiceSyncModel[] invoices;
+    private InvoiceLineSyncModel[] invoiceLines;
+    private CustomFieldSyncModel[] customFields;
+    private PaymentSyncModel[] payments;
+    private PaymentAppliedSyncModel[] paymentApplications;
+
+    /**
+     * A list of Company records to merge with your Lockstep Platform data
+     *
+     * @return The field companies
+     */
+    public CompanySyncModel[] getCompanies() { return this.companies; }
+    /**
+     * A list of Company records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for companies
+     */
+    public void setCompanies(CompanySyncModel[] value) { this.companies = value; }
+    /**
+     * A list of Contact records to merge with your Lockstep Platform data
+     *
+     * @return The field contacts
+     */
+    public ContactSyncModel[] getContacts() { return this.contacts; }
+    /**
+     * A list of Contact records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for contacts
+     */
+    public void setContacts(ContactSyncModel[] value) { this.contacts = value; }
+    /**
+     * A list of CreditMemoApplied records to merge with your Lockstep Platform data
+     *
+     * @return The field creditMemoApplications
+     */
+    public CreditMemoAppliedSyncModel[] getCreditMemoApplications() { return this.creditMemoApplications; }
+    /**
+     * A list of CreditMemoApplied records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for creditMemoApplications
+     */
+    public void setCreditMemoApplications(CreditMemoAppliedSyncModel[] value) { this.creditMemoApplications = value; }
+    /**
+     * A list of Invoice records to merge with your Lockstep Platform data
+     *
+     * @return The field invoices
+     */
+    public InvoiceSyncModel[] getInvoices() { return this.invoices; }
+    /**
+     * A list of Invoice records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for invoices
+     */
+    public void setInvoices(InvoiceSyncModel[] value) { this.invoices = value; }
+    /**
+     * A list of InvoiceLine records to merge with your Lockstep Platform data
+     *
+     * @return The field invoiceLines
+     */
+    public InvoiceLineSyncModel[] getInvoiceLines() { return this.invoiceLines; }
+    /**
+     * A list of InvoiceLine records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for invoiceLines
+     */
+    public void setInvoiceLines(InvoiceLineSyncModel[] value) { this.invoiceLines = value; }
+    /**
+     * A list of CustomField records to merge with your Lockstep Platform data
+     *
+     * @return The field customFields
+     */
+    public CustomFieldSyncModel[] getCustomFields() { return this.customFields; }
+    /**
+     * A list of CustomField records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for customFields
+     */
+    public void setCustomFields(CustomFieldSyncModel[] value) { this.customFields = value; }
+    /**
+     * A list of Payment records to merge with your Lockstep Platform data
+     *
+     * @return The field payments
+     */
+    public PaymentSyncModel[] getPayments() { return this.payments; }
+    /**
+     * A list of Payment records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for payments
+     */
+    public void setPayments(PaymentSyncModel[] value) { this.payments = value; }
+    /**
+     * A list of PaymentApplied records to merge with your Lockstep Platform data
+     *
+     * @return The field paymentApplications
+     */
+    public PaymentAppliedSyncModel[] getPaymentApplications() { return this.paymentApplications; }
+    /**
+     * A list of PaymentApplied records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for paymentApplications
+     */
+    public void setPaymentApplications(PaymentAppliedSyncModel[] value) { this.paymentApplications = value; }
+};

@@ -9,7 +9,6 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -125,37 +124,39 @@ public class PaymentAppliedModel
      */
     public void setErpKey(String value) { this.erpKey = value; }
     /**
-     * Reference number for the payment applied.
+     * The entry number of this payment application.  This is often a journal entry number, confirmation code,
+     * or other identifying field for this payment application.
      *
      * @return The field entryNumber
      */
     public Integer getEntryNumber() { return this.entryNumber; }
     /**
-     * Reference number for the payment applied.
+     * The entry number of this payment application.  This is often a journal entry number, confirmation code,
+     * or other identifying field for this payment application.
      *
      * @param value The new value for entryNumber
      */
     public void setEntryNumber(Integer value) { this.entryNumber = value; }
     /**
-     * Date payment applied to invoice.
+     * The date this payment was applied to this invoice.
      *
      * @return The field applyToInvoiceDate
      */
     public String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
-     * Date payment applied to invoice.
+     * The date this payment was applied to this invoice.
      *
      * @param value The new value for applyToInvoiceDate
      */
     public void setApplyToInvoiceDate(String value) { this.applyToInvoiceDate = value; }
     /**
-     * Amount applied to invoice.
+     * The total amount that was applied to this Invoice from the Payment.
      *
      * @return The field paymentAppliedAmount
      */
     public Double getPaymentAppliedAmount() { return this.paymentAppliedAmount; }
     /**
-     * Amount applied to invoice.
+     * The total amount that was applied to this Invoice from the Payment.
      *
      * @param value The new value for paymentAppliedAmount
      */

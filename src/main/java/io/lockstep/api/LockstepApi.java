@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.4.32.0
+ * @version    2022.6.48.0
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -40,6 +40,7 @@ import io.lockstep.api.clients.StatusClient;
 import io.lockstep.api.clients.SyncClient;
 import io.lockstep.api.clients.UserAccountsClient;
 import io.lockstep.api.clients.UserRolesClient;
+import io.lockstep.api.clients.WebhooksClient;
 
 /**
  * A client object that can be used to work with the Lockstep Platform API
@@ -76,6 +77,7 @@ public class LockstepApi {
     private SyncClient sync;
     private UserAccountsClient userAccounts;
     private UserRolesClient userRoles;
+    private WebhooksClient webhooks;
 
     private LockstepApi(String serverUri)
     {
@@ -107,6 +109,7 @@ public class LockstepApi {
         this.sync = new SyncClient(this);
         this.userAccounts = new UserAccountsClient(this);
         this.userRoles = new UserRolesClient(this);
+        this.webhooks = new WebhooksClient(this);
     }
 
     /**
@@ -265,6 +268,12 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.UserRolesClient client} methods in the Lockstep Platform API.
      */
     public UserRolesClient getUserRolesClient() { return this.userRoles; }
+    /**
+     * A collection of Lockstep API methods relating to Webhooks
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.WebhooksClient client} methods in the Lockstep Platform API.
+     */
+    public WebhooksClient getWebhooksClient() { return this.webhooks; }
   
     /**
      * Construct a new Lockstep API client to target the specific environment.

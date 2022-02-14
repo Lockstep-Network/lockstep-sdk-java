@@ -9,7 +9,6 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -81,25 +80,43 @@ public class CreditMemoAppliedModel
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * The id of the invoice
+     * The Lockstep ID of the Invoice to which this credit memo was applied.  This Invoice's outstanding balance
+     * was reduced by the value of the field `CreditMemoAppliedAmount` on the date `ApplyToInvoiceDate`.
+     *
+     * Example: Company ABC received a credit memo, CM000123 for $500.  Company ABC then chooses to apply this
+     * credit memo to reduce the balance of the invoice PO1000578.  The `InvoiceErpKey` is the Lockstep Platform
+     * ID number of Invoice `PO1000578`.
      *
      * @return The field invoiceId
      */
     public String getInvoiceId() { return this.invoiceId; }
     /**
-     * The id of the invoice
+     * The Lockstep ID of the Invoice to which this credit memo was applied.  This Invoice's outstanding balance
+     * was reduced by the value of the field `CreditMemoAppliedAmount` on the date `ApplyToInvoiceDate`.
+     *
+     * Example: Company ABC received a credit memo, CM000123 for $500.  Company ABC then chooses to apply this
+     * credit memo to reduce the balance of the invoice PO1000578.  The `InvoiceErpKey` is the Lockstep Platform
+     * ID number of Invoice `PO1000578`.
      *
      * @param value The new value for invoiceId
      */
     public void setInvoiceId(String value) { this.invoiceId = value; }
     /**
-     * The id of the credit memo invoice
+     * The Lockstep ID of the Invoice of type "Credit Memo" that was consumed in this payment application event.
+     *
+     * Example: Company ABC received a credit memo, CM000123 for $500.  Company ABC then chooses to apply this
+     * credit memo to reduce the balance of the invoice PO1000578.  The `CreditMemoInvoiceId` is the Lockstep
+     * Platform ID number of Invoice `CM000123`.
      *
      * @return The field creditMemoInvoiceId
      */
     public String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
     /**
-     * The id of the credit memo invoice
+     * The Lockstep ID of the Invoice of type "Credit Memo" that was consumed in this payment application event.
+     *
+     * Example: Company ABC received a credit memo, CM000123 for $500.  Company ABC then chooses to apply this
+     * credit memo to reduce the balance of the invoice PO1000578.  The `CreditMemoInvoiceId` is the Lockstep
+     * Platform ID number of Invoice `CM000123`.
      *
      * @param value The new value for creditMemoInvoiceId
      */
@@ -141,25 +158,25 @@ public class CreditMemoAppliedModel
      */
     public void setEntryNumber(Integer value) { this.entryNumber = value; }
     /**
-     * Date payment applied to credit memo.
+     * The date on which this credit memo was applied to the Invoice represented by `InvoiceId`.
      *
      * @return The field applyToInvoiceDate
      */
     public String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
-     * Date payment applied to credit memo.
+     * The date on which this credit memo was applied to the Invoice represented by `InvoiceId`.
      *
      * @param value The new value for applyToInvoiceDate
      */
     public void setApplyToInvoiceDate(String value) { this.applyToInvoiceDate = value; }
     /**
-     * Amount applied to credit memo.
+     * The amount of the credit memo that was applied to the Invoice represented by `InvoiceId`.
      *
      * @return The field creditMemoAppliedAmount
      */
     public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
-     * Amount applied to credit memo.
+     * The amount of the credit memo that was applied to the Invoice represented by `InvoiceId`.
      *
      * @param value The new value for creditMemoAppliedAmount
      */
@@ -240,6 +257,7 @@ public class CreditMemoAppliedModel
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
      * All notes attached to this applied Credit Memo.
+     *
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      *
      * @return The field notes
@@ -247,6 +265,7 @@ public class CreditMemoAppliedModel
     public NoteModel[] getNotes() { return this.notes; }
     /**
      * All notes attached to this applied Credit Memo.
+     *
      * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
      *
      * @param value The new value for notes
@@ -254,28 +273,32 @@ public class CreditMemoAppliedModel
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
      * All definitions attached to this applied Credit Memo.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * To retrieve this collection, specify `CustomFields` in the "Include" parameter for your query.
      *
      * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * All definitions attached to this applied Credit Memo.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * To retrieve this collection, specify `CustomFields` in the "Include" parameter for your query.
      *
      * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * All values attached to this Credit Memo.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * To retrieve this collection, specify `CustomFields` in the "Include" parameter for your query.
      *
      * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * All values attached to this Credit Memo.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     *
+     * To retrieve this collection, specify `CustomFields` in the "Include" parameter for your query.
      *
      * @param value The new value for customFieldValues
      */

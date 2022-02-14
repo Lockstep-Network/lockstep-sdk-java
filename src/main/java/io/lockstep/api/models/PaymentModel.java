@@ -9,7 +9,6 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -130,11 +129,19 @@ public class PaymentModel
     /**
      * The type of payment, cash or check.
      *
+     * Recognized PaymentType values are:
+     * * `Cash` - A cash payment or other direct transfer.
+     * * `Check` - A check payment.
+     *
      * @return The field paymentType
      */
     public String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, cash or check.
+     *
+     * Recognized PaymentType values are:
+     * * `Cash` - A cash payment or other direct transfer.
+     * * `Check` - A check payment.
      *
      * @param value The new value for paymentType
      */
@@ -142,23 +149,37 @@ public class PaymentModel
     /**
      * Cash, check, credit card, wire transfer.
      *
+     * Recognized TenderType values are:
+     * * `Cash` - A cash payment or other direct transfer.
+     * * `Check` - A check payment.
+     * * `Credit Card` - A payment made via a credit card.
+     * * `Wire Transfer` - A payment made via wire transfer from another financial institution.
+     *
      * @return The field tenderType
      */
     public String getTenderType() { return this.tenderType; }
     /**
      * Cash, check, credit card, wire transfer.
      *
+     * Recognized TenderType values are:
+     * * `Cash` - A cash payment or other direct transfer.
+     * * `Check` - A check payment.
+     * * `Credit Card` - A payment made via a credit card.
+     * * `Wire Transfer` - A payment made via wire transfer from another financial institution.
+     *
      * @param value The new value for tenderType
      */
     public void setTenderType(String value) { this.tenderType = value; }
     /**
-     * Has the payment been fully applied?
+     * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
+     * value is true, the field `UnappliedAmount` will be nonzero.
      *
      * @return The field isOpen
      */
     public Boolean getIsOpen() { return this.isOpen; }
     /**
-     * Has the payment been fully applied?
+     * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
+     * value is true, the field `UnappliedAmount` will be nonzero.
      *
      * @param value The new value for isOpen
      */
@@ -176,25 +197,33 @@ public class PaymentModel
      */
     public void setMemoText(String value) { this.memoText = value; }
     /**
-     * The date of this payment.
+     * The date when this payment was received.  This typically is the date when an accounting employee recorded
+     * that they received notification that the payment had occurred, whether they were notified by email, postal
+     * mail, or financial transaction notification.
      *
      * @return The field paymentDate
      */
     public String getPaymentDate() { return this.paymentDate; }
     /**
-     * The date of this payment.
+     * The date when this payment was received.  This typically is the date when an accounting employee recorded
+     * that they received notification that the payment had occurred, whether they were notified by email, postal
+     * mail, or financial transaction notification.
      *
      * @param value The new value for paymentDate
      */
     public void setPaymentDate(String value) { this.paymentDate = value; }
     /**
-     * Payment post date.
+     * The date when a payment was posted to a ledger.  This date is often determined by a company's accounting
+     * practices and may be different than the date when the payment was received.  This date may be affected by
+     * issues such as temporary holds on funds transferred, bank holidays, or other actions.
      *
      * @return The field postDate
      */
     public String getPostDate() { return this.postDate; }
     /**
-     * Payment post date.
+     * The date when a payment was posted to a ledger.  This date is often determined by a company's accounting
+     * practices and may be different than the date when the payment was received.  This date may be affected by
+     * issues such as temporary holds on funds transferred, bank holidays, or other actions.
      *
      * @param value The new value for postDate
      */
@@ -212,25 +241,29 @@ public class PaymentModel
      */
     public void setPaymentAmount(Double value) { this.paymentAmount = value; }
     /**
-     * Unapplied balance of this payment.
+     * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @return The field unappliedAmount
      */
     public Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
-     * Unapplied balance of this payment.
+     * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
     /**
-     * Currency of the payment. This will be validated by the /api/v1/currencies data set
+     * The ISO 4217 currency code for this payment.
+     *
+     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/currencies data set
      *
      * @return The field currencyCode
      */
     public String getCurrencyCode() { return this.currencyCode; }
     /**
-     * Currency of the payment. This will be validated by the /api/v1/currencies data set
+     * The ISO 4217 currency code for this payment.
+     *
+     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/currencies data set
      *
      * @param value The new value for currencyCode
      */

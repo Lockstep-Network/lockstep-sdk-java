@@ -9,7 +9,6 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.4
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -126,9 +125,10 @@ public class AttachmentsClient
      *
      * @param tableName The name of the type of object to which this Attachment will be linked
      * @param objectId The unique ID of the object to which this Attachment will be linked
+     * @param filename The full path of a file to upload to the API
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AttachmentModel[]> uploadAttachment(String tableName, String objectId)
+    public LockstepResponse<AttachmentModel[]> uploadAttachment(String tableName, String objectId, byte[] filename)
     {
         RestRequest<AttachmentModel[]> r = new RestRequest<AttachmentModel[]>(this.client, "POST", "/api/v1/Attachments");
         r.AddQuery("tableName", tableName.toString());
