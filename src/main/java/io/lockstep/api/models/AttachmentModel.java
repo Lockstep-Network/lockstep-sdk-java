@@ -32,6 +32,8 @@ public class AttachmentModel
     private String originAttachmentId;
     private Boolean viewInternal;
     private Boolean viewExternal;
+    private String erpKey;
+    private String appEnrollmentId;
     private String created;
     private String createdUserId;
 
@@ -173,6 +175,46 @@ public class AttachmentModel
      * @param value The new value for viewExternal
      */
     public void setViewExternal(Boolean value) { this.viewExternal = value; }
+    /**
+     * The unique ID of this record as it was known in its originating financial system.
+     *
+     * If this company record was imported from a financial system, it will have the value `ErpKey`
+     * set to the original primary key number of the record as it was known in the originating financial
+     * system.  If this record was not imported from a financial system, this value will be `null`.
+     *
+     * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
+     *
+     * @return The field erpKey
+     */
+    public String getErpKey() { return this.erpKey; }
+    /**
+     * The unique ID of this record as it was known in its originating financial system.
+     *
+     * If this company record was imported from a financial system, it will have the value `ErpKey`
+     * set to the original primary key number of the record as it was known in the originating financial
+     * system.  If this record was not imported from a financial system, this value will be `null`.
+     *
+     * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
+     *
+     * @param value The new value for erpKey
+     */
+    public void setErpKey(String value) { this.erpKey = value; }
+    /**
+     * The AppEnrollmentId of the application that imported this attachment record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.
+     *
+     * @return The field appEnrollmentId
+     */
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    /**
+     * The AppEnrollmentId of the application that imported this attachment record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.
+     *
+     * @param value The new value for appEnrollmentId
+     */
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
     /**
      * The date the attachment was created
      *
