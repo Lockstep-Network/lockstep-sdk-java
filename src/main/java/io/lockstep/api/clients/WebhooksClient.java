@@ -23,6 +23,7 @@ import io.lockstep.api.models.WebhookModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+import io.lockstep.api.models.WebhookHistoryTableStorageModel;
 
 /**
  * Contains all methods related to Webhooks
@@ -129,5 +130,25 @@ public class WebhooksClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<WebhookModel>>() {}.getType());
+    }
+
+    /**
+     *
+     * @param webhookId The unique Lockstep Platform ID number of this Webhook
+     * @param filter The filter for this query. See [Azure Query Language](https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities)
+     * @param select The selection for this query. Selection is the desired properties of an entity to pull from the set. If a property is not selected, it will either return as null or empty. See [Azure Query Language](https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities)
+     * @param pageSize The page size for results (default 200).
+     * @param pageNumber The page number for results (default 0).
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public LockstepResponse<FetchResult<WebhookHistoryTableStorageModel>> queryWebhookHistory(String webhookId, String filter, String select, Integer pageSize, Integer pageNumber)
+    {
+        RestRequest<FetchResult<WebhookHistoryTableStorageModel>> r = new RestRequest<FetchResult<WebhookHistoryTableStorageModel>>(this.client, "GET", "/api/v1/Webhooks/{webhookId}/history/query");
+        r.AddPath("{webhookId}", webhookId.toString());
+        r.AddQuery("filter", filter.toString());
+        r.AddQuery("select", select.toString());
+        r.AddQuery("pageSize", pageSize.toString());
+        r.AddQuery("pageNumber", pageNumber.toString());
+        return r.Call(new TypeToken<FetchResult<WebhookHistoryTableStorageModel>>() {}.getType());
     }
 }

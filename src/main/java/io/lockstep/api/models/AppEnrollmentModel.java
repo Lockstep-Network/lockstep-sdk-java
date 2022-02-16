@@ -194,33 +194,45 @@ public class AppEnrollmentModel
      */
     public void setApp(ApplicationModel value) { this.app = value; }
     /**
-     * All definitions attached to this app.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
      *
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `AppEnrollment` and the `ObjectKey` set to the `AppEnrollmentId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * All definitions attached to this app.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
      *
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `AppEnrollment` and the `ObjectKey` set to the `AppEnrollmentId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * All values attached to this app.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldValues` in the `include` parameter when retrieving data.
      *
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `AppEnrollment` and the `ObjectKey` set to the `AppEnrollmentId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * All values attached to this app.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldValues` in the `include` parameter when retrieving data.
      *
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `AppEnrollment` and the `ObjectKey` set to the `AppEnrollmentId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for customFieldValues
      */

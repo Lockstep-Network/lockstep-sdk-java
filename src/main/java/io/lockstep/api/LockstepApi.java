@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.6.48.0
+ * @version    2022.7.31.0
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 

@@ -155,13 +155,19 @@ public class CustomFieldValueModel
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
     /**
-     * AppEnrollmentId for this record; used for mapping purposes.
+     * The AppEnrollmentId of the application that imported this attachment record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.  This value is null if this record
+     * was not loaded from an external ERP or financial system.
      *
      * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * AppEnrollmentId for this record; used for mapping purposes.
+     * The AppEnrollmentId of the application that imported this attachment record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.  This value is null if this record
+     * was not loaded from an external ERP or financial system.
      *
      * @param value The new value for appEnrollmentId
      */

@@ -236,57 +236,89 @@ public class ApplicationModel
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * All notes attached to this app.
-     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
+     * `include` parameter when retrieving data.
+     *
+     * To create a note, use the [Create Note](https://developer.lockstep.io/reference/post_api-v1-notes)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field notes
      */
     public NoteModel[] getNotes() { return this.notes; }
     /**
-     * All notes attached to this app.
-     * To retrieve this collection, specify `Notes` in the "Include" parameter for your query.
+     * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
+     * `include` parameter when retrieving data.
+     *
+     * To create a note, use the [Create Note](https://developer.lockstep.io/reference/post_api-v1-notes)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for notes
      */
     public void setNotes(NoteModel[] value) { this.notes = value; }
     /**
-     * All attachments attached to this app.
-     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
+     * the `include` parameter when retrieving data.
+     *
+     * To create an attachment, use the [Upload Attachment](https://developer.lockstep.io/reference/post_api-v1-attachments)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field attachments
      */
     public AttachmentModel[] getAttachments() { return this.attachments; }
     /**
-     * All attachments attached to this app.
-     * To retrieve this collection, specify `Attachments` in the "Include" parameter for your query.
+     * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
+     * the `include` parameter when retrieving data.
+     *
+     * To create an attachment, use the [Upload Attachment](https://developer.lockstep.io/reference/post_api-v1-attachments)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for attachments
      */
     public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
     /**
-     * All definitions attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
+     *
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field customFieldDefinitions
      */
     public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
-     * All definitions attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
+     *
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
-     * All values attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldValues` in the `include` parameter when retrieving data.
+     *
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field customFieldValues
      */
     public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
-     * All values attached to the application.
-     * To retrieve this collection, specify `CustomFieldValues` in the "Include" parameter for your query.
+     * A collection of custom fields linked to this record.  To retrieve this collection, specify
+     * `CustomFieldValues` in the `include` parameter when retrieving data.
+     *
+     * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
+     * endpoint with the `TableKey` to `Application` and the `ObjectKey` set to the `ApplicationId` for this record.  For
+     * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for customFieldValues
      */

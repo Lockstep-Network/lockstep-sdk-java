@@ -37,6 +37,7 @@ public class InvoiceAddressModel
     private String createdUserId;
     private String modified;
     private String modifiedUserId;
+    private String appEnrollmentId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -238,4 +239,22 @@ public class InvoiceAddressModel
      * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    /**
+     * The AppEnrollmentId of the application that imported this record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.  This value is null if this record
+     * was not loaded from an external ERP or financial system.
+     *
+     * @return The field appEnrollmentId
+     */
+    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    /**
+     * The AppEnrollmentId of the application that imported this record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.  This value is null if this record
+     * was not loaded from an external ERP or financial system.
+     *
+     * @param value The new value for appEnrollmentId
+     */
+    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
 };
