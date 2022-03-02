@@ -40,6 +40,7 @@ public class WebhookModel
     private String createdUserId;
     private String modified;
     private String modifiedUserId;
+    private String partitionKey;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -243,4 +244,16 @@ public class WebhookModel
      * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    /**
+     * The partition key used for the webhook callback history
+     *
+     * @return The field partitionKey
+     */
+    public String getPartitionKey() { return this.partitionKey; }
+    /**
+     * The partition key used for the webhook callback history
+     *
+     * @param value The new value for partitionKey
+     */
+    public void setPartitionKey(String value) { this.partitionKey = value; }
 };

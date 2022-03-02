@@ -8,7 +8,7 @@
  *
  * @author     Ted Spence <tspence@lockstep.io>
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.7.31.0
+ * @version    2022.9.6.0
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -28,6 +28,9 @@ import io.lockstep.api.clients.CustomFieldDefinitionsClient;
 import io.lockstep.api.clients.CustomFieldValuesClient;
 import io.lockstep.api.clients.DefinitionsClient;
 import io.lockstep.api.clients.EmailsClient;
+import io.lockstep.api.clients.FinancialAccountClient;
+import io.lockstep.api.clients.FinancialAccountBalanceHistoryClient;
+import io.lockstep.api.clients.FinancialYearSettingsClient;
 import io.lockstep.api.clients.InvoiceHistoryClient;
 import io.lockstep.api.clients.InvoicesClient;
 import io.lockstep.api.clients.LeadsClient;
@@ -65,6 +68,9 @@ public class LockstepApi {
     private CustomFieldValuesClient customFieldValues;
     private DefinitionsClient definitions;
     private EmailsClient emails;
+    private FinancialAccountClient financialAccount;
+    private FinancialAccountBalanceHistoryClient financialAccountBalanceHistory;
+    private FinancialYearSettingsClient financialYearSettings;
     private InvoiceHistoryClient invoiceHistory;
     private InvoicesClient invoices;
     private LeadsClient leads;
@@ -97,6 +103,9 @@ public class LockstepApi {
         this.customFieldValues = new CustomFieldValuesClient(this);
         this.definitions = new DefinitionsClient(this);
         this.emails = new EmailsClient(this);
+        this.financialAccount = new FinancialAccountClient(this);
+        this.financialAccountBalanceHistory = new FinancialAccountBalanceHistoryClient(this);
+        this.financialYearSettings = new FinancialYearSettingsClient(this);
         this.invoiceHistory = new InvoiceHistoryClient(this);
         this.invoices = new InvoicesClient(this);
         this.leads = new LeadsClient(this);
@@ -196,6 +205,24 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.EmailsClient client} methods in the Lockstep Platform API.
      */
     public EmailsClient getEmailsClient() { return this.emails; }
+    /**
+     * A collection of Lockstep API methods relating to FinancialAccount
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountClient client} methods in the Lockstep Platform API.
+     */
+    public FinancialAccountClient getFinancialAccountClient() { return this.financialAccount; }
+    /**
+     * A collection of Lockstep API methods relating to FinancialAccountBalanceHistory
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountBalanceHistoryClient client} methods in the Lockstep Platform API.
+     */
+    public FinancialAccountBalanceHistoryClient getFinancialAccountBalanceHistoryClient() { return this.financialAccountBalanceHistory; }
+    /**
+     * A collection of Lockstep API methods relating to FinancialYearSettings
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialYearSettingsClient client} methods in the Lockstep Platform API.
+     */
+    public FinancialYearSettingsClient getFinancialYearSettingsClient() { return this.financialYearSettings; }
     /**
      * A collection of Lockstep API methods relating to InvoiceHistory
      *

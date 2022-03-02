@@ -23,9 +23,12 @@ public class WebhookHistoryTableStorageModel
 {
     private String groupKey;
     private String webhookId;
+    private String webhookHistoryId;
     private String eventType;
     private Boolean requestSent;
+    private Boolean isSuccessful;
     private String responseStatusCode;
+    private String processResultMessage;
     private Integer failureCount;
     private String timestamp;
 
@@ -48,19 +51,31 @@ public class WebhookHistoryTableStorageModel
      */
     public void setGroupKey(String value) { this.groupKey = value; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
+     * The WebhookId uniquely identifies the webhook used to send notification that an event action has taken place.
      *
      * @return The field webhookId
      */
     public String getWebhookId() { return this.webhookId; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
+     * The WebhookId uniquely identifies the webhook used to send notification that an event action has taken place.
      *
      * @param value The new value for webhookId
      */
     public void setWebhookId(String value) { this.webhookId = value; }
+    /**
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @return The field webhookHistoryId
+     */
+    public String getWebhookHistoryId() { return this.webhookHistoryId; }
+    /**
+     * The unique ID of this record, automatically assigned by Lockstep when this record is
+     * added to the Lockstep platform.
+     *
+     * @param value The new value for webhookHistoryId
+     */
+    public void setWebhookHistoryId(String value) { this.webhookHistoryId = value; }
     /**
      * Event type which fired webhook
      *
@@ -90,6 +105,20 @@ public class WebhookHistoryTableStorageModel
      */
     public void setRequestSent(Boolean value) { this.requestSent = value; }
     /**
+     * Flag whether webhook notification was successful overall (if webhook disabled should always return true otherwise
+     * depends on the response from the callback url)
+     *
+     * @return The field isSuccessful
+     */
+    public Boolean getIsSuccessful() { return this.isSuccessful; }
+    /**
+     * Flag whether webhook notification was successful overall (if webhook disabled should always return true otherwise
+     * depends on the response from the callback url)
+     *
+     * @param value The new value for isSuccessful
+     */
+    public void setIsSuccessful(Boolean value) { this.isSuccessful = value; }
+    /**
      * Response status code that is returned when calling a callback url.
      *
      * @return The field responseStatusCode
@@ -101,6 +130,18 @@ public class WebhookHistoryTableStorageModel
      * @param value The new value for responseStatusCode
      */
     public void setResponseStatusCode(String value) { this.responseStatusCode = value; }
+    /**
+     * Message containing information about the webhook callback results
+     *
+     * @return The field processResultMessage
+     */
+    public String getProcessResultMessage() { return this.processResultMessage; }
+    /**
+     * Message containing information about the webhook callback results
+     *
+     * @param value The new value for processResultMessage
+     */
+    public void setProcessResultMessage(String value) { this.processResultMessage = value; }
     /**
      * Number of times message failed to be sent over to callback url before succeeding or failing out.
      * The maximum value should is based on webhook.

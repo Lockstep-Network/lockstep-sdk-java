@@ -450,49 +450,49 @@ public class InvoiceModel
      */
     public void setPrimaryShipToAddressId(String value) { this.primaryShipToAddressId = value; }
     /**
-     * The date on which this address record was created.
+     * The date on which this invoice record was created.
      *
      * @return The field created
      */
     public String getCreated() { return this.created; }
     /**
-     * The date on which this address record was created.
+     * The date on which this invoice record was created.
      *
      * @param value The new value for created
      */
     public void setCreated(String value) { this.created = value; }
     /**
-     * The ID number of the user who created this address.
+     * The ID number of the user who created this invoice.
      *
      * @return The field createdUserId
      */
     public String getCreatedUserId() { return this.createdUserId; }
     /**
-     * The ID number of the user who created this address.
+     * The ID number of the user who created this invoice.
      *
      * @param value The new value for createdUserId
      */
     public void setCreatedUserId(String value) { this.createdUserId = value; }
     /**
-     * The date on which this address record was last modified.
+     * The date on which this invoice record was last modified.
      *
      * @return The field modified
      */
     public String getModified() { return this.modified; }
     /**
-     * The date on which this address record was last modified.
+     * The date on which this invoice record was last modified.
      *
      * @param value The new value for modified
      */
     public void setModified(String value) { this.modified = value; }
     /**
-     * The ID number of the user who most recently modified this address.
+     * The ID number of the user who most recently modified this invoice.
      *
      * @return The field modifiedUserId
      */
     public String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * The ID number of the user who most recently modified this address.
+     * The ID number of the user who most recently modified this invoice.
      *
      * @param value The new value for modifiedUserId
      */

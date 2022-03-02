@@ -29,13 +29,12 @@ public class CustomFieldValueModel
     private String groupKey;
     private String customFieldDefinitionId;
     private String recordKey;
-    private String stringValue;
-    private Double numericValue;
     private String created;
     private String createdUserId;
     private String modified;
     private String modifiedUserId;
     private String appEnrollmentId;
+    private String value;
     private CustomFieldDefinitionModel customFieldDefinition;
 
     /**
@@ -82,30 +81,6 @@ public class CustomFieldValueModel
      * @param value The new value for recordKey
      */
     public void setRecordKey(String value) { this.recordKey = value; }
-    /**
-     * String of data for field
-     *
-     * @return The field stringValue
-     */
-    public String getStringValue() { return this.stringValue; }
-    /**
-     * String of data for field
-     *
-     * @param value The new value for stringValue
-     */
-    public void setStringValue(String value) { this.stringValue = value; }
-    /**
-     * Number data for field
-     *
-     * @return The field numericValue
-     */
-    public Double getNumericValue() { return this.numericValue; }
-    /**
-     * Number data for field
-     *
-     * @param value The new value for numericValue
-     */
-    public void setNumericValue(Double value) { this.numericValue = value; }
     /**
      * Date created
      *
@@ -172,6 +147,18 @@ public class CustomFieldValueModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    /**
+     * The value of this custom field.
+     *
+     * @return The field value
+     */
+    public String getValue() { return this.value; }
+    /**
+     * The value of this custom field.
+     *
+     * @param value The new value for value
+     */
+    public void setValue(String value) { this.value = value; }
     /**
      * Definition of the value
      *
