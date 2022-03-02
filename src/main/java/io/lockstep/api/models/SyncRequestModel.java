@@ -113,13 +113,13 @@ public class SyncRequestModel
      */
     public void setProcessResultMessage(String value) { this.processResultMessage = value; }
     /**
-     * App enrollment sync request is for
+     * The AppEnrollmentId of the AppEnrollment object that executed this sync request
      *
      * @return The field appEnrollmentId
      */
     public String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
-     * App enrollment sync request is for
+     * The AppEnrollmentId of the AppEnrollment object that executed this sync request
      *
      * @param value The new value for appEnrollmentId
      */

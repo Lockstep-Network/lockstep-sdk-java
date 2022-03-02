@@ -776,25 +776,25 @@ public class InvoiceSyncModel
      */
     public void setModified(String value) { this.modified = value; }
     /**
-     * Is the invoice voided?
+     * Is the invoice voided? If not specified, we assume the invoice is not voided.
      *
      * @return The field isVoided
      */
     public Boolean getIsVoided() { return this.isVoided; }
     /**
-     * Is the invoice voided?
+     * Is the invoice voided? If not specified, we assume the invoice is not voided.
      *
      * @param value The new value for isVoided
      */
     public void setIsVoided(Boolean value) { this.isVoided = value; }
     /**
-     * Is the invoice in dispute?
+     * Is the invoice in dispute? If not specified, we assume the invoice is not in dispute.
      *
      * @return The field inDispute
      */
     public Boolean getInDispute() { return this.inDispute; }
     /**
-     * Is the invoice in dispute?
+     * Is the invoice in dispute? If not specified, we assume the invoice is not in dispute.
      *
      * @param value The new value for inDispute
      */

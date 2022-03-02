@@ -5,7 +5,7 @@
 
     <groupId>io.lockstep</groupId>
     <artifactId>lockstepsdk</artifactId>
-    <version>2022.6.48.0</version>
+    <version>2022.9.6.0</version>
  
     <name>lockstep-sdk-java</name>
     <description>Java sample project for Lockstep SDK</description>

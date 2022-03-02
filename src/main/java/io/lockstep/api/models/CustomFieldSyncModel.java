@@ -36,8 +36,7 @@ public class CustomFieldSyncModel
     private String erpKey;
     private String entityType;
     private String customFieldLabel;
-    private String stringValue;
-    private Double numericValue;
+    private String value;
     private String created;
     private String modified;
 
@@ -122,29 +121,17 @@ public class CustomFieldSyncModel
      */
     public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
     /**
-     * The value of this custom field, if it is stored in string format.
+     * The value of this custom field.
      *
-     * @return The field stringValue
+     * @return The field value
      */
-    public String getStringValue() { return this.stringValue; }
+    public String getValue() { return this.value; }
     /**
-     * The value of this custom field, if it is stored in string format.
+     * The value of this custom field.
      *
-     * @param value The new value for stringValue
+     * @param value The new value for value
      */
-    public void setStringValue(String value) { this.stringValue = value; }
-    /**
-     * The value of this custom field, if it is stored in numeric format.
-     *
-     * @return The field numericValue
-     */
-    public Double getNumericValue() { return this.numericValue; }
-    /**
-     * The value of this custom field, if it is stored in numeric format.
-     *
-     * @param value The new value for numericValue
-     */
-    public void setNumericValue(Double value) { this.numericValue = value; }
+    public void setValue(String value) { this.value = value; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a

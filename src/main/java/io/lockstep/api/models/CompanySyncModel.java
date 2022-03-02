@@ -133,13 +133,13 @@ public class CompanySyncModel
      */
     public void setCompanyType(String value) { this.companyType = value; }
     /**
-     * Either `Active` or `Inactive`.
+     * An optional field including status codes.  Defined status codes are `Active` and `Inactive`.
      *
      * @return The field companyStatus
      */
     public String getCompanyStatus() { return this.companyStatus; }
     /**
-     * Either `Active` or `Inactive`.
+     * An optional field including status codes.  Defined status codes are `Active` and `Inactive`.
      *
      * @param value The new value for companyStatus
      */

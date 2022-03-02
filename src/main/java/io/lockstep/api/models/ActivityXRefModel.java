@@ -16,6 +16,9 @@
 package io.lockstep.api.models;
 
 
+/**
+ * Represents links between an Activity and another record.
+ */
 public class ActivityXRefModel
 {
     private String activityXRefId;
