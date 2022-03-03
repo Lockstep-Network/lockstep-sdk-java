@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * An Email represents a communication sent from one company to another.  The creator of the email is identified
@@ -24,39 +26,39 @@ package io.lockstep.api.models;
  */
 public class EmailModel
 {
-    private String emailId;
-    private String threadId;
-    private String groupKey;
-    private String companyId;
-    private String emailFrom;
-    private String emailTo;
-    private String emailCC;
-    private String emailSubject;
-    private String emailBody;
-    private String sentDate;
-    private Boolean isUnread;
-    private Boolean isPriority;
-    private Boolean isSpam;
-    private String created;
-    private String createdUserId;
-    private Boolean toBeSent;
-    private String customerId;
-    private String receivedTimeStamp;
-    private String openedTimestamp;
-    private Integer viewCount;
-    private String appEnrollmentId;
-    private String externalEmailId;
-    private String externalThreadId;
-    private String emailBcc;
-    private String sendType;
-    private String modified;
-    private String modifiedUserId;
-    private String responseOriginId;
-    private EmailModel responseOrigin;
-    private NoteModel[] notes;
-    private AttachmentModel[] attachments;
-    private CustomFieldDefinitionModel[] customFieldDefinitions;
-    private CustomFieldValueModel[] customFieldValues;
+    private @NotNull String emailId;
+    private @NotNull String threadId;
+    private @NotNull String groupKey;
+    private @Nullable String companyId;
+    private @Nullable String emailFrom;
+    private @Nullable String emailTo;
+    private @Nullable String emailCC;
+    private @Nullable String emailSubject;
+    private @Nullable String emailBody;
+    private @Nullable String sentDate;
+    private @NotNull Boolean isUnread;
+    private @NotNull Boolean isPriority;
+    private @NotNull Boolean isSpam;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull Boolean toBeSent;
+    private @Nullable String customerId;
+    private @Nullable String receivedTimeStamp;
+    private @Nullable String openedTimestamp;
+    private @NotNull Integer viewCount;
+    private @Nullable String appEnrollmentId;
+    private @Nullable String externalEmailId;
+    private @Nullable String externalThreadId;
+    private @Nullable String emailBcc;
+    private @Nullable String sendType;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String responseOriginId;
+    private @Nullable EmailModel responseOrigin;
+    private @Nullable NoteModel[] notes;
+    private @Nullable AttachmentModel[] attachments;
+    private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -64,26 +66,26 @@ public class EmailModel
      *
      * @return The field emailId
      */
-    public String getEmailId() { return this.emailId; }
+    public @NotNull String getEmailId() { return this.emailId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for emailId
      */
-    public void setEmailId(String value) { this.emailId = value; }
+    public void setEmailId(@NotNull String value) { this.emailId = value; }
     /**
      * The unique ID number of this email's conversation thread.
      *
      * @return The field threadId
      */
-    public String getThreadId() { return this.threadId; }
+    public @NotNull String getThreadId() { return this.threadId; }
     /**
      * The unique ID number of this email's conversation thread.
      *
      * @param value The new value for threadId
      */
-    public void setThreadId(String value) { this.threadId = value; }
+    public void setThreadId(@NotNull String value) { this.threadId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -92,7 +94,7 @@ public class EmailModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -101,211 +103,211 @@ public class EmailModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The ID number of the company that created this email.
      *
      * @return The field companyId
      */
-    public String getCompanyId() { return this.companyId; }
+    public @Nullable String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the company that created this email.
      *
      * @param value The new value for companyId
      */
-    public void setCompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(@Nullable String value) { this.companyId = value; }
     /**
      * The email address for the sender of this email.
      *
      * @return The field emailFrom
      */
-    public String getEmailFrom() { return this.emailFrom; }
+    public @Nullable String getEmailFrom() { return this.emailFrom; }
     /**
      * The email address for the sender of this email.
      *
      * @param value The new value for emailFrom
      */
-    public void setEmailFrom(String value) { this.emailFrom = value; }
+    public void setEmailFrom(@Nullable String value) { this.emailFrom = value; }
     /**
      * The email address for the recipient(s) of this email.
      *
      * @return The field emailTo
      */
-    public String getEmailTo() { return this.emailTo; }
+    public @Nullable String getEmailTo() { return this.emailTo; }
     /**
      * The email address for the recipient(s) of this email.
      *
      * @param value The new value for emailTo
      */
-    public void setEmailTo(String value) { this.emailTo = value; }
+    public void setEmailTo(@Nullable String value) { this.emailTo = value; }
     /**
      * The email address for the CC recipient(s) of this email
      *
      * @return The field emailCC
      */
-    public String getEmailCC() { return this.emailCC; }
+    public @Nullable String getEmailCC() { return this.emailCC; }
     /**
      * The email address for the CC recipient(s) of this email
      *
      * @param value The new value for emailCC
      */
-    public void setEmailCC(String value) { this.emailCC = value; }
+    public void setEmailCC(@Nullable String value) { this.emailCC = value; }
     /**
      * The subject line of this email.
      *
      * @return The field emailSubject
      */
-    public String getEmailSubject() { return this.emailSubject; }
+    public @Nullable String getEmailSubject() { return this.emailSubject; }
     /**
      * The subject line of this email.
      *
      * @param value The new value for emailSubject
      */
-    public void setEmailSubject(String value) { this.emailSubject = value; }
+    public void setEmailSubject(@Nullable String value) { this.emailSubject = value; }
     /**
      * The body content of this email.
      *
      * @return The field emailBody
      */
-    public String getEmailBody() { return this.emailBody; }
+    public @Nullable String getEmailBody() { return this.emailBody; }
     /**
      * The body content of this email.
      *
      * @param value The new value for emailBody
      */
-    public void setEmailBody(String value) { this.emailBody = value; }
+    public void setEmailBody(@Nullable String value) { this.emailBody = value; }
     /**
      * The date on which this email was sent.
      *
      * @return The field sentDate
      */
-    public String getSentDate() { return this.sentDate; }
+    public @Nullable String getSentDate() { return this.sentDate; }
     /**
      * The date on which this email was sent.
      *
      * @param value The new value for sentDate
      */
-    public void setSentDate(String value) { this.sentDate = value; }
+    public void setSentDate(@Nullable String value) { this.sentDate = value; }
     /**
      * A status flag indicating if this email is unread.
      *
      * @return The field isUnread
      */
-    public Boolean getIsUnread() { return this.isUnread; }
+    public @NotNull Boolean getIsUnread() { return this.isUnread; }
     /**
      * A status flag indicating if this email is unread.
      *
      * @param value The new value for isUnread
      */
-    public void setIsUnread(Boolean value) { this.isUnread = value; }
+    public void setIsUnread(@NotNull Boolean value) { this.isUnread = value; }
     /**
      * A status flag indicating if this email is priority status.
      *
      * @return The field isPriority
      */
-    public Boolean getIsPriority() { return this.isPriority; }
+    public @NotNull Boolean getIsPriority() { return this.isPriority; }
     /**
      * A status flag indicating if this email is priority status.
      *
      * @param value The new value for isPriority
      */
-    public void setIsPriority(Boolean value) { this.isPriority = value; }
+    public void setIsPriority(@NotNull Boolean value) { this.isPriority = value; }
     /**
      * A status flag indicating if this email is marked as spam.
      *
      * @return The field isSpam
      */
-    public Boolean getIsSpam() { return this.isSpam; }
+    public @NotNull Boolean getIsSpam() { return this.isSpam; }
     /**
      * A status flag indicating if this email is marked as spam.
      *
      * @param value The new value for isSpam
      */
-    public void setIsSpam(Boolean value) { this.isSpam = value; }
+    public void setIsSpam(@NotNull Boolean value) { this.isSpam = value; }
     /**
      * The date on which this email was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this email was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID number of the user who created this email.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this email.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * A status flag indicating if this email is to be sent.
      *
      * @return The field toBeSent
      */
-    public Boolean getToBeSent() { return this.toBeSent; }
+    public @NotNull Boolean getToBeSent() { return this.toBeSent; }
     /**
      * A status flag indicating if this email is to be sent.
      *
      * @param value The new value for toBeSent
      */
-    public void setToBeSent(Boolean value) { this.toBeSent = value; }
+    public void setToBeSent(@NotNull Boolean value) { this.toBeSent = value; }
     /**
      * The ID number of the customer that sent this email.
      *
      * @return The field customerId
      */
-    public String getCustomerId() { return this.customerId; }
+    public @Nullable String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the customer that sent this email.
      *
      * @param value The new value for customerId
      */
-    public void setCustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(@Nullable String value) { this.customerId = value; }
     /**
      * The date on which this email was received.
      *
      * @return The field receivedTimeStamp
      */
-    public String getReceivedTimeStamp() { return this.receivedTimeStamp; }
+    public @Nullable String getReceivedTimeStamp() { return this.receivedTimeStamp; }
     /**
      * The date on which this email was received.
      *
      * @param value The new value for receivedTimeStamp
      */
-    public void setReceivedTimeStamp(String value) { this.receivedTimeStamp = value; }
+    public void setReceivedTimeStamp(@Nullable String value) { this.receivedTimeStamp = value; }
     /**
      * The date on which this email was opened.
      *
      * @return The field openedTimestamp
      */
-    public String getOpenedTimestamp() { return this.openedTimestamp; }
+    public @Nullable String getOpenedTimestamp() { return this.openedTimestamp; }
     /**
      * The date on which this email was opened.
      *
      * @param value The new value for openedTimestamp
      */
-    public void setOpenedTimestamp(String value) { this.openedTimestamp = value; }
+    public void setOpenedTimestamp(@Nullable String value) { this.openedTimestamp = value; }
     /**
      * The number of times this email was viewed.
      *
      * @return The field viewCount
      */
-    public Integer getViewCount() { return this.viewCount; }
+    public @NotNull Integer getViewCount() { return this.viewCount; }
     /**
      * The number of times this email was viewed.
      *
      * @param value The new value for viewCount
      */
-    public void setViewCount(Integer value) { this.viewCount = value; }
+    public void setViewCount(@NotNull Integer value) { this.viewCount = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -314,7 +316,7 @@ public class EmailModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -323,109 +325,109 @@ public class EmailModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * The id of the email in an external system if imported.
      *
      * @return The field externalEmailId
      */
-    public String getExternalEmailId() { return this.externalEmailId; }
+    public @Nullable String getExternalEmailId() { return this.externalEmailId; }
     /**
      * The id of the email in an external system if imported.
      *
      * @param value The new value for externalEmailId
      */
-    public void setExternalEmailId(String value) { this.externalEmailId = value; }
+    public void setExternalEmailId(@Nullable String value) { this.externalEmailId = value; }
     /**
      * The id of the email thread in an external system if imported.
      *
      * @return The field externalThreadId
      */
-    public String getExternalThreadId() { return this.externalThreadId; }
+    public @Nullable String getExternalThreadId() { return this.externalThreadId; }
     /**
      * The id of the email thread in an external system if imported.
      *
      * @param value The new value for externalThreadId
      */
-    public void setExternalThreadId(String value) { this.externalThreadId = value; }
+    public void setExternalThreadId(@Nullable String value) { this.externalThreadId = value; }
     /**
      * The email address(es) for the BCC recipient(s) of this email
      *
      * @return The field emailBcc
      */
-    public String getEmailBcc() { return this.emailBcc; }
+    public @Nullable String getEmailBcc() { return this.emailBcc; }
     /**
      * The email address(es) for the BCC recipient(s) of this email
      *
      * @param value The new value for emailBcc
      */
-    public void setEmailBcc(String value) { this.emailBcc = value; }
+    public void setEmailBcc(@Nullable String value) { this.emailBcc = value; }
     /**
      * The type message being sent (New, Reply, Forward) or null for messages not being sent.
      *
      * @return The field sendType
      */
-    public String getSendType() { return this.sendType; }
+    public @Nullable String getSendType() { return this.sendType; }
     /**
      * The type message being sent (New, Reply, Forward) or null for messages not being sent.
      *
      * @param value The new value for sendType
      */
-    public void setSendType(String value) { this.sendType = value; }
+    public void setSendType(@Nullable String value) { this.sendType = value; }
     /**
      * The date on which this email was modified.
      * Email modification should only be done by internal services.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date on which this email was modified.
      * Email modification should only be done by internal services.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who modified this email.
      * Email modification should only be done by internal services.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who modified this email.
      * Email modification should only be done by internal services.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
      * Otherwise null.
      *
      * @return The field responseOriginId
      */
-    public String getResponseOriginId() { return this.responseOriginId; }
+    public @Nullable String getResponseOriginId() { return this.responseOriginId; }
     /**
      * If the message being sent is a reply or a forward, the id of the the email being replied to or forwarded.
      * Otherwise null.
      *
      * @param value The new value for responseOriginId
      */
-    public void setResponseOriginId(String value) { this.responseOriginId = value; }
+    public void setResponseOriginId(@Nullable String value) { this.responseOriginId = value; }
     /**
      * The email object associated with the response origin id.
      *
      * @return The field responseOrigin
      */
-    public EmailModel getResponseOrigin() { return this.responseOrigin; }
+    public @Nullable EmailModel getResponseOrigin() { return this.responseOrigin; }
     /**
      * The email object associated with the response origin id.
      *
      * @param value The new value for responseOrigin
      */
-    public void setResponseOrigin(EmailModel value) { this.responseOrigin = value; }
+    public void setResponseOrigin(@Nullable EmailModel value) { this.responseOrigin = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -436,7 +438,7 @@ public class EmailModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -447,7 +449,7 @@ public class EmailModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -458,7 +460,7 @@ public class EmailModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -469,7 +471,7 @@ public class EmailModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -480,7 +482,7 @@ public class EmailModel
      *
      * @return The field customFieldDefinitions
      */
-    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public @Nullable CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -491,7 +493,7 @@ public class EmailModel
      *
      * @param value The new value for customFieldDefinitions
      */
-    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -502,7 +504,7 @@ public class EmailModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -513,5 +515,5 @@ public class EmailModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

@@ -15,76 +15,78 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents the cashflow report based on a timeframe
  */
 public class CashflowReportModel
 {
-    private Integer timeframe;
-    private Double paymentsCollected;
-    private Integer paymentsCollectedCount;
-    private Double invoicesBilled;
-    private Integer invoicesBilledCount;
+    private @NotNull Integer timeframe;
+    private @NotNull Double paymentsCollected;
+    private @NotNull Integer paymentsCollectedCount;
+    private @NotNull Double invoicesBilled;
+    private @NotNull Integer invoicesBilledCount;
 
     /**
      * Timeframe in days the cashflow report is generated on
      *
      * @return The field timeframe
      */
-    public Integer getTimeframe() { return this.timeframe; }
+    public @NotNull Integer getTimeframe() { return this.timeframe; }
     /**
      * Timeframe in days the cashflow report is generated on
      *
      * @param value The new value for timeframe
      */
-    public void setTimeframe(Integer value) { this.timeframe = value; }
+    public void setTimeframe(@NotNull Integer value) { this.timeframe = value; }
     /**
      * Amount of payments collected based in the timeframe
      *
      * @return The field paymentsCollected
      */
-    public Double getPaymentsCollected() { return this.paymentsCollected; }
+    public @NotNull Double getPaymentsCollected() { return this.paymentsCollected; }
     /**
      * Amount of payments collected based in the timeframe
      *
      * @param value The new value for paymentsCollected
      */
-    public void setPaymentsCollected(Double value) { this.paymentsCollected = value; }
+    public void setPaymentsCollected(@NotNull Double value) { this.paymentsCollected = value; }
     /**
      * Number of payments collected based in the timeframe
      *
      * @return The field paymentsCollectedCount
      */
-    public Integer getPaymentsCollectedCount() { return this.paymentsCollectedCount; }
+    public @NotNull Integer getPaymentsCollectedCount() { return this.paymentsCollectedCount; }
     /**
      * Number of payments collected based in the timeframe
      *
      * @param value The new value for paymentsCollectedCount
      */
-    public void setPaymentsCollectedCount(Integer value) { this.paymentsCollectedCount = value; }
+    public void setPaymentsCollectedCount(@NotNull Integer value) { this.paymentsCollectedCount = value; }
     /**
      * Amount of invoices billed based in the timeframe
      *
      * @return The field invoicesBilled
      */
-    public Double getInvoicesBilled() { return this.invoicesBilled; }
+    public @NotNull Double getInvoicesBilled() { return this.invoicesBilled; }
     /**
      * Amount of invoices billed based in the timeframe
      *
      * @param value The new value for invoicesBilled
      */
-    public void setInvoicesBilled(Double value) { this.invoicesBilled = value; }
+    public void setInvoicesBilled(@NotNull Double value) { this.invoicesBilled = value; }
     /**
      * Number of invoices billed in the timeframe
      *
      * @return The field invoicesBilledCount
      */
-    public Integer getInvoicesBilledCount() { return this.invoicesBilledCount; }
+    public @NotNull Integer getInvoicesBilledCount() { return this.invoicesBilledCount; }
     /**
      * Number of invoices billed in the timeframe
      *
      * @param value The new value for invoicesBilledCount
      */
-    public void setInvoicesBilledCount(Integer value) { this.invoicesBilledCount = value; }
+    public void setInvoicesBilledCount(@NotNull Integer value) { this.invoicesBilledCount = value; }
 };

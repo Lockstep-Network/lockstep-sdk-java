@@ -15,26 +15,28 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a balance for a financial account for a given period of time.
  */
 public class FinancialAccountBalanceHistoryModel
 {
-    private String financialAccountBalanceHistoryId;
-    private String groupKey;
-    private String financialAccountId;
-    private String appEnrollmentId;
-    private Integer financialYear;
-    private Integer periodNumber;
-    private String periodStartDate;
-    private String periodEndDate;
-    private String status;
-    private Double balance;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
+    private @NotNull String financialAccountBalanceHistoryId;
+    private @NotNull String groupKey;
+    private @NotNull String financialAccountId;
+    private @Nullable String appEnrollmentId;
+    private @NotNull Integer financialYear;
+    private @NotNull Integer periodNumber;
+    private @NotNull String periodStartDate;
+    private @NotNull String periodEndDate;
+    private @Nullable String status;
+    private @NotNull Double balance;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -42,14 +44,14 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @return The field financialAccountBalanceHistoryId
      */
-    public String getFinancialAccountBalanceHistoryId() { return this.financialAccountBalanceHistoryId; }
+    public @NotNull String getFinancialAccountBalanceHistoryId() { return this.financialAccountBalanceHistoryId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for financialAccountBalanceHistoryId
      */
-    public void setFinancialAccountBalanceHistoryId(String value) { this.financialAccountBalanceHistoryId = value; }
+    public void setFinancialAccountBalanceHistoryId(@NotNull String value) { this.financialAccountBalanceHistoryId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -58,7 +60,7 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -67,19 +69,19 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The id of the Financial Account that this balance history is for.
      *
      * @return The field financialAccountId
      */
-    public String getFinancialAccountId() { return this.financialAccountId; }
+    public @NotNull String getFinancialAccountId() { return this.financialAccountId; }
     /**
      * The id of the Financial Account that this balance history is for.
      *
      * @param value The new value for financialAccountId
      */
-    public void setFinancialAccountId(String value) { this.financialAccountId = value; }
+    public void setFinancialAccountId(@NotNull String value) { this.financialAccountId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -88,7 +90,7 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -97,55 +99,55 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * The financial year that this period falls under
      *
      * @return The field financialYear
      */
-    public Integer getFinancialYear() { return this.financialYear; }
+    public @NotNull Integer getFinancialYear() { return this.financialYear; }
     /**
      * The financial year that this period falls under
      *
      * @param value The new value for financialYear
      */
-    public void setFinancialYear(Integer value) { this.financialYear = value; }
+    public void setFinancialYear(@NotNull Integer value) { this.financialYear = value; }
     /**
      * The period number (1-12 or 1-13) that this balance history is for
      *
      * @return The field periodNumber
      */
-    public Integer getPeriodNumber() { return this.periodNumber; }
+    public @NotNull Integer getPeriodNumber() { return this.periodNumber; }
     /**
      * The period number (1-12 or 1-13) that this balance history is for
      *
      * @param value The new value for periodNumber
      */
-    public void setPeriodNumber(Integer value) { this.periodNumber = value; }
+    public void setPeriodNumber(@NotNull Integer value) { this.periodNumber = value; }
     /**
      * The start date of this period.
      *
      * @return The field periodStartDate
      */
-    public String getPeriodStartDate() { return this.periodStartDate; }
+    public @NotNull String getPeriodStartDate() { return this.periodStartDate; }
     /**
      * The start date of this period.
      *
      * @param value The new value for periodStartDate
      */
-    public void setPeriodStartDate(String value) { this.periodStartDate = value; }
+    public void setPeriodStartDate(@NotNull String value) { this.periodStartDate = value; }
     /**
      * The end date of this period.
      *
      * @return The field periodEndDate
      */
-    public String getPeriodEndDate() { return this.periodEndDate; }
+    public @NotNull String getPeriodEndDate() { return this.periodEndDate; }
     /**
      * The end date of this period.
      *
      * @param value The new value for periodEndDate
      */
-    public void setPeriodEndDate(String value) { this.periodEndDate = value; }
+    public void setPeriodEndDate(@NotNull String value) { this.periodEndDate = value; }
     /**
      * The status of this period. The status should be Closed if the books for this period have been closed,
      * if not the status should be Open. The status can also be Deleted if there was a recalculation that needed
@@ -153,7 +155,7 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @return The field status
      */
-    public String getStatus() { return this.status; }
+    public @Nullable String getStatus() { return this.status; }
     /**
      * The status of this period. The status should be Closed if the books for this period have been closed,
      * if not the status should be Open. The status can also be Deleted if there was a recalculation that needed
@@ -161,65 +163,65 @@ public class FinancialAccountBalanceHistoryModel
      *
      * @param value The new value for status
      */
-    public void setStatus(String value) { this.status = value; }
+    public void setStatus(@Nullable String value) { this.status = value; }
     /**
      * The current or end balance of this period.
      *
      * @return The field balance
      */
-    public Double getBalance() { return this.balance; }
+    public @NotNull Double getBalance() { return this.balance; }
     /**
      * The current or end balance of this period.
      *
      * @param value The new value for balance
      */
-    public void setBalance(Double value) { this.balance = value; }
+    public void setBalance(@NotNull Double value) { this.balance = value; }
     /**
      * The date on which this financial account balance history record was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this financial account balance history record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID number of the user who created this financial account balance history.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this financial account balance history.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date on which this financial account balance history record was modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date on which this financial account balance history record was modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this financial account balance history.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this financial account balance history.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
 };

@@ -15,27 +15,29 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a user uploaded attachment
  */
 public class AttachmentModel
 {
-    private String attachmentId;
-    private String groupKey;
-    private String tableKey;
-    private String objectKey;
-    private String fileName;
-    private String fileExt;
-    private String attachmentTypeId;
-    private Boolean isArchived;
-    private String originAttachmentId;
-    private Boolean viewInternal;
-    private Boolean viewExternal;
-    private String erpKey;
-    private String appEnrollmentId;
-    private String created;
-    private String createdUserId;
+    private @NotNull String attachmentId;
+    private @NotNull String groupKey;
+    private @Nullable String tableKey;
+    private @NotNull String objectKey;
+    private @Nullable String fileName;
+    private @Nullable String fileExt;
+    private @NotNull String attachmentTypeId;
+    private @NotNull Boolean isArchived;
+    private @NotNull String originAttachmentId;
+    private @NotNull Boolean viewInternal;
+    private @NotNull Boolean viewExternal;
+    private @Nullable String erpKey;
+    private @Nullable String appEnrollmentId;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -43,14 +45,14 @@ public class AttachmentModel
      *
      * @return The field attachmentId
      */
-    public String getAttachmentId() { return this.attachmentId; }
+    public @NotNull String getAttachmentId() { return this.attachmentId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for attachmentId
      */
-    public void setAttachmentId(String value) { this.attachmentId = value; }
+    public void setAttachmentId(@NotNull String value) { this.attachmentId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -59,7 +61,7 @@ public class AttachmentModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -68,115 +70,115 @@ public class AttachmentModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The name of the table the attachment is associated with
      *
      * @return The field tableKey
      */
-    public String getTableKey() { return this.tableKey; }
+    public @Nullable String getTableKey() { return this.tableKey; }
     /**
      * The name of the table the attachment is associated with
      *
      * @param value The new value for tableKey
      */
-    public void setTableKey(String value) { this.tableKey = value; }
+    public void setTableKey(@Nullable String value) { this.tableKey = value; }
     /**
      * The ID of the object the attachment is associated with
      *
      * @return The field objectKey
      */
-    public String getObjectKey() { return this.objectKey; }
+    public @NotNull String getObjectKey() { return this.objectKey; }
     /**
      * The ID of the object the attachment is associated with
      *
      * @param value The new value for objectKey
      */
-    public void setObjectKey(String value) { this.objectKey = value; }
+    public void setObjectKey(@NotNull String value) { this.objectKey = value; }
     /**
      * Name of the file
      *
      * @return The field fileName
      */
-    public String getFileName() { return this.fileName; }
+    public @Nullable String getFileName() { return this.fileName; }
     /**
      * Name of the file
      *
      * @param value The new value for fileName
      */
-    public void setFileName(String value) { this.fileName = value; }
+    public void setFileName(@Nullable String value) { this.fileName = value; }
     /**
      * Extension type of the file
      *
      * @return The field fileExt
      */
-    public String getFileExt() { return this.fileExt; }
+    public @Nullable String getFileExt() { return this.fileExt; }
     /**
      * Extension type of the file
      *
      * @param value The new value for fileExt
      */
-    public void setFileExt(String value) { this.fileExt = value; }
+    public void setFileExt(@Nullable String value) { this.fileExt = value; }
     /**
      * Corresponding AttachmentType object to describe this attachment
      *
      * @return The field attachmentTypeId
      */
-    public String getAttachmentTypeId() { return this.attachmentTypeId; }
+    public @NotNull String getAttachmentTypeId() { return this.attachmentTypeId; }
     /**
      * Corresponding AttachmentType object to describe this attachment
      *
      * @param value The new value for attachmentTypeId
      */
-    public void setAttachmentTypeId(String value) { this.attachmentTypeId = value; }
+    public void setAttachmentTypeId(@NotNull String value) { this.attachmentTypeId = value; }
     /**
      * Flag indicating the attachment was archived
      *
      * @return The field isArchived
      */
-    public Boolean getIsArchived() { return this.isArchived; }
+    public @NotNull Boolean getIsArchived() { return this.isArchived; }
     /**
      * Flag indicating the attachment was archived
      *
      * @param value The new value for isArchived
      */
-    public void setIsArchived(Boolean value) { this.isArchived = value; }
+    public void setIsArchived(@NotNull Boolean value) { this.isArchived = value; }
     /**
      * Tracks the original record for this attachment, not currently used.
      *
      * @return The field originAttachmentId
      */
-    public String getOriginAttachmentId() { return this.originAttachmentId; }
+    public @NotNull String getOriginAttachmentId() { return this.originAttachmentId; }
     /**
      * Tracks the original record for this attachment, not currently used.
      *
      * @param value The new value for originAttachmentId
      */
-    public void setOriginAttachmentId(String value) { this.originAttachmentId = value; }
+    public void setOriginAttachmentId(@NotNull String value) { this.originAttachmentId = value; }
     /**
      * Flag for if LS clients can see this file
      *
      * @return The field viewInternal
      */
-    public Boolean getViewInternal() { return this.viewInternal; }
+    public @NotNull Boolean getViewInternal() { return this.viewInternal; }
     /**
      * Flag for if LS clients can see this file
      *
      * @param value The new value for viewInternal
      */
-    public void setViewInternal(Boolean value) { this.viewInternal = value; }
+    public void setViewInternal(@NotNull Boolean value) { this.viewInternal = value; }
     /**
      * Flag for if Vendors and customers can see this file
      *
      * @return The field viewExternal
      */
-    public Boolean getViewExternal() { return this.viewExternal; }
+    public @NotNull Boolean getViewExternal() { return this.viewExternal; }
     /**
      * Flag for if Vendors and customers can see this file
      *
      * @param value The new value for viewExternal
      */
-    public void setViewExternal(Boolean value) { this.viewExternal = value; }
+    public void setViewExternal(@NotNull Boolean value) { this.viewExternal = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -188,7 +190,7 @@ public class AttachmentModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -200,7 +202,7 @@ public class AttachmentModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -209,7 +211,7 @@ public class AttachmentModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -218,29 +220,29 @@ public class AttachmentModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * The date the attachment was created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date the attachment was created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * Id of the user who made the file
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * Id of the user who made the file
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
 };

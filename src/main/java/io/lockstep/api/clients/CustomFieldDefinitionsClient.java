@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CustomFieldDefinitionModel;
 
 import io.lockstep.api.models.FetchResult;
@@ -35,7 +37,7 @@ public class CustomFieldDefinitionsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public CustomFieldDefinitionsClient(LockstepApi client) {
+    public CustomFieldDefinitionsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -51,7 +53,7 @@ public class CustomFieldDefinitionsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldDefinitionModel> retrieveFieldDefinition(String id, String include)
+    public @NotNull LockstepResponse<CustomFieldDefinitionModel> retrieveFieldDefinition(@NotNull String id, @Nullable String include)
     {
         RestRequest<CustomFieldDefinitionModel> r = new RestRequest<CustomFieldDefinitionModel>(this.client, "GET", "/api/v1/CustomFieldDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -72,7 +74,7 @@ public class CustomFieldDefinitionsClient
      * @param body A list of changes to apply to this Custom Field Definition
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldDefinitionModel> updateFieldDefinition(String id, Object body)
+    public @NotNull LockstepResponse<CustomFieldDefinitionModel> updateFieldDefinition(@NotNull String id, @NotNull Object body)
     {
         RestRequest<CustomFieldDefinitionModel> r = new RestRequest<CustomFieldDefinitionModel>(this.client, "PATCH", "/api/v1/CustomFieldDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -90,7 +92,7 @@ public class CustomFieldDefinitionsClient
      * @param id The unique Lockstep Platform ID number of the Custom Field Definition to delete
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldDefinitionModel> deleteFieldDefinition(String id)
+    public @NotNull LockstepResponse<CustomFieldDefinitionModel> deleteFieldDefinition(@NotNull String id)
     {
         RestRequest<CustomFieldDefinitionModel> r = new RestRequest<CustomFieldDefinitionModel>(this.client, "DELETE", "/api/v1/CustomFieldDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -107,7 +109,7 @@ public class CustomFieldDefinitionsClient
      * @param body The Custom Field Definitions to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldDefinitionModel[]> createFieldDefinitions(CustomFieldDefinitionModel[] body)
+    public @NotNull LockstepResponse<CustomFieldDefinitionModel[]> createFieldDefinitions(@NotNull CustomFieldDefinitionModel[] body)
     {
         RestRequest<CustomFieldDefinitionModel[]> r = new RestRequest<CustomFieldDefinitionModel[]>(this.client, "POST", "/api/v1/CustomFieldDefinitions");
         r.AddBody(body);
@@ -130,7 +132,7 @@ public class CustomFieldDefinitionsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CustomFieldDefinitionModel>> queryFieldDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CustomFieldDefinitionModel>> queryFieldDefinitions(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CustomFieldDefinitionModel>> r = new RestRequest<FetchResult<CustomFieldDefinitionModel>>(this.client, "GET", "/api/v1/CustomFieldDefinitions/query");
         r.AddQuery("filter", filter.toString());

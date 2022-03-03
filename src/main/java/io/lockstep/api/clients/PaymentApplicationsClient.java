@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.PaymentAppliedModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class PaymentApplicationsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public PaymentApplicationsClient(LockstepApi client) {
+    public PaymentApplicationsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -50,7 +52,7 @@ public class PaymentApplicationsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Invoice
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<PaymentAppliedModel> retrievePaymentApplication(String id, String include)
+    public @NotNull LockstepResponse<PaymentAppliedModel> retrievePaymentApplication(@NotNull String id, @Nullable String include)
     {
         RestRequest<PaymentAppliedModel> r = new RestRequest<PaymentAppliedModel>(this.client, "GET", "/api/v1/PaymentApplications/{id}");
         r.AddPath("{id}", id.toString());
@@ -69,7 +71,7 @@ public class PaymentApplicationsClient
      * @param body A list of changes to apply to this Payment Application
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<PaymentAppliedModel> updatePaymentApplication(String id, Object body)
+    public @NotNull LockstepResponse<PaymentAppliedModel> updatePaymentApplication(@NotNull String id, @NotNull Object body)
     {
         RestRequest<PaymentAppliedModel> r = new RestRequest<PaymentAppliedModel>(this.client, "PATCH", "/api/v1/PaymentApplications/{id}");
         r.AddPath("{id}", id.toString());
@@ -85,7 +87,7 @@ public class PaymentApplicationsClient
      * @param id The unique Lockstep Platform ID number of the Payment Application to delete; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deletePaymentApplication(String id)
+    public @NotNull LockstepResponse<ActionResultModel> deletePaymentApplication(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/PaymentApplications/{id}");
         r.AddPath("{id}", id.toString());
@@ -100,7 +102,7 @@ public class PaymentApplicationsClient
      * @param body The Payment Applications to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<PaymentAppliedModel[]> createPaymentApplications(PaymentAppliedModel[] body)
+    public @NotNull LockstepResponse<PaymentAppliedModel[]> createPaymentApplications(@NotNull PaymentAppliedModel[] body)
     {
         RestRequest<PaymentAppliedModel[]> r = new RestRequest<PaymentAppliedModel[]>(this.client, "POST", "/api/v1/PaymentApplications");
         r.AddBody(body);
@@ -121,7 +123,7 @@ public class PaymentApplicationsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<PaymentAppliedModel>> queryPaymentApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<PaymentAppliedModel>> queryPaymentApplications(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<PaymentAppliedModel>> r = new RestRequest<FetchResult<PaymentAppliedModel>>(this.client, "GET", "/api/v1/PaymentApplications/query");
         r.AddQuery("filter", filter.toString());

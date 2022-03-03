@@ -33,6 +33,8 @@ import org.apache.hc.core5.http.ClassicHttpRequest;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
 import org.apache.hc.core5.http.io.entity.StringEntity;
 import org.apache.hc.core5.net.URIBuilder;
+import org.jetbrains.annotations.NotNull;
+
 import com.google.gson.Gson;
 
 import io.lockstep.api.models.ErrorResult;
@@ -44,7 +46,7 @@ import io.lockstep.api.models.LockstepResponse;
  * @author jkirk
  * @version $Id: $Id
  */
-public class RestRequest<T>
+public class RestRequest<@NotNull T>
 {
     private Hashtable<String, String> queryParams;
     private Hashtable<String, String> pathReplacements;
@@ -60,7 +62,7 @@ public class RestRequest<T>
      * @param method a {@link java.lang.String} object.
      * @param path a {@link java.lang.String} object.
      */
-    public RestRequest(LockstepApi client, String method, String path)
+    public RestRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path)
     {
         this.client = client;
         this.method = method;
@@ -75,7 +77,7 @@ public class RestRequest<T>
      * @param name a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
      */
-    public void AddQuery(String name, String value)
+    public void AddQuery(@NotNull String name, @NotNull String value)
     {
         this.queryParams.put(name, value);
     }
@@ -86,7 +88,7 @@ public class RestRequest<T>
      * @param name a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
      */
-    public void AddPath(String name, String value)
+    public void AddPath(@NotNull String name, @NotNull String value)
     {
         this.pathReplacements.put(name, value);
     }
@@ -107,7 +109,7 @@ public class RestRequest<T>
      * @param classReference a {@link java.lang.reflect.Type} object.
      * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
-    public LockstepResponse<T> Call(Type classReference)
+    public @NotNull LockstepResponse<T> Call(Type classReference)
     {
         Instant start = Instant.now();
         LockstepResponse<T> lockstepResponse = new LockstepResponse<T>();
@@ -151,7 +153,7 @@ public class RestRequest<T>
             }
 
             request.addHeader("SdkName", "Java");
-            request.addHeader("SdkVersion", "2022.9.6.0");
+            request.addHeader("SdkVersion", "2022.9.18.0");
             
             String applicationName = this.client.getAppName();
 

@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ApiKeyModel;
 
 import io.lockstep.api.models.FetchResult;
@@ -35,7 +37,7 @@ public class ApiKeysClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public ApiKeysClient(LockstepApi client) {
+    public ApiKeysClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -51,7 +53,7 @@ public class ApiKeysClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ApiKeyModel> retrieveAPIKey(String id, String include)
+    public @NotNull LockstepResponse<ApiKeyModel> retrieveAPIKey(@NotNull String id, @Nullable String include)
     {
         RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "GET", "/api/v1/ApiKeys/{id}");
         r.AddPath("{id}", id.toString());
@@ -71,7 +73,7 @@ public class ApiKeysClient
      * @param id The unique Lockstep Platform ID number of this API Key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ApiKeyModel> revokeAPIKey(String id)
+    public @NotNull LockstepResponse<ApiKeyModel> revokeAPIKey(@NotNull String id)
     {
         RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "DELETE", "/api/v1/ApiKeys/{id}");
         r.AddPath("{id}", id.toString());
@@ -88,7 +90,7 @@ public class ApiKeysClient
      * @param body Metadata about the API Key to create.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ApiKeyModel> createAPIKey(ApiKeyModel body)
+    public @NotNull LockstepResponse<ApiKeyModel> createAPIKey(@NotNull ApiKeyModel body)
     {
         RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "POST", "/api/v1/ApiKeys");
         r.AddBody(body);
@@ -109,7 +111,7 @@ public class ApiKeysClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<ApiKeyModel>> queryAPIKeys(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<ApiKeyModel>> queryAPIKeys(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<ApiKeyModel>> r = new RestRequest<FetchResult<ApiKeyModel>>(this.client, "GET", "/api/v1/ApiKeys/query");
         r.AddQuery("filter", filter.toString());

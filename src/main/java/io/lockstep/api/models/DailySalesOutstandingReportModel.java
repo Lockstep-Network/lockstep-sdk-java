@@ -15,50 +15,52 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents the daily sales outstanding report
  */
 public class DailySalesOutstandingReportModel
 {
-    private String timeframe;
-    private Integer invoiceCount;
-    private Double dailySalesOutstanding;
+    private @NotNull String timeframe;
+    private @NotNull Integer invoiceCount;
+    private @NotNull Double dailySalesOutstanding;
 
     /**
      * Timeframe (month) the daily sales outstanding values are associated with
      *
      * @return The field timeframe
      */
-    public String getTimeframe() { return this.timeframe; }
+    public @NotNull String getTimeframe() { return this.timeframe; }
     /**
      * Timeframe (month) the daily sales outstanding values are associated with
      *
      * @param value The new value for timeframe
      */
-    public void setTimeframe(String value) { this.timeframe = value; }
+    public void setTimeframe(@NotNull String value) { this.timeframe = value; }
     /**
      * Number of invoices the average daily sales outstanding is calculated on
      *
      * @return The field invoiceCount
      */
-    public Integer getInvoiceCount() { return this.invoiceCount; }
+    public @NotNull Integer getInvoiceCount() { return this.invoiceCount; }
     /**
      * Number of invoices the average daily sales outstanding is calculated on
      *
      * @param value The new value for invoiceCount
      */
-    public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
+    public void setInvoiceCount(@NotNull Integer value) { this.invoiceCount = value; }
     /**
      * Time (in days) between an invoice was completed paid off and when the invoice was issued
      *
      * @return The field dailySalesOutstanding
      */
-    public Double getDailySalesOutstanding() { return this.dailySalesOutstanding; }
+    public @NotNull Double getDailySalesOutstanding() { return this.dailySalesOutstanding; }
     /**
      * Time (in days) between an invoice was completed paid off and when the invoice was issued
      *
      * @param value The new value for dailySalesOutstanding
      */
-    public void setDailySalesOutstanding(Double value) { this.dailySalesOutstanding = value; }
+    public void setDailySalesOutstanding(@NotNull Double value) { this.dailySalesOutstanding = value; }
 };

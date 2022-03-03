@@ -15,26 +15,28 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Contains summary information for a Payment
  */
 public class PaymentSummaryModel
 {
-    private String groupKey;
-    private String paymentId;
-    private String memoText;
-    private String referenceCode;
-    private String paymentType;
-    private String paymentDate;
-    private Double paymentAmount;
-    private Double unappliedAmount;
-    private Integer invoiceCount;
-    private Double totalPaymentsApplied;
-    private String[] invoiceList;
-    private String[] invoiceIdList;
-    private String customerName;
-    private String customerId;
+    private @NotNull String groupKey;
+    private @NotNull String paymentId;
+    private @Nullable String memoText;
+    private @Nullable String referenceCode;
+    private @Nullable String paymentType;
+    private @Nullable String paymentDate;
+    private @NotNull Double paymentAmount;
+    private @NotNull Double unappliedAmount;
+    private @Nullable Integer invoiceCount;
+    private @Nullable Double totalPaymentsApplied;
+    private @Nullable String[] invoiceList;
+    private @Nullable String[] invoiceIdList;
+    private @Nullable String customerName;
+    private @Nullable String customerId;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -44,7 +46,7 @@ public class PaymentSummaryModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -53,161 +55,161 @@ public class PaymentSummaryModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The id of the payment
      *
      * @return The field paymentId
      */
-    public String getPaymentId() { return this.paymentId; }
+    public @NotNull String getPaymentId() { return this.paymentId; }
     /**
      * The id of the payment
      *
      * @param value The new value for paymentId
      */
-    public void setPaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(@NotNull String value) { this.paymentId = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @return The field memoText
      */
-    public String getMemoText() { return this.memoText; }
+    public @Nullable String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @param value The new value for memoText
      */
-    public void setMemoText(String value) { this.memoText = value; }
+    public void setMemoText(@Nullable String value) { this.memoText = value; }
     /**
      * Reference code for the payment for the given Erp system.
      *
      * @return The field referenceCode
      */
-    public String getReferenceCode() { return this.referenceCode; }
+    public @Nullable String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      *
      * @param value The new value for referenceCode
      */
-    public void setReferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(@Nullable String value) { this.referenceCode = value; }
     /**
      * The type of payment, Payment or AP Payment.
      *
      * @return The field paymentType
      */
-    public String getPaymentType() { return this.paymentType; }
+    public @Nullable String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, Payment or AP Payment.
      *
      * @param value The new value for paymentType
      */
-    public void setPaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(@Nullable String value) { this.paymentType = value; }
     /**
      * The date of this payment.
      *
      * @return The field paymentDate
      */
-    public String getPaymentDate() { return this.paymentDate; }
+    public @Nullable String getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this payment.
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(String value) { this.paymentDate = value; }
+    public void setPaymentDate(@Nullable String value) { this.paymentDate = value; }
     /**
      * Total amount of this payment.
      *
      * @return The field paymentAmount
      */
-    public Double getPaymentAmount() { return this.paymentAmount; }
+    public @NotNull Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this payment.
      *
      * @param value The new value for paymentAmount
      */
-    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(@NotNull Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this payment.
      *
      * @return The field unappliedAmount
      */
-    public Double getUnappliedAmount() { return this.unappliedAmount; }
+    public @NotNull Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this payment.
      *
      * @param value The new value for unappliedAmount
      */
-    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
     /**
      * The number of invoices associated to this payment.
      *
      * @return The field invoiceCount
      */
-    public Integer getInvoiceCount() { return this.invoiceCount; }
+    public @Nullable Integer getInvoiceCount() { return this.invoiceCount; }
     /**
      * The number of invoices associated to this payment.
      *
      * @param value The new value for invoiceCount
      */
-    public void setInvoiceCount(Integer value) { this.invoiceCount = value; }
+    public void setInvoiceCount(@Nullable Integer value) { this.invoiceCount = value; }
     /**
      * The number of payments applied to this payment.
      *
      * @return The field totalPaymentsApplied
      */
-    public Double getTotalPaymentsApplied() { return this.totalPaymentsApplied; }
+    public @Nullable Double getTotalPaymentsApplied() { return this.totalPaymentsApplied; }
     /**
      * The number of payments applied to this payment.
      *
      * @param value The new value for totalPaymentsApplied
      */
-    public void setTotalPaymentsApplied(Double value) { this.totalPaymentsApplied = value; }
+    public void setTotalPaymentsApplied(@Nullable Double value) { this.totalPaymentsApplied = value; }
     /**
      * The reference codes of the invoices associated to this payment.
      *
      * @return The field invoiceList
      */
-    public String[] getInvoiceList() { return this.invoiceList; }
+    public @Nullable String[] getInvoiceList() { return this.invoiceList; }
     /**
      * The reference codes of the invoices associated to this payment.
      *
      * @param value The new value for invoiceList
      */
-    public void setInvoiceList(String[] value) { this.invoiceList = value; }
+    public void setInvoiceList(@Nullable String[] value) { this.invoiceList = value; }
     /**
      * The ids of the invoices associated to this payment.
      *
      * @return The field invoiceIdList
      */
-    public String[] getInvoiceIdList() { return this.invoiceIdList; }
+    public @Nullable String[] getInvoiceIdList() { return this.invoiceIdList; }
     /**
      * The ids of the invoices associated to this payment.
      *
      * @param value The new value for invoiceIdList
      */
-    public void setInvoiceIdList(String[] value) { this.invoiceIdList = value; }
+    public void setInvoiceIdList(@Nullable String[] value) { this.invoiceIdList = value; }
     /**
      * The name of the customer for this payment.
      *
      * @return The field customerName
      */
-    public String getCustomerName() { return this.customerName; }
+    public @Nullable String getCustomerName() { return this.customerName; }
     /**
      * The name of the customer for this payment.
      *
      * @param value The new value for customerName
      */
-    public void setCustomerName(String value) { this.customerName = value; }
+    public void setCustomerName(@Nullable String value) { this.customerName = value; }
     /**
      * The id of the customer for this payment.
      *
      * @return The field customerId
      */
-    public String getCustomerId() { return this.customerId; }
+    public @Nullable String getCustomerId() { return this.customerId; }
     /**
      * The id of the customer for this payment.
      *
      * @param value The new value for customerId
      */
-    public void setCustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(@Nullable String value) { this.customerId = value; }
 };

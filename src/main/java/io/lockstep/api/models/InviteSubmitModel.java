@@ -15,24 +15,26 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Model to invite a new user to your accounting group
  */
 public class InviteSubmitModel
 {
-    private String email;
+    private @NotNull String email;
 
     /**
      * The email address of the user to invite
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @NotNull String getEmail() { return this.email; }
     /**
      * The email address of the user to invite
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@NotNull String value) { this.email = value; }
 };

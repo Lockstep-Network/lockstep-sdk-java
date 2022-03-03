@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ProvisioningResponseModel;
 import io.lockstep.api.models.ProvisioningModel;
 import io.lockstep.api.models.ProvisioningFinalizeRequestModel;
@@ -36,7 +38,7 @@ public class ProvisioningClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public ProvisioningClient(LockstepApi client) {
+    public ProvisioningClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -47,7 +49,7 @@ public class ProvisioningClient
      * @param body Represents a User and their related metadata
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ProvisioningResponseModel> provisionUserAccount(ProvisioningModel body)
+    public @NotNull LockstepResponse<ProvisioningResponseModel> provisionUserAccount(@NotNull ProvisioningModel body)
     {
         RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning");
         r.AddBody(body);
@@ -60,7 +62,7 @@ public class ProvisioningClient
      * @param body Represents a User and their related metadata
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ProvisioningResponseModel> finalizeUserAccountProvisioning(ProvisioningFinalizeRequestModel body)
+    public @NotNull LockstepResponse<ProvisioningResponseModel> finalizeUserAccountProvisioning(@NotNull ProvisioningFinalizeRequestModel body)
     {
         RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning/finalize");
         r.AddBody(body);
@@ -73,7 +75,7 @@ public class ProvisioningClient
      * @param body Documentation pending
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> provisionFreeDeveloperAccount(DeveloperAccountSubmitModel body)
+    public @NotNull LockstepResponse<ActionResultModel> provisionFreeDeveloperAccount(@NotNull DeveloperAccountSubmitModel body)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "POST", "/api/v1/Provisioning/free-account");
         r.AddBody(body);

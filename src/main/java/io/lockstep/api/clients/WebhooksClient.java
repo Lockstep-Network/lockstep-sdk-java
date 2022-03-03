@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.WebhookModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -37,7 +39,7 @@ public class WebhooksClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public WebhooksClient(LockstepApi client) {
+    public WebhooksClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -48,7 +50,7 @@ public class WebhooksClient
      * @param id The unique Lockstep Platform ID number of this Webhook
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<WebhookModel> retrieveWebhook(String id)
+    public @NotNull LockstepResponse<WebhookModel> retrieveWebhook(@NotNull String id)
     {
         RestRequest<WebhookModel> r = new RestRequest<WebhookModel>(this.client, "GET", "/api/v1/Webhooks/{id}");
         r.AddPath("{id}", id.toString());
@@ -64,7 +66,7 @@ public class WebhooksClient
      * @param body A list of changes to apply to this Webhook
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<WebhookModel> updateWebhook(String id, Object body)
+    public @NotNull LockstepResponse<WebhookModel> updateWebhook(@NotNull String id, @NotNull Object body)
     {
         RestRequest<WebhookModel> r = new RestRequest<WebhookModel>(this.client, "PATCH", "/api/v1/Webhooks/{id}");
         r.AddPath("{id}", id.toString());
@@ -78,7 +80,7 @@ public class WebhooksClient
      * @param id The unique Lockstep Platform ID number of the Webhook to delete.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deleteWebhook(String id)
+    public @NotNull LockstepResponse<ActionResultModel> deleteWebhook(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Webhooks/{id}");
         r.AddPath("{id}", id.toString());
@@ -91,7 +93,7 @@ public class WebhooksClient
      * @param body The Webhooks to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<WebhookModel[]> createWebhooks(WebhookModel[] body)
+    public @NotNull LockstepResponse<WebhookModel[]> createWebhooks(@NotNull WebhookModel[] body)
     {
         RestRequest<WebhookModel[]> r = new RestRequest<WebhookModel[]>(this.client, "POST", "/api/v1/Webhooks");
         r.AddBody(body);
@@ -104,7 +106,7 @@ public class WebhooksClient
      * @param id The unique Lockstep Platform ID number of the Webhook to update.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<WebhookModel> regenerateClientSecret(String id)
+    public @NotNull LockstepResponse<WebhookModel> regenerateClientSecret(@NotNull String id)
     {
         RestRequest<WebhookModel> r = new RestRequest<WebhookModel>(this.client, "PATCH", "/api/v1/Webhooks/{id}/regenerateclientsecret");
         r.AddPath("{id}", id.toString());
@@ -122,7 +124,7 @@ public class WebhooksClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<WebhookModel>> queryWebhooks(String filter, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<WebhookModel>> queryWebhooks(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<WebhookModel>> r = new RestRequest<FetchResult<WebhookModel>>(this.client, "GET", "/api/v1/Webhooks/query");
         r.AddQuery("filter", filter.toString());
@@ -141,7 +143,7 @@ public class WebhooksClient
      * @param pageNumber The page number for results (default 0).
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<WebhookHistoryTableStorageModel>> queryWebhookHistory(String webhookId, String filter, String select, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<WebhookHistoryTableStorageModel>> queryWebhookHistory(@NotNull String webhookId, @Nullable String filter, @Nullable String select, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<WebhookHistoryTableStorageModel>> r = new RestRequest<FetchResult<WebhookHistoryTableStorageModel>>(this.client, "GET", "/api/v1/Webhooks/{webhookId}/history/query");
         r.AddPath("{webhookId}", webhookId.toString());

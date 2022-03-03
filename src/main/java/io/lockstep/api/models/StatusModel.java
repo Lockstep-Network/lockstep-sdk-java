@@ -15,195 +15,197 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents the status of a user's credentials
  */
 public class StatusModel
 {
-    private String userName;
-    private String accountName;
-    private String accountCompanyId;
-    private String userId;
-    private String groupKey;
-    private Boolean loggedIn;
-    private String errorMessage;
-    private String[] roles;
-    private String lastLoggedIn;
-    private String apiKeyId;
-    private String userStatus;
-    private String environment;
-    private String version;
-    private Object dependencies;
+    private @Nullable String userName;
+    private @Nullable String accountName;
+    private @Nullable String accountCompanyId;
+    private @Nullable String userId;
+    private @Nullable String groupKey;
+    private @NotNull Boolean loggedIn;
+    private @Nullable String errorMessage;
+    private @Nullable String[] roles;
+    private @Nullable String lastLoggedIn;
+    private @Nullable String apiKeyId;
+    private @Nullable String userStatus;
+    private @Nullable String environment;
+    private @Nullable String version;
+    private @Nullable Object dependencies;
 
     /**
      * If authentication is successful, contains the username of the logged-in user.
      *
      * @return The field userName
      */
-    public String getUserName() { return this.userName; }
+    public @Nullable String getUserName() { return this.userName; }
     /**
      * If authentication is successful, contains the username of the logged-in user.
      *
      * @param value The new value for userName
      */
-    public void setUserName(String value) { this.userName = value; }
+    public void setUserName(@Nullable String value) { this.userName = value; }
     /**
      * If authentication is successful, contains subscription account name of logged-in user.
      *
      * @return The field accountName
      */
-    public String getAccountName() { return this.accountName; }
+    public @Nullable String getAccountName() { return this.accountName; }
     /**
      * If authentication is successful, contains subscription account name of logged-in user.
      *
      * @param value The new value for accountName
      */
-    public void setAccountName(String value) { this.accountName = value; }
+    public void setAccountName(@Nullable String value) { this.accountName = value; }
     /**
      * If authentication is successful, contains subscription account company id of logged-in user.
      *
      * @return The field accountCompanyId
      */
-    public String getAccountCompanyId() { return this.accountCompanyId; }
+    public @Nullable String getAccountCompanyId() { return this.accountCompanyId; }
     /**
      * If authentication is successful, contains subscription account company id of logged-in user.
      *
      * @param value The new value for accountCompanyId
      */
-    public void setAccountCompanyId(String value) { this.accountCompanyId = value; }
+    public void setAccountCompanyId(@Nullable String value) { this.accountCompanyId = value; }
     /**
      * If authentication is successful, contains the unique identifier of the logged-in user.
      *
      * @return The field userId
      */
-    public String getUserId() { return this.userId; }
+    public @Nullable String getUserId() { return this.userId; }
     /**
      * If authentication is successful, contains the unique identifier of the logged-in user.
      *
      * @param value The new value for userId
      */
-    public void setUserId(String value) { this.userId = value; }
+    public void setUserId(@Nullable String value) { this.userId = value; }
     /**
      * If authentication is successful, contains the group key of the logged-in user.
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @Nullable String getGroupKey() { return this.groupKey; }
     /**
      * If authentication is successful, contains the group key of the logged-in user.
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@Nullable String value) { this.groupKey = value; }
     /**
      * Returns true if authentication for this API was successful.
      *
      * @return The field loggedIn
      */
-    public Boolean getLoggedIn() { return this.loggedIn; }
+    public @NotNull Boolean getLoggedIn() { return this.loggedIn; }
     /**
      * Returns true if authentication for this API was successful.
      *
      * @param value The new value for loggedIn
      */
-    public void setLoggedIn(Boolean value) { this.loggedIn = value; }
+    public void setLoggedIn(@NotNull Boolean value) { this.loggedIn = value; }
     /**
      * The error message.
      *
      * @return The field errorMessage
      */
-    public String getErrorMessage() { return this.errorMessage; }
+    public @Nullable String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message.
      *
      * @param value The new value for errorMessage
      */
-    public void setErrorMessage(String value) { this.errorMessage = value; }
+    public void setErrorMessage(@Nullable String value) { this.errorMessage = value; }
     /**
      * The set of roles for this user.
      *
      * @return The field roles
      */
-    public String[] getRoles() { return this.roles; }
+    public @Nullable String[] getRoles() { return this.roles; }
     /**
      * The set of roles for this user.
      *
      * @param value The new value for roles
      */
-    public void setRoles(String[] value) { this.roles = value; }
+    public void setRoles(@Nullable String[] value) { this.roles = value; }
     /**
      * Date and time user has last logged into Azure B2C.
      *
      * @return The field lastLoggedIn
      */
-    public String getLastLoggedIn() { return this.lastLoggedIn; }
+    public @Nullable String getLastLoggedIn() { return this.lastLoggedIn; }
     /**
      * Date and time user has last logged into Azure B2C.
      *
      * @param value The new value for lastLoggedIn
      */
-    public void setLastLoggedIn(String value) { this.lastLoggedIn = value; }
+    public void setLastLoggedIn(@Nullable String value) { this.lastLoggedIn = value; }
     /**
      * The id of the API key used to authenticate.
      *
      * @return The field apiKeyId
      */
-    public String getApiKeyId() { return this.apiKeyId; }
+    public @Nullable String getApiKeyId() { return this.apiKeyId; }
     /**
      * The id of the API key used to authenticate.
      *
      * @param value The new value for apiKeyId
      */
-    public void setApiKeyId(String value) { this.apiKeyId = value; }
+    public void setApiKeyId(@Nullable String value) { this.apiKeyId = value; }
     /**
      * If authentication is successful, contains the user status of the logged-in user.
      *
      * @return The field userStatus
      */
-    public String getUserStatus() { return this.userStatus; }
+    public @Nullable String getUserStatus() { return this.userStatus; }
     /**
      * If authentication is successful, contains the user status of the logged-in user.
      *
      * @param value The new value for userStatus
      */
-    public void setUserStatus(String value) { this.userStatus = value; }
+    public void setUserStatus(@Nullable String value) { this.userStatus = value; }
     /**
      * The environment currently being used
      *
      * @return The field environment
      */
-    public String getEnvironment() { return this.environment; }
+    public @Nullable String getEnvironment() { return this.environment; }
     /**
      * The environment currently being used
      *
      * @param value The new value for environment
      */
-    public void setEnvironment(String value) { this.environment = value; }
+    public void setEnvironment(@Nullable String value) { this.environment = value; }
     /**
      * The version currently being used
      *
      * @return The field version
      */
-    public String getVersion() { return this.version; }
+    public @Nullable String getVersion() { return this.version; }
     /**
      * The version currently being used
      *
      * @param value The new value for version
      */
-    public void setVersion(String value) { this.version = value; }
+    public void setVersion(@Nullable String value) { this.version = value; }
     /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.
      *
      * @return The field dependencies
      */
-    public Object getDependencies() { return this.dependencies; }
+    public @Nullable Object getDependencies() { return this.dependencies; }
     /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.
      *
      * @param value The new value for dependencies
      */
-    public void setDependencies(Object value) { this.dependencies = value; }
+    public void setDependencies(@Nullable Object value) { this.dependencies = value; }
 };

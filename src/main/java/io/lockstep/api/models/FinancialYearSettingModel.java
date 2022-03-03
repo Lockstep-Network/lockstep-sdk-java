@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A Financial Year Setting is used to to set the type, beginning, end, and number of periods of a year used to
@@ -23,17 +25,17 @@ package io.lockstep.api.models;
  */
 public class FinancialYearSettingModel
 {
-    private String financialYearSettingId;
-    private String groupKey;
-    private String appEnrollmentId;
-    private String yearType;
-    private Integer totalPeriods;
-    private String startDate;
-    private String endDate;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
+    private @NotNull String financialYearSettingId;
+    private @NotNull String groupKey;
+    private @Nullable String appEnrollmentId;
+    private @Nullable String yearType;
+    private @NotNull Integer totalPeriods;
+    private @Nullable String startDate;
+    private @Nullable String endDate;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -41,14 +43,14 @@ public class FinancialYearSettingModel
      *
      * @return The field financialYearSettingId
      */
-    public String getFinancialYearSettingId() { return this.financialYearSettingId; }
+    public @NotNull String getFinancialYearSettingId() { return this.financialYearSettingId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for financialYearSettingId
      */
-    public void setFinancialYearSettingId(String value) { this.financialYearSettingId = value; }
+    public void setFinancialYearSettingId(@NotNull String value) { this.financialYearSettingId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -57,7 +59,7 @@ public class FinancialYearSettingModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -66,7 +68,7 @@ public class FinancialYearSettingModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -75,7 +77,7 @@ public class FinancialYearSettingModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -84,103 +86,103 @@ public class FinancialYearSettingModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * The type of financial year, either Calendar or Fiscal.
      *
      * @return The field yearType
      */
-    public String getYearType() { return this.yearType; }
+    public @Nullable String getYearType() { return this.yearType; }
     /**
      * The type of financial year, either Calendar or Fiscal.
      *
      * @param value The new value for yearType
      */
-    public void setYearType(String value) { this.yearType = value; }
+    public void setYearType(@Nullable String value) { this.yearType = value; }
     /**
      * Total number of periods in the year. For Calendar year types this should always be 12. For Fiscal year types
      * this can either be 12 or 13 for a 4 week 13 period year.
      *
      * @return The field totalPeriods
      */
-    public Integer getTotalPeriods() { return this.totalPeriods; }
+    public @NotNull Integer getTotalPeriods() { return this.totalPeriods; }
     /**
      * Total number of periods in the year. For Calendar year types this should always be 12. For Fiscal year types
      * this can either be 12 or 13 for a 4 week 13 period year.
      *
      * @param value The new value for totalPeriods
      */
-    public void setTotalPeriods(Integer value) { this.totalPeriods = value; }
+    public void setTotalPeriods(@NotNull Integer value) { this.totalPeriods = value; }
     /**
      * The start date of the financial year. Should be entered in MM-DD format.
      *
      * @return The field startDate
      */
-    public String getStartDate() { return this.startDate; }
+    public @Nullable String getStartDate() { return this.startDate; }
     /**
      * The start date of the financial year. Should be entered in MM-DD format.
      *
      * @param value The new value for startDate
      */
-    public void setStartDate(String value) { this.startDate = value; }
+    public void setStartDate(@Nullable String value) { this.startDate = value; }
     /**
      * The end date of the financial year. Should be entered in MM-DD format.
      *
      * @return The field endDate
      */
-    public String getEndDate() { return this.endDate; }
+    public @Nullable String getEndDate() { return this.endDate; }
     /**
      * The end date of the financial year. Should be entered in MM-DD format.
      *
      * @param value The new value for endDate
      */
-    public void setEndDate(String value) { this.endDate = value; }
+    public void setEndDate(@Nullable String value) { this.endDate = value; }
     /**
      * The date on which this financial year setting record was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this financial year setting record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID number of the user who created this financial year setting.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this financial year setting.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date on which this financial year setting record was last modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date on which this financial year setting record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this financial year setting.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this financial year setting.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
 };

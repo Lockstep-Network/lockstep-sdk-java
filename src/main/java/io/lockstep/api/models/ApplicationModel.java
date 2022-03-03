@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * An Application represents a feature available to customers within the Lockstep Platform.  You can create
@@ -29,194 +31,194 @@ package io.lockstep.api.models;
  */
 public class ApplicationModel
 {
-    private String appId;
-    private String name;
-    private String description;
-    private String appType;
-    private String ownerId;
-    private String projectUrl;
-    private String iconUrl;
-    private String priceTerms;
-    private String createdUserId;
-    private String modifiedUserId;
-    private String created;
-    private String modified;
-    private Boolean isActive;
-    private String wikiURL;
-    private String groupKey;
-    private NoteModel[] notes;
-    private AttachmentModel[] attachments;
-    private CustomFieldDefinitionModel[] customFieldDefinitions;
-    private CustomFieldValueModel[] customFieldValues;
+    private @NotNull String appId;
+    private @Nullable String name;
+    private @Nullable String description;
+    private @NotNull String appType;
+    private @NotNull String ownerId;
+    private @Nullable String projectUrl;
+    private @Nullable String iconUrl;
+    private @Nullable String priceTerms;
+    private @Nullable String createdUserId;
+    private @Nullable String modifiedUserId;
+    private @Nullable String created;
+    private @Nullable String modified;
+    private @NotNull Boolean isActive;
+    private @Nullable String wikiURL;
+    private @NotNull String groupKey;
+    private @Nullable NoteModel[] notes;
+    private @Nullable AttachmentModel[] attachments;
+    private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
 
     /**
      * A unique code identifying this application
      *
      * @return The field appId
      */
-    public String getAppId() { return this.appId; }
+    public @NotNull String getAppId() { return this.appId; }
     /**
      * A unique code identifying this application
      *
      * @param value The new value for appId
      */
-    public void setAppId(String value) { this.appId = value; }
+    public void setAppId(@NotNull String value) { this.appId = value; }
     /**
      * The name of this application
      *
      * @return The field name
      */
-    public String getName() { return this.name; }
+    public @Nullable String getName() { return this.name; }
     /**
      * The name of this application
      *
      * @param value The new value for name
      */
-    public void setName(String value) { this.name = value; }
+    public void setName(@Nullable String value) { this.name = value; }
     /**
      * Brief summary of this application shown as a subtitle
      *
      * @return The field description
      */
-    public String getDescription() { return this.description; }
+    public @Nullable String getDescription() { return this.description; }
     /**
      * Brief summary of this application shown as a subtitle
      *
      * @param value The new value for description
      */
-    public void setDescription(String value) { this.description = value; }
+    public void setDescription(@Nullable String value) { this.description = value; }
     /**
      * Tag for what type of app this is
      *
      * @return The field appType
      */
-    public String getAppType() { return this.appType; }
+    public @NotNull String getAppType() { return this.appType; }
     /**
      * Tag for what type of app this is
      *
      * @param value The new value for appType
      */
-    public void setAppType(String value) { this.appType = value; }
+    public void setAppType(@NotNull String value) { this.appType = value; }
     /**
      * The ID of the owner
      *
      * @return The field ownerId
      */
-    public String getOwnerId() { return this.ownerId; }
+    public @NotNull String getOwnerId() { return this.ownerId; }
     /**
      * The ID of the owner
      *
      * @param value The new value for ownerId
      */
-    public void setOwnerId(String value) { this.ownerId = value; }
+    public void setOwnerId(@NotNull String value) { this.ownerId = value; }
     /**
      * The URL to visit for more information about this application
      *
      * @return The field projectUrl
      */
-    public String getProjectUrl() { return this.projectUrl; }
+    public @Nullable String getProjectUrl() { return this.projectUrl; }
     /**
      * The URL to visit for more information about this application
      *
      * @param value The new value for projectUrl
      */
-    public void setProjectUrl(String value) { this.projectUrl = value; }
+    public void setProjectUrl(@Nullable String value) { this.projectUrl = value; }
     /**
      * The URL for the icon for this application
      *
      * @return The field iconUrl
      */
-    public String getIconUrl() { return this.iconUrl; }
+    public @Nullable String getIconUrl() { return this.iconUrl; }
     /**
      * The URL for the icon for this application
      *
      * @param value The new value for iconUrl
      */
-    public void setIconUrl(String value) { this.iconUrl = value; }
+    public void setIconUrl(@Nullable String value) { this.iconUrl = value; }
     /**
      * The description of the price for this application
      *
      * @return The field priceTerms
      */
-    public String getPriceTerms() { return this.priceTerms; }
+    public @Nullable String getPriceTerms() { return this.priceTerms; }
     /**
      * The description of the price for this application
      *
      * @param value The new value for priceTerms
      */
-    public void setPriceTerms(String value) { this.priceTerms = value; }
+    public void setPriceTerms(@Nullable String value) { this.priceTerms = value; }
     /**
      * The ID of the user who created this application
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @Nullable String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this application
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@Nullable String value) { this.createdUserId = value; }
     /**
      * The ID of the user who last modified this application
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @Nullable String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this application
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@Nullable String value) { this.modifiedUserId = value; }
     /**
      * The date this application was created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * The date this application was created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * The date this application was last modified
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * The date this application was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
     /**
      * Flag indicating if the application is active.
      *
      * @return The field isActive
      */
-    public Boolean getIsActive() { return this.isActive; }
+    public @NotNull Boolean getIsActive() { return this.isActive; }
     /**
      * Flag indicating if the application is active.
      *
      * @param value The new value for isActive
      */
-    public void setIsActive(Boolean value) { this.isActive = value; }
+    public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
     /**
      * URL to the Wiki for the Application
      *
      * @return The field wikiURL
      */
-    public String getWikiURL() { return this.wikiURL; }
+    public @Nullable String getWikiURL() { return this.wikiURL; }
     /**
      * URL to the Wiki for the Application
      *
      * @param value The new value for wikiURL
      */
-    public void setWikiURL(String value) { this.wikiURL = value; }
+    public void setWikiURL(@Nullable String value) { this.wikiURL = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -225,7 +227,7 @@ public class ApplicationModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -234,7 +236,7 @@ public class ApplicationModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -245,7 +247,7 @@ public class ApplicationModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -256,7 +258,7 @@ public class ApplicationModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -267,7 +269,7 @@ public class ApplicationModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -278,7 +280,7 @@ public class ApplicationModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -289,7 +291,7 @@ public class ApplicationModel
      *
      * @return The field customFieldDefinitions
      */
-    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public @Nullable CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -300,7 +302,7 @@ public class ApplicationModel
      *
      * @param value The new value for customFieldDefinitions
      */
-    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -311,7 +313,7 @@ public class ApplicationModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -322,5 +324,5 @@ public class ApplicationModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A Custom Field represents metadata added to an object within the Lockstep Platform.  Lockstep provides a
@@ -26,18 +28,18 @@ package io.lockstep.api.models;
  */
 public class CustomFieldDefinitionModel
 {
-    private String groupKey;
-    private String customFieldDefinitionId;
-    private String tableKey;
-    private String appId;
-    private String customFieldLabel;
-    private String dataType;
-    private Integer sortOrder;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String appEnrollmentId;
+    private @NotNull String groupKey;
+    private @NotNull String customFieldDefinitionId;
+    private @Nullable String tableKey;
+    private @Nullable String appId;
+    private @Nullable String customFieldLabel;
+    private @Nullable String dataType;
+    private @NotNull Integer sortOrder;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String appEnrollmentId;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -47,7 +49,7 @@ public class CustomFieldDefinitionModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -56,129 +58,129 @@ public class CustomFieldDefinitionModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @return The field customFieldDefinitionId
      */
-    public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
+    public @NotNull String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for customFieldDefinitionId
      */
-    public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
+    public void setCustomFieldDefinitionId(@NotNull String value) { this.customFieldDefinitionId = value; }
     /**
      * Table to which this definition belongs
      *
      * @return The field tableKey
      */
-    public String getTableKey() { return this.tableKey; }
+    public @Nullable String getTableKey() { return this.tableKey; }
     /**
      * Table to which this definition belongs
      *
      * @param value The new value for tableKey
      */
-    public void setTableKey(String value) { this.tableKey = value; }
+    public void setTableKey(@Nullable String value) { this.tableKey = value; }
     /**
      * Id of app this definition belongs to
      *
      * @return The field appId
      */
-    public String getAppId() { return this.appId; }
+    public @Nullable String getAppId() { return this.appId; }
     /**
      * Id of app this definition belongs to
      *
      * @param value The new value for appId
      */
-    public void setAppId(String value) { this.appId = value; }
+    public void setAppId(@Nullable String value) { this.appId = value; }
     /**
      * Text to display in-application for custom field
      *
      * @return The field customFieldLabel
      */
-    public String getCustomFieldLabel() { return this.customFieldLabel; }
+    public @Nullable String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
      * Text to display in-application for custom field
      *
      * @param value The new value for customFieldLabel
      */
-    public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
+    public void setCustomFieldLabel(@Nullable String value) { this.customFieldLabel = value; }
     /**
      * Data type of this definition
      *
      * @return The field dataType
      */
-    public String getDataType() { return this.dataType; }
+    public @Nullable String getDataType() { return this.dataType; }
     /**
      * Data type of this definition
      *
      * @param value The new value for dataType
      */
-    public void setDataType(String value) { this.dataType = value; }
+    public void setDataType(@Nullable String value) { this.dataType = value; }
     /**
      * Used for display logic when multiple custom fields exist
      *
      * @return The field sortOrder
      */
-    public Integer getSortOrder() { return this.sortOrder; }
+    public @NotNull Integer getSortOrder() { return this.sortOrder; }
     /**
      * Used for display logic when multiple custom fields exist
      *
      * @param value The new value for sortOrder
      */
-    public void setSortOrder(Integer value) { this.sortOrder = value; }
+    public void setSortOrder(@NotNull Integer value) { this.sortOrder = value; }
     /**
      * Date created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * Date created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * Id of user who created this definition
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * Id of user who created this definition
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * Date modified
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * Date modified
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * Id of user who modified this definition
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * Id of user who modified this definition
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -187,7 +189,7 @@ public class CustomFieldDefinitionModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -196,5 +198,5 @@ public class CustomFieldDefinitionModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
 };

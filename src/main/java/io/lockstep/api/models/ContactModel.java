@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A Contact contains information about a person or role within a Company.
@@ -24,36 +26,36 @@ package io.lockstep.api.models;
  */
 public class ContactModel
 {
-    private String contactId;
-    private String companyId;
-    private String groupKey;
-    private String erpKey;
-    private String contactName;
-    private String contactCode;
-    private String title;
-    private String roleCode;
-    private String emailAddress;
-    private String phone;
-    private String fax;
-    private String address1;
-    private String address2;
-    private String address3;
-    private String city;
-    private String stateRegion;
-    private String postalCode;
-    private String countryCode;
-    private Boolean isActive;
-    private String webpageUrl;
-    private String pictureUrl;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String appEnrollmentId;
-    private NoteModel[] notes;
-    private AttachmentModel[] attachments;
-    private CustomFieldDefinitionModel[] customFieldDefinitions;
-    private CustomFieldValueModel[] customFieldValues;
+    private @NotNull String contactId;
+    private @NotNull String companyId;
+    private @NotNull String groupKey;
+    private @Nullable String erpKey;
+    private @Nullable String contactName;
+    private @Nullable String contactCode;
+    private @Nullable String title;
+    private @Nullable String roleCode;
+    private @Nullable String emailAddress;
+    private @Nullable String phone;
+    private @Nullable String fax;
+    private @Nullable String address1;
+    private @Nullable String address2;
+    private @Nullable String address3;
+    private @Nullable String city;
+    private @Nullable String stateRegion;
+    private @Nullable String postalCode;
+    private @Nullable String countryCode;
+    private @NotNull Boolean isActive;
+    private @Nullable String webpageUrl;
+    private @Nullable String pictureUrl;
+    private @Nullable String created;
+    private @NotNull String createdUserId;
+    private @Nullable String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String appEnrollmentId;
+    private @Nullable NoteModel[] notes;
+    private @Nullable AttachmentModel[] attachments;
+    private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -63,7 +65,7 @@ public class ContactModel
      *
      * @return The field contactId
      */
-    public String getContactId() { return this.contactId; }
+    public @NotNull String getContactId() { return this.contactId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -72,19 +74,19 @@ public class ContactModel
      *
      * @param value The new value for contactId
      */
-    public void setContactId(String value) { this.contactId = value; }
+    public void setContactId(@NotNull String value) { this.contactId = value; }
     /**
      * The ID of the company to which this contact belongs.
      *
      * @return The field companyId
      */
-    public String getCompanyId() { return this.companyId; }
+    public @NotNull String getCompanyId() { return this.companyId; }
     /**
      * The ID of the company to which this contact belongs.
      *
      * @param value The new value for companyId
      */
-    public void setCompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(@NotNull String value) { this.companyId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -93,7 +95,7 @@ public class ContactModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -102,7 +104,7 @@ public class ContactModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -114,7 +116,7 @@ public class ContactModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -126,259 +128,259 @@ public class ContactModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
      * The name of the contact.
      *
      * @return The field contactName
      */
-    public String getContactName() { return this.contactName; }
+    public @Nullable String getContactName() { return this.contactName; }
     /**
      * The name of the contact.
      *
      * @param value The new value for contactName
      */
-    public void setContactName(String value) { this.contactName = value; }
+    public void setContactName(@Nullable String value) { this.contactName = value; }
     /**
      * A friendly human-readable code that describes this Contact.
      *
      * @return The field contactCode
      */
-    public String getContactCode() { return this.contactCode; }
+    public @Nullable String getContactCode() { return this.contactCode; }
     /**
      * A friendly human-readable code that describes this Contact.
      *
      * @param value The new value for contactCode
      */
-    public void setContactCode(String value) { this.contactCode = value; }
+    public void setContactCode(@Nullable String value) { this.contactCode = value; }
     /**
      * The title of the contact.
      *
      * @return The field title
      */
-    public String getTitle() { return this.title; }
+    public @Nullable String getTitle() { return this.title; }
     /**
      * The title of the contact.
      *
      * @param value The new value for title
      */
-    public void setTitle(String value) { this.title = value; }
+    public void setTitle(@Nullable String value) { this.title = value; }
     /**
      * The role code for the contact.
      *
      * @return The field roleCode
      */
-    public String getRoleCode() { return this.roleCode; }
+    public @Nullable String getRoleCode() { return this.roleCode; }
     /**
      * The role code for the contact.
      *
      * @param value The new value for roleCode
      */
-    public void setRoleCode(String value) { this.roleCode = value; }
+    public void setRoleCode(@Nullable String value) { this.roleCode = value; }
     /**
      * The email address of the contact.
      *
      * @return The field emailAddress
      */
-    public String getEmailAddress() { return this.emailAddress; }
+    public @Nullable String getEmailAddress() { return this.emailAddress; }
     /**
      * The email address of the contact.
      *
      * @param value The new value for emailAddress
      */
-    public void setEmailAddress(String value) { this.emailAddress = value; }
+    public void setEmailAddress(@Nullable String value) { this.emailAddress = value; }
     /**
      * The phone number of the contact.
      *
      * @return The field phone
      */
-    public String getPhone() { return this.phone; }
+    public @Nullable String getPhone() { return this.phone; }
     /**
      * The phone number of the contact.
      *
      * @param value The new value for phone
      */
-    public void setPhone(String value) { this.phone = value; }
+    public void setPhone(@Nullable String value) { this.phone = value; }
     /**
      * The fax number of the contact.
      *
      * @return The field fax
      */
-    public String getFax() { return this.fax; }
+    public @Nullable String getFax() { return this.fax; }
     /**
      * The fax number of the contact.
      *
      * @param value The new value for fax
      */
-    public void setFax(String value) { this.fax = value; }
+    public void setFax(@Nullable String value) { this.fax = value; }
     /**
      * The first line of the address.
      *
      * @return The field address1
      */
-    public String getAddress1() { return this.address1; }
+    public @Nullable String getAddress1() { return this.address1; }
     /**
      * The first line of the address.
      *
      * @param value The new value for address1
      */
-    public void setAddress1(String value) { this.address1 = value; }
+    public void setAddress1(@Nullable String value) { this.address1 = value; }
     /**
      * The second line of the address.
      *
      * @return The field address2
      */
-    public String getAddress2() { return this.address2; }
+    public @Nullable String getAddress2() { return this.address2; }
     /**
      * The second line of the address.
      *
      * @param value The new value for address2
      */
-    public void setAddress2(String value) { this.address2 = value; }
+    public void setAddress2(@Nullable String value) { this.address2 = value; }
     /**
      * The third line of the address.
      *
      * @return The field address3
      */
-    public String getAddress3() { return this.address3; }
+    public @Nullable String getAddress3() { return this.address3; }
     /**
      * The third line of the address.
      *
      * @param value The new value for address3
      */
-    public void setAddress3(String value) { this.address3 = value; }
+    public void setAddress3(@Nullable String value) { this.address3 = value; }
     /**
      * The city of the address.
      *
      * @return The field city
      */
-    public String getCity() { return this.city; }
+    public @Nullable String getCity() { return this.city; }
     /**
      * The city of the address.
      *
      * @param value The new value for city
      */
-    public void setCity(String value) { this.city = value; }
+    public void setCity(@Nullable String value) { this.city = value; }
     /**
      * The state/region of the address.
      *
      * @return The field stateRegion
      */
-    public String getStateRegion() { return this.stateRegion; }
+    public @Nullable String getStateRegion() { return this.stateRegion; }
     /**
      * The state/region of the address.
      *
      * @param value The new value for stateRegion
      */
-    public void setStateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(@Nullable String value) { this.stateRegion = value; }
     /**
      * The postal/zip code of the address.
      *
      * @return The field postalCode
      */
-    public String getPostalCode() { return this.postalCode; }
+    public @Nullable String getPostalCode() { return this.postalCode; }
     /**
      * The postal/zip code of the address.
      *
      * @param value The new value for postalCode
      */
-    public void setPostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
      * The two character country code of the address. This will be validated by the /api/v1/countries data set
      *
      * @return The field countryCode
      */
-    public String getCountryCode() { return this.countryCode; }
+    public @Nullable String getCountryCode() { return this.countryCode; }
     /**
      * The two character country code of the address. This will be validated by the /api/v1/countries data set
      *
      * @param value The new value for countryCode
      */
-    public void setCountryCode(String value) { this.countryCode = value; }
+    public void setCountryCode(@Nullable String value) { this.countryCode = value; }
     /**
      * Flag indicating if the contact is active.
      *
      * @return The field isActive
      */
-    public Boolean getIsActive() { return this.isActive; }
+    public @NotNull Boolean getIsActive() { return this.isActive; }
     /**
      * Flag indicating if the contact is active.
      *
      * @param value The new value for isActive
      */
-    public void setIsActive(Boolean value) { this.isActive = value; }
+    public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
     /**
      * The webpage url of the contact.
      *
      * @return The field webpageUrl
      */
-    public String getWebpageUrl() { return this.webpageUrl; }
+    public @Nullable String getWebpageUrl() { return this.webpageUrl; }
     /**
      * The webpage url of the contact.
      *
      * @param value The new value for webpageUrl
      */
-    public void setWebpageUrl(String value) { this.webpageUrl = value; }
+    public void setWebpageUrl(@Nullable String value) { this.webpageUrl = value; }
     /**
      * The picture/avatar url of the contact.
      *
      * @return The field pictureUrl
      */
-    public String getPictureUrl() { return this.pictureUrl; }
+    public @Nullable String getPictureUrl() { return this.pictureUrl; }
     /**
      * The picture/avatar url of the contact.
      *
      * @param value The new value for pictureUrl
      */
-    public void setPictureUrl(String value) { this.pictureUrl = value; }
+    public void setPictureUrl(@Nullable String value) { this.pictureUrl = value; }
     /**
      * The date on which this record was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * The date on which this record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * The ID of the user who created this contact.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this contact.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date on which this record was last modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * The date on which this record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
     /**
      * The ID of the user who last modified this contact.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this contact.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -387,7 +389,7 @@ public class ContactModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -396,7 +398,7 @@ public class ContactModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -407,7 +409,7 @@ public class ContactModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -418,7 +420,7 @@ public class ContactModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -429,7 +431,7 @@ public class ContactModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -440,7 +442,7 @@ public class ContactModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -451,7 +453,7 @@ public class ContactModel
      *
      * @return The field customFieldDefinitions
      */
-    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public @Nullable CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -462,7 +464,7 @@ public class ContactModel
      *
      * @param value The new value for customFieldDefinitions
      */
-    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -473,7 +475,7 @@ public class ContactModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -484,5 +486,5 @@ public class ContactModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

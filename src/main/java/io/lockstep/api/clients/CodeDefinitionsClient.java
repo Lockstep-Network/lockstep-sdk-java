@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CodeDefinitionModel;
 
 import io.lockstep.api.models.FetchResult;
@@ -35,7 +37,7 @@ public class CodeDefinitionsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public CodeDefinitionsClient(LockstepApi client) {
+    public CodeDefinitionsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -49,7 +51,7 @@ public class CodeDefinitionsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CodeDefinitionModel> retrieveCodeDefinition(String id, String include)
+    public @NotNull LockstepResponse<CodeDefinitionModel> retrieveCodeDefinition(@NotNull String id, @Nullable String include)
     {
         RestRequest<CodeDefinitionModel> r = new RestRequest<CodeDefinitionModel>(this.client, "GET", "/api/v1/CodeDefinitions/{id}");
         r.AddPath("{id}", id.toString());
@@ -71,7 +73,7 @@ public class CodeDefinitionsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CodeDefinitionModel>> queryCodeDefinitions(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CodeDefinitionModel>> queryCodeDefinitions(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CodeDefinitionModel>> r = new RestRequest<FetchResult<CodeDefinitionModel>>(this.client, "GET", "/api/v1/CodeDefinitions/query");
         r.AddQuery("filter", filter.toString());

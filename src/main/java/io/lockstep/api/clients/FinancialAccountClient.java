@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.FinancialAccountModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class FinancialAccountClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public FinancialAccountClient(LockstepApi client) {
+    public FinancialAccountClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -47,7 +49,7 @@ public class FinancialAccountClient
      * @param body Metadata about the financial account to create.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FinancialAccountModel> createFinancialAccount(FinancialAccountModel[] body)
+    public @NotNull LockstepResponse<FinancialAccountModel> createFinancialAccount(@NotNull FinancialAccountModel[] body)
     {
         RestRequest<FinancialAccountModel> r = new RestRequest<FinancialAccountModel>(this.client, "POST", "/api/v1/FinancialAccount");
         r.AddBody(body);
@@ -60,7 +62,7 @@ public class FinancialAccountClient
      * @param id The unique Lockstep Platform ID number of this Account; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FinancialAccountModel> retrieveFinancialAccount(String id)
+    public @NotNull LockstepResponse<FinancialAccountModel> retrieveFinancialAccount(@NotNull String id)
     {
         RestRequest<FinancialAccountModel> r = new RestRequest<FinancialAccountModel>(this.client, "GET", "/api/v1/FinancialAccount/{id}");
         r.AddPath("{id}", id.toString());
@@ -73,7 +75,7 @@ public class FinancialAccountClient
      * @param body A list of changes to apply to this Account
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FinancialAccountModel> updateFinancialAccount(String id, Object body)
+    public @NotNull LockstepResponse<FinancialAccountModel> updateFinancialAccount(@NotNull String id, @NotNull Object body)
     {
         RestRequest<FinancialAccountModel> r = new RestRequest<FinancialAccountModel>(this.client, "PATCH", "/api/v1/FinancialAccount/{id}");
         r.AddPath("{id}", id.toString());
@@ -87,7 +89,7 @@ public class FinancialAccountClient
      * @param id The unique Lockstep Platform ID number of the Financial Account to disable; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deletesFinancialAccount(String id)
+    public @NotNull LockstepResponse<ActionResultModel> deletesFinancialAccount(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/FinancialAccount/{id}");
         r.AddPath("{id}", id.toString());
@@ -103,7 +105,7 @@ public class FinancialAccountClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<FinancialAccountModel>> queryFinancialAccounts(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<FinancialAccountModel>> queryFinancialAccounts(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<FinancialAccountModel>> r = new RestRequest<FetchResult<FinancialAccountModel>>(this.client, "GET", "/api/v1/FinancialAccount/query");
         r.AddQuery("filter", filter.toString());

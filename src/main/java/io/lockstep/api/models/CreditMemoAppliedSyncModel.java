@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The CreditMemoAppliedSyncModel represents information coming into Lockstep from an external financial system or
@@ -29,14 +31,14 @@ package io.lockstep.api.models;
  */
 public class CreditMemoAppliedSyncModel
 {
-    private String erpKey;
-    private String invoiceErpKey;
-    private String creditMemoInvoiceErpKey;
-    private Integer entryNumber;
-    private String applyToInvoiceDate;
-    private Double creditMemoAppliedAmount;
-    private String created;
-    private String modified;
+    private @NotNull String erpKey;
+    private @NotNull String invoiceErpKey;
+    private @NotNull String creditMemoInvoiceErpKey;
+    private @NotNull Integer entryNumber;
+    private @NotNull String applyToInvoiceDate;
+    private @NotNull Double creditMemoAppliedAmount;
+    private @Nullable String created;
+    private @Nullable String modified;
 
     /**
      * This is the primary key of the Credit Memo Application record. For this field, you should use whatever this
@@ -50,7 +52,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @NotNull String getErpKey() { return this.erpKey; }
     /**
      * This is the primary key of the Credit Memo Application record. For this field, you should use whatever this
      * transaction's unique identifying number is in the originating system. Search for a unique, non-changing
@@ -63,7 +65,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@NotNull String value) { this.erpKey = value; }
     /**
      * This field indicates which Invoice had its balanced reduced by applying a credit memo.  In this field,
      * identify the original primary key or unique ID of the Invoice which had its balanced reduced.
@@ -73,7 +75,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @return The field invoiceErpKey
      */
-    public String getInvoiceErpKey() { return this.invoiceErpKey; }
+    public @NotNull String getInvoiceErpKey() { return this.invoiceErpKey; }
     /**
      * This field indicates which Invoice had its balanced reduced by applying a credit memo.  In this field,
      * identify the original primary key or unique ID of the Invoice which had its balanced reduced.
@@ -83,7 +85,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @param value The new value for invoiceErpKey
      */
-    public void setInvoiceErpKey(String value) { this.invoiceErpKey = value; }
+    public void setInvoiceErpKey(@NotNull String value) { this.invoiceErpKey = value; }
     /**
      * This field indicates which Invoice is the original credit memo that was used to make this payment
      * application event.  In this field, identify the original primary key or unique ID of the Invoice which
@@ -94,7 +96,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @return The field creditMemoInvoiceErpKey
      */
-    public String getCreditMemoInvoiceErpKey() { return this.creditMemoInvoiceErpKey; }
+    public @NotNull String getCreditMemoInvoiceErpKey() { return this.creditMemoInvoiceErpKey; }
     /**
      * This field indicates which Invoice is the original credit memo that was used to make this payment
      * application event.  In this field, identify the original primary key or unique ID of the Invoice which
@@ -105,43 +107,43 @@ public class CreditMemoAppliedSyncModel
      *
      * @param value The new value for creditMemoInvoiceErpKey
      */
-    public void setCreditMemoInvoiceErpKey(String value) { this.creditMemoInvoiceErpKey = value; }
+    public void setCreditMemoInvoiceErpKey(@NotNull String value) { this.creditMemoInvoiceErpKey = value; }
     /**
      * Reference number for the applied credit memo.
      *
      * @return The field entryNumber
      */
-    public Integer getEntryNumber() { return this.entryNumber; }
+    public @NotNull Integer getEntryNumber() { return this.entryNumber; }
     /**
      * Reference number for the applied credit memo.
      *
      * @param value The new value for entryNumber
      */
-    public void setEntryNumber(Integer value) { this.entryNumber = value; }
+    public void setEntryNumber(@NotNull Integer value) { this.entryNumber = value; }
     /**
      * The date on which this credit memo was applied to the Invoice.
      *
      * @return The field applyToInvoiceDate
      */
-    public String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public @NotNull String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * The date on which this credit memo was applied to the Invoice.
      *
      * @param value The new value for applyToInvoiceDate
      */
-    public void setApplyToInvoiceDate(String value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(@NotNull String value) { this.applyToInvoiceDate = value; }
     /**
      * The amount of this credit memo that was applied to this Invoice.
      *
      * @return The field creditMemoAppliedAmount
      */
-    public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
+    public @NotNull Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
      * The amount of this credit memo that was applied to this Invoice.
      *
      * @param value The new value for creditMemoAppliedAmount
      */
-    public void setCreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
+    public void setCreditMemoAppliedAmount(@NotNull Double value) { this.creditMemoAppliedAmount = value; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -149,7 +151,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -157,7 +159,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -165,7 +167,7 @@ public class CreditMemoAppliedSyncModel
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -173,5 +175,5 @@ public class CreditMemoAppliedSyncModel
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
 };

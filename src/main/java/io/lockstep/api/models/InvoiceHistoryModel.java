@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * An Invoice represents a bill sent from one company to another.  The Lockstep Platform tracks changes to
@@ -23,39 +25,39 @@ package io.lockstep.api.models;
  */
 public class InvoiceHistoryModel
 {
-    private String groupKey;
-    private String invoiceHistoryId;
-    private String invoiceId;
-    private String companyId;
-    private String customerId;
-    private String erpKey;
-    private String purchaseOrderCode;
-    private String referenceCode;
-    private String salespersonCode;
-    private String salespersonName;
-    private String invoiceTypeCode;
-    private String invoiceStatusCode;
-    private String termsCode;
-    private String specialTerms;
-    private String currencyCode;
-    private Double totalAmount;
-    private Double salesTaxAmount;
-    private Double discountAmount;
-    private Double outstandingBalanceAmount;
-    private String invoiceDate;
-    private String discountDate;
-    private String postedDate;
-    private String invoiceClosedDate;
-    private String paymentDueDate;
-    private String importedDate;
-    private String primaryOriginAddressId;
-    private String primaryBillToAddressId;
-    private String primaryShipToAddressId;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String appEnrollmentId;
+    private @NotNull String groupKey;
+    private @NotNull String invoiceHistoryId;
+    private @NotNull String invoiceId;
+    private @NotNull String companyId;
+    private @NotNull String customerId;
+    private @Nullable String erpKey;
+    private @Nullable String purchaseOrderCode;
+    private @Nullable String referenceCode;
+    private @Nullable String salespersonCode;
+    private @Nullable String salespersonName;
+    private @Nullable String invoiceTypeCode;
+    private @Nullable String invoiceStatusCode;
+    private @Nullable String termsCode;
+    private @Nullable String specialTerms;
+    private @Nullable String currencyCode;
+    private @Nullable Double totalAmount;
+    private @Nullable Double salesTaxAmount;
+    private @Nullable Double discountAmount;
+    private @Nullable Double outstandingBalanceAmount;
+    private @Nullable String invoiceDate;
+    private @Nullable String discountDate;
+    private @Nullable String postedDate;
+    private @Nullable String invoiceClosedDate;
+    private @Nullable String paymentDueDate;
+    private @Nullable String importedDate;
+    private @Nullable String primaryOriginAddressId;
+    private @Nullable String primaryBillToAddressId;
+    private @Nullable String primaryShipToAddressId;
+    private @Nullable String created;
+    private @Nullable String createdUserId;
+    private @Nullable String modified;
+    private @Nullable String modifiedUserId;
+    private @Nullable String appEnrollmentId;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -65,7 +67,7 @@ public class InvoiceHistoryModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -74,19 +76,19 @@ public class InvoiceHistoryModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID number of this invoice history entry.
      *
      * @return The field invoiceHistoryId
      */
-    public String getInvoiceHistoryId() { return this.invoiceHistoryId; }
+    public @NotNull String getInvoiceHistoryId() { return this.invoiceHistoryId; }
     /**
      * The unique ID number of this invoice history entry.
      *
      * @param value The new value for invoiceHistoryId
      */
-    public void setInvoiceHistoryId(String value) { this.invoiceHistoryId = value; }
+    public void setInvoiceHistoryId(@NotNull String value) { this.invoiceHistoryId = value; }
     /**
      * The unique ID of the Invoice represented by this history entry.  This ID was automatically assigned
      * by Lockstep to the Invoice record when it was added to the Lockstep platform.
@@ -95,7 +97,7 @@ public class InvoiceHistoryModel
      *
      * @return The field invoiceId
      */
-    public String getInvoiceId() { return this.invoiceId; }
+    public @NotNull String getInvoiceId() { return this.invoiceId; }
     /**
      * The unique ID of the Invoice represented by this history entry.  This ID was automatically assigned
      * by Lockstep to the Invoice record when it was added to the Lockstep platform.
@@ -104,31 +106,31 @@ public class InvoiceHistoryModel
      *
      * @param value The new value for invoiceId
      */
-    public void setInvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(@NotNull String value) { this.invoiceId = value; }
     /**
      * The ID number of the company that created this invoice.
      *
      * @return The field companyId
      */
-    public String getCompanyId() { return this.companyId; }
+    public @NotNull String getCompanyId() { return this.companyId; }
     /**
      * The ID number of the company that created this invoice.
      *
      * @param value The new value for companyId
      */
-    public void setCompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(@NotNull String value) { this.companyId = value; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      *
      * @return The field customerId
      */
-    public String getCustomerId() { return this.customerId; }
+    public @NotNull String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      *
      * @param value The new value for customerId
      */
-    public void setCustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(@NotNull String value) { this.customerId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -140,7 +142,7 @@ public class InvoiceHistoryModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -152,323 +154,323 @@ public class InvoiceHistoryModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
      * The purchase order code as it exists in the user's ERP or accounting system.
      *
      * @return The field purchaseOrderCode
      */
-    public String getPurchaseOrderCode() { return this.purchaseOrderCode; }
+    public @Nullable String getPurchaseOrderCode() { return this.purchaseOrderCode; }
     /**
      * The purchase order code as it exists in the user's ERP or accounting system.
      *
      * @param value The new value for purchaseOrderCode
      */
-    public void setPurchaseOrderCode(String value) { this.purchaseOrderCode = value; }
+    public void setPurchaseOrderCode(@Nullable String value) { this.purchaseOrderCode = value; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      *
      * @return The field referenceCode
      */
-    public String getReferenceCode() { return this.referenceCode; }
+    public @Nullable String getReferenceCode() { return this.referenceCode; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      *
      * @param value The new value for referenceCode
      */
-    public void setReferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(@Nullable String value) { this.referenceCode = value; }
     /**
      * A code identifying the salesperson responsible for writing this invoice.
      *
      * @return The field salespersonCode
      */
-    public String getSalespersonCode() { return this.salespersonCode; }
+    public @Nullable String getSalespersonCode() { return this.salespersonCode; }
     /**
      * A code identifying the salesperson responsible for writing this invoice.
      *
      * @param value The new value for salespersonCode
      */
-    public void setSalespersonCode(String value) { this.salespersonCode = value; }
+    public void setSalespersonCode(@Nullable String value) { this.salespersonCode = value; }
     /**
      * A string identifying the salesperson responsible for writing this invoice.
      *
      * @return The field salespersonName
      */
-    public String getSalespersonName() { return this.salespersonName; }
+    public @Nullable String getSalespersonName() { return this.salespersonName; }
     /**
      * A string identifying the salesperson responsible for writing this invoice.
      *
      * @param value The new value for salespersonName
      */
-    public void setSalespersonName(String value) { this.salespersonName = value; }
+    public void setSalespersonName(@Nullable String value) { this.salespersonName = value; }
     /**
      * A code identifying the type of this invoice.
      *
      * @return The field invoiceTypeCode
      */
-    public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
+    public @Nullable String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
      * A code identifying the type of this invoice.
      *
      * @param value The new value for invoiceTypeCode
      */
-    public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
+    public void setInvoiceTypeCode(@Nullable String value) { this.invoiceTypeCode = value; }
     /**
      * A code identifying the status of this invoice.
      *
      * @return The field invoiceStatusCode
      */
-    public String getInvoiceStatusCode() { return this.invoiceStatusCode; }
+    public @Nullable String getInvoiceStatusCode() { return this.invoiceStatusCode; }
     /**
      * A code identifying the status of this invoice.
      *
      * @param value The new value for invoiceStatusCode
      */
-    public void setInvoiceStatusCode(String value) { this.invoiceStatusCode = value; }
+    public void setInvoiceStatusCode(@Nullable String value) { this.invoiceStatusCode = value; }
     /**
      * A code identifying the terms given to the purchaser.
      *
      * @return The field termsCode
      */
-    public String getTermsCode() { return this.termsCode; }
+    public @Nullable String getTermsCode() { return this.termsCode; }
     /**
      * A code identifying the terms given to the purchaser.
      *
      * @param value The new value for termsCode
      */
-    public void setTermsCode(String value) { this.termsCode = value; }
+    public void setTermsCode(@Nullable String value) { this.termsCode = value; }
     /**
      * If the customer negotiated any special terms different from the standard terms above, describe them here.
      *
      * @return The field specialTerms
      */
-    public String getSpecialTerms() { return this.specialTerms; }
+    public @Nullable String getSpecialTerms() { return this.specialTerms; }
     /**
      * If the customer negotiated any special terms different from the standard terms above, describe them here.
      *
      * @param value The new value for specialTerms
      */
-    public void setSpecialTerms(String value) { this.specialTerms = value; }
+    public void setSpecialTerms(@Nullable String value) { this.specialTerms = value; }
     /**
      * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/currencies data set
      *
      * @return The field currencyCode
      */
-    public String getCurrencyCode() { return this.currencyCode; }
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
     /**
      * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/currencies data set
      *
      * @param value The new value for currencyCode
      */
-    public void setCurrencyCode(String value) { this.currencyCode = value; }
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
      *
      * @return The field totalAmount
      */
-    public Double getTotalAmount() { return this.totalAmount; }
+    public @Nullable Double getTotalAmount() { return this.totalAmount; }
     /**
      * The total value of this invoice, inclusive of all taxes and line items.
      *
      * @param value The new value for totalAmount
      */
-    public void setTotalAmount(Double value) { this.totalAmount = value; }
+    public void setTotalAmount(@Nullable Double value) { this.totalAmount = value; }
     /**
      * The total sales (or transactional) tax calculated for this invoice.
      *
      * @return The field salesTaxAmount
      */
-    public Double getSalesTaxAmount() { return this.salesTaxAmount; }
+    public @Nullable Double getSalesTaxAmount() { return this.salesTaxAmount; }
     /**
      * The total sales (or transactional) tax calculated for this invoice.
      *
      * @param value The new value for salesTaxAmount
      */
-    public void setSalesTaxAmount(Double value) { this.salesTaxAmount = value; }
+    public void setSalesTaxAmount(@Nullable Double value) { this.salesTaxAmount = value; }
     /**
      * The total discounts given by the seller to the buyer on this invoice.
      *
      * @return The field discountAmount
      */
-    public Double getDiscountAmount() { return this.discountAmount; }
+    public @Nullable Double getDiscountAmount() { return this.discountAmount; }
     /**
      * The total discounts given by the seller to the buyer on this invoice.
      *
      * @param value The new value for discountAmount
      */
-    public void setDiscountAmount(Double value) { this.discountAmount = value; }
+    public void setDiscountAmount(@Nullable Double value) { this.discountAmount = value; }
     /**
      * The remaining balance value of this invoice.
      *
      * @return The field outstandingBalanceAmount
      */
-    public Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
+    public @Nullable Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
     /**
      * The remaining balance value of this invoice.
      *
      * @param value The new value for outstandingBalanceAmount
      */
-    public void setOutstandingBalanceAmount(Double value) { this.outstandingBalanceAmount = value; }
+    public void setOutstandingBalanceAmount(@Nullable Double value) { this.outstandingBalanceAmount = value; }
     /**
      * The reporting date for this invoice.
      *
      * @return The field invoiceDate
      */
-    public String getInvoiceDate() { return this.invoiceDate; }
+    public @Nullable String getInvoiceDate() { return this.invoiceDate; }
     /**
      * The reporting date for this invoice.
      *
      * @param value The new value for invoiceDate
      */
-    public void setInvoiceDate(String value) { this.invoiceDate = value; }
+    public void setInvoiceDate(@Nullable String value) { this.invoiceDate = value; }
     /**
      * The date when discounts were adjusted for this invoice.
      *
      * @return The field discountDate
      */
-    public String getDiscountDate() { return this.discountDate; }
+    public @Nullable String getDiscountDate() { return this.discountDate; }
     /**
      * The date when discounts were adjusted for this invoice.
      *
      * @param value The new value for discountDate
      */
-    public void setDiscountDate(String value) { this.discountDate = value; }
+    public void setDiscountDate(@Nullable String value) { this.discountDate = value; }
     /**
      * The date when this invoice posted to the company's general ledger.
      *
      * @return The field postedDate
      */
-    public String getPostedDate() { return this.postedDate; }
+    public @Nullable String getPostedDate() { return this.postedDate; }
     /**
      * The date when this invoice posted to the company's general ledger.
      *
      * @param value The new value for postedDate
      */
-    public void setPostedDate(String value) { this.postedDate = value; }
+    public void setPostedDate(@Nullable String value) { this.postedDate = value; }
     /**
      * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
      * services.
      *
      * @return The field invoiceClosedDate
      */
-    public String getInvoiceClosedDate() { return this.invoiceClosedDate; }
+    public @Nullable String getInvoiceClosedDate() { return this.invoiceClosedDate; }
     /**
      * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
      * services.
      *
      * @param value The new value for invoiceClosedDate
      */
-    public void setInvoiceClosedDate(String value) { this.invoiceClosedDate = value; }
+    public void setInvoiceClosedDate(@Nullable String value) { this.invoiceClosedDate = value; }
     /**
      * The date when the remaining outstanding balance is due.
      *
      * @return The field paymentDueDate
      */
-    public String getPaymentDueDate() { return this.paymentDueDate; }
+    public @Nullable String getPaymentDueDate() { return this.paymentDueDate; }
     /**
      * The date when the remaining outstanding balance is due.
      *
      * @param value The new value for paymentDueDate
      */
-    public void setPaymentDueDate(String value) { this.paymentDueDate = value; }
+    public void setPaymentDueDate(@Nullable String value) { this.paymentDueDate = value; }
     /**
      * The date and time when this record was imported from the user's ERP or accounting system.
      *
      * @return The field importedDate
      */
-    public String getImportedDate() { return this.importedDate; }
+    public @Nullable String getImportedDate() { return this.importedDate; }
     /**
      * The date and time when this record was imported from the user's ERP or accounting system.
      *
      * @param value The new value for importedDate
      */
-    public void setImportedDate(String value) { this.importedDate = value; }
+    public void setImportedDate(@Nullable String value) { this.importedDate = value; }
     /**
      * The ID number of the invoice's origination address
      *
      * @return The field primaryOriginAddressId
      */
-    public String getPrimaryOriginAddressId() { return this.primaryOriginAddressId; }
+    public @Nullable String getPrimaryOriginAddressId() { return this.primaryOriginAddressId; }
     /**
      * The ID number of the invoice's origination address
      *
      * @param value The new value for primaryOriginAddressId
      */
-    public void setPrimaryOriginAddressId(String value) { this.primaryOriginAddressId = value; }
+    public void setPrimaryOriginAddressId(@Nullable String value) { this.primaryOriginAddressId = value; }
     /**
      * The ID number of the invoice's bill-to address
      *
      * @return The field primaryBillToAddressId
      */
-    public String getPrimaryBillToAddressId() { return this.primaryBillToAddressId; }
+    public @Nullable String getPrimaryBillToAddressId() { return this.primaryBillToAddressId; }
     /**
      * The ID number of the invoice's bill-to address
      *
      * @param value The new value for primaryBillToAddressId
      */
-    public void setPrimaryBillToAddressId(String value) { this.primaryBillToAddressId = value; }
+    public void setPrimaryBillToAddressId(@Nullable String value) { this.primaryBillToAddressId = value; }
     /**
      * The ID number of the invoice's ship-to address
      *
      * @return The field primaryShipToAddressId
      */
-    public String getPrimaryShipToAddressId() { return this.primaryShipToAddressId; }
+    public @Nullable String getPrimaryShipToAddressId() { return this.primaryShipToAddressId; }
     /**
      * The ID number of the invoice's ship-to address
      *
      * @param value The new value for primaryShipToAddressId
      */
-    public void setPrimaryShipToAddressId(String value) { this.primaryShipToAddressId = value; }
+    public void setPrimaryShipToAddressId(@Nullable String value) { this.primaryShipToAddressId = value; }
     /**
      * The date on which this invoice record was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * The date on which this invoice record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * The ID number of the user who created this invoice.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @Nullable String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this invoice.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@Nullable String value) { this.createdUserId = value; }
     /**
      * The date on which this invoice record was last modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * The date on which this invoice record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this invoice.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @Nullable String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this invoice.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@Nullable String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -477,7 +479,7 @@ public class InvoiceHistoryModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -486,5 +488,5 @@ public class InvoiceHistoryModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
 };

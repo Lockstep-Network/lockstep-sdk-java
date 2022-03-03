@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CustomFieldValueModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class CustomFieldValuesClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public CustomFieldValuesClient(LockstepApi client) {
+    public CustomFieldValuesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -53,7 +55,7 @@ public class CustomFieldValuesClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: CustomFieldDefinition
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldValueModel> retrieveField(String definitionId, String recordKey, String include)
+    public @NotNull LockstepResponse<CustomFieldValueModel> retrieveField(@NotNull String definitionId, @NotNull String recordKey, @Nullable String include)
     {
         RestRequest<CustomFieldValueModel> r = new RestRequest<CustomFieldValueModel>(this.client, "GET", "/api/v1/CustomFieldValues/{definitionId}/{recordKey}");
         r.AddPath("{definitionId}", definitionId.toString());
@@ -76,7 +78,7 @@ public class CustomFieldValuesClient
      * @param body A list of changes to apply to this Custom Field
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldValueModel> updateField(String definitionId, String recordKey, Object body)
+    public @NotNull LockstepResponse<CustomFieldValueModel> updateField(@NotNull String definitionId, @NotNull String recordKey, @NotNull Object body)
     {
         RestRequest<CustomFieldValueModel> r = new RestRequest<CustomFieldValueModel>(this.client, "PATCH", "/api/v1/CustomFieldValues/{definitionId}/{recordKey}");
         r.AddPath("{definitionId}", definitionId.toString());
@@ -96,7 +98,7 @@ public class CustomFieldValuesClient
      * @param recordKey The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deleteField(String definitionId, String recordKey)
+    public @NotNull LockstepResponse<ActionResultModel> deleteField(@NotNull String definitionId, @NotNull String recordKey)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/CustomFieldValues/{definitionId}/{recordKey}");
         r.AddPath("{definitionId}", definitionId.toString());
@@ -114,7 +116,7 @@ public class CustomFieldValuesClient
      * @param body The Custom Fields to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomFieldValueModel[]> createFields(CustomFieldValueModel[] body)
+    public @NotNull LockstepResponse<CustomFieldValueModel[]> createFields(@NotNull CustomFieldValueModel[] body)
     {
         RestRequest<CustomFieldValueModel[]> r = new RestRequest<CustomFieldValueModel[]>(this.client, "POST", "/api/v1/CustomFieldValues");
         r.AddBody(body);
@@ -137,7 +139,7 @@ public class CustomFieldValuesClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CustomFieldValueModel>> queryFields(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CustomFieldValueModel>> queryFields(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CustomFieldValueModel>> r = new RestRequest<FetchResult<CustomFieldValueModel>>(this.client, "GET", "/api/v1/CustomFieldValues/query");
         r.AddQuery("filter", filter.toString());

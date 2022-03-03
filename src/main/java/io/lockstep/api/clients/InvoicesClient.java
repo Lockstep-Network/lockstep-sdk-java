@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.InvoiceModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -38,7 +40,7 @@ public class InvoicesClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public InvoicesClient(LockstepApi client) {
+    public InvoicesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -52,7 +54,7 @@ public class InvoicesClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Addresses, Lines, Payments, Notes, Attachments, Company, Customer, CustomFields, CreditMemos
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<InvoiceModel> retrieveInvoice(String id, String include)
+    public @NotNull LockstepResponse<InvoiceModel> retrieveInvoice(@NotNull String id, @Nullable String include)
     {
         RestRequest<InvoiceModel> r = new RestRequest<InvoiceModel>(this.client, "GET", "/api/v1/Invoices/{id}");
         r.AddPath("{id}", id.toString());
@@ -71,7 +73,7 @@ public class InvoicesClient
      * @param body A list of changes to apply to this Invoice
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<InvoiceModel> updateInvoice(String id, Object body)
+    public @NotNull LockstepResponse<InvoiceModel> updateInvoice(@NotNull String id, @NotNull Object body)
     {
         RestRequest<InvoiceModel> r = new RestRequest<InvoiceModel>(this.client, "PATCH", "/api/v1/Invoices/{id}");
         r.AddPath("{id}", id.toString());
@@ -85,7 +87,7 @@ public class InvoicesClient
      * @param id The unique Lockstep Platform ID number of the invoice to delete; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deleteInvoice(String id)
+    public @NotNull LockstepResponse<ActionResultModel> deleteInvoice(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Invoices/{id}");
         r.AddPath("{id}", id.toString());
@@ -100,7 +102,7 @@ public class InvoicesClient
      * @param body The Invoices to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<InvoiceModel[]> createInvoices(InvoiceModel[] body)
+    public @NotNull LockstepResponse<InvoiceModel[]> createInvoices(@NotNull InvoiceModel[] body)
     {
         RestRequest<InvoiceModel[]> r = new RestRequest<InvoiceModel[]>(this.client, "POST", "/api/v1/Invoices");
         r.AddBody(body);
@@ -121,7 +123,7 @@ public class InvoicesClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<InvoiceModel>> queryInvoices(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<InvoiceModel>> queryInvoices(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<InvoiceModel>> r = new RestRequest<FetchResult<InvoiceModel>>(this.client, "GET", "/api/v1/Invoices/query");
         r.AddQuery("filter", filter.toString());
@@ -146,7 +148,7 @@ public class InvoicesClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<InvoiceSummaryModel>> queryInvoiceSummaryView(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<InvoiceSummaryModel>> queryInvoiceSummaryView(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<InvoiceSummaryModel>> r = new RestRequest<FetchResult<InvoiceSummaryModel>>(this.client, "GET", "/api/v1/Invoices/views/summary");
         r.AddQuery("filter", filter.toString());
@@ -171,7 +173,7 @@ public class InvoicesClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<AtRiskInvoiceSummaryModel>> queryAtRiskInvoiceSummaryView(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<AtRiskInvoiceSummaryModel>> queryAtRiskInvoiceSummaryView(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<AtRiskInvoiceSummaryModel>> r = new RestRequest<FetchResult<AtRiskInvoiceSummaryModel>>(this.client, "GET", "/api/v1/Invoices/views/at-risk-summary");
         r.AddQuery("filter", filter.toString());

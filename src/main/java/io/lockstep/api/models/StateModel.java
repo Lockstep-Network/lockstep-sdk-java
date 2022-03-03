@@ -15,50 +15,52 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * State model for ISO-3166-2
  */
 public class StateModel
 {
-    private String name;
-    private String alpha2;
-    private String aliases;
+    private @Nullable String name;
+    private @Nullable String alpha2;
+    private @Nullable String aliases;
 
     /**
      * Name of the state
      *
      * @return The field name
      */
-    public String getName() { return this.name; }
+    public @Nullable String getName() { return this.name; }
     /**
      * Name of the state
      *
      * @param value The new value for name
      */
-    public void setName(String value) { this.name = value; }
+    public void setName(@Nullable String value) { this.name = value; }
     /**
      * 2 letter alphabetic code for the given state
      *
      * @return The field alpha2
      */
-    public String getAlpha2() { return this.alpha2; }
+    public @Nullable String getAlpha2() { return this.alpha2; }
     /**
      * 2 letter alphabetic code for the given state
      *
      * @param value The new value for alpha2
      */
-    public void setAlpha2(String value) { this.alpha2 = value; }
+    public void setAlpha2(@Nullable String value) { this.alpha2 = value; }
     /**
      * A different name for a state
      *
      * @return The field aliases
      */
-    public String getAliases() { return this.aliases; }
+    public @Nullable String getAliases() { return this.aliases; }
     /**
      * A different name for a state
      *
      * @param value The new value for aliases
      */
-    public void setAliases(String value) { this.aliases = value; }
+    public void setAliases(@Nullable String value) { this.aliases = value; }
 };

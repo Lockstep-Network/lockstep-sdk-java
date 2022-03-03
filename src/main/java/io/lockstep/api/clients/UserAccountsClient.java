@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.UserAccountModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -41,7 +43,7 @@ public class UserAccountsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public UserAccountsClient(LockstepApi client) {
+    public UserAccountsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -55,7 +57,7 @@ public class UserAccountsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields, AccountingRole
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<UserAccountModel> retrieveUser(String id, String include)
+    public @NotNull LockstepResponse<UserAccountModel> retrieveUser(@NotNull String id, @Nullable String include)
     {
         RestRequest<UserAccountModel> r = new RestRequest<UserAccountModel>(this.client, "GET", "/api/v1/UserAccounts/{id}");
         r.AddPath("{id}", id.toString());
@@ -74,7 +76,7 @@ public class UserAccountsClient
      * @param body A list of changes to apply to this User
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<UserAccountModel> updateUser(String id, Object body)
+    public @NotNull LockstepResponse<UserAccountModel> updateUser(@NotNull String id, @NotNull Object body)
     {
         RestRequest<UserAccountModel> r = new RestRequest<UserAccountModel>(this.client, "PATCH", "/api/v1/UserAccounts/{id}");
         r.AddPath("{id}", id.toString());
@@ -90,7 +92,7 @@ public class UserAccountsClient
      * @param id The unique Lockstep Platform ID number of this User
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> disableUser(String id)
+    public @NotNull LockstepResponse<ActionResultModel> disableUser(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/UserAccounts/{id}");
         r.AddPath("{id}", id.toString());
@@ -105,7 +107,7 @@ public class UserAccountsClient
      * @param id The unique Lockstep Platform ID number of this User
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> reenableUser(String id)
+    public @NotNull LockstepResponse<ActionResultModel> reenableUser(@Nullable String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "POST", "/api/v1/UserAccounts/reenable");
         r.AddQuery("id", id.toString());
@@ -120,7 +122,7 @@ public class UserAccountsClient
      * @param body The user to invite
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<InviteModel[]> inviteUser(InviteSubmitModel[] body)
+    public @NotNull LockstepResponse<InviteModel[]> inviteUser(@NotNull InviteSubmitModel[] body)
     {
         RestRequest<InviteModel[]> r = new RestRequest<InviteModel[]>(this.client, "POST", "/api/v1/UserAccounts/invite");
         r.AddBody(body);
@@ -135,7 +137,7 @@ public class UserAccountsClient
      * @param code The code of the invite
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<InviteDataModel> retrieveInviteData(String code)
+    public @NotNull LockstepResponse<InviteDataModel> retrieveInviteData(@Nullable String code)
     {
         RestRequest<InviteDataModel> r = new RestRequest<InviteDataModel>(this.client, "GET", "/api/v1/UserAccounts/invite");
         r.AddQuery("code", code.toString());
@@ -150,7 +152,7 @@ public class UserAccountsClient
      * @param body Documentation pending
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<TransferOwnerModel> transferOwner(TransferOwnerSubmitModel body)
+    public @NotNull LockstepResponse<TransferOwnerModel> transferOwner(@NotNull TransferOwnerSubmitModel body)
     {
         RestRequest<TransferOwnerModel> r = new RestRequest<TransferOwnerModel>(this.client, "POST", "/api/v1/UserAccounts/transfer-owner");
         r.AddBody(body);
@@ -167,7 +169,7 @@ public class UserAccountsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<UserAccountModel>> queryUsers(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<UserAccountModel>> queryUsers(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<UserAccountModel>> r = new RestRequest<FetchResult<UserAccountModel>>(this.client, "GET", "/api/v1/UserAccounts/query");
         r.AddQuery("filter", filter.toString());

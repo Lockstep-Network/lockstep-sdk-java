@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.AppEnrollmentModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -37,7 +39,7 @@ public class AppEnrollmentsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public AppEnrollmentsClient(LockstepApi client) {
+    public AppEnrollmentsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -53,7 +55,7 @@ public class AppEnrollmentsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields, LastSync, LastSuccessfulSync
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AppEnrollmentModel> retrieveAppEnrollment(String id, String include)
+    public @NotNull LockstepResponse<AppEnrollmentModel> retrieveAppEnrollment(@NotNull String id, @Nullable String include)
     {
         RestRequest<AppEnrollmentModel> r = new RestRequest<AppEnrollmentModel>(this.client, "GET", "/api/v1/AppEnrollments/{id}");
         r.AddPath("{id}", id.toString());
@@ -74,7 +76,7 @@ public class AppEnrollmentsClient
      * @param body A list of changes to apply to this App Enrollment
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AppEnrollmentModel> updateAppEnrollment(String id, Object body)
+    public @NotNull LockstepResponse<AppEnrollmentModel> updateAppEnrollment(@NotNull String id, @NotNull Object body)
     {
         RestRequest<AppEnrollmentModel> r = new RestRequest<AppEnrollmentModel>(this.client, "PATCH", "/api/v1/AppEnrollments/{id}");
         r.AddPath("{id}", id.toString());
@@ -91,7 +93,7 @@ public class AppEnrollmentsClient
      * @param removeEnrollmentData Option to remove all associated app enrollment data when deleting app enrollment (default false)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deleteAppEnrollment(String id, Boolean removeEnrollmentData)
+    public @NotNull LockstepResponse<ActionResultModel> deleteAppEnrollment(@NotNull String id, @Nullable Boolean removeEnrollmentData)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/AppEnrollments/{id}");
         r.AddPath("{id}", id.toString());
@@ -109,7 +111,7 @@ public class AppEnrollmentsClient
      * @param body The App Enrollments to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AppEnrollmentModel[]> createAppEnrollments(AppEnrollmentModel[] body)
+    public @NotNull LockstepResponse<AppEnrollmentModel[]> createAppEnrollments(@NotNull AppEnrollmentModel[] body)
     {
         RestRequest<AppEnrollmentModel[]> r = new RestRequest<AppEnrollmentModel[]>(this.client, "POST", "/api/v1/AppEnrollments");
         r.AddBody(body);
@@ -132,7 +134,7 @@ public class AppEnrollmentsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<AppEnrollmentModel>> queryAppEnrollments(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<AppEnrollmentModel>> queryAppEnrollments(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<AppEnrollmentModel>> r = new RestRequest<FetchResult<AppEnrollmentModel>>(this.client, "GET", "/api/v1/AppEnrollments/query");
         r.AddQuery("filter", filter.toString());
@@ -155,7 +157,7 @@ public class AppEnrollmentsClient
      * @param id The unique ID number of the App Enrollment for which we retrieve custom fields
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<AppEnrollmentCustomFieldModel>> queryEnrollmentFields(String id)
+    public @NotNull LockstepResponse<FetchResult<AppEnrollmentCustomFieldModel>> queryEnrollmentFields(@NotNull String id)
     {
         RestRequest<FetchResult<AppEnrollmentCustomFieldModel>> r = new RestRequest<FetchResult<AppEnrollmentCustomFieldModel>>(this.client, "GET", "/api/v1/AppEnrollments/settings/{id}");
         r.AddPath("{id}", id.toString());

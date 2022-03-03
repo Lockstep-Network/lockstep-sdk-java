@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CountryModel;
@@ -38,7 +40,7 @@ public class DefinitionsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public DefinitionsClient(LockstepApi client) {
+    public DefinitionsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -57,7 +59,7 @@ public class DefinitionsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CountryModel>> queryCountries(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CountryModel>> queryCountries(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CountryModel>> r = new RestRequest<FetchResult<CountryModel>>(this.client, "GET", "/api/v1/Definitions/countries");
         r.AddQuery("filter", filter.toString());
@@ -82,7 +84,7 @@ public class DefinitionsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CurrencyModel>> queryCurrencies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CurrencyModel>> queryCurrencies(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CurrencyModel>> r = new RestRequest<FetchResult<CurrencyModel>>(this.client, "GET", "/api/v1/Definitions/currencies");
         r.AddQuery("filter", filter.toString());
@@ -107,7 +109,7 @@ public class DefinitionsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<StateModel>> queryStates(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<StateModel>> queryStates(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<StateModel>> r = new RestRequest<FetchResult<StateModel>>(this.client, "GET", "/api/v1/Definitions/states");
         r.AddQuery("filter", filter.toString());
@@ -132,7 +134,7 @@ public class DefinitionsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<ErpModel>> queryFinancialSystems(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<ErpModel>> queryFinancialSystems(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<ErpModel>> r = new RestRequest<FetchResult<ErpModel>>(this.client, "GET", "/api/v1/Definitions/financialsystems");
         r.AddQuery("filter", filter.toString());

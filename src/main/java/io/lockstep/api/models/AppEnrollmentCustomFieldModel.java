@@ -15,72 +15,73 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * App enrollment and custom field merged into one
  */
 public class AppEnrollmentCustomFieldModel
 {
-    private String appEnrollmentId;
-    private String appId;
-    private String name;
-    private String appType;
-    private String groupKey;
-    private String customFieldDefinitionId;
-    private String customFieldLabel;
-    private String dataType;
-    private Integer sortOrder;
-    private String stringValue;
-    private Double numericValue;
+    private @NotNull String appEnrollmentId;
+    private @NotNull String appId;
+    private @Nullable String name;
+    private @Nullable String appType;
+    private @NotNull String groupKey;
+    private @NotNull String customFieldDefinitionId;
+    private @Nullable String customFieldLabel;
+    private @Nullable String dataType;
+    private @NotNull Integer sortOrder;
+    private @Nullable String value;
 
     /**
      * Unique id for the app enrollment
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @NotNull String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * Unique id for the app enrollment
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@NotNull String value) { this.appEnrollmentId = value; }
     /**
      * Id of enrolled app
      *
      * @return The field appId
      */
-    public String getAppId() { return this.appId; }
+    public @NotNull String getAppId() { return this.appId; }
     /**
      * Id of enrolled app
      *
      * @param value The new value for appId
      */
-    public void setAppId(String value) { this.appId = value; }
+    public void setAppId(@NotNull String value) { this.appId = value; }
     /**
      * The name of the application
      *
      * @return The field name
      */
-    public String getName() { return this.name; }
+    public @Nullable String getName() { return this.name; }
     /**
      * The name of the application
      *
      * @param value The new value for name
      */
-    public void setName(String value) { this.name = value; }
+    public void setName(@Nullable String value) { this.name = value; }
     /**
      * Tag for what type of app the application is
      *
      * @return The field appType
      */
-    public String getAppType() { return this.appType; }
+    public @Nullable String getAppType() { return this.appType; }
     /**
      * Tag for what type of app the application is
      *
      * @param value The new value for appType
      */
-    public void setAppType(String value) { this.appType = value; }
+    public void setAppType(@Nullable String value) { this.appType = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -89,7 +90,7 @@ public class AppEnrollmentCustomFieldModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -98,77 +99,65 @@ public class AppEnrollmentCustomFieldModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * Unique Id for the custom field definition
      *
      * @return The field customFieldDefinitionId
      */
-    public String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
+    public @NotNull String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
     /**
      * Unique Id for the custom field definition
      *
      * @param value The new value for customFieldDefinitionId
      */
-    public void setCustomFieldDefinitionId(String value) { this.customFieldDefinitionId = value; }
+    public void setCustomFieldDefinitionId(@NotNull String value) { this.customFieldDefinitionId = value; }
     /**
      * Text to display in-application for custom field
      *
      * @return The field customFieldLabel
      */
-    public String getCustomFieldLabel() { return this.customFieldLabel; }
+    public @Nullable String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
      * Text to display in-application for custom field
      *
      * @param value The new value for customFieldLabel
      */
-    public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
+    public void setCustomFieldLabel(@Nullable String value) { this.customFieldLabel = value; }
     /**
      * Data type of the custom field definition
      *
      * @return The field dataType
      */
-    public String getDataType() { return this.dataType; }
+    public @Nullable String getDataType() { return this.dataType; }
     /**
      * Data type of the custom field definition
      *
      * @param value The new value for dataType
      */
-    public void setDataType(String value) { this.dataType = value; }
+    public void setDataType(@Nullable String value) { this.dataType = value; }
     /**
      * Used for display logic when multiple app enrollment custom fields exist
      *
      * @return The field sortOrder
      */
-    public Integer getSortOrder() { return this.sortOrder; }
+    public @NotNull Integer getSortOrder() { return this.sortOrder; }
     /**
      * Used for display logic when multiple app enrollment custom fields exist
      *
      * @param value The new value for sortOrder
      */
-    public void setSortOrder(Integer value) { this.sortOrder = value; }
+    public void setSortOrder(@NotNull Integer value) { this.sortOrder = value; }
     /**
-     * String of data for field
+     * Value for the field
      *
-     * @return The field stringValue
+     * @return The field value
      */
-    public String getStringValue() { return this.stringValue; }
+    public @Nullable String getValue() { return this.value; }
     /**
-     * String of data for field
+     * Value for the field
      *
-     * @param value The new value for stringValue
+     * @param value The new value for value
      */
-    public void setStringValue(String value) { this.stringValue = value; }
-    /**
-     * Number data for field
-     *
-     * @return The field numericValue
-     */
-    public Double getNumericValue() { return this.numericValue; }
-    /**
-     * Number data for field
-     *
-     * @param value The new value for numericValue
-     */
-    public void setNumericValue(Double value) { this.numericValue = value; }
+    public void setValue(@Nullable String value) { this.value = value; }
 };

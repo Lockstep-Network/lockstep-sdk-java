@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A Payment represents money sent from one company to another.  A single payment may contain payments for
@@ -27,32 +29,32 @@ package io.lockstep.api.models;
  */
 public class PaymentModel
 {
-    private String groupKey;
-    private String paymentId;
-    private String companyId;
-    private String erpKey;
-    private String paymentType;
-    private String tenderType;
-    private Boolean isOpen;
-    private String memoText;
-    private String paymentDate;
-    private String postDate;
-    private Double paymentAmount;
-    private Double unappliedAmount;
-    private String currencyCode;
-    private String referenceCode;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String appEnrollmentId;
-    private Boolean isVoided;
-    private Boolean inDispute;
-    private PaymentAppliedModel[] applications;
-    private NoteModel[] notes;
-    private AttachmentModel[] attachments;
-    private CustomFieldDefinitionModel[] customFieldDefinitions;
-    private CustomFieldValueModel[] customFieldValues;
+    private @NotNull String groupKey;
+    private @NotNull String paymentId;
+    private @NotNull String companyId;
+    private @Nullable String erpKey;
+    private @NotNull String paymentType;
+    private @NotNull String tenderType;
+    private @NotNull Boolean isOpen;
+    private @Nullable String memoText;
+    private @NotNull String paymentDate;
+    private @NotNull String postDate;
+    private @NotNull Double paymentAmount;
+    private @NotNull Double unappliedAmount;
+    private @Nullable String currencyCode;
+    private @Nullable String referenceCode;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String appEnrollmentId;
+    private @NotNull Boolean isVoided;
+    private @NotNull Boolean inDispute;
+    private @Nullable PaymentAppliedModel[] applications;
+    private @Nullable NoteModel[] notes;
+    private @Nullable AttachmentModel[] attachments;
+    private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -62,7 +64,7 @@ public class PaymentModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -71,7 +73,7 @@ public class PaymentModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -80,7 +82,7 @@ public class PaymentModel
      *
      * @return The field paymentId
      */
-    public String getPaymentId() { return this.paymentId; }
+    public @NotNull String getPaymentId() { return this.paymentId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -89,19 +91,19 @@ public class PaymentModel
      *
      * @param value The new value for paymentId
      */
-    public void setPaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(@NotNull String value) { this.paymentId = value; }
     /**
      * The ID of the company to which this payment belongs.
      *
      * @return The field companyId
      */
-    public String getCompanyId() { return this.companyId; }
+    public @NotNull String getCompanyId() { return this.companyId; }
     /**
      * The ID of the company to which this payment belongs.
      *
      * @param value The new value for companyId
      */
-    public void setCompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(@NotNull String value) { this.companyId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -113,7 +115,7 @@ public class PaymentModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -125,7 +127,7 @@ public class PaymentModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
      * The type of payment, cash or check.
      *
@@ -135,7 +137,7 @@ public class PaymentModel
      *
      * @return The field paymentType
      */
-    public String getPaymentType() { return this.paymentType; }
+    public @NotNull String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, cash or check.
      *
@@ -145,7 +147,7 @@ public class PaymentModel
      *
      * @param value The new value for paymentType
      */
-    public void setPaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(@NotNull String value) { this.paymentType = value; }
     /**
      * Cash, check, credit card, wire transfer.
      *
@@ -157,7 +159,7 @@ public class PaymentModel
      *
      * @return The field tenderType
      */
-    public String getTenderType() { return this.tenderType; }
+    public @NotNull String getTenderType() { return this.tenderType; }
     /**
      * Cash, check, credit card, wire transfer.
      *
@@ -169,33 +171,33 @@ public class PaymentModel
      *
      * @param value The new value for tenderType
      */
-    public void setTenderType(String value) { this.tenderType = value; }
+    public void setTenderType(@NotNull String value) { this.tenderType = value; }
     /**
      * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
      * value is true, the field `UnappliedAmount` will be nonzero.
      *
      * @return The field isOpen
      */
-    public Boolean getIsOpen() { return this.isOpen; }
+    public @NotNull Boolean getIsOpen() { return this.isOpen; }
     /**
      * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
      * value is true, the field `UnappliedAmount` will be nonzero.
      *
      * @param value The new value for isOpen
      */
-    public void setIsOpen(Boolean value) { this.isOpen = value; }
+    public void setIsOpen(@NotNull Boolean value) { this.isOpen = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @return The field memoText
      */
-    public String getMemoText() { return this.memoText; }
+    public @Nullable String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @param value The new value for memoText
      */
-    public void setMemoText(String value) { this.memoText = value; }
+    public void setMemoText(@Nullable String value) { this.memoText = value; }
     /**
      * The date when this payment was received.  This typically is the date when an accounting employee recorded
      * that they received notification that the payment had occurred, whether they were notified by email, postal
@@ -203,7 +205,7 @@ public class PaymentModel
      *
      * @return The field paymentDate
      */
-    public String getPaymentDate() { return this.paymentDate; }
+    public @NotNull String getPaymentDate() { return this.paymentDate; }
     /**
      * The date when this payment was received.  This typically is the date when an accounting employee recorded
      * that they received notification that the payment had occurred, whether they were notified by email, postal
@@ -211,7 +213,7 @@ public class PaymentModel
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(String value) { this.paymentDate = value; }
+    public void setPaymentDate(@NotNull String value) { this.paymentDate = value; }
     /**
      * The date when a payment was posted to a ledger.  This date is often determined by a company's accounting
      * practices and may be different than the date when the payment was received.  This date may be affected by
@@ -219,7 +221,7 @@ public class PaymentModel
      *
      * @return The field postDate
      */
-    public String getPostDate() { return this.postDate; }
+    public @NotNull String getPostDate() { return this.postDate; }
     /**
      * The date when a payment was posted to a ledger.  This date is often determined by a company's accounting
      * practices and may be different than the date when the payment was received.  This date may be affected by
@@ -227,31 +229,31 @@ public class PaymentModel
      *
      * @param value The new value for postDate
      */
-    public void setPostDate(String value) { this.postDate = value; }
+    public void setPostDate(@NotNull String value) { this.postDate = value; }
     /**
      * Total amount of this payment.
      *
      * @return The field paymentAmount
      */
-    public Double getPaymentAmount() { return this.paymentAmount; }
+    public @NotNull Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this payment.
      *
      * @param value The new value for paymentAmount
      */
-    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(@NotNull Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @return The field unappliedAmount
      */
-    public Double getUnappliedAmount() { return this.unappliedAmount; }
+    public @NotNull Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @param value The new value for unappliedAmount
      */
-    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
     /**
      * The ISO 4217 currency code for this payment.
      *
@@ -259,7 +261,7 @@ public class PaymentModel
      *
      * @return The field currencyCode
      */
-    public String getCurrencyCode() { return this.currencyCode; }
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
     /**
      * The ISO 4217 currency code for this payment.
      *
@@ -267,67 +269,67 @@ public class PaymentModel
      *
      * @param value The new value for currencyCode
      */
-    public void setCurrencyCode(String value) { this.currencyCode = value; }
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
     /**
      * Reference code for the payment for the given Erp system.
      *
      * @return The field referenceCode
      */
-    public String getReferenceCode() { return this.referenceCode; }
+    public @Nullable String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      *
      * @param value The new value for referenceCode
      */
-    public void setReferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(@Nullable String value) { this.referenceCode = value; }
     /**
      * The date on which this record was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created this payment.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this payment.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date on which this record was last modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date on which this record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who last modified this payment.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this payment.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -336,7 +338,7 @@ public class PaymentModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -345,45 +347,45 @@ public class PaymentModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * Is the payment voided?
      *
      * @return The field isVoided
      */
-    public Boolean getIsVoided() { return this.isVoided; }
+    public @NotNull Boolean getIsVoided() { return this.isVoided; }
     /**
      * Is the payment voided?
      *
      * @param value The new value for isVoided
      */
-    public void setIsVoided(Boolean value) { this.isVoided = value; }
+    public void setIsVoided(@NotNull Boolean value) { this.isVoided = value; }
     /**
      * Is the payment in dispute?
      *
      * @return The field inDispute
      */
-    public Boolean getInDispute() { return this.inDispute; }
+    public @NotNull Boolean getInDispute() { return this.inDispute; }
     /**
      * Is the payment in dispute?
      *
      * @param value The new value for inDispute
      */
-    public void setInDispute(Boolean value) { this.inDispute = value; }
+    public void setInDispute(@NotNull Boolean value) { this.inDispute = value; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.
      *
      * @return The field applications
      */
-    public PaymentAppliedModel[] getApplications() { return this.applications; }
+    public @Nullable PaymentAppliedModel[] getApplications() { return this.applications; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.
      *
      * @param value The new value for applications
      */
-    public void setApplications(PaymentAppliedModel[] value) { this.applications = value; }
+    public void setApplications(@Nullable PaymentAppliedModel[] value) { this.applications = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -394,7 +396,7 @@ public class PaymentModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -405,7 +407,7 @@ public class PaymentModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -416,7 +418,7 @@ public class PaymentModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -427,7 +429,7 @@ public class PaymentModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -438,7 +440,7 @@ public class PaymentModel
      *
      * @return The field customFieldDefinitions
      */
-    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public @Nullable CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -449,7 +451,7 @@ public class PaymentModel
      *
      * @param value The new value for customFieldDefinitions
      */
-    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -460,7 +462,7 @@ public class PaymentModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -471,5 +473,5 @@ public class PaymentModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

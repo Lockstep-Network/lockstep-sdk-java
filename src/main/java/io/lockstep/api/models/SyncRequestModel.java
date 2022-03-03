@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a Sync action that loads data from a connector into the Lockstep Platform.  Users can
@@ -28,15 +30,15 @@ package io.lockstep.api.models;
  */
 public class SyncRequestModel
 {
-    private String syncRequestId;
-    private String groupKey;
-    private String statusCode;
-    private String processResultMessage;
-    private String appEnrollmentId;
-    private String created;
-    private String modified;
-    private String modifiedUserId;
-    private Object details;
+    private @NotNull String syncRequestId;
+    private @NotNull String groupKey;
+    private @Nullable String statusCode;
+    private @Nullable String processResultMessage;
+    private @Nullable String appEnrollmentId;
+    private @NotNull String created;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable Object details;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -44,14 +46,14 @@ public class SyncRequestModel
      *
      * @return The field syncRequestId
      */
-    public String getSyncRequestId() { return this.syncRequestId; }
+    public @NotNull String getSyncRequestId() { return this.syncRequestId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for syncRequestId
      */
-    public void setSyncRequestId(String value) { this.syncRequestId = value; }
+    public void setSyncRequestId(@NotNull String value) { this.syncRequestId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -60,7 +62,7 @@ public class SyncRequestModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -69,7 +71,7 @@ public class SyncRequestModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The status of processing for this SyncRequest.  When a SyncRequest is created, it is flagged as `Ready`.
      * When it is picked up for execution, its status moves to `In Progress`.  When it is complete, its status
@@ -84,7 +86,7 @@ public class SyncRequestModel
      *
      * @return The field statusCode
      */
-    public String getStatusCode() { return this.statusCode; }
+    public @Nullable String getStatusCode() { return this.statusCode; }
     /**
      * The status of processing for this SyncRequest.  When a SyncRequest is created, it is flagged as `Ready`.
      * When it is picked up for execution, its status moves to `In Progress`.  When it is complete, its status
@@ -99,67 +101,67 @@ public class SyncRequestModel
      *
      * @param value The new value for statusCode
      */
-    public void setStatusCode(String value) { this.statusCode = value; }
+    public void setStatusCode(@Nullable String value) { this.statusCode = value; }
     /**
      * Message containing information about the sync request results
      *
      * @return The field processResultMessage
      */
-    public String getProcessResultMessage() { return this.processResultMessage; }
+    public @Nullable String getProcessResultMessage() { return this.processResultMessage; }
     /**
      * Message containing information about the sync request results
      *
      * @param value The new value for processResultMessage
      */
-    public void setProcessResultMessage(String value) { this.processResultMessage = value; }
+    public void setProcessResultMessage(@Nullable String value) { this.processResultMessage = value; }
     /**
      * The AppEnrollmentId of the AppEnrollment object that executed this sync request
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the AppEnrollment object that executed this sync request
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * The date this sync request was created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date this sync request was created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The date this sync request was last modified
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date this sync request was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this sync request.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this sync request.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The detailed list of results and errors that occurred during the processing of this SyncRequest.  This
      * information is available only after the SyncRequest has completed.  You will only be able to fetch this
@@ -170,7 +172,7 @@ public class SyncRequestModel
      *
      * @return The field details
      */
-    public Object getDetails() { return this.details; }
+    public @Nullable Object getDetails() { return this.details; }
     /**
      * The detailed list of results and errors that occurred during the processing of this SyncRequest.  This
      * information is available only after the SyncRequest has completed.  You will only be able to fetch this
@@ -181,5 +183,5 @@ public class SyncRequestModel
      *
      * @param value The new value for details
      */
-    public void setDetails(Object value) { this.details = value; }
+    public void setDetails(@Nullable Object value) { this.details = value; }
 };

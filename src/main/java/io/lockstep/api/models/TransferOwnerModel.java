@@ -15,37 +15,39 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Model from the transfer ownership process.
  */
 public class TransferOwnerModel
 {
-    private UserAccountModel previousOwner;
-    private UserAccountModel newOwner;
+    private @Nullable UserAccountModel previousOwner;
+    private @Nullable UserAccountModel newOwner;
 
     /**
      * The previous owner of the account.
      *
      * @return The field previousOwner
      */
-    public UserAccountModel getPreviousOwner() { return this.previousOwner; }
+    public @Nullable UserAccountModel getPreviousOwner() { return this.previousOwner; }
     /**
      * The previous owner of the account.
      *
      * @param value The new value for previousOwner
      */
-    public void setPreviousOwner(UserAccountModel value) { this.previousOwner = value; }
+    public void setPreviousOwner(@Nullable UserAccountModel value) { this.previousOwner = value; }
     /**
      * The new owner of the account.
      *
      * @return The field newOwner
      */
-    public UserAccountModel getNewOwner() { return this.newOwner; }
+    public @Nullable UserAccountModel getNewOwner() { return this.newOwner; }
     /**
      * The new owner of the account.
      *
      * @param value The new value for newOwner
      */
-    public void setNewOwner(UserAccountModel value) { this.newOwner = value; }
+    public void setNewOwner(@Nullable UserAccountModel value) { this.newOwner = value; }
 };

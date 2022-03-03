@@ -5,7 +5,7 @@
 
     <groupId>io.lockstep</groupId>
     <artifactId>lockstepsdk</artifactId>
-    <version>2022.9.6.0</version>
+    <version>2022.9.18.0</version>
  
     <name>lockstep-sdk-java</name>
     <description>Java sample project for Lockstep SDK</description>
@@ -40,6 +40,13 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>23.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>

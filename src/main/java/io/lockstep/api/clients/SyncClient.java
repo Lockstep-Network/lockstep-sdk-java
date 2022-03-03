@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.SyncRequestModel;
 import io.lockstep.api.models.SyncSubmitModel;
 import io.lockstep.api.models.BatchSyncModel;
@@ -37,7 +39,7 @@ public class SyncClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public SyncClient(LockstepApi client) {
+    public SyncClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -50,7 +52,7 @@ public class SyncClient
      * @param body Information about the Sync to execute
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<SyncRequestModel> createSync(SyncSubmitModel body)
+    public @NotNull LockstepResponse<SyncRequestModel> createSync(@NotNull SyncSubmitModel body)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "POST", "/api/v1/Sync");
         r.AddBody(body);
@@ -67,7 +69,7 @@ public class SyncClient
      * @param body Information about the Sync to execute
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<SyncRequestModel> createBatchImport(BatchSyncModel body)
+    public @NotNull LockstepResponse<SyncRequestModel> createBatchImport(@NotNull BatchSyncModel body)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "POST", "/api/v1/Sync/batch");
         r.AddBody(body);
@@ -82,7 +84,7 @@ public class SyncClient
      * @param filename The full path of a file to upload to the API
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<SyncRequestModel> uploadSyncFile(byte[] filename)
+    public @NotNull LockstepResponse<SyncRequestModel> uploadSyncFile(@NotNull byte[] filename)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "POST", "/api/v1/Sync/zip");
         return r.Call(SyncRequestModel.class);
@@ -101,7 +103,7 @@ public class SyncClient
      * @param body A list of changes to apply to this Application
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<SyncRequestModel> updateSync(String id, Object body)
+    public @NotNull LockstepResponse<SyncRequestModel> updateSync(@NotNull String id, @NotNull Object body)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "PATCH", "/api/v1/Sync/{id}");
         r.AddPath("{id}", id.toString());
@@ -118,7 +120,7 @@ public class SyncClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Details
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<SyncRequestModel> retrieveSync(String id, String include)
+    public @NotNull LockstepResponse<SyncRequestModel> retrieveSync(@NotNull String id, @Nullable String include)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "GET", "/api/v1/Sync/{id}");
         r.AddPath("{id}", id.toString());
@@ -140,7 +142,7 @@ public class SyncClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<SyncRequestModel>> querySyncs(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<SyncRequestModel>> querySyncs(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<SyncRequestModel>> r = new RestRequest<FetchResult<SyncRequestModel>>(this.client, "GET", "/api/v1/Sync/query");
         r.AddQuery("filter", filter.toString());

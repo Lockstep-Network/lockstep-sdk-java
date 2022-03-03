@@ -15,19 +15,21 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a role for a user
  */
 public class UserRoleModel
 {
-    private String userRoleId;
-    private String groupKey;
-    private String userRoleName;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
+    private @NotNull String userRoleId;
+    private @NotNull String groupKey;
+    private @NotNull String userRoleName;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -35,14 +37,14 @@ public class UserRoleModel
      *
      * @return The field userRoleId
      */
-    public String getUserRoleId() { return this.userRoleId; }
+    public @NotNull String getUserRoleId() { return this.userRoleId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for userRoleId
      */
-    public void setUserRoleId(String value) { this.userRoleId = value; }
+    public void setUserRoleId(@NotNull String value) { this.userRoleId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -51,7 +53,7 @@ public class UserRoleModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -60,65 +62,65 @@ public class UserRoleModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The name of the user role
      *
      * @return The field userRoleName
      */
-    public String getUserRoleName() { return this.userRoleName; }
+    public @NotNull String getUserRoleName() { return this.userRoleName; }
     /**
      * The name of the user role
      *
      * @param value The new value for userRoleName
      */
-    public void setUserRoleName(String value) { this.userRoleName = value; }
+    public void setUserRoleName(@NotNull String value) { this.userRoleName = value; }
     /**
      * The date that the user role was created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date that the user role was created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created the user role
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the user role
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date the user role was last modified
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date the user role was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who last modified the user role
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the user role
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
 };
