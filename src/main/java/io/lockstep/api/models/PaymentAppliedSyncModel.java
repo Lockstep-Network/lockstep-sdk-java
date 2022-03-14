@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The PaymentAppliedSyncModel represents information coming into Lockstep from an external financial system or
@@ -29,14 +31,14 @@ package io.lockstep.api.models;
  */
 public class PaymentAppliedSyncModel
 {
-    private String erpKey;
-    private String invoiceErpKey;
-    private String paymentErpKey;
-    private Integer entryNumber;
-    private String applyToInvoiceDate;
-    private Double paymentAppliedAmount;
-    private String created;
-    private String modified;
+    private @NotNull String erpKey;
+    private @NotNull String invoiceErpKey;
+    private @NotNull String paymentErpKey;
+    private @NotNull Integer entryNumber;
+    private @NotNull String applyToInvoiceDate;
+    private @NotNull Double paymentAppliedAmount;
+    private @Nullable String created;
+    private @Nullable String modified;
 
     /**
      * This is the primary key of the Payment Application record. For this field, you should use whatever this
@@ -50,7 +52,7 @@ public class PaymentAppliedSyncModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @NotNull String getErpKey() { return this.erpKey; }
     /**
      * This is the primary key of the Payment Application record. For this field, you should use whatever this
      * transaction's unique identifying number is in the originating system. Search for a unique, non-changing
@@ -63,7 +65,7 @@ public class PaymentAppliedSyncModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@NotNull String value) { this.erpKey = value; }
     /**
      * This field indicates which Invoice had its balance reduced by applying this payment.  In this field,
      * identify the original primary key or unique ID of the Invoice which had its balance reduced.
@@ -76,7 +78,7 @@ public class PaymentAppliedSyncModel
      *
      * @return The field invoiceErpKey
      */
-    public String getInvoiceErpKey() { return this.invoiceErpKey; }
+    public @NotNull String getInvoiceErpKey() { return this.invoiceErpKey; }
     /**
      * This field indicates which Invoice had its balance reduced by applying this payment.  In this field,
      * identify the original primary key or unique ID of the Invoice which had its balance reduced.
@@ -89,7 +91,7 @@ public class PaymentAppliedSyncModel
      *
      * @param value The new value for invoiceErpKey
      */
-    public void setInvoiceErpKey(String value) { this.invoiceErpKey = value; }
+    public void setInvoiceErpKey(@NotNull String value) { this.invoiceErpKey = value; }
     /**
      * This field indicates which Payment was used to provide the funds for this payment application. In this
      * field, identify the original primary key or unique ID of the Payment that was used for this payment
@@ -103,7 +105,7 @@ public class PaymentAppliedSyncModel
      *
      * @return The field paymentErpKey
      */
-    public String getPaymentErpKey() { return this.paymentErpKey; }
+    public @NotNull String getPaymentErpKey() { return this.paymentErpKey; }
     /**
      * This field indicates which Payment was used to provide the funds for this payment application. In this
      * field, identify the original primary key or unique ID of the Payment that was used for this payment
@@ -117,45 +119,45 @@ public class PaymentAppliedSyncModel
      *
      * @param value The new value for paymentErpKey
      */
-    public void setPaymentErpKey(String value) { this.paymentErpKey = value; }
+    public void setPaymentErpKey(@NotNull String value) { this.paymentErpKey = value; }
     /**
      * The entry number of this payment application.  This is often a journal entry number, confirmation code,
      * or other identifying field for this payment application.
      *
      * @return The field entryNumber
      */
-    public Integer getEntryNumber() { return this.entryNumber; }
+    public @NotNull Integer getEntryNumber() { return this.entryNumber; }
     /**
      * The entry number of this payment application.  This is often a journal entry number, confirmation code,
      * or other identifying field for this payment application.
      *
      * @param value The new value for entryNumber
      */
-    public void setEntryNumber(Integer value) { this.entryNumber = value; }
+    public void setEntryNumber(@NotNull Integer value) { this.entryNumber = value; }
     /**
      * The date this payment was applied to this invoice.
      *
      * @return The field applyToInvoiceDate
      */
-    public String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public @NotNull String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * The date this payment was applied to this invoice.
      *
      * @param value The new value for applyToInvoiceDate
      */
-    public void setApplyToInvoiceDate(String value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(@NotNull String value) { this.applyToInvoiceDate = value; }
     /**
      * The total amount that was applied to this Invoice from the Payment.
      *
      * @return The field paymentAppliedAmount
      */
-    public Double getPaymentAppliedAmount() { return this.paymentAppliedAmount; }
+    public @NotNull Double getPaymentAppliedAmount() { return this.paymentAppliedAmount; }
     /**
      * The total amount that was applied to this Invoice from the Payment.
      *
      * @param value The new value for paymentAppliedAmount
      */
-    public void setPaymentAppliedAmount(Double value) { this.paymentAppliedAmount = value; }
+    public void setPaymentAppliedAmount(@NotNull Double value) { this.paymentAppliedAmount = value; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -163,7 +165,7 @@ public class PaymentAppliedSyncModel
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -171,7 +173,7 @@ public class PaymentAppliedSyncModel
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -179,7 +181,7 @@ public class PaymentAppliedSyncModel
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -187,5 +189,5 @@ public class PaymentAppliedSyncModel
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
 };

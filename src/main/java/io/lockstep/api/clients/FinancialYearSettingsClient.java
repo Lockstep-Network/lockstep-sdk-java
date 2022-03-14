@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.FinancialYearSettingModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class FinancialYearSettingsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public FinancialYearSettingsClient(LockstepApi client) {
+    public FinancialYearSettingsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -49,7 +51,7 @@ public class FinancialYearSettingsClient
      * @param id The unique Lockstep Platform ID number of this Financial Year Setting
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FinancialYearSettingModel> retrieveFinancialYearSetting(String id)
+    public @NotNull LockstepResponse<FinancialYearSettingModel> retrieveFinancialYearSetting(@NotNull String id)
     {
         RestRequest<FinancialYearSettingModel> r = new RestRequest<FinancialYearSettingModel>(this.client, "GET", "/api/v1/FinancialYearSettings/{id}");
         r.AddPath("{id}", id.toString());
@@ -67,7 +69,7 @@ public class FinancialYearSettingsClient
      * @param body A list of changes to apply to this Financial Year Setting
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FinancialYearSettingModel> updateFinancialYearSetting(String id, Object body)
+    public @NotNull LockstepResponse<FinancialYearSettingModel> updateFinancialYearSetting(@NotNull String id, @NotNull Object body)
     {
         RestRequest<FinancialYearSettingModel> r = new RestRequest<FinancialYearSettingModel>(this.client, "PATCH", "/api/v1/FinancialYearSettings/{id}");
         r.AddPath("{id}", id.toString());
@@ -83,7 +85,7 @@ public class FinancialYearSettingsClient
      * @param id The unique Lockstep Platform ID number of the Financial Year Setting to disable
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deleteFinancialYearSetting(String id)
+    public @NotNull LockstepResponse<ActionResultModel> deleteFinancialYearSetting(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/FinancialYearSettings/{id}");
         r.AddPath("{id}", id.toString());
@@ -98,7 +100,7 @@ public class FinancialYearSettingsClient
      * @param body The Financial Year Setting to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FinancialYearSettingModel> createFinancialYearSetting(FinancialYearSettingModel body)
+    public @NotNull LockstepResponse<FinancialYearSettingModel> createFinancialYearSetting(@NotNull FinancialYearSettingModel body)
     {
         RestRequest<FinancialYearSettingModel> r = new RestRequest<FinancialYearSettingModel>(this.client, "POST", "/api/v1/FinancialYearSettings");
         r.AddBody(body);
@@ -118,7 +120,7 @@ public class FinancialYearSettingsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<FinancialYearSettingModel>> queryFinancialYearSettings(String filter, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<FinancialYearSettingModel>> queryFinancialYearSettings(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<FinancialYearSettingModel>> r = new RestRequest<FetchResult<FinancialYearSettingModel>>(this.client, "GET", "/api/v1/FinancialYearSettings/query");
         r.AddQuery("filter", filter.toString());

@@ -15,27 +15,29 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Contains summarized data for a customer
  */
 public class CustomerSummaryModel
 {
-    private String groupKey;
-    private String companyId;
-    private String companyName;
-    private String primaryContact;
-    private Integer outstandingInvoices;
-    private Integer totalInvoicesOpen;
-    private Integer totalInvoicesPastDue;
-    private Integer closedInvoices;
-    private Double amountCollected;
-    private Double outstandingAmount;
-    private Double amountPastDue;
-    private Double unappliedPayments;
-    private Double percentOfTotalAr;
-    private Double dso;
-    private String newestActivity;
+    private @NotNull String groupKey;
+    private @NotNull String companyId;
+    private @Nullable String companyName;
+    private @Nullable String primaryContact;
+    private @Nullable Integer outstandingInvoices;
+    private @Nullable Integer totalInvoicesOpen;
+    private @Nullable Integer totalInvoicesPastDue;
+    private @Nullable Integer closedInvoices;
+    private @Nullable Double amountCollected;
+    private @Nullable Double outstandingAmount;
+    private @Nullable Double amountPastDue;
+    private @Nullable Double unappliedPayments;
+    private @Nullable Double percentOfTotalAr;
+    private @Nullable Double dso;
+    private @Nullable String newestActivity;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -45,7 +47,7 @@ public class CustomerSummaryModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -54,173 +56,173 @@ public class CustomerSummaryModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID of this company.
      *
      * @return The field companyId
      */
-    public String getCompanyId() { return this.companyId; }
+    public @NotNull String getCompanyId() { return this.companyId; }
     /**
      * The unique ID of this company.
      *
      * @param value The new value for companyId
      */
-    public void setCompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(@NotNull String value) { this.companyId = value; }
     /**
      * The name of the company.
      *
      * @return The field companyName
      */
-    public String getCompanyName() { return this.companyName; }
+    public @Nullable String getCompanyName() { return this.companyName; }
     /**
      * The name of the company.
      *
      * @param value The new value for companyName
      */
-    public void setCompanyName(String value) { this.companyName = value; }
+    public void setCompanyName(@Nullable String value) { this.companyName = value; }
     /**
      * The name of the primary contact.
      *
      * @return The field primaryContact
      */
-    public String getPrimaryContact() { return this.primaryContact; }
+    public @Nullable String getPrimaryContact() { return this.primaryContact; }
     /**
      * The name of the primary contact.
      *
      * @param value The new value for primaryContact
      */
-    public void setPrimaryContact(String value) { this.primaryContact = value; }
+    public void setPrimaryContact(@Nullable String value) { this.primaryContact = value; }
     /**
      * The number of outstanding invoices for this customer.
      *
      * @return The field outstandingInvoices
      */
-    public Integer getOutstandingInvoices() { return this.outstandingInvoices; }
+    public @Nullable Integer getOutstandingInvoices() { return this.outstandingInvoices; }
     /**
      * The number of outstanding invoices for this customer.
      *
      * @param value The new value for outstandingInvoices
      */
-    public void setOutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
+    public void setOutstandingInvoices(@Nullable Integer value) { this.outstandingInvoices = value; }
     /**
      * The number of open invoices.
      *
      * @return The field totalInvoicesOpen
      */
-    public Integer getTotalInvoicesOpen() { return this.totalInvoicesOpen; }
+    public @Nullable Integer getTotalInvoicesOpen() { return this.totalInvoicesOpen; }
     /**
      * The number of open invoices.
      *
      * @param value The new value for totalInvoicesOpen
      */
-    public void setTotalInvoicesOpen(Integer value) { this.totalInvoicesOpen = value; }
+    public void setTotalInvoicesOpen(@Nullable Integer value) { this.totalInvoicesOpen = value; }
     /**
      * The number of past due invoices.
      *
      * @return The field totalInvoicesPastDue
      */
-    public Integer getTotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
+    public @Nullable Integer getTotalInvoicesPastDue() { return this.totalInvoicesPastDue; }
     /**
      * The number of past due invoices.
      *
      * @param value The new value for totalInvoicesPastDue
      */
-    public void setTotalInvoicesPastDue(Integer value) { this.totalInvoicesPastDue = value; }
+    public void setTotalInvoicesPastDue(@Nullable Integer value) { this.totalInvoicesPastDue = value; }
     /**
      * The number of closed invoices for this customer.
      *
      * @return The field closedInvoices
      */
-    public Integer getClosedInvoices() { return this.closedInvoices; }
+    public @Nullable Integer getClosedInvoices() { return this.closedInvoices; }
     /**
      * The number of closed invoices for this customer.
      *
      * @param value The new value for closedInvoices
      */
-    public void setClosedInvoices(Integer value) { this.closedInvoices = value; }
+    public void setClosedInvoices(@Nullable Integer value) { this.closedInvoices = value; }
     /**
      * The total from collected payments.
      *
      * @return The field amountCollected
      */
-    public Double getAmountCollected() { return this.amountCollected; }
+    public @Nullable Double getAmountCollected() { return this.amountCollected; }
     /**
      * The total from collected payments.
      *
      * @param value The new value for amountCollected
      */
-    public void setAmountCollected(Double value) { this.amountCollected = value; }
+    public void setAmountCollected(@Nullable Double value) { this.amountCollected = value; }
     /**
      * The total balance of outstanding invoices.
      *
      * @return The field outstandingAmount
      */
-    public Double getOutstandingAmount() { return this.outstandingAmount; }
+    public @Nullable Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
      * The total balance of outstanding invoices.
      *
      * @param value The new value for outstandingAmount
      */
-    public void setOutstandingAmount(Double value) { this.outstandingAmount = value; }
+    public void setOutstandingAmount(@Nullable Double value) { this.outstandingAmount = value; }
     /**
      * The total amount past due for this customer.
      *
      * @return The field amountPastDue
      */
-    public Double getAmountPastDue() { return this.amountPastDue; }
+    public @Nullable Double getAmountPastDue() { return this.amountPastDue; }
     /**
      * The total amount past due for this customer.
      *
      * @param value The new value for amountPastDue
      */
-    public void setAmountPastDue(Double value) { this.amountPastDue = value; }
+    public void setAmountPastDue(@Nullable Double value) { this.amountPastDue = value; }
     /**
      * The total value of unapplied Payments for this Customer.
      *
      * @return The field unappliedPayments
      */
-    public Double getUnappliedPayments() { return this.unappliedPayments; }
+    public @Nullable Double getUnappliedPayments() { return this.unappliedPayments; }
     /**
      * The total value of unapplied Payments for this Customer.
      *
      * @param value The new value for unappliedPayments
      */
-    public void setUnappliedPayments(Double value) { this.unappliedPayments = value; }
+    public void setUnappliedPayments(@Nullable Double value) { this.unappliedPayments = value; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      *
      * @return The field percentOfTotalAr
      */
-    public Double getPercentOfTotalAr() { return this.percentOfTotalAr; }
+    public @Nullable Double getPercentOfTotalAr() { return this.percentOfTotalAr; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      *
      * @param value The new value for percentOfTotalAr
      */
-    public void setPercentOfTotalAr(Double value) { this.percentOfTotalAr = value; }
+    public void setPercentOfTotalAr(@Nullable Double value) { this.percentOfTotalAr = value; }
     /**
      * Daily sales outstanding value for this Customer.
      *
      * @return The field dso
      */
-    public Double getDso() { return this.dso; }
+    public @Nullable Double getDso() { return this.dso; }
     /**
      * Daily sales outstanding value for this Customer.
      *
      * @param value The new value for dso
      */
-    public void setDso(Double value) { this.dso = value; }
+    public void setDso(@Nullable Double value) { this.dso = value; }
     /**
      * The date stamp for the newest Activity on this Customer.
      *
      * @return The field newestActivity
      */
-    public String getNewestActivity() { return this.newestActivity; }
+    public @Nullable String getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Customer.
      *
      * @param value The new value for newestActivity
      */
-    public void setNewestActivity(String value) { this.newestActivity = value; }
+    public void setNewestActivity(@Nullable String value) { this.newestActivity = value; }
 };

@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The PaymentSyncModel represents information coming into Lockstep from an external financial system or other
@@ -29,22 +31,22 @@ package io.lockstep.api.models;
  */
 public class PaymentSyncModel
 {
-    private String erpKey;
-    private String companyErpKey;
-    private String paymentType;
-    private String tenderType;
-    private Boolean isOpen;
-    private String memoText;
-    private String paymentDate;
-    private String postDate;
-    private Double paymentAmount;
-    private Double unappliedAmount;
-    private String currencyCode;
-    private String created;
-    private String modified;
-    private String referenceCode;
-    private Boolean isVoided;
-    private Boolean inDispute;
+    private @NotNull String erpKey;
+    private @NotNull String companyErpKey;
+    private @Nullable String paymentType;
+    private @Nullable String tenderType;
+    private @NotNull Boolean isOpen;
+    private @Nullable String memoText;
+    private @NotNull String paymentDate;
+    private @NotNull String postDate;
+    private @NotNull Double paymentAmount;
+    private @NotNull Double unappliedAmount;
+    private @Nullable String currencyCode;
+    private @Nullable String created;
+    private @Nullable String modified;
+    private @Nullable String referenceCode;
+    private @NotNull Boolean isVoided;
+    private @NotNull Boolean inDispute;
 
     /**
      * This is the primary key of the Payment record. For this field, you should use whatever the payment's unique
@@ -58,7 +60,7 @@ public class PaymentSyncModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @NotNull String getErpKey() { return this.erpKey; }
     /**
      * This is the primary key of the Payment record. For this field, you should use whatever the payment's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the
@@ -71,7 +73,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@NotNull String value) { this.erpKey = value; }
     /**
      * The original primary key or unique ID of the company to which this payment belongs.  This value should
      * match the [Company ErpKey](https://developer.lockstep.io/docs/importing-companies#erpkey) field on the
@@ -79,7 +81,7 @@ public class PaymentSyncModel
      *
      * @return The field companyErpKey
      */
-    public String getCompanyErpKey() { return this.companyErpKey; }
+    public @NotNull String getCompanyErpKey() { return this.companyErpKey; }
     /**
      * The original primary key or unique ID of the company to which this payment belongs.  This value should
      * match the [Company ErpKey](https://developer.lockstep.io/docs/importing-companies#erpkey) field on the
@@ -87,7 +89,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for companyErpKey
      */
-    public void setCompanyErpKey(String value) { this.companyErpKey = value; }
+    public void setCompanyErpKey(@NotNull String value) { this.companyErpKey = value; }
     /**
      * The type of payment, cash or check.
      *
@@ -97,7 +99,7 @@ public class PaymentSyncModel
      *
      * @return The field paymentType
      */
-    public String getPaymentType() { return this.paymentType; }
+    public @Nullable String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, cash or check.
      *
@@ -107,7 +109,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for paymentType
      */
-    public void setPaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(@Nullable String value) { this.paymentType = value; }
     /**
      * Cash, check, credit card, wire transfer.
      *
@@ -119,7 +121,7 @@ public class PaymentSyncModel
      *
      * @return The field tenderType
      */
-    public String getTenderType() { return this.tenderType; }
+    public @Nullable String getTenderType() { return this.tenderType; }
     /**
      * Cash, check, credit card, wire transfer.
      *
@@ -131,33 +133,33 @@ public class PaymentSyncModel
      *
      * @param value The new value for tenderType
      */
-    public void setTenderType(String value) { this.tenderType = value; }
+    public void setTenderType(@Nullable String value) { this.tenderType = value; }
     /**
      * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
      * value is true, the field `UnappliedAmount` will be nonzero.
      *
      * @return The field isOpen
      */
-    public Boolean getIsOpen() { return this.isOpen; }
+    public @NotNull Boolean getIsOpen() { return this.isOpen; }
     /**
      * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
      * value is true, the field `UnappliedAmount` will be nonzero.
      *
      * @param value The new value for isOpen
      */
-    public void setIsOpen(Boolean value) { this.isOpen = value; }
+    public void setIsOpen(@NotNull Boolean value) { this.isOpen = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @return The field memoText
      */
-    public String getMemoText() { return this.memoText; }
+    public @Nullable String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @param value The new value for memoText
      */
-    public void setMemoText(String value) { this.memoText = value; }
+    public void setMemoText(@Nullable String value) { this.memoText = value; }
     /**
      * The date when this payment was received.  This typically is the date when an accounting employee recorded
      * that they received notification that the payment had occurred, whether they were notified by email, postal
@@ -165,7 +167,7 @@ public class PaymentSyncModel
      *
      * @return The field paymentDate
      */
-    public String getPaymentDate() { return this.paymentDate; }
+    public @NotNull String getPaymentDate() { return this.paymentDate; }
     /**
      * The date when this payment was received.  This typically is the date when an accounting employee recorded
      * that they received notification that the payment had occurred, whether they were notified by email, postal
@@ -173,7 +175,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(String value) { this.paymentDate = value; }
+    public void setPaymentDate(@NotNull String value) { this.paymentDate = value; }
     /**
      * The date when a payment was posted to a ledger.  This date is often determined by a company's accounting
      * practices and may be different than the date when the payment was received.  This date may be affected by
@@ -181,7 +183,7 @@ public class PaymentSyncModel
      *
      * @return The field postDate
      */
-    public String getPostDate() { return this.postDate; }
+    public @NotNull String getPostDate() { return this.postDate; }
     /**
      * The date when a payment was posted to a ledger.  This date is often determined by a company's accounting
      * practices and may be different than the date when the payment was received.  This date may be affected by
@@ -189,31 +191,31 @@ public class PaymentSyncModel
      *
      * @param value The new value for postDate
      */
-    public void setPostDate(String value) { this.postDate = value; }
+    public void setPostDate(@NotNull String value) { this.postDate = value; }
     /**
      * Total amount of this payment.
      *
      * @return The field paymentAmount
      */
-    public Double getPaymentAmount() { return this.paymentAmount; }
+    public @NotNull Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this payment.
      *
      * @param value The new value for paymentAmount
      */
-    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(@NotNull Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @return The field unappliedAmount
      */
-    public Double getUnappliedAmount() { return this.unappliedAmount; }
+    public @NotNull Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @param value The new value for unappliedAmount
      */
-    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
     /**
      * The ISO 4217 currency code for this payment.
      *
@@ -221,7 +223,7 @@ public class PaymentSyncModel
      *
      * @return The field currencyCode
      */
-    public String getCurrencyCode() { return this.currencyCode; }
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
     /**
      * The ISO 4217 currency code for this payment.
      *
@@ -229,7 +231,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for currencyCode
      */
-    public void setCurrencyCode(String value) { this.currencyCode = value; }
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -237,7 +239,7 @@ public class PaymentSyncModel
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -245,7 +247,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -253,7 +255,7 @@ public class PaymentSyncModel
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -261,7 +263,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
     /**
      * A reference code for the payment for the given financial or ERP system.  This can be any value that the
      * originating system uses to designate the payment, such as a confirmation number or tracking number, that
@@ -269,7 +271,7 @@ public class PaymentSyncModel
      *
      * @return The field referenceCode
      */
-    public String getReferenceCode() { return this.referenceCode; }
+    public @Nullable String getReferenceCode() { return this.referenceCode; }
     /**
      * A reference code for the payment for the given financial or ERP system.  This can be any value that the
      * originating system uses to designate the payment, such as a confirmation number or tracking number, that
@@ -277,29 +279,29 @@ public class PaymentSyncModel
      *
      * @param value The new value for referenceCode
      */
-    public void setReferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(@Nullable String value) { this.referenceCode = value; }
     /**
      * True if this payment was voided.
      *
      * @return The field isVoided
      */
-    public Boolean getIsVoided() { return this.isVoided; }
+    public @NotNull Boolean getIsVoided() { return this.isVoided; }
     /**
      * True if this payment was voided.
      *
      * @param value The new value for isVoided
      */
-    public void setIsVoided(Boolean value) { this.isVoided = value; }
+    public void setIsVoided(@NotNull Boolean value) { this.isVoided = value; }
     /**
      * True if this payment is in dispute.
      *
      * @return The field inDispute
      */
-    public Boolean getInDispute() { return this.inDispute; }
+    public @NotNull Boolean getInDispute() { return this.inDispute; }
     /**
      * True if this payment is in dispute.
      *
      * @param value The new value for inDispute
      */
-    public void setInDispute(Boolean value) { this.inDispute = value; }
+    public void setInDispute(@NotNull Boolean value) { this.inDispute = value; }
 };

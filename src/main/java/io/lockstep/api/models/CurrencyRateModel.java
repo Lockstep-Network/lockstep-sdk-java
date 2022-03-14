@@ -15,63 +15,65 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a currency rate for specific currencies and date
  */
 public class CurrencyRateModel
 {
-    private String sourceCurrency;
-    private String destinationCurrency;
-    private String date;
-    private Double currencyRate;
+    private @NotNull String sourceCurrency;
+    private @NotNull String destinationCurrency;
+    private @NotNull String date;
+    private @Nullable Double currencyRate;
 
     /**
      * The source currency
      *
      * @return The field sourceCurrency
      */
-    public String getSourceCurrency() { return this.sourceCurrency; }
+    public @NotNull String getSourceCurrency() { return this.sourceCurrency; }
     /**
      * The source currency
      *
      * @param value The new value for sourceCurrency
      */
-    public void setSourceCurrency(String value) { this.sourceCurrency = value; }
+    public void setSourceCurrency(@NotNull String value) { this.sourceCurrency = value; }
     /**
      * The destination currency
      *
      * @return The field destinationCurrency
      */
-    public String getDestinationCurrency() { return this.destinationCurrency; }
+    public @NotNull String getDestinationCurrency() { return this.destinationCurrency; }
     /**
      * The destination currency
      *
      * @param value The new value for destinationCurrency
      */
-    public void setDestinationCurrency(String value) { this.destinationCurrency = value; }
+    public void setDestinationCurrency(@NotNull String value) { this.destinationCurrency = value; }
     /**
      * The date for the currency rate
      *
      * @return The field date
      */
-    public String getDate() { return this.date; }
+    public @NotNull String getDate() { return this.date; }
     /**
      * The date for the currency rate
      *
      * @param value The new value for date
      */
-    public void setDate(String value) { this.date = value; }
+    public void setDate(@NotNull String value) { this.date = value; }
     /**
      * The currency rate value
      *
      * @return The field currencyRate
      */
-    public Double getCurrencyRate() { return this.currencyRate; }
+    public @Nullable Double getCurrencyRate() { return this.currencyRate; }
     /**
      * The currency rate value
      *
      * @param value The new value for currencyRate
      */
-    public void setCurrencyRate(Double value) { this.currencyRate = value; }
+    public void setCurrencyRate(@Nullable Double value) { this.currencyRate = value; }
 };

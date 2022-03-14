@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CashflowReportModel;
 
 import io.lockstep.api.models.DailySalesOutstandingReportModel;
@@ -26,6 +28,7 @@ import io.lockstep.api.models.ArHeaderInfoModel;
 import io.lockstep.api.models.AgingModel;
 import io.lockstep.api.models.ArAgingHeaderInfoModel;
 import io.lockstep.api.models.AttachmentHeaderInfoModel;
+import io.lockstep.api.models.FinancialReportModel;
 
 /**
  * Contains all methods related to Reports
@@ -39,7 +42,7 @@ public class ReportsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public ReportsClient(LockstepApi client) {
+    public ReportsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -52,7 +55,7 @@ public class ReportsClient
      * @param timeframe Number of days of data to include for the Cash Flow Report (default is 30 days from today)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CashflowReportModel> cashFlow(Integer timeframe)
+    public @NotNull LockstepResponse<CashflowReportModel> cashFlow(@Nullable Integer timeframe)
     {
         RestRequest<CashflowReportModel> r = new RestRequest<CashflowReportModel>(this.client, "GET", "/api/v1/Reports/cashflow");
         r.AddQuery("timeframe", timeframe.toString());
@@ -66,7 +69,7 @@ public class ReportsClient
      *
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<DailySalesOutstandingReportModel[]> dailySalesOutstanding()
+    public @NotNull LockstepResponse<DailySalesOutstandingReportModel[]> dailySalesOutstanding()
     {
         RestRequest<DailySalesOutstandingReportModel[]> r = new RestRequest<DailySalesOutstandingReportModel[]>(this.client, "GET", "/api/v1/Reports/dailysalesoutstanding");
         return r.Call(DailySalesOutstandingReportModel[].class);
@@ -79,7 +82,7 @@ public class ReportsClient
      *
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<RiskRateModel[]> riskRates()
+    public @NotNull LockstepResponse<RiskRateModel[]> riskRates()
     {
         RestRequest<RiskRateModel[]> r = new RestRequest<RiskRateModel[]>(this.client, "GET", "/api/v1/Reports/riskrates");
         return r.Call(RiskRateModel[].class);
@@ -92,7 +95,7 @@ public class ReportsClient
      * @param companyId Include a company to get AR data for a specific company, leave as null to include all Companies.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ArHeaderInfoModel> accountsReceivableHeader(String reportDate, String companyId)
+    public @NotNull LockstepResponse<ArHeaderInfoModel> accountsReceivableHeader(@NotNull String reportDate, @Nullable String companyId)
     {
         RestRequest<ArHeaderInfoModel> r = new RestRequest<ArHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/ar-header");
         r.AddQuery("reportDate", reportDate.toString());
@@ -116,7 +119,7 @@ public class ReportsClient
      * @param Buckets Customized buckets used for aging calculations (default buckets [0,30,60,90,120,180] will be used if buckets not specified)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AgingModel[]> invoiceagingreport(String CompanyId, Boolean Recalculate, String CurrencyCode, String CurrencyProvider, Integer[] Buckets)
+    public @NotNull LockstepResponse<AgingModel[]> invoiceagingreport(@Nullable String CompanyId, @Nullable Boolean Recalculate, @Nullable String CurrencyCode, @Nullable String CurrencyProvider, @Nullable Integer[] Buckets)
     {
         RestRequest<AgingModel[]> r = new RestRequest<AgingModel[]>(this.client, "GET", "/api/v1/Reports/aging");
         r.AddQuery("CompanyId", CompanyId.toString());
@@ -134,7 +137,7 @@ public class ReportsClient
      *
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ArAgingHeaderInfoModel[]> accountsReceivableAgingHeader()
+    public @NotNull LockstepResponse<ArAgingHeaderInfoModel[]> accountsReceivableAgingHeader()
     {
         RestRequest<ArAgingHeaderInfoModel[]> r = new RestRequest<ArAgingHeaderInfoModel[]>(this.client, "GET", "/api/v1/Reports/ar-aging-header");
         return r.Call(ArAgingHeaderInfoModel[].class);
@@ -148,10 +151,27 @@ public class ReportsClient
      * @param companyId Include a specific company to get Attachment data for, leave as null to include all Companies.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AttachmentHeaderInfoModel> attachmentsHeaderInformation(String companyId)
+    public @NotNull LockstepResponse<AttachmentHeaderInfoModel> attachmentsHeaderInformation(@Nullable String companyId)
     {
         RestRequest<AttachmentHeaderInfoModel> r = new RestRequest<AttachmentHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/attachments-header");
         r.AddQuery("companyId", companyId.toString());
         return r.Call(AttachmentHeaderInfoModel.class);
+    }
+
+    /**
+     * Generates a Trial Balance Report for the given time range.
+     *
+     * The Attachment Header report contains aggregated information about the `TotalAttachments`, `TotalArchived`, and `TotalActive` attachment classifications.
+     *
+     * @param startDate Documentation pending
+     * @param endDate Documentation pending
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FinancialReportModel> trialBalanceReport(@Nullable String startDate, @Nullable String endDate)
+    {
+        RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/trial-balance");
+        r.AddQuery("startDate", startDate.toString());
+        r.AddQuery("endDate", endDate.toString());
+        return r.Call(FinancialReportModel.class);
     }
 }

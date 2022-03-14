@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a Code Definition.  Codes can be used as shortened, human readable strings.
@@ -22,15 +24,15 @@ package io.lockstep.api.models;
  */
 public class CodeDefinitionModel
 {
-    private String codeDefinitionId;
-    private String groupKey;
-    private String codeType;
-    private String code;
-    private String codeDescription;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
+    private @NotNull String codeDefinitionId;
+    private @NotNull String groupKey;
+    private @Nullable String codeType;
+    private @Nullable String code;
+    private @Nullable String codeDescription;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -38,14 +40,14 @@ public class CodeDefinitionModel
      *
      * @return The field codeDefinitionId
      */
-    public String getCodeDefinitionId() { return this.codeDefinitionId; }
+    public @NotNull String getCodeDefinitionId() { return this.codeDefinitionId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for codeDefinitionId
      */
-    public void setCodeDefinitionId(String value) { this.codeDefinitionId = value; }
+    public void setCodeDefinitionId(@NotNull String value) { this.codeDefinitionId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -54,7 +56,7 @@ public class CodeDefinitionModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -63,89 +65,89 @@ public class CodeDefinitionModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The type of the Code Definition
      *
      * @return The field codeType
      */
-    public String getCodeType() { return this.codeType; }
+    public @Nullable String getCodeType() { return this.codeType; }
     /**
      * The type of the Code Definition
      *
      * @param value The new value for codeType
      */
-    public void setCodeType(String value) { this.codeType = value; }
+    public void setCodeType(@Nullable String value) { this.codeType = value; }
     /**
      * The Code to be defined.
      *
      * @return The field code
      */
-    public String getCode() { return this.code; }
+    public @Nullable String getCode() { return this.code; }
     /**
      * The Code to be defined.
      *
      * @param value The new value for code
      */
-    public void setCode(String value) { this.code = value; }
+    public void setCode(@Nullable String value) { this.code = value; }
     /**
      * The definition of the Code
      *
      * @return The field codeDescription
      */
-    public String getCodeDescription() { return this.codeDescription; }
+    public @Nullable String getCodeDescription() { return this.codeDescription; }
     /**
      * The definition of the Code
      *
      * @param value The new value for codeDescription
      */
-    public void setCodeDescription(String value) { this.codeDescription = value; }
+    public void setCodeDescription(@Nullable String value) { this.codeDescription = value; }
     /**
      * The date that the Code Definition was created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date that the Code Definition was created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created the Code Definition
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the Code Definition
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date the Code Definition was last modified
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date the Code Definition was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who last modified the Code Definition
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the Code Definition
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
 };

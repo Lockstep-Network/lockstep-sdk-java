@@ -15,17 +15,19 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents links between an Activity and another record.
  */
 public class ActivityXRefModel
 {
-    private String activityXRefId;
-    private String activityId;
-    private String groupKey;
-    private String tableKey;
-    private String objectKey;
+    private @NotNull String activityXRefId;
+    private @NotNull String activityId;
+    private @NotNull String groupKey;
+    private @Nullable String tableKey;
+    private @Nullable String objectKey;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this is
@@ -33,26 +35,26 @@ public class ActivityXRefModel
      *
      * @return The field activityXRefId
      */
-    public String getActivityXRefId() { return this.activityXRefId; }
+    public @NotNull String getActivityXRefId() { return this.activityXRefId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this is
      * added to the Lockstep platform.
      *
      * @param value The new value for activityXRefId
      */
-    public void setActivityXRefId(String value) { this.activityXRefId = value; }
+    public void setActivityXRefId(@NotNull String value) { this.activityXRefId = value; }
     /**
      * The ID of the activity to which this reference belongs.
      *
      * @return The field activityId
      */
-    public String getActivityId() { return this.activityId; }
+    public @NotNull String getActivityId() { return this.activityId; }
     /**
      * The ID of the activity to which this reference belongs.
      *
      * @param value The new value for activityId
      */
-    public void setActivityId(String value) { this.activityId = value; }
+    public void setActivityId(@NotNull String value) { this.activityId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -61,7 +63,7 @@ public class ActivityXRefModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -70,29 +72,29 @@ public class ActivityXRefModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The name of the table the activity reference is associated with
      *
      * @return The field tableKey
      */
-    public String getTableKey() { return this.tableKey; }
+    public @Nullable String getTableKey() { return this.tableKey; }
     /**
      * The name of the table the activity reference is associated with
      *
      * @param value The new value for tableKey
      */
-    public void setTableKey(String value) { this.tableKey = value; }
+    public void setTableKey(@Nullable String value) { this.tableKey = value; }
     /**
      * The ID of the object the activity reference is associated with
      *
      * @return The field objectKey
      */
-    public String getObjectKey() { return this.objectKey; }
+    public @Nullable String getObjectKey() { return this.objectKey; }
     /**
      * The ID of the object the activity reference is associated with
      *
      * @param value The new value for objectKey
      */
-    public void setObjectKey(String value) { this.objectKey = value; }
+    public void setObjectKey(@Nullable String value) { this.objectKey = value; }
 };

@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.StatusModel;
 import io.lockstep.api.models.TestTimeoutException;
 
@@ -34,7 +36,7 @@ public class StatusClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public StatusClient(LockstepApi client) {
+    public StatusClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -46,7 +48,7 @@ public class StatusClient
      *
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<StatusModel> ping()
+    public @NotNull LockstepResponse<StatusModel> ping()
     {
         RestRequest<StatusModel> r = new RestRequest<StatusModel>(this.client, "GET", "/api/v1/Status");
         return r.Call(StatusModel.class);
@@ -62,7 +64,7 @@ public class StatusClient
      * @param err The type of error test to execute. Supported error types: 500, timeout
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<TestTimeoutException> errorTest(String err)
+    public @NotNull LockstepResponse<TestTimeoutException> errorTest(@Nullable String err)
     {
         RestRequest<TestTimeoutException> r = new RestRequest<TestTimeoutException>(this.client, "GET", "/api/v1/Status/testing");
         r.AddQuery("err", err.toString());

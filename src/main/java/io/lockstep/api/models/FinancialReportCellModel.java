@@ -19,22 +19,22 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Model to invite a new user to your accounting group
+ * Represents a cell of a financial report
  */
-public class InviteSubmitModel
+public class FinancialReportCellModel
 {
-    private @NotNull String email;
+    private @Nullable String value;
 
     /**
-     * The email address of the user to invite
+     * The value of the financial report cell
      *
-     * @return The field email
+     * @return The field value
      */
-    public @NotNull String getEmail() { return this.email; }
+    public @Nullable String getValue() { return this.value; }
     /**
-     * The email address of the user to invite
+     * The value of the financial report cell
      *
-     * @param value The new value for email
+     * @param value The new value for value
      */
-    public void setEmail(@NotNull String value) { this.email = value; }
+    public void setValue(@Nullable String value) { this.value = value; }
 };

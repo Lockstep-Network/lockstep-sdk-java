@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A User represents a person who has the ability to authenticate against the Lockstep Platform and use
@@ -25,38 +27,38 @@ package io.lockstep.api.models;
  */
 public class UserAccountModel
 {
-    private String userId;
-    private String groupKey;
-    private String userName;
-    private String email;
-    private String status;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String modifiedUserName;
-    private String b2CUserId;
-    private String userRole;
-    private String inviteSent;
-    private String phoneNumber;
-    private String faxNumber;
-    private String title;
-    private String accountingRoleCodeDefId;
-    private String address1;
-    private String address2;
-    private String address3;
-    private String city;
-    private String stateRegion;
-    private String postalCode;
-    private String country;
-    private String imageURL;
-    private String description;
-    private String b2CLastLoggedIn;
-    private String defaultCurrencyCode;
-    private NoteModel[] notes;
-    private AttachmentModel[] attachments;
-    private CustomFieldValueModel[] customFieldValues;
-    private CodeDefinitionModel accountingRoleCodeDefinition;
+    private @NotNull String userId;
+    private @NotNull String groupKey;
+    private @NotNull String userName;
+    private @NotNull String email;
+    private @Nullable String status;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String modifiedUserName;
+    private @Nullable String b2CUserId;
+    private @NotNull String userRole;
+    private @Nullable String inviteSent;
+    private @Nullable String phoneNumber;
+    private @Nullable String faxNumber;
+    private @Nullable String title;
+    private @Nullable String accountingRoleCodeDefId;
+    private @Nullable String address1;
+    private @Nullable String address2;
+    private @Nullable String address3;
+    private @Nullable String city;
+    private @Nullable String stateRegion;
+    private @Nullable String postalCode;
+    private @Nullable String country;
+    private @Nullable String imageURL;
+    private @Nullable String description;
+    private @Nullable String b2CLastLoggedIn;
+    private @Nullable String defaultCurrencyCode;
+    private @Nullable NoteModel[] notes;
+    private @Nullable AttachmentModel[] attachments;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
+    private @Nullable CodeDefinitionModel accountingRoleCodeDefinition;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -66,7 +68,7 @@ public class UserAccountModel
      *
      * @return The field userId
      */
-    public String getUserId() { return this.userId; }
+    public @NotNull String getUserId() { return this.userId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -75,7 +77,7 @@ public class UserAccountModel
      *
      * @param value The new value for userId
      */
-    public void setUserId(String value) { this.userId = value; }
+    public void setUserId(@NotNull String value) { this.userId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -84,7 +86,7 @@ public class UserAccountModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -93,307 +95,307 @@ public class UserAccountModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The full name of the user
      *
      * @return The field userName
      */
-    public String getUserName() { return this.userName; }
+    public @NotNull String getUserName() { return this.userName; }
     /**
      * The full name of the user
      *
      * @param value The new value for userName
      */
-    public void setUserName(String value) { this.userName = value; }
+    public void setUserName(@NotNull String value) { this.userName = value; }
     /**
      * The email of the user
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @NotNull String getEmail() { return this.email; }
     /**
      * The email of the user
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@NotNull String value) { this.email = value; }
     /**
      * The status of the user's account
      *
      * @return The field status
      */
-    public String getStatus() { return this.status; }
+    public @Nullable String getStatus() { return this.status; }
     /**
      * The status of the user's account
      *
      * @param value The new value for status
      */
-    public void setStatus(String value) { this.status = value; }
+    public void setStatus(@Nullable String value) { this.status = value; }
     /**
      * The date that the user account was created
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date that the user account was created
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created the user account
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created the user account
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date the user account was last modified
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date the user account was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who last modified the user account
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified the user account
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The name of the user who last modified the user account
      *
      * @return The field modifiedUserName
      */
-    public String getModifiedUserName() { return this.modifiedUserName; }
+    public @Nullable String getModifiedUserName() { return this.modifiedUserName; }
     /**
      * The name of the user who last modified the user account
      *
      * @param value The new value for modifiedUserName
      */
-    public void setModifiedUserName(String value) { this.modifiedUserName = value; }
+    public void setModifiedUserName(@Nullable String value) { this.modifiedUserName = value; }
     /**
      * The ID of the user in Azure B2C
      *
      * @return The field b2CUserId
      */
-    public String getB2CUserId() { return this.b2CUserId; }
+    public @Nullable String getB2CUserId() { return this.b2CUserId; }
     /**
      * The ID of the user in Azure B2C
      *
      * @param value The new value for b2CUserId
      */
-    public void setB2CUserId(String value) { this.b2CUserId = value; }
+    public void setB2CUserId(@Nullable String value) { this.b2CUserId = value; }
     /**
      * The id of the Permission Level for the user.
      *
      * @return The field userRole
      */
-    public String getUserRole() { return this.userRole; }
+    public @NotNull String getUserRole() { return this.userRole; }
     /**
      * The id of the Permission Level for the user.
      *
      * @param value The new value for userRole
      */
-    public void setUserRole(String value) { this.userRole = value; }
+    public void setUserRole(@NotNull String value) { this.userRole = value; }
     /**
      * The date timestamp when the invite was sent to the user.
      *
      * @return The field inviteSent
      */
-    public String getInviteSent() { return this.inviteSent; }
+    public @Nullable String getInviteSent() { return this.inviteSent; }
     /**
      * The date timestamp when the invite was sent to the user.
      *
      * @param value The new value for inviteSent
      */
-    public void setInviteSent(String value) { this.inviteSent = value; }
+    public void setInviteSent(@Nullable String value) { this.inviteSent = value; }
     /**
      * The phone number of the user.
      *
      * @return The field phoneNumber
      */
-    public String getPhoneNumber() { return this.phoneNumber; }
+    public @Nullable String getPhoneNumber() { return this.phoneNumber; }
     /**
      * The phone number of the user.
      *
      * @param value The new value for phoneNumber
      */
-    public void setPhoneNumber(String value) { this.phoneNumber = value; }
+    public void setPhoneNumber(@Nullable String value) { this.phoneNumber = value; }
     /**
      * The fax number of the user.
      *
      * @return The field faxNumber
      */
-    public String getFaxNumber() { return this.faxNumber; }
+    public @Nullable String getFaxNumber() { return this.faxNumber; }
     /**
      * The fax number of the user.
      *
      * @param value The new value for faxNumber
      */
-    public void setFaxNumber(String value) { this.faxNumber = value; }
+    public void setFaxNumber(@Nullable String value) { this.faxNumber = value; }
     /**
      * The title of the user; free text field
      *
      * @return The field title
      */
-    public String getTitle() { return this.title; }
+    public @Nullable String getTitle() { return this.title; }
     /**
      * The title of the user; free text field
      *
      * @param value The new value for title
      */
-    public void setTitle(String value) { this.title = value; }
+    public void setTitle(@Nullable String value) { this.title = value; }
     /**
      * FK to the CodeDefinition table; CodeType = 'AccountingRole'
      *
      * @return The field accountingRoleCodeDefId
      */
-    public String getAccountingRoleCodeDefId() { return this.accountingRoleCodeDefId; }
+    public @Nullable String getAccountingRoleCodeDefId() { return this.accountingRoleCodeDefId; }
     /**
      * FK to the CodeDefinition table; CodeType = 'AccountingRole'
      *
      * @param value The new value for accountingRoleCodeDefId
      */
-    public void setAccountingRoleCodeDefId(String value) { this.accountingRoleCodeDefId = value; }
+    public void setAccountingRoleCodeDefId(@Nullable String value) { this.accountingRoleCodeDefId = value; }
     /**
      * Address Line 1 for this User
      *
      * @return The field address1
      */
-    public String getAddress1() { return this.address1; }
+    public @Nullable String getAddress1() { return this.address1; }
     /**
      * Address Line 1 for this User
      *
      * @param value The new value for address1
      */
-    public void setAddress1(String value) { this.address1 = value; }
+    public void setAddress1(@Nullable String value) { this.address1 = value; }
     /**
      * Address Line 2 for this User
      *
      * @return The field address2
      */
-    public String getAddress2() { return this.address2; }
+    public @Nullable String getAddress2() { return this.address2; }
     /**
      * Address Line 2 for this User
      *
      * @param value The new value for address2
      */
-    public void setAddress2(String value) { this.address2 = value; }
+    public void setAddress2(@Nullable String value) { this.address2 = value; }
     /**
      * Address Line 3 for this User
      *
      * @return The field address3
      */
-    public String getAddress3() { return this.address3; }
+    public @Nullable String getAddress3() { return this.address3; }
     /**
      * Address Line 3 for this User
      *
      * @param value The new value for address3
      */
-    public void setAddress3(String value) { this.address3 = value; }
+    public void setAddress3(@Nullable String value) { this.address3 = value; }
     /**
      * City for this User
      *
      * @return The field city
      */
-    public String getCity() { return this.city; }
+    public @Nullable String getCity() { return this.city; }
     /**
      * City for this User
      *
      * @param value The new value for city
      */
-    public void setCity(String value) { this.city = value; }
+    public void setCity(@Nullable String value) { this.city = value; }
     /**
      * Region ("state" in the US) for this User
      *
      * @return The field stateRegion
      */
-    public String getStateRegion() { return this.stateRegion; }
+    public @Nullable String getStateRegion() { return this.stateRegion; }
     /**
      * Region ("state" in the US) for this User
      *
      * @param value The new value for stateRegion
      */
-    public void setStateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(@Nullable String value) { this.stateRegion = value; }
     /**
      * Postal Code this User
      *
      * @return The field postalCode
      */
-    public String getPostalCode() { return this.postalCode; }
+    public @Nullable String getPostalCode() { return this.postalCode; }
     /**
      * Postal Code this User
      *
      * @param value The new value for postalCode
      */
-    public void setPostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
      * Country for this User This will be validated by the /api/v1/countries data set
      *
      * @return The field country
      */
-    public String getCountry() { return this.country; }
+    public @Nullable String getCountry() { return this.country; }
     /**
      * Country for this User This will be validated by the /api/v1/countries data set
      *
      * @param value The new value for country
      */
-    public void setCountry(String value) { this.country = value; }
+    public void setCountry(@Nullable String value) { this.country = value; }
     /**
      * Image URL for this User
      *
      * @return The field imageURL
      */
-    public String getImageURL() { return this.imageURL; }
+    public @Nullable String getImageURL() { return this.imageURL; }
     /**
      * Image URL for this User
      *
      * @param value The new value for imageURL
      */
-    public void setImageURL(String value) { this.imageURL = value; }
+    public void setImageURL(@Nullable String value) { this.imageURL = value; }
     /**
      * Description for this User.
      *
      * @return The field description
      */
-    public String getDescription() { return this.description; }
+    public @Nullable String getDescription() { return this.description; }
     /**
      * Description for this User.
      *
      * @param value The new value for description
      */
-    public void setDescription(String value) { this.description = value; }
+    public void setDescription(@Nullable String value) { this.description = value; }
     /**
      * Last date time user logged into Azure B2C.
      *
      * @return The field b2CLastLoggedIn
      */
-    public String getB2CLastLoggedIn() { return this.b2CLastLoggedIn; }
+    public @Nullable String getB2CLastLoggedIn() { return this.b2CLastLoggedIn; }
     /**
      * Last date time user logged into Azure B2C.
      *
      * @param value The new value for b2CLastLoggedIn
      */
-    public void setB2CLastLoggedIn(String value) { this.b2CLastLoggedIn = value; }
+    public void setB2CLastLoggedIn(@Nullable String value) { this.b2CLastLoggedIn = value; }
     /**
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
@@ -402,7 +404,7 @@ public class UserAccountModel
      *
      * @return The field defaultCurrencyCode
      */
-    public String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
+    public @Nullable String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
@@ -411,7 +413,7 @@ public class UserAccountModel
      *
      * @param value The new value for defaultCurrencyCode
      */
-    public void setDefaultCurrencyCode(String value) { this.defaultCurrencyCode = value; }
+    public void setDefaultCurrencyCode(@Nullable String value) { this.defaultCurrencyCode = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -422,7 +424,7 @@ public class UserAccountModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -433,7 +435,7 @@ public class UserAccountModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -444,7 +446,7 @@ public class UserAccountModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -455,7 +457,7 @@ public class UserAccountModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -466,7 +468,7 @@ public class UserAccountModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -477,19 +479,19 @@ public class UserAccountModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
      * Accounting role definition for this User.
      * To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
      *
      * @return The field accountingRoleCodeDefinition
      */
-    public CodeDefinitionModel getAccountingRoleCodeDefinition() { return this.accountingRoleCodeDefinition; }
+    public @Nullable CodeDefinitionModel getAccountingRoleCodeDefinition() { return this.accountingRoleCodeDefinition; }
     /**
      * Accounting role definition for this User.
      * To retrieve this collection, specify `AccountingRole` in the "Include" parameter for your query.
      *
      * @param value The new value for accountingRoleCodeDefinition
      */
-    public void setAccountingRoleCodeDefinition(CodeDefinitionModel value) { this.accountingRoleCodeDefinition = value; }
+    public void setAccountingRoleCodeDefinition(@Nullable CodeDefinitionModel value) { this.accountingRoleCodeDefinition = value; }
 };

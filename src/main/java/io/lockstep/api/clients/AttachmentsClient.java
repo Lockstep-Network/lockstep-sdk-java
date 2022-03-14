@@ -18,10 +18,13 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.AttachmentModel;
 
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.UriModel;
+import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
@@ -37,7 +40,7 @@ public class AttachmentsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public AttachmentsClient(LockstepApi client) {
+    public AttachmentsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -53,7 +56,7 @@ public class AttachmentsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AttachmentModel> retrieveAttachment(String id, String include)
+    public @NotNull LockstepResponse<AttachmentModel> retrieveAttachment(@NotNull String id, @Nullable String include)
     {
         RestRequest<AttachmentModel> r = new RestRequest<AttachmentModel>(this.client, "GET", "/api/v1/Attachments/{id}");
         r.AddPath("{id}", id.toString());
@@ -74,7 +77,7 @@ public class AttachmentsClient
      * @param body A list of changes to apply to this Attachment
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AttachmentModel> updateAttachment(String id, Object body)
+    public @NotNull LockstepResponse<AttachmentModel> updateAttachment(@NotNull String id, @NotNull Object body)
     {
         RestRequest<AttachmentModel> r = new RestRequest<AttachmentModel>(this.client, "PATCH", "/api/v1/Attachments/{id}");
         r.AddPath("{id}", id.toString());
@@ -92,7 +95,7 @@ public class AttachmentsClient
      * @param id The unique ID number of the Attachment to be archived
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> archiveAttachment(String id)
+    public @NotNull LockstepResponse<ActionResultModel> archiveAttachment(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Attachments/{id}");
         r.AddPath("{id}", id.toString());
@@ -109,7 +112,7 @@ public class AttachmentsClient
      * @param id The unique ID number of the Attachment whose URI will be returned
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<UriModel> downloadAttachment(String id)
+    public @NotNull LockstepResponse<UriModel> downloadAttachment(@NotNull String id)
     {
         RestRequest<UriModel> r = new RestRequest<UriModel>(this.client, "GET", "/api/v1/Attachments/{id}/download");
         r.AddPath("{id}", id.toString());
@@ -125,14 +128,16 @@ public class AttachmentsClient
      *
      * @param tableName The name of the type of object to which this Attachment will be linked
      * @param objectId The unique ID of the object to which this Attachment will be linked
+     * @param attachmentType The type of this attachment
      * @param filename The full path of a file to upload to the API
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<AttachmentModel[]> uploadAttachment(String tableName, String objectId, byte[] filename)
+    public @NotNull LockstepResponse<AttachmentModel[]> uploadAttachment(@NotNull String tableName, @NotNull String objectId, @Nullable String attachmentType, @NotNull byte[] filename)
     {
         RestRequest<AttachmentModel[]> r = new RestRequest<AttachmentModel[]>(this.client, "POST", "/api/v1/Attachments");
         r.AddQuery("tableName", tableName.toString());
         r.AddQuery("objectId", objectId.toString());
+        r.AddQuery("attachmentType", attachmentType.toString());
         return r.Call(AttachmentModel[].class);
     }
 
@@ -152,7 +157,7 @@ public class AttachmentsClient
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<AttachmentModel>> queryAttachments(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<AttachmentModel>> queryAttachments(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<AttachmentModel>> r = new RestRequest<FetchResult<AttachmentModel>>(this.client, "GET", "/api/v1/Attachments/query");
         r.AddQuery("filter", filter.toString());

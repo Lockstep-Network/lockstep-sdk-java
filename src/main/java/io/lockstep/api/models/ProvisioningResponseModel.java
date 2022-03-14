@@ -15,102 +15,104 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents the response to either a successful or failed account provisioning
  */
 public class ProvisioningResponseModel
 {
-    private String userName;
-    private String accountName;
-    private String userId;
-    private String groupKey;
-    private String appEnrollmentId;
-    private String syncRequestId;
-    private String errorMessage;
+    private @Nullable String userName;
+    private @Nullable String accountName;
+    private @Nullable String userId;
+    private @Nullable String groupKey;
+    private @Nullable String appEnrollmentId;
+    private @Nullable String syncRequestId;
+    private @Nullable String errorMessage;
 
     /**
      * If provisioning is successful, contains the username of the created user.
      *
      * @return The field userName
      */
-    public String getUserName() { return this.userName; }
+    public @Nullable String getUserName() { return this.userName; }
     /**
      * If provisioning is successful, contains the username of the created user.
      *
      * @param value The new value for userName
      */
-    public void setUserName(String value) { this.userName = value; }
+    public void setUserName(@Nullable String value) { this.userName = value; }
     /**
      * If provisioning is successful, contains subscription account name of created user.
      *
      * @return The field accountName
      */
-    public String getAccountName() { return this.accountName; }
+    public @Nullable String getAccountName() { return this.accountName; }
     /**
      * If provisioning is successful, contains subscription account name of created user.
      *
      * @param value The new value for accountName
      */
-    public void setAccountName(String value) { this.accountName = value; }
+    public void setAccountName(@Nullable String value) { this.accountName = value; }
     /**
      * If provisioning is successful, contains the unique identifier of the created user.
      *
      * @return The field userId
      */
-    public String getUserId() { return this.userId; }
+    public @Nullable String getUserId() { return this.userId; }
     /**
      * If provisioning is successful, contains the unique identifier of the created user.
      *
      * @param value The new value for userId
      */
-    public void setUserId(String value) { this.userId = value; }
+    public void setUserId(@Nullable String value) { this.userId = value; }
     /**
      * If provisioning is successful, contains the group key of the created user.
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @Nullable String getGroupKey() { return this.groupKey; }
     /**
      * If provisioning is successful, contains the group key of the created user.
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@Nullable String value) { this.groupKey = value; }
     /**
      * If provisioning is successful, contains the app enrollment id of the created app enrollment.
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * If provisioning is successful, contains the app enrollment id of the created app enrollment.
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
      *
      * @return The field syncRequestId
      */
-    public String getSyncRequestId() { return this.syncRequestId; }
+    public @Nullable String getSyncRequestId() { return this.syncRequestId; }
     /**
      * if provisioning is successful, contains the sync request id of the sync that was started for the app enrollment.
      *
      * @param value The new value for syncRequestId
      */
-    public void setSyncRequestId(String value) { this.syncRequestId = value; }
+    public void setSyncRequestId(@Nullable String value) { this.syncRequestId = value; }
     /**
      * The error message(s).
      *
      * @return The field errorMessage
      */
-    public String getErrorMessage() { return this.errorMessage; }
+    public @Nullable String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message(s).
      *
      * @param value The new value for errorMessage
      */
-    public void setErrorMessage(String value) { this.errorMessage = value; }
+    public void setErrorMessage(@Nullable String value) { this.errorMessage = value; }
 };

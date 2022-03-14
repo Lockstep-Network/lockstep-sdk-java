@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ApplicationModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class ApplicationsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public ApplicationsClient(LockstepApi client) {
+    public ApplicationsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -52,7 +54,7 @@ public class ApplicationsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ApplicationModel> retrieveApplication(String id, String include)
+    public @NotNull LockstepResponse<ApplicationModel> retrieveApplication(@NotNull String id, @Nullable String include)
     {
         RestRequest<ApplicationModel> r = new RestRequest<ApplicationModel>(this.client, "GET", "/api/v1/Applications/{id}");
         r.AddPath("{id}", id.toString());
@@ -73,7 +75,7 @@ public class ApplicationsClient
      * @param body A list of changes to apply to this Application
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ApplicationModel> updateApplication(String id, Object body)
+    public @NotNull LockstepResponse<ApplicationModel> updateApplication(@NotNull String id, @NotNull Object body)
     {
         RestRequest<ApplicationModel> r = new RestRequest<ApplicationModel>(this.client, "PATCH", "/api/v1/Applications/{id}");
         r.AddPath("{id}", id.toString());
@@ -91,7 +93,7 @@ public class ApplicationsClient
      * @param id The unique ID number of the Application to delete
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> deleteApplication(String id)
+    public @NotNull LockstepResponse<ActionResultModel> deleteApplication(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Applications/{id}");
         r.AddPath("{id}", id.toString());
@@ -108,7 +110,7 @@ public class ApplicationsClient
      * @param body The Applications to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ApplicationModel[]> createApplications(ApplicationModel[] body)
+    public @NotNull LockstepResponse<ApplicationModel[]> createApplications(@NotNull ApplicationModel[] body)
     {
         RestRequest<ApplicationModel[]> r = new RestRequest<ApplicationModel[]>(this.client, "POST", "/api/v1/Applications");
         r.AddBody(body);
@@ -131,7 +133,7 @@ public class ApplicationsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<ApplicationModel>> queryApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<ApplicationModel>> queryApplications(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<ApplicationModel>> r = new RestRequest<FetchResult<ApplicationModel>>(this.client, "GET", "/api/v1/Applications/query");
         r.AddQuery("filter", filter.toString());

@@ -15,18 +15,20 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Contains group level payment data.
  */
 public class PaymentDetailHeaderModel
 {
-    private String groupKey;
-    private Integer customerCount;
-    private Double amountCollected;
-    private Double unappliedAmount;
-    private Integer paidInvoiceCount;
-    private Integer openInvoiceCount;
+    private @NotNull String groupKey;
+    private @Nullable Integer customerCount;
+    private @Nullable Double amountCollected;
+    private @Nullable Double unappliedAmount;
+    private @Nullable Integer paidInvoiceCount;
+    private @Nullable Integer openInvoiceCount;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -36,7 +38,7 @@ public class PaymentDetailHeaderModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -45,65 +47,65 @@ public class PaymentDetailHeaderModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The total number of Customers.
      *
      * @return The field customerCount
      */
-    public Integer getCustomerCount() { return this.customerCount; }
+    public @Nullable Integer getCustomerCount() { return this.customerCount; }
     /**
      * The total number of Customers.
      *
      * @param value The new value for customerCount
      */
-    public void setCustomerCount(Integer value) { this.customerCount = value; }
+    public void setCustomerCount(@Nullable Integer value) { this.customerCount = value; }
     /**
      * The total amount collected.
      *
      * @return The field amountCollected
      */
-    public Double getAmountCollected() { return this.amountCollected; }
+    public @Nullable Double getAmountCollected() { return this.amountCollected; }
     /**
      * The total amount collected.
      *
      * @param value The new value for amountCollected
      */
-    public void setAmountCollected(Double value) { this.amountCollected = value; }
+    public void setAmountCollected(@Nullable Double value) { this.amountCollected = value; }
     /**
      * The total unapplied amount.
      *
      * @return The field unappliedAmount
      */
-    public Double getUnappliedAmount() { return this.unappliedAmount; }
+    public @Nullable Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * The total unapplied amount.
      *
      * @param value The new value for unappliedAmount
      */
-    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(@Nullable Double value) { this.unappliedAmount = value; }
     /**
      * The number of paid invoices.
      *
      * @return The field paidInvoiceCount
      */
-    public Integer getPaidInvoiceCount() { return this.paidInvoiceCount; }
+    public @Nullable Integer getPaidInvoiceCount() { return this.paidInvoiceCount; }
     /**
      * The number of paid invoices.
      *
      * @param value The new value for paidInvoiceCount
      */
-    public void setPaidInvoiceCount(Integer value) { this.paidInvoiceCount = value; }
+    public void setPaidInvoiceCount(@Nullable Integer value) { this.paidInvoiceCount = value; }
     /**
      * The number of open invoices.
      *
      * @return The field openInvoiceCount
      */
-    public Integer getOpenInvoiceCount() { return this.openInvoiceCount; }
+    public @Nullable Integer getOpenInvoiceCount() { return this.openInvoiceCount; }
     /**
      * The number of open invoices.
      *
      * @param value The new value for openInvoiceCount
      */
-    public void setOpenInvoiceCount(Integer value) { this.openInvoiceCount = value; }
+    public void setOpenInvoiceCount(@Nullable Integer value) { this.openInvoiceCount = value; }
 };

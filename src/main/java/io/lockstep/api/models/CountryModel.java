@@ -15,167 +15,169 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Country model for ISO-3166
  */
 public class CountryModel
 {
-    private String name;
-    private String alpha2;
-    private String alpha3;
-    private Integer countryCode;
-    private String region;
-    private String subRegion;
-    private String intermediateRegion;
-    private Integer regionCode;
-    private Integer subRegionCode;
-    private Integer intermediateRegionCode;
-    private String frenchName;
-    private String aliases;
+    private @Nullable String name;
+    private @Nullable String alpha2;
+    private @Nullable String alpha3;
+    private @NotNull Integer countryCode;
+    private @Nullable String region;
+    private @Nullable String subRegion;
+    private @Nullable String intermediateRegion;
+    private @NotNull Integer regionCode;
+    private @NotNull Integer subRegionCode;
+    private @NotNull Integer intermediateRegionCode;
+    private @Nullable String frenchName;
+    private @Nullable String aliases;
 
     /**
      * Name of the country
      *
      * @return The field name
      */
-    public String getName() { return this.name; }
+    public @Nullable String getName() { return this.name; }
     /**
      * Name of the country
      *
      * @param value The new value for name
      */
-    public void setName(String value) { this.name = value; }
+    public void setName(@Nullable String value) { this.name = value; }
     /**
      * 2 letter alphabetic code for the given country
      *
      * @return The field alpha2
      */
-    public String getAlpha2() { return this.alpha2; }
+    public @Nullable String getAlpha2() { return this.alpha2; }
     /**
      * 2 letter alphabetic code for the given country
      *
      * @param value The new value for alpha2
      */
-    public void setAlpha2(String value) { this.alpha2 = value; }
+    public void setAlpha2(@Nullable String value) { this.alpha2 = value; }
     /**
      * 3 letter alphabetic code for the given country
      *
      * @return The field alpha3
      */
-    public String getAlpha3() { return this.alpha3; }
+    public @Nullable String getAlpha3() { return this.alpha3; }
     /**
      * 3 letter alphabetic code for the given country
      *
      * @param value The new value for alpha3
      */
-    public void setAlpha3(String value) { this.alpha3 = value; }
+    public void setAlpha3(@Nullable String value) { this.alpha3 = value; }
     /**
      * Unique 3 digit number for the given country
      *
      * @return The field countryCode
      */
-    public Integer getCountryCode() { return this.countryCode; }
+    public @NotNull Integer getCountryCode() { return this.countryCode; }
     /**
      * Unique 3 digit number for the given country
      *
      * @param value The new value for countryCode
      */
-    public void setCountryCode(Integer value) { this.countryCode = value; }
+    public void setCountryCode(@NotNull Integer value) { this.countryCode = value; }
     /**
      * Region of the country
      *
      * @return The field region
      */
-    public String getRegion() { return this.region; }
+    public @Nullable String getRegion() { return this.region; }
     /**
      * Region of the country
      *
      * @param value The new value for region
      */
-    public void setRegion(String value) { this.region = value; }
+    public void setRegion(@Nullable String value) { this.region = value; }
     /**
      * Subregion of the country
      *
      * @return The field subRegion
      */
-    public String getSubRegion() { return this.subRegion; }
+    public @Nullable String getSubRegion() { return this.subRegion; }
     /**
      * Subregion of the country
      *
      * @param value The new value for subRegion
      */
-    public void setSubRegion(String value) { this.subRegion = value; }
+    public void setSubRegion(@Nullable String value) { this.subRegion = value; }
     /**
      * Intermediate region of the country
      *
      * @return The field intermediateRegion
      */
-    public String getIntermediateRegion() { return this.intermediateRegion; }
+    public @Nullable String getIntermediateRegion() { return this.intermediateRegion; }
     /**
      * Intermediate region of the country
      *
      * @param value The new value for intermediateRegion
      */
-    public void setIntermediateRegion(String value) { this.intermediateRegion = value; }
+    public void setIntermediateRegion(@Nullable String value) { this.intermediateRegion = value; }
     /**
      * Numeric code for a region
      *
      * @return The field regionCode
      */
-    public Integer getRegionCode() { return this.regionCode; }
+    public @NotNull Integer getRegionCode() { return this.regionCode; }
     /**
      * Numeric code for a region
      *
      * @param value The new value for regionCode
      */
-    public void setRegionCode(Integer value) { this.regionCode = value; }
+    public void setRegionCode(@NotNull Integer value) { this.regionCode = value; }
     /**
      * Numeric code for a subregion
      *
      * @return The field subRegionCode
      */
-    public Integer getSubRegionCode() { return this.subRegionCode; }
+    public @NotNull Integer getSubRegionCode() { return this.subRegionCode; }
     /**
      * Numeric code for a subregion
      *
      * @param value The new value for subRegionCode
      */
-    public void setSubRegionCode(Integer value) { this.subRegionCode = value; }
+    public void setSubRegionCode(@NotNull Integer value) { this.subRegionCode = value; }
     /**
      * Numeric code for an intermediate region
      *
      * @return The field intermediateRegionCode
      */
-    public Integer getIntermediateRegionCode() { return this.intermediateRegionCode; }
+    public @NotNull Integer getIntermediateRegionCode() { return this.intermediateRegionCode; }
     /**
      * Numeric code for an intermediate region
      *
      * @param value The new value for intermediateRegionCode
      */
-    public void setIntermediateRegionCode(Integer value) { this.intermediateRegionCode = value; }
+    public void setIntermediateRegionCode(@NotNull Integer value) { this.intermediateRegionCode = value; }
     /**
      * French name of the country
      *
      * @return The field frenchName
      */
-    public String getFrenchName() { return this.frenchName; }
+    public @Nullable String getFrenchName() { return this.frenchName; }
     /**
      * French name of the country
      *
      * @param value The new value for frenchName
      */
-    public void setFrenchName(String value) { this.frenchName = value; }
+    public void setFrenchName(@Nullable String value) { this.frenchName = value; }
     /**
      * A different name for a country
      *
      * @return The field aliases
      */
-    public String getAliases() { return this.aliases; }
+    public @Nullable String getAliases() { return this.aliases; }
     /**
      * A different name for a country
      *
      * @param value The new value for aliases
      */
-    public void setAliases(String value) { this.aliases = value; }
+    public void setAliases(@Nullable String value) { this.aliases = value; }
 };

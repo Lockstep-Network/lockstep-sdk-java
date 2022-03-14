@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CompanyModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -38,7 +40,7 @@ public class CompaniesClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public CompaniesClient(LockstepApi client) {
+    public CompaniesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -54,7 +56,7 @@ public class CompaniesClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CompanyModel> retrieveCompany(String id, String include)
+    public @NotNull LockstepResponse<CompanyModel> retrieveCompany(@NotNull String id, @Nullable String include)
     {
         RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "GET", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
@@ -75,7 +77,7 @@ public class CompaniesClient
      * @param body A list of changes to apply to this Company
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CompanyModel> updateCompany(String id, Object body)
+    public @NotNull LockstepResponse<CompanyModel> updateCompany(@NotNull String id, @NotNull Object body)
     {
         RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "PATCH", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
@@ -93,7 +95,7 @@ public class CompaniesClient
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> disableCompany(String id)
+    public @NotNull LockstepResponse<ActionResultModel> disableCompany(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
@@ -110,7 +112,7 @@ public class CompaniesClient
      * @param body The Companies to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CompanyModel[]> createCompanies(CompanyModel[] body)
+    public @NotNull LockstepResponse<CompanyModel[]> createCompanies(@NotNull CompanyModel[] body)
     {
         RestRequest<CompanyModel[]> r = new RestRequest<CompanyModel[]>(this.client, "POST", "/api/v1/Companies");
         r.AddBody(body);
@@ -133,7 +135,7 @@ public class CompaniesClient
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CompanyModel>> queryCompanies(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CompanyModel>> queryCompanies(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CompanyModel>> r = new RestRequest<FetchResult<CompanyModel>>(this.client, "GET", "/api/v1/Companies/query");
         r.AddQuery("filter", filter.toString());
@@ -160,7 +162,7 @@ public class CompaniesClient
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CustomerSummaryModel>> r = new RestRequest<FetchResult<CustomerSummaryModel>>(this.client, "GET", "/api/v1/Companies/views/customer-summary");
         r.AddQuery("filter", filter.toString());
@@ -181,7 +183,7 @@ public class CompaniesClient
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CustomerDetailsModel> retrieveCustomerDetail(String id)
+    public @NotNull LockstepResponse<CustomerDetailsModel> retrieveCustomerDetail(@NotNull String id)
     {
         RestRequest<CustomerDetailsModel> r = new RestRequest<CustomerDetailsModel>(this.client, "GET", "/api/v1/Companies/views/customer-details/{id}");
         r.AddPath("{id}", id.toString());

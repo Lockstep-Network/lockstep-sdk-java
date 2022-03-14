@@ -15,34 +15,36 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Contains detailed information about a Payment.
  */
 public class PaymentDetailModel
 {
-    private String groupKey;
-    private String paymentId;
-    private String customerId;
-    private String customerName;
-    private String memoText;
-    private String referenceCode;
-    private String primaryContact;
-    private String email;
-    private Double paymentAmount;
-    private Double unappliedAmount;
-    private String paymentType;
-    private String paymentDate;
-    private String postDate;
-    private String phone;
-    private String fax;
-    private String address1;
-    private String address2;
-    private String address3;
-    private String city;
-    private String stateRegion;
-    private String postalCode;
-    private String countryCode;
+    private @NotNull String groupKey;
+    private @NotNull String paymentId;
+    private @NotNull String customerId;
+    private @Nullable String customerName;
+    private @Nullable String memoText;
+    private @Nullable String referenceCode;
+    private @Nullable String primaryContact;
+    private @Nullable String email;
+    private @NotNull Double paymentAmount;
+    private @NotNull Double unappliedAmount;
+    private @Nullable String paymentType;
+    private @Nullable String paymentDate;
+    private @Nullable String postDate;
+    private @Nullable String phone;
+    private @Nullable String fax;
+    private @Nullable String address1;
+    private @Nullable String address2;
+    private @Nullable String address3;
+    private @Nullable String city;
+    private @Nullable String stateRegion;
+    private @Nullable String postalCode;
+    private @Nullable String countryCode;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -52,7 +54,7 @@ public class PaymentDetailModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -61,257 +63,257 @@ public class PaymentDetailModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID of this Payment.
      *
      * @return The field paymentId
      */
-    public String getPaymentId() { return this.paymentId; }
+    public @NotNull String getPaymentId() { return this.paymentId; }
     /**
      * The unique ID of this Payment.
      *
      * @param value The new value for paymentId
      */
-    public void setPaymentId(String value) { this.paymentId = value; }
+    public void setPaymentId(@NotNull String value) { this.paymentId = value; }
     /**
      * The ID of the customer to which this Payment belongs.
      *
      * @return The field customerId
      */
-    public String getCustomerId() { return this.customerId; }
+    public @NotNull String getCustomerId() { return this.customerId; }
     /**
      * The ID of the customer to which this Payment belongs.
      *
      * @param value The new value for customerId
      */
-    public void setCustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(@NotNull String value) { this.customerId = value; }
     /**
      * The name of the customer to which this Payment belongs.
      *
      * @return The field customerName
      */
-    public String getCustomerName() { return this.customerName; }
+    public @Nullable String getCustomerName() { return this.customerName; }
     /**
      * The name of the customer to which this Payment belongs.
      *
      * @param value The new value for customerName
      */
-    public void setCustomerName(String value) { this.customerName = value; }
+    public void setCustomerName(@Nullable String value) { this.customerName = value; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @return The field memoText
      */
-    public String getMemoText() { return this.memoText; }
+    public @Nullable String getMemoText() { return this.memoText; }
     /**
      * Memo or reference text (ex. memo field on a check).
      *
      * @param value The new value for memoText
      */
-    public void setMemoText(String value) { this.memoText = value; }
+    public void setMemoText(@Nullable String value) { this.memoText = value; }
     /**
      * Reference code for the payment for the given Erp system.
      *
      * @return The field referenceCode
      */
-    public String getReferenceCode() { return this.referenceCode; }
+    public @Nullable String getReferenceCode() { return this.referenceCode; }
     /**
      * Reference code for the payment for the given Erp system.
      *
      * @param value The new value for referenceCode
      */
-    public void setReferenceCode(String value) { this.referenceCode = value; }
+    public void setReferenceCode(@Nullable String value) { this.referenceCode = value; }
     /**
      * The name of the Primary Contact for the Customer.
      *
      * @return The field primaryContact
      */
-    public String getPrimaryContact() { return this.primaryContact; }
+    public @Nullable String getPrimaryContact() { return this.primaryContact; }
     /**
      * The name of the Primary Contact for the Customer.
      *
      * @param value The new value for primaryContact
      */
-    public void setPrimaryContact(String value) { this.primaryContact = value; }
+    public void setPrimaryContact(@Nullable String value) { this.primaryContact = value; }
     /**
      * The Email address of the Customer.
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @Nullable String getEmail() { return this.email; }
     /**
      * The Email address of the Customer.
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@Nullable String value) { this.email = value; }
     /**
      * Total amount of this Payment.
      *
      * @return The field paymentAmount
      */
-    public Double getPaymentAmount() { return this.paymentAmount; }
+    public @NotNull Double getPaymentAmount() { return this.paymentAmount; }
     /**
      * Total amount of this Payment.
      *
      * @param value The new value for paymentAmount
      */
-    public void setPaymentAmount(Double value) { this.paymentAmount = value; }
+    public void setPaymentAmount(@NotNull Double value) { this.paymentAmount = value; }
     /**
      * Unapplied balance of this Payment.
      *
      * @return The field unappliedAmount
      */
-    public Double getUnappliedAmount() { return this.unappliedAmount; }
+    public @NotNull Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
      * Unapplied balance of this Payment.
      *
      * @param value The new value for unappliedAmount
      */
-    public void setUnappliedAmount(Double value) { this.unappliedAmount = value; }
+    public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
     /**
      * The type of payment, Payment or AP Payment.
      *
      * @return The field paymentType
      */
-    public String getPaymentType() { return this.paymentType; }
+    public @Nullable String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, Payment or AP Payment.
      *
      * @param value The new value for paymentType
      */
-    public void setPaymentType(String value) { this.paymentType = value; }
+    public void setPaymentType(@Nullable String value) { this.paymentType = value; }
     /**
      * The date of this Payment.
      *
      * @return The field paymentDate
      */
-    public String getPaymentDate() { return this.paymentDate; }
+    public @Nullable String getPaymentDate() { return this.paymentDate; }
     /**
      * The date of this Payment.
      *
      * @param value The new value for paymentDate
      */
-    public void setPaymentDate(String value) { this.paymentDate = value; }
+    public void setPaymentDate(@Nullable String value) { this.paymentDate = value; }
     /**
      * Payment post date.
      *
      * @return The field postDate
      */
-    public String getPostDate() { return this.postDate; }
+    public @Nullable String getPostDate() { return this.postDate; }
     /**
      * Payment post date.
      *
      * @param value The new value for postDate
      */
-    public void setPostDate(String value) { this.postDate = value; }
+    public void setPostDate(@Nullable String value) { this.postDate = value; }
     /**
      * The phone number of the Customer's Primary Contact.
      *
      * @return The field phone
      */
-    public String getPhone() { return this.phone; }
+    public @Nullable String getPhone() { return this.phone; }
     /**
      * The phone number of the Customer's Primary Contact.
      *
      * @param value The new value for phone
      */
-    public void setPhone(String value) { this.phone = value; }
+    public void setPhone(@Nullable String value) { this.phone = value; }
     /**
      * The fax number of the Customer's Primary Contact.
      *
      * @return The field fax
      */
-    public String getFax() { return this.fax; }
+    public @Nullable String getFax() { return this.fax; }
     /**
      * The fax number of the Customer's Primary Contact.
      *
      * @param value The new value for fax
      */
-    public void setFax(String value) { this.fax = value; }
+    public void setFax(@Nullable String value) { this.fax = value; }
     /**
      * The first line of the address for the Customer's Primary Contact.
      *
      * @return The field address1
      */
-    public String getAddress1() { return this.address1; }
+    public @Nullable String getAddress1() { return this.address1; }
     /**
      * The first line of the address for the Customer's Primary Contact.
      *
      * @param value The new value for address1
      */
-    public void setAddress1(String value) { this.address1 = value; }
+    public void setAddress1(@Nullable String value) { this.address1 = value; }
     /**
      * The second line of the address for the Customer's Primary Contact.
      *
      * @return The field address2
      */
-    public String getAddress2() { return this.address2; }
+    public @Nullable String getAddress2() { return this.address2; }
     /**
      * The second line of the address for the Customer's Primary Contact.
      *
      * @param value The new value for address2
      */
-    public void setAddress2(String value) { this.address2 = value; }
+    public void setAddress2(@Nullable String value) { this.address2 = value; }
     /**
      * The third line of the address for the Customer's Primary Contact.
      *
      * @return The field address3
      */
-    public String getAddress3() { return this.address3; }
+    public @Nullable String getAddress3() { return this.address3; }
     /**
      * The third line of the address for the Customer's Primary Contact.
      *
      * @param value The new value for address3
      */
-    public void setAddress3(String value) { this.address3 = value; }
+    public void setAddress3(@Nullable String value) { this.address3 = value; }
     /**
      * The city of the address for the Customer's Primary Contact.
      *
      * @return The field city
      */
-    public String getCity() { return this.city; }
+    public @Nullable String getCity() { return this.city; }
     /**
      * The city of the address for the Customer's Primary Contact.
      *
      * @param value The new value for city
      */
-    public void setCity(String value) { this.city = value; }
+    public void setCity(@Nullable String value) { this.city = value; }
     /**
      * The state/region of the address for the Customer's Primary Contact.
      *
      * @return The field stateRegion
      */
-    public String getStateRegion() { return this.stateRegion; }
+    public @Nullable String getStateRegion() { return this.stateRegion; }
     /**
      * The state/region of the address for the Customer's Primary Contact.
      *
      * @param value The new value for stateRegion
      */
-    public void setStateRegion(String value) { this.stateRegion = value; }
+    public void setStateRegion(@Nullable String value) { this.stateRegion = value; }
     /**
      * The postal/zip code of the address for the Customer's Primary Contact.
      *
      * @return The field postalCode
      */
-    public String getPostalCode() { return this.postalCode; }
+    public @Nullable String getPostalCode() { return this.postalCode; }
     /**
      * The postal/zip code of the address for the Customer's Primary Contact.
      *
      * @param value The new value for postalCode
      */
-    public void setPostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
      * The 2 character country code of the address for the Customer's Primary Contact.
      *
      * @return The field countryCode
      */
-    public String getCountryCode() { return this.countryCode; }
+    public @Nullable String getCountryCode() { return this.countryCode; }
     /**
      * The 2 character country code of the address for the Customer's Primary Contact.
      *
      * @param value The new value for countryCode
      */
-    public void setCountryCode(String value) { this.countryCode = value; }
+    public void setCountryCode(@Nullable String value) { this.countryCode = value; }
 };

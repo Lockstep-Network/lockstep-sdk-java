@@ -15,17 +15,19 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Aggregated Attachment status information.
  */
 public class AttachmentHeaderInfoModel
 {
-    private String groupKey;
-    private String companyId;
-    private Integer totalAttachments;
-    private Integer totalArchived;
-    private Integer totalActive;
+    private @NotNull String groupKey;
+    private @Nullable String companyId;
+    private @NotNull Integer totalAttachments;
+    private @NotNull Integer totalArchived;
+    private @NotNull Integer totalActive;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -35,7 +37,7 @@ public class AttachmentHeaderInfoModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -44,55 +46,55 @@ public class AttachmentHeaderInfoModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The CompanyId associated with the attachment status report. Providing a null value will
      * return an attachment summary for all attachments associated to the provided GroupKey
      *
      * @return The field companyId
      */
-    public String getCompanyId() { return this.companyId; }
+    public @Nullable String getCompanyId() { return this.companyId; }
     /**
      * The CompanyId associated with the attachment status report. Providing a null value will
      * return an attachment summary for all attachments associated to the provided GroupKey
      *
      * @param value The new value for companyId
      */
-    public void setCompanyId(String value) { this.companyId = value; }
+    public void setCompanyId(@Nullable String value) { this.companyId = value; }
     /**
      * The total number of attachments associated with the provided GroupKey and CompanyId.
      *
      * @return The field totalAttachments
      */
-    public Integer getTotalAttachments() { return this.totalAttachments; }
+    public @NotNull Integer getTotalAttachments() { return this.totalAttachments; }
     /**
      * The total number of attachments associated with the provided GroupKey and CompanyId.
      *
      * @param value The new value for totalAttachments
      */
-    public void setTotalAttachments(Integer value) { this.totalAttachments = value; }
+    public void setTotalAttachments(@NotNull Integer value) { this.totalAttachments = value; }
     /**
      * The total number of archived attachments associated with the provided GroupKey and CompanyId.
      *
      * @return The field totalArchived
      */
-    public Integer getTotalArchived() { return this.totalArchived; }
+    public @NotNull Integer getTotalArchived() { return this.totalArchived; }
     /**
      * The total number of archived attachments associated with the provided GroupKey and CompanyId.
      *
      * @param value The new value for totalArchived
      */
-    public void setTotalArchived(Integer value) { this.totalArchived = value; }
+    public void setTotalArchived(@NotNull Integer value) { this.totalArchived = value; }
     /**
      * The total number of active attachments associated with the provided GroupKey and CompanyId.
      *
      * @return The field totalActive
      */
-    public Integer getTotalActive() { return this.totalActive; }
+    public @NotNull Integer getTotalActive() { return this.totalActive; }
     /**
      * The total number of active attachments associated with the provided GroupKey and CompanyId.
      *
      * @param value The new value for totalActive
      */
-    public void setTotalActive(Integer value) { this.totalActive = value; }
+    public void setTotalActive(@NotNull Integer value) { this.totalActive = value; }
 };

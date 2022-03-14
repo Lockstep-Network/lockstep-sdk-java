@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ContactModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class ContactsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public ContactsClient(LockstepApi client) {
+    public ContactsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -50,7 +52,7 @@ public class ContactsClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ContactModel> retrieveContact(String id, String include)
+    public @NotNull LockstepResponse<ContactModel> retrieveContact(@NotNull String id, @Nullable String include)
     {
         RestRequest<ContactModel> r = new RestRequest<ContactModel>(this.client, "GET", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
@@ -69,7 +71,7 @@ public class ContactsClient
      * @param body A list of changes to apply to this Contact
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ContactModel> updateContact(String id, Object body)
+    public @NotNull LockstepResponse<ContactModel> updateContact(@NotNull String id, @NotNull Object body)
     {
         RestRequest<ContactModel> r = new RestRequest<ContactModel>(this.client, "PATCH", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
@@ -85,7 +87,7 @@ public class ContactsClient
      * @param id The unique Lockstep Platform ID number of the Contact to disable; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> disableContact(String id)
+    public @NotNull LockstepResponse<ActionResultModel> disableContact(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
@@ -100,7 +102,7 @@ public class ContactsClient
      * @param body The Contacts to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ContactModel[]> createContacts(ContactModel[] body)
+    public @NotNull LockstepResponse<ContactModel[]> createContacts(@NotNull ContactModel[] body)
     {
         RestRequest<ContactModel[]> r = new RestRequest<ContactModel[]>(this.client, "POST", "/api/v1/Contacts");
         r.AddBody(body);
@@ -121,7 +123,7 @@ public class ContactsClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<ContactModel>> queryContacts(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<ContactModel>> queryContacts(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<ContactModel>> r = new RestRequest<FetchResult<ContactModel>>(this.client, "GET", "/api/v1/Contacts/query");
         r.AddQuery("filter", filter.toString());

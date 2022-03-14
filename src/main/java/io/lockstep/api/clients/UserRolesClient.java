@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.UserRoleModel;
 
 import io.lockstep.api.models.FetchResult;
@@ -35,7 +37,7 @@ public class UserRolesClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public UserRolesClient(LockstepApi client) {
+    public UserRolesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -47,7 +49,7 @@ public class UserRolesClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<UserRoleModel> retrieveUserRole(String id, String include)
+    public @NotNull LockstepResponse<UserRoleModel> retrieveUserRole(@NotNull String id, @Nullable String include)
     {
         RestRequest<UserRoleModel> r = new RestRequest<UserRoleModel>(this.client, "GET", "/api/v1/UserRoles/{id}");
         r.AddPath("{id}", id.toString());
@@ -65,7 +67,7 @@ public class UserRolesClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<UserRoleModel>> queryUserRoles(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<UserRoleModel>> queryUserRoles(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<UserRoleModel>> r = new RestRequest<FetchResult<UserRoleModel>>(this.client, "GET", "/api/v1/UserRoles/query");
         r.AddQuery("filter", filter.toString());

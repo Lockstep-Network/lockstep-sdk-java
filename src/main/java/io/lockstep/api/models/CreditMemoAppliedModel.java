@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Credit Memos reflect credits granted to a customer for various reasons, such as discounts or refunds.
@@ -25,23 +27,23 @@ package io.lockstep.api.models;
  */
 public class CreditMemoAppliedModel
 {
-    private String creditMemoAppliedId;
-    private String groupKey;
-    private String invoiceId;
-    private String creditMemoInvoiceId;
-    private String erpKey;
-    private Integer entryNumber;
-    private String applyToInvoiceDate;
-    private Double creditMemoAppliedAmount;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String appEnrollmentId;
-    private AttachmentModel[] attachments;
-    private NoteModel[] notes;
-    private CustomFieldDefinitionModel[] customFieldDefinitions;
-    private CustomFieldValueModel[] customFieldValues;
+    private @NotNull String creditMemoAppliedId;
+    private @NotNull String groupKey;
+    private @NotNull String invoiceId;
+    private @NotNull String creditMemoInvoiceId;
+    private @Nullable String erpKey;
+    private @NotNull Integer entryNumber;
+    private @NotNull String applyToInvoiceDate;
+    private @NotNull Double creditMemoAppliedAmount;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String appEnrollmentId;
+    private @Nullable AttachmentModel[] attachments;
+    private @Nullable NoteModel[] notes;
+    private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -51,7 +53,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field creditMemoAppliedId
      */
-    public String getCreditMemoAppliedId() { return this.creditMemoAppliedId; }
+    public @NotNull String getCreditMemoAppliedId() { return this.creditMemoAppliedId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -60,7 +62,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for creditMemoAppliedId
      */
-    public void setCreditMemoAppliedId(String value) { this.creditMemoAppliedId = value; }
+    public void setCreditMemoAppliedId(@NotNull String value) { this.creditMemoAppliedId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -69,7 +71,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -78,7 +80,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The Lockstep ID of the Invoice to which this credit memo was applied.  This Invoice's outstanding balance
      * was reduced by the value of the field `CreditMemoAppliedAmount` on the date `ApplyToInvoiceDate`.
@@ -89,7 +91,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field invoiceId
      */
-    public String getInvoiceId() { return this.invoiceId; }
+    public @NotNull String getInvoiceId() { return this.invoiceId; }
     /**
      * The Lockstep ID of the Invoice to which this credit memo was applied.  This Invoice's outstanding balance
      * was reduced by the value of the field `CreditMemoAppliedAmount` on the date `ApplyToInvoiceDate`.
@@ -100,7 +102,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for invoiceId
      */
-    public void setInvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(@NotNull String value) { this.invoiceId = value; }
     /**
      * The Lockstep ID of the Invoice of type "Credit Memo" that was consumed in this payment application event.
      *
@@ -110,7 +112,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field creditMemoInvoiceId
      */
-    public String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
+    public @NotNull String getCreditMemoInvoiceId() { return this.creditMemoInvoiceId; }
     /**
      * The Lockstep ID of the Invoice of type "Credit Memo" that was consumed in this payment application event.
      *
@@ -120,7 +122,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for creditMemoInvoiceId
      */
-    public void setCreditMemoInvoiceId(String value) { this.creditMemoInvoiceId = value; }
+    public void setCreditMemoInvoiceId(@NotNull String value) { this.creditMemoInvoiceId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -132,7 +134,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *
@@ -144,91 +146,91 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
      * Reference number for the applied credit memo.
      *
      * @return The field entryNumber
      */
-    public Integer getEntryNumber() { return this.entryNumber; }
+    public @NotNull Integer getEntryNumber() { return this.entryNumber; }
     /**
      * Reference number for the applied credit memo.
      *
      * @param value The new value for entryNumber
      */
-    public void setEntryNumber(Integer value) { this.entryNumber = value; }
+    public void setEntryNumber(@NotNull Integer value) { this.entryNumber = value; }
     /**
      * The date on which this credit memo was applied to the Invoice represented by `InvoiceId`.
      *
      * @return The field applyToInvoiceDate
      */
-    public String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
+    public @NotNull String getApplyToInvoiceDate() { return this.applyToInvoiceDate; }
     /**
      * The date on which this credit memo was applied to the Invoice represented by `InvoiceId`.
      *
      * @param value The new value for applyToInvoiceDate
      */
-    public void setApplyToInvoiceDate(String value) { this.applyToInvoiceDate = value; }
+    public void setApplyToInvoiceDate(@NotNull String value) { this.applyToInvoiceDate = value; }
     /**
      * The amount of the credit memo that was applied to the Invoice represented by `InvoiceId`.
      *
      * @return The field creditMemoAppliedAmount
      */
-    public Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
+    public @NotNull Double getCreditMemoAppliedAmount() { return this.creditMemoAppliedAmount; }
     /**
      * The amount of the credit memo that was applied to the Invoice represented by `InvoiceId`.
      *
      * @param value The new value for creditMemoAppliedAmount
      */
-    public void setCreditMemoAppliedAmount(Double value) { this.creditMemoAppliedAmount = value; }
+    public void setCreditMemoAppliedAmount(@NotNull Double value) { this.creditMemoAppliedAmount = value; }
     /**
      * Date credit memo applied record was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * Date credit memo applied record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The id of the user who created this applied credit memo.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The id of the user who created this applied credit memo.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * Date credit memo applied record was modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * Date credit memo applied record was modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The id of the user who modified this applied credit memo.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The id of the user who modified this applied credit memo.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -237,7 +239,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -246,7 +248,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -257,7 +259,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -268,7 +270,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -279,7 +281,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -290,7 +292,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -301,7 +303,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field customFieldDefinitions
      */
-    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public @Nullable CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -312,7 +314,7 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for customFieldDefinitions
      */
-    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -323,7 +325,7 @@ public class CreditMemoAppliedModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -334,5 +336,5 @@ public class CreditMemoAppliedModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
 };

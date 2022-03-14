@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents all possible data required to set up an app enrollment for a connector.
@@ -22,10 +24,14 @@ package io.lockstep.api.models;
  */
 public class ConnectorInfoModel
 {
-    private String authCode;
-    private String realmId;
-    private String redirectUri;
-    private String email;
+    private @Nullable String authCode;
+    private @Nullable String realmId;
+    private @Nullable String redirectUri;
+    private @Nullable String email;
+    private @Nullable String username;
+    private @Nullable String password;
+    private @Nullable String serverName;
+    private @Nullable Integer serverPort;
 
     /**
      * The authorization code returned from the first step of the OAuth2 flow
@@ -33,48 +39,96 @@ public class ConnectorInfoModel
      *
      * @return The field authCode
      */
-    public String getAuthCode() { return this.authCode; }
+    public @Nullable String getAuthCode() { return this.authCode; }
     /**
      * The authorization code returned from the first step of the OAuth2 flow
      * https://oauth.net/2/grant-types/authorization-code/
      *
      * @param value The new value for authCode
      */
-    public void setAuthCode(String value) { this.authCode = value; }
+    public void setAuthCode(@Nullable String value) { this.authCode = value; }
     /**
      * The realm id of the account being granted permissions to access
      *
      * @return The field realmId
      */
-    public String getRealmId() { return this.realmId; }
+    public @Nullable String getRealmId() { return this.realmId; }
     /**
      * The realm id of the account being granted permissions to access
      *
      * @param value The new value for realmId
      */
-    public void setRealmId(String value) { this.realmId = value; }
+    public void setRealmId(@Nullable String value) { this.realmId = value; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *
      * @return The field redirectUri
      */
-    public String getRedirectUri() { return this.redirectUri; }
+    public @Nullable String getRedirectUri() { return this.redirectUri; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *
      * @param value The new value for redirectUri
      */
-    public void setRedirectUri(String value) { this.redirectUri = value; }
+    public void setRedirectUri(@Nullable String value) { this.redirectUri = value; }
     /**
      * The email an email connection is being created for.
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @Nullable String getEmail() { return this.email; }
     /**
      * The email an email connection is being created for.
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@Nullable String value) { this.email = value; }
+    /**
+     * The username of the web services account with access permissions.
+     *
+     * @return The field username
+     */
+    public @Nullable String getUsername() { return this.username; }
+    /**
+     * The username of the web services account with access permissions.
+     *
+     * @param value The new value for username
+     */
+    public void setUsername(@Nullable String value) { this.username = value; }
+    /**
+     * The password for the web services account with access permissions.
+     *
+     * @return The field password
+     */
+    public @Nullable String getPassword() { return this.password; }
+    /**
+     * The password for the web services account with access permissions.
+     *
+     * @param value The new value for password
+     */
+    public void setPassword(@Nullable String value) { this.password = value; }
+    /**
+     * The server name a connection is being created for.
+     *
+     * @return The field serverName
+     */
+    public @Nullable String getServerName() { return this.serverName; }
+    /**
+     * The server name a connection is being created for.
+     *
+     * @param value The new value for serverName
+     */
+    public void setServerName(@Nullable String value) { this.serverName = value; }
+    /**
+     * The port number of the server a connection is being created for.
+     *
+     * @return The field serverPort
+     */
+    public @Nullable Integer getServerPort() { return this.serverPort; }
+    /**
+     * The port number of the server a connection is being created for.
+     *
+     * @param value The new value for serverPort
+     */
+    public void setServerPort(@Nullable Integer value) { this.serverPort = value; }
 };

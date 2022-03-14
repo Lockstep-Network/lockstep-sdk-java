@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.LeadModel;
 
 /**
@@ -32,7 +34,7 @@ public class LeadsClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public LeadsClient(LockstepApi client) {
+    public LeadsClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -45,7 +47,7 @@ public class LeadsClient
      * @param body The Leads to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<LeadModel[]> createLeads(LeadModel[] body)
+    public @NotNull LockstepResponse<LeadModel[]> createLeads(@NotNull LeadModel[] body)
     {
         RestRequest<LeadModel[]> r = new RestRequest<LeadModel[]>(this.client, "POST", "/api/v1/Leads");
         r.AddBody(body);

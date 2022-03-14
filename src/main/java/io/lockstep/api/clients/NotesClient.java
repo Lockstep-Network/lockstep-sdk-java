@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.NoteModel;
 
 import io.lockstep.api.models.ActionResultModel;
@@ -36,7 +38,7 @@ public class NotesClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public NotesClient(LockstepApi client) {
+    public NotesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -52,7 +54,7 @@ public class NotesClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<NoteModel> retrieveNote(String id, String include)
+    public @NotNull LockstepResponse<NoteModel> retrieveNote(@NotNull String id, @Nullable String include)
     {
         RestRequest<NoteModel> r = new RestRequest<NoteModel>(this.client, "GET", "/api/v1/Notes/{id}");
         r.AddPath("{id}", id.toString());
@@ -70,7 +72,7 @@ public class NotesClient
      * @param id Note id to be archived
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<ActionResultModel> archiveNote(String id)
+    public @NotNull LockstepResponse<ActionResultModel> archiveNote(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Notes/{id}");
         r.AddPath("{id}", id.toString());
@@ -87,7 +89,7 @@ public class NotesClient
      * @param body The array of notes to be created
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<NoteModel[]> createNotes(NoteModel[] body)
+    public @NotNull LockstepResponse<NoteModel[]> createNotes(@NotNull NoteModel[] body)
     {
         RestRequest<NoteModel[]> r = new RestRequest<NoteModel[]>(this.client, "POST", "/api/v1/Notes");
         r.AddBody(body);
@@ -110,7 +112,7 @@ public class NotesClient
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<NoteModel>> queryNotes(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<NoteModel>> queryNotes(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<NoteModel>> r = new RestRequest<FetchResult<NoteModel>>(this.client, "GET", "/api/v1/Notes/query");
         r.AddQuery("filter", filter.toString());

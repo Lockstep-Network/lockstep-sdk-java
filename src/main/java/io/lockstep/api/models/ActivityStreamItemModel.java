@@ -15,83 +15,85 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents an item belonging to the activity stream.
  */
 public class ActivityStreamItemModel
 {
-    private String objectKey;
-    private String activityStreamType;
-    private String textValue;
-    private String created;
-    private String createdUserId;
-    private String groupKey;
-    private String fromEmailAddress;
-    private String toEmailAddress;
-    private String fromContactName;
-    private String toContactName;
+    private @NotNull String objectKey;
+    private @Nullable String activityStreamType;
+    private @Nullable String textValue;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String groupKey;
+    private @Nullable String fromEmailAddress;
+    private @Nullable String toEmailAddress;
+    private @Nullable String fromContactName;
+    private @Nullable String toContactName;
 
     /**
      * The object key of the activity stream item.
      *
      * @return The field objectKey
      */
-    public String getObjectKey() { return this.objectKey; }
+    public @NotNull String getObjectKey() { return this.objectKey; }
     /**
      * The object key of the activity stream item.
      *
      * @param value The new value for objectKey
      */
-    public void setObjectKey(String value) { this.objectKey = value; }
+    public void setObjectKey(@NotNull String value) { this.objectKey = value; }
     /**
      * The type code of the activity stream item.
      *
      * @return The field activityStreamType
      */
-    public String getActivityStreamType() { return this.activityStreamType; }
+    public @Nullable String getActivityStreamType() { return this.activityStreamType; }
     /**
      * The type code of the activity stream item.
      *
      * @param value The new value for activityStreamType
      */
-    public void setActivityStreamType(String value) { this.activityStreamType = value; }
+    public void setActivityStreamType(@Nullable String value) { this.activityStreamType = value; }
     /**
      * The text body description for this Activity Stream Item.
      *
      * @return The field textValue
      */
-    public String getTextValue() { return this.textValue; }
+    public @Nullable String getTextValue() { return this.textValue; }
     /**
      * The text body description for this Activity Stream Item.
      *
      * @param value The new value for textValue
      */
-    public void setTextValue(String value) { this.textValue = value; }
+    public void setTextValue(@Nullable String value) { this.textValue = value; }
     /**
      * The date on which this activity stream item was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this activity stream item was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created this activity.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this activity.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -100,7 +102,7 @@ public class ActivityStreamItemModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -109,53 +111,53 @@ public class ActivityStreamItemModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The sender's email address if activity stream item is an Email.
      *
      * @return The field fromEmailAddress
      */
-    public String getFromEmailAddress() { return this.fromEmailAddress; }
+    public @Nullable String getFromEmailAddress() { return this.fromEmailAddress; }
     /**
      * The sender's email address if activity stream item is an Email.
      *
      * @param value The new value for fromEmailAddress
      */
-    public void setFromEmailAddress(String value) { this.fromEmailAddress = value; }
+    public void setFromEmailAddress(@Nullable String value) { this.fromEmailAddress = value; }
     /**
      * The recipient's email address if activity stream item is an Email.
      *
      * @return The field toEmailAddress
      */
-    public String getToEmailAddress() { return this.toEmailAddress; }
+    public @Nullable String getToEmailAddress() { return this.toEmailAddress; }
     /**
      * The recipient's email address if activity stream item is an Email.
      *
      * @param value The new value for toEmailAddress
      */
-    public void setToEmailAddress(String value) { this.toEmailAddress = value; }
+    public void setToEmailAddress(@Nullable String value) { this.toEmailAddress = value; }
     /**
      * The name of the contact sending the activity otherwise null.
      *
      * @return The field fromContactName
      */
-    public String getFromContactName() { return this.fromContactName; }
+    public @Nullable String getFromContactName() { return this.fromContactName; }
     /**
      * The name of the contact sending the activity otherwise null.
      *
      * @param value The new value for fromContactName
      */
-    public void setFromContactName(String value) { this.fromContactName = value; }
+    public void setFromContactName(@Nullable String value) { this.fromContactName = value; }
     /**
      * The name of the contact sending the activity otherwise null.
      *
      * @return The field toContactName
      */
-    public String getToContactName() { return this.toContactName; }
+    public @Nullable String getToContactName() { return this.toContactName; }
     /**
      * The name of the contact sending the activity otherwise null.
      *
      * @param value The new value for toContactName
      */
-    public void setToContactName(String value) { this.toContactName = value; }
+    public void setToContactName(@Nullable String value) { this.toContactName = value; }
 };

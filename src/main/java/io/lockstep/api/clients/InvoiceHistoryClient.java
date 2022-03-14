@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.InvoiceHistoryModel;
@@ -35,7 +37,7 @@ public class InvoiceHistoryClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public InvoiceHistoryClient(LockstepApi client) {
+    public InvoiceHistoryClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -48,7 +50,7 @@ public class InvoiceHistoryClient
      * @param id The unique Lockstep Platform ID number of this invoice; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<InvoiceHistoryModel>> retrieveInvoiceHistory(String id)
+    public @NotNull LockstepResponse<FetchResult<InvoiceHistoryModel>> retrieveInvoiceHistory(@NotNull String id)
     {
         RestRequest<FetchResult<InvoiceHistoryModel>> r = new RestRequest<FetchResult<InvoiceHistoryModel>>(this.client, "GET", "/api/v1/InvoiceHistory/{id}");
         r.AddPath("{id}", id.toString());
@@ -67,7 +69,7 @@ public class InvoiceHistoryClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<InvoiceHistoryModel>> queryInvoiceHistory(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<InvoiceHistoryModel>> queryInvoiceHistory(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<InvoiceHistoryModel>> r = new RestRequest<FetchResult<InvoiceHistoryModel>>(this.client, "GET", "/api/v1/InvoiceHistory/query");
         r.AddQuery("filter", filter.toString());

@@ -15,24 +15,26 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Model used to submit a transfer ownership request
  */
 public class TransferOwnerSubmitModel
 {
-    private String targetUserId;
+    private @NotNull String targetUserId;
 
     /**
      * The ID of the user to transfer ownership to.
      *
      * @return The field targetUserId
      */
-    public String getTargetUserId() { return this.targetUserId; }
+    public @NotNull String getTargetUserId() { return this.targetUserId; }
     /**
      * The ID of the user to transfer ownership to.
      *
      * @param value The new value for targetUserId
      */
-    public void setTargetUserId(String value) { this.targetUserId = value; }
+    public void setTargetUserId(@NotNull String value) { this.targetUserId = value; }
 };

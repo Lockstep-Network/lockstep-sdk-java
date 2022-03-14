@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A SyncSubmitModel represents a task that loads data from a connector to load into the Lockstep Platform.  Data
@@ -29,18 +31,18 @@ package io.lockstep.api.models;
  */
 public class SyncSubmitModel
 {
-    private String appEnrollmentId;
+    private @NotNull String appEnrollmentId;
 
     /**
      * The unique identifier of the app enrollment that is creating this sync request.
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @NotNull String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The unique identifier of the app enrollment that is creating this sync request.
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@NotNull String value) { this.appEnrollmentId = value; }
 };

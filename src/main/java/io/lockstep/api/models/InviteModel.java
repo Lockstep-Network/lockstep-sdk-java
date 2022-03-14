@@ -15,63 +15,65 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Model from the User invite process
  */
 public class InviteModel
 {
-    private String email;
-    private Boolean success;
-    private UserAccountModel invitedUser;
-    private String errorMessage;
+    private @Nullable String email;
+    private @NotNull Boolean success;
+    private @Nullable UserAccountModel invitedUser;
+    private @Nullable String errorMessage;
 
     /**
      * The invited email address
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @Nullable String getEmail() { return this.email; }
     /**
      * The invited email address
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@Nullable String value) { this.email = value; }
     /**
      * True if the invite was sent successfully
      *
      * @return The field success
      */
-    public Boolean getSuccess() { return this.success; }
+    public @NotNull Boolean getSuccess() { return this.success; }
     /**
      * True if the invite was sent successfully
      *
      * @param value The new value for success
      */
-    public void setSuccess(Boolean value) { this.success = value; }
+    public void setSuccess(@NotNull Boolean value) { this.success = value; }
     /**
      * The invited user, may be null if the user could not be invited
      *
      * @return The field invitedUser
      */
-    public UserAccountModel getInvitedUser() { return this.invitedUser; }
+    public @Nullable UserAccountModel getInvitedUser() { return this.invitedUser; }
     /**
      * The invited user, may be null if the user could not be invited
      *
      * @param value The new value for invitedUser
      */
-    public void setInvitedUser(UserAccountModel value) { this.invitedUser = value; }
+    public void setInvitedUser(@Nullable UserAccountModel value) { this.invitedUser = value; }
     /**
      * The error message if the invite was not successful
      *
      * @return The field errorMessage
      */
-    public String getErrorMessage() { return this.errorMessage; }
+    public @Nullable String getErrorMessage() { return this.errorMessage; }
     /**
      * The error message if the invite was not successful
      *
      * @param value The new value for errorMessage
      */
-    public void setErrorMessage(String value) { this.errorMessage = value; }
+    public void setErrorMessage(@Nullable String value) { this.errorMessage = value; }
 };

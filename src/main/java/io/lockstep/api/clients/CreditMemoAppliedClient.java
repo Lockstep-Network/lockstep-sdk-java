@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CreditMemoAppliedModel;
 
 import io.lockstep.api.models.FetchResult;
@@ -35,7 +37,7 @@ public class CreditMemoAppliedClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public CreditMemoAppliedClient(LockstepApi client) {
+    public CreditMemoAppliedClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -49,7 +51,7 @@ public class CreditMemoAppliedClient
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CreditMemoAppliedModel> retrieveCreditMemoApplication(String id, String include)
+    public @NotNull LockstepResponse<CreditMemoAppliedModel> retrieveCreditMemoApplication(@NotNull String id, @Nullable String include)
     {
         RestRequest<CreditMemoAppliedModel> r = new RestRequest<CreditMemoAppliedModel>(this.client, "GET", "/api/v1/CreditMemoApplied/{id}");
         r.AddPath("{id}", id.toString());
@@ -68,7 +70,7 @@ public class CreditMemoAppliedClient
      * @param body A list of changes to apply to this Credit Memo Application
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CreditMemoAppliedModel> updateCreditMemoApplication(String id, Object body)
+    public @NotNull LockstepResponse<CreditMemoAppliedModel> updateCreditMemoApplication(@NotNull String id, @NotNull Object body)
     {
         RestRequest<CreditMemoAppliedModel> r = new RestRequest<CreditMemoAppliedModel>(this.client, "PATCH", "/api/v1/CreditMemoApplied/{id}");
         r.AddPath("{id}", id.toString());
@@ -84,7 +86,7 @@ public class CreditMemoAppliedClient
      * @param id The unique Lockstep Platform ID number of the Credit Memo Application to delete; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CreditMemoAppliedModel> deleteCreditMemoApplication(String id)
+    public @NotNull LockstepResponse<CreditMemoAppliedModel> deleteCreditMemoApplication(@NotNull String id)
     {
         RestRequest<CreditMemoAppliedModel> r = new RestRequest<CreditMemoAppliedModel>(this.client, "DELETE", "/api/v1/CreditMemoApplied/{id}");
         r.AddPath("{id}", id.toString());
@@ -99,7 +101,7 @@ public class CreditMemoAppliedClient
      * @param body The Credit Memo Applications to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CreditMemoAppliedModel[]> createCreditMemoApplications(CreditMemoAppliedModel[] body)
+    public @NotNull LockstepResponse<CreditMemoAppliedModel[]> createCreditMemoApplications(@NotNull CreditMemoAppliedModel[] body)
     {
         RestRequest<CreditMemoAppliedModel[]> r = new RestRequest<CreditMemoAppliedModel[]>(this.client, "POST", "/api/v1/CreditMemoApplied");
         r.AddBody(body);
@@ -120,7 +122,7 @@ public class CreditMemoAppliedClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<FetchResult<CreditMemoAppliedModel>> queryCreditMemoApplications(String filter, String include, String order, Integer pageSize, Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CreditMemoAppliedModel>> queryCreditMemoApplications(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<CreditMemoAppliedModel>> r = new RestRequest<FetchResult<CreditMemoAppliedModel>>(this.client, "GET", "/api/v1/CreditMemoApplied/query");
         r.AddQuery("filter", filter.toString());

@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The CustomFieldSyncModel represents information coming into Lockstep from an external financial system or other
@@ -33,12 +35,12 @@ package io.lockstep.api.models;
  */
 public class CustomFieldSyncModel
 {
-    private String erpKey;
-    private String entityType;
-    private String customFieldLabel;
-    private String value;
-    private String created;
-    private String modified;
+    private @NotNull String erpKey;
+    private @NotNull String entityType;
+    private @NotNull String customFieldLabel;
+    private @Nullable String value;
+    private @Nullable String created;
+    private @Nullable String modified;
 
     /**
      * This is the primary key of the record to which you will attach this custom field. You should provide the
@@ -54,7 +56,7 @@ public class CustomFieldSyncModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @NotNull String getErpKey() { return this.erpKey; }
     /**
      * This is the primary key of the record to which you will attach this custom field. You should provide the
      * identifying number as it is stored in the originating financial system. Search for a unique, non-changing
@@ -69,7 +71,7 @@ public class CustomFieldSyncModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@NotNull String value) { this.erpKey = value; }
     /**
      * Custom Fields are identified by the `EntityType` and `ErpKey` values together.
      *
@@ -85,7 +87,7 @@ public class CustomFieldSyncModel
      *
      * @return The field entityType
      */
-    public String getEntityType() { return this.entityType; }
+    public @NotNull String getEntityType() { return this.entityType; }
     /**
      * Custom Fields are identified by the `EntityType` and `ErpKey` values together.
      *
@@ -101,7 +103,7 @@ public class CustomFieldSyncModel
      *
      * @param value The new value for entityType
      */
-    public void setEntityType(String value) { this.entityType = value; }
+    public void setEntityType(@NotNull String value) { this.entityType = value; }
     /**
      * A label that uniquely identifies this custom field within your software.
      *
@@ -110,7 +112,7 @@ public class CustomFieldSyncModel
      *
      * @return The field customFieldLabel
      */
-    public String getCustomFieldLabel() { return this.customFieldLabel; }
+    public @NotNull String getCustomFieldLabel() { return this.customFieldLabel; }
     /**
      * A label that uniquely identifies this custom field within your software.
      *
@@ -119,19 +121,19 @@ public class CustomFieldSyncModel
      *
      * @param value The new value for customFieldLabel
      */
-    public void setCustomFieldLabel(String value) { this.customFieldLabel = value; }
+    public void setCustomFieldLabel(@NotNull String value) { this.customFieldLabel = value; }
     /**
      * The value of this custom field.
      *
      * @return The field value
      */
-    public String getValue() { return this.value; }
+    public @Nullable String getValue() { return this.value; }
     /**
      * The value of this custom field.
      *
      * @param value The new value for value
      */
-    public void setValue(String value) { this.value = value; }
+    public void setValue(@Nullable String value) { this.value = value; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -139,7 +141,7 @@ public class CustomFieldSyncModel
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * If known, the date when this record was created according to the originating financial system
      * in which this record is maintained.  If the originating financial system does not maintain a
@@ -147,7 +149,7 @@ public class CustomFieldSyncModel
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -155,7 +157,7 @@ public class CustomFieldSyncModel
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * If known, the date when this record was most recently modified according to the originating
      * financial system in which this record is maintained.  If the originating financial system does
@@ -163,5 +165,5 @@ public class CustomFieldSyncModel
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
 };

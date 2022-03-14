@@ -15,27 +15,29 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Contains summarized data for an invoice
  */
 public class InvoiceSummaryModel
 {
-    private String groupKey;
-    private String customerId;
-    private String invoiceId;
-    private String invoiceNumber;
-    private String invoiceDate;
-    private String customerName;
-    private String status;
-    private String paymentDueDate;
-    private Double invoiceAmount;
-    private Double outstandingBalance;
-    private String invoiceTypeCode;
-    private String newestActivity;
-    private Integer daysPastDue;
-    private String[] paymentNumbers;
-    private String[] paymentIds;
+    private @NotNull String groupKey;
+    private @Nullable String customerId;
+    private @NotNull String invoiceId;
+    private @Nullable String invoiceNumber;
+    private @Nullable String invoiceDate;
+    private @Nullable String customerName;
+    private @Nullable String status;
+    private @Nullable String paymentDueDate;
+    private @Nullable Double invoiceAmount;
+    private @Nullable Double outstandingBalance;
+    private @Nullable String invoiceTypeCode;
+    private @Nullable String newestActivity;
+    private @Nullable Integer daysPastDue;
+    private @Nullable String[] paymentNumbers;
+    private @Nullable String[] paymentIds;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -45,7 +47,7 @@ public class InvoiceSummaryModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -54,175 +56,175 @@ public class InvoiceSummaryModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      *
      * @return The field customerId
      */
-    public String getCustomerId() { return this.customerId; }
+    public @Nullable String getCustomerId() { return this.customerId; }
     /**
      * The ID number of the counterparty for the invoice, for example, a customer or vendor.
      *
      * @param value The new value for customerId
      */
-    public void setCustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(@Nullable String value) { this.customerId = value; }
     /**
      * The unique ID number of this invoice.
      *
      * @return The field invoiceId
      */
-    public String getInvoiceId() { return this.invoiceId; }
+    public @NotNull String getInvoiceId() { return this.invoiceId; }
     /**
      * The unique ID number of this invoice.
      *
      * @param value The new value for invoiceId
      */
-    public void setInvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(@NotNull String value) { this.invoiceId = value; }
     /**
      * A reference code that is used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      *
      * @return The field invoiceNumber
      */
-    public String getInvoiceNumber() { return this.invoiceNumber; }
+    public @Nullable String getInvoiceNumber() { return this.invoiceNumber; }
     /**
      * A reference code that is used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      *
      * @param value The new value for invoiceNumber
      */
-    public void setInvoiceNumber(String value) { this.invoiceNumber = value; }
+    public void setInvoiceNumber(@Nullable String value) { this.invoiceNumber = value; }
     /**
      * The reporting date for this invoice.
      *
      * @return The field invoiceDate
      */
-    public String getInvoiceDate() { return this.invoiceDate; }
+    public @Nullable String getInvoiceDate() { return this.invoiceDate; }
     /**
      * The reporting date for this invoice.
      *
      * @param value The new value for invoiceDate
      */
-    public void setInvoiceDate(String value) { this.invoiceDate = value; }
+    public void setInvoiceDate(@Nullable String value) { this.invoiceDate = value; }
     /**
      * The name of the counterparty for the invoice, for example, a customer or vendor.
      *
      * @return The field customerName
      */
-    public String getCustomerName() { return this.customerName; }
+    public @Nullable String getCustomerName() { return this.customerName; }
     /**
      * The name of the counterparty for the invoice, for example, a customer or vendor.
      *
      * @param value The new value for customerName
      */
-    public void setCustomerName(String value) { this.customerName = value; }
+    public void setCustomerName(@Nullable String value) { this.customerName = value; }
     /**
      * The status of the invoice.
      *
      * @return The field status
      */
-    public String getStatus() { return this.status; }
+    public @Nullable String getStatus() { return this.status; }
     /**
      * The status of the invoice.
      *
      * @param value The new value for status
      */
-    public void setStatus(String value) { this.status = value; }
+    public void setStatus(@Nullable String value) { this.status = value; }
     /**
      * The due date of the invoice.
      *
      * @return The field paymentDueDate
      */
-    public String getPaymentDueDate() { return this.paymentDueDate; }
+    public @Nullable String getPaymentDueDate() { return this.paymentDueDate; }
     /**
      * The due date of the invoice.
      *
      * @param value The new value for paymentDueDate
      */
-    public void setPaymentDueDate(String value) { this.paymentDueDate = value; }
+    public void setPaymentDueDate(@Nullable String value) { this.paymentDueDate = value; }
     /**
      * The total amount of the Invoice.
      *
      * @return The field invoiceAmount
      */
-    public Double getInvoiceAmount() { return this.invoiceAmount; }
+    public @Nullable Double getInvoiceAmount() { return this.invoiceAmount; }
     /**
      * The total amount of the Invoice.
      *
      * @param value The new value for invoiceAmount
      */
-    public void setInvoiceAmount(Double value) { this.invoiceAmount = value; }
+    public void setInvoiceAmount(@Nullable Double value) { this.invoiceAmount = value; }
     /**
      * The remaining balance value of this invoice.
      *
      * @return The field outstandingBalance
      */
-    public Double getOutstandingBalance() { return this.outstandingBalance; }
+    public @Nullable Double getOutstandingBalance() { return this.outstandingBalance; }
     /**
      * The remaining balance value of this invoice.
      *
      * @param value The new value for outstandingBalance
      */
-    public void setOutstandingBalance(Double value) { this.outstandingBalance = value; }
+    public void setOutstandingBalance(@Nullable Double value) { this.outstandingBalance = value; }
     /**
      * A code identifying the type of this Invoice.
      *
      * @return The field invoiceTypeCode
      */
-    public String getInvoiceTypeCode() { return this.invoiceTypeCode; }
+    public @Nullable String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
      * A code identifying the type of this Invoice.
      *
      * @param value The new value for invoiceTypeCode
      */
-    public void setInvoiceTypeCode(String value) { this.invoiceTypeCode = value; }
+    public void setInvoiceTypeCode(@Nullable String value) { this.invoiceTypeCode = value; }
     /**
      * The date stamp for the newest Activity on this Invoice.
      *
      * @return The field newestActivity
      */
-    public String getNewestActivity() { return this.newestActivity; }
+    public @Nullable String getNewestActivity() { return this.newestActivity; }
     /**
      * The date stamp for the newest Activity on this Invoice.
      *
      * @param value The new value for newestActivity
      */
-    public void setNewestActivity(String value) { this.newestActivity = value; }
+    public void setNewestActivity(@Nullable String value) { this.newestActivity = value; }
     /**
      * The number of days this Invoice is past due.
      *
      * @return The field daysPastDue
      */
-    public Integer getDaysPastDue() { return this.daysPastDue; }
+    public @Nullable Integer getDaysPastDue() { return this.daysPastDue; }
     /**
      * The number of days this Invoice is past due.
      *
      * @param value The new value for daysPastDue
      */
-    public void setDaysPastDue(Integer value) { this.daysPastDue = value; }
+    public void setDaysPastDue(@Nullable Integer value) { this.daysPastDue = value; }
     /**
      * The memo text of the payments associated to this invoice.
      *
      * @return The field paymentNumbers
      */
-    public String[] getPaymentNumbers() { return this.paymentNumbers; }
+    public @Nullable String[] getPaymentNumbers() { return this.paymentNumbers; }
     /**
      * The memo text of the payments associated to this invoice.
      *
      * @param value The new value for paymentNumbers
      */
-    public void setPaymentNumbers(String[] value) { this.paymentNumbers = value; }
+    public void setPaymentNumbers(@Nullable String[] value) { this.paymentNumbers = value; }
     /**
      * The ids of the payments associated to this invoice.
      *
      * @return The field paymentIds
      */
-    public String[] getPaymentIds() { return this.paymentIds; }
+    public @Nullable String[] getPaymentIds() { return this.paymentIds; }
     /**
      * The ids of the payments associated to this invoice.
      *
      * @param value The new value for paymentIds
      */
-    public void setPaymentIds(String[] value) { this.paymentIds = value; }
+    public void setPaymentIds(@Nullable String[] value) { this.paymentIds = value; }
 };

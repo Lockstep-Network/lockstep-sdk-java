@@ -15,37 +15,39 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Model containing information about a user for the invite/onboarding process.
  */
 public class InviteDataModel
 {
-    private String email;
-    private String userStatus;
+    private @Nullable String email;
+    private @Nullable String userStatus;
 
     /**
      * The email address of the invited user.
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @Nullable String getEmail() { return this.email; }
     /**
      * The email address of the invited user.
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@Nullable String value) { this.email = value; }
     /**
      * The status of the user.
      *
      * @return The field userStatus
      */
-    public String getUserStatus() { return this.userStatus; }
+    public @Nullable String getUserStatus() { return this.userStatus; }
     /**
      * The status of the user.
      *
      * @param value The new value for userStatus
      */
-    public void setUserStatus(String value) { this.userStatus = value; }
+    public void setUserStatus(@Nullable String value) { this.userStatus = value; }
 };

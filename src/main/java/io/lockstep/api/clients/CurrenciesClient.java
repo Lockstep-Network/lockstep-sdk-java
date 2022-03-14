@@ -18,6 +18,8 @@ package io.lockstep.api.clients;
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
 import io.lockstep.api.models.LockstepResponse;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CurrencyRateModel;
 
 import io.lockstep.api.models.BulkCurrencyConversionModel;
@@ -34,7 +36,7 @@ public class CurrenciesClient
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public CurrenciesClient(LockstepApi client) {
+    public CurrenciesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -50,7 +52,7 @@ public class CurrenciesClient
      * @param dataProvider Optionally, you can specify a data provider.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CurrencyRateModel> retrievecurrencyrate(String sourceCurrency, String destinationCurrency, String date, String dataProvider)
+    public @NotNull LockstepResponse<CurrencyRateModel> retrievecurrencyrate(@NotNull String sourceCurrency, @NotNull String destinationCurrency, @Nullable String date, @Nullable String dataProvider)
     {
         RestRequest<CurrencyRateModel> r = new RestRequest<CurrencyRateModel>(this.client, "GET", "/api/v1/Currencies/{sourceCurrency}/{destinationCurrency}");
         r.AddPath("{sourceCurrency}", sourceCurrency.toString());
@@ -67,7 +69,7 @@ public class CurrenciesClient
      * @param body A list of dates and source currencies.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public LockstepResponse<CurrencyRateModel[]> bulkcurrencydata(String destinationCurrency, BulkCurrencyConversionModel[] body)
+    public @NotNull LockstepResponse<CurrencyRateModel[]> bulkcurrencydata(@Nullable String destinationCurrency, @NotNull BulkCurrencyConversionModel[] body)
     {
         RestRequest<CurrencyRateModel[]> r = new RestRequest<CurrencyRateModel[]>(this.client, "POST", "/api/v1/Currencies/bulk");
         r.AddQuery("destinationCurrency", destinationCurrency.toString());

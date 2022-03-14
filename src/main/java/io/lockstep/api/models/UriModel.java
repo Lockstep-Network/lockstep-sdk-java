@@ -15,24 +15,26 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a Uri for download link
  */
 public class UriModel
 {
-    private String downloadLink;
+    private @Nullable String downloadLink;
 
     /**
      * Represents the download link
      *
      * @return The field downloadLink
      */
-    public String getDownloadLink() { return this.downloadLink; }
+    public @Nullable String getDownloadLink() { return this.downloadLink; }
     /**
      * Represents the download link
      *
      * @param value The new value for downloadLink
      */
-    public void setDownloadLink(String value) { this.downloadLink = value; }
+    public void setDownloadLink(@Nullable String value) { this.downloadLink = value; }
 };

@@ -15,6 +15,8 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * An AppEnrollment represents an app that has been enrolled to the current account.  When you sign up for an
@@ -26,22 +28,22 @@ package io.lockstep.api.models;
  */
 public class AppEnrollmentModel
 {
-    private String appEnrollmentId;
-    private String appId;
-    private String groupKey;
-    private Boolean isActive;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String cronSettings;
-    private Boolean syncScheduleIsActive;
-    private ApplicationModel app;
-    private CustomFieldDefinitionModel[] customFieldDefinitions;
-    private CustomFieldValueModel[] customFieldValues;
-    private SyncRequestModel lastSync;
-    private SyncRequestModel lastSuccessfulSync;
-    private ConnectorInfoModel connectorInfo;
+    private @NotNull String appEnrollmentId;
+    private @NotNull String appId;
+    private @NotNull String groupKey;
+    private @NotNull Boolean isActive;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
+    private @Nullable String cronSettings;
+    private @NotNull Boolean syncScheduleIsActive;
+    private @Nullable ApplicationModel app;
+    private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @Nullable CustomFieldValueModel[] customFieldValues;
+    private @Nullable SyncRequestModel lastSync;
+    private @Nullable SyncRequestModel lastSuccessfulSync;
+    private @Nullable ConnectorInfoModel connectorInfo;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -49,28 +51,28 @@ public class AppEnrollmentModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @NotNull String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@NotNull String value) { this.appEnrollmentId = value; }
     /**
      * The ID number of the Application that this enrollment represents.  You can fetch information
      * about this Application object by specifying `App` in the "Include" parameter for your request.
      *
      * @return The field appId
      */
-    public String getAppId() { return this.appId; }
+    public @NotNull String getAppId() { return this.appId; }
     /**
      * The ID number of the Application that this enrollment represents.  You can fetch information
      * about this Application object by specifying `App` in the "Include" parameter for your request.
      *
      * @param value The new value for appId
      */
-    public void setAppId(String value) { this.appId = value; }
+    public void setAppId(@NotNull String value) { this.appId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -79,7 +81,7 @@ public class AppEnrollmentModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -88,93 +90,93 @@ public class AppEnrollmentModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * Determines whether the app enrollment is in use
      *
      * @return The field isActive
      */
-    public Boolean getIsActive() { return this.isActive; }
+    public @NotNull Boolean getIsActive() { return this.isActive; }
     /**
      * Determines whether the app enrollment is in use
      *
      * @param value The new value for isActive
      */
-    public void setIsActive(Boolean value) { this.isActive = value; }
+    public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
     /**
      * Created date
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * Created date
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * Created user ID
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * Created user ID
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * Last modified date
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * Last modified date
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * Last user ID to modify
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * Last user ID to modify
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * Stores schedule information for the application enrollment
      * see https://en.wikipedia.org/wiki/Cron
      *
      * @return The field cronSettings
      */
-    public String getCronSettings() { return this.cronSettings; }
+    public @Nullable String getCronSettings() { return this.cronSettings; }
     /**
      * Stores schedule information for the application enrollment
      * see https://en.wikipedia.org/wiki/Cron
      *
      * @param value The new value for cronSettings
      */
-    public void setCronSettings(String value) { this.cronSettings = value; }
+    public void setCronSettings(@Nullable String value) { this.cronSettings = value; }
     /**
      * Flag indicating if the Sync process should be ran on the specified schedule
      *
      * @return The field syncScheduleIsActive
      */
-    public Boolean getSyncScheduleIsActive() { return this.syncScheduleIsActive; }
+    public @NotNull Boolean getSyncScheduleIsActive() { return this.syncScheduleIsActive; }
     /**
      * Flag indicating if the Sync process should be ran on the specified schedule
      *
      * @param value The new value for syncScheduleIsActive
      */
-    public void setSyncScheduleIsActive(Boolean value) { this.syncScheduleIsActive = value; }
+    public void setSyncScheduleIsActive(@NotNull Boolean value) { this.syncScheduleIsActive = value; }
     /**
      * The Application to which this AppEnrollment belongs.  Contains general name, description,
      * logo, and other metadata about this application.
@@ -183,7 +185,7 @@ public class AppEnrollmentModel
      *
      * @return The field app
      */
-    public ApplicationModel getApp() { return this.app; }
+    public @Nullable ApplicationModel getApp() { return this.app; }
     /**
      * The Application to which this AppEnrollment belongs.  Contains general name, description,
      * logo, and other metadata about this application.
@@ -192,7 +194,7 @@ public class AppEnrollmentModel
      *
      * @param value The new value for app
      */
-    public void setApp(ApplicationModel value) { this.app = value; }
+    public void setApp(@Nullable ApplicationModel value) { this.app = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -203,7 +205,7 @@ public class AppEnrollmentModel
      *
      * @return The field customFieldDefinitions
      */
-    public CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
+    public @Nullable CustomFieldDefinitionModel[] getCustomFieldDefinitions() { return this.customFieldDefinitions; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
@@ -214,7 +216,7 @@ public class AppEnrollmentModel
      *
      * @param value The new value for customFieldDefinitions
      */
-    public void setCustomFieldDefinitions(CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -225,7 +227,7 @@ public class AppEnrollmentModel
      *
      * @return The field customFieldValues
      */
-    public CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
+    public @Nullable CustomFieldValueModel[] getCustomFieldValues() { return this.customFieldValues; }
     /**
      * A collection of custom fields linked to this record.  To retrieve this collection, specify
      * `CustomFieldValues` in the `include` parameter when retrieving data.
@@ -236,7 +238,7 @@ public class AppEnrollmentModel
      *
      * @param value The new value for customFieldValues
      */
-    public void setCustomFieldValues(CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
     /**
      * Data about the last sync attached to this app enrollment
      *
@@ -244,7 +246,7 @@ public class AppEnrollmentModel
      *
      * @return The field lastSync
      */
-    public SyncRequestModel getLastSync() { return this.lastSync; }
+    public @Nullable SyncRequestModel getLastSync() { return this.lastSync; }
     /**
      * Data about the last sync attached to this app enrollment
      *
@@ -252,31 +254,31 @@ public class AppEnrollmentModel
      *
      * @param value The new value for lastSync
      */
-    public void setLastSync(SyncRequestModel value) { this.lastSync = value; }
+    public void setLastSync(@Nullable SyncRequestModel value) { this.lastSync = value; }
     /**
      * Data about the last successful sync associated with this enrollment
      *
      * @return The field lastSuccessfulSync
      */
-    public SyncRequestModel getLastSuccessfulSync() { return this.lastSuccessfulSync; }
+    public @Nullable SyncRequestModel getLastSuccessfulSync() { return this.lastSuccessfulSync; }
     /**
      * Data about the last successful sync associated with this enrollment
      *
      * @param value The new value for lastSuccessfulSync
      */
-    public void setLastSuccessfulSync(SyncRequestModel value) { this.lastSuccessfulSync = value; }
+    public void setLastSuccessfulSync(@Nullable SyncRequestModel value) { this.lastSuccessfulSync = value; }
     /**
      * Optional data necessary to create an app enrollment for a supported connector.
      * Only enter relevant fields for the given connector.
      *
      * @return The field connectorInfo
      */
-    public ConnectorInfoModel getConnectorInfo() { return this.connectorInfo; }
+    public @Nullable ConnectorInfoModel getConnectorInfo() { return this.connectorInfo; }
     /**
      * Optional data necessary to create an app enrollment for a supported connector.
      * Only enter relevant fields for the given connector.
      *
      * @param value The new value for connectorInfo
      */
-    public void setConnectorInfo(ConnectorInfoModel value) { this.connectorInfo = value; }
+    public void setConnectorInfo(@Nullable ConnectorInfoModel value) { this.connectorInfo = value; }
 };

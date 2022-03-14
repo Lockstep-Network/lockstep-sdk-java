@@ -15,32 +15,34 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Contains customer details data
  */
 public class CustomerDetailsModel
 {
-    private String groupKey;
-    private String customerId;
-    private String name;
-    private String address1;
-    private String address2;
-    private String address3;
-    private String city;
-    private String state;
-    private String postalCode;
-    private String country;
-    private String phoneNumber;
-    private String faxNumber;
-    private String email;
-    private String contactId;
-    private String contactName;
-    private String contactEmail;
-    private Integer outstandingInvoices;
-    private Double outstandingAmount;
-    private Double amountPastDue;
-    private CustomerDetailsPaymentModel[] payments;
+    private @NotNull String groupKey;
+    private @NotNull String customerId;
+    private @Nullable String name;
+    private @Nullable String address1;
+    private @Nullable String address2;
+    private @Nullable String address3;
+    private @Nullable String city;
+    private @Nullable String state;
+    private @Nullable String postalCode;
+    private @Nullable String country;
+    private @Nullable String phoneNumber;
+    private @Nullable String faxNumber;
+    private @Nullable String email;
+    private @NotNull String contactId;
+    private @Nullable String contactName;
+    private @Nullable String contactEmail;
+    private @NotNull Integer outstandingInvoices;
+    private @NotNull Double outstandingAmount;
+    private @NotNull Double amountPastDue;
+    private @Nullable CustomerDetailsPaymentModel[] payments;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -50,7 +52,7 @@ public class CustomerDetailsModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -59,233 +61,233 @@ public class CustomerDetailsModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The unique ID of this customer
      *
      * @return The field customerId
      */
-    public String getCustomerId() { return this.customerId; }
+    public @NotNull String getCustomerId() { return this.customerId; }
     /**
      * The unique ID of this customer
      *
      * @param value The new value for customerId
      */
-    public void setCustomerId(String value) { this.customerId = value; }
+    public void setCustomerId(@NotNull String value) { this.customerId = value; }
     /**
      * The unique ID of this customer
      *
      * @return The field name
      */
-    public String getName() { return this.name; }
+    public @Nullable String getName() { return this.name; }
     /**
      * The unique ID of this customer
      *
      * @param value The new value for name
      */
-    public void setName(String value) { this.name = value; }
+    public void setName(@Nullable String value) { this.name = value; }
     /**
      * Customer address info
      *
      * @return The field address1
      */
-    public String getAddress1() { return this.address1; }
+    public @Nullable String getAddress1() { return this.address1; }
     /**
      * Customer address info
      *
      * @param value The new value for address1
      */
-    public void setAddress1(String value) { this.address1 = value; }
+    public void setAddress1(@Nullable String value) { this.address1 = value; }
     /**
      * Customer address info
      *
      * @return The field address2
      */
-    public String getAddress2() { return this.address2; }
+    public @Nullable String getAddress2() { return this.address2; }
     /**
      * Customer address info
      *
      * @param value The new value for address2
      */
-    public void setAddress2(String value) { this.address2 = value; }
+    public void setAddress2(@Nullable String value) { this.address2 = value; }
     /**
      * Customer address info
      *
      * @return The field address3
      */
-    public String getAddress3() { return this.address3; }
+    public @Nullable String getAddress3() { return this.address3; }
     /**
      * Customer address info
      *
      * @param value The new value for address3
      */
-    public void setAddress3(String value) { this.address3 = value; }
+    public void setAddress3(@Nullable String value) { this.address3 = value; }
     /**
      * Customer address info
      *
      * @return The field city
      */
-    public String getCity() { return this.city; }
+    public @Nullable String getCity() { return this.city; }
     /**
      * Customer address info
      *
      * @param value The new value for city
      */
-    public void setCity(String value) { this.city = value; }
+    public void setCity(@Nullable String value) { this.city = value; }
     /**
      * Customer address info
      *
      * @return The field state
      */
-    public String getState() { return this.state; }
+    public @Nullable String getState() { return this.state; }
     /**
      * Customer address info
      *
      * @param value The new value for state
      */
-    public void setState(String value) { this.state = value; }
+    public void setState(@Nullable String value) { this.state = value; }
     /**
      * Customer address info
      *
      * @return The field postalCode
      */
-    public String getPostalCode() { return this.postalCode; }
+    public @Nullable String getPostalCode() { return this.postalCode; }
     /**
      * Customer address info
      *
      * @param value The new value for postalCode
      */
-    public void setPostalCode(String value) { this.postalCode = value; }
+    public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
      * Customer address country
      *
      * @return The field country
      */
-    public String getCountry() { return this.country; }
+    public @Nullable String getCountry() { return this.country; }
     /**
      * Customer address country
      *
      * @param value The new value for country
      */
-    public void setCountry(String value) { this.country = value; }
+    public void setCountry(@Nullable String value) { this.country = value; }
     /**
      * Customer phone number
      *
      * @return The field phoneNumber
      */
-    public String getPhoneNumber() { return this.phoneNumber; }
+    public @Nullable String getPhoneNumber() { return this.phoneNumber; }
     /**
      * Customer phone number
      *
      * @param value The new value for phoneNumber
      */
-    public void setPhoneNumber(String value) { this.phoneNumber = value; }
+    public void setPhoneNumber(@Nullable String value) { this.phoneNumber = value; }
     /**
      * Customer fax number
      *
      * @return The field faxNumber
      */
-    public String getFaxNumber() { return this.faxNumber; }
+    public @Nullable String getFaxNumber() { return this.faxNumber; }
     /**
      * Customer fax number
      *
      * @param value The new value for faxNumber
      */
-    public void setFaxNumber(String value) { this.faxNumber = value; }
+    public void setFaxNumber(@Nullable String value) { this.faxNumber = value; }
     /**
      * Customer AR email address
      *
      * @return The field email
      */
-    public String getEmail() { return this.email; }
+    public @Nullable String getEmail() { return this.email; }
     /**
      * Customer AR email address
      *
      * @param value The new value for email
      */
-    public void setEmail(String value) { this.email = value; }
+    public void setEmail(@Nullable String value) { this.email = value; }
     /**
      * Customer primary contact id
      *
      * @return The field contactId
      */
-    public String getContactId() { return this.contactId; }
+    public @NotNull String getContactId() { return this.contactId; }
     /**
      * Customer primary contact id
      *
      * @param value The new value for contactId
      */
-    public void setContactId(String value) { this.contactId = value; }
+    public void setContactId(@NotNull String value) { this.contactId = value; }
     /**
      * Customer primary contact name
      *
      * @return The field contactName
      */
-    public String getContactName() { return this.contactName; }
+    public @Nullable String getContactName() { return this.contactName; }
     /**
      * Customer primary contact name
      *
      * @param value The new value for contactName
      */
-    public void setContactName(String value) { this.contactName = value; }
+    public void setContactName(@Nullable String value) { this.contactName = value; }
     /**
      * Customer primary contact email address
      *
      * @return The field contactEmail
      */
-    public String getContactEmail() { return this.contactEmail; }
+    public @Nullable String getContactEmail() { return this.contactEmail; }
     /**
      * Customer primary contact email address
      *
      * @param value The new value for contactEmail
      */
-    public void setContactEmail(String value) { this.contactEmail = value; }
+    public void setContactEmail(@Nullable String value) { this.contactEmail = value; }
     /**
      * Customer number of outstanding invoices
      *
      * @return The field outstandingInvoices
      */
-    public Integer getOutstandingInvoices() { return this.outstandingInvoices; }
+    public @NotNull Integer getOutstandingInvoices() { return this.outstandingInvoices; }
     /**
      * Customer number of outstanding invoices
      *
      * @param value The new value for outstandingInvoices
      */
-    public void setOutstandingInvoices(Integer value) { this.outstandingInvoices = value; }
+    public void setOutstandingInvoices(@NotNull Integer value) { this.outstandingInvoices = value; }
     /**
      * Customer total outstanding invoice amount
      *
      * @return The field outstandingAmount
      */
-    public Double getOutstandingAmount() { return this.outstandingAmount; }
+    public @NotNull Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
      * Customer total outstanding invoice amount
      *
      * @param value The new value for outstandingAmount
      */
-    public void setOutstandingAmount(Double value) { this.outstandingAmount = value; }
+    public void setOutstandingAmount(@NotNull Double value) { this.outstandingAmount = value; }
     /**
      * Customer total past due amount
      *
      * @return The field amountPastDue
      */
-    public Double getAmountPastDue() { return this.amountPastDue; }
+    public @NotNull Double getAmountPastDue() { return this.amountPastDue; }
     /**
      * Customer total past due amount
      *
      * @param value The new value for amountPastDue
      */
-    public void setAmountPastDue(Double value) { this.amountPastDue = value; }
+    public void setAmountPastDue(@NotNull Double value) { this.amountPastDue = value; }
     /**
      * Customer payments collected
      *
      * @return The field payments
      */
-    public CustomerDetailsPaymentModel[] getPayments() { return this.payments; }
+    public @Nullable CustomerDetailsPaymentModel[] getPayments() { return this.payments; }
     /**
      * Customer payments collected
      *
      * @param value The new value for payments
      */
-    public void setPayments(CustomerDetailsPaymentModel[] value) { this.payments = value; }
+    public void setPayments(@Nullable CustomerDetailsPaymentModel[] value) { this.payments = value; }
 };

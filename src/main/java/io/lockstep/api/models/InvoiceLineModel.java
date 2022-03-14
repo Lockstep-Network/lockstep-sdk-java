@@ -15,37 +15,39 @@
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents a line in an invoice
  */
 public class InvoiceLineModel
 {
-    private String invoiceLineId;
-    private String groupKey;
-    private String invoiceId;
-    private String erpKey;
-    private String lineNumber;
-    private String productCode;
-    private String description;
-    private String unitMeasureCode;
-    private Double unitPrice;
-    private Double quantity;
-    private Double quantityShipped;
-    private Double quantityReceived;
-    private Double totalAmount;
-    private String exemptionCode;
-    private String reportingDate;
-    private String overrideOriginAddressId;
-    private String overrideBillToAddressId;
-    private String overrideShipToAddressId;
-    private String created;
-    private String createdUserId;
-    private String modified;
-    private String modifiedUserId;
-    private String appEnrollmentId;
-    private NoteModel[] notes;
-    private AttachmentModel[] attachments;
+    private @NotNull String invoiceLineId;
+    private @NotNull String groupKey;
+    private @NotNull String invoiceId;
+    private @Nullable String erpKey;
+    private @Nullable String lineNumber;
+    private @Nullable String productCode;
+    private @Nullable String description;
+    private @Nullable String unitMeasureCode;
+    private @NotNull Double unitPrice;
+    private @Nullable Double quantity;
+    private @Nullable Double quantityShipped;
+    private @Nullable Double quantityReceived;
+    private @Nullable Double totalAmount;
+    private @Nullable String exemptionCode;
+    private @Nullable String reportingDate;
+    private @Nullable String overrideOriginAddressId;
+    private @Nullable String overrideBillToAddressId;
+    private @Nullable String overrideShipToAddressId;
+    private @Nullable String created;
+    private @Nullable String createdUserId;
+    private @Nullable String modified;
+    private @Nullable String modifiedUserId;
+    private @Nullable String appEnrollmentId;
+    private @Nullable NoteModel[] notes;
+    private @Nullable AttachmentModel[] attachments;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -55,7 +57,7 @@ public class InvoiceLineModel
      *
      * @return The field invoiceLineId
      */
-    public String getInvoiceLineId() { return this.invoiceLineId; }
+    public @NotNull String getInvoiceLineId() { return this.invoiceLineId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -64,7 +66,7 @@ public class InvoiceLineModel
      *
      * @param value The new value for invoiceLineId
      */
-    public void setInvoiceLineId(String value) { this.invoiceLineId = value; }
+    public void setInvoiceLineId(@NotNull String value) { this.invoiceLineId = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -73,7 +75,7 @@ public class InvoiceLineModel
      *
      * @return The field groupKey
      */
-    public String getGroupKey() { return this.groupKey; }
+    public @NotNull String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -82,19 +84,19 @@ public class InvoiceLineModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(String value) { this.groupKey = value; }
+    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
      * The ID number of the invoice this line belongs to.
      *
      * @return The field invoiceId
      */
-    public String getInvoiceId() { return this.invoiceId; }
+    public @NotNull String getInvoiceId() { return this.invoiceId; }
     /**
      * The ID number of the invoice this line belongs to.
      *
      * @param value The new value for invoiceId
      */
-    public void setInvoiceId(String value) { this.invoiceId = value; }
+    public void setInvoiceId(@NotNull String value) { this.invoiceId = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system, if it was
      * different from the original `LineNumber`.
@@ -107,7 +109,7 @@ public class InvoiceLineModel
      *
      * @return The field erpKey
      */
-    public String getErpKey() { return this.erpKey; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
      * The unique ID of this record as it was known in its originating financial system, if it was
      * different from the original `LineNumber`.
@@ -120,229 +122,229 @@ public class InvoiceLineModel
      *
      * @param value The new value for erpKey
      */
-    public void setErpKey(String value) { this.erpKey = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
      * The line number of this line, as defined in the originating ERP or accounting system.  You can sort on this number to
      * get the original view of lines within the invoice.
      *
      * @return The field lineNumber
      */
-    public String getLineNumber() { return this.lineNumber; }
+    public @Nullable String getLineNumber() { return this.lineNumber; }
     /**
      * The line number of this line, as defined in the originating ERP or accounting system.  You can sort on this number to
      * get the original view of lines within the invoice.
      *
      * @param value The new value for lineNumber
      */
-    public void setLineNumber(String value) { this.lineNumber = value; }
+    public void setLineNumber(@Nullable String value) { this.lineNumber = value; }
     /**
      * A code number identifying the product or service that is specified on this line.
      *
      * @return The field productCode
      */
-    public String getProductCode() { return this.productCode; }
+    public @Nullable String getProductCode() { return this.productCode; }
     /**
      * A code number identifying the product or service that is specified on this line.
      *
      * @param value The new value for productCode
      */
-    public void setProductCode(String value) { this.productCode = value; }
+    public void setProductCode(@Nullable String value) { this.productCode = value; }
     /**
      * Description of this invoice line.
      *
      * @return The field description
      */
-    public String getDescription() { return this.description; }
+    public @Nullable String getDescription() { return this.description; }
     /**
      * Description of this invoice line.
      *
      * @param value The new value for description
      */
-    public void setDescription(String value) { this.description = value; }
+    public void setDescription(@Nullable String value) { this.description = value; }
     /**
      * For lines measured in a unit other than "quantity", this code indicates the measurement system for the quantity field.
      * If the line is measured in quantity, this field is null.
      *
      * @return The field unitMeasureCode
      */
-    public String getUnitMeasureCode() { return this.unitMeasureCode; }
+    public @Nullable String getUnitMeasureCode() { return this.unitMeasureCode; }
     /**
      * For lines measured in a unit other than "quantity", this code indicates the measurement system for the quantity field.
      * If the line is measured in quantity, this field is null.
      *
      * @param value The new value for unitMeasureCode
      */
-    public void setUnitMeasureCode(String value) { this.unitMeasureCode = value; }
+    public void setUnitMeasureCode(@Nullable String value) { this.unitMeasureCode = value; }
     /**
      * The price of a single unit for this line.
      *
      * @return The field unitPrice
      */
-    public Double getUnitPrice() { return this.unitPrice; }
+    public @NotNull Double getUnitPrice() { return this.unitPrice; }
     /**
      * The price of a single unit for this line.
      *
      * @param value The new value for unitPrice
      */
-    public void setUnitPrice(Double value) { this.unitPrice = value; }
+    public void setUnitPrice(@NotNull Double value) { this.unitPrice = value; }
     /**
      * The quantity of items for ths line.
      *
      * @return The field quantity
      */
-    public Double getQuantity() { return this.quantity; }
+    public @Nullable Double getQuantity() { return this.quantity; }
     /**
      * The quantity of items for ths line.
      *
      * @param value The new value for quantity
      */
-    public void setQuantity(Double value) { this.quantity = value; }
+    public void setQuantity(@Nullable Double value) { this.quantity = value; }
     /**
      * The number of items that have been shipped.
      *
      * @return The field quantityShipped
      */
-    public Double getQuantityShipped() { return this.quantityShipped; }
+    public @Nullable Double getQuantityShipped() { return this.quantityShipped; }
     /**
      * The number of items that have been shipped.
      *
      * @param value The new value for quantityShipped
      */
-    public void setQuantityShipped(Double value) { this.quantityShipped = value; }
+    public void setQuantityShipped(@Nullable Double value) { this.quantityShipped = value; }
     /**
      * The number of items that has been received.
      *
      * @return The field quantityReceived
      */
-    public Double getQuantityReceived() { return this.quantityReceived; }
+    public @Nullable Double getQuantityReceived() { return this.quantityReceived; }
     /**
      * The number of items that has been received.
      *
      * @param value The new value for quantityReceived
      */
-    public void setQuantityReceived(Double value) { this.quantityReceived = value; }
+    public void setQuantityReceived(@Nullable Double value) { this.quantityReceived = value; }
     /**
      * The total amount for this line.
      *
      * @return The field totalAmount
      */
-    public Double getTotalAmount() { return this.totalAmount; }
+    public @Nullable Double getTotalAmount() { return this.totalAmount; }
     /**
      * The total amount for this line.
      *
      * @param value The new value for totalAmount
      */
-    public void setTotalAmount(Double value) { this.totalAmount = value; }
+    public void setTotalAmount(@Nullable Double value) { this.totalAmount = value; }
     /**
      * If this line is tax exempt, this code indicates the reason for the exemption.
      *
      * @return The field exemptionCode
      */
-    public String getExemptionCode() { return this.exemptionCode; }
+    public @Nullable String getExemptionCode() { return this.exemptionCode; }
     /**
      * If this line is tax exempt, this code indicates the reason for the exemption.
      *
      * @param value The new value for exemptionCode
      */
-    public void setExemptionCode(String value) { this.exemptionCode = value; }
+    public void setExemptionCode(@Nullable String value) { this.exemptionCode = value; }
     /**
      * If null, the products specified on this line were delivered on the same date as all other lines.
      * If not null, this line was delivered or finalized on a different date than the overall invoice.
      *
      * @return The field reportingDate
      */
-    public String getReportingDate() { return this.reportingDate; }
+    public @Nullable String getReportingDate() { return this.reportingDate; }
     /**
      * If null, the products specified on this line were delivered on the same date as all other lines.
      * If not null, this line was delivered or finalized on a different date than the overall invoice.
      *
      * @param value The new value for reportingDate
      */
-    public void setReportingDate(String value) { this.reportingDate = value; }
+    public void setReportingDate(@Nullable String value) { this.reportingDate = value; }
     /**
      * An optional ID number for the line's origin address.
      *
      * @return The field overrideOriginAddressId
      */
-    public String getOverrideOriginAddressId() { return this.overrideOriginAddressId; }
+    public @Nullable String getOverrideOriginAddressId() { return this.overrideOriginAddressId; }
     /**
      * An optional ID number for the line's origin address.
      *
      * @param value The new value for overrideOriginAddressId
      */
-    public void setOverrideOriginAddressId(String value) { this.overrideOriginAddressId = value; }
+    public void setOverrideOriginAddressId(@Nullable String value) { this.overrideOriginAddressId = value; }
     /**
      * An optional ID number for the line's bill to address.
      *
      * @return The field overrideBillToAddressId
      */
-    public String getOverrideBillToAddressId() { return this.overrideBillToAddressId; }
+    public @Nullable String getOverrideBillToAddressId() { return this.overrideBillToAddressId; }
     /**
      * An optional ID number for the line's bill to address.
      *
      * @param value The new value for overrideBillToAddressId
      */
-    public void setOverrideBillToAddressId(String value) { this.overrideBillToAddressId = value; }
+    public void setOverrideBillToAddressId(@Nullable String value) { this.overrideBillToAddressId = value; }
     /**
      * An optional ID number for the line's ship to address.
      *
      * @return The field overrideShipToAddressId
      */
-    public String getOverrideShipToAddressId() { return this.overrideShipToAddressId; }
+    public @Nullable String getOverrideShipToAddressId() { return this.overrideShipToAddressId; }
     /**
      * An optional ID number for the line's ship to address.
      *
      * @param value The new value for overrideShipToAddressId
      */
-    public void setOverrideShipToAddressId(String value) { this.overrideShipToAddressId = value; }
+    public void setOverrideShipToAddressId(@Nullable String value) { this.overrideShipToAddressId = value; }
     /**
      * The date on which this line was created.
      *
      * @return The field created
      */
-    public String getCreated() { return this.created; }
+    public @Nullable String getCreated() { return this.created; }
     /**
      * The date on which this line was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(String value) { this.created = value; }
+    public void setCreated(@Nullable String value) { this.created = value; }
     /**
      * The ID number of the user who created this line.
      *
      * @return The field createdUserId
      */
-    public String getCreatedUserId() { return this.createdUserId; }
+    public @Nullable String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this line.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@Nullable String value) { this.createdUserId = value; }
     /**
      * The date on which this line was last modified.
      *
      * @return The field modified
      */
-    public String getModified() { return this.modified; }
+    public @Nullable String getModified() { return this.modified; }
     /**
      * The date on which this line was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(String value) { this.modified = value; }
+    public void setModified(@Nullable String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this line.
      *
      * @return The field modifiedUserId
      */
-    public String getModifiedUserId() { return this.modifiedUserId; }
+    public @Nullable String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this line.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@Nullable String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -351,7 +353,7 @@ public class InvoiceLineModel
      *
      * @return The field appEnrollmentId
      */
-    public String getAppEnrollmentId() { return this.appEnrollmentId; }
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating
@@ -360,7 +362,7 @@ public class InvoiceLineModel
      *
      * @param value The new value for appEnrollmentId
      */
-    public void setAppEnrollmentId(String value) { this.appEnrollmentId = value; }
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -371,7 +373,7 @@ public class InvoiceLineModel
      *
      * @return The field notes
      */
-    public NoteModel[] getNotes() { return this.notes; }
+    public @Nullable NoteModel[] getNotes() { return this.notes; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
@@ -382,7 +384,7 @@ public class InvoiceLineModel
      *
      * @param value The new value for notes
      */
-    public void setNotes(NoteModel[] value) { this.notes = value; }
+    public void setNotes(@Nullable NoteModel[] value) { this.notes = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -393,7 +395,7 @@ public class InvoiceLineModel
      *
      * @return The field attachments
      */
-    public AttachmentModel[] getAttachments() { return this.attachments; }
+    public @Nullable AttachmentModel[] getAttachments() { return this.attachments; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
@@ -404,5 +406,5 @@ public class InvoiceLineModel
      *
      * @param value The new value for attachments
      */
-    public void setAttachments(AttachmentModel[] value) { this.attachments = value; }
+    public void setAttachments(@Nullable AttachmentModel[] value) { this.attachments = value; }
 };
