@@ -74,37 +74,65 @@ public class NoteModel
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
-     * The name of the table the note is associated with
+     * A Note is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, a Note connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `TableKey` value contains the name of the table within the Lockstep Platform to which this metadata
+     * is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field tableKey
      */
     public @Nullable String getTableKey() { return this.tableKey; }
     /**
-     * The name of the table the note is associated with
+     * A Note is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, a Note connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `TableKey` value contains the name of the table within the Lockstep Platform to which this metadata
+     * is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for tableKey
      */
     public void setTableKey(@Nullable String value) { this.tableKey = value; }
     /**
-     * The ID of the object the note is associated with
+     * A Note is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, a Note connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `ObjectKey` value contains the primary key of the record within the Lockstep Platform to which this
+     * metadata is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field objectKey
      */
     public @NotNull String getObjectKey() { return this.objectKey; }
     /**
-     * The ID of the object the note is associated with
+     * A Note is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, a Note connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `ObjectKey` value contains the primary key of the record within the Lockstep Platform to which this
+     * metadata is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for objectKey
      */
     public void setObjectKey(@NotNull String value) { this.objectKey = value; }
     /**
-     * The text of the note
+     * The full text of the note
      *
      * @return The field noteText
      */
     public @Nullable String getNoteText() { return this.noteText; }
     /**
-     * The text of the note
+     * The full text of the note
      *
      * @param value The new value for noteText
      */
@@ -122,13 +150,21 @@ public class NoteModel
      */
     public void setNoteType(@Nullable String value) { this.noteType = value; }
     /**
-     * Flag indicating if the note has been archived
+     * A flag indicating whether this Note is archived (also known as hidden or deleted).  When you call
+     * [ArchiveNote](https://developer.lockstep.io/reference/delete_api-v1-notes-id) this field will
+     * be set to true.
+     *
+     * You should avoid displaying Notes with the IsArchived field set to true in your user interface.
      *
      * @return The field isArchived
      */
     public @NotNull Boolean getIsArchived() { return this.isArchived; }
     /**
-     * Flag indicating if the note has been archived
+     * A flag indicating whether this Note is archived (also known as hidden or deleted).  When you call
+     * [ArchiveNote](https://developer.lockstep.io/reference/delete_api-v1-notes-id) this field will
+     * be set to true.
+     *
+     * You should avoid displaying Notes with the IsArchived field set to true in your user interface.
      *
      * @param value The new value for isArchived
      */
@@ -146,13 +182,15 @@ public class NoteModel
      */
     public void setCreated(@Nullable String value) { this.created = value; }
     /**
-     * The ID of the user who created the note
+     * The unique ID of the [UserAccount](https://developer.lockstep.io/docs/useraccountmodel) of the user
+     * who created this Note.
      *
      * @return The field createdUserId
      */
     public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
-     * The ID of the user who created the note
+     * The unique ID of the [UserAccount](https://developer.lockstep.io/docs/useraccountmodel) of the user
+     * who created this Note.
      *
      * @param value The new value for createdUserId
      */

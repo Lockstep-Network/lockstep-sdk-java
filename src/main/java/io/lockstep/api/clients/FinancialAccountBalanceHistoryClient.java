@@ -100,11 +100,11 @@ public class FinancialAccountBalanceHistoryClient
      * @param body The Financial Account Balance Histories to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> createFinancialAccountBalanceHistory(@NotNull FinancialAccountBalanceHistoryModel[] body)
+    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel[]> createFinancialAccountBalanceHistory(@NotNull FinancialAccountBalanceHistoryModel[] body)
     {
-        RestRequest<FinancialAccountBalanceHistoryModel> r = new RestRequest<FinancialAccountBalanceHistoryModel>(this.client, "POST", "/api/v1/FinancialAccountBalanceHistory");
+        RestRequest<FinancialAccountBalanceHistoryModel[]> r = new RestRequest<FinancialAccountBalanceHistoryModel[]>(this.client, "POST", "/api/v1/FinancialAccountBalanceHistory");
         r.AddBody(body);
-        return r.Call(FinancialAccountBalanceHistoryModel.class);
+        return r.Call(FinancialAccountBalanceHistoryModel[].class);
     }
 
     /**

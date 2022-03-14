@@ -19,7 +19,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Represents a user uploaded attachment
+ * An Attachment is a file that can be attached to various account attributes within Lockstep.
+ * This data model contains metadata about the attachment.  You can upload and download attachments
+ * into the Lockstep Platform along with this metadata.  Attachments can be used for invoices, payments,
+ * legal documents, or any other external files that you wish to track.
+ *
+ * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
  */
 public class AttachmentModel
 {
@@ -38,6 +43,7 @@ public class AttachmentModel
     private @Nullable String appEnrollmentId;
     private @NotNull String created;
     private @NotNull String createdUserId;
+    private @Nullable String attachmentType;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -72,85 +78,125 @@ public class AttachmentModel
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
-     * The name of the table the attachment is associated with
+     * An Attachment is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, an Attachment connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `TableKey` value contains the name of the table within the Lockstep Platform to which this Attachment
+     * is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field tableKey
      */
     public @Nullable String getTableKey() { return this.tableKey; }
     /**
-     * The name of the table the attachment is associated with
+     * An Attachment is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, an Attachment connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `TableKey` value contains the name of the table within the Lockstep Platform to which this Attachment
+     * is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for tableKey
      */
     public void setTableKey(@Nullable String value) { this.tableKey = value; }
     /**
-     * The ID of the object the attachment is associated with
+     * An Attachment is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, an Attachment connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `ObjectKey` value contains the primary key of the record within the Lockstep Platform to which this
+     * Attachment is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field objectKey
      */
     public @NotNull String getObjectKey() { return this.objectKey; }
     /**
-     * The ID of the object the attachment is associated with
+     * An Attachment is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
+     * `ObjectKey`.  For example, an Attachment connected to Invoice 12345 would have a `TableKey` value of
+     * `Invoice` and an `ObjectKey` value of `12345`.
+     *
+     * The `ObjectKey` value contains the primary key of the record within the Lockstep Platform to which this
+     * Attachment is connected.
+     *
+     * For more information, see [linking metadata to an object](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for objectKey
      */
     public void setObjectKey(@NotNull String value) { this.objectKey = value; }
     /**
-     * Name of the file
+     * An Attachment represents a file that was uploaded to the Lockstep Platform.  This field contains the original
+     * name of the file on disk, without its extension.
      *
      * @return The field fileName
      */
     public @Nullable String getFileName() { return this.fileName; }
     /**
-     * Name of the file
+     * An Attachment represents a file that was uploaded to the Lockstep Platform.  This field contains the original
+     * name of the file on disk, without its extension.
      *
      * @param value The new value for fileName
      */
     public void setFileName(@Nullable String value) { this.fileName = value; }
     /**
-     * Extension type of the file
+     * An Attachment represents a file that was uploaded to the Lockstep Platform.  This field contains the original
+     * extension name of the file on disk.
      *
      * @return The field fileExt
      */
     public @Nullable String getFileExt() { return this.fileExt; }
     /**
-     * Extension type of the file
+     * An Attachment represents a file that was uploaded to the Lockstep Platform.  This field contains the original
+     * extension name of the file on disk.
      *
      * @param value The new value for fileExt
      */
     public void setFileExt(@Nullable String value) { this.fileExt = value; }
     /**
-     * Corresponding AttachmentType object to describe this attachment
+     * DEPRECATED: This field is replaced by `AttachmentType`.
      *
      * @return The field attachmentTypeId
      */
     public @NotNull String getAttachmentTypeId() { return this.attachmentTypeId; }
     /**
-     * Corresponding AttachmentType object to describe this attachment
+     * DEPRECATED: This field is replaced by `AttachmentType`.
      *
      * @param value The new value for attachmentTypeId
      */
     public void setAttachmentTypeId(@NotNull String value) { this.attachmentTypeId = value; }
     /**
-     * Flag indicating the attachment was archived
+     * A flag indicating whether this Attachment is archived (also known as hidden or deleted).  When you call
+     * [ArchiveAttachment](https://developer.lockstep.io/reference/delete_api-v1-attachments-id) this field will
+     * be set to true.
+     *
+     * You should avoid displaying Attachments with the IsArchived field set to true in your user interface.
      *
      * @return The field isArchived
      */
     public @NotNull Boolean getIsArchived() { return this.isArchived; }
     /**
-     * Flag indicating the attachment was archived
+     * A flag indicating whether this Attachment is archived (also known as hidden or deleted).  When you call
+     * [ArchiveAttachment](https://developer.lockstep.io/reference/delete_api-v1-attachments-id) this field will
+     * be set to true.
+     *
+     * You should avoid displaying Attachments with the IsArchived field set to true in your user interface.
      *
      * @param value The new value for isArchived
      */
     public void setIsArchived(@NotNull Boolean value) { this.isArchived = value; }
     /**
-     * Tracks the original record for this attachment, not currently used.
+     * DEPRECATED - Do not use
      *
      * @return The field originAttachmentId
      */
     public @NotNull String getOriginAttachmentId() { return this.originAttachmentId; }
     /**
-     * Tracks the original record for this attachment, not currently used.
+     * DEPRECATED - Do not use
      *
      * @param value The new value for originAttachmentId
      */
@@ -222,27 +268,41 @@ public class AttachmentModel
      */
     public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
-     * The date the attachment was created
+     * The date the attachment was created.
      *
      * @return The field created
      */
     public @NotNull String getCreated() { return this.created; }
     /**
-     * The date the attachment was created
+     * The date the attachment was created.
      *
      * @param value The new value for created
      */
     public void setCreated(@NotNull String value) { this.created = value; }
     /**
-     * Id of the user who made the file
+     * The unique ID of the [UserAccount](https://developer.lockstep.io/docs/useraccountmodel) of the user
+     * who created this Attachment.
      *
      * @return The field createdUserId
      */
     public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
-     * Id of the user who made the file
+     * The unique ID of the [UserAccount](https://developer.lockstep.io/docs/useraccountmodel) of the user
+     * who created this Attachment.
      *
      * @param value The new value for createdUserId
      */
     public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
+    /**
+     * A text string describing the type of this Attachment.
+     *
+     * @return The field attachmentType
+     */
+    public @Nullable String getAttachmentType() { return this.attachmentType; }
+    /**
+     * A text string describing the type of this Attachment.
+     *
+     * @param value The new value for attachmentType
+     */
+    public void setAttachmentType(@Nullable String value) { this.attachmentType = value; }
 };

@@ -28,6 +28,10 @@ public class ConnectorInfoModel
     private @Nullable String realmId;
     private @Nullable String redirectUri;
     private @Nullable String email;
+    private @Nullable String username;
+    private @Nullable String password;
+    private @Nullable String serverName;
+    private @Nullable Integer serverPort;
 
     /**
      * The authorization code returned from the first step of the OAuth2 flow
@@ -79,4 +83,52 @@ public class ConnectorInfoModel
      * @param value The new value for email
      */
     public void setEmail(@Nullable String value) { this.email = value; }
+    /**
+     * The username of the web services account with access permissions.
+     *
+     * @return The field username
+     */
+    public @Nullable String getUsername() { return this.username; }
+    /**
+     * The username of the web services account with access permissions.
+     *
+     * @param value The new value for username
+     */
+    public void setUsername(@Nullable String value) { this.username = value; }
+    /**
+     * The password for the web services account with access permissions.
+     *
+     * @return The field password
+     */
+    public @Nullable String getPassword() { return this.password; }
+    /**
+     * The password for the web services account with access permissions.
+     *
+     * @param value The new value for password
+     */
+    public void setPassword(@Nullable String value) { this.password = value; }
+    /**
+     * The server name a connection is being created for.
+     *
+     * @return The field serverName
+     */
+    public @Nullable String getServerName() { return this.serverName; }
+    /**
+     * The server name a connection is being created for.
+     *
+     * @param value The new value for serverName
+     */
+    public void setServerName(@Nullable String value) { this.serverName = value; }
+    /**
+     * The port number of the server a connection is being created for.
+     *
+     * @return The field serverPort
+     */
+    public @Nullable Integer getServerPort() { return this.serverPort; }
+    /**
+     * The port number of the server a connection is being created for.
+     *
+     * @param value The new value for serverPort
+     */
+    public void setServerPort(@Nullable Integer value) { this.serverPort = value; }
 };

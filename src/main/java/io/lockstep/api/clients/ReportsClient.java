@@ -28,6 +28,7 @@ import io.lockstep.api.models.ArHeaderInfoModel;
 import io.lockstep.api.models.AgingModel;
 import io.lockstep.api.models.ArAgingHeaderInfoModel;
 import io.lockstep.api.models.AttachmentHeaderInfoModel;
+import io.lockstep.api.models.FinancialReportModel;
 
 /**
  * Contains all methods related to Reports
@@ -155,5 +156,22 @@ public class ReportsClient
         RestRequest<AttachmentHeaderInfoModel> r = new RestRequest<AttachmentHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/attachments-header");
         r.AddQuery("companyId", companyId.toString());
         return r.Call(AttachmentHeaderInfoModel.class);
+    }
+
+    /**
+     * Generates a Trial Balance Report for the given time range.
+     *
+     * The Attachment Header report contains aggregated information about the `TotalAttachments`, `TotalArchived`, and `TotalActive` attachment classifications.
+     *
+     * @param startDate Documentation pending
+     * @param endDate Documentation pending
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FinancialReportModel> trialBalanceReport(@Nullable String startDate, @Nullable String endDate)
+    {
+        RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/trial-balance");
+        r.AddQuery("startDate", startDate.toString());
+        r.AddQuery("endDate", endDate.toString());
+        return r.Call(FinancialReportModel.class);
     }
 }

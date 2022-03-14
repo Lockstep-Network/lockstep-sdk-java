@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.EmailModel;
 
 import io.lockstep.api.models.ActionResultModel;
+import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
@@ -105,10 +106,10 @@ public class EmailsClient
      */
     public @NotNull LockstepResponse<byte[]> retrieveEmailLogo(@NotNull String emailId, @NotNull String nonce)
     {
-        RestRequest<byte[]> r = new RestRequest<byte[]>(this.client, "GET", "/api/v1/Emails/{emailId}/logo/{nonce}");
+        BlobRequest r = new BlobRequest(this.client, "GET", "/api/v1/Emails/{emailId}/logo/{nonce}");
         r.AddPath("{emailId}", emailId.toString());
         r.AddPath("{nonce}", nonce.toString());
-        return r.Call(byte[].class);
+        return r.Call();
     }
 
     /**

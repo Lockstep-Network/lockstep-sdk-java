@@ -15,8 +15,6 @@
 
 package io.lockstep.api.models;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * Represents all the possible data sent as a part of the provisioning post.
@@ -24,9 +22,9 @@ import org.jetbrains.annotations.Nullable;
  */
 public class ErpInfoDataModel
 {
-    private @Nullable String authCode;
-    private @Nullable String realmId;
-    private @Nullable String redirectUri;
+    private String authCode;
+    private String realmId;
+    private String redirectUri;
 
     /**
      * The authorization code returned from the first step of the OAuth2 flow
@@ -34,36 +32,36 @@ public class ErpInfoDataModel
      *
      * @return The field authCode
      */
-    public @Nullable String getAuthCode() { return this.authCode; }
+    public String getAuthCode() { return this.authCode; }
     /**
      * The authorization code returned from the first step of the OAuth2 flow
      * https://oauth.net/2/grant-types/authorization-code/
      *
      * @param value The new value for authCode
      */
-    public void setAuthCode(@Nullable String value) { this.authCode = value; }
+    public void setAuthCode(String value) { this.authCode = value; }
     /**
      * The realm id of the account being granted permissions to access
      *
      * @return The field realmId
      */
-    public @Nullable String getRealmId() { return this.realmId; }
+    public String getRealmId() { return this.realmId; }
     /**
      * The realm id of the account being granted permissions to access
      *
      * @param value The new value for realmId
      */
-    public void setRealmId(@Nullable String value) { this.realmId = value; }
+    public void setRealmId(String value) { this.realmId = value; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *
      * @return The field redirectUri
      */
-    public @Nullable String getRedirectUri() { return this.redirectUri; }
+    public String getRedirectUri() { return this.redirectUri; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *
      * @param value The new value for redirectUri
      */
-    public void setRedirectUri(@Nullable String value) { this.redirectUri = value; }
+    public void setRedirectUri(String value) { this.redirectUri = value; }
 };

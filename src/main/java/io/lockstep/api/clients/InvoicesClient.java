@@ -25,6 +25,7 @@ import io.lockstep.api.models.InvoiceModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.InvoiceSummaryModel;
 import io.lockstep.api.models.AtRiskInvoiceSummaryModel;
 
@@ -132,6 +133,23 @@ public class InvoicesClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<InvoiceModel>>() {}.getType());
+    }
+
+    /**
+     * Retrieves a PDF file for this invoice if it is of one of the supported invoice types and has been synced using an app enrollment to one of the supported apps.
+     *
+     * Supported apps: Quickbooks Online, Xero
+     *
+     * Supported invoice types: Invoice, Credit Memo
+     *
+     * @param id The unique Lockstep Platform ID number of this invoice; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<byte[]> retrieveinvoicePDF(@NotNull String id)
+    {
+        BlobRequest r = new BlobRequest(this.client, "GET", "/api/v1/Invoices/{id}/pdf");
+        r.AddPath("{id}", id.toString());
+        return r.Call();
     }
 
     /**

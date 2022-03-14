@@ -46,7 +46,7 @@ import io.lockstep.api.models.LockstepResponse;
  * @author jkirk
  * @version $Id: $Id
  */
-public class RestRequest<@NotNull T>
+public class BlobRequest
 {
     private Hashtable<String, String> queryParams;
     private Hashtable<String, String> pathReplacements;
@@ -56,13 +56,13 @@ public class RestRequest<@NotNull T>
     private LockstepApi client;
 
     /**
-     * <p>Constructor for RestRequest.</p>
+     * <p>Constructor for BlobRequest.</p>
      *
      * @param client a {@link io.lockstep.api.LockstepApi} object.
      * @param method a {@link java.lang.String} object.
      * @param path a {@link java.lang.String} object.
      */
-    public RestRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path)
+    public BlobRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path)
     {
         this.client = client;
         this.method = method;
@@ -106,13 +106,12 @@ public class RestRequest<@NotNull T>
     /**
      * Adapted from Apache simple request client example
      *
-     * @param classReference a {@link java.lang.reflect.Type} object.
      * @return a {@link io.lockstep.api.models.LockstepResponse} object.
      */
-    public @NotNull LockstepResponse<T> Call(Type classReference)
+    public @NotNull LockstepResponse<byte[]> Call()
     {
         Instant start = Instant.now();
-        LockstepResponse<T> lockstepResponse = new LockstepResponse<T>();
+        LockstepResponse<byte[]> lockstepResponse = new LockstepResponse<byte[]>();
         try {
 
             CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -198,15 +197,14 @@ public class RestRequest<@NotNull T>
                 serverDuration = Long.parseLong(response.getHeader("ServerDuration").getValue());
             }
 
-            String content = EntityUtils.toString(response.getEntity());
-
+            // Detect success or failure
             if (code >= 200 && code < 300) {
-                T t = gson.fromJson(content, classReference);
-                lockstepResponse.setValue(t);
+                lockstepResponse.setValue(EntityUtils.toByteArray(response.getEntity()));
                 lockstepResponse.setServerDuration(serverDuration);
                 lockstepResponse.setRoundTripTime(roundTripTime);
                 lockstepResponse.setSuccess(true);
             } else {
+                String content = EntityUtils.toString(response.getEntity());
                 ErrorResult errorResult = gson.fromJson(content, ErrorResult.class);
                 lockstepResponse.setError(errorResult);
                 lockstepResponse.setSuccess(false);

@@ -25,6 +25,7 @@ import io.lockstep.api.models.PaymentModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
+import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.PaymentSummaryModel;
 import io.lockstep.api.models.PaymentDetailHeaderModel;
 import io.lockstep.api.models.PaymentDetailModel;
@@ -135,6 +136,21 @@ public class PaymentsClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<PaymentModel>>() {}.getType());
+    }
+
+    /**
+     * Retrieves a PDF file for this payment if it has been synced using an app enrollment to one of the supported apps.
+     *
+     * Supported apps: Quickbooks Online
+     *
+     * @param id The unique Lockstep Platform ID number of this payment; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<byte[]> retrievepaymentPDF(@NotNull String id)
+    {
+        BlobRequest r = new BlobRequest(this.client, "GET", "/api/v1/Payments/{id}/pdf");
+        r.AddPath("{id}", id.toString());
+        return r.Call();
     }
 
     /**

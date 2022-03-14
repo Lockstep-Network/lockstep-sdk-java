@@ -24,6 +24,7 @@ import io.lockstep.api.models.AttachmentModel;
 
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.UriModel;
+import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
@@ -127,14 +128,16 @@ public class AttachmentsClient
      *
      * @param tableName The name of the type of object to which this Attachment will be linked
      * @param objectId The unique ID of the object to which this Attachment will be linked
+     * @param attachmentType The type of this attachment
      * @param filename The full path of a file to upload to the API
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<AttachmentModel[]> uploadAttachment(@NotNull String tableName, @NotNull String objectId, @NotNull byte[] filename)
+    public @NotNull LockstepResponse<AttachmentModel[]> uploadAttachment(@NotNull String tableName, @NotNull String objectId, @Nullable String attachmentType, @NotNull byte[] filename)
     {
         RestRequest<AttachmentModel[]> r = new RestRequest<AttachmentModel[]>(this.client, "POST", "/api/v1/Attachments");
         r.AddQuery("tableName", tableName.toString());
         r.AddQuery("objectId", objectId.toString());
+        r.AddQuery("attachmentType", attachmentType.toString());
         return r.Call(AttachmentModel[].class);
     }
 
