@@ -252,13 +252,13 @@ public class ContactSyncModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * The mailing address information for this contact. This will be validated by the /api/v1/countries data set
+     * The mailing address information for this contact. This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field countryCode
      */
     public @Nullable String getCountryCode() { return this.countryCode; }
     /**
-     * The mailing address information for this contact. This will be validated by the /api/v1/countries data set
+     * The mailing address information for this contact. This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for countryCode
      */

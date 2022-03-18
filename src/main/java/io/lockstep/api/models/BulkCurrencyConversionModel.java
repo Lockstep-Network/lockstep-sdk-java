@@ -39,13 +39,13 @@ public class BulkCurrencyConversionModel
      */
     public void setDate(@NotNull String value) { this.date = value; }
     /**
-     * The currency code This will be validated by the /api/v1/currencies data set
+     * The currency code This will be validated by the /api/v1/definitions/currencies data set
      *
      * @return The field sourceCurrency
      */
     public @NotNull String getSourceCurrency() { return this.sourceCurrency; }
     /**
-     * The currency code This will be validated by the /api/v1/currencies data set
+     * The currency code This will be validated by the /api/v1/definitions/currencies data set
      *
      * @param value The new value for sourceCurrency
      */
