@@ -286,13 +286,13 @@ public class ContactModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * The two character country code of the address. This will be validated by the /api/v1/countries data set
+     * The two character country code of the address. This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field countryCode
      */
     public @Nullable String getCountryCode() { return this.countryCode; }
     /**
-     * The two character country code of the address. This will be validated by the /api/v1/countries data set
+     * The two character country code of the address. This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for countryCode
      */

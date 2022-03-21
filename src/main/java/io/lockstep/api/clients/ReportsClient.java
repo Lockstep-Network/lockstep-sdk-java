@@ -161,8 +161,6 @@ public class ReportsClient
     /**
      * Generates a Trial Balance Report for the given time range.
      *
-     * The Attachment Header report contains aggregated information about the `TotalAttachments`, `TotalArchived`, and `TotalActive` attachment classifications.
-     *
      * @param startDate Documentation pending
      * @param endDate Documentation pending
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
@@ -172,6 +170,25 @@ public class ReportsClient
         RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/trial-balance");
         r.AddQuery("startDate", startDate.toString());
         r.AddQuery("endDate", endDate.toString());
+        return r.Call(FinancialReportModel.class);
+    }
+
+    /**
+     * Generates an Income Statement for the given time range.
+     *
+     * @param startDate The start date of the report
+     * @param endDate The end date of the report
+     * @param columnOption The desired column splitting of the report data. An empty string or anything unrecognized will result in only totals being displayed. Options are as follows: By Period - a column for every month/fiscal period within the reporting dates Quarterly - a column for every quarter within the reporting dates Annually - a column for every year within the reporting dates
+     * @param displayDepth The desired row splitting of the report data. Options are as follows: 1 - combine all accounts by their category 2 - combine all accounts by their subcategory 3 - display all accounts
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FinancialReportModel> incomeStatementReport(@Nullable String startDate, @Nullable String endDate, @Nullable String columnOption, @Nullable Integer displayDepth)
+    {
+        RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/income-statement");
+        r.AddQuery("startDate", startDate.toString());
+        r.AddQuery("endDate", endDate.toString());
+        r.AddQuery("columnOption", columnOption.toString());
+        r.AddQuery("displayDepth", displayDepth.toString());
         return r.Call(FinancialReportModel.class);
     }
 }

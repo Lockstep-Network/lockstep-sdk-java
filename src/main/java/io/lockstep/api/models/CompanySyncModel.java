@@ -182,14 +182,14 @@ public class CompanySyncModel
     public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
     /**
      * The default currency code for transactions related to this company.  For a list of currency codes, see
-     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/currencies data set
+     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
      *
      * @return The field defaultCurrencyCode
      */
     public @Nullable String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
      * The default currency code for transactions related to this company.  For a list of currency codes, see
-     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/currencies data set
+     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
      *
      * @param value The new value for defaultCurrencyCode
      */
@@ -293,13 +293,13 @@ public class CompanySyncModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * The company's primary mailing address information This will be validated by the /api/v1/countries data set
+     * The company's primary mailing address information This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field country
      */
     public @Nullable String getCountry() { return this.country; }
     /**
-     * The company's primary mailing address information This will be validated by the /api/v1/countries data set
+     * The company's primary mailing address information This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for country
      */

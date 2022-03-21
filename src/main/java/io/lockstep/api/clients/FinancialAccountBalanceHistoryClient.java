@@ -51,7 +51,7 @@ public class FinancialAccountBalanceHistoryClient
      * @param id The unique Lockstep Platform ID number of this Financial Account Balance History
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> retrieveFinancialAccountBalanceHistory(@NotNull String id)
+    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> retrieveBalanceHistory(@NotNull String id)
     {
         RestRequest<FinancialAccountBalanceHistoryModel> r = new RestRequest<FinancialAccountBalanceHistoryModel>(this.client, "GET", "/api/v1/FinancialAccountBalanceHistory/{id}");
         r.AddPath("{id}", id.toString());
@@ -69,7 +69,7 @@ public class FinancialAccountBalanceHistoryClient
      * @param body A list of changes to apply to this Financial Account Balance History
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> updateFinancialAccountBalanceHistory(@NotNull String id, @NotNull Object body)
+    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> updateBalanceHistory(@NotNull String id, @NotNull Object body)
     {
         RestRequest<FinancialAccountBalanceHistoryModel> r = new RestRequest<FinancialAccountBalanceHistoryModel>(this.client, "PATCH", "/api/v1/FinancialAccountBalanceHistory/{id}");
         r.AddPath("{id}", id.toString());
@@ -85,7 +85,7 @@ public class FinancialAccountBalanceHistoryClient
      * @param id The unique Lockstep Platform ID number of the Financial Account Balance History to disable
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<ActionResultModel> deleteFinancialAccountBalanceHistory(@NotNull String id)
+    public @NotNull LockstepResponse<ActionResultModel> deleteBalanceHistory(@NotNull String id)
     {
         RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/FinancialAccountBalanceHistory/{id}");
         r.AddPath("{id}", id.toString());
@@ -100,7 +100,7 @@ public class FinancialAccountBalanceHistoryClient
      * @param body The Financial Account Balance Histories to create
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel[]> createFinancialAccountBalanceHistory(@NotNull FinancialAccountBalanceHistoryModel[] body)
+    public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel[]> createBalanceHistory(@NotNull FinancialAccountBalanceHistoryModel[] body)
     {
         RestRequest<FinancialAccountBalanceHistoryModel[]> r = new RestRequest<FinancialAccountBalanceHistoryModel[]>(this.client, "POST", "/api/v1/FinancialAccountBalanceHistory");
         r.AddBody(body);
@@ -120,7 +120,7 @@ public class FinancialAccountBalanceHistoryClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FetchResult<FinancialAccountBalanceHistoryModel>> queryFinancialAccountBalanceHistory(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<FinancialAccountBalanceHistoryModel>> queryBalanceHistory(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<FinancialAccountBalanceHistoryModel>> r = new RestRequest<FetchResult<FinancialAccountBalanceHistoryModel>>(this.client, "GET", "/api/v1/FinancialAccountBalanceHistory/query");
         r.AddQuery("filter", filter.toString());

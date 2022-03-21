@@ -349,13 +349,13 @@ public class UserAccountModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * Country for this User This will be validated by the /api/v1/countries data set
+     * Country for this User This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field country
      */
     public @Nullable String getCountry() { return this.country; }
     /**
-     * Country for this User This will be validated by the /api/v1/countries data set
+     * Country for this User This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for country
      */
@@ -400,7 +400,7 @@ public class UserAccountModel
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
      *
-     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
+     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/definitions/currencies data set
      *
      * @return The field defaultCurrencyCode
      */
@@ -409,7 +409,7 @@ public class UserAccountModel
      * The default currency code used by this user entity.  This value can be overridden
      * for invoices in a different currency code.
      *
-     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/currencies data set
+     * For a list of defined currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies) This will be validated by the /api/v1/definitions/currencies data set
      *
      * @param value The new value for defaultCurrencyCode
      */

@@ -191,7 +191,7 @@ public class InvoicesClient
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FetchResult<AtRiskInvoiceSummaryModel>> queryAtRiskInvoiceSummaryView(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<AtRiskInvoiceSummaryModel>> queryAtRiskView(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<AtRiskInvoiceSummaryModel>> r = new RestRequest<FetchResult<AtRiskInvoiceSummaryModel>>(this.client, "GET", "/api/v1/Invoices/views/at-risk-summary");
         r.AddQuery("filter", filter.toString());

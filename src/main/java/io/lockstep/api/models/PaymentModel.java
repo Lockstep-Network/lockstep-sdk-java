@@ -257,7 +257,7 @@ public class PaymentModel
     /**
      * The ISO 4217 currency code for this payment.
      *
-     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/currencies data set
+     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
      *
      * @return The field currencyCode
      */
@@ -265,7 +265,7 @@ public class PaymentModel
     /**
      * The ISO 4217 currency code for this payment.
      *
-     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/currencies data set
+     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
      *
      * @param value The new value for currencyCode
      */

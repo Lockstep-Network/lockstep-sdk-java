@@ -112,11 +112,28 @@ public class AttachmentsClient
      * @param id The unique ID number of the Attachment whose URI will be returned
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<UriModel> downloadAttachment(@NotNull String id)
+    public @NotNull LockstepResponse<UriModel> downloadAttachmentURL(@NotNull String id)
     {
-        RestRequest<UriModel> r = new RestRequest<UriModel>(this.client, "GET", "/api/v1/Attachments/{id}/download");
+        RestRequest<UriModel> r = new RestRequest<UriModel>(this.client, "GET", "/api/v1/Attachments/{id}/download-url");
         r.AddPath("{id}", id.toString());
         return r.Call(UriModel.class);
+    }
+
+    /**
+     * Returns the Attachment file to be downloaded, based on the ID provided.
+     *
+     * An Attachment is a file that can be attached to various account attributes within Lockstep. Attachments can be used for invoices, bills, or any other external files that you wish to track and have access to. Attachments represents an Attachment and a number of different metadata attributes related to the creation, storage, and ownership of the Attachment.
+     *
+     * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
+     *
+     * @param id The unique ID number of the Attachment whose URI will be returned
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<byte[]> downloadAttachmentFile(@NotNull String id)
+    {
+        BlobRequest r = new BlobRequest(this.client, "GET", "/api/v1/Attachments/{id}/download-file");
+        r.AddPath("{id}", id.toString());
+        return r.Call();
     }
 
     /**

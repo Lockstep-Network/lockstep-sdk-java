@@ -162,14 +162,14 @@ public class FinancialAccountModel
     public void setDescription(@Nullable String value) { this.description = value; }
     /**
      * The classification for the Financial Account. Possible values are Asset, Equity,
-     * Expense, Liability or Revenue.
+     * Expense, Liability or Income.
      *
      * @return The field classification
      */
     public @Nullable String getClassification() { return this.classification; }
     /**
      * The classification for the Financial Account. Possible values are Asset, Equity,
-     * Expense, Liability or Revenue.
+     * Expense, Liability or Income.
      *
      * @param value The new value for classification
      */

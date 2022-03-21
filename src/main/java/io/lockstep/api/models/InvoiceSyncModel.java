@@ -288,13 +288,13 @@ public class InvoiceSyncModel
      */
     public void setSpecialTerms(@Nullable String value) { this.specialTerms = value; }
     /**
-     * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/currencies data set
+     * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/definitions/currencies data set
      *
      * @return The field currencyCode
      */
     public @Nullable String getCurrencyCode() { return this.currencyCode; }
     /**
-     * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/currencies data set
+     * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/definitions/currencies data set
      *
      * @param value The new value for currencyCode
      */
@@ -494,13 +494,13 @@ public class InvoiceSyncModel
      */
     public void setOriginAddressPostalCode(@Nullable String value) { this.originAddressPostalCode = value; }
     /**
-     * The origination address for this invoice This will be validated by the /api/v1/countries data set
+     * The origination address for this invoice This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field originAddressCountry
      */
     public @Nullable String getOriginAddressCountry() { return this.originAddressCountry; }
     /**
-     * The origination address for this invoice This will be validated by the /api/v1/countries data set
+     * The origination address for this invoice This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for originAddressCountry
      */
@@ -602,13 +602,13 @@ public class InvoiceSyncModel
      */
     public void setBillToAddressPostalCode(@Nullable String value) { this.billToAddressPostalCode = value; }
     /**
-     * The billing address for this invoice This will be validated by the /api/v1/countries data set
+     * The billing address for this invoice This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field billToAddressCountry
      */
     public @Nullable String getBillToAddressCountry() { return this.billToAddressCountry; }
     /**
-     * The billing address for this invoice This will be validated by the /api/v1/countries data set
+     * The billing address for this invoice This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for billToAddressCountry
      */
@@ -710,13 +710,13 @@ public class InvoiceSyncModel
      */
     public void setShipToAddressPostalCode(@Nullable String value) { this.shipToAddressPostalCode = value; }
     /**
-     * The shipping address for this invoice This will be validated by the /api/v1/countries data set
+     * The shipping address for this invoice This will be validated by the /api/v1/definitions/countries data set
      *
      * @return The field shipToAddressCountry
      */
     public @Nullable String getShipToAddressCountry() { return this.shipToAddressCountry; }
     /**
-     * The shipping address for this invoice This will be validated by the /api/v1/countries data set
+     * The shipping address for this invoice This will be validated by the /api/v1/definitions/countries data set
      *
      * @param value The new value for shipToAddressCountry
      */
