@@ -183,7 +183,7 @@ public class ReportsClient
      * @param displayDepth The desired row splitting of the report data. Options are as follows: 1 - combine all accounts by their category 2 - combine all accounts by their subcategory 3 - display all accounts
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialReportModel> incomeStatementReport(@Nullable String startDate, @Nullable String endDate, @Nullable String columnOption, @Nullable ReportDepth displayDepth)
+    public @NotNull LockstepResponse<FinancialReportModel> incomeStatementReport(@Nullable String startDate, @Nullable String endDate, @Nullable String columnOption, @Nullable Integer displayDepth)
     {
         RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/income-statement");
         r.AddQuery("startDate", startDate.toString());
