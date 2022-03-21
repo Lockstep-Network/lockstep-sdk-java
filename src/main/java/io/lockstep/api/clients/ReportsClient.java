@@ -29,7 +29,6 @@ import io.lockstep.api.models.AgingModel;
 import io.lockstep.api.models.ArAgingHeaderInfoModel;
 import io.lockstep.api.models.AttachmentHeaderInfoModel;
 import io.lockstep.api.models.FinancialReportModel;
-import io.lockstep.api.models.ReportDepth;
 
 /**
  * Contains all methods related to Reports
