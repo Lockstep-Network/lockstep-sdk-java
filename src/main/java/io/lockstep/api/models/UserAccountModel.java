@@ -51,6 +51,7 @@ public class UserAccountModel
     private @Nullable String stateRegion;
     private @Nullable String postalCode;
     private @Nullable String country;
+    private @Nullable String timeZone;
     private @Nullable String imageURL;
     private @Nullable String description;
     private @Nullable String b2CLastLoggedIn;
@@ -360,6 +361,18 @@ public class UserAccountModel
      * @param value The new value for country
      */
     public void setCountry(@Nullable String value) { this.country = value; }
+    /**
+     * Time zone for this user
+     *
+     * @return The field timeZone
+     */
+    public @Nullable String getTimeZone() { return this.timeZone; }
+    /**
+     * Time zone for this user
+     *
+     * @param value The new value for timeZone
+     */
+    public void setTimeZone(@Nullable String value) { this.timeZone = value; }
     /**
      * Image URL for this User
      *
