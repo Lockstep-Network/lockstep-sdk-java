@@ -46,6 +46,7 @@ public class CompanyModel
     private @Nullable String stateRegion;
     private @Nullable String postalCode;
     private @Nullable String country;
+    private @Nullable String timeZone;
     private @Nullable String phoneNumber;
     private @Nullable String faxNumber;
     private @Nullable String created;
@@ -360,6 +361,18 @@ public class CompanyModel
      * @param value The new value for country
      */
     public void setCountry(@Nullable String value) { this.country = value; }
+    /**
+     * Time zone
+     *
+     * @return The field timeZone
+     */
+    public @Nullable String getTimeZone() { return this.timeZone; }
+    /**
+     * Time zone
+     *
+     * @param value The new value for timeZone
+     */
+    public void setTimeZone(@Nullable String value) { this.timeZone = value; }
     /**
      * Phone number
      *
