@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.13.29
+ * @version    2022.14.30
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -344,6 +344,8 @@ public class LockstepApi {
     /**
      * Configure this API client to use a JWT bearer token.
      *
+     * Authentication is either via [Lockstep Platform API key](https://developer.lockstep.io/docs/api-keys) or [JWT Bearer Token](https://developer.lockstep.io/docs/jwt-bearer-tokens)
+     *
      * @param token The JWT bearer token to use for this API session
      * @return The API client to use
      */
@@ -356,6 +358,8 @@ public class LockstepApi {
 
     /**
      * Configures this API client to use an API Key.
+     *
+     * Authentication is either via [Lockstep Platform API key](https://developer.lockstep.io/docs/api-keys) or [JWT Bearer Token](https://developer.lockstep.io/docs/jwt-bearer-tokens)
      *
      * @param apiKey The API key to use for this API session
      * @return The API client to use
