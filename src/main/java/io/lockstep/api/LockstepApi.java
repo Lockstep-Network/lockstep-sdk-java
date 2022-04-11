@@ -1,16 +1,18 @@
-/**
- * Lockstep Software Development Kit for Java
+/***
+ * Lockstep Platform SDK for Java
  *
  * (c) 2021-2022 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author     Ted Spence <tspence@lockstep.io>
+ * @author     Lockstep Network <support@lockstep.io>
+ *             
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.13.29.0
+ * @version    2022.14.30
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
+
 
 package io.lockstep.api;
 
@@ -49,7 +51,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * A client object that can be used to work with the Lockstep Platform API
+ * A client object that can be used to work with the API
  */
 public class LockstepApi {
     private String serverUri;
@@ -125,202 +127,202 @@ public class LockstepApi {
     }
 
     /**
-     * A collection of Lockstep API methods relating to Activities
+     * A collection of API methods relating to Activities
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ActivitiesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.ActivitiesClient client} methods in the API.
      */
     public @NotNull ActivitiesClient getActivitiesClient() { return this.activities; }
     /**
-     * A collection of Lockstep API methods relating to ApiKeys
+     * A collection of API methods relating to ApiKeys
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ApiKeysClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.ApiKeysClient client} methods in the API.
      */
     public @NotNull ApiKeysClient getApiKeysClient() { return this.apiKeys; }
     /**
-     * A collection of Lockstep API methods relating to AppEnrollments
+     * A collection of API methods relating to AppEnrollments
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.AppEnrollmentsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.AppEnrollmentsClient client} methods in the API.
      */
     public @NotNull AppEnrollmentsClient getAppEnrollmentsClient() { return this.appEnrollments; }
     /**
-     * A collection of Lockstep API methods relating to Applications
+     * A collection of API methods relating to Applications
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ApplicationsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.ApplicationsClient client} methods in the API.
      */
     public @NotNull ApplicationsClient getApplicationsClient() { return this.applications; }
     /**
-     * A collection of Lockstep API methods relating to Attachments
+     * A collection of API methods relating to Attachments
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.AttachmentsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.AttachmentsClient client} methods in the API.
      */
     public @NotNull AttachmentsClient getAttachmentsClient() { return this.attachments; }
     /**
-     * A collection of Lockstep API methods relating to CodeDefinitions
+     * A collection of API methods relating to CodeDefinitions
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CodeDefinitionsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CodeDefinitionsClient client} methods in the API.
      */
     public @NotNull CodeDefinitionsClient getCodeDefinitionsClient() { return this.codeDefinitions; }
     /**
-     * A collection of Lockstep API methods relating to Companies
+     * A collection of API methods relating to Companies
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CompaniesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CompaniesClient client} methods in the API.
      */
     public @NotNull CompaniesClient getCompaniesClient() { return this.companies; }
     /**
-     * A collection of Lockstep API methods relating to Contacts
+     * A collection of API methods relating to Contacts
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ContactsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.ContactsClient client} methods in the API.
      */
     public @NotNull ContactsClient getContactsClient() { return this.contacts; }
     /**
-     * A collection of Lockstep API methods relating to CreditMemoApplied
+     * A collection of API methods relating to CreditMemoApplied
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CreditMemoAppliedClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CreditMemoAppliedClient client} methods in the API.
      */
     public @NotNull CreditMemoAppliedClient getCreditMemoAppliedClient() { return this.creditMemoApplied; }
     /**
-     * A collection of Lockstep API methods relating to Currencies
+     * A collection of API methods relating to Currencies
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CurrenciesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CurrenciesClient client} methods in the API.
      */
     public @NotNull CurrenciesClient getCurrenciesClient() { return this.currencies; }
     /**
-     * A collection of Lockstep API methods relating to CustomFieldDefinitions
+     * A collection of API methods relating to CustomFieldDefinitions
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldDefinitionsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldDefinitionsClient client} methods in the API.
      */
     public @NotNull CustomFieldDefinitionsClient getCustomFieldDefinitionsClient() { return this.customFieldDefinitions; }
     /**
-     * A collection of Lockstep API methods relating to CustomFieldValues
+     * A collection of API methods relating to CustomFieldValues
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldValuesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CustomFieldValuesClient client} methods in the API.
      */
     public @NotNull CustomFieldValuesClient getCustomFieldValuesClient() { return this.customFieldValues; }
     /**
-     * A collection of Lockstep API methods relating to Definitions
+     * A collection of API methods relating to Definitions
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.DefinitionsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.DefinitionsClient client} methods in the API.
      */
     public @NotNull DefinitionsClient getDefinitionsClient() { return this.definitions; }
     /**
-     * A collection of Lockstep API methods relating to Emails
+     * A collection of API methods relating to Emails
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.EmailsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.EmailsClient client} methods in the API.
      */
     public @NotNull EmailsClient getEmailsClient() { return this.emails; }
     /**
-     * A collection of Lockstep API methods relating to FinancialAccount
+     * A collection of API methods relating to FinancialAccount
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountClient client} methods in the API.
      */
     public @NotNull FinancialAccountClient getFinancialAccountClient() { return this.financialAccount; }
     /**
-     * A collection of Lockstep API methods relating to FinancialAccountBalanceHistory
+     * A collection of API methods relating to FinancialAccountBalanceHistory
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountBalanceHistoryClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountBalanceHistoryClient client} methods in the API.
      */
     public @NotNull FinancialAccountBalanceHistoryClient getFinancialAccountBalanceHistoryClient() { return this.financialAccountBalanceHistory; }
     /**
-     * A collection of Lockstep API methods relating to FinancialYearSettings
+     * A collection of API methods relating to FinancialYearSettings
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.FinancialYearSettingsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialYearSettingsClient client} methods in the API.
      */
     public @NotNull FinancialYearSettingsClient getFinancialYearSettingsClient() { return this.financialYearSettings; }
     /**
-     * A collection of Lockstep API methods relating to InvoiceHistory
+     * A collection of API methods relating to InvoiceHistory
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistoryClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistoryClient client} methods in the API.
      */
     public @NotNull InvoiceHistoryClient getInvoiceHistoryClient() { return this.invoiceHistory; }
     /**
-     * A collection of Lockstep API methods relating to Invoices
+     * A collection of API methods relating to Invoices
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.InvoicesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.InvoicesClient client} methods in the API.
      */
     public @NotNull InvoicesClient getInvoicesClient() { return this.invoices; }
     /**
-     * A collection of Lockstep API methods relating to Leads
+     * A collection of API methods relating to Leads
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.LeadsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.LeadsClient client} methods in the API.
      */
     public @NotNull LeadsClient getLeadsClient() { return this.leads; }
     /**
-     * A collection of Lockstep API methods relating to Notes
+     * A collection of API methods relating to Notes
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.NotesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.NotesClient client} methods in the API.
      */
     public @NotNull NotesClient getNotesClient() { return this.notes; }
     /**
-     * A collection of Lockstep API methods relating to PaymentApplications
+     * A collection of API methods relating to PaymentApplications
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.PaymentApplicationsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.PaymentApplicationsClient client} methods in the API.
      */
     public @NotNull PaymentApplicationsClient getPaymentApplicationsClient() { return this.paymentApplications; }
     /**
-     * A collection of Lockstep API methods relating to Payments
+     * A collection of API methods relating to Payments
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.PaymentsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.PaymentsClient client} methods in the API.
      */
     public @NotNull PaymentsClient getPaymentsClient() { return this.payments; }
     /**
-     * A collection of Lockstep API methods relating to Provisioning
+     * A collection of API methods relating to Provisioning
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ProvisioningClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.ProvisioningClient client} methods in the API.
      */
     public @NotNull ProvisioningClient getProvisioningClient() { return this.provisioning; }
     /**
-     * A collection of Lockstep API methods relating to Reports
+     * A collection of API methods relating to Reports
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ReportsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.ReportsClient client} methods in the API.
      */
     public @NotNull ReportsClient getReportsClient() { return this.reports; }
     /**
-     * A collection of Lockstep API methods relating to Status
+     * A collection of API methods relating to Status
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.StatusClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.StatusClient client} methods in the API.
      */
     public @NotNull StatusClient getStatusClient() { return this.status; }
     /**
-     * A collection of Lockstep API methods relating to Sync
+     * A collection of API methods relating to Sync
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.SyncClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.SyncClient client} methods in the API.
      */
     public @NotNull SyncClient getSyncClient() { return this.sync; }
     /**
-     * A collection of Lockstep API methods relating to UserAccounts
+     * A collection of API methods relating to UserAccounts
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.UserAccountsClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.UserAccountsClient client} methods in the API.
      */
     public @NotNull UserAccountsClient getUserAccountsClient() { return this.userAccounts; }
     /**
-     * A collection of Lockstep API methods relating to UserRoles
+     * A collection of API methods relating to UserRoles
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.UserRolesClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.UserRolesClient client} methods in the API.
      */
     public @NotNull UserRolesClient getUserRolesClient() { return this.userRoles; }
     /**
-     * A collection of Lockstep API methods relating to Webhooks
+     * A collection of API methods relating to Webhooks
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.WebhooksClient client} methods in the Lockstep Platform API.
+     * @return A collection containing the {@link io.lockstep.api.clients.WebhooksClient client} methods in the API.
      */
     public @NotNull WebhooksClient getWebhooksClient() { return this.webhooks; }
   
     /**
-     * Construct a new Lockstep API client to target the specific environment.
+     * Construct a new API client to target the specific environment.
      *
      * @param env The environment to use, either "prd" for production or "sbx" for sandbox.
-     * @return The Lockstep API client to use
+     * @return The API client to use
      */
     public static @NotNull LockstepApi withEnvironment(@NotNull String env)
     {
-        String url = "https://api.lockstep.io";
+        String url = "https://api.lockstep.io/";
         switch (env)
         {
-            case "prd":
-                url = "https://api.lockstep.io";
-                break;
             case "sbx":
-                url = "https://api.sbx.lockstep.io";
+                url = "https://api.sbx.lockstep.io/";
+                break;
+            case "prd":
+                url = "https://api.lockstep.io/";
                 break;
         }
         return new LockstepApi(url);
@@ -331,8 +333,8 @@ public class LockstepApi {
      * when using proxy servers or an API gateway.  Please be careful when using this
      * mode.  You should prefer to use `withEnvironment()` instead wherever possible.
      *
-     * @param unsafeUrl The non-Lockstep URL to use for this client
-     * @return The Lockstep API client to use
+     * @param unsafeUrl The custom environment URL to use for this client
+     * @return The API client to use
      */
     public static @NotNull LockstepApi withCustomEnvironment(@NotNull String unsafeUrl)
     {
@@ -340,11 +342,12 @@ public class LockstepApi {
     }
 
     /**
-     * Configure this Lockstep API client to use a JWT bearer token.
-     * More documentation is available on [JWT Bearer Tokens](https://developer.lockstep.io/docs/jwt-bearer-tokens).
+     * Configure this API client to use a JWT bearer token.
+     *
+     * Authentication is either via [Lockstep Platform API key](https://developer.lockstep.io/docs/api-keys) or [JWT Bearer Token](https://developer.lockstep.io/docs/jwt-bearer-tokens)
      *
      * @param token The JWT bearer token to use for this API session
-     * @return The Lockstep API client to use
+     * @return The API client to use
      */
     public @NotNull LockstepApi withBearerToken(@NotNull String token)
     {
@@ -354,11 +357,12 @@ public class LockstepApi {
     }
 
     /**
-     * Configures this Lockstep API client to use an API Key.
-     * More documentation is available on [API Keys](https://developer.lockstep.io/docs/api-keys).
+     * Configures this API client to use an API Key.
+     *
+     * Authentication is either via [Lockstep Platform API key](https://developer.lockstep.io/docs/api-keys) or [JWT Bearer Token](https://developer.lockstep.io/docs/jwt-bearer-tokens)
      *
      * @param apiKey The API key to use for this API session
-     * @return The Lockstep API client to use
+     * @return The API client to use
      */
     public @NotNull LockstepApi withApiKey(@NotNull String apiKey)
     {
@@ -368,10 +372,10 @@ public class LockstepApi {
     }
 
     /**
-     * Configures this Lockstep API client to use an application name.
+     * Configures this API client to use an application name.
      * 
      * @param appName The Application name to use for this API session
-     * @return The Lockstep API client to use
+     * @return The API client to use
      */
     public @NotNull LockstepApi withApplicationName(@NotNull String appName) {
         this.appName = appName;
