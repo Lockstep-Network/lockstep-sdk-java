@@ -31,7 +31,11 @@ jobs:
         server-password: OSSRH_PASSWORD
         gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
         gpg-passphrase: MAVEN_GPG_PASSPHRASE
-        
+
+    - name: Verify with Maven
+      if: github.event_name == 'pull_request'
+      run: mvn -B clean verify
+
     - name: Build with Maven
       run: mvn -B compile --file pom.xml
 
