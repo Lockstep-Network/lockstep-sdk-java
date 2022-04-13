@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.lockstep</groupId>
-    <artifactId>LockstepSdk</artifactId>
+    <artifactId>lockstepsdk</artifactId>
     <version>2022.14.30.0</version>
  
     <name>lockstep-sdk-java</name>
