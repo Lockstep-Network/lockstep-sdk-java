@@ -161,8 +161,8 @@ public class ReportsClient
     /**
      * Generates a Trial Balance Report for the given time range.
      *
-     * @param startDate Documentation pending
-     * @param endDate Documentation pending
+     * @param startDate The start date of the report
+     * @param endDate The end date of the report
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialReportModel> trialBalanceReport(@Nullable String startDate, @Nullable String endDate)
