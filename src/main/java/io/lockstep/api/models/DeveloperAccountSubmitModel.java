@@ -23,22 +23,35 @@ import org.jetbrains.annotations.Nullable;
  */
 public class DeveloperAccountSubmitModel
 {
-    private @NotNull String name;
+    private @Nullable String firstName;
+    private @Nullable String lastName;
     private @NotNull String email;
     private @NotNull String companyName;
 
     /**
-     * The name of the developer.
+     * The first name of the person requesting the developer account.
      *
-     * @return The field name
+     * @return The field firstName
      */
-    public @NotNull String getName() { return this.name; }
+    public @Nullable String getFirstName() { return this.firstName; }
     /**
-     * The name of the developer.
+     * The first name of the person requesting the developer account.
      *
-     * @param value The new value for name
+     * @param value The new value for firstName
      */
-    public void setName(@NotNull String value) { this.name = value; }
+    public void setFirstName(@Nullable String value) { this.firstName = value; }
+    /**
+     * The last name of the person requesting the developer account.
+     *
+     * @return The field lastName
+     */
+    public @Nullable String getLastName() { return this.lastName; }
+    /**
+     * The last name of the person requesting the developer account.
+     *
+     * @param value The new value for lastName
+     */
+    public void setLastName(@Nullable String value) { this.lastName = value; }
     /**
      * The email address of the developer.
      *
