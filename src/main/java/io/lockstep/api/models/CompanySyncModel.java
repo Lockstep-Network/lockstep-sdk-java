@@ -55,6 +55,7 @@ public class CompanySyncModel
     private @Nullable String dunsNumber;
     private @Nullable String apEmailAddress;
     private @Nullable String arEmailAddress;
+    private @Nullable String preferredDeliveryMethod;
 
     /**
      * This is the primary key of the Company record. For this field, you should use whatever the company's unique
@@ -412,4 +413,16 @@ public class CompanySyncModel
      * @param value The new value for arEmailAddress
      */
     public void setArEmailAddress(@Nullable String value) { this.arEmailAddress = value; }
+    /**
+     * Indicates the preferred invoice delivery method. Examples include Print, Email, Fax
+     *
+     * @return The field preferredDeliveryMethod
+     */
+    public @Nullable String getPreferredDeliveryMethod() { return this.preferredDeliveryMethod; }
+    /**
+     * Indicates the preferred invoice delivery method. Examples include Print, Email, Fax
+     *
+     * @param value The new value for preferredDeliveryMethod
+     */
+    public void setPreferredDeliveryMethod(@Nullable String value) { this.preferredDeliveryMethod = value; }
 };

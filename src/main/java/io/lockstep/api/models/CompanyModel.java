@@ -58,6 +58,7 @@ public class CompanyModel
     private @Nullable String dunsNumber;
     private @Nullable String apEmailAddress;
     private @Nullable String arEmailAddress;
+    private @Nullable String preferredDeliveryMethod;
     private @Nullable String domainName;
     private @Nullable String companyClassificationCodeDefId;
     private @Nullable String description;
@@ -505,6 +506,18 @@ public class CompanyModel
      * @param value The new value for arEmailAddress
      */
     public void setArEmailAddress(@Nullable String value) { this.arEmailAddress = value; }
+    /**
+     * Indicates the preferred invoice delivery method. Examples include Print, Email, Fax
+     *
+     * @return The field preferredDeliveryMethod
+     */
+    public @Nullable String getPreferredDeliveryMethod() { return this.preferredDeliveryMethod; }
+    /**
+     * Indicates the preferred invoice delivery method. Examples include Print, Email, Fax
+     *
+     * @param value The new value for preferredDeliveryMethod
+     */
+    public void setPreferredDeliveryMethod(@Nullable String value) { this.preferredDeliveryMethod = value; }
     /**
      * For companies that use a custom domain name for their email system, this is
      * the domain name used by this company.  If this value is known, new emails that

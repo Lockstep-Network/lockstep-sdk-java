@@ -119,6 +119,21 @@ public class AppEnrollmentsClient
     }
 
     /**
+     * Updates the OAuth settings associated with this App Enrollment
+     *
+     * @param id Documentation pending
+     * @param body Documentation pending
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<AppEnrollmentModel> reconnectAppEnrollmentOAuth(@NotNull String id, @NotNull String body)
+    {
+        RestRequest<AppEnrollmentModel> r = new RestRequest<AppEnrollmentModel>(this.client, "PATCH", "/api/v1/AppEnrollments/{id}/reconnect");
+        r.AddPath("{id}", id.toString());
+        r.AddBody(body);
+        return r.Call(AppEnrollmentModel.class);
+    }
+
+    /**
      * Queries App Enrollments for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
      *
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.

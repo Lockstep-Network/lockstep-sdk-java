@@ -26,6 +26,7 @@ import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CustomerSummaryModel;
+import io.lockstep.api.models.VendorSummaryModel;
 import io.lockstep.api.models.CustomerDetailsModel;
 
 /**
@@ -171,6 +172,33 @@ public class CompaniesClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<CustomerSummaryModel>>() {}.getType());
+    }
+
+    /**
+     * Queries Vendor Summaries for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
+     *
+     * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
+     *
+     * The Vendor Summary View represents a slightly different view of the data and includes some extra fields that might be useful. For more information, see the data format of the Vendor Summary Model.
+     *
+     * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
+     *
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FetchResult<VendorSummaryModel>> queryVendorSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    {
+        RestRequest<FetchResult<VendorSummaryModel>> r = new RestRequest<FetchResult<VendorSummaryModel>>(this.client, "GET", "/api/v1/Companies/views/vendor-summary");
+        r.AddQuery("filter", filter.toString());
+        r.AddQuery("include", include.toString());
+        r.AddQuery("order", order.toString());
+        r.AddQuery("pageSize", pageSize.toString());
+        r.AddQuery("pageNumber", pageNumber.toString());
+        return r.Call(new TypeToken<FetchResult<VendorSummaryModel>>() {}.getType());
     }
 
     /**

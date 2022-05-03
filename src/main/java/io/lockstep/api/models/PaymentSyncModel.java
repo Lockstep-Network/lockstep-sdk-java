@@ -91,21 +91,21 @@ public class PaymentSyncModel
      */
     public void setCompanyErpKey(@NotNull String value) { this.companyErpKey = value; }
     /**
-     * The type of payment, cash or check.
+     * The type of payment, AR Payment or AP Payment.
      *
      * Recognized PaymentType values are:
-     * * `Cash` - A cash payment or other direct transfer.
-     * * `Check` - A check payment.
+     * * `AR Payment` - A payment made by a Customer to the Company
+     * * `AP Payment` - A payment made by the Company to a Vendor
      *
      * @return The field paymentType
      */
     public @Nullable String getPaymentType() { return this.paymentType; }
     /**
-     * The type of payment, cash or check.
+     * The type of payment, AR Payment or AP Payment.
      *
      * Recognized PaymentType values are:
-     * * `Cash` - A cash payment or other direct transfer.
-     * * `Check` - A check payment.
+     * * `AR Payment` - A payment made by a Customer to the Company
+     * * `AP Payment` - A payment made by the Company to a Vendor
      *
      * @param value The new value for paymentType
      */
