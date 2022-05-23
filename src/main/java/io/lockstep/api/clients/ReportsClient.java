@@ -23,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CashflowReportModel;
 
 import io.lockstep.api.models.DailySalesOutstandingReportModel;
+import io.lockstep.api.models.DailyPayableOutstandingReportModel;
 import io.lockstep.api.models.RiskRateModel;
 import io.lockstep.api.models.ArHeaderInfoModel;
 import io.lockstep.api.models.AgingModel;
@@ -76,6 +77,19 @@ public class ReportsClient
     }
 
     /**
+     * Retrieves a current Days Payable Outstanding (DPO) report for this account.
+     *
+     * Days payable outstanding (DPO) is a financial ratio that indicates the average time (in days) that a company takes to pay its bills to its trade creditors, which may include suppliers, vendors, or financiers.
+     *
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<DailyPayableOutstandingReportModel[]> daysPayableOutstanding()
+    {
+        RestRequest<DailyPayableOutstandingReportModel[]> r = new RestRequest<DailyPayableOutstandingReportModel[]>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding");
+        return r.Call(DailyPayableOutstandingReportModel[].class);
+    }
+
+    /**
      * Retrieves a current Risk Rate report for this account.
      *
      * Risk Rate is a metric that indicates the percentage of total AR balance left unpaid after 90 days.  You can use this report to identify the percentage of invoice value that is not being collected in a timely manner.
@@ -117,9 +131,10 @@ public class ReportsClient
      * @param CurrencyCode Currency aging buckets are converted to (all aging data returned without currency conversion if no currency is specified)
      * @param CurrencyProvider Currency provider currency rates should be returned from to convert aging amounts to (default Lockstep currency provider used if no data provider specified)
      * @param Buckets Customized buckets used for aging calculations (default buckets [0,30,60,90,120,180] will be used if buckets not specified)
+     * @param ApReport A boolean to turn on AP Aging reports
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<AgingModel[]> invoiceagingreport(@Nullable String CompanyId, @Nullable Boolean Recalculate, @Nullable String CurrencyCode, @Nullable String CurrencyProvider, @Nullable Integer[] Buckets)
+    public @NotNull LockstepResponse<AgingModel[]> invoiceagingreport(@Nullable String CompanyId, @Nullable Boolean Recalculate, @Nullable String CurrencyCode, @Nullable String CurrencyProvider, @Nullable Integer[] Buckets, @Nullable Boolean ApReport)
     {
         RestRequest<AgingModel[]> r = new RestRequest<AgingModel[]>(this.client, "GET", "/api/v1/Reports/aging");
         r.AddQuery("CompanyId", CompanyId.toString());
@@ -127,6 +142,7 @@ public class ReportsClient
         r.AddQuery("CurrencyCode", CurrencyCode.toString());
         r.AddQuery("CurrencyProvider", CurrencyProvider.toString());
         r.AddQuery("Buckets", Buckets.toString());
+        r.AddQuery("ApReport", ApReport.toString());
         return r.Call(AgingModel[].class);
     }
 
@@ -163,13 +179,15 @@ public class ReportsClient
      *
      * @param startDate The start date of the report
      * @param endDate The end date of the report
+     * @param appEnrollmentId The app enrollment id of the app enrollment whose data will be used.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialReportModel> trialBalanceReport(@Nullable String startDate, @Nullable String endDate)
+    public @NotNull LockstepResponse<FinancialReportModel> trialBalanceReport(@Nullable String startDate, @Nullable String endDate, @Nullable String appEnrollmentId)
     {
         RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/trial-balance");
         r.AddQuery("startDate", startDate.toString());
         r.AddQuery("endDate", endDate.toString());
+        r.AddQuery("appEnrollmentId", appEnrollmentId.toString());
         return r.Call(FinancialReportModel.class);
     }
 
@@ -178,6 +196,7 @@ public class ReportsClient
      *
      * @param startDate The start date of the report
      * @param endDate The end date of the report
+     * @param appEnrollmentId The app enrollment id of the app enrollment whose data will be used.
      * @param columnOption The desired column splitting of the report data. An empty string or anything unrecognized will result in only totals being displayed. Options are as follows: By Period - a column for every month/fiscal period within the reporting dates Quarterly - a column for every quarter within the reporting dates Annually - a column for every year within the reporting dates
      * @param displayDepth The desired row splitting of the report data. For Income Statements, the minimum report depth is 1. Options are as follows: 1 - combine all accounts by their category 2 - combine all accounts by their subcategory 3 - display all accounts
      * @param comparisonPeriod Add a column for historical data with the following options and use showCurrencyDifference and/or show percentageDifference to display a comparison of that historical data to the report period. Options are as follows (note for YTD the data will be compared as a percentage of YTD and showCurrencyDifference and showPercentageDifference should not be used): "PP" - previous period (will show the previous quarter or year if Quarterly or Annually is chosen for columnOption) "PY" - previous year (the same date range as the report, but for the year prior) "YTD" - year to date (the current financial year to the current period)
@@ -185,11 +204,12 @@ public class ReportsClient
      * @param showPercentageDifference A boolean to turn on a percent based difference between the reporting period and the comparison period.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialReportModel> incomeStatementReport(@Nullable String startDate, @Nullable String endDate, @Nullable String columnOption, @Nullable Integer displayDepth, @Nullable String comparisonPeriod, @Nullable Boolean showCurrencyDifference, @Nullable Boolean showPercentageDifference)
+    public @NotNull LockstepResponse<FinancialReportModel> incomeStatementReport(@Nullable String startDate, @Nullable String endDate, @Nullable String appEnrollmentId, @Nullable String columnOption, @Nullable Integer displayDepth, @Nullable String comparisonPeriod, @Nullable Boolean showCurrencyDifference, @Nullable Boolean showPercentageDifference)
     {
         RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/income-statement");
         r.AddQuery("startDate", startDate.toString());
         r.AddQuery("endDate", endDate.toString());
+        r.AddQuery("appEnrollmentId", appEnrollmentId.toString());
         r.AddQuery("columnOption", columnOption.toString());
         r.AddQuery("displayDepth", displayDepth.toString());
         r.AddQuery("comparisonPeriod", comparisonPeriod.toString());
@@ -203,6 +223,7 @@ public class ReportsClient
      *
      * @param startDate The start date of the report
      * @param endDate The end date of the report
+     * @param appEnrollmentId The app enrollment id of the app enrollment whose data will be used.
      * @param columnOption The desired column splitting of the report data. An empty string or anything unrecognized will result in only totals being displayed. Options are as follows: By Period - a column for every month/fiscal period within the reporting dates Quarterly - a column for every quarter within the reporting dates Annually - a column for every year within the reporting dates
      * @param displayDepth The desired row splitting of the report data. For Balance Sheets, the minimum report depth is 1. Options are as follows: 1 - combine all accounts by their category 2 - combine all accounts by their subcategory 3 - display all accounts
      * @param comparisonPeriod Add a column for historical data with the following options and use showCurrencyDifference and/or show percentageDifference to display a comparison of that historical data to the report period. "PP" - previous period (will show the previous quarter or year if Quarterly or Annually is chosen for columnOption) "PY" - previous year (the same date range as the report, but for the year prior)
@@ -210,16 +231,38 @@ public class ReportsClient
      * @param showPercentageDifference A boolean to turn on a percent based difference between the reporting period and the comparison period.
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FinancialReportModel> balanceSheetReport(@Nullable String startDate, @Nullable String endDate, @Nullable String columnOption, @Nullable Integer displayDepth, @Nullable String comparisonPeriod, @Nullable Boolean showCurrencyDifference, @Nullable Boolean showPercentageDifference)
+    public @NotNull LockstepResponse<FinancialReportModel> balanceSheetReport(@Nullable String startDate, @Nullable String endDate, @Nullable String appEnrollmentId, @Nullable String columnOption, @Nullable Integer displayDepth, @Nullable String comparisonPeriod, @Nullable Boolean showCurrencyDifference, @Nullable Boolean showPercentageDifference)
     {
         RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/balance-sheet");
         r.AddQuery("startDate", startDate.toString());
         r.AddQuery("endDate", endDate.toString());
+        r.AddQuery("appEnrollmentId", appEnrollmentId.toString());
         r.AddQuery("columnOption", columnOption.toString());
         r.AddQuery("displayDepth", displayDepth.toString());
         r.AddQuery("comparisonPeriod", comparisonPeriod.toString());
         r.AddQuery("showCurrencyDifference", showCurrencyDifference.toString());
         r.AddQuery("showPercentageDifference", showPercentageDifference.toString());
+        return r.Call(FinancialReportModel.class);
+    }
+
+    /**
+     * Generates a cash flow statement for the given time range.
+     *
+     * @param startDate The start date of the report
+     * @param endDate The end date of the report
+     * @param appEnrollmentId The app enrollment id of the app enrollment whose data will be used.
+     * @param columnOption The desired column splitting of the report data. An empty string or anything unrecognized will result in only totals being displayed. Options are as follows: By Period - a column for every month/fiscal period within the reporting dates Quarterly - a column for every quarter within the reporting dates Annually - a column for every year within the reporting dates
+     * @param displayDepth The desired row splitting of the report data. Options are as follows: 0 - combine all accounts by their classification 1 - combine all accounts by their category 2 - combine all accounts by their subcategory 3 - display all accounts
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FinancialReportModel> cashFlowStatementReport(@Nullable String startDate, @Nullable String endDate, @Nullable String appEnrollmentId, @Nullable String columnOption, @Nullable Integer displayDepth)
+    {
+        RestRequest<FinancialReportModel> r = new RestRequest<FinancialReportModel>(this.client, "GET", "/api/v1/Reports/cash-flow-statement");
+        r.AddQuery("startDate", startDate.toString());
+        r.AddQuery("endDate", endDate.toString());
+        r.AddQuery("appEnrollmentId", appEnrollmentId.toString());
+        r.AddQuery("columnOption", columnOption.toString());
+        r.AddQuery("displayDepth", displayDepth.toString());
         return r.Call(FinancialReportModel.class);
     }
 }
