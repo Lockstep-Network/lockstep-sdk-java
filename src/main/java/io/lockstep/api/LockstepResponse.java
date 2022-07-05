@@ -6,13 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
- * @version    2021.4.32.0
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @author     Lockstep Network <support@lockstep.io>
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
-package io.lockstep.api.models;
+package io.lockstep.api;
+
+import io.lockstep.api.models.ErrorResult;
 
 /**
  * Results of a Lockstep API request
@@ -20,8 +21,7 @@ package io.lockstep.api.models;
  * @author jkirk
  * @version $Id: $Id
  */
-public class LockstepResponse<T>
-{
+public class LockstepResponse<T> {
     private Boolean success;
     private T value;
     private ErrorResult error;
@@ -30,7 +30,9 @@ public class LockstepResponse<T>
     private long serverDuration;
 
     /**
-     * <p>isSuccess.</p>
+     * <p>
+     * isSuccess.
+     * </p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
@@ -39,7 +41,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Getter for the field <code>success</code>.</p>
+     * <p>
+     * Getter for the field <code>success</code>.
+     * </p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
@@ -48,7 +52,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Setter for the field <code>success</code>.</p>
+     * <p>
+     * Setter for the field <code>success</code>.
+     * </p>
      *
      * @param success a {@link java.lang.Boolean} object.
      */
@@ -57,7 +63,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Getter for the field <code>value</code>.</p>
+     * <p>
+     * Getter for the field <code>value</code>.
+     * </p>
      *
      * @return a T object.
      */
@@ -66,7 +74,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Setter for the field <code>value</code>.</p>
+     * <p>
+     * Setter for the field <code>value</code>.
+     * </p>
      *
      * @param value a T object.
      */
@@ -75,7 +85,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Getter for the field <code>error</code>.</p>
+     * <p>
+     * Getter for the field <code>error</code>.
+     * </p>
      *
      * @return a {@link io.lockstep.api.models.ErrorResult} object.
      */
@@ -84,7 +96,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Setter for the field <code>error</code>.</p>
+     * <p>
+     * Setter for the field <code>error</code>.
+     * </p>
      *
      * @param error a {@link io.lockstep.api.models.ErrorResult} object.
      */
@@ -93,7 +107,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Setter for the field <code>exception</code>.</p>
+     * <p>
+     * Setter for the field <code>exception</code>.
+     * </p>
      *
      * @param e a {@link java.lang.Exception} object.
      */
@@ -102,7 +118,9 @@ public class LockstepResponse<T>
     }
 
     /**
-     * <p>Getter for the field <code>exception</code>.</p>
+     * <p>
+     * Getter for the field <code>exception</code>.
+     * </p>
      *
      * @return a {@link java.lang.Exception} object.
      */
@@ -113,7 +131,8 @@ public class LockstepResponse<T>
     /**
      * Setter for the field serverDuration
      * 
-     * @param serverDuration Lockstep Platform server processing time in milliseconds
+     * @param serverDuration Lockstep Platform server processing time in
+     *                       milliseconds
      */
     public void setServerDuration(long serverDuration) {
         this.serverDuration = serverDuration;
@@ -135,7 +154,7 @@ public class LockstepResponse<T>
      */
     public void setRoundTripTime(long roundTripDuration) {
         this.roundTripDuration = roundTripDuration;
-    }  
+    }
 
     /**
      * Getter for the field serverDuration

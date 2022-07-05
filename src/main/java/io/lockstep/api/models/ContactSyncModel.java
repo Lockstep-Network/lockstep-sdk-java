@@ -33,7 +33,7 @@ public class ContactSyncModel
 {
     private @NotNull String erpKey;
     private @NotNull String companyErpKey;
-    private @NotNull String contactName;
+    private @Nullable String contactName;
     private @Nullable String contactCode;
     private @Nullable String title;
     private @Nullable String roleCode;
@@ -62,9 +62,9 @@ public class ContactSyncModel
      * in the database should be the "ErpKey".
      *
      * As some ERP systems don't maintain a unique key for Contacts, we also support syncing Contacts with ERP keys
-     * of the form {CompanyErpKey}|{index}, for example CompanyErpKey|1, CompanyErpKey|2 and so on.
+     * of the form {prefix}|{index}, for example ContactPrefix|1, ContactPrefix|2 and so on.
      *
-     * For this reason, please ensure that your Company/Contact ERP keys don't contain the '|' symbol or that it
+     * For this reason, please ensure that your Contact ERP keys don't otherwise contain the '|' symbol or that it
      * is replaced by an alternate symbol if they do.
      *
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
@@ -81,9 +81,9 @@ public class ContactSyncModel
      * in the database should be the "ErpKey".
      *
      * As some ERP systems don't maintain a unique key for Contacts, we also support syncing Contacts with ERP keys
-     * of the form {CompanyErpKey}|{index}, for example CompanyErpKey|1, CompanyErpKey|2 and so on.
+     * of the form {prefix}|{index}, for example ContactPrefix|1, ContactPrefix|2 and so on.
      *
-     * For this reason, please ensure that your Company/Contact ERP keys don't contain the '|' symbol or that it
+     * For this reason, please ensure that your Contact ERP keys don't otherwise contain the '|' symbol or that it
      * is replaced by an alternate symbol if they do.
      *
      * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
@@ -112,13 +112,13 @@ public class ContactSyncModel
      *
      * @return The field contactName
      */
-    public @NotNull String getContactName() { return this.contactName; }
+    public @Nullable String getContactName() { return this.contactName; }
     /**
      * The name of the contact.
      *
      * @param value The new value for contactName
      */
-    public void setContactName(@NotNull String value) { this.contactName = value; }
+    public void setContactName(@Nullable String value) { this.contactName = value; }
     /**
      * A friendly human-readable code that describes this Contact.
      *
@@ -264,13 +264,13 @@ public class ContactSyncModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * The mailing address information for this contact. This will be validated by the /api/v1/definitions/countries data set
+     * The mailing address information for this contact.
      *
      * @return The field countryCode
      */
     public @Nullable String getCountryCode() { return this.countryCode; }
     /**
-     * The mailing address information for this contact. This will be validated by the /api/v1/definitions/countries data set
+     * The mailing address information for this contact.
      *
      * @param value The new value for countryCode
      */

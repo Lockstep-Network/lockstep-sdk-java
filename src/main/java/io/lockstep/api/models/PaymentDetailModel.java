@@ -34,6 +34,7 @@ public class PaymentDetailModel
     private @NotNull Double paymentAmount;
     private @NotNull Double unappliedAmount;
     private @Nullable String paymentType;
+    private @Nullable String tenderType;
     private @Nullable String paymentDate;
     private @Nullable String postDate;
     private @Nullable String phone;
@@ -173,17 +174,51 @@ public class PaymentDetailModel
      */
     public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
     /**
-     * The type of payment, Payment or AP Payment.
+     * The type of payment, AR Payment or AP Payment.
+     *
+     * Recognized PaymentType values are:
+     * * `AR Payment` - A payment made by a Customer to the Company
+     * * `AP Payment` - A payment made by the Company to a Vendor
      *
      * @return The field paymentType
      */
     public @Nullable String getPaymentType() { return this.paymentType; }
     /**
-     * The type of payment, Payment or AP Payment.
+     * The type of payment, AR Payment or AP Payment.
+     *
+     * Recognized PaymentType values are:
+     * * `AR Payment` - A payment made by a Customer to the Company
+     * * `AP Payment` - A payment made by the Company to a Vendor
      *
      * @param value The new value for paymentType
      */
     public void setPaymentType(@Nullable String value) { this.paymentType = value; }
+    /**
+     * Cash, check, credit card, wire transfer.
+     *
+     * Recognized TenderType values are:
+     * * `Cash` - A cash payment or other direct transfer.
+     * * `Check` - A check payment.
+     * * `Credit Card` - A payment made via a credit card.
+     * * `Wire Transfer` - A payment made via wire transfer from another financial institution.
+     * * `Other` - A payment made via another method not listed above.
+     *
+     * @return The field tenderType
+     */
+    public @Nullable String getTenderType() { return this.tenderType; }
+    /**
+     * Cash, check, credit card, wire transfer.
+     *
+     * Recognized TenderType values are:
+     * * `Cash` - A cash payment or other direct transfer.
+     * * `Check` - A check payment.
+     * * `Credit Card` - A payment made via a credit card.
+     * * `Wire Transfer` - A payment made via wire transfer from another financial institution.
+     * * `Other` - A payment made via another method not listed above.
+     *
+     * @param value The new value for tenderType
+     */
+    public void setTenderType(@Nullable String value) { this.tenderType = value; }
     /**
      * The date of this Payment.
      *

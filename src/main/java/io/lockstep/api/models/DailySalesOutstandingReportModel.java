@@ -24,7 +24,6 @@ import org.jetbrains.annotations.Nullable;
 public class DailySalesOutstandingReportModel
 {
     private @NotNull String timeframe;
-    private @NotNull Integer invoiceCount;
     private @NotNull Double dailySalesOutstanding;
 
     /**
@@ -39,18 +38,6 @@ public class DailySalesOutstandingReportModel
      * @param value The new value for timeframe
      */
     public void setTimeframe(@NotNull String value) { this.timeframe = value; }
-    /**
-     * Number of invoices the average daily sales outstanding is calculated on
-     *
-     * @return The field invoiceCount
-     */
-    public @NotNull Integer getInvoiceCount() { return this.invoiceCount; }
-    /**
-     * Number of invoices the average daily sales outstanding is calculated on
-     *
-     * @param value The new value for invoiceCount
-     */
-    public void setInvoiceCount(@NotNull Integer value) { this.invoiceCount = value; }
     /**
      * Time (in days) between an invoice was completed paid off and when the invoice was issued
      *

@@ -17,13 +17,13 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.PaymentAppliedModel;
 
 import io.lockstep.api.models.ActionResultModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -49,7 +49,7 @@ public class PaymentApplicationsClient
      * A Payment Application is created by a business who receives a Payment from a customer.  A customer may make a single Payment to match an Invoice exactly, a partial Payment for an Invoice, or a single Payment may be made for multiple smaller Invoices.  The Payment Application contains information about which Invoices are connected to which Payments and for which amounts.
      *
      * @param id The unique Lockstep Platform ID number of this Payment Application; NOT the customer's ERP key
-     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Invoice
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Invoice, Payment
      * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<PaymentAppliedModel> retrievePaymentApplication(@NotNull String id, @Nullable String include)

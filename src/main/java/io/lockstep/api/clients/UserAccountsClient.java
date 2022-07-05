@@ -17,7 +17,7 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.UserAccountModel;
@@ -28,7 +28,7 @@ import io.lockstep.api.models.InviteSubmitModel;
 import io.lockstep.api.models.InviteDataModel;
 import io.lockstep.api.models.TransferOwnerModel;
 import io.lockstep.api.models.TransferOwnerSubmitModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -178,5 +178,20 @@ public class UserAccountsClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<UserAccountModel>>() {}.getType());
+    }
+
+    /**
+     * Change the active GroupKey of the calling user.
+     *
+     * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
+     *
+     * @param groupKey Documentation pending
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<UserAccountModel> changeUserGroup(@NotNull String groupKey)
+    {
+        RestRequest<UserAccountModel> r = new RestRequest<UserAccountModel>(this.client, "POST", "/api/v1/UserAccounts/change-group");
+        r.AddQuery("groupKey", groupKey.toString());
+        return r.Call(UserAccountModel.class);
     }
 }

@@ -27,16 +27,22 @@ public class PaymentSummaryModel
     private @NotNull String paymentId;
     private @Nullable String memoText;
     private @Nullable String referenceCode;
+    private @Nullable String tenderType;
     private @Nullable String paymentType;
     private @Nullable String paymentDate;
     private @NotNull Double paymentAmount;
     private @NotNull Double unappliedAmount;
+    private @NotNull Boolean isOpen;
     private @Nullable Integer invoiceCount;
     private @Nullable Double totalPaymentsApplied;
     private @Nullable String[] invoiceList;
     private @Nullable String[] invoiceIdList;
-    private @Nullable String customerName;
-    private @Nullable String customerId;
+    private @Nullable String paymentCompanyId;
+    private @Nullable String paymentCompanyName;
+    private @Nullable String[] customerIds;
+    private @Nullable String[] customerNames;
+    private @Nullable String[] companyIds;
+    private @Nullable String[] companyNames;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -93,13 +99,25 @@ public class PaymentSummaryModel
      */
     public void setReferenceCode(@Nullable String value) { this.referenceCode = value; }
     /**
-     * The type of payment, Payment or AP Payment.
+     * The tender type of payment (Cash, Check, etc.)
+     *
+     * @return The field tenderType
+     */
+    public @Nullable String getTenderType() { return this.tenderType; }
+    /**
+     * The tender type of payment (Cash, Check, etc.)
+     *
+     * @param value The new value for tenderType
+     */
+    public void setTenderType(@Nullable String value) { this.tenderType = value; }
+    /**
+     * The type of payment, AR Payment or AP Payment.
      *
      * @return The field paymentType
      */
     public @Nullable String getPaymentType() { return this.paymentType; }
     /**
-     * The type of payment, Payment or AP Payment.
+     * The type of payment, AR Payment or AP Payment.
      *
      * @param value The new value for paymentType
      */
@@ -140,6 +158,20 @@ public class PaymentSummaryModel
      * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
+    /**
+     * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
+     * value is true, the field `UnappliedAmount` will be nonzero.
+     *
+     * @return The field isOpen
+     */
+    public @NotNull Boolean getIsOpen() { return this.isOpen; }
+    /**
+     * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
+     * value is true, the field `UnappliedAmount` will be nonzero.
+     *
+     * @param value The new value for isOpen
+     */
+    public void setIsOpen(@NotNull Boolean value) { this.isOpen = value; }
     /**
      * The number of invoices associated to this payment.
      *
@@ -189,27 +221,75 @@ public class PaymentSummaryModel
      */
     public void setInvoiceIdList(@Nullable String[] value) { this.invoiceIdList = value; }
     /**
-     * The name of the customer for this payment.
+     * The id of the company for this payment.
      *
-     * @return The field customerName
+     * @return The field paymentCompanyId
      */
-    public @Nullable String getCustomerName() { return this.customerName; }
+    public @Nullable String getPaymentCompanyId() { return this.paymentCompanyId; }
     /**
-     * The name of the customer for this payment.
+     * The id of the company for this payment.
      *
-     * @param value The new value for customerName
+     * @param value The new value for paymentCompanyId
      */
-    public void setCustomerName(@Nullable String value) { this.customerName = value; }
+    public void setPaymentCompanyId(@Nullable String value) { this.paymentCompanyId = value; }
     /**
-     * The id of the customer for this payment.
+     * The name of the company for this payment.
      *
-     * @return The field customerId
+     * @return The field paymentCompanyName
      */
-    public @Nullable String getCustomerId() { return this.customerId; }
+    public @Nullable String getPaymentCompanyName() { return this.paymentCompanyName; }
     /**
-     * The id of the customer for this payment.
+     * The name of the company for this payment.
      *
-     * @param value The new value for customerId
+     * @param value The new value for paymentCompanyName
      */
-    public void setCustomerId(@Nullable String value) { this.customerId = value; }
+    public void setPaymentCompanyName(@Nullable String value) { this.paymentCompanyName = value; }
+    /**
+     * The ids of the customer for the associated invoices.
+     *
+     * @return The field customerIds
+     */
+    public @Nullable String[] getCustomerIds() { return this.customerIds; }
+    /**
+     * The ids of the customer for the associated invoices.
+     *
+     * @param value The new value for customerIds
+     */
+    public void setCustomerIds(@Nullable String[] value) { this.customerIds = value; }
+    /**
+     * The names of the customer for the associated invoices.
+     *
+     * @return The field customerNames
+     */
+    public @Nullable String[] getCustomerNames() { return this.customerNames; }
+    /**
+     * The names of the customer for the associated invoices.
+     *
+     * @param value The new value for customerNames
+     */
+    public void setCustomerNames(@Nullable String[] value) { this.customerNames = value; }
+    /**
+     * The ids of the company for the associated invoices.
+     *
+     * @return The field companyIds
+     */
+    public @Nullable String[] getCompanyIds() { return this.companyIds; }
+    /**
+     * The ids of the company for the associated invoices.
+     *
+     * @param value The new value for companyIds
+     */
+    public void setCompanyIds(@Nullable String[] value) { this.companyIds = value; }
+    /**
+     * The names of the company for the associated invoices.
+     *
+     * @return The field companyNames
+     */
+    public @Nullable String[] getCompanyNames() { return this.companyNames; }
+    /**
+     * The names of the company for the associated invoices.
+     *
+     * @param value The new value for companyNames
+     */
+    public void setCompanyNames(@Nullable String[] value) { this.companyNames = value; }
 };

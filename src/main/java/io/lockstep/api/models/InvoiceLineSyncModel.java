@@ -327,13 +327,13 @@ public class InvoiceLineSyncModel
      */
     public void setOriginAddressPostalCode(@Nullable String value) { this.originAddressPostalCode = value; }
     /**
-     * Origination address for this invoice line, if this line item was originated from a different address This will be validated by the /api/v1/definitions/countries data set
+     * Origination address for this invoice line, if this line item was originated from a different address
      *
      * @return The field originAddressCountry
      */
     public @Nullable String getOriginAddressCountry() { return this.originAddressCountry; }
     /**
-     * Origination address for this invoice line, if this line item was originated from a different address This will be validated by the /api/v1/definitions/countries data set
+     * Origination address for this invoice line, if this line item was originated from a different address
      *
      * @param value The new value for originAddressCountry
      */
@@ -435,13 +435,13 @@ public class InvoiceLineSyncModel
      */
     public void setBillToAddressPostalCode(@Nullable String value) { this.billToAddressPostalCode = value; }
     /**
-     * Billing address for this invoice line, if this line item is to be billed to a different address This will be validated by the /api/v1/definitions/countries data set
+     * Billing address for this invoice line, if this line item is to be billed to a different address
      *
      * @return The field billToAddressCountry
      */
     public @Nullable String getBillToAddressCountry() { return this.billToAddressCountry; }
     /**
-     * Billing address for this invoice line, if this line item is to be billed to a different address This will be validated by the /api/v1/definitions/countries data set
+     * Billing address for this invoice line, if this line item is to be billed to a different address
      *
      * @param value The new value for billToAddressCountry
      */
@@ -543,13 +543,13 @@ public class InvoiceLineSyncModel
      */
     public void setShipToAddressPostalCode(@Nullable String value) { this.shipToAddressPostalCode = value; }
     /**
-     * Shipping address for this invoice line, if this line item is to be shipped to a different address This will be validated by the /api/v1/definitions/countries data set
+     * Shipping address for this invoice line, if this line item is to be shipped to a different address
      *
      * @return The field shipToAddressCountry
      */
     public @Nullable String getShipToAddressCountry() { return this.shipToAddressCountry; }
     /**
-     * Shipping address for this invoice line, if this line item is to be shipped to a different address This will be validated by the /api/v1/definitions/countries data set
+     * Shipping address for this invoice line, if this line item is to be shipped to a different address
      *
      * @param value The new value for shipToAddressCountry
      */

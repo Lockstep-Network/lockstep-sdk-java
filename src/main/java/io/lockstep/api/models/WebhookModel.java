@@ -42,6 +42,7 @@ public class WebhookModel
     private @NotNull String createdUserId;
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
+    private @Nullable WebhookRuleModel[] webhookRules;
     private @Nullable String partitionKey;
 
     /**
@@ -127,13 +128,13 @@ public class WebhookModel
      */
     public void setClientSecret(@Nullable String value) { this.clientSecret = value; }
     /**
-     * The format of the content to be returned in the webhook notifications. Options TBD.
+     * The format of the content to be returned in the webhook notifications. Current options are 'Full' or 'Id'.
      *
      * @return The field requestContentType
      */
     public @NotNull String getRequestContentType() { return this.requestContentType; }
     /**
-     * The format of the content to be returned in the webhook notifications. Options TBD.
+     * The format of the content to be returned in the webhook notifications. Current options are 'Full' or 'Id'.
      *
      * @param value The new value for requestContentType
      */
@@ -246,6 +247,18 @@ public class WebhookModel
      * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
+    /**
+     * A list of Webhook Rules associated with this Webhook.
+     *
+     * @return The field webhookRules
+     */
+    public @Nullable WebhookRuleModel[] getWebhookRules() { return this.webhookRules; }
+    /**
+     * A list of Webhook Rules associated with this Webhook.
+     *
+     * @param value The new value for webhookRules
+     */
+    public void setWebhookRules(@Nullable WebhookRuleModel[] value) { this.webhookRules = value; }
     /**
      * The partition key used for the webhook callback history
      *

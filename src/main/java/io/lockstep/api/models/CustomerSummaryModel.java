@@ -31,10 +31,16 @@ public class CustomerSummaryModel
     private @Nullable Integer totalInvoicesOpen;
     private @Nullable Integer totalInvoicesPastDue;
     private @Nullable Integer closedInvoices;
+    private @Nullable Integer closedInvoicesPastThirtyDays;
     private @Nullable Double amountCollected;
+    private @Nullable Double amountCollectedPastThirtyDays;
     private @Nullable Double outstandingAmount;
+    private @Nullable Double invoicedAmountPastThirtyDays;
+    private @Nullable Double outstandingAmountPastThirtyDays;
+    private @Nullable Integer invoicesPastThirtyDays;
     private @Nullable Double amountPastDue;
     private @Nullable Double unappliedPayments;
+    private @Nullable Double unappliedAmountPastThirtyDays;
     private @Nullable Double percentOfTotalAr;
     private @Nullable Double dso;
     private @Nullable String newestActivity;
@@ -142,6 +148,18 @@ public class CustomerSummaryModel
      */
     public void setClosedInvoices(@Nullable Integer value) { this.closedInvoices = value; }
     /**
+     * The number of closed invoices for this customer in the past thirty days.
+     *
+     * @return The field closedInvoicesPastThirtyDays
+     */
+    public @Nullable Integer getClosedInvoicesPastThirtyDays() { return this.closedInvoicesPastThirtyDays; }
+    /**
+     * The number of closed invoices for this customer in the past thirty days.
+     *
+     * @param value The new value for closedInvoicesPastThirtyDays
+     */
+    public void setClosedInvoicesPastThirtyDays(@Nullable Integer value) { this.closedInvoicesPastThirtyDays = value; }
+    /**
      * The total from collected payments.
      *
      * @return The field amountCollected
@@ -154,6 +172,18 @@ public class CustomerSummaryModel
      */
     public void setAmountCollected(@Nullable Double value) { this.amountCollected = value; }
     /**
+     * The total from collected payments in the past thirty days.
+     *
+     * @return The field amountCollectedPastThirtyDays
+     */
+    public @Nullable Double getAmountCollectedPastThirtyDays() { return this.amountCollectedPastThirtyDays; }
+    /**
+     * The total from collected payments in the past thirty days.
+     *
+     * @param value The new value for amountCollectedPastThirtyDays
+     */
+    public void setAmountCollectedPastThirtyDays(@Nullable Double value) { this.amountCollectedPastThirtyDays = value; }
+    /**
      * The total balance of outstanding invoices.
      *
      * @return The field outstandingAmount
@@ -165,6 +195,42 @@ public class CustomerSummaryModel
      * @param value The new value for outstandingAmount
      */
     public void setOutstandingAmount(@Nullable Double value) { this.outstandingAmount = value; }
+    /**
+     * The total amount invoiced in the past thirty days.
+     *
+     * @return The field invoicedAmountPastThirtyDays
+     */
+    public @Nullable Double getInvoicedAmountPastThirtyDays() { return this.invoicedAmountPastThirtyDays; }
+    /**
+     * The total amount invoiced in the past thirty days.
+     *
+     * @param value The new value for invoicedAmountPastThirtyDays
+     */
+    public void setInvoicedAmountPastThirtyDays(@Nullable Double value) { this.invoicedAmountPastThirtyDays = value; }
+    /**
+     * The total amount outstanding from the invoices invoiced in the past thirty days.
+     *
+     * @return The field outstandingAmountPastThirtyDays
+     */
+    public @Nullable Double getOutstandingAmountPastThirtyDays() { return this.outstandingAmountPastThirtyDays; }
+    /**
+     * The total amount outstanding from the invoices invoiced in the past thirty days.
+     *
+     * @param value The new value for outstandingAmountPastThirtyDays
+     */
+    public void setOutstandingAmountPastThirtyDays(@Nullable Double value) { this.outstandingAmountPastThirtyDays = value; }
+    /**
+     * The number of invoices invoiced in the past thirty days.
+     *
+     * @return The field invoicesPastThirtyDays
+     */
+    public @Nullable Integer getInvoicesPastThirtyDays() { return this.invoicesPastThirtyDays; }
+    /**
+     * The number of invoices invoiced in the past thirty days.
+     *
+     * @param value The new value for invoicesPastThirtyDays
+     */
+    public void setInvoicesPastThirtyDays(@Nullable Integer value) { this.invoicesPastThirtyDays = value; }
     /**
      * The total amount past due for this customer.
      *
@@ -189,6 +255,18 @@ public class CustomerSummaryModel
      * @param value The new value for unappliedPayments
      */
     public void setUnappliedPayments(@Nullable Double value) { this.unappliedPayments = value; }
+    /**
+     * The total value of unapplied Payments for this Customer in the past thirty days.
+     *
+     * @return The field unappliedAmountPastThirtyDays
+     */
+    public @Nullable Double getUnappliedAmountPastThirtyDays() { return this.unappliedAmountPastThirtyDays; }
+    /**
+     * The total value of unapplied Payments for this Customer in the past thirty days.
+     *
+     * @param value The new value for unappliedAmountPastThirtyDays
+     */
+    public void setUnappliedAmountPastThirtyDays(@Nullable Double value) { this.unappliedAmountPastThirtyDays = value; }
     /**
      * Portion of Total AR for this Customer that is Past due. (TotalPastDue / Total AR).
      *

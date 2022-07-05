@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 public class UserAccountModel
 {
     private @NotNull String userId;
-    private @NotNull String groupKey;
+    private @Nullable String groupKey;
     private @NotNull String userName;
     private @NotNull String email;
     private @Nullable String status;
@@ -87,7 +87,7 @@ public class UserAccountModel
      *
      * @return The field groupKey
      */
-    public @NotNull String getGroupKey() { return this.groupKey; }
+    public @Nullable String getGroupKey() { return this.groupKey; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.
@@ -96,7 +96,7 @@ public class UserAccountModel
      *
      * @param value The new value for groupKey
      */
-    public void setGroupKey(@NotNull String value) { this.groupKey = value; }
+    public void setGroupKey(@Nullable String value) { this.groupKey = value; }
     /**
      * The full name of the user
      *

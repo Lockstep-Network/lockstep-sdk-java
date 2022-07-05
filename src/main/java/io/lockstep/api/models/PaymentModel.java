@@ -156,6 +156,7 @@ public class PaymentModel
      * * `Check` - A check payment.
      * * `Credit Card` - A payment made via a credit card.
      * * `Wire Transfer` - A payment made via wire transfer from another financial institution.
+     * * `Other` - A payment made via another method not listed above.
      *
      * @return The field tenderType
      */
@@ -168,6 +169,7 @@ public class PaymentModel
      * * `Check` - A check payment.
      * * `Credit Card` - A payment made via a credit card.
      * * `Wire Transfer` - A payment made via wire transfer from another financial institution.
+     * * `Other` - A payment made via another method not listed above.
      *
      * @param value The new value for tenderType
      */

@@ -36,7 +36,9 @@ public class StatusModel
     private @Nullable String userStatus;
     private @Nullable String environment;
     private @Nullable String version;
+    private @Nullable Boolean onboardingScheduled;
     private @Nullable Object dependencies;
+    private @Nullable UserGroupModel[] userGroups;
 
     /**
      * If authentication is successful, contains the username of the logged-in user.
@@ -195,6 +197,18 @@ public class StatusModel
      */
     public void setVersion(@Nullable String value) { this.version = value; }
     /**
+     * If authentication is successful, contains the onboarding session status of the logged-in user's group account.
+     *
+     * @return The field onboardingScheduled
+     */
+    public @Nullable Boolean getOnboardingScheduled() { return this.onboardingScheduled; }
+    /**
+     * If authentication is successful, contains the onboarding session status of the logged-in user's group account.
+     *
+     * @param value The new value for onboardingScheduled
+     */
+    public void setOnboardingScheduled(@Nullable Boolean value) { this.onboardingScheduled = value; }
+    /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.
      *
@@ -208,4 +222,18 @@ public class StatusModel
      * @param value The new value for dependencies
      */
     public void setDependencies(@Nullable Object value) { this.dependencies = value; }
+    /**
+     * The set of Groups that the user has access to.
+     * You can use the /api/v1/useraccounts/change-group endpoint to change your active group.
+     *
+     * @return The field userGroups
+     */
+    public @Nullable UserGroupModel[] getUserGroups() { return this.userGroups; }
+    /**
+     * The set of Groups that the user has access to.
+     * You can use the /api/v1/useraccounts/change-group endpoint to change your active group.
+     *
+     * @param value The new value for userGroups
+     */
+    public void setUserGroups(@Nullable UserGroupModel[] value) { this.userGroups = value; }
 };
