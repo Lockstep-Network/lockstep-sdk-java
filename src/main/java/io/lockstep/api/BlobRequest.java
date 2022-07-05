@@ -107,7 +107,7 @@ public class BlobRequest {
     /**
      * Adapted from Apache simple request client example
      *
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return a {@link io.lockstep.api.LockstepResponse} object.
      */
     public @NotNull LockstepResponse<byte[]> Call() {
         Instant start = Instant.now();

@@ -108,7 +108,7 @@ public class RestRequest<@NotNull T> {
      * Adapted from Apache simple request client example
      *
      * @param classReference a {@link java.lang.reflect.Type} object.
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return a {@link io.lockstep.api.LockstepResponse} object.
      */
     public @NotNull LockstepResponse<T> Call(Type classReference) {
         Instant start = Instant.now();
