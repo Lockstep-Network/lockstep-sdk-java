@@ -56,6 +56,7 @@ public class CompanySyncModel
     private @Nullable String apEmailAddress;
     private @Nullable String arEmailAddress;
     private @Nullable String preferredDeliveryMethod;
+    private @Nullable String externalReference;
 
     /**
      * This is the primary key of the Company record. For this field, you should use whatever the company's unique
@@ -294,13 +295,13 @@ public class CompanySyncModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * The company's primary mailing address information This will be validated by the /api/v1/definitions/countries data set
+     * The company's primary mailing address information
      *
      * @return The field country
      */
     public @Nullable String getCountry() { return this.country; }
     /**
-     * The company's primary mailing address information This will be validated by the /api/v1/definitions/countries data set
+     * The company's primary mailing address information
      *
      * @param value The new value for country
      */
@@ -425,4 +426,16 @@ public class CompanySyncModel
      * @param value The new value for preferredDeliveryMethod
      */
     public void setPreferredDeliveryMethod(@Nullable String value) { this.preferredDeliveryMethod = value; }
+    /**
+     * An external reference that identifies the Company from the originating ERP system, separate from the ErpKey.
+     *
+     * @return The field externalReference
+     */
+    public @Nullable String getExternalReference() { return this.externalReference; }
+    /**
+     * An external reference that identifies the Company from the originating ERP system, separate from the ErpKey.
+     *
+     * @param value The new value for externalReference
+     */
+    public void setExternalReference(@Nullable String value) { this.externalReference = value; }
 };

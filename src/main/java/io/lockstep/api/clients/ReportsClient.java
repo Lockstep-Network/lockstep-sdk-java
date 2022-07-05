@@ -17,19 +17,29 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CashflowReportModel;
 
+import io.lockstep.api.models.PayablesSummaryReportModel;
 import io.lockstep.api.models.DailySalesOutstandingReportModel;
 import io.lockstep.api.models.DailyPayableOutstandingReportModel;
+import io.lockstep.api.models.PayablesComingDueWidgetModel;
+import io.lockstep.api.FetchResult;
+import com.google.gson.reflect.TypeToken;
+import io.lockstep.api.models.PayablesComingDueModel;
+import io.lockstep.api.models.PayablesComingDueHeaderModel;
 import io.lockstep.api.models.RiskRateModel;
 import io.lockstep.api.models.ArHeaderInfoModel;
+import io.lockstep.api.models.ApHeaderInfoModel;
 import io.lockstep.api.models.AgingModel;
 import io.lockstep.api.models.ArAgingHeaderInfoModel;
+import io.lockstep.api.models.ApAgingHeaderInfoModel;
 import io.lockstep.api.models.AttachmentHeaderInfoModel;
 import io.lockstep.api.models.FinancialReportModel;
+import io.lockstep.api.models.DpoSummaryModel;
+import io.lockstep.api.models.DpoSummaryGroupTotalModel;
 
 /**
  * Contains all methods related to Reports
@@ -64,6 +74,21 @@ public class ReportsClient
     }
 
     /**
+     * Retrieves a current Payables Summary report for this account.
+     *
+     * The Payables Summary report indicates the amount of payments sent and bills received within a given timeframe.  You can use this report to determine the overall balance of money coming into and out of your accounts receivable and accounts payable businesses.
+     *
+     * @param timeframe Number of days of data to include for the Payables Summary Report (default is 30 days from today)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<PayablesSummaryReportModel> payablesSummaryReport(@Nullable Integer timeframe)
+    {
+        RestRequest<PayablesSummaryReportModel> r = new RestRequest<PayablesSummaryReportModel>(this.client, "GET", "/api/v1/Reports/payables-summary");
+        r.AddQuery("timeframe", timeframe.toString());
+        return r.Call(PayablesSummaryReportModel.class);
+    }
+
+    /**
      * Retrieves a current Daily Sales Outstanding (DSO) report for this account.
      *
      * Daily Sales Outstanding, or DSO, is a metric that indicates the average number of days that it takes for an invoice to be fully paid.  You can use this report to identify whether a company is improving on its ability to collect on invoices.
@@ -87,6 +112,51 @@ public class ReportsClient
     {
         RestRequest<DailyPayableOutstandingReportModel[]> r = new RestRequest<DailyPayableOutstandingReportModel[]>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding");
         return r.Call(DailyPayableOutstandingReportModel[].class);
+    }
+
+    /**
+     * Retrieves payable amount due for 4 time buckets (Today, 7 Days from Today, 14 Days from Today, and 30 Days from Today).
+     *
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<PayablesComingDueWidgetModel[]> payablesComingDue()
+    {
+        RestRequest<PayablesComingDueWidgetModel[]> r = new RestRequest<PayablesComingDueWidgetModel[]>(this.client, "GET", "/api/v1/Reports/payables-coming-due");
+        return r.Call(PayablesComingDueWidgetModel[].class);
+    }
+
+    /**
+     * Payables coming due represents the amount of cash required to pay vendor bills based on the due dates of the bills. Each bucket represents total amount due within the time period based on open Payables as of today.
+     *
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FetchResult<PayablesComingDueModel>> payablesComingDueSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    {
+        RestRequest<FetchResult<PayablesComingDueModel>> r = new RestRequest<FetchResult<PayablesComingDueModel>>(this.client, "GET", "/api/v1/Reports/payables-coming-due-summary");
+        r.AddQuery("filter", filter.toString());
+        r.AddQuery("include", include.toString());
+        r.AddQuery("order", order.toString());
+        r.AddQuery("pageSize", pageSize.toString());
+        r.AddQuery("pageNumber", pageNumber.toString());
+        return r.Call(new TypeToken<FetchResult<PayablesComingDueModel>>() {}.getType());
+    }
+
+    /**
+     * Retrieves total number of vendors, bills, the total amount outstanding, for a group.
+     *
+     * @param reportDate The date the outstanding values are calculated on. Should be either the current day, 7 days after the current day, 14 days after the current day, or 30 days after the current day.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<PayablesComingDueHeaderModel[]> payablesComingDueHeader(@NotNull String reportDate)
+    {
+        RestRequest<PayablesComingDueHeaderModel[]> r = new RestRequest<PayablesComingDueHeaderModel[]>(this.client, "GET", "/api/v1/Reports/payables-coming-due-header");
+        r.AddQuery("reportDate", reportDate.toString());
+        return r.Call(PayablesComingDueHeaderModel[].class);
     }
 
     /**
@@ -115,6 +185,21 @@ public class ReportsClient
         r.AddQuery("reportDate", reportDate.toString());
         r.AddQuery("companyId", companyId.toString());
         return r.Call(ArHeaderInfoModel.class);
+    }
+
+    /**
+     * Retrieves AP header information up to the date specified.
+     *
+     * @param reportDate The date of the report.
+     * @param companyId Include a company to get AP data for a specific company, leave as null to include all Companies.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<ApHeaderInfoModel> accountsPayableHeader(@NotNull String reportDate, @Nullable String companyId)
+    {
+        RestRequest<ApHeaderInfoModel> r = new RestRequest<ApHeaderInfoModel>(this.client, "GET", "/api/v1/Reports/ap-header");
+        r.AddQuery("reportDate", reportDate.toString());
+        r.AddQuery("companyId", companyId.toString());
+        return r.Call(ApHeaderInfoModel.class);
     }
 
     /**
@@ -157,6 +242,19 @@ public class ReportsClient
     {
         RestRequest<ArAgingHeaderInfoModel[]> r = new RestRequest<ArAgingHeaderInfoModel[]>(this.client, "GET", "/api/v1/Reports/ar-aging-header");
         return r.Call(ArAgingHeaderInfoModel[].class);
+    }
+
+    /**
+     * Retrieves AP Aging Header information report broken down by aging bucket.
+     *
+     * The AP Aging Header report contains aggregated information about the `TotalBillsPastDue`, `TotalVendors`, and their respective `PercentageOfTotalAp` grouped by their aging `ReportBucket`.
+     *
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<ApAgingHeaderInfoModel[]> accountsPayableAgingHeader()
+    {
+        RestRequest<ApAgingHeaderInfoModel[]> r = new RestRequest<ApAgingHeaderInfoModel[]>(this.client, "GET", "/api/v1/Reports/ap-aging-header");
+        return r.Call(ApAgingHeaderInfoModel[].class);
     }
 
     /**
@@ -264,5 +362,47 @@ public class ReportsClient
         r.AddQuery("columnOption", columnOption.toString());
         r.AddQuery("displayDepth", displayDepth.toString());
         return r.Call(FinancialReportModel.class);
+    }
+
+    /**
+     * Retrieves a summary for each vendor that includes a count of their outstanding bills, the total amount outstanding, and their daily payable outstanding value.
+     *
+     * Days payable outstanding (DPO) is a financial ratio that indicates the average time (in days) that a company takes to pay its bills to its trade creditors, which may include suppliers, vendors, or financiers.
+     *
+     * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
+     *
+     * @param reportDate The date the outstanding values are calculated on. Should be either the current day or the end of a previous quarter.
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<DpoSummaryModel[]> daysPayableOutstandingSummary(@NotNull String reportDate, @Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    {
+        RestRequest<DpoSummaryModel[]> r = new RestRequest<DpoSummaryModel[]>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding-summary");
+        r.AddQuery("reportDate", reportDate.toString());
+        r.AddQuery("filter", filter.toString());
+        r.AddQuery("include", include.toString());
+        r.AddQuery("order", order.toString());
+        r.AddQuery("pageSize", pageSize.toString());
+        r.AddQuery("pageNumber", pageNumber.toString());
+        return r.Call(DpoSummaryModel[].class);
+    }
+
+    /**
+     * Retrieves total number of vendors, bills, the total amount outstanding, and the daily payable outstanding value for a group.
+     *
+     * Days payable outstanding (DPO) is a financial ratio that indicates the average time (in days) that a company takes to pay its bills to its trade creditors, which may include suppliers, vendors, or financiers.
+     *
+     * @param reportDate The date the outstanding values are calculated on. Should be either the current day or the end of a previous quarter.
+     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<DpoSummaryGroupTotalModel[]> daysPayableOutstandingSummaryTotal(@NotNull String reportDate)
+    {
+        RestRequest<DpoSummaryGroupTotalModel[]> r = new RestRequest<DpoSummaryGroupTotalModel[]>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding-summary-total");
+        r.AddQuery("reportDate", reportDate.toString());
+        return r.Call(DpoSummaryGroupTotalModel[].class);
     }
 }
