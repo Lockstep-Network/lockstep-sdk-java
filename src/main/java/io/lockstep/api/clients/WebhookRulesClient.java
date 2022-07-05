@@ -47,7 +47,7 @@ public class WebhookRulesClient
      * Retrieves the Webhook Rule specified by this unique identifier.
      *
      * @param id The unique Lockstep Platform ID number of this Webhook Rule
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookRuleModel> retrieveWebhookRule(@NotNull String id)
     {
@@ -63,7 +63,7 @@ public class WebhookRulesClient
      *
      * @param id The unique Lockstep Platform ID number of the Webhook Rule to update.
      * @param body A list of changes to apply to this Webhook Rule
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookRuleModel> updateWebhookRule(@NotNull String id, @NotNull Object body)
     {
@@ -77,7 +77,7 @@ public class WebhookRulesClient
      * Deletes the Webhook Rule referred to by this unique identifier.
      *
      * @param id The unique Lockstep Platform ID number of the Webhook Rule to delete.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteWebhookRule(@NotNull String id)
     {
@@ -90,7 +90,7 @@ public class WebhookRulesClient
      * Creates one or more webhook rules from a given model.
      *
      * @param body The Webhook Rules to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookRuleModel[]> createWebhookRules(@NotNull WebhookRuleModel[] body)
     {
@@ -109,7 +109,7 @@ public class WebhookRulesClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<WebhookRuleModel>> queryWebhookRules(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

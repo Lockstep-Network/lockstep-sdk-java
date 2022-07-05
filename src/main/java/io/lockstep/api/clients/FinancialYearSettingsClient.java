@@ -49,7 +49,7 @@ public class FinancialYearSettingsClient
      * A Financial Year Setting is used to to set the type, beginning, end, and number of periods of a year used to calculate accounting reports. The financial setting can either be for a specific app enrollment id via a sync or, when the financial year setting is manually created, will cover all account data without an app enrollment id.
      *
      * @param id The unique Lockstep Platform ID number of this Financial Year Setting
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialYearSettingModel> retrieveFinancialYearSetting(@NotNull String id)
     {
@@ -67,7 +67,7 @@ public class FinancialYearSettingsClient
      *
      * @param id The unique Lockstep Platform ID number of the Financial Year Setting to update
      * @param body A list of changes to apply to this Financial Year Setting
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialYearSettingModel> updateFinancialYearSetting(@NotNull String id, @NotNull Object body)
     {
@@ -83,7 +83,7 @@ public class FinancialYearSettingsClient
      * A Financial Year Setting is used to to set the type, beginning, end, and number of periods of a year used to calculate accounting reports. The financial setting can either be for a specific app enrollment id via a sync or, when the financial year setting is manually created, will cover all account data without an app enrollment id.
      *
      * @param id The unique Lockstep Platform ID number of the Financial Year Setting to disable
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteFinancialYearSetting(@NotNull String id)
     {
@@ -98,7 +98,7 @@ public class FinancialYearSettingsClient
      * A Financial Year Setting is used to to set the type, beginning, end, and number of periods of a year used to calculate accounting reports. The financial setting can either be for a specific app enrollment id via a sync or, when the financial year setting is manually created, will cover all account data without an app enrollment id.
      *
      * @param body The Financial Year Setting to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialYearSettingModel> createFinancialYearSetting(@NotNull FinancialYearSettingModel body)
     {
@@ -118,7 +118,7 @@ public class FinancialYearSettingsClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<FinancialYearSettingModel>> queryFinancialYearSettings(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

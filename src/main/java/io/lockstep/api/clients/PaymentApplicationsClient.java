@@ -50,7 +50,7 @@ public class PaymentApplicationsClient
      *
      * @param id The unique Lockstep Platform ID number of this Payment Application; NOT the customer's ERP key
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Invoice, Payment
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<PaymentAppliedModel> retrievePaymentApplication(@NotNull String id, @Nullable String include)
     {
@@ -69,7 +69,7 @@ public class PaymentApplicationsClient
      *
      * @param id The unique Lockstep Platform ID number of the Payment Application to update; NOT the customer's ERP key
      * @param body A list of changes to apply to this Payment Application
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<PaymentAppliedModel> updatePaymentApplication(@NotNull String id, @NotNull Object body)
     {
@@ -85,7 +85,7 @@ public class PaymentApplicationsClient
      * A Payment Application is created by a business who receives a Payment from a customer.  A customer may make a single Payment to match an Invoice exactly, a partial Payment for an Invoice, or a single Payment may be made for multiple smaller Invoices.  The Payment Application contains information about which Invoices are connected to which Payments and for which amounts.
      *
      * @param id The unique Lockstep Platform ID number of the Payment Application to delete; NOT the customer's ERP key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deletePaymentApplication(@NotNull String id)
     {
@@ -100,7 +100,7 @@ public class PaymentApplicationsClient
      * A Payment Application is created by a business who receives a Payment from a customer.  A customer may make a single Payment to match an Invoice exactly, a partial Payment for an Invoice, or a single Payment may be made for multiple smaller Invoices.  The Payment Application contains information about which Invoices are connected to which Payments and for which amounts.
      *
      * @param body The Payment Applications to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<PaymentAppliedModel[]> createPaymentApplications(@NotNull PaymentAppliedModel[] body)
     {
@@ -121,7 +121,7 @@ public class PaymentApplicationsClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<PaymentAppliedModel>> queryPaymentApplications(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

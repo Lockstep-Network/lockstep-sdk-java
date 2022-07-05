@@ -43,7 +43,7 @@ public class GroupAccountsClient
     /**
      * Retrieves group account data for the current user.
      *
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<GroupAccountModel> retrieveGroupAccountData()
     {
@@ -58,7 +58,7 @@ public class GroupAccountsClient
      *
      * @param id The unique ID number of the Group Account to retrieve
      * @param body A list of changes to apply to this Group Account
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<GroupAccountModel> updateGroupAccount(@NotNull String id, @NotNull Object body)
     {

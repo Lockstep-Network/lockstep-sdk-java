@@ -47,7 +47,7 @@ public class FinancialAccountClient
      * Creates a financial account with the specified name.
      *
      * @param body Metadata about the financial account to create.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialAccountModel> createFinancialAccount(@NotNull FinancialAccountModel[] body)
     {
@@ -60,7 +60,7 @@ public class FinancialAccountClient
      * Retrieves the financial account specified by this unique identifier.
      *
      * @param id The unique Lockstep Platform ID number of this Account; NOT the customer's ERP key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialAccountModel> retrieveFinancialAccount(@NotNull String id)
     {
@@ -73,7 +73,7 @@ public class FinancialAccountClient
      *
      * @param id The unique Lockstep Platform ID number of the Account to update; NOT the customer's ERP key
      * @param body A list of changes to apply to this Account
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialAccountModel> updateFinancialAccount(@NotNull String id, @NotNull Object body)
     {
@@ -87,7 +87,7 @@ public class FinancialAccountClient
      * Deletes the Financial Account referred to by this unique identifier.
      *
      * @param id The unique Lockstep Platform ID number of the Financial Account to disable; NOT the customer's ERP key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteFinancialAccount(@NotNull String id)
     {
@@ -103,7 +103,7 @@ public class FinancialAccountClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<FinancialAccountModel>> queryFinancialAccounts(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

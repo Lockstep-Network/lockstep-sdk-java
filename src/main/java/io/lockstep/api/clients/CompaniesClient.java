@@ -55,7 +55,7 @@ public class CompaniesClient
      *
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CompanyModel> retrieveCompany(@NotNull String id, @Nullable String include)
     {
@@ -76,7 +76,7 @@ public class CompaniesClient
      *
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @param body A list of changes to apply to this Company
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CompanyModel> updateCompany(@NotNull String id, @NotNull Object body)
     {
@@ -94,7 +94,7 @@ public class CompaniesClient
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> disableCompany(@NotNull String id)
     {
@@ -111,7 +111,7 @@ public class CompaniesClient
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
      * @param body The Companies to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CompanyModel[]> createCompanies(@NotNull CompanyModel[] body)
     {
@@ -134,7 +134,7 @@ public class CompaniesClient
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize The page size for results (default 200, maximum of 10,000)
      * @param pageNumber The page number for results (default 0)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<CompanyModel>> queryCompanies(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
@@ -161,7 +161,7 @@ public class CompaniesClient
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize The page size for results (default 200, maximum of 10,000)
      * @param pageNumber The page number for results (default 0)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
@@ -188,7 +188,7 @@ public class CompaniesClient
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize The page size for results (default 200, maximum of 10,000)
      * @param pageNumber The page number for results (default 0)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<VendorSummaryModel>> queryVendorSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
@@ -209,7 +209,7 @@ public class CompaniesClient
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
      * @param id The unique Lockstep Platform ID number of this Company; NOT the company's ERP key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CompanyDetailsModel> retrieveCompanyDetail(@NotNull String id)
     {

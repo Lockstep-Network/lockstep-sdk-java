@@ -50,7 +50,7 @@ public class CurrenciesClient
      * @param destinationCurrency The ISO 4217 currency code of the target currency. For a list of currency codes, call List Currencies.
      * @param date The date for which we should cto use for this currency conversion.
      * @param dataProvider Optionally, you can specify a data provider.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CurrencyRateModel> retrievecurrencyrate(@NotNull String sourceCurrency, @NotNull String destinationCurrency, @Nullable String date, @Nullable String dataProvider)
     {
@@ -67,7 +67,7 @@ public class CurrenciesClient
      *
      * @param destinationCurrency The currency to convert to.
      * @param body A list of dates and source currencies.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CurrencyRateModel[]> bulkcurrencydata(@Nullable String destinationCurrency, @NotNull BulkCurrencyConversionModel[] body)
     {

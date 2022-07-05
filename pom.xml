@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.lockstep</groupId>
     <artifactId>lockstepsdk</artifactId>
     <version>2022.26.12.0</version>
- 
+
     <name>lockstep-sdk-java</name>
     <description>Java sample project for Lockstep SDK</description>
     <url>https://developer.lockstep.io/docs</url>
@@ -17,22 +18,22 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
-    
+
     <scm>
         <url>https://github.com/Lockstep-Network/lockstep-sdk-java</url>
         <connection>scm:git@github.com:Lockstep-Network/lockstep-sdk-java.git</connection>
         <developerConnection>scm:git@github.com:Lockstep-Network/lockstep-sdk-java.git</developerConnection>
     </scm>
-        
+
     <developers>
         <developer>
-            <id>tspence</id>
-            <name>Ted Spence</name>
-            <email>tspence@lockstep.io</email>
+            <id>lockstep</id>
+            <name>Lockstep Network</name>
+            <email>support@lockstep.io</email>
         </developer>
     </developers>
 
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -59,27 +60,27 @@
             <version>5.2-alpha1</version>
         </dependency>
     </dependencies>
-    
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
-    
+
     <build>
         <plugins>
-	        <plugin>
-	            <groupId>org.sonatype.plugins</groupId>
-	            <artifactId>nexus-staging-maven-plugin</artifactId>
-	            <version>1.6.8</version>
-	            <extensions>true</extensions>
-	            <configuration>
-	                <serverId>ossrh</serverId>
-	                <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-	                <autoReleaseAfterClose>true</autoReleaseAfterClose>
-	            </configuration>
-	        </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <profiles>
@@ -144,7 +145,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                        <plugin>
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>2.10.3</version>

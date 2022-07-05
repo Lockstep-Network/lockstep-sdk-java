@@ -44,7 +44,7 @@ public class ProvisioningClient
      * Creates a new account for a developer, sending an email with information on how to access the API.
      *
      * @param body Documentation pending
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> provisionFreeDeveloperAccount(@NotNull DeveloperAccountSubmitModel body)
     {

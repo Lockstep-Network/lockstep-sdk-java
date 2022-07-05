@@ -49,7 +49,7 @@ public class CreditMemoAppliedClient
      *
      * @param id The unique Lockstep Platform ID number of this Credit Memo Application; NOT the customer's ERP key
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CreditMemoAppliedModel> retrieveCreditMemoApplication(@NotNull String id, @Nullable String include)
     {
@@ -68,7 +68,7 @@ public class CreditMemoAppliedClient
      *
      * @param id The unique Lockstep Platform ID number of the Credit Memo Application to update; NOT the customer's ERP key
      * @param body A list of changes to apply to this Credit Memo Application
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CreditMemoAppliedModel> updateCreditMemoApplication(@NotNull String id, @NotNull Object body)
     {
@@ -84,7 +84,7 @@ public class CreditMemoAppliedClient
      * Credit Memos reflect credits granted to a customer for various reasons, such as discounts or refunds. Credit Memos may be applied to Invoices as Payments. When a Credit Memo is applied as payment to an Invoice, Lockstep creates a Credit Memo Application record to track the amount from the Credit Memo that was applied as payment to the Invoice. You can examine Credit Memo Application records to track which Invoices were paid using this Credit.
      *
      * @param id The unique Lockstep Platform ID number of the Credit Memo Application to delete; NOT the customer's ERP key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CreditMemoAppliedModel> deleteCreditMemoApplication(@NotNull String id)
     {
@@ -99,7 +99,7 @@ public class CreditMemoAppliedClient
      * Credit Memos reflect credits granted to a customer for various reasons, such as discounts or refunds. Credit Memos may be applied to Invoices as Payments. When a Credit Memo is applied as payment to an Invoice, Lockstep creates a Credit Memo Application record to track the amount from the Credit Memo that was applied as payment to the Invoice. You can examine Credit Memo Application records to track which Invoices were paid using this Credit.
      *
      * @param body The Credit Memo Applications to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CreditMemoAppliedModel[]> createCreditMemoApplications(@NotNull CreditMemoAppliedModel[] body)
     {
@@ -120,7 +120,7 @@ public class CreditMemoAppliedClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<CreditMemoAppliedModel>> queryCreditMemoApplications(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

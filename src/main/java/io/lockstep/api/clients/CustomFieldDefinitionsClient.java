@@ -51,7 +51,7 @@ public class CustomFieldDefinitionsClient
      *
      * @param id The unique Lockstep Platform ID number of this Custom Field Definition
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No additional data collections are currently defined on this object, but may be supported in the future.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldDefinitionModel> retrieveFieldDefinition(@NotNull String id, @Nullable String include)
     {
@@ -72,7 +72,7 @@ public class CustomFieldDefinitionsClient
      *
      * @param id The unique Lockstep Platform ID number of the Custom Field Definition to update
      * @param body A list of changes to apply to this Custom Field Definition
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldDefinitionModel> updateFieldDefinition(@NotNull String id, @NotNull Object body)
     {
@@ -90,7 +90,7 @@ public class CustomFieldDefinitionsClient
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
      * @param id The unique Lockstep Platform ID number of the Custom Field Definition to delete
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldDefinitionModel> deleteFieldDefinition(@NotNull String id)
     {
@@ -107,7 +107,7 @@ public class CustomFieldDefinitionsClient
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
      * @param body The Custom Field Definitions to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldDefinitionModel[]> createFieldDefinitions(@NotNull CustomFieldDefinitionModel[] body)
     {
@@ -130,7 +130,7 @@ public class CustomFieldDefinitionsClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<CustomFieldDefinitionModel>> queryFieldDefinitions(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

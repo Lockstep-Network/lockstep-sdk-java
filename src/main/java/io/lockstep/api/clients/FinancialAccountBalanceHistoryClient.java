@@ -49,7 +49,7 @@ public class FinancialAccountBalanceHistoryClient
      * A Financial Account Balance History records either the current or end of period balance for a corresponding financial account.
      *
      * @param id The unique Lockstep Platform ID number of this Financial Account Balance History
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> retrieveBalanceHistory(@NotNull String id)
     {
@@ -67,7 +67,7 @@ public class FinancialAccountBalanceHistoryClient
      *
      * @param id The unique Lockstep Platform ID number of the Financial Account Balance History to update
      * @param body A list of changes to apply to this Financial Account Balance History
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel> updateBalanceHistory(@NotNull String id, @NotNull Object body)
     {
@@ -83,7 +83,7 @@ public class FinancialAccountBalanceHistoryClient
      * A Financial Account Balance History records either the current or end of period balance for a corresponding financial account.
      *
      * @param id The unique Lockstep Platform ID number of the Financial Account Balance History to disable
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteBalanceHistory(@NotNull String id)
     {
@@ -98,7 +98,7 @@ public class FinancialAccountBalanceHistoryClient
      * A Financial Account Balance History records either the current or end of period balance for a corresponding financial account.
      *
      * @param body The Financial Account Balance Histories to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FinancialAccountBalanceHistoryModel[]> createBalanceHistory(@NotNull FinancialAccountBalanceHistoryModel[] body)
     {
@@ -118,7 +118,7 @@ public class FinancialAccountBalanceHistoryClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<FinancialAccountBalanceHistoryModel>> queryBalanceHistory(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
