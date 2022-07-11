@@ -41,9 +41,15 @@ public class ArHeaderInfoModel
     private @NotNull Double totalInvoiceAmountCurrentYear;
     private @NotNull Double totalInvoiceAmountPreviousYear;
     private @NotNull Double totalPaymentAmountCurrentYear;
-    private @NotNull Integer totalCollectedPastThirtyDays;
-    private @NotNull Integer totalInvoicesPaidPastThirtyDays;
     private @NotNull Double percentageOfTotalAr90DaysPastDue;
+    private @NotNull Integer customersPaidPastThirtyDays;
+    private @NotNull Double amountCollectedPastThirtyDays;
+    private @NotNull Double unappliedAmountPastThirtyDays;
+    private @NotNull Integer invoicesPaidPastThirtyDays;
+    private @NotNull Integer customersInvoicedPastThirtyDays;
+    private @NotNull Double amountInvoicedPastThirtyDays;
+    private @NotNull Double amountDuePastThirtyDays;
+    private @NotNull Integer invoicesPastThirtyDays;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -268,30 +274,6 @@ public class ArHeaderInfoModel
      */
     public void setTotalPaymentAmountCurrentYear(@NotNull Double value) { this.totalPaymentAmountCurrentYear = value; }
     /**
-     * The total amount of payments received in the last 30 days
-     *
-     * @return The field totalCollectedPastThirtyDays
-     */
-    public @NotNull Integer getTotalCollectedPastThirtyDays() { return this.totalCollectedPastThirtyDays; }
-    /**
-     * The total amount of payments received in the last 30 days
-     *
-     * @param value The new value for totalCollectedPastThirtyDays
-     */
-    public void setTotalCollectedPastThirtyDays(@NotNull Integer value) { this.totalCollectedPastThirtyDays = value; }
-    /**
-     * The total amount of Invoices paid in the last 30 days
-     *
-     * @return The field totalInvoicesPaidPastThirtyDays
-     */
-    public @NotNull Integer getTotalInvoicesPaidPastThirtyDays() { return this.totalInvoicesPaidPastThirtyDays; }
-    /**
-     * The total amount of Invoices paid in the last 30 days
-     *
-     * @param value The new value for totalInvoicesPaidPastThirtyDays
-     */
-    public void setTotalInvoicesPaidPastThirtyDays(@NotNull Integer value) { this.totalInvoicesPaidPastThirtyDays = value; }
-    /**
      * Portion of Total AR that is 90+ days Past due.
      *
      * @return The field percentageOfTotalAr90DaysPastDue
@@ -303,4 +285,100 @@ public class ArHeaderInfoModel
      * @param value The new value for percentageOfTotalAr90DaysPastDue
      */
     public void setPercentageOfTotalAr90DaysPastDue(@NotNull Double value) { this.percentageOfTotalAr90DaysPastDue = value; }
+    /**
+     * The number of customers who paid within the past thirty days.
+     *
+     * @return The field customersPaidPastThirtyDays
+     */
+    public @NotNull Integer getCustomersPaidPastThirtyDays() { return this.customersPaidPastThirtyDays; }
+    /**
+     * The number of customers who paid within the past thirty days.
+     *
+     * @param value The new value for customersPaidPastThirtyDays
+     */
+    public void setCustomersPaidPastThirtyDays(@NotNull Integer value) { this.customersPaidPastThirtyDays = value; }
+    /**
+     * The total amount collected over the past thirty days.
+     *
+     * @return The field amountCollectedPastThirtyDays
+     */
+    public @NotNull Double getAmountCollectedPastThirtyDays() { return this.amountCollectedPastThirtyDays; }
+    /**
+     * The total amount collected over the past thirty days.
+     *
+     * @param value The new value for amountCollectedPastThirtyDays
+     */
+    public void setAmountCollectedPastThirtyDays(@NotNull Double value) { this.amountCollectedPastThirtyDays = value; }
+    /**
+     * The amount unapplied from the payments collected over the past thirty days.
+     *
+     * @return The field unappliedAmountPastThirtyDays
+     */
+    public @NotNull Double getUnappliedAmountPastThirtyDays() { return this.unappliedAmountPastThirtyDays; }
+    /**
+     * The amount unapplied from the payments collected over the past thirty days.
+     *
+     * @param value The new value for unappliedAmountPastThirtyDays
+     */
+    public void setUnappliedAmountPastThirtyDays(@NotNull Double value) { this.unappliedAmountPastThirtyDays = value; }
+    /**
+     * The number of invoices paid over the past thirty days.
+     *
+     * @return The field invoicesPaidPastThirtyDays
+     */
+    public @NotNull Integer getInvoicesPaidPastThirtyDays() { return this.invoicesPaidPastThirtyDays; }
+    /**
+     * The number of invoices paid over the past thirty days.
+     *
+     * @param value The new value for invoicesPaidPastThirtyDays
+     */
+    public void setInvoicesPaidPastThirtyDays(@NotNull Integer value) { this.invoicesPaidPastThirtyDays = value; }
+    /**
+     * The number of customers invoiced over the the past thirty days.
+     *
+     * @return The field customersInvoicedPastThirtyDays
+     */
+    public @NotNull Integer getCustomersInvoicedPastThirtyDays() { return this.customersInvoicedPastThirtyDays; }
+    /**
+     * The number of customers invoiced over the the past thirty days.
+     *
+     * @param value The new value for customersInvoicedPastThirtyDays
+     */
+    public void setCustomersInvoicedPastThirtyDays(@NotNull Integer value) { this.customersInvoicedPastThirtyDays = value; }
+    /**
+     * The total amount invoiced over the past thirty days.
+     *
+     * @return The field amountInvoicedPastThirtyDays
+     */
+    public @NotNull Double getAmountInvoicedPastThirtyDays() { return this.amountInvoicedPastThirtyDays; }
+    /**
+     * The total amount invoiced over the past thirty days.
+     *
+     * @param value The new value for amountInvoicedPastThirtyDays
+     */
+    public void setAmountInvoicedPastThirtyDays(@NotNull Double value) { this.amountInvoicedPastThirtyDays = value; }
+    /**
+     * The amount outstanding on the invoices invoiced over the past thirty days.
+     *
+     * @return The field amountDuePastThirtyDays
+     */
+    public @NotNull Double getAmountDuePastThirtyDays() { return this.amountDuePastThirtyDays; }
+    /**
+     * The amount outstanding on the invoices invoiced over the past thirty days.
+     *
+     * @param value The new value for amountDuePastThirtyDays
+     */
+    public void setAmountDuePastThirtyDays(@NotNull Double value) { this.amountDuePastThirtyDays = value; }
+    /**
+     * The number of invoices invoiced over the past thirty days.
+     *
+     * @return The field invoicesPastThirtyDays
+     */
+    public @NotNull Integer getInvoicesPastThirtyDays() { return this.invoicesPastThirtyDays; }
+    /**
+     * The number of invoices invoiced over the past thirty days.
+     *
+     * @param value The new value for invoicesPastThirtyDays
+     */
+    public void setInvoicesPastThirtyDays(@NotNull Integer value) { this.invoicesPastThirtyDays = value; }
 };

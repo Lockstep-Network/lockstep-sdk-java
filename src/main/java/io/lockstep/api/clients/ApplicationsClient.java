@@ -17,13 +17,13 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ApplicationModel;
 
 import io.lockstep.api.models.ActionResultModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -52,7 +52,7 @@ public class ApplicationsClient
      *
      * @param id The unique ID number of the Application to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ApplicationModel> retrieveApplication(@NotNull String id, @Nullable String include)
     {
@@ -73,7 +73,7 @@ public class ApplicationsClient
      *
      * @param id The unique ID number of the Application to update
      * @param body A list of changes to apply to this Application
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ApplicationModel> updateApplication(@NotNull String id, @NotNull Object body)
     {
@@ -91,7 +91,7 @@ public class ApplicationsClient
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
      * @param id The unique ID number of the Application to delete
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteApplication(@NotNull String id)
     {
@@ -108,7 +108,7 @@ public class ApplicationsClient
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
      * @param body The Applications to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ApplicationModel[]> createApplications(@NotNull ApplicationModel[] body)
     {
@@ -131,7 +131,7 @@ public class ApplicationsClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<ApplicationModel>> queryApplications(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

@@ -6,10 +6,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
- * @version    2022.4.32.0
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @author     Lockstep Network <support@lockstep.io>
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 package io.lockstep.api;
@@ -38,7 +37,6 @@ import org.jetbrains.annotations.NotNull;
 import com.google.gson.Gson;
 
 import io.lockstep.api.models.ErrorResult;
-import io.lockstep.api.models.LockstepResponse;
 
 /**
  * Represents a request to a remote web server
@@ -46,8 +44,7 @@ import io.lockstep.api.models.LockstepResponse;
  * @author jkirk
  * @version $Id: $Id
  */
-public class RestRequest<@NotNull T>
-{
+public class RestRequest<@NotNull T> {
     private Hashtable<String, String> queryParams;
     private Hashtable<String, String> pathReplacements;
     private String method;
@@ -56,14 +53,15 @@ public class RestRequest<@NotNull T>
     private LockstepApi client;
 
     /**
-     * <p>Constructor for RestRequest.</p>
+     * <p>
+     * Constructor for RestRequest.
+     * </p>
      *
      * @param client a {@link io.lockstep.api.LockstepApi} object.
      * @param method a {@link java.lang.String} object.
-     * @param path a {@link java.lang.String} object.
+     * @param path   a {@link java.lang.String} object.
      */
-    public RestRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path)
-    {
+    public RestRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path) {
         this.client = client;
         this.method = method;
         this.path = path;
@@ -72,34 +70,37 @@ public class RestRequest<@NotNull T>
     }
 
     /**
-     * <p>AddQuery.</p>
+     * <p>
+     * AddQuery.
+     * </p>
      *
-     * @param name a {@link java.lang.String} object.
+     * @param name  a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
      */
-    public void AddQuery(@NotNull String name, @NotNull String value)
-    {
+    public void AddQuery(@NotNull String name, @NotNull String value) {
         this.queryParams.put(name, value);
     }
 
     /**
-     * <p>AddPath.</p>
+     * <p>
+     * AddPath.
+     * </p>
      *
-     * @param name a {@link java.lang.String} object.
+     * @param name  a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
      */
-    public void AddPath(@NotNull String name, @NotNull String value)
-    {
+    public void AddPath(@NotNull String name, @NotNull String value) {
         this.pathReplacements.put(name, value);
     }
 
     /**
-     * <p>AddBody.</p>
+     * <p>
+     * AddBody.
+     * </p>
      *
      * @param body a {@link java.lang.Object} object.
      */
-    public void AddBody(Object body)
-    {
+    public void AddBody(Object body) {
         this.body = body;
     }
 
@@ -107,10 +108,9 @@ public class RestRequest<@NotNull T>
      * Adapted from Apache simple request client example
      *
      * @param classReference a {@link java.lang.reflect.Type} object.
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return a {@link io.lockstep.api.LockstepResponse} object.
      */
-    public @NotNull LockstepResponse<T> Call(Type classReference)
-    {
+    public @NotNull LockstepResponse<T> Call(Type classReference) {
         Instant start = Instant.now();
         LockstepResponse<T> lockstepResponse = new LockstepResponse<T>();
         try {
@@ -153,8 +153,8 @@ public class RestRequest<@NotNull T>
             }
 
             request.addHeader("SdkName", "Java");
-            request.addHeader("SdkVersion", "2022.17.35.0");
-            
+            request.addHeader("SdkVersion", "2022.26.12.0");
+
             String applicationName = this.client.getAppName();
 
             if (applicationName != null) {
@@ -162,7 +162,7 @@ public class RestRequest<@NotNull T>
             }
 
             String machineName = InetAddress.getLocalHost().getHostName();
-            
+
             if (machineName != null) {
                 request.addHeader("MachineName", machineName);
             }
@@ -187,7 +187,7 @@ public class RestRequest<@NotNull T>
             // Execute and parse results
             final CloseableHttpResponse response = httpclient.execute(request);
 
-            //get round trip time
+            // get round trip time
             long roundTripTime = Duration.between(start, Instant.now()).toMillis();
 
             // Did we succeed?
@@ -212,7 +212,7 @@ public class RestRequest<@NotNull T>
                 lockstepResponse.setSuccess(false);
             }
             return lockstepResponse;
-        } catch (Exception e) { 
+        } catch (Exception e) {
             lockstepResponse.setSuccess(false);
             lockstepResponse.setException(e);
         }

@@ -17,7 +17,7 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.LeadModel;
@@ -45,7 +45,7 @@ public class LeadsClient
      * A Lead is a person who is interested in the Lockstep platform but needs certain new features in order to use it. If you are interested in the Lockstep platform, you can create a lead with your information and our team will prioritize the feature you need.
      *
      * @param body The Leads to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<LeadModel[]> createLeads(@NotNull LeadModel[] body)
     {

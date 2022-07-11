@@ -17,13 +17,13 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.AppEnrollmentModel;
 
 import io.lockstep.api.models.ActionResultModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.AppEnrollmentCustomFieldModel;
 
@@ -53,7 +53,7 @@ public class AppEnrollmentsClient
      *
      * @param id The unique ID number of the App Enrollment to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: App, CustomFields, LastSync, LastSuccessfulSync
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AppEnrollmentModel> retrieveAppEnrollment(@NotNull String id, @Nullable String include)
     {
@@ -74,7 +74,7 @@ public class AppEnrollmentsClient
      *
      * @param id The unique ID number of the App Enrollment to update
      * @param body A list of changes to apply to this App Enrollment
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AppEnrollmentModel> updateAppEnrollment(@NotNull String id, @NotNull Object body)
     {
@@ -91,7 +91,7 @@ public class AppEnrollmentsClient
      *
      * @param id The unique ID number of the App Enrollment to delete
      * @param removeEnrollmentData Option to remove all associated app enrollment data when deleting app enrollment (default false)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteAppEnrollment(@NotNull String id, @Nullable Boolean removeEnrollmentData)
     {
@@ -109,7 +109,7 @@ public class AppEnrollmentsClient
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
      * @param body The App Enrollments to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AppEnrollmentModel[]> createAppEnrollments(@NotNull AppEnrollmentModel[] body)
     {
@@ -123,7 +123,7 @@ public class AppEnrollmentsClient
      *
      * @param id Documentation pending
      * @param body Documentation pending
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AppEnrollmentModel> reconnectAppEnrollmentOAuth(@NotNull String id, @NotNull String body)
     {
@@ -147,7 +147,7 @@ public class AppEnrollmentsClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<AppEnrollmentModel>> queryAppEnrollments(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
@@ -170,7 +170,7 @@ public class AppEnrollmentsClient
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
      * @param id The unique ID number of the App Enrollment for which we retrieve custom fields
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<AppEnrollmentCustomFieldModel>> queryEnrollmentFields(@NotNull String id)
     {

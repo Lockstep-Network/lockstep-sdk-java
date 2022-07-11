@@ -17,12 +17,9 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import io.lockstep.api.models.ProvisioningResponseModel;
-import io.lockstep.api.models.ProvisioningModel;
-import io.lockstep.api.models.ProvisioningFinalizeRequestModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.DeveloperAccountSubmitModel;
 
@@ -44,36 +41,10 @@ public class ProvisioningClient
     }
 
     /**
-     * Creates a new User or updates an Invited user based on metadata provided by the User during the onboarding process
-     *
-     * @param body Represents a User and their related metadata
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
-     */
-    public @NotNull LockstepResponse<ProvisioningResponseModel> provisionUserAccount(@NotNull ProvisioningModel body)
-    {
-        RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning");
-        r.AddBody(body);
-        return r.Call(ProvisioningResponseModel.class);
-    }
-
-    /**
-     * Updates user, company and group metadata for a User of status 'Onboarding' and finalizes a user's onboarding process by changing the user status to 'Active'
-     *
-     * @param body Represents a User and their related metadata
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
-     */
-    public @NotNull LockstepResponse<ProvisioningResponseModel> finalizeUserAccountProvisioning(@NotNull ProvisioningFinalizeRequestModel body)
-    {
-        RestRequest<ProvisioningResponseModel> r = new RestRequest<ProvisioningResponseModel>(this.client, "POST", "/api/v1/Provisioning/finalize");
-        r.AddBody(body);
-        return r.Call(ProvisioningResponseModel.class);
-    }
-
-    /**
      * Creates a new account for a developer, sending an email with information on how to access the API.
      *
      * @param body Documentation pending
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> provisionFreeDeveloperAccount(@NotNull DeveloperAccountSubmitModel body)
     {

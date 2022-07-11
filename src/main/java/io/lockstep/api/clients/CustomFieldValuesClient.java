@@ -17,13 +17,13 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CustomFieldValueModel;
 
 import io.lockstep.api.models.ActionResultModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -53,7 +53,7 @@ public class CustomFieldValuesClient
      * @param definitionId The unique Lockstep Platform ID number of the Custom Field Definition for the Custom Field Value to retrieve.
      * @param recordKey The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: CustomFieldDefinition
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldValueModel> retrieveField(@NotNull String definitionId, @NotNull String recordKey, @Nullable String include)
     {
@@ -76,7 +76,7 @@ public class CustomFieldValuesClient
      * @param definitionId The unique Lockstep Platform ID number of the Custom Field Definition for the Custom Field Value to retrieve.
      * @param recordKey The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
      * @param body A list of changes to apply to this Custom Field
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldValueModel> updateField(@NotNull String definitionId, @NotNull String recordKey, @NotNull Object body)
     {
@@ -96,7 +96,7 @@ public class CustomFieldValuesClient
      *
      * @param definitionId The unique Lockstep Platform ID number of the Custom Field Definition for the Custom Field Value to retrieve.
      * @param recordKey The unique Lockstep Platform ID number of the Lockstep Platform object the Custom Field Value is attached to.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteField(@NotNull String definitionId, @NotNull String recordKey)
     {
@@ -114,7 +114,7 @@ public class CustomFieldValuesClient
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
      * @param body The Custom Fields to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CustomFieldValueModel[]> createFields(@NotNull CustomFieldValueModel[] body)
     {
@@ -137,7 +137,7 @@ public class CustomFieldValuesClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<CustomFieldValueModel>> queryFields(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

@@ -17,7 +17,7 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.UserAccountModel;
@@ -28,7 +28,7 @@ import io.lockstep.api.models.InviteSubmitModel;
 import io.lockstep.api.models.InviteDataModel;
 import io.lockstep.api.models.TransferOwnerModel;
 import io.lockstep.api.models.TransferOwnerSubmitModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -55,7 +55,7 @@ public class UserAccountsClient
      *
      * @param id The unique ID number of the User to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Notes, Attachments, CustomFields, AccountingRole
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<UserAccountModel> retrieveUser(@NotNull String id, @Nullable String include)
     {
@@ -74,7 +74,7 @@ public class UserAccountsClient
      *
      * @param id The unique ID number of the User to retrieve
      * @param body A list of changes to apply to this User
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<UserAccountModel> updateUser(@NotNull String id, @NotNull Object body)
     {
@@ -90,7 +90,7 @@ public class UserAccountsClient
      * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
      *
      * @param id The unique Lockstep Platform ID number of this User
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> disableUser(@NotNull String id)
     {
@@ -105,7 +105,7 @@ public class UserAccountsClient
      * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
      *
      * @param id The unique Lockstep Platform ID number of this User
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> reenableUser(@Nullable String id)
     {
@@ -120,7 +120,7 @@ public class UserAccountsClient
      * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
      *
      * @param body The user to invite
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<InviteModel[]> inviteUser(@NotNull InviteSubmitModel[] body)
     {
@@ -135,7 +135,7 @@ public class UserAccountsClient
      * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
      *
      * @param code The code of the invite
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<InviteDataModel> retrieveInviteData(@Nullable String code)
     {
@@ -150,7 +150,7 @@ public class UserAccountsClient
      * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
      *
      * @param body Documentation pending
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<TransferOwnerModel> transferOwner(@NotNull TransferOwnerSubmitModel body)
     {
@@ -167,7 +167,7 @@ public class UserAccountsClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<UserAccountModel>> queryUsers(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
@@ -178,5 +178,20 @@ public class UserAccountsClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<UserAccountModel>>() {}.getType());
+    }
+
+    /**
+     * Change the active GroupKey of the calling user.
+     *
+     * A User represents a person who has the ability to authenticate against the Lockstep Platform and use services such as Lockstep Inbox.  A User is uniquely identified by an Azure identity, and each user must have an email address defined within their account.  All Users must validate their email to make use of Lockstep platform services.  Users may have different privileges and access control rights within the Lockstep Platform.
+     *
+     * @param groupKey Documentation pending
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<UserAccountModel> changeUserGroup(@NotNull String groupKey)
+    {
+        RestRequest<UserAccountModel> r = new RestRequest<UserAccountModel>(this.client, "POST", "/api/v1/UserAccounts/change-group");
+        r.AddQuery("groupKey", groupKey.toString());
+        return r.Call(UserAccountModel.class);
     }
 }

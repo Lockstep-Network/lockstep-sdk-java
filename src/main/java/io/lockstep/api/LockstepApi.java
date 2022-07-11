@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.17.35
+ * @version    2022.26.12
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -33,6 +33,7 @@ import io.lockstep.api.clients.EmailsClient;
 import io.lockstep.api.clients.FinancialAccountClient;
 import io.lockstep.api.clients.FinancialAccountBalanceHistoryClient;
 import io.lockstep.api.clients.FinancialYearSettingsClient;
+import io.lockstep.api.clients.GroupAccountsClient;
 import io.lockstep.api.clients.InvoiceHistoryClient;
 import io.lockstep.api.clients.InvoicesClient;
 import io.lockstep.api.clients.LeadsClient;
@@ -45,6 +46,7 @@ import io.lockstep.api.clients.StatusClient;
 import io.lockstep.api.clients.SyncClient;
 import io.lockstep.api.clients.UserAccountsClient;
 import io.lockstep.api.clients.UserRolesClient;
+import io.lockstep.api.clients.WebhookRulesClient;
 import io.lockstep.api.clients.WebhooksClient;
 
 import org.jetbrains.annotations.NotNull;
@@ -76,6 +78,7 @@ public class LockstepApi {
     private FinancialAccountClient financialAccount;
     private FinancialAccountBalanceHistoryClient financialAccountBalanceHistory;
     private FinancialYearSettingsClient financialYearSettings;
+    private GroupAccountsClient groupAccounts;
     private InvoiceHistoryClient invoiceHistory;
     private InvoicesClient invoices;
     private LeadsClient leads;
@@ -88,6 +91,7 @@ public class LockstepApi {
     private SyncClient sync;
     private UserAccountsClient userAccounts;
     private UserRolesClient userRoles;
+    private WebhookRulesClient webhookRules;
     private WebhooksClient webhooks;
 
     private LockstepApi(@NotNull String serverUri)
@@ -111,6 +115,7 @@ public class LockstepApi {
         this.financialAccount = new FinancialAccountClient(this);
         this.financialAccountBalanceHistory = new FinancialAccountBalanceHistoryClient(this);
         this.financialYearSettings = new FinancialYearSettingsClient(this);
+        this.groupAccounts = new GroupAccountsClient(this);
         this.invoiceHistory = new InvoiceHistoryClient(this);
         this.invoices = new InvoicesClient(this);
         this.leads = new LeadsClient(this);
@@ -123,6 +128,7 @@ public class LockstepApi {
         this.sync = new SyncClient(this);
         this.userAccounts = new UserAccountsClient(this);
         this.userRoles = new UserRolesClient(this);
+        this.webhookRules = new WebhookRulesClient(this);
         this.webhooks = new WebhooksClient(this);
     }
 
@@ -229,6 +235,12 @@ public class LockstepApi {
      */
     public @NotNull FinancialYearSettingsClient getFinancialYearSettingsClient() { return this.financialYearSettings; }
     /**
+     * A collection of API methods relating to GroupAccounts
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.GroupAccountsClient client} methods in the API.
+     */
+    public @NotNull GroupAccountsClient getGroupAccountsClient() { return this.groupAccounts; }
+    /**
      * A collection of API methods relating to InvoiceHistory
      *
      * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistoryClient client} methods in the API.
@@ -300,6 +312,12 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.UserRolesClient client} methods in the API.
      */
     public @NotNull UserRolesClient getUserRolesClient() { return this.userRoles; }
+    /**
+     * A collection of API methods relating to WebhookRules
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.WebhookRulesClient client} methods in the API.
+     */
+    public @NotNull WebhookRulesClient getWebhookRulesClient() { return this.webhookRules; }
     /**
      * A collection of API methods relating to Webhooks
      *

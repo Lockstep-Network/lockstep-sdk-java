@@ -17,7 +17,7 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.AttachmentModel;
@@ -25,7 +25,7 @@ import io.lockstep.api.models.AttachmentModel;
 import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.models.UriModel;
 import io.lockstep.api.BlobRequest;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -54,7 +54,7 @@ public class AttachmentsClient
      *
      * @param id The unique ID number of the Attachment to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available for querying but may be available in the future.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AttachmentModel> retrieveAttachment(@NotNull String id, @Nullable String include)
     {
@@ -75,7 +75,7 @@ public class AttachmentsClient
      *
      * @param id The unique Lockstep Platform ID number of the attachment to update
      * @param body A list of changes to apply to this Attachment
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AttachmentModel> updateAttachment(@NotNull String id, @NotNull Object body)
     {
@@ -93,7 +93,7 @@ public class AttachmentsClient
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
      * @param id The unique ID number of the Attachment to be archived
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> archiveAttachment(@NotNull String id)
     {
@@ -110,7 +110,7 @@ public class AttachmentsClient
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
      * @param id The unique ID number of the Attachment whose URI will be returned
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<UriModel> downloadAttachmentURL(@NotNull String id)
     {
@@ -127,7 +127,7 @@ public class AttachmentsClient
      * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
      *
      * @param id The unique ID number of the Attachment whose URI will be returned
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<byte[]> downloadAttachmentFile(@NotNull String id)
     {
@@ -147,7 +147,7 @@ public class AttachmentsClient
      * @param objectId The unique ID of the object to which this Attachment will be linked
      * @param attachmentType The type of this attachment
      * @param filename The full path of a file to upload to the API
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<AttachmentModel[]> uploadAttachment(@NotNull String tableName, @NotNull String objectId, @Nullable String attachmentType, @NotNull byte[] filename)
     {
@@ -172,7 +172,7 @@ public class AttachmentsClient
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize The page size for results (default 200, maximum of 10,000)
      * @param pageNumber The page number for results (default 0)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<AttachmentModel>> queryAttachments(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {

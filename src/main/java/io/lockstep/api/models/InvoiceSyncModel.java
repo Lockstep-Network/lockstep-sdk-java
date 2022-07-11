@@ -497,13 +497,13 @@ public class InvoiceSyncModel
      */
     public void setOriginAddressPostalCode(@Nullable String value) { this.originAddressPostalCode = value; }
     /**
-     * The origination address for this invoice This will be validated by the /api/v1/definitions/countries data set
+     * The origination address for this invoice
      *
      * @return The field originAddressCountry
      */
     public @Nullable String getOriginAddressCountry() { return this.originAddressCountry; }
     /**
-     * The origination address for this invoice This will be validated by the /api/v1/definitions/countries data set
+     * The origination address for this invoice
      *
      * @param value The new value for originAddressCountry
      */
@@ -605,13 +605,13 @@ public class InvoiceSyncModel
      */
     public void setBillToAddressPostalCode(@Nullable String value) { this.billToAddressPostalCode = value; }
     /**
-     * The billing address for this invoice This will be validated by the /api/v1/definitions/countries data set
+     * The billing address for this invoice
      *
      * @return The field billToAddressCountry
      */
     public @Nullable String getBillToAddressCountry() { return this.billToAddressCountry; }
     /**
-     * The billing address for this invoice This will be validated by the /api/v1/definitions/countries data set
+     * The billing address for this invoice
      *
      * @param value The new value for billToAddressCountry
      */
@@ -713,13 +713,13 @@ public class InvoiceSyncModel
      */
     public void setShipToAddressPostalCode(@Nullable String value) { this.shipToAddressPostalCode = value; }
     /**
-     * The shipping address for this invoice This will be validated by the /api/v1/definitions/countries data set
+     * The shipping address for this invoice
      *
      * @return The field shipToAddressCountry
      */
     public @Nullable String getShipToAddressCountry() { return this.shipToAddressCountry; }
     /**
-     * The shipping address for this invoice This will be validated by the /api/v1/definitions/countries data set
+     * The shipping address for this invoice
      *
      * @param value The new value for shipToAddressCountry
      */

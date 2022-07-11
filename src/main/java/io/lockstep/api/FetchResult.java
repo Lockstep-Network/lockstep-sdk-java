@@ -6,30 +6,32 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
- * @version    2021.39
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @author     Lockstep Network <support@lockstep.io>
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
-package io.lockstep.api.models;
+package io.lockstep.api;
 
 /**
- * Represents the results of a query.  The total number of records matching the query are in the `totalCount` parameter.
- * You can use `pageSize` and `pageNumber` to continue fetching data until `totalCount` is reached.
+ * Represents the results of a query. The total number of records matching the
+ * query are in the `totalCount` parameter.
+ * You can use `pageSize` and `pageNumber` to continue fetching data until
+ * `totalCount` is reached.
  *
  * @author jkirk
  * @version $Id: $Id
  */
-public class FetchResult<T>
-{
+public class FetchResult<T> {
     private T[] records;
     private Integer totalCount;
     private Integer pageSize;
     private Integer pageNumber;
 
     /**
-     * <p>Getter for the field <code>records</code>.</p>
+     * <p>
+     * Getter for the field <code>records</code>.
+     * </p>
      *
      * @return an array of T objects.
      */
@@ -38,7 +40,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Setter for the field <code>records</code>.</p>
+     * <p>
+     * Setter for the field <code>records</code>.
+     * </p>
      *
      * @param records an array of T objects.
      */
@@ -47,7 +51,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Getter for the field <code>totalCount</code>.</p>
+     * <p>
+     * Getter for the field <code>totalCount</code>.
+     * </p>
      *
      * @return a {@link java.lang.Integer} object.
      */
@@ -56,7 +62,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Setter for the field <code>totalCount</code>.</p>
+     * <p>
+     * Setter for the field <code>totalCount</code>.
+     * </p>
      *
      * @param totalCount a {@link java.lang.Integer} object.
      */
@@ -65,7 +73,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Getter for the field <code>pageSize</code>.</p>
+     * <p>
+     * Getter for the field <code>pageSize</code>.
+     * </p>
      *
      * @return a {@link java.lang.Integer} object.
      */
@@ -74,7 +84,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Setter for the field <code>pageSize</code>.</p>
+     * <p>
+     * Setter for the field <code>pageSize</code>.
+     * </p>
      *
      * @param pageSize a {@link java.lang.Integer} object.
      */
@@ -83,7 +95,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Getter for the field <code>pageNumber</code>.</p>
+     * <p>
+     * Getter for the field <code>pageNumber</code>.
+     * </p>
      *
      * @return a {@link java.lang.Integer} object.
      */
@@ -92,7 +106,9 @@ public class FetchResult<T>
     }
 
     /**
-     * <p>Setter for the field <code>pageNumber</code>.</p>
+     * <p>
+     * Setter for the field <code>pageNumber</code>.
+     * </p>
      *
      * @param pageNumber a {@link java.lang.Integer} object.
      */
@@ -100,4 +116,3 @@ public class FetchResult<T>
         this.pageNumber = pageNumber;
     }
 }
-

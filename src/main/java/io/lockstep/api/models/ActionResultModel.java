@@ -1,44 +1,47 @@
+
 /**
- * Lockstep Software Development Kit for Java
+ * Lockstep Platform SDK for Java
  *
  * (c) 2021-2022 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
- * @version    2021.39
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @author     Lockstep Network <support@lockstep.io>
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
+
 
 package io.lockstep.api.models;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 /**
- * Represents a failed request.
+ * Represents the result of an action.
  *
- * @author jkirk
- * @version $Id: $Id
+ * In the Lockstep API, an Action is returned when an API call does not produce any data
+ * but does produce messages that can be useful in understanding what work was performed.
+ * You may use the messages text to display user visible error messages or the results of
+ * various operations.
  */
 public class ActionResultModel
 {
-    private String[] messages;
+    private @Nullable String[] messages;
 
     /**
-     * <p>Getter for the field <code>messages</code>.</p>
+     * If the API call produced messages, this element will contain a list of user-visible
+     * text strings that contain information about what work occurred in the API.
      *
-     * @return an array of {@link java.lang.String} objects.
+     * @return The field messages
      */
-    public String[] getMessages() {
-        return this.messages;
-    }
-
+    public @Nullable String[] getMessages() { return this.messages; }
     /**
-     * <p>Setter for the field <code>messages</code>.</p>
+     * If the API call produced messages, this element will contain a list of user-visible
+     * text strings that contain information about what work occurred in the API.
      *
-     * @param messages an array of {@link java.lang.String} objects.
+     * @param value The new value for messages
      */
-    public void setMessages(String[] messages) {
-        this.messages = messages;
-    }
-}
+    public void setMessages(@Nullable String[] value) { this.messages = value; }
+};

@@ -19,20 +19,20 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Aggregated Accounts Receivable Aging information.
+ * Aggregated Accounts Payable Aging information.
  */
-public class ArAgingHeaderInfoModel
+public class ApAgingHeaderInfoModel
 {
     private @NotNull String groupKey;
     private @Nullable String reportBucket;
-    private @NotNull Integer totalCustomers;
-    private @NotNull Integer totalInvoicesOutstanding;
-    private @NotNull Double totalInvoiceOutstandingAmount;
+    private @NotNull Integer totalVendors;
+    private @NotNull Integer totalBillsOutstanding;
+    private @NotNull Double totalBillsOutstandingAmount;
     private @NotNull Double totalCreditMemoOutstandingAmount;
-    private @NotNull Double totalUnappliedPaymentAmount;
+    private @NotNull Double totalAdvancePaymentAmount;
     private @NotNull Double totalOutstandingAmount;
-    private @NotNull Double totalArAmount;
-    private @NotNull Double percentageOfTotalAr;
+    private @NotNull Double totalApAmount;
+    private @NotNull Double percentageOfTotalAp;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -65,41 +65,41 @@ public class ArAgingHeaderInfoModel
      */
     public void setReportBucket(@Nullable String value) { this.reportBucket = value; }
     /**
-     * The total number of customers.
+     * The total number of vendors.
      *
-     * @return The field totalCustomers
+     * @return The field totalVendors
      */
-    public @NotNull Integer getTotalCustomers() { return this.totalCustomers; }
+    public @NotNull Integer getTotalVendors() { return this.totalVendors; }
     /**
-     * The total number of customers.
+     * The total number of vendors.
      *
-     * @param value The new value for totalCustomers
+     * @param value The new value for totalVendors
      */
-    public void setTotalCustomers(@NotNull Integer value) { this.totalCustomers = value; }
+    public void setTotalVendors(@NotNull Integer value) { this.totalVendors = value; }
     /**
-     * The total number of invoices outstanding.
+     * The total number of bills outstanding.
      *
-     * @return The field totalInvoicesOutstanding
+     * @return The field totalBillsOutstanding
      */
-    public @NotNull Integer getTotalInvoicesOutstanding() { return this.totalInvoicesOutstanding; }
+    public @NotNull Integer getTotalBillsOutstanding() { return this.totalBillsOutstanding; }
     /**
-     * The total number of invoices outstanding.
+     * The total number of bills outstanding.
      *
-     * @param value The new value for totalInvoicesOutstanding
+     * @param value The new value for totalBillsOutstanding
      */
-    public void setTotalInvoicesOutstanding(@NotNull Integer value) { this.totalInvoicesOutstanding = value; }
+    public void setTotalBillsOutstanding(@NotNull Integer value) { this.totalBillsOutstanding = value; }
     /**
-     * The total amount outstanding on invoices.
+     * The total amount outstanding on bills.
      *
-     * @return The field totalInvoiceOutstandingAmount
+     * @return The field totalBillsOutstandingAmount
      */
-    public @NotNull Double getTotalInvoiceOutstandingAmount() { return this.totalInvoiceOutstandingAmount; }
+    public @NotNull Double getTotalBillsOutstandingAmount() { return this.totalBillsOutstandingAmount; }
     /**
-     * The total amount outstanding on invoices.
+     * The total amount outstanding on bills.
      *
-     * @param value The new value for totalInvoiceOutstandingAmount
+     * @param value The new value for totalBillsOutstandingAmount
      */
-    public void setTotalInvoiceOutstandingAmount(@NotNull Double value) { this.totalInvoiceOutstandingAmount = value; }
+    public void setTotalBillsOutstandingAmount(@NotNull Double value) { this.totalBillsOutstandingAmount = value; }
     /**
      * The total amount outstanding on credit memos.
      *
@@ -113,17 +113,17 @@ public class ArAgingHeaderInfoModel
      */
     public void setTotalCreditMemoOutstandingAmount(@NotNull Double value) { this.totalCreditMemoOutstandingAmount = value; }
     /**
-     * The total amount of unapplied payments.
+     * The total amount of advance payments.
      *
-     * @return The field totalUnappliedPaymentAmount
+     * @return The field totalAdvancePaymentAmount
      */
-    public @NotNull Double getTotalUnappliedPaymentAmount() { return this.totalUnappliedPaymentAmount; }
+    public @NotNull Double getTotalAdvancePaymentAmount() { return this.totalAdvancePaymentAmount; }
     /**
-     * The total amount of unapplied payments.
+     * The total amount of advance payments.
      *
-     * @param value The new value for totalUnappliedPaymentAmount
+     * @param value The new value for totalAdvancePaymentAmount
      */
-    public void setTotalUnappliedPaymentAmount(@NotNull Double value) { this.totalUnappliedPaymentAmount = value; }
+    public void setTotalAdvancePaymentAmount(@NotNull Double value) { this.totalAdvancePaymentAmount = value; }
     /**
      * The total amount outstanding.
      *
@@ -137,27 +137,27 @@ public class ArAgingHeaderInfoModel
      */
     public void setTotalOutstandingAmount(@NotNull Double value) { this.totalOutstandingAmount = value; }
     /**
-     * The total amount for AR.
+     * The total amount for AP.
      *
-     * @return The field totalArAmount
+     * @return The field totalApAmount
      */
-    public @NotNull Double getTotalArAmount() { return this.totalArAmount; }
+    public @NotNull Double getTotalApAmount() { return this.totalApAmount; }
     /**
-     * The total amount for AR.
+     * The total amount for AP.
      *
-     * @param value The new value for totalArAmount
+     * @param value The new value for totalApAmount
      */
-    public void setTotalArAmount(@NotNull Double value) { this.totalArAmount = value; }
+    public void setTotalApAmount(@NotNull Double value) { this.totalApAmount = value; }
     /**
-     * Portion of Total AR this data represents.
+     * Portion of Total AP this data represents.
      *
-     * @return The field percentageOfTotalAr
+     * @return The field percentageOfTotalAp
      */
-    public @NotNull Double getPercentageOfTotalAr() { return this.percentageOfTotalAr; }
+    public @NotNull Double getPercentageOfTotalAp() { return this.percentageOfTotalAp; }
     /**
-     * Portion of Total AR this data represents.
+     * Portion of Total AP this data represents.
      *
-     * @param value The new value for percentageOfTotalAr
+     * @param value The new value for percentageOfTotalAp
      */
-    public void setPercentageOfTotalAr(@NotNull Double value) { this.percentageOfTotalAr = value; }
+    public void setPercentageOfTotalAp(@NotNull Double value) { this.percentageOfTotalAp = value; }
 };

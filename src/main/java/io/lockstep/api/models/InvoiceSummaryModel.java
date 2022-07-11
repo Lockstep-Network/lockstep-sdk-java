@@ -28,6 +28,7 @@ public class InvoiceSummaryModel
     private @NotNull String invoiceId;
     private @Nullable String invoiceNumber;
     private @Nullable String invoiceDate;
+    private @Nullable String invoiceClosedDate;
     private @Nullable String customerName;
     private @Nullable String status;
     private @Nullable String paymentDueDate;
@@ -107,6 +108,20 @@ public class InvoiceSummaryModel
      * @param value The new value for invoiceDate
      */
     public void setInvoiceDate(@Nullable String value) { this.invoiceDate = value; }
+    /**
+     * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
+     * services.
+     *
+     * @return The field invoiceClosedDate
+     */
+    public @Nullable String getInvoiceClosedDate() { return this.invoiceClosedDate; }
+    /**
+     * The date when the invoice was closed and finalized after completion of all payments and delivery of all products and
+     * services.
+     *
+     * @param value The new value for invoiceClosedDate
+     */
+    public void setInvoiceClosedDate(@Nullable String value) { this.invoiceClosedDate = value; }
     /**
      * The name of the counterparty for the invoice, for example, a customer or vendor.
      *

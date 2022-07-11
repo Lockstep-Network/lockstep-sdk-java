@@ -39,6 +39,7 @@ public class PaymentAppliedModel
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
     private @Nullable String appEnrollmentId;
+    private @Nullable PaymentModel payment;
     private @Nullable InvoiceModel invoice;
 
     /**
@@ -229,6 +230,18 @@ public class PaymentAppliedModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
+     * The payment associated with this applied payment
+     *
+     * @return The field payment
+     */
+    public @Nullable PaymentModel getPayment() { return this.payment; }
+    /**
+     * The payment associated with this applied payment
+     *
+     * @param value The new value for payment
+     */
+    public void setPayment(@Nullable PaymentModel value) { this.payment = value; }
     /**
      * The invoice associated with this applied payment.
      *

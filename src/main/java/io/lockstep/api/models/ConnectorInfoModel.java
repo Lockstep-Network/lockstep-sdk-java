@@ -25,7 +25,10 @@ import org.jetbrains.annotations.Nullable;
 public class ConnectorInfoModel
 {
     private @Nullable String authCode;
+    private @Nullable String tokenId;
+    private @Nullable String tokenSecret;
     private @Nullable String realmId;
+    private @Nullable String subsidiaryId;
     private @Nullable String redirectUri;
     private @Nullable String email;
     private @Nullable String username;
@@ -48,6 +51,30 @@ public class ConnectorInfoModel
      */
     public void setAuthCode(@Nullable String value) { this.authCode = value; }
     /**
+     * The access token id for the connector enrollment.
+     *
+     * @return The field tokenId
+     */
+    public @Nullable String getTokenId() { return this.tokenId; }
+    /**
+     * The access token id for the connector enrollment.
+     *
+     * @param value The new value for tokenId
+     */
+    public void setTokenId(@Nullable String value) { this.tokenId = value; }
+    /**
+     * The access token secret for the connector enrollment.
+     *
+     * @return The field tokenSecret
+     */
+    public @Nullable String getTokenSecret() { return this.tokenSecret; }
+    /**
+     * The access token secret for the connector enrollment.
+     *
+     * @param value The new value for tokenSecret
+     */
+    public void setTokenSecret(@Nullable String value) { this.tokenSecret = value; }
+    /**
      * The realm id of the account being granted permissions to access
      *
      * @return The field realmId
@@ -59,6 +86,18 @@ public class ConnectorInfoModel
      * @param value The new value for realmId
      */
     public void setRealmId(@Nullable String value) { this.realmId = value; }
+    /**
+     * The subsidiary id that corresponds to a legal entity.
+     *
+     * @return The field subsidiaryId
+     */
+    public @Nullable String getSubsidiaryId() { return this.subsidiaryId; }
+    /**
+     * The subsidiary id that corresponds to a legal entity.
+     *
+     * @param value The new value for subsidiaryId
+     */
+    public void setSubsidiaryId(@Nullable String value) { this.subsidiaryId = value; }
     /**
      * The redirect uri used for step one of the OAuth2.0 flow.
      *

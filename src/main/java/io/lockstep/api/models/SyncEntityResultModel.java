@@ -25,6 +25,7 @@ public class SyncEntityResultModel
 {
     private @NotNull Integer insertCount;
     private @NotNull Integer updateCount;
+    private @NotNull Integer deleteCount;
     private @NotNull Integer skipCount;
     private @NotNull Integer errorCount;
     private @Nullable Object errors;
@@ -53,6 +54,18 @@ public class SyncEntityResultModel
      * @param value The new value for updateCount
      */
     public void setUpdateCount(@NotNull Integer value) { this.updateCount = value; }
+    /**
+     * The number of entities deleted
+     *
+     * @return The field deleteCount
+     */
+    public @NotNull Integer getDeleteCount() { return this.deleteCount; }
+    /**
+     * The number of entities deleted
+     *
+     * @param value The new value for deleteCount
+     */
+    public void setDeleteCount(@NotNull Integer value) { this.deleteCount = value; }
     /**
      * The number of entities skipped
      *

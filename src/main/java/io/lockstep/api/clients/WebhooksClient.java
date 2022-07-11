@@ -17,13 +17,13 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.WebhookModel;
 
 import io.lockstep.api.models.ActionResultModel;
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.WebhookHistoryTableStorageModel;
 
@@ -48,7 +48,7 @@ public class WebhooksClient
      * Retrieves the Webhook specified by this unique identifier.
      *
      * @param id The unique Lockstep Platform ID number of this Webhook
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookModel> retrieveWebhook(@NotNull String id)
     {
@@ -64,7 +64,7 @@ public class WebhooksClient
      *
      * @param id The unique Lockstep Platform ID number of the Webhook to update.
      * @param body A list of changes to apply to this Webhook
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookModel> updateWebhook(@NotNull String id, @NotNull Object body)
     {
@@ -78,7 +78,7 @@ public class WebhooksClient
      * Deletes the Webhook referred to by this unique identifier.
      *
      * @param id The unique Lockstep Platform ID number of the Webhook to delete.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ActionResultModel> deleteWebhook(@NotNull String id)
     {
@@ -91,7 +91,7 @@ public class WebhooksClient
      * Creates one or more webhooks from a given model.
      *
      * @param body The Webhooks to create
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookModel[]> createWebhooks(@NotNull WebhookModel[] body)
     {
@@ -104,7 +104,7 @@ public class WebhooksClient
      * Updates a webhook that matches the specified id with a new client secret.
      *
      * @param id The unique Lockstep Platform ID number of the Webhook to update.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<WebhookModel> regenerateClientSecret(@NotNull String id)
     {
@@ -119,15 +119,17 @@ public class WebhooksClient
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collection: WebhookRules
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FetchResult<WebhookModel>> queryWebhooks(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<WebhookModel>> queryWebhooks(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<WebhookModel>> r = new RestRequest<FetchResult<WebhookModel>>(this.client, "GET", "/api/v1/Webhooks/query");
         r.AddQuery("filter", filter.toString());
+        r.AddQuery("include", include.toString());
         r.AddQuery("order", order.toString());
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
@@ -141,7 +143,7 @@ public class WebhooksClient
      * @param select The selection for this query. Selection is the desired properties of an entity to pull from the set. If a property is not selected, it will either return as null or empty. See [Azure Query Language](https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities)
      * @param pageSize The page size for results (default 200).
      * @param pageNumber The page number for results (default 0).
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<WebhookHistoryTableStorageModel>> queryWebhookHistory(@NotNull String webhookId, @Nullable String filter, @Nullable String select, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
@@ -152,5 +154,19 @@ public class WebhooksClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<WebhookHistoryTableStorageModel>>() {}.getType());
+    }
+
+    /**
+     *
+     * @param webhookId The unique Lockstep Platform ID number of this Webhook
+     * @param webhookHistoryId The unique Lockstep Platform ID number of the Webhook History to be retried. Note: the webhook history supplied must have a isSuccessful status of false to be retried.
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<String> retryFailedWebhookHistory(@NotNull String webhookId, @NotNull String webhookHistoryId)
+    {
+        RestRequest<String> r = new RestRequest<String>(this.client, "GET", "/api/v1/Webhooks/{webhookId}/history/{webhookHistoryId}/retry");
+        r.AddPath("{webhookId}", webhookId.toString());
+        r.AddPath("{webhookHistoryId}", webhookHistoryId.toString());
+        return r.Call(String.class);
     }
 }

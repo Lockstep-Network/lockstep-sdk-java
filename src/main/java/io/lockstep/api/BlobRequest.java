@@ -6,10 +6,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author     Ted Spence <tspence@lockstep.io>
- * @copyright  2021-2021 Lockstep, Inc.
- * @version    2022.4.32.0
- * @link       https://github.com/tspence/lockstep-sdk-java
+ * @author     Lockstep Network <support@lockstep.io>
+ * @copyright  2021-2022 Lockstep, Inc.
+ * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 package io.lockstep.api;
@@ -38,7 +37,6 @@ import org.jetbrains.annotations.NotNull;
 import com.google.gson.Gson;
 
 import io.lockstep.api.models.ErrorResult;
-import io.lockstep.api.models.LockstepResponse;
 
 /**
  * Represents a request to a remote web server
@@ -46,8 +44,7 @@ import io.lockstep.api.models.LockstepResponse;
  * @author jkirk
  * @version $Id: $Id
  */
-public class BlobRequest
-{
+public class BlobRequest {
     private Hashtable<String, String> queryParams;
     private Hashtable<String, String> pathReplacements;
     private String method;
@@ -56,14 +53,15 @@ public class BlobRequest
     private LockstepApi client;
 
     /**
-     * <p>Constructor for BlobRequest.</p>
+     * <p>
+     * Constructor for BlobRequest.
+     * </p>
      *
      * @param client a {@link io.lockstep.api.LockstepApi} object.
      * @param method a {@link java.lang.String} object.
-     * @param path a {@link java.lang.String} object.
+     * @param path   a {@link java.lang.String} object.
      */
-    public BlobRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path)
-    {
+    public BlobRequest(@NotNull LockstepApi client, @NotNull String method, @NotNull String path) {
         this.client = client;
         this.method = method;
         this.path = path;
@@ -72,44 +70,46 @@ public class BlobRequest
     }
 
     /**
-     * <p>AddQuery.</p>
+     * <p>
+     * AddQuery.
+     * </p>
      *
-     * @param name a {@link java.lang.String} object.
+     * @param name  a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
      */
-    public void AddQuery(@NotNull String name, @NotNull String value)
-    {
+    public void AddQuery(@NotNull String name, @NotNull String value) {
         this.queryParams.put(name, value);
     }
 
     /**
-     * <p>AddPath.</p>
+     * <p>
+     * AddPath.
+     * </p>
      *
-     * @param name a {@link java.lang.String} object.
+     * @param name  a {@link java.lang.String} object.
      * @param value a {@link java.lang.String} object.
      */
-    public void AddPath(@NotNull String name, @NotNull String value)
-    {
+    public void AddPath(@NotNull String name, @NotNull String value) {
         this.pathReplacements.put(name, value);
     }
 
     /**
-     * <p>AddBody.</p>
+     * <p>
+     * AddBody.
+     * </p>
      *
      * @param body a {@link java.lang.Object} object.
      */
-    public void AddBody(Object body)
-    {
+    public void AddBody(Object body) {
         this.body = body;
     }
 
     /**
      * Adapted from Apache simple request client example
      *
-     * @return a {@link io.lockstep.api.models.LockstepResponse} object.
+     * @return a {@link io.lockstep.api.LockstepResponse} object.
      */
-    public @NotNull LockstepResponse<byte[]> Call()
-    {
+    public @NotNull LockstepResponse<byte[]> Call() {
         Instant start = Instant.now();
         LockstepResponse<byte[]> lockstepResponse = new LockstepResponse<byte[]>();
         try {
@@ -153,7 +153,7 @@ public class BlobRequest
 
             request.addHeader("SdkName", "Java");
             request.addHeader("SdkVersion", "2022.10.63.0");
-            
+
             String applicationName = this.client.getAppName();
 
             if (applicationName != null) {
@@ -161,7 +161,7 @@ public class BlobRequest
             }
 
             String machineName = InetAddress.getLocalHost().getHostName();
-            
+
             if (machineName != null) {
                 request.addHeader("MachineName", machineName);
             }
@@ -186,7 +186,7 @@ public class BlobRequest
             // Execute and parse results
             final CloseableHttpResponse response = httpclient.execute(request);
 
-            //get round trip time
+            // get round trip time
             long roundTripTime = Duration.between(start, Instant.now()).toMillis();
 
             // Did we succeed?
@@ -210,7 +210,7 @@ public class BlobRequest
                 lockstepResponse.setSuccess(false);
             }
             return lockstepResponse;
-        } catch (Exception e) { 
+        } catch (Exception e) {
             lockstepResponse.setSuccess(false);
             lockstepResponse.setException(e);
         }

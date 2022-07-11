@@ -19,9 +19,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Customer payment collected information
+ * Company payment collected information
  */
-public class CustomerDetailsPaymentModel
+public class CompanyDetailsPaymentModel
 {
     private @NotNull String groupKey;
     private @NotNull String paymentId;

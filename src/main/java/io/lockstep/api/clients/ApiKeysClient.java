@@ -17,12 +17,12 @@ package io.lockstep.api.clients;
 
 import io.lockstep.api.LockstepApi;
 import io.lockstep.api.RestRequest;
-import io.lockstep.api.models.LockstepResponse;
+import io.lockstep.api.LockstepResponse;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ApiKeyModel;
 
-import io.lockstep.api.models.FetchResult;
+import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
@@ -51,7 +51,7 @@ public class ApiKeysClient
      *
      * @param id The unique ID number of the API Key to retrieve
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ApiKeyModel> retrieveAPIKey(@NotNull String id, @Nullable String include)
     {
@@ -71,7 +71,7 @@ public class ApiKeysClient
      * For more information, see [API Keys](https://developer.lockstep.io/docs/api-keys).
      *
      * @param id The unique Lockstep Platform ID number of this API Key
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ApiKeyModel> revokeAPIKey(@NotNull String id)
     {
@@ -88,7 +88,7 @@ public class ApiKeysClient
      * For more information, see [API Keys](https://developer.lockstep.io/docs/api-keys).
      *
      * @param body Metadata about the API Key to create.
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<ApiKeyModel> createAPIKey(@NotNull ApiKeyModel body)
     {
@@ -109,7 +109,7 @@ public class ApiKeysClient
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @return A {@link io.lockstep.api.models.LockstepResponse} containing the results
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<ApiKeyModel>> queryAPIKeys(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
