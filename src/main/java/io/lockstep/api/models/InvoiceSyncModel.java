@@ -291,13 +291,13 @@ public class InvoiceSyncModel
      */
     public void setSpecialTerms(@Nullable String value) { this.specialTerms = value; }
     /**
-     * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/definitions/currencies data set
+     * The three-character ISO 4217 currency code used for this invoice.
      *
      * @return The field currencyCode
      */
     public @Nullable String getCurrencyCode() { return this.currencyCode; }
     /**
-     * The three-character ISO 4217 currency code used for this invoice. This will be validated by the /api/v1/definitions/currencies data set
+     * The three-character ISO 4217 currency code used for this invoice.
      *
      * @param value The new value for currencyCode
      */

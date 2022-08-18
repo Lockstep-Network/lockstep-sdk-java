@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class GroupAccountModel
 {
     private @NotNull String groupKey;
-    private @Nullable String groupName;
+    private @NotNull String groupName;
     private @NotNull String primaryUserId;
     private @NotNull String groupCompanyId;
     private @NotNull Boolean isActive;
@@ -57,13 +57,13 @@ public class GroupAccountModel
      *
      * @return The field groupName
      */
-    public @Nullable String getGroupName() { return this.groupName; }
+    public @NotNull String getGroupName() { return this.groupName; }
     /**
      * The name of the group
      *
      * @param value The new value for groupName
      */
-    public void setGroupName(@Nullable String value) { this.groupName = value; }
+    public void setGroupName(@NotNull String value) { this.groupName = value; }
     /**
      * The primary user for the group
      *

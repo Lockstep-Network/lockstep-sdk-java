@@ -41,10 +41,10 @@ public class InvoiceLineModel
     private @Nullable String overrideOriginAddressId;
     private @Nullable String overrideBillToAddressId;
     private @Nullable String overrideShipToAddressId;
-    private @Nullable String created;
-    private @Nullable String createdUserId;
-    private @Nullable String modified;
-    private @Nullable String modifiedUserId;
+    private @NotNull String created;
+    private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
     private @Nullable String appEnrollmentId;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
@@ -302,49 +302,49 @@ public class InvoiceLineModel
      *
      * @return The field created
      */
-    public @Nullable String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this line was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(@Nullable String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID number of the user who created this line.
      *
      * @return The field createdUserId
      */
-    public @Nullable String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID number of the user who created this line.
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(@Nullable String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The date on which this line was last modified.
      *
      * @return The field modified
      */
-    public @Nullable String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date on which this line was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(@Nullable String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID number of the user who most recently modified this line.
      *
      * @return The field modifiedUserId
      */
-    public @Nullable String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID number of the user who most recently modified this line.
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(@Nullable String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The AppEnrollmentId of the application that imported this record.  For accounts
      * with more than one financial system connected, this field identifies the originating

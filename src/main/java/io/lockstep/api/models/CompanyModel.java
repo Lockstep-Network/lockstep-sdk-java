@@ -49,21 +49,20 @@ public class CompanyModel
     private @Nullable String timeZone;
     private @Nullable String phoneNumber;
     private @Nullable String faxNumber;
-    private @Nullable String created;
+    private @NotNull String created;
     private @NotNull String createdUserId;
-    private @Nullable String modified;
+    private @NotNull String modified;
     private @NotNull String modifiedUserId;
     private @Nullable String modifiedUserName;
     private @Nullable String taxId;
     private @Nullable String dunsNumber;
-    private @Nullable String apEmailAddress;
-    private @Nullable String arEmailAddress;
     private @Nullable String preferredDeliveryMethod;
     private @Nullable String domainName;
     private @Nullable String companyClassificationCodeDefId;
     private @Nullable String description;
     private @Nullable String website;
     private @Nullable String appEnrollmentId;
+    private @Nullable String emailAddress;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable ContactModel[] contacts;
@@ -403,13 +402,13 @@ public class CompanyModel
      *
      * @return The field created
      */
-    public @Nullable String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date this company was created
      *
      * @param value The new value for created
      */
-    public void setCreated(@Nullable String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created this company
      *
@@ -427,13 +426,13 @@ public class CompanyModel
      *
      * @return The field modified
      */
-    public @Nullable String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date this company was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(@Nullable String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who last modified this company
      *
@@ -482,30 +481,6 @@ public class CompanyModel
      * @param value The new value for dunsNumber
      */
     public void setDunsNumber(@Nullable String value) { this.dunsNumber = value; }
-    /**
-     * AP (Accounts Payable) Email Address
-     *
-     * @return The field apEmailAddress
-     */
-    public @Nullable String getApEmailAddress() { return this.apEmailAddress; }
-    /**
-     * AP (Accounts Payable) Email Address
-     *
-     * @param value The new value for apEmailAddress
-     */
-    public void setApEmailAddress(@Nullable String value) { this.apEmailAddress = value; }
-    /**
-     * AR (Accounts Receivable) Email Address
-     *
-     * @return The field arEmailAddress
-     */
-    public @Nullable String getArEmailAddress() { return this.arEmailAddress; }
-    /**
-     * AR (Accounts Receivable) Email Address
-     *
-     * @param value The new value for arEmailAddress
-     */
-    public void setArEmailAddress(@Nullable String value) { this.arEmailAddress = value; }
     /**
      * Indicates the preferred invoice delivery method. Examples include Print, Email, Fax
      *
@@ -588,6 +563,18 @@ public class CompanyModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
+     * Company Email Address
+     *
+     * @return The field emailAddress
+     */
+    public @Nullable String getEmailAddress() { return this.emailAddress; }
+    /**
+     * Company Email Address
+     *
+     * @param value The new value for emailAddress
+     */
+    public void setEmailAddress(@Nullable String value) { this.emailAddress = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.

@@ -39,6 +39,9 @@ public class BatchSyncModel
     private @Nullable CustomFieldSyncModel[] customFields;
     private @Nullable PaymentSyncModel[] payments;
     private @Nullable PaymentAppliedSyncModel[] paymentApplications;
+    private @Nullable FinancialYearSettingSyncModel[] financialYearSettings;
+    private @Nullable FinancialAccountSyncModel[] financialAccounts;
+    private @Nullable FinancialAccountBalanceHistorySyncModel[] financialAccountBalanceHistories;
 
     /**
      * A list of Company records to merge with your Lockstep Platform data
@@ -136,4 +139,40 @@ public class BatchSyncModel
      * @param value The new value for paymentApplications
      */
     public void setPaymentApplications(@Nullable PaymentAppliedSyncModel[] value) { this.paymentApplications = value; }
+    /**
+     * A list of FinancialYearSetting records to merge with your Lockstep Platform data
+     *
+     * @return The field financialYearSettings
+     */
+    public @Nullable FinancialYearSettingSyncModel[] getFinancialYearSettings() { return this.financialYearSettings; }
+    /**
+     * A list of FinancialYearSetting records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for financialYearSettings
+     */
+    public void setFinancialYearSettings(@Nullable FinancialYearSettingSyncModel[] value) { this.financialYearSettings = value; }
+    /**
+     * A list of FinancialAccount records to merge with your Lockstep Platform data
+     *
+     * @return The field financialAccounts
+     */
+    public @Nullable FinancialAccountSyncModel[] getFinancialAccounts() { return this.financialAccounts; }
+    /**
+     * A list of FinancialAccount records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for financialAccounts
+     */
+    public void setFinancialAccounts(@Nullable FinancialAccountSyncModel[] value) { this.financialAccounts = value; }
+    /**
+     * A list of FinancialAccountBalanceHistory records to merge with your Lockstep Platform data
+     *
+     * @return The field financialAccountBalanceHistories
+     */
+    public @Nullable FinancialAccountBalanceHistorySyncModel[] getFinancialAccountBalanceHistories() { return this.financialAccountBalanceHistories; }
+    /**
+     * A list of FinancialAccountBalanceHistory records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for financialAccountBalanceHistories
+     */
+    public void setFinancialAccountBalanceHistories(@Nullable FinancialAccountBalanceHistorySyncModel[] value) { this.financialAccountBalanceHistories = value; }
 };

@@ -28,6 +28,7 @@ import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CustomerSummaryModel;
 import io.lockstep.api.models.VendorSummaryModel;
 import io.lockstep.api.models.CompanyDetailsModel;
+import io.lockstep.api.BlobRequest;
 
 /**
  * Contains all methods related to Companies
@@ -161,9 +162,10 @@ public class CompaniesClient
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize The page size for results (default 200, maximum of 10,000)
      * @param pageNumber The page number for results (default 0)
+     * @param reportDate The date to calculate the fields on. If no date is entered the current UTC date will be used.
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<CustomerSummaryModel>> queryCustomerSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber, @Nullable String reportDate)
     {
         RestRequest<FetchResult<CustomerSummaryModel>> r = new RestRequest<FetchResult<CustomerSummaryModel>>(this.client, "GET", "/api/v1/Companies/views/customer-summary");
         r.AddQuery("filter", filter.toString());
@@ -171,6 +173,7 @@ public class CompaniesClient
         r.AddQuery("order", order.toString());
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
+        r.AddQuery("reportDate", reportDate.toString());
         return r.Call(new TypeToken<FetchResult<CustomerSummaryModel>>() {}.getType());
     }
 
@@ -188,9 +191,10 @@ public class CompaniesClient
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
      * @param pageSize The page size for results (default 200, maximum of 10,000)
      * @param pageNumber The page number for results (default 0)
+     * @param reportDate The date to calculate the fields on. If no date is entered the current UTC date will be used.
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FetchResult<VendorSummaryModel>> queryVendorSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<VendorSummaryModel>> queryVendorSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber, @Nullable String reportDate)
     {
         RestRequest<FetchResult<VendorSummaryModel>> r = new RestRequest<FetchResult<VendorSummaryModel>>(this.client, "GET", "/api/v1/Companies/views/vendor-summary");
         r.AddQuery("filter", filter.toString());
@@ -198,6 +202,7 @@ public class CompaniesClient
         r.AddQuery("order", order.toString());
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
+        r.AddQuery("reportDate", reportDate.toString());
         return r.Call(new TypeToken<FetchResult<VendorSummaryModel>>() {}.getType());
     }
 
@@ -216,5 +221,25 @@ public class CompaniesClient
         RestRequest<CompanyDetailsModel> r = new RestRequest<CompanyDetailsModel>(this.client, "GET", "/api/v1/Companies/views/details/{id}");
         r.AddPath("{id}", id.toString());
         return r.Call(CompanyDetailsModel.class);
+    }
+
+    /**
+     * Sets the logo for specified company. The logo will be stored in the Lockstep Platform and will be **publicly accessible**.
+     *
+     * .jpg, .jpeg, and .png are supported. 5MB maximum. If no logo is uploaded, the existing logo will be deleted.
+     *
+     * A Company represents a customer, a vendor, or a company within the organization of the account holder. Companies can have parents and children, representing an organizational hierarchy of corporate entities. You can use Companies to track projects and financial data under this Company label.
+     *
+     * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
+     *
+     * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @param filename The full path of a file to upload to the API
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<CompanyModel> setCompanyLogo(@NotNull String id, @NotNull byte[] filename)
+    {
+        RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "POST", "/api/v1/Companies/{id}/logo");
+        r.AddPath("{id}", id.toString());
+        return r.Call(CompanyModel.class);
     }
 }

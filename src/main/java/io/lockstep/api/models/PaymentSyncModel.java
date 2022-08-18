@@ -33,7 +33,7 @@ public class PaymentSyncModel
 {
     private @NotNull String erpKey;
     private @NotNull String companyErpKey;
-    private @Nullable String paymentType;
+    private @NotNull String paymentType;
     private @Nullable String tenderType;
     private @NotNull Boolean isOpen;
     private @Nullable String memoText;
@@ -45,8 +45,8 @@ public class PaymentSyncModel
     private @Nullable String created;
     private @Nullable String modified;
     private @Nullable String referenceCode;
-    private @NotNull Boolean isVoided;
-    private @NotNull Boolean inDispute;
+    private @Nullable Boolean isVoided;
+    private @Nullable Boolean inDispute;
 
     /**
      * This is the primary key of the Payment record. For this field, you should use whatever the payment's unique
@@ -99,7 +99,7 @@ public class PaymentSyncModel
      *
      * @return The field paymentType
      */
-    public @Nullable String getPaymentType() { return this.paymentType; }
+    public @NotNull String getPaymentType() { return this.paymentType; }
     /**
      * The type of payment, AR Payment or AP Payment.
      *
@@ -109,7 +109,7 @@ public class PaymentSyncModel
      *
      * @param value The new value for paymentType
      */
-    public void setPaymentType(@Nullable String value) { this.paymentType = value; }
+    public void setPaymentType(@NotNull String value) { this.paymentType = value; }
     /**
      * Cash, check, credit card, wire transfer.
      *
@@ -221,7 +221,7 @@ public class PaymentSyncModel
     /**
      * The ISO 4217 currency code for this payment.
      *
-     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
+     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies).
      *
      * @return The field currencyCode
      */
@@ -229,7 +229,7 @@ public class PaymentSyncModel
     /**
      * The ISO 4217 currency code for this payment.
      *
-     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
+     * For a list of ISO 4217 currency codes, see [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies).
      *
      * @param value The new value for currencyCode
      */
@@ -287,23 +287,23 @@ public class PaymentSyncModel
      *
      * @return The field isVoided
      */
-    public @NotNull Boolean getIsVoided() { return this.isVoided; }
+    public @Nullable Boolean getIsVoided() { return this.isVoided; }
     /**
      * True if this payment was voided.
      *
      * @param value The new value for isVoided
      */
-    public void setIsVoided(@NotNull Boolean value) { this.isVoided = value; }
+    public void setIsVoided(@Nullable Boolean value) { this.isVoided = value; }
     /**
      * True if this payment is in dispute.
      *
      * @return The field inDispute
      */
-    public @NotNull Boolean getInDispute() { return this.inDispute; }
+    public @Nullable Boolean getInDispute() { return this.inDispute; }
     /**
      * True if this payment is in dispute.
      *
      * @param value The new value for inDispute
      */
-    public void setInDispute(@NotNull Boolean value) { this.inDispute = value; }
+    public void setInDispute(@Nullable Boolean value) { this.inDispute = value; }
 };

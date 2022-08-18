@@ -33,6 +33,9 @@ public class WebhookHistoryTableStorageModel
     private @Nullable String processResultMessage;
     private @NotNull Integer failureCount;
     private @Nullable String timestamp;
+    private @Nullable String records;
+    private @Nullable String requestMessage;
+    private @Nullable String responseMessage;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -172,4 +175,40 @@ public class WebhookHistoryTableStorageModel
      * @param value The new value for timestamp
      */
     public void setTimestamp(@Nullable String value) { this.timestamp = value; }
+    /**
+     * The records sent with the webhook.
+     *
+     * @return The field records
+     */
+    public @Nullable String getRecords() { return this.records; }
+    /**
+     * The records sent with the webhook.
+     *
+     * @param value The new value for records
+     */
+    public void setRecords(@Nullable String value) { this.records = value; }
+    /**
+     * The request message sent with the webhook.
+     *
+     * @return The field requestMessage
+     */
+    public @Nullable String getRequestMessage() { return this.requestMessage; }
+    /**
+     * The request message sent with the webhook.
+     *
+     * @param value The new value for requestMessage
+     */
+    public void setRequestMessage(@Nullable String value) { this.requestMessage = value; }
+    /**
+     * The response received back from the webhook.
+     *
+     * @return The field responseMessage
+     */
+    public @Nullable String getResponseMessage() { return this.responseMessage; }
+    /**
+     * The response received back from the webhook.
+     *
+     * @param value The new value for responseMessage
+     */
+    public void setResponseMessage(@Nullable String value) { this.responseMessage = value; }
 };
