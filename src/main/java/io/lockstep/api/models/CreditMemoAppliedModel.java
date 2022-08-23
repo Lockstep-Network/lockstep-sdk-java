@@ -44,6 +44,8 @@ public class CreditMemoAppliedModel
     private @Nullable NoteModel[] notes;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
     private @Nullable CustomFieldValueModel[] customFieldValues;
+    private @Nullable InvoiceModel creditMemoInvoice;
+    private @Nullable InvoiceModel invoice;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -337,4 +339,28 @@ public class CreditMemoAppliedModel
      * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    /**
+     * The credit memo invoice associated with this applied credit memo
+     *
+     * @return The field creditMemoInvoice
+     */
+    public @Nullable InvoiceModel getCreditMemoInvoice() { return this.creditMemoInvoice; }
+    /**
+     * The credit memo invoice associated with this applied credit memo
+     *
+     * @param value The new value for creditMemoInvoice
+     */
+    public void setCreditMemoInvoice(@Nullable InvoiceModel value) { this.creditMemoInvoice = value; }
+    /**
+     * The invoice associated with this applied credit memo
+     *
+     * @return The field invoice
+     */
+    public @Nullable InvoiceModel getInvoice() { return this.invoice; }
+    /**
+     * The invoice associated with this applied credit memo
+     *
+     * @param value The new value for invoice
+     */
+    public void setInvoice(@Nullable InvoiceModel value) { this.invoice = value; }
 };

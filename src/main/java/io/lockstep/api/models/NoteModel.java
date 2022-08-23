@@ -30,12 +30,12 @@ public class NoteModel
 {
     private @NotNull String noteId;
     private @NotNull String groupKey;
-    private @Nullable String tableKey;
+    private @NotNull String tableKey;
     private @NotNull String objectKey;
-    private @Nullable String noteText;
+    private @NotNull String noteText;
     private @Nullable String noteType;
     private @NotNull Boolean isArchived;
-    private @Nullable String created;
+    private @NotNull String created;
     private @NotNull String createdUserId;
     private @Nullable String createdUserName;
     private @Nullable String appEnrollmentId;
@@ -85,7 +85,7 @@ public class NoteModel
      *
      * @return The field tableKey
      */
-    public @Nullable String getTableKey() { return this.tableKey; }
+    public @NotNull String getTableKey() { return this.tableKey; }
     /**
      * A Note is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
      * `ObjectKey`.  For example, a Note connected to Invoice 12345 would have a `TableKey` value of
@@ -98,7 +98,7 @@ public class NoteModel
      *
      * @param value The new value for tableKey
      */
-    public void setTableKey(@Nullable String value) { this.tableKey = value; }
+    public void setTableKey(@NotNull String value) { this.tableKey = value; }
     /**
      * A Note is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
      * `ObjectKey`.  For example, a Note connected to Invoice 12345 would have a `TableKey` value of
@@ -130,13 +130,13 @@ public class NoteModel
      *
      * @return The field noteText
      */
-    public @Nullable String getNoteText() { return this.noteText; }
+    public @NotNull String getNoteText() { return this.noteText; }
     /**
      * The full text of the note
      *
      * @param value The new value for noteText
      */
-    public void setNoteText(@Nullable String value) { this.noteText = value; }
+    public void setNoteText(@NotNull String value) { this.noteText = value; }
     /**
      * The type of the note
      *
@@ -174,13 +174,13 @@ public class NoteModel
      *
      * @return The field created
      */
-    public @Nullable String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date the note was created
      *
      * @param value The new value for created
      */
-    public void setCreated(@Nullable String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The unique ID of the [UserAccount](https://developer.lockstep.io/docs/useraccountmodel) of the user
      * who created this Note.

@@ -40,6 +40,7 @@ public class VendorSummaryModel
     private @Nullable Integer openBillCount;
     private @Nullable Integer paidBillCount;
     private @Nullable Integer totalBillCount;
+    private @Nullable Double dpo;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -251,4 +252,16 @@ public class VendorSummaryModel
      * @param value The new value for totalBillCount
      */
     public void setTotalBillCount(@Nullable Integer value) { this.totalBillCount = value; }
+    /**
+     * The days payabale outstanding.
+     *
+     * @return The field dpo
+     */
+    public @Nullable Double getDpo() { return this.dpo; }
+    /**
+     * The days payabale outstanding.
+     *
+     * @param value The new value for dpo
+     */
+    public void setDpo(@Nullable Double value) { this.dpo = value; }
 };

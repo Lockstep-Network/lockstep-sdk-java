@@ -19,10 +19,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * A Webhook Rule is a subscription to receive notifications automatically for
+ * A Webhook Rule is a subscription to receive notifications whenever a specific event occurs.
  *
- * Currently supported objects:
- *  * `SyncRequest` - Receive a notification when a new sync request has completed for the group key.
+ * With the rule, you specify the Table and event you want to subscribe to.
+ * You can also optionally specify a filter to further refine the updates you want to receive.
  */
 public class WebhookRuleModel
 {
@@ -31,9 +31,7 @@ public class WebhookRuleModel
     private @NotNull String groupKey;
     private @NotNull String tableKey;
     private @NotNull String eventType;
-    private @Nullable String expirationDate;
     private @Nullable String filter;
-    private @NotNull String requestContentType;
     private @NotNull String created;
     private @NotNull String createdUserId;
     private @NotNull String modified;
@@ -140,43 +138,17 @@ public class WebhookRuleModel
      */
     public void setEventType(@NotNull String value) { this.eventType = value; }
     /**
-     * The expiration date for the given webhook subscription. Once the expiration date passes,
-     * notifications will no longer be sent to the callback url.
-     *
-     * @return The field expirationDate
-     */
-    public @Nullable String getExpirationDate() { return this.expirationDate; }
-    /**
-     * The expiration date for the given webhook subscription. Once the expiration date passes,
-     * notifications will no longer be sent to the callback url.
-     *
-     * @param value The new value for expirationDate
-     */
-    public void setExpirationDate(@Nullable String value) { this.expirationDate = value; }
-    /**
-     * The filter for this webhook rule (if necessary) . See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * An optional Searchlight filter for this webhook rule. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      *
      * @return The field filter
      */
     public @Nullable String getFilter() { return this.filter; }
     /**
-     * The filter for this webhook rule (if necessary) . See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * An optional Searchlight filter for this webhook rule. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      *
      * @param value The new value for filter
      */
     public void setFilter(@Nullable String value) { this.filter = value; }
-    /**
-     * The format of the content to be returned in the webhook notifications. Current options are 'Full' or 'Id'.
-     *
-     * @return The field requestContentType
-     */
-    public @NotNull String getRequestContentType() { return this.requestContentType; }
-    /**
-     * The format of the content to be returned in the webhook notifications. Current options are 'Full' or 'Id'.
-     *
-     * @param value The new value for requestContentType
-     */
-    public void setRequestContentType(@NotNull String value) { this.requestContentType = value; }
     /**
      * The date this webhook rule was created
      *

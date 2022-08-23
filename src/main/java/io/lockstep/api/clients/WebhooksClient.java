@@ -139,16 +139,18 @@ public class WebhooksClient
     /**
      *
      * @param webhookId The unique Lockstep Platform ID number of this Webhook
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collection: Records, RequestMessage, ResponseMessage
      * @param filter The filter for this query. See [Azure Query Language](https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities)
      * @param select The selection for this query. Selection is the desired properties of an entity to pull from the set. If a property is not selected, it will either return as null or empty. See [Azure Query Language](https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities)
      * @param pageSize The page size for results (default 200).
      * @param pageNumber The page number for results (default 0).
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<FetchResult<WebhookHistoryTableStorageModel>> queryWebhookHistory(@NotNull String webhookId, @Nullable String filter, @Nullable String select, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<WebhookHistoryTableStorageModel>> queryWebhookHistory(@NotNull String webhookId, @Nullable String include, @Nullable String filter, @Nullable String select, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
         RestRequest<FetchResult<WebhookHistoryTableStorageModel>> r = new RestRequest<FetchResult<WebhookHistoryTableStorageModel>>(this.client, "GET", "/api/v1/Webhooks/{webhookId}/history/query");
         r.AddPath("{webhookId}", webhookId.toString());
+        r.AddQuery("include", include.toString());
         r.AddQuery("filter", filter.toString());
         r.AddQuery("select", select.toString());
         r.AddQuery("pageSize", pageSize.toString());

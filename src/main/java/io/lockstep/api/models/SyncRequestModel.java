@@ -34,6 +34,7 @@ public class SyncRequestModel
     private @NotNull String groupKey;
     private @Nullable String statusCode;
     private @Nullable String processResultMessage;
+    private @Nullable String runFullSync;
     private @Nullable String appEnrollmentId;
     private @NotNull String created;
     private @NotNull String modified;
@@ -114,6 +115,20 @@ public class SyncRequestModel
      * @param value The new value for processResultMessage
      */
     public void setProcessResultMessage(@Nullable String value) { this.processResultMessage = value; }
+    /**
+     * A boolean indicating whether a sync from an ERP system should process all the data from the ERP
+     * as opposed to just the delta of changes since the previous sync run
+     *
+     * @return The field runFullSync
+     */
+    public @Nullable String getRunFullSync() { return this.runFullSync; }
+    /**
+     * A boolean indicating whether a sync from an ERP system should process all the data from the ERP
+     * as opposed to just the delta of changes since the previous sync run
+     *
+     * @param value The new value for runFullSync
+     */
+    public void setRunFullSync(@Nullable String value) { this.runFullSync = value; }
     /**
      * The AppEnrollmentId of the AppEnrollment object that executed this sync request
      *

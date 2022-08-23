@@ -27,6 +27,7 @@ public class CustomerSummaryModel
     private @NotNull String companyId;
     private @Nullable String companyName;
     private @Nullable String primaryContact;
+    private @Nullable String appEnrollmentId;
     private @Nullable Integer outstandingInvoices;
     private @Nullable Integer totalInvoicesOpen;
     private @Nullable Integer totalInvoicesPastDue;
@@ -99,6 +100,18 @@ public class CustomerSummaryModel
      * @param value The new value for primaryContact
      */
     public void setPrimaryContact(@Nullable String value) { this.primaryContact = value; }
+    /**
+     * The app enrollment ID this Customer is associated with
+     *
+     * @return The field appEnrollmentId
+     */
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
+    /**
+     * The app enrollment ID this Customer is associated with
+     *
+     * @param value The new value for appEnrollmentId
+     */
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
     /**
      * The number of outstanding invoices for this customer.
      *

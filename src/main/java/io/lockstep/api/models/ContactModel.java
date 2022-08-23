@@ -47,9 +47,9 @@ public class ContactModel
     private @NotNull Boolean isActive;
     private @Nullable String webpageUrl;
     private @Nullable String pictureUrl;
-    private @Nullable String created;
+    private @NotNull String created;
     private @NotNull String createdUserId;
-    private @Nullable String modified;
+    private @NotNull String modified;
     private @NotNull String modifiedUserId;
     private @Nullable String appEnrollmentId;
     private @Nullable NoteModel[] notes;
@@ -338,13 +338,13 @@ public class ContactModel
      *
      * @return The field created
      */
-    public @Nullable String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date on which this record was created.
      *
      * @param value The new value for created
      */
-    public void setCreated(@Nullable String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The ID of the user who created this contact.
      *
@@ -362,13 +362,13 @@ public class ContactModel
      *
      * @return The field modified
      */
-    public @Nullable String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date on which this record was last modified.
      *
      * @param value The new value for modified
      */
-    public void setModified(@Nullable String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * The ID of the user who last modified this contact.
      *

@@ -22,8 +22,7 @@ import org.jetbrains.annotations.Nullable;
  * A Webhook is a subscription to receive notifications automatically to the supplied
  * callback url when changes are made to a supported object.
  *
- * Currently supported objects:
- *  * `SyncRequest` - Receive a notification when a new sync request has completed for the group key.
+ * You will need to create at least one Webhook rule to receive notifications when a specific type of object is inserted, deleted, or updated.
  */
 public class WebhookModel
 {
@@ -188,13 +187,19 @@ public class WebhookModel
      */
     public void setExpirationDate(@Nullable String value) { this.expirationDate = value; }
     /**
-     * The amount of times a notification should be retried before marking the webhook as errored.
+     * The amount of consecutive failed notifications, not including the current attempt, before marking the webhook as
+     * errored (i.e. if the value is set to 0, the webhook will be marked errored on the first failure, if the value
+     * is set to 1 the webhook will be marked errored on the second failure, and so on). Use -1 to never mark the webhook
+     * as errored due to failures.
      *
      * @return The field retryCount
      */
     public @NotNull Integer getRetryCount() { return this.retryCount; }
     /**
-     * The amount of times a notification should be retried before marking the webhook as errored.
+     * The amount of consecutive failed notifications, not including the current attempt, before marking the webhook as
+     * errored (i.e. if the value is set to 0, the webhook will be marked errored on the first failure, if the value
+     * is set to 1 the webhook will be marked errored on the second failure, and so on). Use -1 to never mark the webhook
+     * as errored due to failures.
      *
      * @param value The new value for retryCount
      */

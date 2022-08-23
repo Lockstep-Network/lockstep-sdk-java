@@ -48,7 +48,7 @@ public class CreditMemoAppliedClient
      * Credit Memos reflect credits granted to a customer for various reasons, such as discounts or refunds. Credit Memos may be applied to Invoices as Payments. When a Credit Memo is applied as payment to an Invoice, Lockstep creates a Credit Memo Application record to track the amount from the Credit Memo that was applied as payment to the Invoice. You can examine Credit Memo Application records to track which Invoices were paid using this Credit.
      *
      * @param id The unique Lockstep Platform ID number of this Credit Memo Application; NOT the customer's ERP key
-     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes, Invoice, CreditMemoInvoice
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<CreditMemoAppliedModel> retrieveCreditMemoApplication(@NotNull String id, @Nullable String include)

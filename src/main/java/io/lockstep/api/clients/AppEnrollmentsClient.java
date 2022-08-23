@@ -23,6 +23,8 @@ import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.AppEnrollmentModel;
 
 import io.lockstep.api.models.ActionResultModel;
+import io.lockstep.api.models.CustomFieldValueModel;
+import io.lockstep.api.models.AppEnrollmentReconnectRequest;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.AppEnrollmentCustomFieldModel;
@@ -108,12 +110,14 @@ public class AppEnrollmentsClient
      *
      * See [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments) for more information.
      *
+     * @param startSync Option to start sync immediately after creation of app enrollments (default false)
      * @param body The App Enrollments to create
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<AppEnrollmentModel[]> createAppEnrollments(@NotNull AppEnrollmentModel[] body)
+    public @NotNull LockstepResponse<AppEnrollmentModel[]> createAppEnrollments(@Nullable Boolean startSync, @NotNull AppEnrollmentModel[] body)
     {
         RestRequest<AppEnrollmentModel[]> r = new RestRequest<AppEnrollmentModel[]>(this.client, "POST", "/api/v1/AppEnrollments");
+        r.AddQuery("startSync", startSync.toString());
         r.AddBody(body);
         return r.Call(AppEnrollmentModel[].class);
     }
@@ -121,16 +125,16 @@ public class AppEnrollmentsClient
     /**
      * Updates the OAuth settings associated with this App Enrollment
      *
-     * @param id Documentation pending
-     * @param body Documentation pending
+     * @param id The unique ID number of the App Enrollment to reconnect
+     * @param body Information to reconnect the App Enrollment
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<AppEnrollmentModel> reconnectAppEnrollmentOAuth(@NotNull String id, @NotNull String body)
+    public @NotNull LockstepResponse<CustomFieldValueModel[]> reconnectAppEnrollmentOAuth(@NotNull String id, @NotNull AppEnrollmentReconnectRequest body)
     {
-        RestRequest<AppEnrollmentModel> r = new RestRequest<AppEnrollmentModel>(this.client, "PATCH", "/api/v1/AppEnrollments/{id}/reconnect");
+        RestRequest<CustomFieldValueModel[]> r = new RestRequest<CustomFieldValueModel[]>(this.client, "POST", "/api/v1/AppEnrollments/{id}/reconnect");
         r.AddPath("{id}", id.toString());
         r.AddBody(body);
-        return r.Call(AppEnrollmentModel.class);
+        return r.Call(CustomFieldValueModel[].class);
     }
 
     /**

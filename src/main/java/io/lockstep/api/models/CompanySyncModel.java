@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class CompanySyncModel
 {
+    private @NotNull Integer onMatchAction;
     private @NotNull String erpKey;
     private @NotNull String companyName;
     private @NotNull String companyType;
@@ -56,8 +57,21 @@ public class CompanySyncModel
     private @Nullable String apEmailAddress;
     private @Nullable String arEmailAddress;
     private @Nullable String preferredDeliveryMethod;
+    private @Nullable String emailAddress;
     private @Nullable String externalReference;
 
+    /**
+     * Indicates what action to take when a sync model has been found during the sync process.
+     *
+     * @return The field onMatchAction
+     */
+    public @NotNull Integer getOnMatchAction() { return this.onMatchAction; }
+    /**
+     * Indicates what action to take when a sync model has been found during the sync process.
+     *
+     * @param value The new value for onMatchAction
+     */
+    public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
     /**
      * This is the primary key of the Company record. For this field, you should use whatever the company's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the
@@ -184,14 +198,14 @@ public class CompanySyncModel
     public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
     /**
      * The default currency code for transactions related to this company.  For a list of currency codes, see
-     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
+     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies).
      *
      * @return The field defaultCurrencyCode
      */
     public @Nullable String getDefaultCurrencyCode() { return this.defaultCurrencyCode; }
     /**
      * The default currency code for transactions related to this company.  For a list of currency codes, see
-     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies). This will be validated by the /api/v1/definitions/currencies data set
+     * [Query Currencies](https://developer.lockstep.io/reference/get_api-v1-definitions-currencies).
      *
      * @param value The new value for defaultCurrencyCode
      */
@@ -426,6 +440,18 @@ public class CompanySyncModel
      * @param value The new value for preferredDeliveryMethod
      */
     public void setPreferredDeliveryMethod(@Nullable String value) { this.preferredDeliveryMethod = value; }
+    /**
+     * The company email address.
+     *
+     * @return The field emailAddress
+     */
+    public @Nullable String getEmailAddress() { return this.emailAddress; }
+    /**
+     * The company email address.
+     *
+     * @param value The new value for emailAddress
+     */
+    public void setEmailAddress(@Nullable String value) { this.emailAddress = value; }
     /**
      * An external reference that identifies the Company from the originating ERP system, separate from the ErpKey.
      *

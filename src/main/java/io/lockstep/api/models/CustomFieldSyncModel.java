@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
  * information about an object that does not match Lockstep's official schema, you can store it in the Custom
  * Field system using CustomFieldSyncModel.
  *
- * To store a custom field for an object, create a CustomFieldSyncModel record containing the `EntityType` and
+ * To store a custom field for an object, create a CustomFieldSyncModel record containing the `TableKey` and
  * `ErpKey` of the entity to which you will attach a custom field. Next specify the field's `CustomFieldLabel`
  * and either a `StringValue` or `NumericValue`.
  *
@@ -36,7 +36,7 @@ import org.jetbrains.annotations.Nullable;
 public class CustomFieldSyncModel
 {
     private @NotNull String erpKey;
-    private @NotNull String entityType;
+    private @NotNull String tableKey;
     private @NotNull String customFieldLabel;
     private @Nullable String value;
     private @Nullable String created;
@@ -47,7 +47,7 @@ public class CustomFieldSyncModel
      * identifying number as it is stored in the originating financial system. Search for a unique, non-changing
      * number within the originating financial system for this record.
      *
-     * Custom Fields are identified by the `EntityType` and `ErpKey` values together.
+     * Custom Fields are identified by the `TableKey` and `ErpKey` values together.
      *
      * Example: You have an invoice whose ID number is 100047878, and you wish to store a custom field on that
      * invoice named "ApprovalStatusCode".  For the `ErpKey` field, specify the value `100047878`.
@@ -62,7 +62,7 @@ public class CustomFieldSyncModel
      * identifying number as it is stored in the originating financial system. Search for a unique, non-changing
      * number within the originating financial system for this record.
      *
-     * Custom Fields are identified by the `EntityType` and `ErpKey` values together.
+     * Custom Fields are identified by the `TableKey` and `ErpKey` values together.
      *
      * Example: You have an invoice whose ID number is 100047878, and you wish to store a custom field on that
      * invoice named "ApprovalStatusCode".  For the `ErpKey` field, specify the value `100047878`.
@@ -73,10 +73,10 @@ public class CustomFieldSyncModel
      */
     public void setErpKey(@NotNull String value) { this.erpKey = value; }
     /**
-     * Custom Fields are identified by the `EntityType` and `ErpKey` values together.
+     * Custom Fields are identified by the `TableKey` and `ErpKey` values together.
      *
      * Example: You have an invoice whose ID number is 100047878, and you wish to store a custom field on that
-     * invoice named "ApprovalStatusCode".  For the `EntityType` field, specify the value `Invoice`.
+     * invoice named "ApprovalStatusCode".  For the `TableKey` field, specify the value `Invoice`.
      *
      * Recognized types include:
      * * `Company` - Link this custom field to a CompanySyncModel
@@ -85,14 +85,14 @@ public class CustomFieldSyncModel
      * * `InvoiceLine` - Link this custom field to an InvoiceLineSyncModel
      * * `Payment` - Link this custom field to a PaymentSyncModel
      *
-     * @return The field entityType
+     * @return The field tableKey
      */
-    public @NotNull String getEntityType() { return this.entityType; }
+    public @NotNull String getTableKey() { return this.tableKey; }
     /**
-     * Custom Fields are identified by the `EntityType` and `ErpKey` values together.
+     * Custom Fields are identified by the `TableKey` and `ErpKey` values together.
      *
      * Example: You have an invoice whose ID number is 100047878, and you wish to store a custom field on that
-     * invoice named "ApprovalStatusCode".  For the `EntityType` field, specify the value `Invoice`.
+     * invoice named "ApprovalStatusCode".  For the `TableKey` field, specify the value `Invoice`.
      *
      * Recognized types include:
      * * `Company` - Link this custom field to a CompanySyncModel
@@ -101,9 +101,9 @@ public class CustomFieldSyncModel
      * * `InvoiceLine` - Link this custom field to an InvoiceLineSyncModel
      * * `Payment` - Link this custom field to a PaymentSyncModel
      *
-     * @param value The new value for entityType
+     * @param value The new value for tableKey
      */
-    public void setEntityType(@NotNull String value) { this.entityType = value; }
+    public void setTableKey(@NotNull String value) { this.tableKey = value; }
     /**
      * A label that uniquely identifies this custom field within your software.
      *
