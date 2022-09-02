@@ -63,6 +63,7 @@ public class CompanyModel
     private @Nullable String website;
     private @Nullable String appEnrollmentId;
     private @Nullable String emailAddress;
+    private @Nullable String publicUrlSlug;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable ContactModel[] contacts;
@@ -575,6 +576,18 @@ public class CompanyModel
      * @param value The new value for emailAddress
      */
     public void setEmailAddress(@Nullable String value) { this.emailAddress = value; }
+    /**
+     * The public url slug for the Company.
+     *
+     * @return The field publicUrlSlug
+     */
+    public @Nullable String getPublicUrlSlug() { return this.publicUrlSlug; }
+    /**
+     * The public url slug for the Company.
+     *
+     * @param value The new value for publicUrlSlug
+     */
+    public void setPublicUrlSlug(@Nullable String value) { this.publicUrlSlug = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
