@@ -45,7 +45,7 @@ public class ProfilesClient
     /**
      * Retrieves the Public Company Profile specified by the public url slug.
      *
-     * A Public Company Profile makes available the following information: <list type="bullet"><item>Company Name</item><item>Company Logo Url</item><item>Description</item><item>Website</item></list>
+     * A Public Company Profile makes available the following information: <ul><li>Company Name</li><li>Company Logo Url</li><li>Description</li><li>Website</li></ul>
      *
      * @param urlSlug Documentation pending
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
@@ -58,9 +58,13 @@ public class ProfilesClient
     }
 
     /**
-     * Queries Public Company Profiles <p> More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website. </p><p> A Public Company Profile makes available the following information:
+     * Queries Public Company Profiles
      *
-     * <list type="bullet"><item>`Company Name`  </item><item>`Company Logo Url`  </item><item>`Description`  </item><item>`Website`  </item></list></p>
+     * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
+     *
+     * A Public Company Profile makes available the following information:
+     *
+     * <ul><li>Company Name</li><li>Company Logo Url</li><li>Description</li><li>Website</li></ul>
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
