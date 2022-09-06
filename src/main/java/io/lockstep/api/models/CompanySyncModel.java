@@ -54,8 +54,6 @@ public class CompanySyncModel
     private @Nullable String modified;
     private @Nullable String taxId;
     private @Nullable String dunsNumber;
-    private @Nullable String apEmailAddress;
-    private @Nullable String arEmailAddress;
     private @Nullable String preferredDeliveryMethod;
     private @Nullable String emailAddress;
     private @Nullable String externalReference;
@@ -400,34 +398,6 @@ public class CompanySyncModel
      * @param value The new value for dunsNumber
      */
     public void setDunsNumber(@Nullable String value) { this.dunsNumber = value; }
-    /**
-     * If you know the AP (accounts payable) email address of this company, fill it in here. This is the email
-     * address where you would send questions to the company if the company owed you money.
-     *
-     * @return The field apEmailAddress
-     */
-    public @Nullable String getApEmailAddress() { return this.apEmailAddress; }
-    /**
-     * If you know the AP (accounts payable) email address of this company, fill it in here. This is the email
-     * address where you would send questions to the company if the company owed you money.
-     *
-     * @param value The new value for apEmailAddress
-     */
-    public void setApEmailAddress(@Nullable String value) { this.apEmailAddress = value; }
-    /**
-     * If you know the AR (accounts receivable) email address of this company, fill it in here. This is the email
-     * address where you would send questions to the company if you owed this company money.
-     *
-     * @return The field arEmailAddress
-     */
-    public @Nullable String getArEmailAddress() { return this.arEmailAddress; }
-    /**
-     * If you know the AR (accounts receivable) email address of this company, fill it in here. This is the email
-     * address where you would send questions to the company if you owed this company money.
-     *
-     * @param value The new value for arEmailAddress
-     */
-    public void setArEmailAddress(@Nullable String value) { this.arEmailAddress = value; }
     /**
      * Indicates the preferred invoice delivery method. Examples include Print, Email, Fax
      *

@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.33.14
+ * @version    2022.35.5
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -40,6 +40,7 @@ import io.lockstep.api.clients.LeadsClient;
 import io.lockstep.api.clients.NotesClient;
 import io.lockstep.api.clients.PaymentApplicationsClient;
 import io.lockstep.api.clients.PaymentsClient;
+import io.lockstep.api.clients.ProfilesClient;
 import io.lockstep.api.clients.ProvisioningClient;
 import io.lockstep.api.clients.ReportsClient;
 import io.lockstep.api.clients.StatusClient;
@@ -85,6 +86,7 @@ public class LockstepApi {
     private NotesClient notes;
     private PaymentApplicationsClient paymentApplications;
     private PaymentsClient payments;
+    private ProfilesClient profiles;
     private ProvisioningClient provisioning;
     private ReportsClient reports;
     private StatusClient status;
@@ -122,6 +124,7 @@ public class LockstepApi {
         this.notes = new NotesClient(this);
         this.paymentApplications = new PaymentApplicationsClient(this);
         this.payments = new PaymentsClient(this);
+        this.profiles = new ProfilesClient(this);
         this.provisioning = new ProvisioningClient(this);
         this.reports = new ReportsClient(this);
         this.status = new StatusClient(this);
@@ -276,6 +279,12 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.PaymentsClient client} methods in the API.
      */
     public @NotNull PaymentsClient getPaymentsClient() { return this.payments; }
+    /**
+     * A collection of API methods relating to Profiles
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.ProfilesClient client} methods in the API.
+     */
+    public @NotNull ProfilesClient getProfilesClient() { return this.profiles; }
     /**
      * A collection of API methods relating to Provisioning
      *
