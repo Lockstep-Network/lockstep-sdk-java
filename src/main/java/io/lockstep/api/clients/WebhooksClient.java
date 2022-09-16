@@ -108,7 +108,7 @@ public class WebhooksClient
      */
     public @NotNull LockstepResponse<WebhookModel> regenerateClientSecret(@NotNull String id)
     {
-        RestRequest<WebhookModel> r = new RestRequest<WebhookModel>(this.client, "PATCH", "/api/v1/Webhooks/{id}/regenerateclientsecret");
+        RestRequest<WebhookModel> r = new RestRequest<WebhookModel>(this.client, "PATCH", "/api/v1/Webhooks/{id}/regenerate-client-secret");
         r.AddPath("{id}", id.toString());
         return r.Call(WebhookModel.class);
     }

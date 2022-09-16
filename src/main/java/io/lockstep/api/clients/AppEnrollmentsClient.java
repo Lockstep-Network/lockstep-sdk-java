@@ -123,13 +123,13 @@ public class AppEnrollmentsClient
     }
 
     /**
-     * Updates the OAuth settings associated with this App Enrollment
+     * Updates the settings associated with this App Enrollment
      *
      * @param id The unique ID number of the App Enrollment to reconnect
      * @param body Information to reconnect the App Enrollment
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<CustomFieldValueModel[]> reconnectAppEnrollmentOAuth(@NotNull String id, @NotNull AppEnrollmentReconnectRequest body)
+    public @NotNull LockstepResponse<CustomFieldValueModel[]> reconnectAppEnrollment(@NotNull String id, @NotNull AppEnrollmentReconnectRequest body)
     {
         RestRequest<CustomFieldValueModel[]> r = new RestRequest<CustomFieldValueModel[]>(this.client, "POST", "/api/v1/AppEnrollments/{id}/reconnect");
         r.AddPath("{id}", id.toString());

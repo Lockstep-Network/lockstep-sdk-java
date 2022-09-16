@@ -23,18 +23,70 @@ import org.jetbrains.annotations.Nullable;
  */
 public class AppEnrollmentReconnectRequest
 {
-    private @NotNull String authCode;
+    private @Nullable String authCode;
+    private @Nullable String username;
+    private @Nullable String password;
+    private @Nullable String tokenId;
+    private @Nullable String tokenSecret;
 
     /**
      * The OAuth authentication code.
      *
      * @return The field authCode
      */
-    public @NotNull String getAuthCode() { return this.authCode; }
+    public @Nullable String getAuthCode() { return this.authCode; }
     /**
      * The OAuth authentication code.
      *
      * @param value The new value for authCode
      */
-    public void setAuthCode(@NotNull String value) { this.authCode = value; }
+    public void setAuthCode(@Nullable String value) { this.authCode = value; }
+    /**
+     * The OAuth authentication code.
+     *
+     * @return The field username
+     */
+    public @Nullable String getUsername() { return this.username; }
+    /**
+     * The OAuth authentication code.
+     *
+     * @param value The new value for username
+     */
+    public void setUsername(@Nullable String value) { this.username = value; }
+    /**
+     * The password for the web services account with access permissions.
+     *
+     * @return The field password
+     */
+    public @Nullable String getPassword() { return this.password; }
+    /**
+     * The password for the web services account with access permissions.
+     *
+     * @param value The new value for password
+     */
+    public void setPassword(@Nullable String value) { this.password = value; }
+    /**
+     * The access token id for the connector enrollment.
+     *
+     * @return The field tokenId
+     */
+    public @Nullable String getTokenId() { return this.tokenId; }
+    /**
+     * The access token id for the connector enrollment.
+     *
+     * @param value The new value for tokenId
+     */
+    public void setTokenId(@Nullable String value) { this.tokenId = value; }
+    /**
+     * The access token secret for the connector enrollment.
+     *
+     * @return The field tokenSecret
+     */
+    public @Nullable String getTokenSecret() { return this.tokenSecret; }
+    /**
+     * The access token secret for the connector enrollment.
+     *
+     * @param value The new value for tokenSecret
+     */
+    public void setTokenSecret(@Nullable String value) { this.tokenSecret = value; }
 };

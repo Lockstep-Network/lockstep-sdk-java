@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class RiskRateModel
 {
     private @NotNull String groupKey;
-    private @NotNull String reportPeriod;
+    private @NotNull String reportDate;
     private @Nullable String invoiceMonthName;
     private @NotNull Integer totalInvoiceCount;
     private @NotNull Double totalInvoiceAmount;
@@ -54,15 +54,15 @@ public class RiskRateModel
     /**
      * The month the risk rate was calculated for
      *
-     * @return The field reportPeriod
+     * @return The field reportDate
      */
-    public @NotNull String getReportPeriod() { return this.reportPeriod; }
+    public @NotNull String getReportDate() { return this.reportDate; }
     /**
      * The month the risk rate was calculated for
      *
-     * @param value The new value for reportPeriod
+     * @param value The new value for reportDate
      */
-    public void setReportPeriod(@NotNull String value) { this.reportPeriod = value; }
+    public void setReportDate(@NotNull String value) { this.reportDate = value; }
     /**
      * The string name of the month the risk rate was calculated for
      *
