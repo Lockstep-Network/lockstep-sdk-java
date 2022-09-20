@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class ApHeaderInfoModel
 {
     private @NotNull String groupKey;
-    private @NotNull String reportPeriod;
+    private @NotNull String reportDate;
     private @NotNull Integer totalVendors;
     private @NotNull Integer totalBills;
     private @NotNull Double totalBilledAmount;
@@ -71,15 +71,15 @@ public class ApHeaderInfoModel
     /**
      * The date of the report
      *
-     * @return The field reportPeriod
+     * @return The field reportDate
      */
-    public @NotNull String getReportPeriod() { return this.reportPeriod; }
+    public @NotNull String getReportDate() { return this.reportDate; }
     /**
      * The date of the report
      *
-     * @param value The new value for reportPeriod
+     * @param value The new value for reportDate
      */
-    public void setReportPeriod(@NotNull String value) { this.reportPeriod = value; }
+    public void setReportDate(@NotNull String value) { this.reportDate = value; }
     /**
      * The total number of vendors.
      *

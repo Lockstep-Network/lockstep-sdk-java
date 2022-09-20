@@ -46,6 +46,7 @@ public class ApplicationModel
     private @NotNull Boolean isActive;
     private @Nullable String wikiURL;
     private @NotNull String groupKey;
+    private @Nullable String b2CClientId;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
@@ -237,6 +238,18 @@ public class ApplicationModel
      * @param value The new value for groupKey
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
+    /**
+     * The B2C Client ID of the application
+     *
+     * @return The field b2CClientId
+     */
+    public @Nullable String getB2CClientId() { return this.b2CClientId; }
+    /**
+     * The B2C Client ID of the application
+     *
+     * @param value The new value for b2CClientId
+     */
+    public void setB2CClientId(@Nullable String value) { this.b2CClientId = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.

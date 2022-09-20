@@ -98,7 +98,7 @@ public class ReportsClient
      */
     public @NotNull LockstepResponse<DailySalesOutstandingReportModel[]> dailySalesOutstanding(@Nullable String reportDate)
     {
-        RestRequest<DailySalesOutstandingReportModel[]> r = new RestRequest<DailySalesOutstandingReportModel[]>(this.client, "GET", "/api/v1/Reports/dailysalesoutstanding");
+        RestRequest<DailySalesOutstandingReportModel[]> r = new RestRequest<DailySalesOutstandingReportModel[]>(this.client, "GET", "/api/v1/Reports/daily-sales-outstanding");
         r.AddQuery("reportDate", reportDate.toString());
         return r.Call(DailySalesOutstandingReportModel[].class);
     }
@@ -170,7 +170,7 @@ public class ReportsClient
      */
     public @NotNull LockstepResponse<RiskRateModel[]> riskRates()
     {
-        RestRequest<RiskRateModel[]> r = new RestRequest<RiskRateModel[]>(this.client, "GET", "/api/v1/Reports/riskrates");
+        RestRequest<RiskRateModel[]> r = new RestRequest<RiskRateModel[]>(this.client, "GET", "/api/v1/Reports/risk-rates");
         return r.Call(RiskRateModel[].class);
     }
 
