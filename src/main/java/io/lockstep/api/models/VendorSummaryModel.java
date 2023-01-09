@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -29,18 +29,19 @@ public class VendorSummaryModel
     private @Nullable String appEnrollmentId;
     private @Nullable String primaryContactName;
     private @Nullable String primaryContactId;
-    private @Nullable Double amountPaidLast30;
-    private @Nullable Double advancePayLast30;
+    private @Nullable Double amountPaidPastThirtyDays;
+    private @Nullable Double advancePayPastThirtyDays;
     private @Nullable Double advancePayOutstanding;
-    private @Nullable Double amountBilledLast30;
-    private @Nullable Double amountBilledOutstandingLast30;
+    private @Nullable Double amountBilledPastThirtyDays;
+    private @Nullable Double amountBilledOutstandingPastThirtyDays;
     private @Nullable Double amountBilledOutstanding;
-    private @Nullable Integer billCountLast30;
-    private @Nullable Integer paidBillCountLast30;
+    private @Nullable Integer billCountPastThirtyDays;
+    private @Nullable Integer paidBillCountPastThirtyDays;
     private @Nullable Integer openBillCount;
     private @Nullable Integer paidBillCount;
     private @Nullable Integer totalBillCount;
     private @Nullable Double dpo;
+    private @NotNull String modified;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -123,27 +124,27 @@ public class VendorSummaryModel
     /**
      * The amount paid to this Vendor in the last 30 days
      *
-     * @return The field amountPaidLast30
+     * @return The field amountPaidPastThirtyDays
      */
-    public @Nullable Double getAmountPaidLast30() { return this.amountPaidLast30; }
+    public @Nullable Double getAmountPaidPastThirtyDays() { return this.amountPaidPastThirtyDays; }
     /**
      * The amount paid to this Vendor in the last 30 days
      *
-     * @param value The new value for amountPaidLast30
+     * @param value The new value for amountPaidPastThirtyDays
      */
-    public void setAmountPaidLast30(@Nullable Double value) { this.amountPaidLast30 = value; }
+    public void setAmountPaidPastThirtyDays(@Nullable Double value) { this.amountPaidPastThirtyDays = value; }
     /**
      * The outstanding advance pay balance on payments in the last 30 days
      *
-     * @return The field advancePayLast30
+     * @return The field advancePayPastThirtyDays
      */
-    public @Nullable Double getAdvancePayLast30() { return this.advancePayLast30; }
+    public @Nullable Double getAdvancePayPastThirtyDays() { return this.advancePayPastThirtyDays; }
     /**
      * The outstanding advance pay balance on payments in the last 30 days
      *
-     * @param value The new value for advancePayLast30
+     * @param value The new value for advancePayPastThirtyDays
      */
-    public void setAdvancePayLast30(@Nullable Double value) { this.advancePayLast30 = value; }
+    public void setAdvancePayPastThirtyDays(@Nullable Double value) { this.advancePayPastThirtyDays = value; }
     /**
      * The outstanding advance pay balance with this Vendor
      *
@@ -159,27 +160,27 @@ public class VendorSummaryModel
     /**
      * The amount billed from this Vendor in the last 30 days
      *
-     * @return The field amountBilledLast30
+     * @return The field amountBilledPastThirtyDays
      */
-    public @Nullable Double getAmountBilledLast30() { return this.amountBilledLast30; }
+    public @Nullable Double getAmountBilledPastThirtyDays() { return this.amountBilledPastThirtyDays; }
     /**
      * The amount billed from this Vendor in the last 30 days
      *
-     * @param value The new value for amountBilledLast30
+     * @param value The new value for amountBilledPastThirtyDays
      */
-    public void setAmountBilledLast30(@Nullable Double value) { this.amountBilledLast30 = value; }
+    public void setAmountBilledPastThirtyDays(@Nullable Double value) { this.amountBilledPastThirtyDays = value; }
     /**
      * The outstanding balance with this Vendor for bills in the last 30 days
      *
-     * @return The field amountBilledOutstandingLast30
+     * @return The field amountBilledOutstandingPastThirtyDays
      */
-    public @Nullable Double getAmountBilledOutstandingLast30() { return this.amountBilledOutstandingLast30; }
+    public @Nullable Double getAmountBilledOutstandingPastThirtyDays() { return this.amountBilledOutstandingPastThirtyDays; }
     /**
      * The outstanding balance with this Vendor for bills in the last 30 days
      *
-     * @param value The new value for amountBilledOutstandingLast30
+     * @param value The new value for amountBilledOutstandingPastThirtyDays
      */
-    public void setAmountBilledOutstandingLast30(@Nullable Double value) { this.amountBilledOutstandingLast30 = value; }
+    public void setAmountBilledOutstandingPastThirtyDays(@Nullable Double value) { this.amountBilledOutstandingPastThirtyDays = value; }
     /**
      * The outstanding balance with this Vendor
      *
@@ -195,27 +196,27 @@ public class VendorSummaryModel
     /**
      * The number of bills received from this Vendor in the last 30 days
      *
-     * @return The field billCountLast30
+     * @return The field billCountPastThirtyDays
      */
-    public @Nullable Integer getBillCountLast30() { return this.billCountLast30; }
+    public @Nullable Integer getBillCountPastThirtyDays() { return this.billCountPastThirtyDays; }
     /**
      * The number of bills received from this Vendor in the last 30 days
      *
-     * @param value The new value for billCountLast30
+     * @param value The new value for billCountPastThirtyDays
      */
-    public void setBillCountLast30(@Nullable Integer value) { this.billCountLast30 = value; }
+    public void setBillCountPastThirtyDays(@Nullable Integer value) { this.billCountPastThirtyDays = value; }
     /**
      * The number of bills from this Vendor that were paid in full in the last 30 days
      *
-     * @return The field paidBillCountLast30
+     * @return The field paidBillCountPastThirtyDays
      */
-    public @Nullable Integer getPaidBillCountLast30() { return this.paidBillCountLast30; }
+    public @Nullable Integer getPaidBillCountPastThirtyDays() { return this.paidBillCountPastThirtyDays; }
     /**
      * The number of bills from this Vendor that were paid in full in the last 30 days
      *
-     * @param value The new value for paidBillCountLast30
+     * @param value The new value for paidBillCountPastThirtyDays
      */
-    public void setPaidBillCountLast30(@Nullable Integer value) { this.paidBillCountLast30 = value; }
+    public void setPaidBillCountPastThirtyDays(@Nullable Integer value) { this.paidBillCountPastThirtyDays = value; }
     /**
      * The number of open bills with this Vendor
      *
@@ -264,4 +265,16 @@ public class VendorSummaryModel
      * @param value The new value for dpo
      */
     public void setDpo(@Nullable Double value) { this.dpo = value; }
+    /**
+     * The modified date of the Vendor
+     *
+     * @return The field modified
+     */
+    public @NotNull String getModified() { return this.modified; }
+    /**
+     * The modified date of the Vendor
+     *
+     * @param value The new value for modified
+     */
+    public void setModified(@NotNull String value) { this.modified = value; }
 };

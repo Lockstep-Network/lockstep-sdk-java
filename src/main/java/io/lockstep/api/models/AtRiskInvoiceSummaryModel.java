@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -32,8 +32,12 @@ public class AtRiskInvoiceSummaryModel
     private @Nullable String customerName;
     private @Nullable String status;
     private @Nullable String paymentDueDate;
+    private @Nullable String currencyCode;
     private @Nullable Double invoiceAmount;
     private @Nullable Double outstandingBalance;
+    private @Nullable String baseCurrencyCode;
+    private @Nullable Double baseCurrencyInvoiceAmount;
+    private @Nullable Double baseCurrencyOutstandingBalance;
     private @Nullable String invoiceTypeCode;
     private @Nullable String newestActivity;
     private @Nullable Integer daysPastDue;
@@ -157,6 +161,18 @@ public class AtRiskInvoiceSummaryModel
      */
     public void setPaymentDueDate(@Nullable String value) { this.paymentDueDate = value; }
     /**
+     * The currency code of the invoice
+     *
+     * @return The field currencyCode
+     */
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
+    /**
+     * The currency code of the invoice
+     *
+     * @param value The new value for currencyCode
+     */
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
+    /**
      * The total amount of the Invoice.
      *
      * @return The field invoiceAmount
@@ -180,6 +196,42 @@ public class AtRiskInvoiceSummaryModel
      * @param value The new value for outstandingBalance
      */
     public void setOutstandingBalance(@Nullable Double value) { this.outstandingBalance = value; }
+    /**
+     * The currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The total amount of the Invoice in the group's currency.
+     *
+     * @return The field baseCurrencyInvoiceAmount
+     */
+    public @Nullable Double getBaseCurrencyInvoiceAmount() { return this.baseCurrencyInvoiceAmount; }
+    /**
+     * The total amount of the Invoice in the group's currency.
+     *
+     * @param value The new value for baseCurrencyInvoiceAmount
+     */
+    public void setBaseCurrencyInvoiceAmount(@Nullable Double value) { this.baseCurrencyInvoiceAmount = value; }
+    /**
+     * The remaining balance value of this invoice in the group's currency.
+     *
+     * @return The field baseCurrencyOutstandingBalance
+     */
+    public @Nullable Double getBaseCurrencyOutstandingBalance() { return this.baseCurrencyOutstandingBalance; }
+    /**
+     * The remaining balance value of this invoice in the group's currency.
+     *
+     * @param value The new value for baseCurrencyOutstandingBalance
+     */
+    public void setBaseCurrencyOutstandingBalance(@Nullable Double value) { this.baseCurrencyOutstandingBalance = value; }
     /**
      * A code identifying the type of this Invoice.
      *

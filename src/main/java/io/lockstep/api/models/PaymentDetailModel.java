@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -31,8 +31,12 @@ public class PaymentDetailModel
     private @Nullable String referenceCode;
     private @Nullable String primaryContact;
     private @Nullable String email;
+    private @Nullable String currencyCode;
     private @NotNull Double paymentAmount;
     private @NotNull Double unappliedAmount;
+    private @Nullable String baseCurrencyCode;
+    private @NotNull Double baseCurrencyPaymentAmount;
+    private @NotNull Double baseCurrencyUnappliedAmount;
     private @Nullable String paymentType;
     private @Nullable String tenderType;
     private @Nullable String paymentDate;
@@ -150,6 +154,18 @@ public class PaymentDetailModel
      */
     public void setEmail(@Nullable String value) { this.email = value; }
     /**
+     * The currency code of the payment.
+     *
+     * @return The field currencyCode
+     */
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
+    /**
+     * The currency code of the payment.
+     *
+     * @param value The new value for currencyCode
+     */
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
+    /**
      * Total amount of this Payment.
      *
      * @return The field paymentAmount
@@ -173,6 +189,42 @@ public class PaymentDetailModel
      * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
+    /**
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The payment amount in the group's base currency.
+     *
+     * @return The field baseCurrencyPaymentAmount
+     */
+    public @NotNull Double getBaseCurrencyPaymentAmount() { return this.baseCurrencyPaymentAmount; }
+    /**
+     * The payment amount in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyPaymentAmount
+     */
+    public void setBaseCurrencyPaymentAmount(@NotNull Double value) { this.baseCurrencyPaymentAmount = value; }
+    /**
+     * The payment amount in the group's base currency.
+     *
+     * @return The field baseCurrencyUnappliedAmount
+     */
+    public @NotNull Double getBaseCurrencyUnappliedAmount() { return this.baseCurrencyUnappliedAmount; }
+    /**
+     * The payment amount in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyUnappliedAmount
+     */
+    public void setBaseCurrencyUnappliedAmount(@NotNull Double value) { this.baseCurrencyUnappliedAmount = value; }
     /**
      * The type of payment, AR Payment or AP Payment.
      *

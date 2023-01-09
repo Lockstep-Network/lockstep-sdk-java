@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -29,8 +29,10 @@ import org.jetbrains.annotations.Nullable;
 public class CustomFieldValueModel
 {
     private @NotNull String groupKey;
-    private @NotNull String customFieldDefinitionId;
     private @NotNull String recordKey;
+    private @NotNull String tableKey;
+    private @NotNull String customFieldLabel;
+    private @Nullable String dataType;
     private @NotNull String created;
     private @NotNull String createdUserId;
     private @NotNull String modified;
@@ -58,20 +60,6 @@ public class CustomFieldValueModel
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @return The field customFieldDefinitionId
-     */
-    public @NotNull String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
-    /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @param value The new value for customFieldDefinitionId
-     */
-    public void setCustomFieldDefinitionId(@NotNull String value) { this.customFieldDefinitionId = value; }
-    /**
      * Additional key if source table doesn't have a unique id
      *
      * @return The field recordKey
@@ -83,6 +71,42 @@ public class CustomFieldValueModel
      * @param value The new value for recordKey
      */
     public void setRecordKey(@NotNull String value) { this.recordKey = value; }
+    /**
+     * Table to which this definition belongs
+     *
+     * @return The field tableKey
+     */
+    public @NotNull String getTableKey() { return this.tableKey; }
+    /**
+     * Table to which this definition belongs
+     *
+     * @param value The new value for tableKey
+     */
+    public void setTableKey(@NotNull String value) { this.tableKey = value; }
+    /**
+     * Text to display in-application for custom field
+     *
+     * @return The field customFieldLabel
+     */
+    public @NotNull String getCustomFieldLabel() { return this.customFieldLabel; }
+    /**
+     * Text to display in-application for custom field
+     *
+     * @param value The new value for customFieldLabel
+     */
+    public void setCustomFieldLabel(@NotNull String value) { this.customFieldLabel = value; }
+    /**
+     * Data type of this definition
+     *
+     * @return The field dataType
+     */
+    public @Nullable String getDataType() { return this.dataType; }
+    /**
+     * Data type of this definition
+     *
+     * @param value The new value for dataType
+     */
+    public void setDataType(@Nullable String value) { this.dataType = value; }
     /**
      * Date created
      *

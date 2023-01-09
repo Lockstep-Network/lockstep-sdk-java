@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -21,11 +21,12 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Information to reconnect an ERP.
  */
-public class AppEnrollmentReconnectRequest
+public class AppEnrollmentReconnectInfo
 {
     private @Nullable String authCode;
     private @Nullable String username;
     private @Nullable String password;
+    private @Nullable String realmId;
     private @Nullable String tokenId;
     private @Nullable String tokenSecret;
 
@@ -65,6 +66,18 @@ public class AppEnrollmentReconnectRequest
      * @param value The new value for password
      */
     public void setPassword(@Nullable String value) { this.password = value; }
+    /**
+     * The Realm Id for the app enrollment to reconnect.
+     *
+     * @return The field realmId
+     */
+    public @Nullable String getRealmId() { return this.realmId; }
+    /**
+     * The Realm Id for the app enrollment to reconnect.
+     *
+     * @param value The new value for realmId
+     */
+    public void setRealmId(@Nullable String value) { this.realmId = value; }
     /**
      * The access token id for the connector enrollment.
      *

@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -22,13 +22,15 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.CompanyModel;
 
-import io.lockstep.api.models.ActionResultModel;
+import io.lockstep.api.models.DeleteResult;
+import io.lockstep.api.models.BulkDeleteRequestModel;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CustomerSummaryModel;
 import io.lockstep.api.models.VendorSummaryModel;
 import io.lockstep.api.models.CompanyDetailsModel;
 import io.lockstep.api.BlobRequest;
+import io.lockstep.api.models.ViewBoxSettingsModel;
 
 /**
  * Contains all methods related to Companies
@@ -88,7 +90,7 @@ public class CompaniesClient
     }
 
     /**
-     * Disable the Company referred to by this unique identifier.
+     * Delete the Company referred to by this unique identifier.
      *
      * A Company represents a customer, a vendor, or a company within the organization of the account holder. Companies can have parents and children, representing an organizational hierarchy of corporate entities. You can use Companies to track projects and financial data under this Company label.
      *
@@ -97,11 +99,11 @@ public class CompaniesClient
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<ActionResultModel> disableCompany(@NotNull String id)
+    public @NotNull LockstepResponse<DeleteResult> deleteCompany(@NotNull String id)
     {
-        RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Companies/{id}");
+        RestRequest<DeleteResult> r = new RestRequest<DeleteResult>(this.client, "DELETE", "/api/v1/Companies/{id}");
         r.AddPath("{id}", id.toString());
-        return r.Call(ActionResultModel.class);
+        return r.Call(DeleteResult.class);
     }
 
     /**
@@ -122,6 +124,23 @@ public class CompaniesClient
     }
 
     /**
+     * Delete the Companies referred to by these unique identifiers.
+     *
+     * A Company represents a customer, a vendor, or a company within the organization of the account holder. Companies can have parents and children, representing an organizational hierarchy of corporate entities. You can use Companies to track projects and financial data under this Company label.
+     *
+     * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
+     *
+     * @param body The unique Lockstep Platform ID numbers of the Companies to delete; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<DeleteResult> deleteCompanies(@NotNull BulkDeleteRequestModel body)
+    {
+        RestRequest<DeleteResult> r = new RestRequest<DeleteResult>(this.client, "DELETE", "/api/v1/Companies");
+        r.AddBody(body);
+        return r.Call(DeleteResult.class);
+    }
+
+    /**
      * Queries Companies for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
      *
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
@@ -133,7 +152,7 @@ public class CompaniesClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, Contacts, CustomFields, Invoices, Notes, Classification
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageSize The page size for results (default 250, maximum of 500)
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
@@ -160,7 +179,7 @@ public class CompaniesClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageSize The page size for results (default 250, maximum of 500)
      * @param pageNumber The page number for results (default 0)
      * @param reportDate The date to calculate the fields on. If no date is entered the current UTC date will be used.
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
@@ -189,7 +208,7 @@ public class CompaniesClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageSize The page size for results (default 250, maximum of 500)
      * @param pageNumber The page number for results (default 0)
      * @param reportDate The date to calculate the fields on. If no date is entered the current UTC date will be used.
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
@@ -226,20 +245,45 @@ public class CompaniesClient
     /**
      * Sets the logo for specified company. The logo will be stored in the Lockstep Platform and will be **publicly accessible**.
      *
-     * .jpg, .jpeg, and .png are supported. 5MB maximum. If no logo is uploaded, the existing logo will be deleted.
+     * .jpg, .jpeg, .png, and .webp are supported. 2MB maximum. If no logo is uploaded, the existing logo will be deleted.
      *
      * A Company represents a customer, a vendor, or a company within the organization of the account holder. Companies can have parents and children, representing an organizational hierarchy of corporate entities. You can use Companies to track projects and financial data under this Company label.
+     *
+     * Optional view box meta data for the provided logo may be supplied using the following query parameters. Please note that you must supply either all of the values or none of the values. <ul><li>min_x</li><li>min_y</li><li>width</li><li>height</li></ul>
      *
      * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
      *
      * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @param min_x ViewBox minX setting for this Company's logo.
+     * @param min_y ViewBox minY setting for this Company's logo.
+     * @param width ViewBox width setting for this Company's logo.
+     * @param height ViewBox height setting for this Company's logo.
      * @param filename The full path of a file to upload to the API
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<CompanyModel> setCompanyLogo(@NotNull String id, @NotNull byte[] filename)
+    public @NotNull LockstepResponse<CompanyModel> setCompanyLogo(@NotNull String id, @Nullable Double min_x, @Nullable Double min_y, @Nullable Double width, @Nullable Double height, @NotNull byte[] filename)
     {
         RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "POST", "/api/v1/Companies/{id}/logo");
         r.AddPath("{id}", id.toString());
+        r.AddQuery("min_x", min_x.toString());
+        r.AddQuery("min_y", min_y.toString());
+        r.AddQuery("width", width.toString());
+        r.AddQuery("height", height.toString());
+        return r.Call(CompanyModel.class);
+    }
+
+    /**
+     * Update view box meta data for the given Company id.
+     *
+     * @param id The unique Lockstep Platform ID number of this Company; NOT the customer's ERP key
+     * @param body The `ViewBoxSettingsModel` containing meta data value updates
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<CompanyModel> updatelogoviewboxsettings(@NotNull String id, @NotNull ViewBoxSettingsModel body)
+    {
+        RestRequest<CompanyModel> r = new RestRequest<CompanyModel>(this.client, "PATCH", "/api/v1/Companies/{id}/logo-settings");
+        r.AddPath("{id}", id.toString());
+        r.AddBody(body);
         return r.Call(CompanyModel.class);
     }
 }

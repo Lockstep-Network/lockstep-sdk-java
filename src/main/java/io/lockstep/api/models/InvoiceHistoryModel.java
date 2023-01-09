@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -58,6 +58,7 @@ public class InvoiceHistoryModel
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
     private @Nullable String appEnrollmentId;
+    private @NotNull Double currencyRate;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -489,4 +490,16 @@ public class InvoiceHistoryModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
+     * The Currency Rate used to get from the account's base currency to the invoice amount.
+     *
+     * @return The field currencyRate
+     */
+    public @NotNull Double getCurrencyRate() { return this.currencyRate; }
+    /**
+     * The Currency Rate used to get from the account's base currency to the invoice amount.
+     *
+     * @param value The new value for currencyRate
+     */
+    public void setCurrencyRate(@NotNull Double value) { this.currencyRate = value; }
 };

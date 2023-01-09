@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -24,17 +24,22 @@ import org.jetbrains.annotations.Nullable;
 public class CreditMemoInvoiceModel
 {
     private @NotNull String groupKey;
+    private @Nullable String baseCurrencyCode;
+    private @Nullable String currencyCode;
     private @NotNull String creditMemoAppliedId;
     private @NotNull String invoiceId;
     private @NotNull String creditMemoInvoiceId;
     private @Nullable String applyToInvoiceDate;
     private @NotNull Double creditMemoAppliedAmount;
+    private @NotNull Double baseCurrencyCreditMemoAppliedAmount;
     private @Nullable String referenceCode;
     private @Nullable String companyId;
     private @Nullable String customerId;
     private @Nullable String invoiceStatusCode;
     private @Nullable Double totalAmount;
     private @Nullable Double outstandingBalanceAmount;
+    private @Nullable Double baseCurrencyTotalAmount;
+    private @Nullable Double baseCurrencyOutstandingBalanceAmount;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -54,6 +59,30 @@ public class CreditMemoInvoiceModel
      * @param value The new value for groupKey
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
+    /**
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The currency code of the credit memo invoice.
+     *
+     * @return The field currencyCode
+     */
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
+    /**
+     * The currency code of the credit memo invoice.
+     *
+     * @param value The new value for currencyCode
+     */
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
@@ -116,6 +145,18 @@ public class CreditMemoInvoiceModel
      * @param value The new value for creditMemoAppliedAmount
      */
     public void setCreditMemoAppliedAmount(@NotNull Double value) { this.creditMemoAppliedAmount = value; }
+    /**
+     * The amount applied to credit memo in the group's base currency.
+     *
+     * @return The field baseCurrencyCreditMemoAppliedAmount
+     */
+    public @NotNull Double getBaseCurrencyCreditMemoAppliedAmount() { return this.baseCurrencyCreditMemoAppliedAmount; }
+    /**
+     * The amount applied to credit memo in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyCreditMemoAppliedAmount
+     */
+    public void setBaseCurrencyCreditMemoAppliedAmount(@NotNull Double value) { this.baseCurrencyCreditMemoAppliedAmount = value; }
     /**
      * An additional reference code that is sometimes used to identify this invoice.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
@@ -190,4 +231,28 @@ public class CreditMemoInvoiceModel
      * @param value The new value for outstandingBalanceAmount
      */
     public void setOutstandingBalanceAmount(@Nullable Double value) { this.outstandingBalanceAmount = value; }
+    /**
+     * The total value of this invoice, inclusive of all taxes and line items in the group's base currency.
+     *
+     * @return The field baseCurrencyTotalAmount
+     */
+    public @Nullable Double getBaseCurrencyTotalAmount() { return this.baseCurrencyTotalAmount; }
+    /**
+     * The total value of this invoice, inclusive of all taxes and line items in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyTotalAmount
+     */
+    public void setBaseCurrencyTotalAmount(@Nullable Double value) { this.baseCurrencyTotalAmount = value; }
+    /**
+     * The remaining balance value of this invoice in the group's base currency.
+     *
+     * @return The field baseCurrencyOutstandingBalanceAmount
+     */
+    public @Nullable Double getBaseCurrencyOutstandingBalanceAmount() { return this.baseCurrencyOutstandingBalanceAmount; }
+    /**
+     * The remaining balance value of this invoice in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyOutstandingBalanceAmount
+     */
+    public void setBaseCurrencyOutstandingBalanceAmount(@Nullable Double value) { this.baseCurrencyOutstandingBalanceAmount = value; }
 };

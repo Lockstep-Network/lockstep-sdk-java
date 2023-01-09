@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -133,7 +133,7 @@ public class ReportsClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageSize The page size for results (default 250, maximum of 500)
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
@@ -377,20 +377,20 @@ public class ReportsClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageSize The page size for results (default 250, maximum of 500)
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<DpoSummaryModel[]> daysPayableOutstandingSummary(@NotNull String reportDate, @Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    public @NotNull LockstepResponse<FetchResult<DpoSummaryModel>> daysPayableOutstandingSummary(@NotNull String reportDate, @Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
-        RestRequest<DpoSummaryModel[]> r = new RestRequest<DpoSummaryModel[]>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding-summary");
+        RestRequest<FetchResult<DpoSummaryModel>> r = new RestRequest<FetchResult<DpoSummaryModel>>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding-summary");
         r.AddQuery("reportDate", reportDate.toString());
         r.AddQuery("filter", filter.toString());
         r.AddQuery("include", include.toString());
         r.AddQuery("order", order.toString());
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
-        return r.Call(DpoSummaryModel[].class);
+        return r.Call(new TypeToken<FetchResult<DpoSummaryModel>>() {}.getType());
     }
 
     /**
@@ -401,10 +401,10 @@ public class ReportsClient
      * @param reportDate The date the outstanding values are calculated on. Should be either the current day or the end of a previous quarter.
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<DpoSummaryGroupTotalModel[]> daysPayableOutstandingSummaryTotal(@NotNull String reportDate)
+    public @NotNull LockstepResponse<DpoSummaryGroupTotalModel> daysPayableOutstandingSummaryTotal(@NotNull String reportDate)
     {
-        RestRequest<DpoSummaryGroupTotalModel[]> r = new RestRequest<DpoSummaryGroupTotalModel[]>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding-summary-total");
+        RestRequest<DpoSummaryGroupTotalModel> r = new RestRequest<DpoSummaryGroupTotalModel>(this.client, "GET", "/api/v1/Reports/daily-payable-outstanding-summary-total");
         r.AddQuery("reportDate", reportDate.toString());
-        return r.Call(DpoSummaryGroupTotalModel[].class);
+        return r.Call(DpoSummaryGroupTotalModel.class);
     }
 }

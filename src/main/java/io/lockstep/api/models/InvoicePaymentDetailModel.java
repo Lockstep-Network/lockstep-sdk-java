@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -24,15 +24,20 @@ import org.jetbrains.annotations.Nullable;
 public class InvoicePaymentDetailModel
 {
     private @NotNull String groupKey;
+    private @Nullable String baseCurrencyCode;
+    private @Nullable String currencyCode;
     private @NotNull String paymentAppliedId;
     private @NotNull String invoiceId;
     private @NotNull String paymentId;
     private @Nullable String applyToInvoiceDate;
     private @NotNull Double paymentAppliedAmount;
+    private @NotNull Double baseCurrencyPaymentAppliedAmount;
     private @Nullable String referenceCode;
     private @Nullable String companyId;
     private @Nullable Double paymentAmount;
     private @Nullable Double unappliedAmount;
+    private @Nullable Double baseCurrencyPaymentAmount;
+    private @Nullable Double baseCurrencyUnappliedAmount;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -52,6 +57,30 @@ public class InvoicePaymentDetailModel
      * @param value The new value for groupKey
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
+    /**
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The payment's currency code.
+     *
+     * @return The field currencyCode
+     */
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
+    /**
+     * The payment's currency code.
+     *
+     * @param value The new value for currencyCode
+     */
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
     /**
      * The unique identifier of this PaymentApplied record.
      *
@@ -113,6 +142,18 @@ public class InvoicePaymentDetailModel
      */
     public void setPaymentAppliedAmount(@NotNull Double value) { this.paymentAppliedAmount = value; }
     /**
+     * Amount applied to Invoice in the group's base currency.
+     *
+     * @return The field baseCurrencyPaymentAppliedAmount
+     */
+    public @NotNull Double getBaseCurrencyPaymentAppliedAmount() { return this.baseCurrencyPaymentAppliedAmount; }
+    /**
+     * Amount applied to Invoice in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyPaymentAppliedAmount
+     */
+    public void setBaseCurrencyPaymentAppliedAmount(@NotNull Double value) { this.baseCurrencyPaymentAppliedAmount = value; }
+    /**
      * An additional reference code that is sometimes used to identify this Payment.
      * The meaning of this field is specific to the ERP or accounting system used by the user.
      *
@@ -162,4 +203,28 @@ public class InvoicePaymentDetailModel
      * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(@Nullable Double value) { this.unappliedAmount = value; }
+    /**
+     * The total value of this Payment in the group's base currency.
+     *
+     * @return The field baseCurrencyPaymentAmount
+     */
+    public @Nullable Double getBaseCurrencyPaymentAmount() { return this.baseCurrencyPaymentAmount; }
+    /**
+     * The total value of this Payment in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyPaymentAmount
+     */
+    public void setBaseCurrencyPaymentAmount(@Nullable Double value) { this.baseCurrencyPaymentAmount = value; }
+    /**
+     * The remaining balance value of this Payment in the group's base currency.
+     *
+     * @return The field baseCurrencyUnappliedAmount
+     */
+    public @Nullable Double getBaseCurrencyUnappliedAmount() { return this.baseCurrencyUnappliedAmount; }
+    /**
+     * The remaining balance value of this Payment in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyUnappliedAmount
+     */
+    public void setBaseCurrencyUnappliedAmount(@Nullable Double value) { this.baseCurrencyUnappliedAmount = value; }
 };

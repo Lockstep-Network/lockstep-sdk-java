@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -22,7 +22,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ContactModel;
 
-import io.lockstep.api.models.ActionResultModel;
+import io.lockstep.api.models.DeleteResult;
+import io.lockstep.api.models.BulkDeleteRequestModel;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
@@ -80,18 +81,18 @@ public class ContactsClient
     }
 
     /**
-     * Disable the Contact referred to by this unique identifier.
+     * Delete the Contact referred to by this unique identifier.
      *
      * A Contact contains information about a person or role within a Company. You can use Contacts to track information about who is responsible for a specific project, who handles invoices, or information about which role at a particular customer or vendor you should speak with about invoices.
      *
-     * @param id The unique Lockstep Platform ID number of the Contact to disable; NOT the customer's ERP key
+     * @param id The unique Lockstep Platform ID number of the Contact to delete; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<ActionResultModel> disableContact(@NotNull String id)
+    public @NotNull LockstepResponse<DeleteResult> deleteContact(@NotNull String id)
     {
-        RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/Contacts/{id}");
+        RestRequest<DeleteResult> r = new RestRequest<DeleteResult>(this.client, "DELETE", "/api/v1/Contacts/{id}");
         r.AddPath("{id}", id.toString());
-        return r.Call(ActionResultModel.class);
+        return r.Call(DeleteResult.class);
     }
 
     /**
@@ -110,6 +111,21 @@ public class ContactsClient
     }
 
     /**
+     * Delete the Contacts referred to by these unique identifiers.
+     *
+     * A Contact contains information about a person or role within a Company. You can use Contacts to track information about who is responsible for a specific project, who handles invoices, or information about which role at a particular customer or vendor you should speak with about invoices.
+     *
+     * @param body The unique Lockstep Platform ID numbers of the Contacts to delete; NOT the customer's ERP keys
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<DeleteResult> deleteContacts(@NotNull BulkDeleteRequestModel body)
+    {
+        RestRequest<DeleteResult> r = new RestRequest<DeleteResult>(this.client, "DELETE", "/api/v1/Contacts");
+        r.AddBody(body);
+        return r.Call(DeleteResult.class);
+    }
+
+    /**
      * Queries Contacts for this account using the specified filtering, sorting, nested fetch, and pagination rules requested.
      *
      * More information on querying can be found on the [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight) page on the Lockstep Developer website.
@@ -119,7 +135,7 @@ public class ContactsClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. Available collections: Attachments, CustomFields, Notes
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageSize The page size for results (default 250, maximum of 500). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */

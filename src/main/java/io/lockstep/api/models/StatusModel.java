@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class StatusModel
 {
     private @Nullable String userName;
+    private @Nullable String emailAddress;
     private @Nullable String accountName;
     private @Nullable String accountCompanyId;
     private @Nullable String userId;
@@ -37,8 +38,10 @@ public class StatusModel
     private @Nullable String environment;
     private @Nullable String version;
     private @Nullable Boolean onboardingScheduled;
+    private @Nullable MagicLinkStatusModel magicLink;
     private @Nullable Object dependencies;
     private @Nullable UserGroupModel[] userGroups;
+    private @Nullable String baseCurrencyCode;
 
     /**
      * If authentication is successful, contains the username of the logged-in user.
@@ -52,6 +55,18 @@ public class StatusModel
      * @param value The new value for userName
      */
     public void setUserName(@Nullable String value) { this.userName = value; }
+    /**
+     * If authentication is successful, contains the email address of the logged-in user.
+     *
+     * @return The field emailAddress
+     */
+    public @Nullable String getEmailAddress() { return this.emailAddress; }
+    /**
+     * If authentication is successful, contains the email address of the logged-in user.
+     *
+     * @param value The new value for emailAddress
+     */
+    public void setEmailAddress(@Nullable String value) { this.emailAddress = value; }
     /**
      * If authentication is successful, contains subscription account name of logged-in user.
      *
@@ -209,6 +224,18 @@ public class StatusModel
      */
     public void setOnboardingScheduled(@Nullable Boolean value) { this.onboardingScheduled = value; }
     /**
+     * Magic link information about the user
+     *
+     * @return The field magicLink
+     */
+    public @Nullable MagicLinkStatusModel getMagicLink() { return this.magicLink; }
+    /**
+     * Magic link information about the user
+     *
+     * @param value The new value for magicLink
+     */
+    public void setMagicLink(@Nullable MagicLinkStatusModel value) { this.magicLink = value; }
+    /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.
      *
@@ -236,4 +263,16 @@ public class StatusModel
      * @param value The new value for userGroups
      */
     public void setUserGroups(@Nullable UserGroupModel[] value) { this.userGroups = value; }
+    /**
+     * Base Currency of the group
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * Base Currency of the group
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
 };
