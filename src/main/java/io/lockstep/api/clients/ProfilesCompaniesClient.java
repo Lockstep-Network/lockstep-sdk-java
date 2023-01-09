@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -26,18 +26,18 @@ import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
 /**
- * Contains all methods related to Profiles
+ * Contains all methods related to ProfilesCompanies
  */
-public class ProfilesClient
+public class ProfilesCompaniesClient
 {
     private LockstepApi client;
 
     /**
-     * Constructor for the Profiles API collection
+     * Constructor for the ProfilesCompanies API collection
      *
      * @param client A {@link io.lockstep.api.LockstepApi} platform client
      */
-    public ProfilesClient(@NotNull LockstepApi client) {
+    public ProfilesCompaniesClient(@NotNull LockstepApi client) {
         super();
         this.client = client;
     }
@@ -52,7 +52,7 @@ public class ProfilesClient
      */
     public @NotNull LockstepResponse<PublicCompanyProfileModel> retrievePublicCompanyProfile(@NotNull String urlSlug)
     {
-        RestRequest<PublicCompanyProfileModel> r = new RestRequest<PublicCompanyProfileModel>(this.client, "GET", "/api/v1/Profiles/companies/{urlSlug}");
+        RestRequest<PublicCompanyProfileModel> r = new RestRequest<PublicCompanyProfileModel>(this.client, "GET", "/api/v1/profiles/companies/{urlSlug}");
         r.AddPath("{urlSlug}", urlSlug.toString());
         return r.Call(PublicCompanyProfileModel.class);
     }
@@ -68,13 +68,13 @@ public class ProfilesClient
      *
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
-     * @param pageSize The page size for results (default 200, maximum of 10,000)
+     * @param pageSize The page size for results (default 250, maximum of 500)
      * @param pageNumber The page number for results (default 0)
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<FetchResult<PublicCompanyProfileModel>> queryPublicCompanyProfiles(@Nullable String filter, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
     {
-        RestRequest<FetchResult<PublicCompanyProfileModel>> r = new RestRequest<FetchResult<PublicCompanyProfileModel>>(this.client, "GET", "/api/v1/Profiles/companies/query");
+        RestRequest<FetchResult<PublicCompanyProfileModel>> r = new RestRequest<FetchResult<PublicCompanyProfileModel>>(this.client, "GET", "/api/v1/profiles/companies/query");
         r.AddQuery("filter", filter.toString());
         r.AddQuery("order", order.toString());
         r.AddQuery("pageSize", pageSize.toString());

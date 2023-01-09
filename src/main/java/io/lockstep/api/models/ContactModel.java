@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -30,7 +30,7 @@ public class ContactModel
     private @NotNull String companyId;
     private @NotNull String groupKey;
     private @Nullable String erpKey;
-    private @Nullable String contactName;
+    private @NotNull String contactName;
     private @Nullable String contactCode;
     private @Nullable String title;
     private @Nullable String roleCode;
@@ -134,13 +134,13 @@ public class ContactModel
      *
      * @return The field contactName
      */
-    public @Nullable String getContactName() { return this.contactName; }
+    public @NotNull String getContactName() { return this.contactName; }
     /**
      * The name of the contact.
      *
      * @param value The new value for contactName
      */
-    public void setContactName(@Nullable String value) { this.contactName = value; }
+    public void setContactName(@NotNull String value) { this.contactName = value; }
     /**
      * A friendly human-readable code that describes this Contact.
      *

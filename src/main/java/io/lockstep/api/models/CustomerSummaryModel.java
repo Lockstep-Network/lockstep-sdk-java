@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -45,6 +45,7 @@ public class CustomerSummaryModel
     private @Nullable Double percentOfTotalAr;
     private @Nullable Double dso;
     private @Nullable String newestActivity;
+    private @NotNull String modified;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -316,4 +317,16 @@ public class CustomerSummaryModel
      * @param value The new value for newestActivity
      */
     public void setNewestActivity(@Nullable String value) { this.newestActivity = value; }
+    /**
+     * The modified date of the customer.
+     *
+     * @return The field modified
+     */
+    public @NotNull String getModified() { return this.modified; }
+    /**
+     * The modified date of the customer.
+     *
+     * @param value The new value for modified
+     */
+    public void setModified(@NotNull String value) { this.modified = value; }
 };

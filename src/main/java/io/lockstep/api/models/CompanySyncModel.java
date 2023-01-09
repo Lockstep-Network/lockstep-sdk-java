@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -35,7 +35,6 @@ public class CompanySyncModel
     private @NotNull String erpKey;
     private @NotNull String companyName;
     private @NotNull String companyType;
-    private @Nullable String companyStatus;
     private @Nullable String parentCompanyErpKey;
     private @NotNull Boolean isActive;
     private @Nullable String defaultCurrencyCode;
@@ -148,18 +147,6 @@ public class CompanySyncModel
      * @param value The new value for companyType
      */
     public void setCompanyType(@NotNull String value) { this.companyType = value; }
-    /**
-     * An optional field including status codes.  Defined status codes are `Active` and `Inactive`.
-     *
-     * @return The field companyStatus
-     */
-    public @Nullable String getCompanyStatus() { return this.companyStatus; }
-    /**
-     * An optional field including status codes.  Defined status codes are `Active` and `Inactive`.
-     *
-     * @param value The new value for companyStatus
-     */
-    public void setCompanyStatus(@Nullable String value) { this.companyStatus = value; }
     /**
      * If this company has a parent company, identify the parent company's `ErpKey` value here. This value should
      * be the original primary key or unique ID of the parent company to this company belongs. This value should

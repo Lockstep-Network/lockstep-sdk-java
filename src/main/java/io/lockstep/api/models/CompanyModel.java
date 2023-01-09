@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -31,7 +31,6 @@ public class CompanyModel
     private @NotNull String companyName;
     private @Nullable String erpKey;
     private @Nullable String companyType;
-    private @Nullable String companyStatus;
     private @Nullable String parentCompanyId;
     private @NotNull String enterpriseId;
     private @NotNull String groupKey;
@@ -64,6 +63,7 @@ public class CompanyModel
     private @Nullable String appEnrollmentId;
     private @Nullable String emailAddress;
     private @Nullable String publicUrlSlug;
+    private @Nullable ViewBoxSettingsModel viewBoxSettings;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable ContactModel[] contacts;
@@ -156,22 +156,6 @@ public class CompanyModel
      * @param value The new value for companyType
      */
     public void setCompanyType(@Nullable String value) { this.companyType = value; }
-    /**
-     * The status of the company.  Companies can be either `Active` or `Inactive`.  When matched to a
-     * Lockstep corporate profile, this value will change to reflect that this record will be kept
-     * in sync with that company's identity.
-     *
-     * @return The field companyStatus
-     */
-    public @Nullable String getCompanyStatus() { return this.companyStatus; }
-    /**
-     * The status of the company.  Companies can be either `Active` or `Inactive`.  When matched to a
-     * Lockstep corporate profile, this value will change to reflect that this record will be kept
-     * in sync with that company's identity.
-     *
-     * @param value The new value for companyStatus
-     */
-    public void setCompanyStatus(@Nullable String value) { this.companyStatus = value; }
     /**
      * If this business entity is part of an organization, this value is non-null and it is set
      * to the `CompanyId` value of the parent company of this business entity.
@@ -588,6 +572,18 @@ public class CompanyModel
      * @param value The new value for publicUrlSlug
      */
     public void setPublicUrlSlug(@Nullable String value) { this.publicUrlSlug = value; }
+    /**
+     * View box settings for the company logo.
+     *
+     * @return The field viewBoxSettings
+     */
+    public @Nullable ViewBoxSettingsModel getViewBoxSettings() { return this.viewBoxSettings; }
+    /**
+     * View box settings for the company logo.
+     *
+     * @param value The new value for viewBoxSettings
+     */
+    public void setViewBoxSettings(@Nullable ViewBoxSettingsModel value) { this.viewBoxSettings = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.

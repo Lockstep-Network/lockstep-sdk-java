@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -29,7 +29,6 @@ import org.jetbrains.annotations.Nullable;
 public class CustomFieldDefinitionModel
 {
     private @NotNull String groupKey;
-    private @NotNull String customFieldDefinitionId;
     private @Nullable String tableKey;
     private @Nullable String appId;
     private @Nullable String customFieldLabel;
@@ -59,20 +58,6 @@ public class CustomFieldDefinitionModel
      * @param value The new value for groupKey
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
-    /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @return The field customFieldDefinitionId
-     */
-    public @NotNull String getCustomFieldDefinitionId() { return this.customFieldDefinitionId; }
-    /**
-     * The unique ID of this record, automatically assigned by Lockstep when this record is
-     * added to the Lockstep platform.
-     *
-     * @param value The new value for customFieldDefinitionId
-     */
-    public void setCustomFieldDefinitionId(@NotNull String value) { this.customFieldDefinitionId = value; }
     /**
      * Table to which this definition belongs
      *

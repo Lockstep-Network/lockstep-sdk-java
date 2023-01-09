@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -30,8 +30,12 @@ public class PaymentSummaryModel
     private @Nullable String tenderType;
     private @Nullable String paymentType;
     private @Nullable String paymentDate;
+    private @Nullable String currencyCode;
     private @NotNull Double paymentAmount;
     private @NotNull Double unappliedAmount;
+    private @Nullable String baseCurrencyCode;
+    private @NotNull Double baseCurrencyPaymentAmount;
+    private @NotNull Double baseCurrencyUnappliedAmount;
     private @NotNull Boolean isOpen;
     private @Nullable Integer invoiceCount;
     private @Nullable Double totalPaymentsApplied;
@@ -39,10 +43,12 @@ public class PaymentSummaryModel
     private @Nullable String[] invoiceIdList;
     private @Nullable String paymentCompanyId;
     private @Nullable String paymentCompanyName;
+    private @NotNull Boolean supportsErpPdfRetrieval;
     private @Nullable String[] customerIds;
     private @Nullable String[] customerNames;
     private @Nullable String[] companyIds;
     private @Nullable String[] companyNames;
+    private @NotNull String modified;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -135,6 +141,18 @@ public class PaymentSummaryModel
      */
     public void setPaymentDate(@Nullable String value) { this.paymentDate = value; }
     /**
+     * The currency code of the payment.
+     *
+     * @return The field currencyCode
+     */
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
+    /**
+     * The currency code of the payment.
+     *
+     * @param value The new value for currencyCode
+     */
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
+    /**
      * Total amount of this payment.
      *
      * @return The field paymentAmount
@@ -158,6 +176,42 @@ public class PaymentSummaryModel
      * @param value The new value for unappliedAmount
      */
     public void setUnappliedAmount(@NotNull Double value) { this.unappliedAmount = value; }
+    /**
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The payment amount in the group's base currency.
+     *
+     * @return The field baseCurrencyPaymentAmount
+     */
+    public @NotNull Double getBaseCurrencyPaymentAmount() { return this.baseCurrencyPaymentAmount; }
+    /**
+     * The payment amount in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyPaymentAmount
+     */
+    public void setBaseCurrencyPaymentAmount(@NotNull Double value) { this.baseCurrencyPaymentAmount = value; }
+    /**
+     * The unapplied amount in the group's base currency.
+     *
+     * @return The field baseCurrencyUnappliedAmount
+     */
+    public @NotNull Double getBaseCurrencyUnappliedAmount() { return this.baseCurrencyUnappliedAmount; }
+    /**
+     * The unapplied amount in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyUnappliedAmount
+     */
+    public void setBaseCurrencyUnappliedAmount(@NotNull Double value) { this.baseCurrencyUnappliedAmount = value; }
     /**
      * True if this payment includes some unassigned amount that has not yet been applied to an invoice.  If this
      * value is true, the field `UnappliedAmount` will be nonzero.
@@ -245,6 +299,20 @@ public class PaymentSummaryModel
      */
     public void setPaymentCompanyName(@Nullable String value) { this.paymentCompanyName = value; }
     /**
+     * Specific payments have support for pdf retrieval from their respective erp. When this flag is true, an additional
+     * call to Payments/{id}/pdf can be made to retrieve a pdf directly from the erp.
+     *
+     * @return The field supportsErpPdfRetrieval
+     */
+    public @NotNull Boolean getSupportsErpPdfRetrieval() { return this.supportsErpPdfRetrieval; }
+    /**
+     * Specific payments have support for pdf retrieval from their respective erp. When this flag is true, an additional
+     * call to Payments/{id}/pdf can be made to retrieve a pdf directly from the erp.
+     *
+     * @param value The new value for supportsErpPdfRetrieval
+     */
+    public void setSupportsErpPdfRetrieval(@NotNull Boolean value) { this.supportsErpPdfRetrieval = value; }
+    /**
      * The ids of the customer for the associated invoices.
      *
      * @return The field customerIds
@@ -292,4 +360,16 @@ public class PaymentSummaryModel
      * @param value The new value for companyNames
      */
     public void setCompanyNames(@Nullable String[] value) { this.companyNames = value; }
+    /**
+     * The modified date of the payment
+     *
+     * @return The field modified
+     */
+    public @NotNull String getModified() { return this.modified; }
+    /**
+     * The modified date of the payment
+     *
+     * @param value The new value for modified
+     */
+    public void setModified(@NotNull String value) { this.modified = value; }
 };

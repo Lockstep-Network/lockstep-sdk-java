@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -32,13 +32,20 @@ public class InvoiceSummaryModel
     private @Nullable String customerName;
     private @Nullable String status;
     private @Nullable String paymentDueDate;
+    private @Nullable String currencyCode;
     private @Nullable Double invoiceAmount;
     private @Nullable Double outstandingBalance;
+    private @Nullable String baseCurrencyCode;
+    private @Nullable Double baseCurrencyInvoiceAmount;
+    private @Nullable Double baseCurrencyOutstandingBalance;
     private @Nullable String invoiceTypeCode;
     private @Nullable String newestActivity;
     private @Nullable Integer daysPastDue;
+    private @NotNull Integer paymentCount;
+    private @NotNull Boolean supportsErpPdfRetrieval;
     private @Nullable String[] paymentNumbers;
     private @Nullable String[] paymentIds;
+    private @NotNull String modified;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -159,6 +166,18 @@ public class InvoiceSummaryModel
      */
     public void setPaymentDueDate(@Nullable String value) { this.paymentDueDate = value; }
     /**
+     * The currency code for the invoice.
+     *
+     * @return The field currencyCode
+     */
+    public @Nullable String getCurrencyCode() { return this.currencyCode; }
+    /**
+     * The currency code for the invoice.
+     *
+     * @param value The new value for currencyCode
+     */
+    public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
+    /**
      * The total amount of the Invoice.
      *
      * @return The field invoiceAmount
@@ -182,6 +201,42 @@ public class InvoiceSummaryModel
      * @param value The new value for outstandingBalance
      */
     public void setOutstandingBalance(@Nullable Double value) { this.outstandingBalance = value; }
+    /**
+     * The group's base currency code.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The group's base currency code.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The invoice amount in the group's base currency
+     *
+     * @return The field baseCurrencyInvoiceAmount
+     */
+    public @Nullable Double getBaseCurrencyInvoiceAmount() { return this.baseCurrencyInvoiceAmount; }
+    /**
+     * The invoice amount in the group's base currency
+     *
+     * @param value The new value for baseCurrencyInvoiceAmount
+     */
+    public void setBaseCurrencyInvoiceAmount(@Nullable Double value) { this.baseCurrencyInvoiceAmount = value; }
+    /**
+     * The outstanding balance amount in the group's base currency
+     *
+     * @return The field baseCurrencyOutstandingBalance
+     */
+    public @Nullable Double getBaseCurrencyOutstandingBalance() { return this.baseCurrencyOutstandingBalance; }
+    /**
+     * The outstanding balance amount in the group's base currency
+     *
+     * @param value The new value for baseCurrencyOutstandingBalance
+     */
+    public void setBaseCurrencyOutstandingBalance(@Nullable Double value) { this.baseCurrencyOutstandingBalance = value; }
     /**
      * A code identifying the type of this Invoice.
      *
@@ -219,6 +274,32 @@ public class InvoiceSummaryModel
      */
     public void setDaysPastDue(@Nullable Integer value) { this.daysPastDue = value; }
     /**
+     * The number of payments associated to this invoice.
+     *
+     * @return The field paymentCount
+     */
+    public @NotNull Integer getPaymentCount() { return this.paymentCount; }
+    /**
+     * The number of payments associated to this invoice.
+     *
+     * @param value The new value for paymentCount
+     */
+    public void setPaymentCount(@NotNull Integer value) { this.paymentCount = value; }
+    /**
+     * Specific invoices have support for pdf retrieval from their respective erp. When this flag is true, an additional
+     * call to Invoices/{id}/pdf can be made to retrieve a pdf directly from the erp.
+     *
+     * @return The field supportsErpPdfRetrieval
+     */
+    public @NotNull Boolean getSupportsErpPdfRetrieval() { return this.supportsErpPdfRetrieval; }
+    /**
+     * Specific invoices have support for pdf retrieval from their respective erp. When this flag is true, an additional
+     * call to Invoices/{id}/pdf can be made to retrieve a pdf directly from the erp.
+     *
+     * @param value The new value for supportsErpPdfRetrieval
+     */
+    public void setSupportsErpPdfRetrieval(@NotNull Boolean value) { this.supportsErpPdfRetrieval = value; }
+    /**
      * The memo text of the payments associated to this invoice.
      *
      * @return The field paymentNumbers
@@ -242,4 +323,16 @@ public class InvoiceSummaryModel
      * @param value The new value for paymentIds
      */
     public void setPaymentIds(@Nullable String[] value) { this.paymentIds = value; }
+    /**
+     * The modified date of the invoice.
+     *
+     * @return The field modified
+     */
+    public @NotNull String getModified() { return this.modified; }
+    /**
+     * The modified date of the invoice.
+     *
+     * @param value The new value for modified
+     */
+    public void setModified(@NotNull String value) { this.modified = value; }
 };

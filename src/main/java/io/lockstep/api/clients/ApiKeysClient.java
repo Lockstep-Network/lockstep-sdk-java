@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.ApiKeyModel;
 
+import io.lockstep.api.models.ActionResultModel;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
@@ -73,11 +74,11 @@ public class ApiKeysClient
      * @param id The unique Lockstep Platform ID number of this API Key
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<ApiKeyModel> revokeAPIKey(@NotNull String id)
+    public @NotNull LockstepResponse<ActionResultModel> revokeAPIKey(@NotNull String id)
     {
-        RestRequest<ApiKeyModel> r = new RestRequest<ApiKeyModel>(this.client, "DELETE", "/api/v1/ApiKeys/{id}");
+        RestRequest<ActionResultModel> r = new RestRequest<ActionResultModel>(this.client, "DELETE", "/api/v1/ApiKeys/{id}");
         r.AddPath("{id}", id.toString());
-        return r.Call(ApiKeyModel.class);
+        return r.Call(ActionResultModel.class);
     }
 
     /**
@@ -107,7 +108,7 @@ public class ApiKeysClient
      * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future.
      * @param order The sort order for this query. See See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
-     * @param pageSize The page size for results (default 200). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param pageSize The page size for results (default 250, maximum of 500). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @param pageNumber The page number for results (default 0). See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */

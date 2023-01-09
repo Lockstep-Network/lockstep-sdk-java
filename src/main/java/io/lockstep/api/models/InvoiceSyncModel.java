@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -85,6 +85,7 @@ public class InvoiceSyncModel
     private @Nullable Boolean isVoided;
     private @Nullable Boolean inDispute;
     private @Nullable String preferredDeliveryMethod;
+    private @NotNull Double currencyRate;
 
     /**
      * This is the primary key of the Invoice record. For this field, you should use whatever the invoice's unique
@@ -816,4 +817,16 @@ public class InvoiceSyncModel
      * @param value The new value for preferredDeliveryMethod
      */
     public void setPreferredDeliveryMethod(@Nullable String value) { this.preferredDeliveryMethod = value; }
+    /**
+     * The Currency Rate used to get from the account's base currency to the invoice amount.
+     *
+     * @return The field currencyRate
+     */
+    public @NotNull Double getCurrencyRate() { return this.currencyRate; }
+    /**
+     * The Currency Rate used to get from the account's base currency to the invoice amount.
+     *
+     * @param value The new value for currencyRate
+     */
+    public void setCurrencyRate(@NotNull Double value) { this.currencyRate = value; }
 };

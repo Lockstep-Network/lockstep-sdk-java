@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -27,6 +27,7 @@ public class GroupAccountModel
     private @NotNull String groupName;
     private @NotNull String primaryUserId;
     private @NotNull String groupCompanyId;
+    private @Nullable String baseCurrencyCode;
     private @NotNull Boolean isActive;
     private @NotNull Boolean onboardingScheduled;
     private @NotNull String created;
@@ -88,6 +89,18 @@ public class GroupAccountModel
      * @param value The new value for groupCompanyId
      */
     public void setGroupCompanyId(@NotNull String value) { this.groupCompanyId = value; }
+    /**
+     * Base Currency of the group
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * Base Currency of the group
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
     /**
      * The active status of the group
      *

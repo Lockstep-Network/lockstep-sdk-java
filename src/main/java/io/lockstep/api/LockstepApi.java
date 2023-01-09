@@ -1,22 +1,21 @@
 /***
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
  *             
- * @copyright  2021-2022 Lockstep, Inc.
- * @version    2022.37.24
+ * @copyright  2021-2023 Lockstep, Inc.
+ * @version    2023.1.3
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
 
 package io.lockstep.api;
 
-import io.lockstep.api.clients.ActivitiesClient;
 import io.lockstep.api.clients.ApiKeysClient;
 import io.lockstep.api.clients.AppEnrollmentsClient;
 import io.lockstep.api.clients.ApplicationsClient;
@@ -24,27 +23,34 @@ import io.lockstep.api.clients.AttachmentsClient;
 import io.lockstep.api.clients.CodeDefinitionsClient;
 import io.lockstep.api.clients.CompaniesClient;
 import io.lockstep.api.clients.ContactsClient;
-import io.lockstep.api.clients.CreditMemoAppliedClient;
+import io.lockstep.api.clients.CreditMemosAppliedClient;
 import io.lockstep.api.clients.CurrenciesClient;
 import io.lockstep.api.clients.CustomFieldDefinitionsClient;
 import io.lockstep.api.clients.CustomFieldValuesClient;
 import io.lockstep.api.clients.DefinitionsClient;
-import io.lockstep.api.clients.EmailsClient;
+import io.lockstep.api.clients.FeatureFlagsClient;
 import io.lockstep.api.clients.FinancialAccountClient;
 import io.lockstep.api.clients.FinancialAccountBalanceHistoryClient;
 import io.lockstep.api.clients.FinancialYearSettingsClient;
 import io.lockstep.api.clients.GroupAccountsClient;
+import io.lockstep.api.clients.InvoiceAddressesClient;
 import io.lockstep.api.clients.InvoiceHistoryClient;
+import io.lockstep.api.clients.InvoiceLinesClient;
 import io.lockstep.api.clients.InvoicesClient;
 import io.lockstep.api.clients.LeadsClient;
+import io.lockstep.api.clients.MagicLinksClient;
 import io.lockstep.api.clients.NotesClient;
-import io.lockstep.api.clients.PaymentApplicationsClient;
 import io.lockstep.api.clients.PaymentsClient;
-import io.lockstep.api.clients.ProfilesClient;
+import io.lockstep.api.clients.PaymentsAppliedClient;
+import io.lockstep.api.clients.ProfilesAccountingClient;
+import io.lockstep.api.clients.ProfilesAccountingContactsClient;
+import io.lockstep.api.clients.ProfilesCompaniesClient;
 import io.lockstep.api.clients.ProvisioningClient;
 import io.lockstep.api.clients.ReportsClient;
 import io.lockstep.api.clients.StatusClient;
 import io.lockstep.api.clients.SyncClient;
+import io.lockstep.api.clients.TransactionsClient;
+import io.lockstep.api.clients.TranscriptionsClient;
 import io.lockstep.api.clients.UserAccountsClient;
 import io.lockstep.api.clients.UserRolesClient;
 import io.lockstep.api.clients.WebhookRulesClient;
@@ -62,7 +68,6 @@ public class LockstepApi {
     private String bearerToken;
     private String appName;
 
-    private ActivitiesClient activities;
     private ApiKeysClient apiKeys;
     private AppEnrollmentsClient appEnrollments;
     private ApplicationsClient applications;
@@ -70,27 +75,34 @@ public class LockstepApi {
     private CodeDefinitionsClient codeDefinitions;
     private CompaniesClient companies;
     private ContactsClient contacts;
-    private CreditMemoAppliedClient creditMemoApplied;
+    private CreditMemosAppliedClient creditMemosApplied;
     private CurrenciesClient currencies;
     private CustomFieldDefinitionsClient customFieldDefinitions;
     private CustomFieldValuesClient customFieldValues;
     private DefinitionsClient definitions;
-    private EmailsClient emails;
+    private FeatureFlagsClient featureFlags;
     private FinancialAccountClient financialAccount;
     private FinancialAccountBalanceHistoryClient financialAccountBalanceHistory;
     private FinancialYearSettingsClient financialYearSettings;
     private GroupAccountsClient groupAccounts;
+    private InvoiceAddressesClient invoiceAddresses;
     private InvoiceHistoryClient invoiceHistory;
+    private InvoiceLinesClient invoiceLines;
     private InvoicesClient invoices;
     private LeadsClient leads;
+    private MagicLinksClient magicLinks;
     private NotesClient notes;
-    private PaymentApplicationsClient paymentApplications;
     private PaymentsClient payments;
-    private ProfilesClient profiles;
+    private PaymentsAppliedClient paymentsApplied;
+    private ProfilesAccountingClient profilesAccounting;
+    private ProfilesAccountingContactsClient profilesAccountingContacts;
+    private ProfilesCompaniesClient profilesCompanies;
     private ProvisioningClient provisioning;
     private ReportsClient reports;
     private StatusClient status;
     private SyncClient sync;
+    private TransactionsClient transactions;
+    private TranscriptionsClient transcriptions;
     private UserAccountsClient userAccounts;
     private UserRolesClient userRoles;
     private WebhookRulesClient webhookRules;
@@ -100,7 +112,6 @@ public class LockstepApi {
     {
         this.serverUri = serverUri;
 
-        this.activities = new ActivitiesClient(this);
         this.apiKeys = new ApiKeysClient(this);
         this.appEnrollments = new AppEnrollmentsClient(this);
         this.applications = new ApplicationsClient(this);
@@ -108,39 +119,40 @@ public class LockstepApi {
         this.codeDefinitions = new CodeDefinitionsClient(this);
         this.companies = new CompaniesClient(this);
         this.contacts = new ContactsClient(this);
-        this.creditMemoApplied = new CreditMemoAppliedClient(this);
+        this.creditMemosApplied = new CreditMemosAppliedClient(this);
         this.currencies = new CurrenciesClient(this);
         this.customFieldDefinitions = new CustomFieldDefinitionsClient(this);
         this.customFieldValues = new CustomFieldValuesClient(this);
         this.definitions = new DefinitionsClient(this);
-        this.emails = new EmailsClient(this);
+        this.featureFlags = new FeatureFlagsClient(this);
         this.financialAccount = new FinancialAccountClient(this);
         this.financialAccountBalanceHistory = new FinancialAccountBalanceHistoryClient(this);
         this.financialYearSettings = new FinancialYearSettingsClient(this);
         this.groupAccounts = new GroupAccountsClient(this);
+        this.invoiceAddresses = new InvoiceAddressesClient(this);
         this.invoiceHistory = new InvoiceHistoryClient(this);
+        this.invoiceLines = new InvoiceLinesClient(this);
         this.invoices = new InvoicesClient(this);
         this.leads = new LeadsClient(this);
+        this.magicLinks = new MagicLinksClient(this);
         this.notes = new NotesClient(this);
-        this.paymentApplications = new PaymentApplicationsClient(this);
         this.payments = new PaymentsClient(this);
-        this.profiles = new ProfilesClient(this);
+        this.paymentsApplied = new PaymentsAppliedClient(this);
+        this.profilesAccounting = new ProfilesAccountingClient(this);
+        this.profilesAccountingContacts = new ProfilesAccountingContactsClient(this);
+        this.profilesCompanies = new ProfilesCompaniesClient(this);
         this.provisioning = new ProvisioningClient(this);
         this.reports = new ReportsClient(this);
         this.status = new StatusClient(this);
         this.sync = new SyncClient(this);
+        this.transactions = new TransactionsClient(this);
+        this.transcriptions = new TranscriptionsClient(this);
         this.userAccounts = new UserAccountsClient(this);
         this.userRoles = new UserRolesClient(this);
         this.webhookRules = new WebhookRulesClient(this);
         this.webhooks = new WebhooksClient(this);
     }
 
-    /**
-     * A collection of API methods relating to Activities
-     *
-     * @return A collection containing the {@link io.lockstep.api.clients.ActivitiesClient client} methods in the API.
-     */
-    public @NotNull ActivitiesClient getActivitiesClient() { return this.activities; }
     /**
      * A collection of API methods relating to ApiKeys
      *
@@ -184,11 +196,11 @@ public class LockstepApi {
      */
     public @NotNull ContactsClient getContactsClient() { return this.contacts; }
     /**
-     * A collection of API methods relating to CreditMemoApplied
+     * A collection of API methods relating to CreditMemosApplied
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.CreditMemoAppliedClient client} methods in the API.
+     * @return A collection containing the {@link io.lockstep.api.clients.CreditMemosAppliedClient client} methods in the API.
      */
-    public @NotNull CreditMemoAppliedClient getCreditMemoAppliedClient() { return this.creditMemoApplied; }
+    public @NotNull CreditMemosAppliedClient getCreditMemosAppliedClient() { return this.creditMemosApplied; }
     /**
      * A collection of API methods relating to Currencies
      *
@@ -214,11 +226,11 @@ public class LockstepApi {
      */
     public @NotNull DefinitionsClient getDefinitionsClient() { return this.definitions; }
     /**
-     * A collection of API methods relating to Emails
+     * A collection of API methods relating to FeatureFlags
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.EmailsClient client} methods in the API.
+     * @return A collection containing the {@link io.lockstep.api.clients.FeatureFlagsClient client} methods in the API.
      */
-    public @NotNull EmailsClient getEmailsClient() { return this.emails; }
+    public @NotNull FeatureFlagsClient getFeatureFlagsClient() { return this.featureFlags; }
     /**
      * A collection of API methods relating to FinancialAccount
      *
@@ -244,11 +256,23 @@ public class LockstepApi {
      */
     public @NotNull GroupAccountsClient getGroupAccountsClient() { return this.groupAccounts; }
     /**
+     * A collection of API methods relating to InvoiceAddresses
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.InvoiceAddressesClient client} methods in the API.
+     */
+    public @NotNull InvoiceAddressesClient getInvoiceAddressesClient() { return this.invoiceAddresses; }
+    /**
      * A collection of API methods relating to InvoiceHistory
      *
      * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistoryClient client} methods in the API.
      */
     public @NotNull InvoiceHistoryClient getInvoiceHistoryClient() { return this.invoiceHistory; }
+    /**
+     * A collection of API methods relating to InvoiceLines
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.InvoiceLinesClient client} methods in the API.
+     */
+    public @NotNull InvoiceLinesClient getInvoiceLinesClient() { return this.invoiceLines; }
     /**
      * A collection of API methods relating to Invoices
      *
@@ -262,17 +286,17 @@ public class LockstepApi {
      */
     public @NotNull LeadsClient getLeadsClient() { return this.leads; }
     /**
+     * A collection of API methods relating to MagicLinks
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.MagicLinksClient client} methods in the API.
+     */
+    public @NotNull MagicLinksClient getMagicLinksClient() { return this.magicLinks; }
+    /**
      * A collection of API methods relating to Notes
      *
      * @return A collection containing the {@link io.lockstep.api.clients.NotesClient client} methods in the API.
      */
     public @NotNull NotesClient getNotesClient() { return this.notes; }
-    /**
-     * A collection of API methods relating to PaymentApplications
-     *
-     * @return A collection containing the {@link io.lockstep.api.clients.PaymentApplicationsClient client} methods in the API.
-     */
-    public @NotNull PaymentApplicationsClient getPaymentApplicationsClient() { return this.paymentApplications; }
     /**
      * A collection of API methods relating to Payments
      *
@@ -280,11 +304,29 @@ public class LockstepApi {
      */
     public @NotNull PaymentsClient getPaymentsClient() { return this.payments; }
     /**
-     * A collection of API methods relating to Profiles
+     * A collection of API methods relating to PaymentsApplied
      *
-     * @return A collection containing the {@link io.lockstep.api.clients.ProfilesClient client} methods in the API.
+     * @return A collection containing the {@link io.lockstep.api.clients.PaymentsAppliedClient client} methods in the API.
      */
-    public @NotNull ProfilesClient getProfilesClient() { return this.profiles; }
+    public @NotNull PaymentsAppliedClient getPaymentsAppliedClient() { return this.paymentsApplied; }
+    /**
+     * A collection of API methods relating to ProfilesAccounting
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.ProfilesAccountingClient client} methods in the API.
+     */
+    public @NotNull ProfilesAccountingClient getProfilesAccountingClient() { return this.profilesAccounting; }
+    /**
+     * A collection of API methods relating to ProfilesAccountingContacts
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.ProfilesAccountingContactsClient client} methods in the API.
+     */
+    public @NotNull ProfilesAccountingContactsClient getProfilesAccountingContactsClient() { return this.profilesAccountingContacts; }
+    /**
+     * A collection of API methods relating to ProfilesCompanies
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.ProfilesCompaniesClient client} methods in the API.
+     */
+    public @NotNull ProfilesCompaniesClient getProfilesCompaniesClient() { return this.profilesCompanies; }
     /**
      * A collection of API methods relating to Provisioning
      *
@@ -309,6 +351,18 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.SyncClient client} methods in the API.
      */
     public @NotNull SyncClient getSyncClient() { return this.sync; }
+    /**
+     * A collection of API methods relating to Transactions
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.TransactionsClient client} methods in the API.
+     */
+    public @NotNull TransactionsClient getTransactionsClient() { return this.transactions; }
+    /**
+     * A collection of API methods relating to Transcriptions
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.TranscriptionsClient client} methods in the API.
+     */
+    public @NotNull TranscriptionsClient getTranscriptionsClient() { return this.transcriptions; }
     /**
      * A collection of API methods relating to UserAccounts
      *

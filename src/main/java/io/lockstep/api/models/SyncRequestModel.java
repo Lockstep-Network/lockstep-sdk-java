@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -33,6 +33,8 @@ public class SyncRequestModel
     private @NotNull String syncRequestId;
     private @NotNull String groupKey;
     private @Nullable String statusCode;
+    private @Nullable String operationTypeName;
+    private @NotNull Integer operationType;
     private @Nullable String processResultMessage;
     private @Nullable String runFullSync;
     private @Nullable String appEnrollmentId;
@@ -103,6 +105,30 @@ public class SyncRequestModel
      * @param value The new value for statusCode
      */
     public void setStatusCode(@Nullable String value) { this.statusCode = value; }
+    /**
+     * The name of the OperationType for this SyncRequest
+     *
+     * @return The field operationTypeName
+     */
+    public @Nullable String getOperationTypeName() { return this.operationTypeName; }
+    /**
+     * The name of the OperationType for this SyncRequest
+     *
+     * @param value The new value for operationTypeName
+     */
+    public void setOperationTypeName(@Nullable String value) { this.operationTypeName = value; }
+    /**
+     * The name of the OperationType for this SyncRequest
+     *
+     * @return The field operationType
+     */
+    public @NotNull Integer getOperationType() { return this.operationType; }
+    /**
+     * The name of the OperationType for this SyncRequest
+     *
+     * @param value The new value for operationType
+     */
+    public void setOperationType(@NotNull Integer value) { this.operationType = value; }
     /**
      * Message containing information about the sync request results
      *

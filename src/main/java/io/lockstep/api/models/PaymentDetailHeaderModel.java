@@ -2,13 +2,13 @@
 /**
  * Lockstep Platform SDK for Java
  *
- * (c) 2021-2022 Lockstep, Inc.
+ * (c) 2021-2023 Lockstep, Inc.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @author     Lockstep Network <support@lockstep.io>
- * @copyright  2021-2022 Lockstep, Inc.
+ * @copyright  2021-2023 Lockstep, Inc.
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class PaymentDetailHeaderModel
 {
     private @NotNull String groupKey;
+    private @Nullable String baseCurrencyCode;
     private @Nullable Integer customerCount;
     private @Nullable Double amountCollected;
     private @Nullable Double unappliedAmount;
@@ -49,6 +50,18 @@ public class PaymentDetailHeaderModel
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
      * The total number of Customers.
      *
      * @return The field customerCount
@@ -61,25 +74,25 @@ public class PaymentDetailHeaderModel
      */
     public void setCustomerCount(@Nullable Integer value) { this.customerCount = value; }
     /**
-     * The total amount collected.
+     * The total amount collected in the group's base currency.
      *
      * @return The field amountCollected
      */
     public @Nullable Double getAmountCollected() { return this.amountCollected; }
     /**
-     * The total amount collected.
+     * The total amount collected in the group's base currency.
      *
      * @param value The new value for amountCollected
      */
     public void setAmountCollected(@Nullable Double value) { this.amountCollected = value; }
     /**
-     * The total unapplied amount.
+     * The total unapplied amount in the group's base currency.
      *
      * @return The field unappliedAmount
      */
     public @Nullable Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
-     * The total unapplied amount.
+     * The total unapplied amount in the group's base currency.
      *
      * @param value The new value for unappliedAmount
      */
