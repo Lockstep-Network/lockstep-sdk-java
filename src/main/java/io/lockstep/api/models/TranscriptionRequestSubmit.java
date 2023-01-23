@@ -66,13 +66,13 @@ public class TranscriptionRequestSubmit
      */
     public void setFileName(@Nullable String value) { this.fileName = value; }
     /**
-     * The type of LockstepApi2.Models.TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
+     * The type of TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
      *
      * @return The field invoiceTypeCode
      */
     public @Nullable String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
-     * The type of LockstepApi2.Models.TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
+     * The type of TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
      *
      * @param value The new value for invoiceTypeCode
      */
