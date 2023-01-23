@@ -40,6 +40,7 @@ public class CompanyDetailsModel
     private @Nullable String contactName;
     private @Nullable String contactEmail;
     private @NotNull Integer outstandingInvoices;
+    private @Nullable String groupBaseCurrencyCode;
     private @NotNull Double outstandingAmount;
     private @NotNull Double amountPastDue;
     private @Nullable CompanyDetailsPaymentModel[] payments;
@@ -255,25 +256,37 @@ public class CompanyDetailsModel
      */
     public void setOutstandingInvoices(@NotNull Integer value) { this.outstandingInvoices = value; }
     /**
-     * Company total outstanding invoice amount
+     * The group's base currency code.
+     *
+     * @return The field groupBaseCurrencyCode
+     */
+    public @Nullable String getGroupBaseCurrencyCode() { return this.groupBaseCurrencyCode; }
+    /**
+     * The group's base currency code.
+     *
+     * @param value The new value for groupBaseCurrencyCode
+     */
+    public void setGroupBaseCurrencyCode(@Nullable String value) { this.groupBaseCurrencyCode = value; }
+    /**
+     * Company total outstanding invoice amount in the group's base currency.
      *
      * @return The field outstandingAmount
      */
     public @NotNull Double getOutstandingAmount() { return this.outstandingAmount; }
     /**
-     * Company total outstanding invoice amount
+     * Company total outstanding invoice amount in the group's base currency.
      *
      * @param value The new value for outstandingAmount
      */
     public void setOutstandingAmount(@NotNull Double value) { this.outstandingAmount = value; }
     /**
-     * Company total past due amount
+     * Company total past due amount in the group's base currency.
      *
      * @return The field amountPastDue
      */
     public @NotNull Double getAmountPastDue() { return this.amountPastDue; }
     /**
-     * Company total past due amount
+     * Company total past due amount in the group's base currency.
      *
      * @param value The new value for amountPastDue
      */

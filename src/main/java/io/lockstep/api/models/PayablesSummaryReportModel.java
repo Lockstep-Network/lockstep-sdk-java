@@ -25,6 +25,7 @@ public class PayablesSummaryReportModel
 {
     private @NotNull String groupKey;
     private @NotNull Integer timeframe;
+    private @Nullable String baseCurrencyCode;
     private @NotNull Double totalPaymentsAmount;
     private @NotNull Integer totalPaymentsCount;
     private @NotNull Double totalAmountBilled;
@@ -61,13 +62,25 @@ public class PayablesSummaryReportModel
      */
     public void setTimeframe(@NotNull Integer value) { this.timeframe = value; }
     /**
-     * Amount of payments made based in the timeframe
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * Amount of payments made based in the timeframe in the group's base currency.
      *
      * @return The field totalPaymentsAmount
      */
     public @NotNull Double getTotalPaymentsAmount() { return this.totalPaymentsAmount; }
     /**
-     * Amount of payments made based in the timeframe
+     * Amount of payments made based in the timeframe in the group's base currency.
      *
      * @param value The new value for totalPaymentsAmount
      */
@@ -85,13 +98,13 @@ public class PayablesSummaryReportModel
      */
     public void setTotalPaymentsCount(@NotNull Integer value) { this.totalPaymentsCount = value; }
     /**
-     * Amount of bills received based in the timeframe
+     * Amount of bills received based in the timeframe in the group's base currency.
      *
      * @return The field totalAmountBilled
      */
     public @NotNull Double getTotalAmountBilled() { return this.totalAmountBilled; }
     /**
-     * Amount of bills received based in the timeframe
+     * Amount of bills received based in the timeframe in the group's base currency.
      *
      * @param value The new value for totalAmountBilled
      */

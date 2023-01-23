@@ -27,6 +27,7 @@ public class TranscriptionRequestSubmit
     private @Nullable String fileContentUrl;
     private @Nullable String fileName;
     private @Nullable String invoiceTypeCode;
+    private @Nullable String transcriptionValidationRequestId;
 
     /**
      * The base64 string of document content
@@ -76,4 +77,16 @@ public class TranscriptionRequestSubmit
      * @param value The new value for invoiceTypeCode
      */
     public void setInvoiceTypeCode(@Nullable String value) { this.invoiceTypeCode = value; }
+    /**
+     * Group account transcription validation request item is associated with.
+     *
+     * @return The field transcriptionValidationRequestId
+     */
+    public @Nullable String getTranscriptionValidationRequestId() { return this.transcriptionValidationRequestId; }
+    /**
+     * Group account transcription validation request item is associated with.
+     *
+     * @param value The new value for transcriptionValidationRequestId
+     */
+    public void setTranscriptionValidationRequestId(@Nullable String value) { this.transcriptionValidationRequestId = value; }
 };

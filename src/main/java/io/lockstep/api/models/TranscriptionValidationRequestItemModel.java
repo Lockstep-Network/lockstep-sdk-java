@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Represents a transcription validation request item to be validated.
  */
-public class TranscriptionValidationRequestItem
+public class TranscriptionValidationRequestItemModel
 {
     private @NotNull String transcriptionValidationRequestItemId;
     private @NotNull String transcriptionValidationRequestId;

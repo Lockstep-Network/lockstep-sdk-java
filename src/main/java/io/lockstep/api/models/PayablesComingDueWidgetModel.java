@@ -25,6 +25,7 @@ public class PayablesComingDueWidgetModel
 {
     private @NotNull String groupKey;
     private @NotNull String date;
+    private @Nullable String baseCurrencyCode;
     private @NotNull Double amountDue;
 
     /**
@@ -60,13 +61,25 @@ public class PayablesComingDueWidgetModel
      */
     public void setDate(@NotNull String value) { this.date = value; }
     /**
-     * Total amount due for this time period
+     * The group's base currency code.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The group's base currency code.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * Total amount due for this time period at the group's base currency.
      *
      * @return The field amountDue
      */
     public @NotNull Double getAmountDue() { return this.amountDue; }
     /**
-     * Total amount due for this time period
+     * Total amount due for this time period at the group's base currency.
      *
      * @param value The new value for amountDue
      */

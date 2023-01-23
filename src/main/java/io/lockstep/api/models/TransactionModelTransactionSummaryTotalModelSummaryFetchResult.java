@@ -20,13 +20,23 @@ import org.jetbrains.annotations.Nullable;
 
 public class TransactionModelTransactionSummaryTotalModelSummaryFetchResult
 {
+    private @Nullable TransactionModel[] records;
     private @Nullable Integer totalCount;
     private @Nullable Integer pageSize;
     private @Nullable Integer pageNumber;
-    private @Nullable TransactionModel[] records;
     private @Nullable TransactionSummaryTotalModel summary;
     private @Nullable SummaryAgingTotalsModel[] agingSummary;
 
+    /**
+     *
+     * @return The field records
+     */
+    public @Nullable TransactionModel[] getRecords() { return this.records; }
+    /**
+     *
+     * @param value The new value for records
+     */
+    public void setRecords(@Nullable TransactionModel[] value) { this.records = value; }
     /**
      *
      * @return The field totalCount
@@ -57,16 +67,6 @@ public class TransactionModelTransactionSummaryTotalModelSummaryFetchResult
      * @param value The new value for pageNumber
      */
     public void setPageNumber(@Nullable Integer value) { this.pageNumber = value; }
-    /**
-     *
-     * @return The field records
-     */
-    public @Nullable TransactionModel[] getRecords() { return this.records; }
-    /**
-     *
-     * @param value The new value for records
-     */
-    public void setRecords(@Nullable TransactionModel[] value) { this.records = value; }
     /**
      * Represents transaction summary information based on the query request within the group account.
      *

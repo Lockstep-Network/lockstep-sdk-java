@@ -42,6 +42,7 @@ public class BatchSyncModel
     private @Nullable FinancialYearSettingSyncModel[] financialYearSettings;
     private @Nullable FinancialAccountSyncModel[] financialAccounts;
     private @Nullable FinancialAccountBalanceHistorySyncModel[] financialAccountBalanceHistories;
+    private @Nullable BaseCurrencySyncModel[] baseCurrencies;
 
     /**
      * A list of Company records to merge with your Lockstep Platform data
@@ -175,4 +176,16 @@ public class BatchSyncModel
      * @param value The new value for financialAccountBalanceHistories
      */
     public void setFinancialAccountBalanceHistories(@Nullable FinancialAccountBalanceHistorySyncModel[] value) { this.financialAccountBalanceHistories = value; }
+    /**
+     * A list of BaseCurrency records to merge with your Lockstep Platform data
+     *
+     * @return The field baseCurrencies
+     */
+    public @Nullable BaseCurrencySyncModel[] getBaseCurrencies() { return this.baseCurrencies; }
+    /**
+     * A list of BaseCurrency records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for baseCurrencies
+     */
+    public void setBaseCurrencies(@Nullable BaseCurrencySyncModel[] value) { this.baseCurrencies = value; }
 };

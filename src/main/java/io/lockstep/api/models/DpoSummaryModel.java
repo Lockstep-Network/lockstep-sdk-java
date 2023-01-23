@@ -28,6 +28,7 @@ public class DpoSummaryModel
     private @Nullable String vendorName;
     private @Nullable String primaryContact;
     private @NotNull Integer bills;
+    private @Nullable String baseCurrencyCode;
     private @NotNull Double amountOutstanding;
     private @NotNull Double dpo;
 
@@ -98,13 +99,25 @@ public class DpoSummaryModel
      */
     public void setBills(@NotNull Integer value) { this.bills = value; }
     /**
-     * The total amount outstanding.
+     * The group's base currency code.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The group's base currency code.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * The total amount outstanding at the group's base currency.
      *
      * @return The field amountOutstanding
      */
     public @NotNull Double getAmountOutstanding() { return this.amountOutstanding; }
     /**
-     * The total amount outstanding.
+     * The total amount outstanding at the group's base currency.
      *
      * @param value The new value for amountOutstanding
      */
