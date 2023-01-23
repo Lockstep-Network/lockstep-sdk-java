@@ -27,6 +27,7 @@ public class TranscriptionRequestSubmit
     private @Nullable String fileContentUrl;
     private @Nullable String fileName;
     private @Nullable String invoiceTypeCode;
+    private @Nullable String transcriptionValidationRequestId;
 
     /**
      * The base64 string of document content
@@ -65,15 +66,27 @@ public class TranscriptionRequestSubmit
      */
     public void setFileName(@Nullable String value) { this.fileName = value; }
     /**
-     * The type of LockstepApi2.Models.TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
+     * The type of TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
      *
      * @return The field invoiceTypeCode
      */
     public @Nullable String getInvoiceTypeCode() { return this.invoiceTypeCode; }
     /**
-     * The type of LockstepApi2.Models.TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
+     * The type of TranscriptionRequestSubmit.InvoiceTypeCode requested to transcribe content to.
      *
      * @param value The new value for invoiceTypeCode
      */
     public void setInvoiceTypeCode(@Nullable String value) { this.invoiceTypeCode = value; }
+    /**
+     * Group account transcription validation request item is associated with.
+     *
+     * @return The field transcriptionValidationRequestId
+     */
+    public @Nullable String getTranscriptionValidationRequestId() { return this.transcriptionValidationRequestId; }
+    /**
+     * Group account transcription validation request item is associated with.
+     *
+     * @param value The new value for transcriptionValidationRequestId
+     */
+    public void setTranscriptionValidationRequestId(@Nullable String value) { this.transcriptionValidationRequestId = value; }
 };

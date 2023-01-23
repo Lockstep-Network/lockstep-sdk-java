@@ -63,6 +63,9 @@ public class CompanyModel
     private @Nullable String appEnrollmentId;
     private @Nullable String emailAddress;
     private @Nullable String publicUrlSlug;
+    private @Nullable String stateTaxId;
+    private @Nullable String stateOfIncorporation;
+    private @Nullable String linkedInUrlSlug;
     private @Nullable ViewBoxSettingsModel viewBoxSettings;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
@@ -572,6 +575,42 @@ public class CompanyModel
      * @param value The new value for publicUrlSlug
      */
     public void setPublicUrlSlug(@Nullable String value) { this.publicUrlSlug = value; }
+    /**
+     * State Tax ID
+     *
+     * @return The field stateTaxId
+     */
+    public @Nullable String getStateTaxId() { return this.stateTaxId; }
+    /**
+     * State Tax ID
+     *
+     * @param value The new value for stateTaxId
+     */
+    public void setStateTaxId(@Nullable String value) { this.stateTaxId = value; }
+    /**
+     * The state where the company was registered.
+     *
+     * @return The field stateOfIncorporation
+     */
+    public @Nullable String getStateOfIncorporation() { return this.stateOfIncorporation; }
+    /**
+     * The state where the company was registered.
+     *
+     * @param value The new value for stateOfIncorporation
+     */
+    public void setStateOfIncorporation(@Nullable String value) { this.stateOfIncorporation = value; }
+    /**
+     * Linkedin Url
+     *
+     * @return The field linkedInUrlSlug
+     */
+    public @Nullable String getLinkedInUrlSlug() { return this.linkedInUrlSlug; }
+    /**
+     * Linkedin Url
+     *
+     * @param value The new value for linkedInUrlSlug
+     */
+    public void setLinkedInUrlSlug(@Nullable String value) { this.linkedInUrlSlug = value; }
     /**
      * View box settings for the company logo.
      *

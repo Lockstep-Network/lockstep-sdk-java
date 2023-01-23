@@ -27,6 +27,7 @@ public class PayablesComingDueHeaderModel
     private @NotNull Integer numberOfBillsDue;
     private @NotNull Integer numberOfVendors;
     private @NotNull Double percentageOfTotal;
+    private @Nullable String baseCurrencyCode;
     private @NotNull Double totalAmountDue;
     private @NotNull String dueDate;
 
@@ -85,13 +86,25 @@ public class PayablesComingDueHeaderModel
      */
     public void setPercentageOfTotal(@NotNull Double value) { this.percentageOfTotal = value; }
     /**
-     * Total amount due for this time period
+     * The group's base currency code.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The group's base currency code.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * Total amount due for this time period in the group's base currency.
      *
      * @return The field totalAmountDue
      */
     public @NotNull Double getTotalAmountDue() { return this.totalAmountDue; }
     /**
-     * Total amount due for this time period
+     * Total amount due for this time period in the group's base currency.
      *
      * @param value The new value for totalAmountDue
      */

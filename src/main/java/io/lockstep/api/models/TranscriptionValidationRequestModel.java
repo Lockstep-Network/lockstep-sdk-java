@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Represents a transcription validation request that is used to validate if file is of a specific type.
  */
-public class TranscriptionValidationRequest
+public class TranscriptionValidationRequestModel
 {
     private @NotNull String transcriptionValidationRequestId;
     private @NotNull String groupKey;
@@ -30,7 +30,7 @@ public class TranscriptionValidationRequest
     private @NotNull String createdUserId;
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
-    private @Nullable TranscriptionValidationRequestItem[] items;
+    private @Nullable TranscriptionValidationRequestItemModel[] items;
 
     /**
      * The unique identifier of the transcription validation request.
@@ -134,12 +134,12 @@ public class TranscriptionValidationRequest
      *
      * @return The field items
      */
-    public @Nullable TranscriptionValidationRequestItem[] getItems() { return this.items; }
+    public @Nullable TranscriptionValidationRequestItemModel[] getItems() { return this.items; }
     /**
      * All items attached to this transcription validation request.
      * To retrieve this collection, specify `Items` in the "Include" parameter for your query.
      *
      * @param value The new value for items
      */
-    public void setItems(@Nullable TranscriptionValidationRequestItem[] value) { this.items = value; }
+    public void setItems(@Nullable TranscriptionValidationRequestItemModel[] value) { this.items = value; }
 };

@@ -131,4 +131,19 @@ public class ProfilesAccountingContactsClient
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<AccountingProfileContactModel>>() {}.getType());
     }
+
+    /**
+     * Updates an accounting profile contact that matches the specified id with the primary contact attached to the accounting profile
+     *
+     * An Accounting Profile Contact has a link to a Contact that is associated with your company's Accounting Profile. These Contacts are secondary contacts to the primary that is on the profile.
+     *
+     * @param id The unique Lockstep Platform ID number of the Accounting Profile Contact to update
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<AccountingProfileContactModel> swapSecondaryandPrimaryContact(@NotNull String id)
+    {
+        RestRequest<AccountingProfileContactModel> r = new RestRequest<AccountingProfileContactModel>(this.client, "PATCH", "/api/v1/profiles/accounting/contacts/{id}/primary");
+        r.AddPath("{id}", id.toString());
+        return r.Call(AccountingProfileContactModel.class);
+    }
 }

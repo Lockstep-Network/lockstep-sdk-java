@@ -39,6 +39,8 @@ public class StatusModel
     private @Nullable String version;
     private @Nullable Boolean onboardingScheduled;
     private @Nullable MagicLinkStatusModel magicLink;
+    private @Nullable SupportAccessModel supportAccess;
+    private @NotNull Boolean isImpersonated;
     private @Nullable Object dependencies;
     private @Nullable UserGroupModel[] userGroups;
     private @Nullable String baseCurrencyCode;
@@ -235,6 +237,30 @@ public class StatusModel
      * @param value The new value for magicLink
      */
     public void setMagicLink(@Nullable MagicLinkStatusModel value) { this.magicLink = value; }
+    /**
+     * Information allowing Lockstep to offer direct support to the user
+     *
+     * @return The field supportAccess
+     */
+    public @Nullable SupportAccessModel getSupportAccess() { return this.supportAccess; }
+    /**
+     * Information allowing Lockstep to offer direct support to the user
+     *
+     * @param value The new value for supportAccess
+     */
+    public void setSupportAccess(@Nullable SupportAccessModel value) { this.supportAccess = value; }
+    /**
+     * True if the user is being impersonated by the Lockstep support team.
+     *
+     * @return The field isImpersonated
+     */
+    public @NotNull Boolean getIsImpersonated() { return this.isImpersonated; }
+    /**
+     * True if the user is being impersonated by the Lockstep support team.
+     *
+     * @param value The new value for isImpersonated
+     */
+    public void setIsImpersonated(@NotNull Boolean value) { this.isImpersonated = value; }
     /**
      * Statuses for the dependencies of this api.
      * OK if the dependency is working.

@@ -30,8 +30,10 @@ public class CompanyDetailsPaymentModel
     private @Nullable String invoiceId;
     private @Nullable String invoiceTypeCode;
     private @Nullable String invoiceReferenceCode;
+    private @Nullable String invoiceCurrencyCode;
     private @NotNull Double invoiceTotalAmount;
     private @NotNull String paymentDate;
+    private @Nullable String paymentCurrencyCode;
     private @NotNull Double paymentAmount;
 
     /**
@@ -125,6 +127,18 @@ public class CompanyDetailsPaymentModel
      */
     public void setInvoiceReferenceCode(@Nullable String value) { this.invoiceReferenceCode = value; }
     /**
+     * The currency code of the invoice the payment is associated with.
+     *
+     * @return The field invoiceCurrencyCode
+     */
+    public @Nullable String getInvoiceCurrencyCode() { return this.invoiceCurrencyCode; }
+    /**
+     * The currency code of the invoice the payment is associated with.
+     *
+     * @param value The new value for invoiceCurrencyCode
+     */
+    public void setInvoiceCurrencyCode(@Nullable String value) { this.invoiceCurrencyCode = value; }
+    /**
      * Invoice total amount payment is associated with
      *
      * @return The field invoiceTotalAmount
@@ -148,6 +162,18 @@ public class CompanyDetailsPaymentModel
      * @param value The new value for paymentDate
      */
     public void setPaymentDate(@NotNull String value) { this.paymentDate = value; }
+    /**
+     * The currency code of the payment.
+     *
+     * @return The field paymentCurrencyCode
+     */
+    public @Nullable String getPaymentCurrencyCode() { return this.paymentCurrencyCode; }
+    /**
+     * The currency code of the payment.
+     *
+     * @param value The new value for paymentCurrencyCode
+     */
+    public void setPaymentCurrencyCode(@Nullable String value) { this.paymentCurrencyCode = value; }
     /**
      * Amount payment was made for
      *

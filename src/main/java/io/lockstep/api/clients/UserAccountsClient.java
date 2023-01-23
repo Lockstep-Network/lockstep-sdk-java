@@ -31,6 +31,8 @@ import io.lockstep.api.models.TransferOwnerSubmitModel;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.UserDataResponseModel;
+import io.lockstep.api.models.SupportAccessModel;
+import io.lockstep.api.models.SupportAccessRequest;
 
 /**
  * Contains all methods related to UserAccounts
@@ -184,7 +186,7 @@ public class UserAccountsClient
     /**
      * Retrieves the user data for the current user. This allows for retrieving extended user data such as UTM parameters.
      *
-     * @param include The set of data to retrieve. To avoid any casing confusion, these values are converted to upper case in storage. Possible values are: UTM
+     * @param include The set of data to retrieve. To avoid any casing confusion, these values are converted to upper case. Possible values are: UTM
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<UserDataResponseModel> getUserData(@NotNull String[] include)
@@ -192,5 +194,22 @@ public class UserAccountsClient
         RestRequest<UserDataResponseModel> r = new RestRequest<UserDataResponseModel>(this.client, "GET", "/api/v1/UserAccounts/user-data");
         r.AddQuery("include", include.toString());
         return r.Call(UserDataResponseModel.class);
+    }
+
+    /**
+     * Set support access for the calling user.
+     *
+     * Support access allows Lockstep to access the user's account to troubleshoot issues. Access is granted for a limited time, can be revoked at any time, and requires a code to verify the access.
+     *
+     * Every call to this API will regenerate the support access code.
+     *
+     * @param body Documentation pending
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<SupportAccessModel> setSupportAccess(@NotNull SupportAccessRequest body)
+    {
+        RestRequest<SupportAccessModel> r = new RestRequest<SupportAccessModel>(this.client, "POST", "/api/v1/UserAccounts/support-access");
+        r.AddBody(body);
+        return r.Call(SupportAccessModel.class);
     }
 }
