@@ -27,6 +27,7 @@ public class AccountingProfileContactModel
     private @NotNull String accountingProfileContactId;
     private @NotNull String accountingProfileId;
     private @NotNull String contactId;
+    private @NotNull Boolean isPrimary;
     private @NotNull String groupKey;
     private @NotNull String created;
     private @NotNull String createdUserId;
@@ -71,6 +72,18 @@ public class AccountingProfileContactModel
      * @param value The new value for contactId
      */
     public void setContactId(@NotNull String value) { this.contactId = value; }
+    /**
+     * Determines whether the contact is primary or secondary.
+     *
+     * @return The field isPrimary
+     */
+    public @NotNull Boolean getIsPrimary() { return this.isPrimary; }
+    /**
+     * Determines whether the contact is primary or secondary.
+     *
+     * @param value The new value for isPrimary
+     */
+    public void setIsPrimary(@NotNull Boolean value) { this.isPrimary = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.

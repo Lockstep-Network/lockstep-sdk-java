@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
  * You can use Accounting Profiles to define an accounting function by what
  * the function does and how to interface with the function.
  */
-public class AccountingProfileModel
+public class AccountingProfileRequest
 {
     private @NotNull String accountingProfileId;
     private @NotNull String companyId;
@@ -49,6 +49,7 @@ public class AccountingProfileModel
     private @Nullable AttachmentModel[] attachments;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
     private @Nullable CustomFieldValueModel[] customFieldValues;
+    private @NotNull String primaryContactId;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -364,4 +365,16 @@ public class AccountingProfileModel
      * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    /**
+     * The ID of the primary contact that is linked to this profile.
+     *
+     * @return The field primaryContactId
+     */
+    public @NotNull String getPrimaryContactId() { return this.primaryContactId; }
+    /**
+     * The ID of the primary contact that is linked to this profile.
+     *
+     * @param value The new value for primaryContactId
+     */
+    public void setPrimaryContactId(@NotNull String value) { this.primaryContactId = value; }
 };

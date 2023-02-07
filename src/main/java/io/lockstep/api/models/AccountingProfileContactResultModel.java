@@ -19,59 +19,77 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * An Accounting Profile is a child of a Company Profile, and collectively,
- * they comprise the identity and necessary information for an accounting  team
- * to work with trading partners, financial institutions, auditors, and others.
- * You can use Accounting Profiles to define an accounting function by what
- * the function does and how to interface with the function.
+ * A Contact contains information about a person or role within a Company.
+ * You can use Contacts to track information about who is responsible for a specific project,
+ * who handles invoices, or information about which role at a particular customer or
+ * vendor you should speak with about invoices.
+ *
+ * An Accounting Profile Contact has a link to a Contact that is associated with your company's
+ * Accounting Profile. These Contacts are secondary contacts to the primary that is on the profile.
  */
-public class AccountingProfileModel
+public class AccountingProfileContactResultModel
 {
-    private @NotNull String accountingProfileId;
+    private @NotNull String contactId;
     private @NotNull String companyId;
     private @NotNull String groupKey;
-    private @NotNull String name;
-    private @NotNull String type;
-    private @NotNull String emailAddress;
+    private @Nullable String erpKey;
+    private @Nullable String contactName;
+    private @Nullable String contactCode;
+    private @Nullable String title;
+    private @Nullable String roleCode;
+    private @Nullable String emailAddress;
     private @Nullable String phone;
+    private @Nullable String fax;
     private @Nullable String address1;
     private @Nullable String address2;
     private @Nullable String address3;
     private @Nullable String city;
-    private @Nullable String region;
+    private @Nullable String stateRegion;
     private @Nullable String postalCode;
-    private @Nullable String country;
+    private @Nullable String countryCode;
+    private @NotNull Boolean isActive;
+    private @Nullable String webpageUrl;
+    private @Nullable String pictureUrl;
     private @NotNull String created;
     private @NotNull String createdUserId;
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
+    private @Nullable String appEnrollmentId;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
     private @Nullable CustomFieldValueModel[] customFieldValues;
+    private @NotNull Boolean isPrimary;
+    private @NotNull String accountingProfileId;
+    private @NotNull String accountingProfileContactId;
+    private @Nullable String name;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @return The field accountingProfileId
+     * For the ID of this record in its originating financial system, see `ErpKey`.
+     *
+     * @return The field contactId
      */
-    public @NotNull String getAccountingProfileId() { return this.accountingProfileId; }
+    public @NotNull String getContactId() { return this.contactId; }
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
      * added to the Lockstep platform.
      *
-     * @param value The new value for accountingProfileId
+     * For the ID of this record in its originating financial system, see `ErpKey`.
+     *
+     * @param value The new value for contactId
      */
-    public void setAccountingProfileId(@NotNull String value) { this.accountingProfileId = value; }
+    public void setContactId(@NotNull String value) { this.contactId = value; }
     /**
-     * The ID of the company profile to which this accounting profile belongs.
+     * The ID of the company to which this contact belongs.
      *
      * @return The field companyId
      */
     public @NotNull String getCompanyId() { return this.companyId; }
     /**
-     * The ID of the company profile to which this accounting profile belongs.
+     * The ID of the company to which this contact belongs.
      *
      * @param value The new value for companyId
      */
@@ -95,55 +113,113 @@ public class AccountingProfileModel
      */
     public void setGroupKey(@NotNull String value) { this.groupKey = value; }
     /**
-     * The name of the accounting profile.
+     * The unique ID of this record as it was known in its originating financial system.
      *
-     * @return The field name
-     */
-    public @NotNull String getName() { return this.name; }
-    /**
-     * The name of the accounting profile.
+     * If this contact record was imported from a financial system, it will have the value `ErpKey`
+     * set to the original primary key number of the record as it was known in the originating financial
+     * system.  If this record was not imported, this value will be `null`.
      *
-     * @param value The new value for name
-     */
-    public void setName(@NotNull String value) { this.name = value; }
-    /**
-     * The type of the accounting profile.
-     * Some examples include 'AR', 'AP', 'AR+AP', 'General Accounting', 'Treasury', 'Payroll', 'Finance'
+     * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
      *
-     * @return The field type
+     * @return The field erpKey
      */
-    public @NotNull String getType() { return this.type; }
+    public @Nullable String getErpKey() { return this.erpKey; }
     /**
-     * The type of the accounting profile.
-     * Some examples include 'AR', 'AP', 'AR+AP', 'General Accounting', 'Treasury', 'Payroll', 'Finance'
+     * The unique ID of this record as it was known in its originating financial system.
      *
-     * @param value The new value for type
+     * If this contact record was imported from a financial system, it will have the value `ErpKey`
+     * set to the original primary key number of the record as it was known in the originating financial
+     * system.  If this record was not imported, this value will be `null`.
+     *
+     * For more information, see [Identity Columns](https://developer.lockstep.io/docs/identity-columns).
+     *
+     * @param value The new value for erpKey
      */
-    public void setType(@NotNull String value) { this.type = value; }
+    public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
-     * The email address associated with the accounting profile.
+     * The name of the contact.
+     *
+     * @return The field contactName
+     */
+    public @Nullable String getContactName() { return this.contactName; }
+    /**
+     * The name of the contact.
+     *
+     * @param value The new value for contactName
+     */
+    public void setContactName(@Nullable String value) { this.contactName = value; }
+    /**
+     * A friendly human-readable code that describes this Contact.
+     *
+     * @return The field contactCode
+     */
+    public @Nullable String getContactCode() { return this.contactCode; }
+    /**
+     * A friendly human-readable code that describes this Contact.
+     *
+     * @param value The new value for contactCode
+     */
+    public void setContactCode(@Nullable String value) { this.contactCode = value; }
+    /**
+     * The title of the contact.
+     *
+     * @return The field title
+     */
+    public @Nullable String getTitle() { return this.title; }
+    /**
+     * The title of the contact.
+     *
+     * @param value The new value for title
+     */
+    public void setTitle(@Nullable String value) { this.title = value; }
+    /**
+     * The role code for the contact.
+     *
+     * @return The field roleCode
+     */
+    public @Nullable String getRoleCode() { return this.roleCode; }
+    /**
+     * The role code for the contact.
+     *
+     * @param value The new value for roleCode
+     */
+    public void setRoleCode(@Nullable String value) { this.roleCode = value; }
+    /**
+     * The email address of the contact.
      *
      * @return The field emailAddress
      */
-    public @NotNull String getEmailAddress() { return this.emailAddress; }
+    public @Nullable String getEmailAddress() { return this.emailAddress; }
     /**
-     * The email address associated with the accounting profile.
+     * The email address of the contact.
      *
      * @param value The new value for emailAddress
      */
-    public void setEmailAddress(@NotNull String value) { this.emailAddress = value; }
+    public void setEmailAddress(@Nullable String value) { this.emailAddress = value; }
     /**
-     * The phone number associated with the accounting profile.
+     * The phone number of the contact.
      *
      * @return The field phone
      */
     public @Nullable String getPhone() { return this.phone; }
     /**
-     * The phone number associated with the accounting profile.
+     * The phone number of the contact.
      *
      * @param value The new value for phone
      */
     public void setPhone(@Nullable String value) { this.phone = value; }
+    /**
+     * The fax number of the contact.
+     *
+     * @return The field fax
+     */
+    public @Nullable String getFax() { return this.fax; }
+    /**
+     * The fax number of the contact.
+     *
+     * @param value The new value for fax
+     */
+    public void setFax(@Nullable String value) { this.fax = value; }
     /**
      * The first line of the address.
      *
@@ -195,15 +271,15 @@ public class AccountingProfileModel
     /**
      * The state/region of the address.
      *
-     * @return The field region
+     * @return The field stateRegion
      */
-    public @Nullable String getRegion() { return this.region; }
+    public @Nullable String getStateRegion() { return this.stateRegion; }
     /**
      * The state/region of the address.
      *
-     * @param value The new value for region
+     * @param value The new value for stateRegion
      */
-    public void setRegion(@Nullable String value) { this.region = value; }
+    public void setStateRegion(@Nullable String value) { this.stateRegion = value; }
     /**
      * The postal/zip code of the address.
      *
@@ -217,17 +293,53 @@ public class AccountingProfileModel
      */
     public void setPostalCode(@Nullable String value) { this.postalCode = value; }
     /**
-     * The two character country code of the address.
+     * The two character country code of the address. This will be validated by the /api/v1/definitions/countries data set
      *
-     * @return The field country
+     * @return The field countryCode
      */
-    public @Nullable String getCountry() { return this.country; }
+    public @Nullable String getCountryCode() { return this.countryCode; }
     /**
-     * The two character country code of the address.
+     * The two character country code of the address. This will be validated by the /api/v1/definitions/countries data set
      *
-     * @param value The new value for country
+     * @param value The new value for countryCode
      */
-    public void setCountry(@Nullable String value) { this.country = value; }
+    public void setCountryCode(@Nullable String value) { this.countryCode = value; }
+    /**
+     * Flag indicating if the contact is active.
+     *
+     * @return The field isActive
+     */
+    public @NotNull Boolean getIsActive() { return this.isActive; }
+    /**
+     * Flag indicating if the contact is active.
+     *
+     * @param value The new value for isActive
+     */
+    public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
+    /**
+     * The webpage url of the contact.
+     *
+     * @return The field webpageUrl
+     */
+    public @Nullable String getWebpageUrl() { return this.webpageUrl; }
+    /**
+     * The webpage url of the contact.
+     *
+     * @param value The new value for webpageUrl
+     */
+    public void setWebpageUrl(@Nullable String value) { this.webpageUrl = value; }
+    /**
+     * The picture/avatar url of the contact.
+     *
+     * @return The field pictureUrl
+     */
+    public @Nullable String getPictureUrl() { return this.pictureUrl; }
+    /**
+     * The picture/avatar url of the contact.
+     *
+     * @param value The new value for pictureUrl
+     */
+    public void setPictureUrl(@Nullable String value) { this.pictureUrl = value; }
     /**
      * The date on which this record was created.
      *
@@ -241,13 +353,13 @@ public class AccountingProfileModel
      */
     public void setCreated(@NotNull String value) { this.created = value; }
     /**
-     * The ID of the user who created this accounting profile.
+     * The ID of the user who created this contact.
      *
      * @return The field createdUserId
      */
     public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
-     * The ID of the user who created this accounting profile.
+     * The ID of the user who created this contact.
      *
      * @param value The new value for createdUserId
      */
@@ -265,23 +377,41 @@ public class AccountingProfileModel
      */
     public void setModified(@NotNull String value) { this.modified = value; }
     /**
-     * The ID of the user who last modified this accounting profile.
+     * The ID of the user who last modified this contact.
      *
      * @return The field modifiedUserId
      */
     public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
-     * The ID of the user who last modified this accounting profile.
+     * The ID of the user who last modified this contact.
      *
      * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
+     * The AppEnrollmentId of the application that imported this record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.  This value is null if this record
+     * was not loaded from an external ERP or financial system.
+     *
+     * @return The field appEnrollmentId
+     */
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
+    /**
+     * The AppEnrollmentId of the application that imported this record.  For accounts
+     * with more than one financial system connected, this field identifies the originating
+     * financial system that produced this record.  This value is null if this record
+     * was not loaded from an external ERP or financial system.
+     *
+     * @param value The new value for appEnrollmentId
+     */
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
      *
      * To create a note, use the [Create Note](https://developer.lockstep.io/reference/post_api-v1-notes)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field notes
@@ -292,7 +422,7 @@ public class AccountingProfileModel
      * `include` parameter when retrieving data.
      *
      * To create a note, use the [Create Note](https://developer.lockstep.io/reference/post_api-v1-notes)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for notes
@@ -303,7 +433,7 @@ public class AccountingProfileModel
      * the `include` parameter when retrieving data.
      *
      * To create an attachment, use the [Upload Attachment](https://developer.lockstep.io/reference/post_api-v1-attachments)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field attachments
@@ -314,7 +444,7 @@ public class AccountingProfileModel
      * the `include` parameter when retrieving data.
      *
      * To create an attachment, use the [Upload Attachment](https://developer.lockstep.io/reference/post_api-v1-attachments)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for attachments
@@ -325,7 +455,7 @@ public class AccountingProfileModel
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
      *
      * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field customFieldDefinitions
@@ -336,7 +466,7 @@ public class AccountingProfileModel
      * `CustomFieldDefinitions` in the `include` parameter when retrieving data.
      *
      * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for customFieldDefinitions
@@ -347,7 +477,7 @@ public class AccountingProfileModel
      * `CustomFieldValues` in the `include` parameter when retrieving data.
      *
      * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @return The field customFieldValues
@@ -358,10 +488,58 @@ public class AccountingProfileModel
      * `CustomFieldValues` in the `include` parameter when retrieving data.
      *
      * To create a custom field, use the [Create Custom Field](https://developer.lockstep.io/reference/post_api-v1-customfieldvalues)
-     * endpoint with the `TableKey` to `AccountingProfile` and the `ObjectKey` set to the `AccountingProfileId` for this record.  For
+     * endpoint with the `TableKey` to `Contact` and the `ObjectKey` set to the `ContactId` for this record.  For
      * more information on extensibility, see [linking extensible metadata to objects](https://developer.lockstep.io/docs/custom-fields#linking-metadata-to-an-object).
      *
      * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    /**
+     * Determines whether the contact is primary or secondary.
+     *
+     * @return The field isPrimary
+     */
+    public @NotNull Boolean getIsPrimary() { return this.isPrimary; }
+    /**
+     * Determines whether the contact is primary or secondary.
+     *
+     * @param value The new value for isPrimary
+     */
+    public void setIsPrimary(@NotNull Boolean value) { this.isPrimary = value; }
+    /**
+     * The ID of the profile this contact belongs to.
+     *
+     * @return The field accountingProfileId
+     */
+    public @NotNull String getAccountingProfileId() { return this.accountingProfileId; }
+    /**
+     * The ID of the profile this contact belongs to.
+     *
+     * @param value The new value for accountingProfileId
+     */
+    public void setAccountingProfileId(@NotNull String value) { this.accountingProfileId = value; }
+    /**
+     * The ID of the accounting profile contact this contact matches.
+     *
+     * @return The field accountingProfileContactId
+     */
+    public @NotNull String getAccountingProfileContactId() { return this.accountingProfileContactId; }
+    /**
+     * The ID of the accounting profile contact this contact matches.
+     *
+     * @param value The new value for accountingProfileContactId
+     */
+    public void setAccountingProfileContactId(@NotNull String value) { this.accountingProfileContactId = value; }
+    /**
+     * The Name of the profile this contact belongs to.
+     *
+     * @return The field name
+     */
+    public @Nullable String getName() { return this.name; }
+    /**
+     * The Name of the profile this contact belongs to.
+     *
+     * @param value The new value for name
+     */
+    public void setName(@Nullable String value) { this.name = value; }
 };

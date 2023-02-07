@@ -36,6 +36,7 @@ public class SyncRequestModel
     private @Nullable String operationTypeName;
     private @NotNull Integer operationType;
     private @Nullable String processResultMessage;
+    private @NotNull Integer failureCount;
     private @Nullable String runFullSync;
     private @Nullable String appEnrollmentId;
     private @NotNull String created;
@@ -141,6 +142,18 @@ public class SyncRequestModel
      * @param value The new value for processResultMessage
      */
     public void setProcessResultMessage(@Nullable String value) { this.processResultMessage = value; }
+    /**
+     * The number of times this Sync Request has failed
+     *
+     * @return The field failureCount
+     */
+    public @NotNull Integer getFailureCount() { return this.failureCount; }
+    /**
+     * The number of times this Sync Request has failed
+     *
+     * @param value The new value for failureCount
+     */
+    public void setFailureCount(@NotNull Integer value) { this.failureCount = value; }
     /**
      * A boolean indicating whether a sync from an ERP system should process all the data from the ERP
      * as opposed to just the delta of changes since the previous sync run
