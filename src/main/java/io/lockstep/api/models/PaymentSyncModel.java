@@ -48,6 +48,8 @@ public class PaymentSyncModel
     private @Nullable Boolean isVoided;
     private @Nullable Boolean inDispute;
     private @NotNull Double currencyRate;
+    private @NotNull Double baseCurrencyPaymentAmount;
+    private @NotNull Double baseCurrencyUnappliedAmount;
 
     /**
      * This is the primary key of the Payment record. For this field, you should use whatever the payment's unique
@@ -196,25 +198,25 @@ public class PaymentSyncModel
      */
     public void setPostDate(@NotNull String value) { this.postDate = value; }
     /**
-     * Total amount of this payment.
+     * Total amount of this payment in the payment's currency.
      *
      * @return The field paymentAmount
      */
     public @NotNull Double getPaymentAmount() { return this.paymentAmount; }
     /**
-     * Total amount of this payment.
+     * Total amount of this payment in the payment's currency.
      *
      * @param value The new value for paymentAmount
      */
     public void setPaymentAmount(@NotNull Double value) { this.paymentAmount = value; }
     /**
-     * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
+     * Unapplied balance of this payment in the payment's currency.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @return The field unappliedAmount
      */
     public @NotNull Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
-     * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
+     * Unapplied balance of this payment in the payment's currency.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @param value The new value for unappliedAmount
      */
@@ -319,4 +321,28 @@ public class PaymentSyncModel
      * @param value The new value for currencyRate
      */
     public void setCurrencyRate(@NotNull Double value) { this.currencyRate = value; }
+    /**
+     * Total amount of this payment in the erp's base currency.
+     *
+     * @return The field baseCurrencyPaymentAmount
+     */
+    public @NotNull Double getBaseCurrencyPaymentAmount() { return this.baseCurrencyPaymentAmount; }
+    /**
+     * Total amount of this payment in the erp's base currency.
+     *
+     * @param value The new value for baseCurrencyPaymentAmount
+     */
+    public void setBaseCurrencyPaymentAmount(@NotNull Double value) { this.baseCurrencyPaymentAmount = value; }
+    /**
+     * Unapplied balance of this payment in the erp's base currency.  If this amount is nonzero, the field `IsOpen` will be true.
+     *
+     * @return The field baseCurrencyUnappliedAmount
+     */
+    public @NotNull Double getBaseCurrencyUnappliedAmount() { return this.baseCurrencyUnappliedAmount; }
+    /**
+     * Unapplied balance of this payment in the erp's base currency.  If this amount is nonzero, the field `IsOpen` will be true.
+     *
+     * @param value The new value for baseCurrencyUnappliedAmount
+     */
+    public void setBaseCurrencyUnappliedAmount(@NotNull Double value) { this.baseCurrencyUnappliedAmount = value; }
 };

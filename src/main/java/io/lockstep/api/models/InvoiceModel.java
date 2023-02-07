@@ -42,10 +42,10 @@ public class InvoiceModel
     private @Nullable String termsCode;
     private @Nullable String specialTerms;
     private @Nullable String currencyCode;
-    private @Nullable Double totalAmount;
-    private @Nullable Double salesTaxAmount;
-    private @Nullable Double discountAmount;
-    private @Nullable Double outstandingBalanceAmount;
+    private @NotNull Double totalAmount;
+    private @NotNull Double salesTaxAmount;
+    private @NotNull Double discountAmount;
+    private @NotNull Double outstandingBalanceAmount;
     private @Nullable String invoiceDate;
     private @Nullable String discountDate;
     private @Nullable String postedDate;
@@ -65,6 +65,10 @@ public class InvoiceModel
     private @NotNull Boolean excludeFromAging;
     private @Nullable String preferredDeliveryMethod;
     private @NotNull Double currencyRate;
+    private @NotNull Double baseCurrencyTotalAmount;
+    private @NotNull Double baseCurrencySalesTaxAmount;
+    private @NotNull Double baseCurrencyDiscountAmount;
+    private @NotNull Double baseCurrencyOutstandingBalanceAmount;
     private @Nullable InvoiceAddressModel[] addresses;
     private @Nullable InvoiceLineModel[] lines;
     private @Nullable InvoicePaymentDetailModel[] payments;
@@ -298,53 +302,53 @@ public class InvoiceModel
      */
     public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
     /**
-     * The total value of this invoice, inclusive of all taxes and line items.
+     * The total value of this invoice, inclusive of all taxes and line items in it's tendered currency.
      *
      * @return The field totalAmount
      */
-    public @Nullable Double getTotalAmount() { return this.totalAmount; }
+    public @NotNull Double getTotalAmount() { return this.totalAmount; }
     /**
-     * The total value of this invoice, inclusive of all taxes and line items.
+     * The total value of this invoice, inclusive of all taxes and line items in it's tendered currency.
      *
      * @param value The new value for totalAmount
      */
-    public void setTotalAmount(@Nullable Double value) { this.totalAmount = value; }
+    public void setTotalAmount(@NotNull Double value) { this.totalAmount = value; }
     /**
-     * The total sales (or transactional) tax calculated for this invoice.
+     * The total sales (or transactional) tax calculated for this invoice in it's tendered currency.
      *
      * @return The field salesTaxAmount
      */
-    public @Nullable Double getSalesTaxAmount() { return this.salesTaxAmount; }
+    public @NotNull Double getSalesTaxAmount() { return this.salesTaxAmount; }
     /**
-     * The total sales (or transactional) tax calculated for this invoice.
+     * The total sales (or transactional) tax calculated for this invoice in it's tendered currency.
      *
      * @param value The new value for salesTaxAmount
      */
-    public void setSalesTaxAmount(@Nullable Double value) { this.salesTaxAmount = value; }
+    public void setSalesTaxAmount(@NotNull Double value) { this.salesTaxAmount = value; }
     /**
-     * The total discounts given by the seller to the buyer on this invoice.
+     * The total discounts given by the seller to the buyer on this invoice in it's tendered currency.
      *
      * @return The field discountAmount
      */
-    public @Nullable Double getDiscountAmount() { return this.discountAmount; }
+    public @NotNull Double getDiscountAmount() { return this.discountAmount; }
     /**
-     * The total discounts given by the seller to the buyer on this invoice.
+     * The total discounts given by the seller to the buyer on this invoice in it's tendered currency.
      *
      * @param value The new value for discountAmount
      */
-    public void setDiscountAmount(@Nullable Double value) { this.discountAmount = value; }
+    public void setDiscountAmount(@NotNull Double value) { this.discountAmount = value; }
     /**
-     * The remaining balance value of this invoice.
+     * The remaining balance value of this invoice in it's tendered currency.
      *
      * @return The field outstandingBalanceAmount
      */
-    public @Nullable Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
+    public @NotNull Double getOutstandingBalanceAmount() { return this.outstandingBalanceAmount; }
     /**
-     * The remaining balance value of this invoice.
+     * The remaining balance value of this invoice in it's tendered currency.
      *
      * @param value The new value for outstandingBalanceAmount
      */
-    public void setOutstandingBalanceAmount(@Nullable Double value) { this.outstandingBalanceAmount = value; }
+    public void setOutstandingBalanceAmount(@NotNull Double value) { this.outstandingBalanceAmount = value; }
     /**
      * The reporting date for this invoice.
      *
@@ -581,6 +585,54 @@ public class InvoiceModel
      * @param value The new value for currencyRate
      */
     public void setCurrencyRate(@NotNull Double value) { this.currencyRate = value; }
+    /**
+     * The total value of this invoice, inclusive of all taxes and line items in the group's base currency.
+     *
+     * @return The field baseCurrencyTotalAmount
+     */
+    public @NotNull Double getBaseCurrencyTotalAmount() { return this.baseCurrencyTotalAmount; }
+    /**
+     * The total value of this invoice, inclusive of all taxes and line items in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyTotalAmount
+     */
+    public void setBaseCurrencyTotalAmount(@NotNull Double value) { this.baseCurrencyTotalAmount = value; }
+    /**
+     * The total sales (or transactional) tax calculated for this invoice in the group's base currency.
+     *
+     * @return The field baseCurrencySalesTaxAmount
+     */
+    public @NotNull Double getBaseCurrencySalesTaxAmount() { return this.baseCurrencySalesTaxAmount; }
+    /**
+     * The total sales (or transactional) tax calculated for this invoice in the group's base currency.
+     *
+     * @param value The new value for baseCurrencySalesTaxAmount
+     */
+    public void setBaseCurrencySalesTaxAmount(@NotNull Double value) { this.baseCurrencySalesTaxAmount = value; }
+    /**
+     * The total discounts given by the seller to the buyer on this invoice in the group's base currency.
+     *
+     * @return The field baseCurrencyDiscountAmount
+     */
+    public @NotNull Double getBaseCurrencyDiscountAmount() { return this.baseCurrencyDiscountAmount; }
+    /**
+     * The total discounts given by the seller to the buyer on this invoice in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyDiscountAmount
+     */
+    public void setBaseCurrencyDiscountAmount(@NotNull Double value) { this.baseCurrencyDiscountAmount = value; }
+    /**
+     * The remaining balance value of this invoice in the group's base currency.
+     *
+     * @return The field baseCurrencyOutstandingBalanceAmount
+     */
+    public @NotNull Double getBaseCurrencyOutstandingBalanceAmount() { return this.baseCurrencyOutstandingBalanceAmount; }
+    /**
+     * The remaining balance value of this invoice in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyOutstandingBalanceAmount
+     */
+    public void setBaseCurrencyOutstandingBalanceAmount(@NotNull Double value) { this.baseCurrencyOutstandingBalanceAmount = value; }
     /**
      * All addresses connected to this invoice.
      * To retrieve this collection, specify `Addresses` in the "Include" parameter for your query.

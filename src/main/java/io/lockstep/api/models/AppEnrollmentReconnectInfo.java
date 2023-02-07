@@ -29,6 +29,7 @@ public class AppEnrollmentReconnectInfo
     private @Nullable String realmId;
     private @Nullable String tokenId;
     private @Nullable String tokenSecret;
+    private @Nullable String redirectUri;
 
     /**
      * The OAuth authentication code.
@@ -43,13 +44,13 @@ public class AppEnrollmentReconnectInfo
      */
     public void setAuthCode(@Nullable String value) { this.authCode = value; }
     /**
-     * The OAuth authentication code.
+     * The username for the web services account with access permissions.
      *
      * @return The field username
      */
     public @Nullable String getUsername() { return this.username; }
     /**
-     * The OAuth authentication code.
+     * The username for the web services account with access permissions.
      *
      * @param value The new value for username
      */
@@ -102,4 +103,16 @@ public class AppEnrollmentReconnectInfo
      * @param value The new value for tokenSecret
      */
     public void setTokenSecret(@Nullable String value) { this.tokenSecret = value; }
+    /**
+     * The OAuth redirect uri.
+     *
+     * @return The field redirectUri
+     */
+    public @Nullable String getRedirectUri() { return this.redirectUri; }
+    /**
+     * The OAuth redirect uri.
+     *
+     * @param value The new value for redirectUri
+     */
+    public void setRedirectUri(@Nullable String value) { this.redirectUri = value; }
 };

@@ -66,6 +66,8 @@ public class CompanyModel
     private @Nullable String stateTaxId;
     private @Nullable String stateOfIncorporation;
     private @Nullable String linkedInUrlSlug;
+    private @NotNull Boolean isVerified;
+    private @Nullable String lastVerifiedDate;
     private @Nullable ViewBoxSettingsModel viewBoxSettings;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
@@ -611,6 +613,30 @@ public class CompanyModel
      * @param value The new value for linkedInUrlSlug
      */
     public void setLinkedInUrlSlug(@Nullable String value) { this.linkedInUrlSlug = value; }
+    /**
+     * This flag indicates whether the company is verified.
+     *
+     * @return The field isVerified
+     */
+    public @NotNull Boolean getIsVerified() { return this.isVerified; }
+    /**
+     * This flag indicates whether the company is verified.
+     *
+     * @param value The new value for isVerified
+     */
+    public void setIsVerified(@NotNull Boolean value) { this.isVerified = value; }
+    /**
+     * The date this company was last verified.
+     *
+     * @return The field lastVerifiedDate
+     */
+    public @Nullable String getLastVerifiedDate() { return this.lastVerifiedDate; }
+    /**
+     * The date this company was last verified.
+     *
+     * @param value The new value for lastVerifiedDate
+     */
+    public void setLastVerifiedDate(@Nullable String value) { this.lastVerifiedDate = value; }
     /**
      * View box settings for the company logo.
      *

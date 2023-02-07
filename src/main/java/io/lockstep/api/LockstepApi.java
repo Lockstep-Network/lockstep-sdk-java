@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2023 Lockstep, Inc.
- * @version    2023.3.18
+ * @version    2023.5.21
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -19,6 +19,7 @@ package io.lockstep.api;
 import io.lockstep.api.clients.ApiKeysClient;
 import io.lockstep.api.clients.AppEnrollmentsClient;
 import io.lockstep.api.clients.ApplicationsClient;
+import io.lockstep.api.clients.AttachmentLinksClient;
 import io.lockstep.api.clients.AttachmentsClient;
 import io.lockstep.api.clients.CodeDefinitionsClient;
 import io.lockstep.api.clients.CompaniesClient;
@@ -71,6 +72,7 @@ public class LockstepApi {
     private ApiKeysClient apiKeys;
     private AppEnrollmentsClient appEnrollments;
     private ApplicationsClient applications;
+    private AttachmentLinksClient attachmentLinks;
     private AttachmentsClient attachments;
     private CodeDefinitionsClient codeDefinitions;
     private CompaniesClient companies;
@@ -115,6 +117,7 @@ public class LockstepApi {
         this.apiKeys = new ApiKeysClient(this);
         this.appEnrollments = new AppEnrollmentsClient(this);
         this.applications = new ApplicationsClient(this);
+        this.attachmentLinks = new AttachmentLinksClient(this);
         this.attachments = new AttachmentsClient(this);
         this.codeDefinitions = new CodeDefinitionsClient(this);
         this.companies = new CompaniesClient(this);
@@ -171,6 +174,12 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.ApplicationsClient client} methods in the API.
      */
     public @NotNull ApplicationsClient getApplicationsClient() { return this.applications; }
+    /**
+     * A collection of API methods relating to AttachmentLinks
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.AttachmentLinksClient client} methods in the API.
+     */
+    public @NotNull AttachmentLinksClient getAttachmentLinksClient() { return this.attachmentLinks; }
     /**
      * A collection of API methods relating to Attachments
      *

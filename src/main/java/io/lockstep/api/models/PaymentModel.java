@@ -51,6 +51,8 @@ public class PaymentModel
     private @NotNull Boolean isVoided;
     private @NotNull Boolean inDispute;
     private @NotNull Double currencyRate;
+    private @NotNull Double baseCurrencyPaymentAmount;
+    private @NotNull Double baseCurrencyUnappliedAmount;
     private @Nullable PaymentAppliedModel[] applications;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
@@ -234,25 +236,25 @@ public class PaymentModel
      */
     public void setPostDate(@NotNull String value) { this.postDate = value; }
     /**
-     * Total amount of this payment.
+     * Total amount of this payment in it's received currency.
      *
      * @return The field paymentAmount
      */
     public @NotNull Double getPaymentAmount() { return this.paymentAmount; }
     /**
-     * Total amount of this payment.
+     * Total amount of this payment in it's received currency.
      *
      * @param value The new value for paymentAmount
      */
     public void setPaymentAmount(@NotNull Double value) { this.paymentAmount = value; }
     /**
-     * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
+     * Unapplied balance of this payment in it's received currency.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @return The field unappliedAmount
      */
     public @NotNull Double getUnappliedAmount() { return this.unappliedAmount; }
     /**
-     * Unapplied balance of this payment.  If this amount is nonzero, the field `IsOpen` will be true.
+     * Unapplied balance of this payment in it's received currency.  If this amount is nonzero, the field `IsOpen` will be true.
      *
      * @param value The new value for unappliedAmount
      */
@@ -387,6 +389,30 @@ public class PaymentModel
      * @param value The new value for currencyRate
      */
     public void setCurrencyRate(@NotNull Double value) { this.currencyRate = value; }
+    /**
+     * Total amount of this payment in the group's base currency.
+     *
+     * @return The field baseCurrencyPaymentAmount
+     */
+    public @NotNull Double getBaseCurrencyPaymentAmount() { return this.baseCurrencyPaymentAmount; }
+    /**
+     * Total amount of this payment in the group's base currency.
+     *
+     * @param value The new value for baseCurrencyPaymentAmount
+     */
+    public void setBaseCurrencyPaymentAmount(@NotNull Double value) { this.baseCurrencyPaymentAmount = value; }
+    /**
+     * Unapplied balance of this payment in the group's base currency.  If this amount is nonzero, the field `IsOpen` will be true.
+     *
+     * @return The field baseCurrencyUnappliedAmount
+     */
+    public @NotNull Double getBaseCurrencyUnappliedAmount() { return this.baseCurrencyUnappliedAmount; }
+    /**
+     * Unapplied balance of this payment in the group's base currency.  If this amount is nonzero, the field `IsOpen` will be true.
+     *
+     * @param value The new value for baseCurrencyUnappliedAmount
+     */
+    public void setBaseCurrencyUnappliedAmount(@NotNull Double value) { this.baseCurrencyUnappliedAmount = value; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.

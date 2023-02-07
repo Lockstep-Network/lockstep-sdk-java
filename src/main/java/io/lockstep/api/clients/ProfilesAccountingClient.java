@@ -23,9 +23,9 @@ import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.AccountingProfileModel;
 
 import io.lockstep.api.models.ActionResultModel;
+import io.lockstep.api.models.AccountingProfileRequest;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
-import io.lockstep.api.models.ContactModel;
 
 /**
  * Contains all methods related to ProfilesAccounting
@@ -103,7 +103,7 @@ public class ProfilesAccountingClient
      * @param body The Accounting Profiles to create
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<AccountingProfileModel[]> createAccountingProfiles(@NotNull AccountingProfileModel[] body)
+    public @NotNull LockstepResponse<AccountingProfileModel[]> createAccountingProfiles(@NotNull AccountingProfileRequest[] body)
     {
         RestRequest<AccountingProfileModel[]> r = new RestRequest<AccountingProfileModel[]>(this.client, "POST", "/api/v1/profiles/accounting");
         r.AddBody(body);
@@ -133,20 +133,5 @@ public class ProfilesAccountingClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<AccountingProfileModel>>() {}.getType());
-    }
-
-    /**
-     * Retrieves all the Contacts associated with the Accounting Profile by this unique identifier, optionally including nested data sets.
-     *
-     * A Contact has a link to a Contact that is associated with your company's Accounting Profile.
-     *
-     * @param id The unique Lockstep Platform ID number of this Accounting Profile
-     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
-     */
-    public @NotNull LockstepResponse<ContactModel[]> retrieveAllAccountingProfileContacts(@NotNull String id)
-    {
-        RestRequest<ContactModel[]> r = new RestRequest<ContactModel[]>(this.client, "GET", "/api/v1/profiles/accounting/{id}/contacts/models");
-        r.AddPath("{id}", id.toString());
-        return r.Call(ContactModel[].class);
     }
 }
