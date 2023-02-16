@@ -53,6 +53,7 @@ public class PaymentModel
     private @NotNull Double currencyRate;
     private @NotNull Double baseCurrencyPaymentAmount;
     private @NotNull Double baseCurrencyUnappliedAmount;
+    private @Nullable String serviceFabricStatus;
     private @Nullable PaymentAppliedModel[] applications;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
@@ -413,6 +414,20 @@ public class PaymentModel
      * @param value The new value for baseCurrencyUnappliedAmount
      */
     public void setBaseCurrencyUnappliedAmount(@NotNull Double value) { this.baseCurrencyUnappliedAmount = value; }
+    /**
+     * The status of this payment within Service Fabric.
+     * "UNAUTHORISED" "PENDING" "PAID" "PAID_OFFLINE" "FAILED" "CANCELLED" "REJECTED" "REFUNDED" "PARTIALLY" "PARTIALLY_REFUNDED"
+     *
+     * @return The field serviceFabricStatus
+     */
+    public @Nullable String getServiceFabricStatus() { return this.serviceFabricStatus; }
+    /**
+     * The status of this payment within Service Fabric.
+     * "UNAUTHORISED" "PENDING" "PAID" "PAID_OFFLINE" "FAILED" "CANCELLED" "REJECTED" "REFUNDED" "PARTIALLY" "PARTIALLY_REFUNDED"
+     *
+     * @param value The new value for serviceFabricStatus
+     */
+    public void setServiceFabricStatus(@Nullable String value) { this.serviceFabricStatus = value; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.

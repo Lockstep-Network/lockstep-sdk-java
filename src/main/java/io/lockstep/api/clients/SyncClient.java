@@ -23,8 +23,8 @@ import org.jetbrains.annotations.Nullable;
 import io.lockstep.api.models.SyncRequestModel;
 import io.lockstep.api.models.SyncSubmitModel;
 import io.lockstep.api.models.BatchSyncModel;
-import io.lockstep.api.BlobRequest;
 
+import io.lockstep.api.BlobRequest;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 
@@ -82,12 +82,16 @@ public class SyncClient
      *
      * A Sync task represents an action performed by an Application for a particular account.  An Application can provide many different tasks as part of their capabilities.  Sync tasks are executed in the background and will continue running after they are created.  Use one of the creation APIs to request execution of a task. To check on the progress of the task, call GetSync or QuerySync.
      *
+     * @param appEnrollmentId The optional existing app enrollment to associate with the data in the zip file.
+     * @param isFullSync True if this is a full sync, false if this is a partial sync. Defaults to false.
      * @param filename The full path of a file to upload to the API
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
-    public @NotNull LockstepResponse<SyncRequestModel> uploadSyncFile(@NotNull byte[] filename)
+    public @NotNull LockstepResponse<SyncRequestModel> uploadSyncFile(@Nullable String appEnrollmentId, @Nullable Boolean isFullSync, @NotNull byte[] filename)
     {
         RestRequest<SyncRequestModel> r = new RestRequest<SyncRequestModel>(this.client, "POST", "/api/v1/Sync/zip");
+        r.AddQuery("appEnrollmentId", appEnrollmentId.toString());
+        r.AddQuery("isFullSync", isFullSync.toString());
         return r.Call(SyncRequestModel.class);
     }
 

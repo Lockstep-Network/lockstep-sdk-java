@@ -37,7 +37,7 @@ public class SyncRequestModel
     private @NotNull Integer operationType;
     private @Nullable String processResultMessage;
     private @NotNull Integer failureCount;
-    private @Nullable String runFullSync;
+    private @NotNull Boolean runFullSync;
     private @Nullable String appEnrollmentId;
     private @NotNull String created;
     private @NotNull String modified;
@@ -119,13 +119,13 @@ public class SyncRequestModel
      */
     public void setOperationTypeName(@Nullable String value) { this.operationTypeName = value; }
     /**
-     * The name of the OperationType for this SyncRequest
+     * Possible operation types for a SyncRequest
      *
      * @return The field operationType
      */
     public @NotNull Integer getOperationType() { return this.operationType; }
     /**
-     * The name of the OperationType for this SyncRequest
+     * Possible operation types for a SyncRequest
      *
      * @param value The new value for operationType
      */
@@ -160,14 +160,14 @@ public class SyncRequestModel
      *
      * @return The field runFullSync
      */
-    public @Nullable String getRunFullSync() { return this.runFullSync; }
+    public @NotNull Boolean getRunFullSync() { return this.runFullSync; }
     /**
      * A boolean indicating whether a sync from an ERP system should process all the data from the ERP
      * as opposed to just the delta of changes since the previous sync run
      *
      * @param value The new value for runFullSync
      */
-    public void setRunFullSync(@Nullable String value) { this.runFullSync = value; }
+    public void setRunFullSync(@NotNull Boolean value) { this.runFullSync = value; }
     /**
      * The AppEnrollmentId of the AppEnrollment object that executed this sync request
      *
