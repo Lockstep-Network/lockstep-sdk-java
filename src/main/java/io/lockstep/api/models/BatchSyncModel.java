@@ -31,6 +31,8 @@ import org.jetbrains.annotations.Nullable;
  */
 public class BatchSyncModel
 {
+    private @Nullable String appEnrollmentId;
+    private @NotNull Boolean isFullSync;
     private @Nullable CompanySyncModel[] companies;
     private @Nullable ContactSyncModel[] contacts;
     private @Nullable CreditMemoAppliedSyncModel[] creditMemoApplications;
@@ -44,6 +46,30 @@ public class BatchSyncModel
     private @Nullable FinancialAccountBalanceHistorySyncModel[] financialAccountBalanceHistories;
     private @Nullable BaseCurrencySyncModel[] baseCurrencies;
 
+    /**
+     * The optional existing app enrollment to associate with the data in this batch.
+     *
+     * @return The field appEnrollmentId
+     */
+    public @Nullable String getAppEnrollmentId() { return this.appEnrollmentId; }
+    /**
+     * The optional existing app enrollment to associate with the data in this batch.
+     *
+     * @param value The new value for appEnrollmentId
+     */
+    public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
+     * True if this is a full sync, false if this is a partial sync. Defaults to false.
+     *
+     * @return The field isFullSync
+     */
+    public @NotNull Boolean getIsFullSync() { return this.isFullSync; }
+    /**
+     * True if this is a full sync, false if this is a partial sync. Defaults to false.
+     *
+     * @param value The new value for isFullSync
+     */
+    public void setIsFullSync(@NotNull Boolean value) { this.isFullSync = value; }
     /**
      * A list of Company records to merge with your Lockstep Platform data
      *

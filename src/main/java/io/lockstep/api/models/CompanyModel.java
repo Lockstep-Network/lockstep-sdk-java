@@ -69,6 +69,8 @@ public class CompanyModel
     private @NotNull Boolean isVerified;
     private @Nullable String lastVerifiedDate;
     private @Nullable ViewBoxSettingsModel viewBoxSettings;
+    private @Nullable String serviceFabricOrgId;
+    private @Nullable String serviceFabricCompanyId;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable ContactModel[] contacts;
@@ -649,6 +651,30 @@ public class CompanyModel
      * @param value The new value for viewBoxSettings
      */
     public void setViewBoxSettings(@Nullable ViewBoxSettingsModel value) { this.viewBoxSettings = value; }
+    /**
+     * The unique ID of the Service Fabric organisation to which this record belongs.
+     *
+     * @return The field serviceFabricOrgId
+     */
+    public @Nullable String getServiceFabricOrgId() { return this.serviceFabricOrgId; }
+    /**
+     * The unique ID of the Service Fabric organisation to which this record belongs.
+     *
+     * @param value The new value for serviceFabricOrgId
+     */
+    public void setServiceFabricOrgId(@Nullable String value) { this.serviceFabricOrgId = value; }
+    /**
+     * The unique ID of this record within Service Fabric.
+     *
+     * @return The field serviceFabricCompanyId
+     */
+    public @Nullable String getServiceFabricCompanyId() { return this.serviceFabricCompanyId; }
+    /**
+     * The unique ID of this record within Service Fabric.
+     *
+     * @param value The new value for serviceFabricCompanyId
+     */
+    public void setServiceFabricCompanyId(@Nullable String value) { this.serviceFabricCompanyId = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.
