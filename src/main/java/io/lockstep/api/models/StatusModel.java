@@ -38,12 +38,13 @@ public class StatusModel
     private @Nullable String environment;
     private @Nullable String version;
     private @Nullable Boolean onboardingScheduled;
+    private @Nullable String baseCurrencyCode;
+    private @Nullable String countryCode;
     private @Nullable MagicLinkStatusModel magicLink;
     private @Nullable SupportAccessModel supportAccess;
     private @NotNull Boolean isImpersonated;
-    private @Nullable Object dependencies;
     private @Nullable UserGroupModel[] userGroups;
-    private @Nullable String baseCurrencyCode;
+    private @Nullable Object dependencies;
 
     /**
      * If authentication is successful, contains the username of the logged-in user.
@@ -226,6 +227,30 @@ public class StatusModel
      */
     public void setOnboardingScheduled(@Nullable Boolean value) { this.onboardingScheduled = value; }
     /**
+     * Base Currency of the group
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * Base Currency of the group
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * Country code of the group
+     *
+     * @return The field countryCode
+     */
+    public @Nullable String getCountryCode() { return this.countryCode; }
+    /**
+     * Country code of the group
+     *
+     * @param value The new value for countryCode
+     */
+    public void setCountryCode(@Nullable String value) { this.countryCode = value; }
+    /**
      * Magic link information about the user
      *
      * @return The field magicLink
@@ -262,20 +287,6 @@ public class StatusModel
      */
     public void setIsImpersonated(@NotNull Boolean value) { this.isImpersonated = value; }
     /**
-     * Statuses for the dependencies of this api.
-     * OK if the dependency is working.
-     *
-     * @return The field dependencies
-     */
-    public @Nullable Object getDependencies() { return this.dependencies; }
-    /**
-     * Statuses for the dependencies of this api.
-     * OK if the dependency is working.
-     *
-     * @param value The new value for dependencies
-     */
-    public void setDependencies(@Nullable Object value) { this.dependencies = value; }
-    /**
      * The set of Groups that the user has access to.
      * You can use the /api/v1/useraccounts/change-group endpoint to change your active group.
      *
@@ -290,15 +301,17 @@ public class StatusModel
      */
     public void setUserGroups(@Nullable UserGroupModel[] value) { this.userGroups = value; }
     /**
-     * Base Currency of the group
+     * Statuses for the dependencies of this api.
+     * OK if the dependency is working.
      *
-     * @return The field baseCurrencyCode
+     * @return The field dependencies
      */
-    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    public @Nullable Object getDependencies() { return this.dependencies; }
     /**
-     * Base Currency of the group
+     * Statuses for the dependencies of this api.
+     * OK if the dependency is working.
      *
-     * @param value The new value for baseCurrencyCode
+     * @param value The new value for dependencies
      */
-    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    public void setDependencies(@Nullable Object value) { this.dependencies = value; }
 };

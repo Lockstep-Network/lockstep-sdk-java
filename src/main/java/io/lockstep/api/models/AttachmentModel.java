@@ -34,11 +34,7 @@ public class AttachmentModel
     private @NotNull String objectKey;
     private @Nullable String fileName;
     private @Nullable String fileExt;
-    private @NotNull String attachmentTypeId;
     private @NotNull Boolean isArchived;
-    private @NotNull String originAttachmentId;
-    private @NotNull Boolean viewInternal;
-    private @NotNull Boolean viewExternal;
     private @Nullable String erpKey;
     private @Nullable String appEnrollmentId;
     private @NotNull String created;
@@ -158,18 +154,6 @@ public class AttachmentModel
      */
     public void setFileExt(@Nullable String value) { this.fileExt = value; }
     /**
-     * DEPRECATED: This field is replaced by `AttachmentType`.
-     *
-     * @return The field attachmentTypeId
-     */
-    public @NotNull String getAttachmentTypeId() { return this.attachmentTypeId; }
-    /**
-     * DEPRECATED: This field is replaced by `AttachmentType`.
-     *
-     * @param value The new value for attachmentTypeId
-     */
-    public void setAttachmentTypeId(@NotNull String value) { this.attachmentTypeId = value; }
-    /**
      * A flag indicating whether this Attachment is archived (also known as hidden or deleted).  When you call
      * [ArchiveAttachment](https://developer.lockstep.io/reference/delete_api-v1-attachments-id) this field will
      * be set to true.
@@ -189,42 +173,6 @@ public class AttachmentModel
      * @param value The new value for isArchived
      */
     public void setIsArchived(@NotNull Boolean value) { this.isArchived = value; }
-    /**
-     * DEPRECATED - Do not use
-     *
-     * @return The field originAttachmentId
-     */
-    public @NotNull String getOriginAttachmentId() { return this.originAttachmentId; }
-    /**
-     * DEPRECATED - Do not use
-     *
-     * @param value The new value for originAttachmentId
-     */
-    public void setOriginAttachmentId(@NotNull String value) { this.originAttachmentId = value; }
-    /**
-     * Flag for if LS clients can see this file
-     *
-     * @return The field viewInternal
-     */
-    public @NotNull Boolean getViewInternal() { return this.viewInternal; }
-    /**
-     * Flag for if LS clients can see this file
-     *
-     * @param value The new value for viewInternal
-     */
-    public void setViewInternal(@NotNull Boolean value) { this.viewInternal = value; }
-    /**
-     * Flag for if Vendors and customers can see this file
-     *
-     * @return The field viewExternal
-     */
-    public @NotNull Boolean getViewExternal() { return this.viewExternal; }
-    /**
-     * Flag for if Vendors and customers can see this file
-     *
-     * @param value The new value for viewExternal
-     */
-    public void setViewExternal(@NotNull Boolean value) { this.viewExternal = value; }
     /**
      * The unique ID of this record as it was known in its originating financial system.
      *

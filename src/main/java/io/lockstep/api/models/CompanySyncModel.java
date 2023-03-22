@@ -56,15 +56,16 @@ public class CompanySyncModel
     private @Nullable String preferredDeliveryMethod;
     private @Nullable String emailAddress;
     private @Nullable String externalReference;
+    private @Nullable String companyRegistrationNumber;
 
     /**
-     * Indicates what action to take when a sync model has been found during the sync process.
+     * Indicates what action to take when an existing object has been found during the sync process.
      *
      * @return The field onMatchAction
      */
     public @NotNull Integer getOnMatchAction() { return this.onMatchAction; }
     /**
-     * Indicates what action to take when a sync model has been found during the sync process.
+     * Indicates what action to take when an existing object has been found during the sync process.
      *
      * @param value The new value for onMatchAction
      */
@@ -421,4 +422,16 @@ public class CompanySyncModel
      * @param value The new value for externalReference
      */
     public void setExternalReference(@Nullable String value) { this.externalReference = value; }
+    /**
+     * A unique identification number assigned to the company by the national registration office.
+     *
+     * @return The field companyRegistrationNumber
+     */
+    public @Nullable String getCompanyRegistrationNumber() { return this.companyRegistrationNumber; }
+    /**
+     * A unique identification number assigned to the company by the national registration office.
+     *
+     * @param value The new value for companyRegistrationNumber
+     */
+    public void setCompanyRegistrationNumber(@Nullable String value) { this.companyRegistrationNumber = value; }
 };

@@ -27,13 +27,14 @@ public class GroupAccountModel
     private @NotNull String groupName;
     private @NotNull String primaryUserId;
     private @NotNull String groupCompanyId;
-    private @Nullable String baseCurrencyCode;
+    private @NotNull String baseCurrencyCode;
     private @NotNull Boolean isActive;
     private @NotNull Boolean onboardingScheduled;
     private @NotNull String created;
     private @NotNull String createdUserId;
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
+    private @NotNull String countryCode;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -94,13 +95,13 @@ public class GroupAccountModel
      *
      * @return The field baseCurrencyCode
      */
-    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    public @NotNull String getBaseCurrencyCode() { return this.baseCurrencyCode; }
     /**
      * Base Currency of the group
      *
      * @param value The new value for baseCurrencyCode
      */
-    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    public void setBaseCurrencyCode(@NotNull String value) { this.baseCurrencyCode = value; }
     /**
      * The active status of the group
      *
@@ -173,4 +174,16 @@ public class GroupAccountModel
      * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
+    /**
+     * The 2-letter ISO country code for the group
+     *
+     * @return The field countryCode
+     */
+    public @NotNull String getCountryCode() { return this.countryCode; }
+    /**
+     * The 2-letter ISO country code for the group
+     *
+     * @param value The new value for countryCode
+     */
+    public void setCountryCode(@NotNull String value) { this.countryCode = value; }
 };
