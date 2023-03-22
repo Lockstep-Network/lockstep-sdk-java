@@ -32,19 +32,17 @@ import org.jetbrains.annotations.Nullable;
 public class ApplicationModel
 {
     private @NotNull String appId;
-    private @Nullable String name;
+    private @NotNull String name;
     private @Nullable String description;
     private @NotNull String appType;
     private @NotNull String ownerId;
     private @Nullable String projectUrl;
     private @Nullable String iconUrl;
-    private @Nullable String priceTerms;
-    private @Nullable String createdUserId;
-    private @Nullable String modifiedUserId;
-    private @Nullable String created;
-    private @Nullable String modified;
+    private @NotNull String createdUserId;
+    private @NotNull String modifiedUserId;
+    private @NotNull String created;
+    private @NotNull String modified;
     private @NotNull Boolean isActive;
-    private @Nullable String wikiURL;
     private @NotNull String groupKey;
     private @Nullable String b2CClientId;
     private @Nullable NoteModel[] notes;
@@ -69,13 +67,13 @@ public class ApplicationModel
      *
      * @return The field name
      */
-    public @Nullable String getName() { return this.name; }
+    public @NotNull String getName() { return this.name; }
     /**
      * The name of this application
      *
      * @param value The new value for name
      */
-    public void setName(@Nullable String value) { this.name = value; }
+    public void setName(@NotNull String value) { this.name = value; }
     /**
      * Brief summary of this application shown as a subtitle
      *
@@ -137,65 +135,53 @@ public class ApplicationModel
      */
     public void setIconUrl(@Nullable String value) { this.iconUrl = value; }
     /**
-     * The description of the price for this application
-     *
-     * @return The field priceTerms
-     */
-    public @Nullable String getPriceTerms() { return this.priceTerms; }
-    /**
-     * The description of the price for this application
-     *
-     * @param value The new value for priceTerms
-     */
-    public void setPriceTerms(@Nullable String value) { this.priceTerms = value; }
-    /**
      * The ID of the user who created this application
      *
      * @return The field createdUserId
      */
-    public @Nullable String getCreatedUserId() { return this.createdUserId; }
+    public @NotNull String getCreatedUserId() { return this.createdUserId; }
     /**
      * The ID of the user who created this application
      *
      * @param value The new value for createdUserId
      */
-    public void setCreatedUserId(@Nullable String value) { this.createdUserId = value; }
+    public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
     /**
      * The ID of the user who last modified this application
      *
      * @return The field modifiedUserId
      */
-    public @Nullable String getModifiedUserId() { return this.modifiedUserId; }
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
     /**
      * The ID of the user who last modified this application
      *
      * @param value The new value for modifiedUserId
      */
-    public void setModifiedUserId(@Nullable String value) { this.modifiedUserId = value; }
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The date this application was created
      *
      * @return The field created
      */
-    public @Nullable String getCreated() { return this.created; }
+    public @NotNull String getCreated() { return this.created; }
     /**
      * The date this application was created
      *
      * @param value The new value for created
      */
-    public void setCreated(@Nullable String value) { this.created = value; }
+    public void setCreated(@NotNull String value) { this.created = value; }
     /**
      * The date this application was last modified
      *
      * @return The field modified
      */
-    public @Nullable String getModified() { return this.modified; }
+    public @NotNull String getModified() { return this.modified; }
     /**
      * The date this application was last modified
      *
      * @param value The new value for modified
      */
-    public void setModified(@Nullable String value) { this.modified = value; }
+    public void setModified(@NotNull String value) { this.modified = value; }
     /**
      * Flag indicating if the application is active.
      *
@@ -208,18 +194,6 @@ public class ApplicationModel
      * @param value The new value for isActive
      */
     public void setIsActive(@NotNull Boolean value) { this.isActive = value; }
-    /**
-     * URL to the Wiki for the Application
-     *
-     * @return The field wikiURL
-     */
-    public @Nullable String getWikiURL() { return this.wikiURL; }
-    /**
-     * URL to the Wiki for the Application
-     *
-     * @param value The new value for wikiURL
-     */
-    public void setWikiURL(@Nullable String value) { this.wikiURL = value; }
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
      * account will share the same GroupKey value.  GroupKey values cannot be changed once created.

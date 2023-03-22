@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class FinancialAccountSyncModel
 {
+    private @NotNull Integer onMatchAction;
     private @NotNull String code;
     private @NotNull String erpKey;
     private @NotNull String name;
@@ -41,6 +42,18 @@ public class FinancialAccountSyncModel
     private @Nullable String category;
     private @Nullable String subcategory;
 
+    /**
+     * Indicates what action to take when an existing object has been found during the sync process.
+     *
+     * @return The field onMatchAction
+     */
+    public @NotNull Integer getOnMatchAction() { return this.onMatchAction; }
+    /**
+     * Indicates what action to take when an existing object has been found during the sync process.
+     *
+     * @param value The new value for onMatchAction
+     */
+    public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
     /**
      * The code for the Financial Account. Can either be a general ledger or
      * an account code.

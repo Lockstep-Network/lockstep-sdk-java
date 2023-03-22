@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2023 Lockstep, Inc.
- * @version    2023.7.7
+ * @version    2023.11.28
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -35,7 +35,6 @@ import io.lockstep.api.clients.FinancialAccountBalanceHistoryClient;
 import io.lockstep.api.clients.FinancialYearSettingsClient;
 import io.lockstep.api.clients.GroupAccountsClient;
 import io.lockstep.api.clients.InvoiceAddressesClient;
-import io.lockstep.api.clients.InvoiceHistoryClient;
 import io.lockstep.api.clients.InvoiceLinesClient;
 import io.lockstep.api.clients.InvoicesClient;
 import io.lockstep.api.clients.LeadsClient;
@@ -88,7 +87,6 @@ public class LockstepApi {
     private FinancialYearSettingsClient financialYearSettings;
     private GroupAccountsClient groupAccounts;
     private InvoiceAddressesClient invoiceAddresses;
-    private InvoiceHistoryClient invoiceHistory;
     private InvoiceLinesClient invoiceLines;
     private InvoicesClient invoices;
     private LeadsClient leads;
@@ -133,7 +131,6 @@ public class LockstepApi {
         this.financialYearSettings = new FinancialYearSettingsClient(this);
         this.groupAccounts = new GroupAccountsClient(this);
         this.invoiceAddresses = new InvoiceAddressesClient(this);
-        this.invoiceHistory = new InvoiceHistoryClient(this);
         this.invoiceLines = new InvoiceLinesClient(this);
         this.invoices = new InvoicesClient(this);
         this.leads = new LeadsClient(this);
@@ -270,12 +267,6 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.InvoiceAddressesClient client} methods in the API.
      */
     public @NotNull InvoiceAddressesClient getInvoiceAddressesClient() { return this.invoiceAddresses; }
-    /**
-     * A collection of API methods relating to InvoiceHistory
-     *
-     * @return A collection containing the {@link io.lockstep.api.clients.InvoiceHistoryClient client} methods in the API.
-     */
-    public @NotNull InvoiceHistoryClient getInvoiceHistoryClient() { return this.invoiceHistory; }
     /**
      * A collection of API methods relating to InvoiceLines
      *

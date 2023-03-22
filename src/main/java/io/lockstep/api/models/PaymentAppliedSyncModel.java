@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class PaymentAppliedSyncModel
 {
+    private @NotNull Integer onMatchAction;
     private @NotNull String erpKey;
     private @NotNull String invoiceErpKey;
     private @NotNull String paymentErpKey;
@@ -40,6 +41,18 @@ public class PaymentAppliedSyncModel
     private @Nullable String created;
     private @Nullable String modified;
 
+    /**
+     * Indicates what action to take when an existing object has been found during the sync process.
+     *
+     * @return The field onMatchAction
+     */
+    public @NotNull Integer getOnMatchAction() { return this.onMatchAction; }
+    /**
+     * Indicates what action to take when an existing object has been found during the sync process.
+     *
+     * @param value The new value for onMatchAction
+     */
+    public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
     /**
      * This is the primary key of the Payment Application record. For this field, you should use whatever this
      * transaction's unique identifying number is in the originating system. Search for a unique, non-changing

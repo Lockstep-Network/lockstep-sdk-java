@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class InvoiceLineSyncModel
 {
+    private @NotNull Integer onMatchAction;
     private @NotNull String erpKey;
     private @NotNull String invoiceErpKey;
     private @NotNull String lineNumber;
@@ -74,6 +75,18 @@ public class InvoiceLineSyncModel
     private @Nullable String created;
     private @Nullable String modified;
 
+    /**
+     * Indicates what action to take when an existing object has been found during the sync process.
+     *
+     * @return The field onMatchAction
+     */
+    public @NotNull Integer getOnMatchAction() { return this.onMatchAction; }
+    /**
+     * Indicates what action to take when an existing object has been found during the sync process.
+     *
+     * @param value The new value for onMatchAction
+     */
+    public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
     /**
      * This is the primary key of the Invoice Line record. For this field, you should use whatever the contact's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the

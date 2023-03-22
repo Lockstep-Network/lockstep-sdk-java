@@ -52,7 +52,6 @@ public class CompanyModel
     private @NotNull String createdUserId;
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
-    private @Nullable String modifiedUserName;
     private @Nullable String taxId;
     private @Nullable String dunsNumber;
     private @Nullable String preferredDeliveryMethod;
@@ -71,6 +70,7 @@ public class CompanyModel
     private @Nullable ViewBoxSettingsModel viewBoxSettings;
     private @Nullable String serviceFabricOrgId;
     private @Nullable String serviceFabricCompanyId;
+    private @Nullable String companyRegistrationNumber;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable ContactModel[] contacts;
@@ -438,18 +438,6 @@ public class CompanyModel
      */
     public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
-     * The name of the user who last modified this company
-     *
-     * @return The field modifiedUserName
-     */
-    public @Nullable String getModifiedUserName() { return this.modifiedUserName; }
-    /**
-     * The name of the user who last modified this company
-     *
-     * @param value The new value for modifiedUserName
-     */
-    public void setModifiedUserName(@Nullable String value) { this.modifiedUserName = value; }
-    /**
      * Federal Tax ID
      *
      * @return The field taxId
@@ -675,6 +663,18 @@ public class CompanyModel
      * @param value The new value for serviceFabricCompanyId
      */
     public void setServiceFabricCompanyId(@Nullable String value) { this.serviceFabricCompanyId = value; }
+    /**
+     * A unique identification number assigned to the company by the national registration office.
+     *
+     * @return The field companyRegistrationNumber
+     */
+    public @Nullable String getCompanyRegistrationNumber() { return this.companyRegistrationNumber; }
+    /**
+     * A unique identification number assigned to the company by the national registration office.
+     *
+     * @param value The new value for companyRegistrationNumber
+     */
+    public void setCompanyRegistrationNumber(@Nullable String value) { this.companyRegistrationNumber = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.

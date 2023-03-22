@@ -36,7 +36,6 @@ public class UserAccountModel
     private @NotNull String createdUserId;
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
-    private @Nullable String modifiedUserName;
     private @Nullable String b2CUserId;
     private @NotNull String userRole;
     private @Nullable String inviteSent;
@@ -181,18 +180,6 @@ public class UserAccountModel
      * @param value The new value for modifiedUserId
      */
     public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
-    /**
-     * The name of the user who last modified the user account
-     *
-     * @return The field modifiedUserName
-     */
-    public @Nullable String getModifiedUserName() { return this.modifiedUserName; }
-    /**
-     * The name of the user who last modified the user account
-     *
-     * @param value The new value for modifiedUserName
-     */
-    public void setModifiedUserName(@Nullable String value) { this.modifiedUserName = value; }
     /**
      * The ID of the user in Azure B2C
      *
