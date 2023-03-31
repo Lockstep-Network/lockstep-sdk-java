@@ -13,8 +13,6 @@
 
 package io.lockstep.api;
 
-import io.lockstep.api.models.ErrorResult;
-
 /**
  * Results of a Lockstep API request
  *

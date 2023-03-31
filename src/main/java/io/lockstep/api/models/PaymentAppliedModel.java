@@ -31,6 +31,8 @@ public class PaymentAppliedModel
     private @NotNull String invoiceId;
     private @NotNull String paymentId;
     private @Nullable String erpKey;
+    private @NotNull Integer erpWriteStatus;
+    private @Nullable String erpWriteStatusName;
     private @NotNull Integer entryNumber;
     private @NotNull String applyToInvoiceDate;
     private @NotNull Double paymentAppliedAmount;
@@ -39,6 +41,7 @@ public class PaymentAppliedModel
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
     private @Nullable String appEnrollmentId;
+    private @Nullable String sourceModifiedDate;
     private @Nullable PaymentModel payment;
     private @Nullable InvoiceModel invoice;
 
@@ -126,6 +129,30 @@ public class PaymentAppliedModel
      * @param value The new value for erpKey
      */
     public void setErpKey(@Nullable String value) { this.erpKey = value; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @return The field erpWriteStatus
+     */
+    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @param value The new value for erpWriteStatus
+     */
+    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    /**
+     * The name of the ErpWriteStatus for this payment application
+     *
+     * @return The field erpWriteStatusName
+     */
+    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    /**
+     * The name of the ErpWriteStatus for this payment application
+     *
+     * @param value The new value for erpWriteStatusName
+     */
+    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
     /**
      * The entry number of this payment application.  This is often a journal entry number, confirmation code,
      * or other identifying field for this payment application.
@@ -230,6 +257,18 @@ public class PaymentAppliedModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @return The field sourceModifiedDate
+     */
+    public @Nullable String getSourceModifiedDate() { return this.sourceModifiedDate; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @param value The new value for sourceModifiedDate
+     */
+    public void setSourceModifiedDate(@Nullable String value) { this.sourceModifiedDate = value; }
     /**
      * The payment associated with this applied payment
      *

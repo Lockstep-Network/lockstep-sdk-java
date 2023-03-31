@@ -36,8 +36,6 @@ import org.jetbrains.annotations.NotNull;
 
 import com.google.gson.Gson;
 
-import io.lockstep.api.models.ErrorResult;
-
 /**
  * Represents a request to a remote web server
  *

@@ -39,7 +39,6 @@ public class InvoiceSummaryModel
     private @Nullable Double baseCurrencyInvoiceAmount;
     private @Nullable Double baseCurrencyOutstandingBalance;
     private @Nullable String invoiceTypeCode;
-    private @Nullable String newestActivity;
     private @Nullable Integer daysPastDue;
     private @NotNull Integer paymentCount;
     private @NotNull Boolean supportsErpPdfRetrieval;
@@ -249,18 +248,6 @@ public class InvoiceSummaryModel
      * @param value The new value for invoiceTypeCode
      */
     public void setInvoiceTypeCode(@Nullable String value) { this.invoiceTypeCode = value; }
-    /**
-     * The date stamp for the newest Activity on this Invoice.
-     *
-     * @return The field newestActivity
-     */
-    public @Nullable String getNewestActivity() { return this.newestActivity; }
-    /**
-     * The date stamp for the newest Activity on this Invoice.
-     *
-     * @param value The new value for newestActivity
-     */
-    public void setNewestActivity(@Nullable String value) { this.newestActivity = value; }
     /**
      * The number of days this Invoice is past due.
      *

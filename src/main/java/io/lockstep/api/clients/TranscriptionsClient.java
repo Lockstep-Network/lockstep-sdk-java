@@ -27,6 +27,8 @@ import io.lockstep.api.models.TranscriptionRequestSubmit;
 import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.TranscriptionValidationRequestItemModel;
+import io.lockstep.api.models.EmailReplyGeneratorResponse;
+import io.lockstep.api.models.EmailReplyGeneratorRequest;
 
 /**
  * Contains all methods related to Transcriptions
@@ -219,5 +221,20 @@ public class TranscriptionsClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<TranscriptionValidationRequestItemModel>>() {}.getType());
+    }
+
+    /**
+     * Retrieves the Email Reply Generator Response containing a list of email reply suggestions
+     *
+     * An Email Reply Generator Request represents an email to be sent for a list of email reply suggestions.
+     *
+     * @param body The Email Reply Generator Request to be sent
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<EmailReplyGeneratorResponse> retrieveanEmailReplyGeneratorResponse(@NotNull EmailReplyGeneratorRequest body)
+    {
+        RestRequest<EmailReplyGeneratorResponse> r = new RestRequest<EmailReplyGeneratorResponse>(this.client, "POST", "/api/v1/Transcriptions/email-reply-suggestions");
+        r.AddBody(body);
+        return r.Call(EmailReplyGeneratorResponse.class);
     }
 }

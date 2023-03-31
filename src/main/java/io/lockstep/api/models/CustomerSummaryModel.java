@@ -44,7 +44,6 @@ public class CustomerSummaryModel
     private @Nullable Double unappliedAmountPastThirtyDays;
     private @Nullable Double percentOfTotalAr;
     private @Nullable Double dso;
-    private @Nullable String newestActivity;
     private @NotNull String modified;
 
     /**
@@ -305,18 +304,6 @@ public class CustomerSummaryModel
      * @param value The new value for dso
      */
     public void setDso(@Nullable Double value) { this.dso = value; }
-    /**
-     * The date stamp for the newest Activity on this Customer.
-     *
-     * @return The field newestActivity
-     */
-    public @Nullable String getNewestActivity() { return this.newestActivity; }
-    /**
-     * The date stamp for the newest Activity on this Customer.
-     *
-     * @param value The new value for newestActivity
-     */
-    public void setNewestActivity(@Nullable String value) { this.newestActivity = value; }
     /**
      * The modified date of the customer.
      *
