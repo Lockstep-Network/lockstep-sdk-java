@@ -36,8 +36,6 @@ import org.jetbrains.annotations.NotNull;
 
 import com.google.gson.Gson;
 
-import io.lockstep.api.models.ErrorResult;
-
 /**
  * Represents a request to a remote web server
  *
@@ -153,7 +151,7 @@ public class RestRequest<@NotNull T> {
             }
 
             request.addHeader("SdkName", "Java");
-            request.addHeader("SdkVersion", "2023.11.28.0");
+            request.addHeader("SdkVersion", "2023.13.37.0");
 
             String applicationName = this.client.getAppName();
 

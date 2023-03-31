@@ -33,6 +33,8 @@ public class PaymentModel
     private @NotNull String paymentId;
     private @NotNull String companyId;
     private @Nullable String erpKey;
+    private @NotNull Integer erpWriteStatus;
+    private @Nullable String erpWriteStatusName;
     private @NotNull String paymentType;
     private @NotNull String tenderType;
     private @NotNull Boolean isOpen;
@@ -54,6 +56,7 @@ public class PaymentModel
     private @NotNull Double baseCurrencyPaymentAmount;
     private @NotNull Double baseCurrencyUnappliedAmount;
     private @Nullable String serviceFabricStatus;
+    private @Nullable String sourceModifiedDate;
     private @Nullable PaymentAppliedModel[] applications;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
@@ -132,6 +135,30 @@ public class PaymentModel
      * @param value The new value for erpKey
      */
     public void setErpKey(@Nullable String value) { this.erpKey = value; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @return The field erpWriteStatus
+     */
+    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @param value The new value for erpWriteStatus
+     */
+    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    /**
+     * The name of the ErpWriteStatus for this Payment
+     *
+     * @return The field erpWriteStatusName
+     */
+    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    /**
+     * The name of the ErpWriteStatus for this Payment
+     *
+     * @param value The new value for erpWriteStatusName
+     */
+    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
     /**
      * The type of payment, AR Payment or AP Payment.
      *
@@ -428,6 +455,18 @@ public class PaymentModel
      * @param value The new value for serviceFabricStatus
      */
     public void setServiceFabricStatus(@Nullable String value) { this.serviceFabricStatus = value; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @return The field sourceModifiedDate
+     */
+    public @Nullable String getSourceModifiedDate() { return this.sourceModifiedDate; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @param value The new value for sourceModifiedDate
+     */
+    public void setSourceModifiedDate(@Nullable String value) { this.sourceModifiedDate = value; }
     /**
      * All applications this payment is associated with.
      * To retrieve this collection, specify `Applications` in the "Include" parameter for your query.

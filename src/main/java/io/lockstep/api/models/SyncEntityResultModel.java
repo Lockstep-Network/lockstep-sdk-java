@@ -29,6 +29,7 @@ public class SyncEntityResultModel
     private @NotNull Integer skipCount;
     private @NotNull Integer errorCount;
     private @Nullable Object errors;
+    private @Nullable Object skips;
 
     /**
      * The number of entities inserted
@@ -102,4 +103,16 @@ public class SyncEntityResultModel
      * @param value The new value for errors
      */
     public void setErrors(@Nullable Object value) { this.errors = value; }
+    /**
+     * The records that were skipped during sync keyed by ERP key
+     *
+     * @return The field skips
+     */
+    public @Nullable Object getSkips() { return this.skips; }
+    /**
+     * The records that were skipped during sync keyed by ERP key
+     *
+     * @param value The new value for skips
+     */
+    public void setSkips(@Nullable Object value) { this.skips = value; }
 };

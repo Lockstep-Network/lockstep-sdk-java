@@ -33,6 +33,8 @@ public class FinancialAccountBalanceHistoryModel
     private @NotNull String periodEndDate;
     private @Nullable String status;
     private @NotNull Double balance;
+    private @NotNull Integer balanceType;
+    private @Nullable String balanceTypeName;
     private @NotNull String created;
     private @NotNull String createdUserId;
     private @NotNull String modified;
@@ -176,6 +178,30 @@ public class FinancialAccountBalanceHistoryModel
      * @param value The new value for balance
      */
     public void setBalance(@NotNull Double value) { this.balance = value; }
+    /**
+     * Financial Account Balance Types
+     *
+     * @return The field balanceType
+     */
+    public @NotNull Integer getBalanceType() { return this.balanceType; }
+    /**
+     * Financial Account Balance Types
+     *
+     * @param value The new value for balanceType
+     */
+    public void setBalanceType(@NotNull Integer value) { this.balanceType = value; }
+    /**
+     * The name of the BalanceType for this record.
+     *
+     * @return The field balanceTypeName
+     */
+    public @Nullable String getBalanceTypeName() { return this.balanceTypeName; }
+    /**
+     * The name of the BalanceType for this record.
+     *
+     * @param value The new value for balanceTypeName
+     */
+    public void setBalanceTypeName(@Nullable String value) { this.balanceTypeName = value; }
     /**
      * The date on which this financial account balance history record was created.
      *

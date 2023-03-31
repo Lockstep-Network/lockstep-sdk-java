@@ -31,6 +31,8 @@ public class PaymentDetailModel
     private @Nullable String referenceCode;
     private @Nullable String primaryContact;
     private @Nullable String email;
+    private @NotNull Integer erpWriteStatus;
+    private @Nullable String erpWriteStatusName;
     private @Nullable String currencyCode;
     private @NotNull Double paymentAmount;
     private @NotNull Double unappliedAmount;
@@ -153,6 +155,30 @@ public class PaymentDetailModel
      * @param value The new value for email
      */
     public void setEmail(@Nullable String value) { this.email = value; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @return The field erpWriteStatus
+     */
+    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @param value The new value for erpWriteStatus
+     */
+    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    /**
+     * The name of the ErpWriteStatus for this payment
+     *
+     * @return The field erpWriteStatusName
+     */
+    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    /**
+     * The name of the ErpWriteStatus for this payment
+     *
+     * @param value The new value for erpWriteStatusName
+     */
+    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
     /**
      * The currency code of the payment.
      *

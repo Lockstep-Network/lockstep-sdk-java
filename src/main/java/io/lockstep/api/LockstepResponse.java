@@ -13,8 +13,6 @@
 
 package io.lockstep.api;
 
-import io.lockstep.api.models.ErrorResult;
-
 /**
  * Results of a Lockstep API request
  *
@@ -89,7 +87,7 @@ public class LockstepResponse<T> {
      * Getter for the field <code>error</code>.
      * </p>
      *
-     * @return a {@link io.lockstep.api.models.ErrorResult} object.
+     * @return a {@link io.lockstep.api.ErrorResult} object.
      */
     public ErrorResult getError() {
         return this.error;
@@ -100,7 +98,7 @@ public class LockstepResponse<T> {
      * Setter for the field <code>error</code>.
      * </p>
      *
-     * @param error a {@link io.lockstep.api.models.ErrorResult} object.
+     * @param error a {@link io.lockstep.api.ErrorResult} object.
      */
     public void setError(ErrorResult error) {
         this.error = error;

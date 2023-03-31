@@ -42,6 +42,7 @@ public class FinancialAccountBalanceHistorySyncModel
     private @NotNull String periodEndDate;
     private @NotNull String status;
     private @NotNull Double balance;
+    private @Nullable Integer balanceType;
 
     /**
      * The code for the Financial Account. Can either be a general ledger or
@@ -157,4 +158,16 @@ public class FinancialAccountBalanceHistorySyncModel
      * @param value The new value for balance
      */
     public void setBalance(@NotNull Double value) { this.balance = value; }
+    /**
+     * The balance type of this period. If left null, the balance type will be determined by the balance.
+     *
+     * @return The field balanceType
+     */
+    public @Nullable Integer getBalanceType() { return this.balanceType; }
+    /**
+     * The balance type of this period. If left null, the balance type will be determined by the balance.
+     *
+     * @param value The new value for balanceType
+     */
+    public void setBalanceType(@Nullable Integer value) { this.balanceType = value; }
 };

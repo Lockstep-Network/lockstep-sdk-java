@@ -32,6 +32,8 @@ public class CreditMemoAppliedModel
     private @NotNull String invoiceId;
     private @NotNull String creditMemoInvoiceId;
     private @Nullable String erpKey;
+    private @NotNull Integer erpWriteStatus;
+    private @Nullable String erpWriteStatusName;
     private @NotNull Integer entryNumber;
     private @NotNull String applyToInvoiceDate;
     private @NotNull Double creditMemoAppliedAmount;
@@ -40,6 +42,7 @@ public class CreditMemoAppliedModel
     private @NotNull String modified;
     private @NotNull String modifiedUserId;
     private @Nullable String appEnrollmentId;
+    private @Nullable String sourceModifiedDate;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable NoteModel[] notes;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
@@ -150,6 +153,30 @@ public class CreditMemoAppliedModel
      */
     public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @return The field erpWriteStatus
+     */
+    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @param value The new value for erpWriteStatus
+     */
+    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    /**
+     * The name of the ErpWriteStatus for this credit memo application
+     *
+     * @return The field erpWriteStatusName
+     */
+    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    /**
+     * The name of the ErpWriteStatus for this credit memo application
+     *
+     * @param value The new value for erpWriteStatusName
+     */
+    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
+    /**
      * Reference number for the applied credit memo.
      *
      * @return The field entryNumber
@@ -251,6 +278,18 @@ public class CreditMemoAppliedModel
      * @param value The new value for appEnrollmentId
      */
     public void setAppEnrollmentId(@Nullable String value) { this.appEnrollmentId = value; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @return The field sourceModifiedDate
+     */
+    public @Nullable String getSourceModifiedDate() { return this.sourceModifiedDate; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @param value The new value for sourceModifiedDate
+     */
+    public void setSourceModifiedDate(@Nullable String value) { this.sourceModifiedDate = value; }
     /**
      * A collection of attachments linked to this record.  To retrieve this collection, specify `Attachments` in
      * the `include` parameter when retrieving data.
