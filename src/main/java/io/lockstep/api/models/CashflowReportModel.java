@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class CashflowReportModel
 {
     private @NotNull Integer timeframe;
+    private @Nullable String baseCurrencyCode;
     private @NotNull Double paymentsCollected;
     private @NotNull Integer paymentsCollectedCount;
     private @NotNull Double invoicesBilled;
@@ -42,13 +43,25 @@ public class CashflowReportModel
      */
     public void setTimeframe(@NotNull Integer value) { this.timeframe = value; }
     /**
-     * Amount of payments collected based in the timeframe
+     * The base currency code of the group.
+     *
+     * @return The field baseCurrencyCode
+     */
+    public @Nullable String getBaseCurrencyCode() { return this.baseCurrencyCode; }
+    /**
+     * The base currency code of the group.
+     *
+     * @param value The new value for baseCurrencyCode
+     */
+    public void setBaseCurrencyCode(@Nullable String value) { this.baseCurrencyCode = value; }
+    /**
+     * Amount of payments collected based in the timeframe in the group's base currency
      *
      * @return The field paymentsCollected
      */
     public @NotNull Double getPaymentsCollected() { return this.paymentsCollected; }
     /**
-     * Amount of payments collected based in the timeframe
+     * Amount of payments collected based in the timeframe in the group's base currency
      *
      * @param value The new value for paymentsCollected
      */
@@ -66,13 +79,13 @@ public class CashflowReportModel
      */
     public void setPaymentsCollectedCount(@NotNull Integer value) { this.paymentsCollectedCount = value; }
     /**
-     * Amount of invoices billed based in the timeframe
+     * Amount of invoices billed based in the timeframe in the group's base currency
      *
      * @return The field invoicesBilled
      */
     public @NotNull Double getInvoicesBilled() { return this.invoicesBilled; }
     /**
-     * Amount of invoices billed based in the timeframe
+     * Amount of invoices billed based in the timeframe in the group's base currency
      *
      * @param value The new value for invoicesBilled
      */
