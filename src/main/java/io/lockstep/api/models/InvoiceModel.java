@@ -69,6 +69,9 @@ public class InvoiceModel
     private @NotNull Double baseCurrencySalesTaxAmount;
     private @NotNull Double baseCurrencyDiscountAmount;
     private @NotNull Double baseCurrencyOutstandingBalanceAmount;
+    private @NotNull Integer erpWriteStatus;
+    private @Nullable String erpWriteStatusName;
+    private @Nullable String sourceModifiedDate;
     private @Nullable InvoiceAddressModel[] addresses;
     private @Nullable InvoiceLineModel[] lines;
     private @Nullable InvoicePaymentDetailModel[] payments;
@@ -633,6 +636,42 @@ public class InvoiceModel
      * @param value The new value for baseCurrencyOutstandingBalanceAmount
      */
     public void setBaseCurrencyOutstandingBalanceAmount(@NotNull Double value) { this.baseCurrencyOutstandingBalanceAmount = value; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @return The field erpWriteStatus
+     */
+    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    /**
+     * Possible statuses for a record that supports ERP write.
+     *
+     * @param value The new value for erpWriteStatus
+     */
+    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    /**
+     * The name of the ErpWriteStatus for this Invoice
+     *
+     * @return The field erpWriteStatusName
+     */
+    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    /**
+     * The name of the ErpWriteStatus for this Invoice
+     *
+     * @param value The new value for erpWriteStatusName
+     */
+    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @return The field sourceModifiedDate
+     */
+    public @Nullable String getSourceModifiedDate() { return this.sourceModifiedDate; }
+    /**
+     * The date on which this record was last modified in source ERP.
+     *
+     * @param value The new value for sourceModifiedDate
+     */
+    public void setSourceModifiedDate(@Nullable String value) { this.sourceModifiedDate = value; }
     /**
      * All addresses connected to this invoice.
      * To retrieve this collection, specify `Addresses` in the "Include" parameter for your query.

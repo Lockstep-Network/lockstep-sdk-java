@@ -141,7 +141,7 @@ public class PaymentsClient
     /**
      * Retrieves a PDF file for this payment if it has been synced using an app enrollment to one of the supported apps.
      *
-     * Quickbooks Online supports AR Payments.
+     * QuickBooks Online supports AR Payments.
      *
      * @param id The unique Lockstep Platform ID number of this payment; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results

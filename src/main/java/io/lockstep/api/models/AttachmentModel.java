@@ -30,7 +30,7 @@ public class AttachmentModel
 {
     private @NotNull String attachmentId;
     private @NotNull String groupKey;
-    private @Nullable String tableKey;
+    private @NotNull String tableKey;
     private @NotNull String objectKey;
     private @Nullable String fileName;
     private @Nullable String fileExt;
@@ -85,7 +85,7 @@ public class AttachmentModel
      *
      * @return The field tableKey
      */
-    public @Nullable String getTableKey() { return this.tableKey; }
+    public @NotNull String getTableKey() { return this.tableKey; }
     /**
      * An Attachment is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
      * `ObjectKey`.  For example, an Attachment connected to Invoice 12345 would have a `TableKey` value of
@@ -98,7 +98,7 @@ public class AttachmentModel
      *
      * @param value The new value for tableKey
      */
-    public void setTableKey(@Nullable String value) { this.tableKey = value; }
+    public void setTableKey(@NotNull String value) { this.tableKey = value; }
     /**
      * An Attachment is connected to an existing item within the Lockstep Platform by the fields `TableKey` and
      * `ObjectKey`.  For example, an Attachment connected to Invoice 12345 would have a `TableKey` value of
