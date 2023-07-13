@@ -44,6 +44,7 @@ public class PaymentModel
     private @NotNull Double paymentAmount;
     private @NotNull Double unappliedAmount;
     private @Nullable String currencyCode;
+    private @Nullable String bankAccountId;
     private @Nullable String referenceCode;
     private @NotNull String created;
     private @NotNull String createdUserId;
@@ -303,6 +304,18 @@ public class PaymentModel
      * @param value The new value for currencyCode
      */
     public void setCurrencyCode(@Nullable String value) { this.currencyCode = value; }
+    /**
+     * The Bank account id for the company to which this payment belongs.
+     *
+     * @return The field bankAccountId
+     */
+    public @Nullable String getBankAccountId() { return this.bankAccountId; }
+    /**
+     * The Bank account id for the company to which this payment belongs.
+     *
+     * @param value The new value for bankAccountId
+     */
+    public void setBankAccountId(@Nullable String value) { this.bankAccountId = value; }
     /**
      * Reference code for the payment for the given Erp system.
      *

@@ -51,6 +51,7 @@ public class PaymentSyncModel
     private @NotNull Double currencyRate;
     private @NotNull Double baseCurrencyPaymentAmount;
     private @NotNull Double baseCurrencyUnappliedAmount;
+    private @Nullable String bankAccountId;
 
     /**
      * Indicates what action to take when an existing object has been found during the sync process.
@@ -358,4 +359,16 @@ public class PaymentSyncModel
      * @param value The new value for baseCurrencyUnappliedAmount
      */
     public void setBaseCurrencyUnappliedAmount(@NotNull Double value) { this.baseCurrencyUnappliedAmount = value; }
+    /**
+     * Bank account id for the payment.
+     *
+     * @return The field bankAccountId
+     */
+    public @Nullable String getBankAccountId() { return this.bankAccountId; }
+    /**
+     * Bank account id for the payment.
+     *
+     * @param value The new value for bankAccountId
+     */
+    public void setBankAccountId(@Nullable String value) { this.bankAccountId = value; }
 };

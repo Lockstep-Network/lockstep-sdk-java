@@ -134,14 +134,14 @@ public class FinancialAccountSyncModel
     public void setDescription(@NotNull String value) { this.description = value; }
     /**
      * The classification for the Financial Account. Possible values are Asset, Equity,
-     * Expense, Liability or Income.
+     * Expense, Liability, Income, CreditCard, Checking, or Savings.
      *
      * @return The field classification
      */
     public @NotNull String getClassification() { return this.classification; }
     /**
      * The classification for the Financial Account. Possible values are Asset, Equity,
-     * Expense, Liability or Income.
+     * Expense, Liability, Income, CreditCard, Checking, or Savings.
      *
      * @param value The new value for classification
      */

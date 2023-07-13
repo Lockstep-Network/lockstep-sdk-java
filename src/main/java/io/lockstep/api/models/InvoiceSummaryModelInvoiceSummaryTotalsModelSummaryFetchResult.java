@@ -20,23 +20,13 @@ import org.jetbrains.annotations.Nullable;
 
 public class InvoiceSummaryModelInvoiceSummaryTotalsModelSummaryFetchResult
 {
-    private @Nullable InvoiceSummaryModel[] records;
     private @Nullable Integer totalCount;
     private @Nullable Integer pageSize;
     private @Nullable Integer pageNumber;
+    private @Nullable InvoiceSummaryModel[] records;
     private @Nullable InvoiceSummaryTotalsModel summary;
     private @Nullable SummaryAgingTotalsModel[] agingSummary;
 
-    /**
-     *
-     * @return The field records
-     */
-    public @Nullable InvoiceSummaryModel[] getRecords() { return this.records; }
-    /**
-     *
-     * @param value The new value for records
-     */
-    public void setRecords(@Nullable InvoiceSummaryModel[] value) { this.records = value; }
     /**
      *
      * @return The field totalCount
@@ -67,6 +57,16 @@ public class InvoiceSummaryModelInvoiceSummaryTotalsModelSummaryFetchResult
      * @param value The new value for pageNumber
      */
     public void setPageNumber(@Nullable Integer value) { this.pageNumber = value; }
+    /**
+     *
+     * @return The field records
+     */
+    public @Nullable InvoiceSummaryModel[] getRecords() { return this.records; }
+    /**
+     *
+     * @param value The new value for records
+     */
+    public void setRecords(@Nullable InvoiceSummaryModel[] value) { this.records = value; }
     /**
      * The totals for an Invoice Summary
      *
