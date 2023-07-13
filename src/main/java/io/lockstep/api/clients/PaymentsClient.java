@@ -29,6 +29,8 @@ import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.PaymentSummaryModelPaymentSummaryTotalsModelSummaryFetchResult;
 import io.lockstep.api.models.PaymentDetailHeaderModel;
 import io.lockstep.api.models.PaymentDetailModel;
+import io.lockstep.api.models.PaymentModelErpWriteResult;
+import io.lockstep.api.models.InsertPaymentRequestModelErpWriteSyncSubmitModel;
 
 /**
  * Contains all methods related to Payments
@@ -210,5 +212,20 @@ public class PaymentsClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<PaymentDetailModel>>() {}.getType());
+    }
+
+    /**
+     * **This API endpoint is under maintenance and may not function properly.**  Schedule an ERP post request for payments.
+     *
+     * The payments must be associated with an active app enrollment and have a valid `AppEnrollmentId`.
+     *
+     * @param body The payments to submit to the connected ERP
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<PaymentModelErpWriteResult> writepaymentstoconnectedERP(@NotNull InsertPaymentRequestModelErpWriteSyncSubmitModel body)
+    {
+        RestRequest<PaymentModelErpWriteResult> r = new RestRequest<PaymentModelErpWriteResult>(this.client, "POST", "/api/v1/Payments/erp-write");
+        r.AddBody(body);
+        return r.Call(PaymentModelErpWriteResult.class);
     }
 }

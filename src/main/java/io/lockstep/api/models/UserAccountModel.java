@@ -55,6 +55,7 @@ public class UserAccountModel
     private @Nullable String description;
     private @Nullable String b2CLastLoggedIn;
     private @Nullable String defaultCurrencyCode;
+    private @Nullable String locale;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable CustomFieldValueModel[] customFieldValues;
@@ -414,6 +415,18 @@ public class UserAccountModel
      * @param value The new value for defaultCurrencyCode
      */
     public void setDefaultCurrencyCode(@Nullable String value) { this.defaultCurrencyCode = value; }
+    /**
+     * The IETF language tag for the user's preferred locale.
+     *
+     * @return The field locale
+     */
+    public @Nullable String getLocale() { return this.locale; }
+    /**
+     * The IETF language tag for the user's preferred locale.
+     *
+     * @param value The new value for locale
+     */
+    public void setLocale(@Nullable String value) { this.locale = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.

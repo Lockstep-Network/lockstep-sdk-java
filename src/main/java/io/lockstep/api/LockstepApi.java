@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2023 Lockstep, Inc.
- * @version    2023.17.21
+ * @version    2023.28.10
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -32,6 +32,7 @@ import io.lockstep.api.clients.DefinitionsClient;
 import io.lockstep.api.clients.FeatureFlagsClient;
 import io.lockstep.api.clients.FinancialAccountClient;
 import io.lockstep.api.clients.FinancialAccountBalanceHistoryClient;
+import io.lockstep.api.clients.FinancialInstitutionAccountsClient;
 import io.lockstep.api.clients.FinancialYearSettingsClient;
 import io.lockstep.api.clients.GroupAccountsClient;
 import io.lockstep.api.clients.InvoiceAddressesClient;
@@ -84,6 +85,7 @@ public class LockstepApi {
     private FeatureFlagsClient featureFlags;
     private FinancialAccountClient financialAccount;
     private FinancialAccountBalanceHistoryClient financialAccountBalanceHistory;
+    private FinancialInstitutionAccountsClient financialInstitutionAccounts;
     private FinancialYearSettingsClient financialYearSettings;
     private GroupAccountsClient groupAccounts;
     private InvoiceAddressesClient invoiceAddresses;
@@ -128,6 +130,7 @@ public class LockstepApi {
         this.featureFlags = new FeatureFlagsClient(this);
         this.financialAccount = new FinancialAccountClient(this);
         this.financialAccountBalanceHistory = new FinancialAccountBalanceHistoryClient(this);
+        this.financialInstitutionAccounts = new FinancialInstitutionAccountsClient(this);
         this.financialYearSettings = new FinancialYearSettingsClient(this);
         this.groupAccounts = new GroupAccountsClient(this);
         this.invoiceAddresses = new InvoiceAddressesClient(this);
@@ -249,6 +252,12 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.FinancialAccountBalanceHistoryClient client} methods in the API.
      */
     public @NotNull FinancialAccountBalanceHistoryClient getFinancialAccountBalanceHistoryClient() { return this.financialAccountBalanceHistory; }
+    /**
+     * A collection of API methods relating to FinancialInstitutionAccounts
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.FinancialInstitutionAccountsClient client} methods in the API.
+     */
+    public @NotNull FinancialInstitutionAccountsClient getFinancialInstitutionAccountsClient() { return this.financialInstitutionAccounts; }
     /**
      * A collection of API methods relating to FinancialYearSettings
      *
