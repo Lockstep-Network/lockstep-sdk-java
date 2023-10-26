@@ -32,8 +32,10 @@ import org.jetbrains.annotations.Nullable;
 public class InvoiceLineSyncModel
 {
     private @NotNull Integer onMatchAction;
+    private @Nullable String networkId;
     private @NotNull String erpKey;
     private @NotNull String invoiceErpKey;
+    private @Nullable String invoiceNetworkId;
     private @NotNull String lineNumber;
     private @Nullable String productCode;
     private @Nullable String description;
@@ -88,6 +90,18 @@ public class InvoiceLineSyncModel
      */
     public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
     /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @return The field networkId
+     */
+    public @Nullable String getNetworkId() { return this.networkId; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @param value The new value for networkId
+     */
+    public void setNetworkId(@Nullable String value) { this.networkId = value; }
+    /**
      * This is the primary key of the Invoice Line record. For this field, you should use whatever the contact's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the
      * originating financial system for this record.
@@ -129,6 +143,18 @@ public class InvoiceLineSyncModel
      * @param value The new value for invoiceErpKey
      */
     public void setInvoiceErpKey(@NotNull String value) { this.invoiceErpKey = value; }
+    /**
+     * The network id of the parent Invoice.
+     *
+     * @return The field invoiceNetworkId
+     */
+    public @Nullable String getInvoiceNetworkId() { return this.invoiceNetworkId; }
+    /**
+     * The network id of the parent Invoice.
+     *
+     * @param value The new value for invoiceNetworkId
+     */
+    public void setInvoiceNetworkId(@Nullable String value) { this.invoiceNetworkId = value; }
     /**
      * The line number of this line, as defined in the originating ERP or accounting system.  You can sort on this number to
      * get the original view of lines within the invoice.

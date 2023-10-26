@@ -9,7 +9,7 @@
  * @author     Lockstep Network <support@lockstep.io>
  *             
  * @copyright  2021-2023 Lockstep, Inc.
- * @version    2023.28.10
+ * @version    2023.40.72
  * @link       https://github.com/Lockstep-Network/lockstep-sdk-java
  */
 
@@ -38,6 +38,8 @@ import io.lockstep.api.clients.GroupAccountsClient;
 import io.lockstep.api.clients.InvoiceAddressesClient;
 import io.lockstep.api.clients.InvoiceLinesClient;
 import io.lockstep.api.clients.InvoicesClient;
+import io.lockstep.api.clients.JournalEntriesClient;
+import io.lockstep.api.clients.JournalEntryLinesClient;
 import io.lockstep.api.clients.LeadsClient;
 import io.lockstep.api.clients.MagicLinksClient;
 import io.lockstep.api.clients.NotesClient;
@@ -56,6 +58,7 @@ import io.lockstep.api.clients.UserAccountsClient;
 import io.lockstep.api.clients.UserRolesClient;
 import io.lockstep.api.clients.WebhookRulesClient;
 import io.lockstep.api.clients.WebhooksClient;
+import io.lockstep.api.clients.WorkflowStatusesClient;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -91,6 +94,8 @@ public class LockstepApi {
     private InvoiceAddressesClient invoiceAddresses;
     private InvoiceLinesClient invoiceLines;
     private InvoicesClient invoices;
+    private JournalEntriesClient journalEntries;
+    private JournalEntryLinesClient journalEntryLines;
     private LeadsClient leads;
     private MagicLinksClient magicLinks;
     private NotesClient notes;
@@ -109,6 +114,7 @@ public class LockstepApi {
     private UserRolesClient userRoles;
     private WebhookRulesClient webhookRules;
     private WebhooksClient webhooks;
+    private WorkflowStatusesClient workflowStatuses;
 
     private LockstepApi(@NotNull String serverUri)
     {
@@ -136,6 +142,8 @@ public class LockstepApi {
         this.invoiceAddresses = new InvoiceAddressesClient(this);
         this.invoiceLines = new InvoiceLinesClient(this);
         this.invoices = new InvoicesClient(this);
+        this.journalEntries = new JournalEntriesClient(this);
+        this.journalEntryLines = new JournalEntryLinesClient(this);
         this.leads = new LeadsClient(this);
         this.magicLinks = new MagicLinksClient(this);
         this.notes = new NotesClient(this);
@@ -154,6 +162,7 @@ public class LockstepApi {
         this.userRoles = new UserRolesClient(this);
         this.webhookRules = new WebhookRulesClient(this);
         this.webhooks = new WebhooksClient(this);
+        this.workflowStatuses = new WorkflowStatusesClient(this);
     }
 
     /**
@@ -289,6 +298,18 @@ public class LockstepApi {
      */
     public @NotNull InvoicesClient getInvoicesClient() { return this.invoices; }
     /**
+     * A collection of API methods relating to JournalEntries
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.JournalEntriesClient client} methods in the API.
+     */
+    public @NotNull JournalEntriesClient getJournalEntriesClient() { return this.journalEntries; }
+    /**
+     * A collection of API methods relating to JournalEntryLines
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.JournalEntryLinesClient client} methods in the API.
+     */
+    public @NotNull JournalEntryLinesClient getJournalEntryLinesClient() { return this.journalEntryLines; }
+    /**
      * A collection of API methods relating to Leads
      *
      * @return A collection containing the {@link io.lockstep.api.clients.LeadsClient client} methods in the API.
@@ -396,6 +417,12 @@ public class LockstepApi {
      * @return A collection containing the {@link io.lockstep.api.clients.WebhooksClient client} methods in the API.
      */
     public @NotNull WebhooksClient getWebhooksClient() { return this.webhooks; }
+    /**
+     * A collection of API methods relating to WorkflowStatuses
+     *
+     * @return A collection containing the {@link io.lockstep.api.clients.WorkflowStatusesClient client} methods in the API.
+     */
+    public @NotNull WorkflowStatusesClient getWorkflowStatusesClient() { return this.workflowStatuses; }
   
     /**
      * Construct a new API client to target the specific environment.

@@ -49,6 +49,7 @@ public class ApplicationModel
     private @Nullable AttachmentModel[] attachments;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
     private @Nullable CustomFieldValueModel[] customFieldValues;
+    private @Nullable AppEnrollmentModel[] enrollments;
 
     /**
      * A unique code identifying this application
@@ -312,4 +313,28 @@ public class ApplicationModel
      * @param value The new value for customFieldValues
      */
     public void setCustomFieldValues(@Nullable CustomFieldValueModel[] value) { this.customFieldValues = value; }
+    /**
+     * A collection of app enrollments linked to this record.  To retrieve this collection, specify
+     * `Enrollments` in the `include` parameter when retrieving data.
+     *
+     * To create an app enrollment, use the [Create App Enrollment](https://developer.lockstep.io/reference/v1_appenrollments_createappenrollments)
+     * endpoint with the `AppId` set to the `ApplicationId` for this record and associated auth connection info for the record.
+     *
+     * For more information on extensibility, see [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments).
+     *
+     * @return The field enrollments
+     */
+    public @Nullable AppEnrollmentModel[] getEnrollments() { return this.enrollments; }
+    /**
+     * A collection of app enrollments linked to this record.  To retrieve this collection, specify
+     * `Enrollments` in the `include` parameter when retrieving data.
+     *
+     * To create an app enrollment, use the [Create App Enrollment](https://developer.lockstep.io/reference/v1_appenrollments_createappenrollments)
+     * endpoint with the `AppId` set to the `ApplicationId` for this record and associated auth connection info for the record.
+     *
+     * For more information on extensibility, see [Applications and Enrollments](https://developer.lockstep.io/docs/applications-and-enrollments).
+     *
+     * @param value The new value for enrollments
+     */
+    public void setEnrollments(@Nullable AppEnrollmentModel[] value) { this.enrollments = value; }
 };

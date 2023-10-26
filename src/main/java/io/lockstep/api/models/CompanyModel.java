@@ -71,6 +71,7 @@ public class CompanyModel
     private @Nullable String serviceFabricOrgId;
     private @Nullable String serviceFabricCompanyId;
     private @Nullable String companyRegistrationNumber;
+    private @Nullable String profileReferenceId;
     private @Nullable NoteModel[] notes;
     private @Nullable AttachmentModel[] attachments;
     private @Nullable ContactModel[] contacts;
@@ -144,6 +145,7 @@ public class CompanyModel
      * * `Vendor` - This record represents a business entity that sells things to the account holder.
      * * `Third Party` - This record represents a business entity that is neither a customer nor vendor.
      * * `CustomerVendor` - Both a customer and a vendor.
+     * * `CompanyProfile` - Profile for a Company, each Company should have at most 1 profile, used only for Profile Management.
      *
      * @return The field companyType
      */
@@ -159,6 +161,7 @@ public class CompanyModel
      * * `Vendor` - This record represents a business entity that sells things to the account holder.
      * * `Third Party` - This record represents a business entity that is neither a customer nor vendor.
      * * `CustomerVendor` - Both a customer and a vendor.
+     * * `CompanyProfile` - Profile for a Company, each Company should have at most 1 profile, used only for Profile Management.
      *
      * @param value The new value for companyType
      */
@@ -675,6 +678,18 @@ public class CompanyModel
      * @param value The new value for companyRegistrationNumber
      */
     public void setCompanyRegistrationNumber(@Nullable String value) { this.companyRegistrationNumber = value; }
+    /**
+     * An optional reference to a real company, making this a profile.
+     *
+     * @return The field profileReferenceId
+     */
+    public @Nullable String getProfileReferenceId() { return this.profileReferenceId; }
+    /**
+     * An optional reference to a real company, making this a profile.
+     *
+     * @param value The new value for profileReferenceId
+     */
+    public void setProfileReferenceId(@Nullable String value) { this.profileReferenceId = value; }
     /**
      * A collection of notes linked to this record.  To retrieve this collection, specify `Notes` in the
      * `include` parameter when retrieving data.

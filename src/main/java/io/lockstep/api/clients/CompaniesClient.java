@@ -28,6 +28,7 @@ import io.lockstep.api.FetchResult;
 import com.google.gson.reflect.TypeToken;
 import io.lockstep.api.models.CustomerSummaryModel;
 import io.lockstep.api.models.VendorSummaryModel;
+import io.lockstep.api.models.CompanyMagicLinkSummaryModel;
 import io.lockstep.api.models.CompanyDetailsModel;
 import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.ViewBoxSettingsModel;
@@ -223,6 +224,27 @@ public class CompaniesClient
         r.AddQuery("pageNumber", pageNumber.toString());
         r.AddQuery("reportDate", reportDate.toString());
         return r.Call(new TypeToken<FetchResult<VendorSummaryModel>>() {}.getType());
+    }
+
+    /**
+     * See [Vendors, Customers, and Companies](https://developer.lockstep.io/docs/companies-customers-and-vendors) for more information.
+     *
+     * @param filter The filter for this query. See [Searchlight Query Language](https://developer.lockstep.io/docs/querying-with-searchlight)
+     * @param include To fetch additional data on this object, specify the list of elements to retrieve. No collections are currently available but may be offered in the future
+     * @param order The sort order for the results, in the [Searchlight order syntax](https://github.com/tspence/csharp-searchlight).
+     * @param pageSize The page size for results (default 250, maximum of 500)
+     * @param pageNumber The page number for results (default 0)
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<FetchResult<CompanyMagicLinkSummaryModel>> queryMagicLinkSummary(@Nullable String filter, @Nullable String include, @Nullable String order, @Nullable Integer pageSize, @Nullable Integer pageNumber)
+    {
+        RestRequest<FetchResult<CompanyMagicLinkSummaryModel>> r = new RestRequest<FetchResult<CompanyMagicLinkSummaryModel>>(this.client, "GET", "/api/v1/Companies/views/magic-link-summary");
+        r.AddQuery("filter", filter.toString());
+        r.AddQuery("include", include.toString());
+        r.AddQuery("order", order.toString());
+        r.AddQuery("pageSize", pageSize.toString());
+        r.AddQuery("pageNumber", pageNumber.toString());
+        return r.Call(new TypeToken<FetchResult<CompanyMagicLinkSummaryModel>>() {}.getType());
     }
 
     /**

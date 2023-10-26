@@ -29,8 +29,6 @@ import io.lockstep.api.BlobRequest;
 import io.lockstep.api.models.PaymentSummaryModelPaymentSummaryTotalsModelSummaryFetchResult;
 import io.lockstep.api.models.PaymentDetailHeaderModel;
 import io.lockstep.api.models.PaymentDetailModel;
-import io.lockstep.api.models.PaymentModelErpWriteResult;
-import io.lockstep.api.models.InsertPaymentRequestModelErpWriteSyncSubmitModel;
 
 /**
  * Contains all methods related to Payments
@@ -145,12 +143,31 @@ public class PaymentsClient
      *
      * QuickBooks Online supports AR Payments.
      *
+     * For other ERPs, the supported types will depend on the synced data.
+     *
      * @param id The unique Lockstep Platform ID number of this payment; NOT the customer's ERP key
      * @return A {@link io.lockstep.api.LockstepResponse} containing the results
      */
     public @NotNull LockstepResponse<byte[]> retrievepaymentPDF(@NotNull String id)
     {
         BlobRequest r = new BlobRequest(this.client, "GET", "/api/v1/Payments/{id}/pdf");
+        r.AddPath("{id}", id.toString());
+        return r.Call();
+    }
+
+    /**
+     * Checks for whether a PDF file for this payment exists if it has been synced using an app enrollment to one of the supported apps.
+     *
+     * QuickBooks Online supports AR Payments.
+     *
+     * For other ERPs, the supported types will depend on the synced data.
+     *
+     * @param id The unique Lockstep Platform ID number of this payment; NOT the customer's ERP key
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<byte[]> checkpaymentPDF(@NotNull String id)
+    {
+        BlobRequest r = new BlobRequest(this.client, "HEAD", "/api/v1/Payments/{id}/pdf");
         r.AddPath("{id}", id.toString());
         return r.Call();
     }
@@ -212,20 +229,5 @@ public class PaymentsClient
         r.AddQuery("pageSize", pageSize.toString());
         r.AddQuery("pageNumber", pageNumber.toString());
         return r.Call(new TypeToken<FetchResult<PaymentDetailModel>>() {}.getType());
-    }
-
-    /**
-     * **This API endpoint is under maintenance and may not function properly.**  Schedule an ERP post request for payments.
-     *
-     * The payments must be associated with an active app enrollment and have a valid `AppEnrollmentId`.
-     *
-     * @param body The payments to submit to the connected ERP
-     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
-     */
-    public @NotNull LockstepResponse<PaymentModelErpWriteResult> writepaymentstoconnectedERP(@NotNull InsertPaymentRequestModelErpWriteSyncSubmitModel body)
-    {
-        RestRequest<PaymentModelErpWriteResult> r = new RestRequest<PaymentModelErpWriteResult>(this.client, "POST", "/api/v1/Payments/erp-write");
-        r.AddBody(body);
-        return r.Call(PaymentModelErpWriteResult.class);
     }
 }

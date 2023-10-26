@@ -63,6 +63,25 @@ public class NotesClient
     }
 
     /**
+     * Updates the Note with the unique ID specified.
+     *
+     * A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.
+     *
+     * See [Extensibility](https://developer.lockstep.io/docs/extensibility) for more information.
+     *
+     * @param id Note id to be updated
+     * @param body A list of changes to apply to this Note
+     * @return A {@link io.lockstep.api.LockstepResponse} containing the results
+     */
+    public @NotNull LockstepResponse<NoteModel> updateNote(@NotNull String id, @NotNull Object body)
+    {
+        RestRequest<NoteModel> r = new RestRequest<NoteModel>(this.client, "PATCH", "/api/v1/Notes/{id}");
+        r.AddPath("{id}", id.toString());
+        r.AddBody(body);
+        return r.Call(NoteModel.class);
+    }
+
+    /**
      * Archives the Note with the unique ID specified.
      *
      * A note is a customizable text string that can be attached to various account attributes within Lockstep. You can use notes for internal communication, correspondence with clients, or personal reminders. The Note Model represents a note and a number of different metadata attributes related to the creation, storage, and ownership of the note.

@@ -32,8 +32,10 @@ import org.jetbrains.annotations.Nullable;
 public class ContactSyncModel
 {
     private @NotNull Integer onMatchAction;
+    private @Nullable String networkId;
     private @NotNull String erpKey;
     private @NotNull String companyErpKey;
+    private @Nullable String companyNetworkId;
     private @Nullable String contactName;
     private @Nullable String contactCode;
     private @Nullable String title;
@@ -66,6 +68,18 @@ public class ContactSyncModel
      * @param value The new value for onMatchAction
      */
     public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @return The field networkId
+     */
+    public @Nullable String getNetworkId() { return this.networkId; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @param value The new value for networkId
+     */
+    public void setNetworkId(@Nullable String value) { this.networkId = value; }
     /**
      * This is the primary key of the Contact record. For this field, you should use whatever the contact's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the
@@ -120,6 +134,18 @@ public class ContactSyncModel
      * @param value The new value for companyErpKey
      */
     public void setCompanyErpKey(@NotNull String value) { this.companyErpKey = value; }
+    /**
+     * The network id of the related Company.
+     *
+     * @return The field companyNetworkId
+     */
+    public @Nullable String getCompanyNetworkId() { return this.companyNetworkId; }
+    /**
+     * The network id of the related Company.
+     *
+     * @param value The new value for companyNetworkId
+     */
+    public void setCompanyNetworkId(@Nullable String value) { this.companyNetworkId = value; }
     /**
      * The name of the contact.
      *

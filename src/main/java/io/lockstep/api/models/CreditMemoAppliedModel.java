@@ -32,8 +32,8 @@ public class CreditMemoAppliedModel
     private @NotNull String invoiceId;
     private @NotNull String creditMemoInvoiceId;
     private @Nullable String erpKey;
-    private @NotNull Integer erpWriteStatus;
-    private @Nullable String erpWriteStatusName;
+    private @NotNull Integer erpUpdateStatus;
+    private @NotNull Integer erpUpdateAction;
     private @NotNull Integer entryNumber;
     private @NotNull String applyToInvoiceDate;
     private @NotNull Double creditMemoAppliedAmount;
@@ -153,29 +153,29 @@ public class CreditMemoAppliedModel
      */
     public void setErpKey(@Nullable String value) { this.erpKey = value; }
     /**
-     * Possible statuses for a record that supports ERP write.
+     * Possible statuses for a record that supports ERP Update.
      *
-     * @return The field erpWriteStatus
+     * @return The field erpUpdateStatus
      */
-    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    public @NotNull Integer getErpUpdateStatus() { return this.erpUpdateStatus; }
     /**
-     * Possible statuses for a record that supports ERP write.
+     * Possible statuses for a record that supports ERP Update.
      *
-     * @param value The new value for erpWriteStatus
+     * @param value The new value for erpUpdateStatus
      */
-    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    public void setErpUpdateStatus(@NotNull Integer value) { this.erpUpdateStatus = value; }
     /**
-     * The name of the ErpWriteStatus for this credit memo application
+     * Possible actions for a record that supports ERP Update.
      *
-     * @return The field erpWriteStatusName
+     * @return The field erpUpdateAction
      */
-    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    public @NotNull Integer getErpUpdateAction() { return this.erpUpdateAction; }
     /**
-     * The name of the ErpWriteStatus for this credit memo application
+     * Possible actions for a record that supports ERP Update.
      *
-     * @param value The new value for erpWriteStatusName
+     * @param value The new value for erpUpdateAction
      */
-    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
+    public void setErpUpdateAction(@NotNull Integer value) { this.erpUpdateAction = value; }
     /**
      * Reference number for the applied credit memo.
      *

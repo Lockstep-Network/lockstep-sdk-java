@@ -37,6 +37,8 @@ public class NoteModel
     private @NotNull Boolean isArchived;
     private @NotNull String created;
     private @NotNull String createdUserId;
+    private @NotNull String modified;
+    private @NotNull String modifiedUserId;
     private @Nullable String createdUserName;
     private @Nullable String appEnrollmentId;
     private @Nullable String recipientName;
@@ -195,6 +197,30 @@ public class NoteModel
      * @param value The new value for createdUserId
      */
     public void setCreatedUserId(@NotNull String value) { this.createdUserId = value; }
+    /**
+     * The date this note was last modified
+     *
+     * @return The field modified
+     */
+    public @NotNull String getModified() { return this.modified; }
+    /**
+     * The date this note was last modified
+     *
+     * @param value The new value for modified
+     */
+    public void setModified(@NotNull String value) { this.modified = value; }
+    /**
+     * The ID of the user who last modified this note
+     *
+     * @return The field modifiedUserId
+     */
+    public @NotNull String getModifiedUserId() { return this.modifiedUserId; }
+    /**
+     * The ID of the user who last modified this note
+     *
+     * @param value The new value for modifiedUserId
+     */
+    public void setModifiedUserId(@NotNull String value) { this.modifiedUserId = value; }
     /**
      * The name of the user who created the note
      *

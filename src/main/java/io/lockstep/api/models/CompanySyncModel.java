@@ -32,14 +32,17 @@ import org.jetbrains.annotations.Nullable;
 public class CompanySyncModel
 {
     private @NotNull Integer onMatchAction;
+    private @Nullable String networkId;
     private @NotNull String erpKey;
     private @NotNull String companyName;
     private @NotNull String companyType;
     private @Nullable String parentCompanyErpKey;
+    private @Nullable String parentCompanyNetworkId;
     private @NotNull Boolean isActive;
     private @Nullable String defaultCurrencyCode;
     private @Nullable String companyLogoUrl;
     private @Nullable String primaryContactErpKey;
+    private @Nullable String primaryContactNetworkId;
     private @Nullable String address1;
     private @Nullable String address2;
     private @Nullable String address3;
@@ -70,6 +73,18 @@ public class CompanySyncModel
      * @param value The new value for onMatchAction
      */
     public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @return The field networkId
+     */
+    public @Nullable String getNetworkId() { return this.networkId; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @param value The new value for networkId
+     */
+    public void setNetworkId(@Nullable String value) { this.networkId = value; }
     /**
      * This is the primary key of the Company record. For this field, you should use whatever the company's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the
@@ -169,6 +184,18 @@ public class CompanySyncModel
      */
     public void setParentCompanyErpKey(@Nullable String value) { this.parentCompanyErpKey = value; }
     /**
+     * The network id of the parent Company.
+     *
+     * @return The field parentCompanyNetworkId
+     */
+    public @Nullable String getParentCompanyNetworkId() { return this.parentCompanyNetworkId; }
+    /**
+     * The network id of the parent Company.
+     *
+     * @param value The new value for parentCompanyNetworkId
+     */
+    public void setParentCompanyNetworkId(@Nullable String value) { this.parentCompanyNetworkId = value; }
+    /**
      * This flag indicates whether the company is currently active. An inactive company will be hidden from the
      * user interface but will still be available for querying.
      *
@@ -222,6 +249,18 @@ public class CompanySyncModel
      * @param value The new value for primaryContactErpKey
      */
     public void setPrimaryContactErpKey(@Nullable String value) { this.primaryContactErpKey = value; }
+    /**
+     * The network id of the primary Contact.
+     *
+     * @return The field primaryContactNetworkId
+     */
+    public @Nullable String getPrimaryContactNetworkId() { return this.primaryContactNetworkId; }
+    /**
+     * The network id of the primary Contact.
+     *
+     * @param value The new value for primaryContactNetworkId
+     */
+    public void setPrimaryContactNetworkId(@Nullable String value) { this.primaryContactNetworkId = value; }
     /**
      * The company's primary mailing address information
      *
