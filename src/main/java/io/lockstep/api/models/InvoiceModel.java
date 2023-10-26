@@ -39,6 +39,8 @@ public class InvoiceModel
     private @Nullable String salespersonName;
     private @Nullable String invoiceTypeCode;
     private @Nullable String invoiceStatusCode;
+    private @Nullable String workflowStatusId;
+    private @Nullable String workflowStatusNotes;
     private @Nullable String termsCode;
     private @Nullable String specialTerms;
     private @Nullable String currencyCode;
@@ -69,9 +71,10 @@ public class InvoiceModel
     private @NotNull Double baseCurrencySalesTaxAmount;
     private @NotNull Double baseCurrencyDiscountAmount;
     private @NotNull Double baseCurrencyOutstandingBalanceAmount;
-    private @NotNull Integer erpWriteStatus;
-    private @Nullable String erpWriteStatusName;
+    private @NotNull Integer erpUpdateStatus;
+    private @NotNull Integer erpUpdateAction;
     private @Nullable String sourceModifiedDate;
+    private @Nullable InvoiceWorkflowStatusHistoryModel[] workflowStatuses;
     private @Nullable InvoiceAddressModel[] addresses;
     private @Nullable InvoiceLineModel[] lines;
     private @Nullable InvoicePaymentDetailModel[] payments;
@@ -83,6 +86,7 @@ public class InvoiceModel
     private @Nullable CreditMemoInvoiceModel[] creditMemos;
     private @Nullable CustomFieldValueModel[] customFieldValues;
     private @Nullable CustomFieldDefinitionModel[] customFieldDefinitions;
+    private @NotNull Boolean isEInvoice;
 
     /**
      * The GroupKey uniquely identifies a single Lockstep Platform account.  All records for this
@@ -266,6 +270,30 @@ public class InvoiceModel
      * @param value The new value for invoiceStatusCode
      */
     public void setInvoiceStatusCode(@Nullable String value) { this.invoiceStatusCode = value; }
+    /**
+     * The id of the work flow status associated with this invoice.
+     *
+     * @return The field workflowStatusId
+     */
+    public @Nullable String getWorkflowStatusId() { return this.workflowStatusId; }
+    /**
+     * The id of the work flow status associated with this invoice.
+     *
+     * @param value The new value for workflowStatusId
+     */
+    public void setWorkflowStatusId(@Nullable String value) { this.workflowStatusId = value; }
+    /**
+     * A description of the current workflow status of this invoice.
+     *
+     * @return The field workflowStatusNotes
+     */
+    public @Nullable String getWorkflowStatusNotes() { return this.workflowStatusNotes; }
+    /**
+     * A description of the current workflow status of this invoice.
+     *
+     * @param value The new value for workflowStatusNotes
+     */
+    public void setWorkflowStatusNotes(@Nullable String value) { this.workflowStatusNotes = value; }
     /**
      * A code identifying the terms given to the purchaser.  This field is imported directly from the originating
      * financial system and does not follow a specified format.
@@ -637,29 +665,29 @@ public class InvoiceModel
      */
     public void setBaseCurrencyOutstandingBalanceAmount(@NotNull Double value) { this.baseCurrencyOutstandingBalanceAmount = value; }
     /**
-     * Possible statuses for a record that supports ERP write.
+     * Possible statuses for a record that supports ERP Update.
      *
-     * @return The field erpWriteStatus
+     * @return The field erpUpdateStatus
      */
-    public @NotNull Integer getErpWriteStatus() { return this.erpWriteStatus; }
+    public @NotNull Integer getErpUpdateStatus() { return this.erpUpdateStatus; }
     /**
-     * Possible statuses for a record that supports ERP write.
+     * Possible statuses for a record that supports ERP Update.
      *
-     * @param value The new value for erpWriteStatus
+     * @param value The new value for erpUpdateStatus
      */
-    public void setErpWriteStatus(@NotNull Integer value) { this.erpWriteStatus = value; }
+    public void setErpUpdateStatus(@NotNull Integer value) { this.erpUpdateStatus = value; }
     /**
-     * The name of the ErpWriteStatus for this Invoice
+     * Possible actions for a record that supports ERP Update.
      *
-     * @return The field erpWriteStatusName
+     * @return The field erpUpdateAction
      */
-    public @Nullable String getErpWriteStatusName() { return this.erpWriteStatusName; }
+    public @NotNull Integer getErpUpdateAction() { return this.erpUpdateAction; }
     /**
-     * The name of the ErpWriteStatus for this Invoice
+     * Possible actions for a record that supports ERP Update.
      *
-     * @param value The new value for erpWriteStatusName
+     * @param value The new value for erpUpdateAction
      */
-    public void setErpWriteStatusName(@Nullable String value) { this.erpWriteStatusName = value; }
+    public void setErpUpdateAction(@NotNull Integer value) { this.erpUpdateAction = value; }
     /**
      * The date on which this record was last modified in source ERP.
      *
@@ -672,6 +700,20 @@ public class InvoiceModel
      * @param value The new value for sourceModifiedDate
      */
     public void setSourceModifiedDate(@Nullable String value) { this.sourceModifiedDate = value; }
+    /**
+     * All workflow status histories connected to this invoice.
+     * To retrieve this collection, specify `WorkflowStatuses` in the "Include" parameter for your query.
+     *
+     * @return The field workflowStatuses
+     */
+    public @Nullable InvoiceWorkflowStatusHistoryModel[] getWorkflowStatuses() { return this.workflowStatuses; }
+    /**
+     * All workflow status histories connected to this invoice.
+     * To retrieve this collection, specify `WorkflowStatuses` in the "Include" parameter for your query.
+     *
+     * @param value The new value for workflowStatuses
+     */
+    public void setWorkflowStatuses(@Nullable InvoiceWorkflowStatusHistoryModel[] value) { this.workflowStatuses = value; }
     /**
      * All addresses connected to this invoice.
      * To retrieve this collection, specify `Addresses` in the "Include" parameter for your query.
@@ -858,4 +900,16 @@ public class InvoiceModel
      * @param value The new value for customFieldDefinitions
      */
     public void setCustomFieldDefinitions(@Nullable CustomFieldDefinitionModel[] value) { this.customFieldDefinitions = value; }
+    /**
+     * Indicates if the invoice an E-Invoice or not
+     *
+     * @return The field isEInvoice
+     */
+    public @NotNull Boolean getIsEInvoice() { return this.isEInvoice; }
+    /**
+     * Indicates if the invoice an E-Invoice or not
+     *
+     * @param value The new value for isEInvoice
+     */
+    public void setIsEInvoice(@NotNull Boolean value) { this.isEInvoice = value; }
 };

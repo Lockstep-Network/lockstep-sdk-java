@@ -45,6 +45,8 @@ public class BatchSyncModel
     private @Nullable FinancialAccountSyncModel[] financialAccounts;
     private @Nullable FinancialAccountBalanceHistorySyncModel[] financialAccountBalanceHistories;
     private @Nullable BaseCurrencySyncModel[] baseCurrencies;
+    private @Nullable JournalEntrySyncModel[] journalEntries;
+    private @Nullable JournalEntryLineSyncModel[] journalEntryLines;
 
     /**
      * The optional existing app enrollment to associate with the data in this batch.
@@ -214,4 +216,28 @@ public class BatchSyncModel
      * @param value The new value for baseCurrencies
      */
     public void setBaseCurrencies(@Nullable BaseCurrencySyncModel[] value) { this.baseCurrencies = value; }
+    /**
+     * A list of JournalEntry records to merge with your Lockstep Platform data
+     *
+     * @return The field journalEntries
+     */
+    public @Nullable JournalEntrySyncModel[] getJournalEntries() { return this.journalEntries; }
+    /**
+     * A list of JournalEntry records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for journalEntries
+     */
+    public void setJournalEntries(@Nullable JournalEntrySyncModel[] value) { this.journalEntries = value; }
+    /**
+     * A list of JournalEntryLine records to merge with your Lockstep Platform data
+     *
+     * @return The field journalEntryLines
+     */
+    public @Nullable JournalEntryLineSyncModel[] getJournalEntryLines() { return this.journalEntryLines; }
+    /**
+     * A list of JournalEntryLine records to merge with your Lockstep Platform data
+     *
+     * @param value The new value for journalEntryLines
+     */
+    public void setJournalEntryLines(@Nullable JournalEntryLineSyncModel[] value) { this.journalEntryLines = value; }
 };

@@ -121,15 +121,15 @@ public class FinancialAccountModel
      */
     public void setName(@Nullable String value) { this.name = value; }
     /**
-     * The status of the Financial Account. Possible values are active,
-     * inactive, deleted or archived.
+     * The status of the Financial Account. Possible values are Active,
+     * Inactive, Deleted or Archived.
      *
      * @return The field status
      */
     public @Nullable String getStatus() { return this.status; }
     /**
-     * The status of the Financial Account. Possible values are active,
-     * inactive, deleted or archived.
+     * The status of the Financial Account. Possible values are Active,
+     * Inactive, Deleted or Archived.
      *
      * @param value The new value for status
      */

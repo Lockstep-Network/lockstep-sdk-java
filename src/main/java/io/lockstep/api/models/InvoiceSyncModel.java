@@ -32,9 +32,12 @@ import org.jetbrains.annotations.Nullable;
 public class InvoiceSyncModel
 {
     private @NotNull Integer onMatchAction;
+    private @Nullable String networkId;
     private @NotNull String erpKey;
     private @NotNull String companyErpKey;
+    private @Nullable String companyNetworkId;
     private @NotNull String customerErpKey;
+    private @Nullable String customerNetworkId;
     private @Nullable String salespersonName;
     private @Nullable String purchaseOrderCode;
     private @Nullable String referenceCode;
@@ -91,6 +94,8 @@ public class InvoiceSyncModel
     private @Nullable Double baseCurrencySalesTaxAmount;
     private @Nullable Double baseCurrencyDiscountAmount;
     private @Nullable Double baseCurrencyOutstandingBalanceAmount;
+    private @Nullable Boolean isEInvoice;
+    private @Nullable Boolean sendImmediately;
 
     /**
      * Indicates what action to take when an existing object has been found during the sync process.
@@ -104,6 +109,18 @@ public class InvoiceSyncModel
      * @param value The new value for onMatchAction
      */
     public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @return The field networkId
+     */
+    public @Nullable String getNetworkId() { return this.networkId; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @param value The new value for networkId
+     */
+    public void setNetworkId(@Nullable String value) { this.networkId = value; }
     /**
      * This is the primary key of the Invoice record. For this field, you should use whatever the invoice's unique
      * identifying number is in the originating system. Search for a unique, non-changing number within the
@@ -155,6 +172,18 @@ public class InvoiceSyncModel
      */
     public void setCompanyErpKey(@NotNull String value) { this.companyErpKey = value; }
     /**
+     * The network id of the related Company.
+     *
+     * @return The field companyNetworkId
+     */
+    public @Nullable String getCompanyNetworkId() { return this.companyNetworkId; }
+    /**
+     * The network id of the related Company.
+     *
+     * @param value The new value for companyNetworkId
+     */
+    public void setCompanyNetworkId(@Nullable String value) { this.companyNetworkId = value; }
+    /**
      * The original primary key or unique ID of the company to which this invoice was sent.  This value should
      * match the [Company ErpKey](https://developer.lockstep.io/docs/importing-companies#erpkey) field on the
      * [CompanySyncModel](https://developer.lockstep.io/docs/importing-companies).
@@ -178,6 +207,18 @@ public class InvoiceSyncModel
      * @param value The new value for customerErpKey
      */
     public void setCustomerErpKey(@NotNull String value) { this.customerErpKey = value; }
+    /**
+     * The network id of the related Customer.
+     *
+     * @return The field customerNetworkId
+     */
+    public @Nullable String getCustomerNetworkId() { return this.customerNetworkId; }
+    /**
+     * The network id of the related Customer.
+     *
+     * @param value The new value for customerNetworkId
+     */
+    public void setCustomerNetworkId(@Nullable String value) { this.customerNetworkId = value; }
     /**
      * The name of the salesperson that wrote this invoice.  This is just text, it is not a reference to the
      * "Contacts" table.  You will not receive an error if this field does not match a known contact person.
@@ -894,4 +935,28 @@ public class InvoiceSyncModel
      * @param value The new value for baseCurrencyOutstandingBalanceAmount
      */
     public void setBaseCurrencyOutstandingBalanceAmount(@Nullable Double value) { this.baseCurrencyOutstandingBalanceAmount = value; }
+    /**
+     * True if the invoice is an E-Invoice
+     *
+     * @return The field isEInvoice
+     */
+    public @Nullable Boolean getIsEInvoice() { return this.isEInvoice; }
+    /**
+     * True if the invoice is an E-Invoice
+     *
+     * @param value The new value for isEInvoice
+     */
+    public void setIsEInvoice(@Nullable Boolean value) { this.isEInvoice = value; }
+    /**
+     * True if the E-Invoice should be sent to gov/other recipients immediately
+     *
+     * @return The field sendImmediately
+     */
+    public @Nullable Boolean getSendImmediately() { return this.sendImmediately; }
+    /**
+     * True if the E-Invoice should be sent to gov/other recipients immediately
+     *
+     * @param value The new value for sendImmediately
+     */
+    public void setSendImmediately(@Nullable Boolean value) { this.sendImmediately = value; }
 };

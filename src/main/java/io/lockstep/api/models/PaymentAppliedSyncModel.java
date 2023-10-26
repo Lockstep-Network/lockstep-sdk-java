@@ -32,9 +32,12 @@ import org.jetbrains.annotations.Nullable;
 public class PaymentAppliedSyncModel
 {
     private @NotNull Integer onMatchAction;
+    private @Nullable String networkId;
     private @NotNull String erpKey;
     private @NotNull String invoiceErpKey;
+    private @Nullable String invoiceNetworkId;
     private @NotNull String paymentErpKey;
+    private @Nullable String paymentNetworkId;
     private @NotNull Integer entryNumber;
     private @NotNull String applyToInvoiceDate;
     private @NotNull Double paymentAppliedAmount;
@@ -53,6 +56,18 @@ public class PaymentAppliedSyncModel
      * @param value The new value for onMatchAction
      */
     public void setOnMatchAction(@NotNull Integer value) { this.onMatchAction = value; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @return The field networkId
+     */
+    public @Nullable String getNetworkId() { return this.networkId; }
+    /**
+     * The unique identifier of this object in the Sage Network platform.
+     *
+     * @param value The new value for networkId
+     */
+    public void setNetworkId(@Nullable String value) { this.networkId = value; }
     /**
      * This is the primary key of the Payment Application record. For this field, you should use whatever this
      * transaction's unique identifying number is in the originating system. Search for a unique, non-changing
@@ -106,6 +121,18 @@ public class PaymentAppliedSyncModel
      */
     public void setInvoiceErpKey(@NotNull String value) { this.invoiceErpKey = value; }
     /**
+     * The network id of the related Invoice.
+     *
+     * @return The field invoiceNetworkId
+     */
+    public @Nullable String getInvoiceNetworkId() { return this.invoiceNetworkId; }
+    /**
+     * The network id of the related Invoice.
+     *
+     * @param value The new value for invoiceNetworkId
+     */
+    public void setInvoiceNetworkId(@Nullable String value) { this.invoiceNetworkId = value; }
+    /**
      * This field indicates which Payment was used to provide the funds for this payment application. In this
      * field, identify the original primary key or unique ID of the Payment that was used for this payment
      * application.
@@ -133,6 +160,18 @@ public class PaymentAppliedSyncModel
      * @param value The new value for paymentErpKey
      */
     public void setPaymentErpKey(@NotNull String value) { this.paymentErpKey = value; }
+    /**
+     * The network id of the related Payment.
+     *
+     * @return The field paymentNetworkId
+     */
+    public @Nullable String getPaymentNetworkId() { return this.paymentNetworkId; }
+    /**
+     * The network id of the related Payment.
+     *
+     * @param value The new value for paymentNetworkId
+     */
+    public void setPaymentNetworkId(@Nullable String value) { this.paymentNetworkId = value; }
     /**
      * The entry number of this payment application.  This is often a journal entry number, confirmation code,
      * or other identifying field for this payment application.

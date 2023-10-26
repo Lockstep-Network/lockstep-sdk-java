@@ -38,6 +38,8 @@ public class MagicLinkModel
     private @Nullable String accountingProfileId;
     private @Nullable String magicLinkUrl;
     private @Nullable UserAccountModel user;
+    private @NotNull Integer visits;
+    private @NotNull Integer status;
 
     /**
      * The unique ID of this record, automatically assigned by Lockstep when this record is
@@ -227,4 +229,28 @@ public class MagicLinkModel
      * @param value The new value for user
      */
     public void setUser(@Nullable UserAccountModel value) { this.user = value; }
+    /**
+     * The number of visits to this Magic Link
+     *
+     * @return The field visits
+     */
+    public @NotNull Integer getVisits() { return this.visits; }
+    /**
+     * The number of visits to this Magic Link
+     *
+     * @param value The new value for visits
+     */
+    public void setVisits(@NotNull Integer value) { this.visits = value; }
+    /**
+     * Possible statuses for a Magic Link.
+     *
+     * @return The field status
+     */
+    public @NotNull Integer getStatus() { return this.status; }
+    /**
+     * Possible statuses for a Magic Link.
+     *
+     * @param value The new value for status
+     */
+    public void setStatus(@NotNull Integer value) { this.status = value; }
 };

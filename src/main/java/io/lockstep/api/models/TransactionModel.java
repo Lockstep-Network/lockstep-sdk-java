@@ -41,6 +41,7 @@ public class TransactionModel
     private @Nullable Double baseCurrencyOutstandingAmount;
     private @NotNull Integer transactionDetailCount;
     private @NotNull Boolean supportsErpPdfRetrieval;
+    private @NotNull String transactionCustomerId;
 
     /**
      * Group account transaction is associated with.
@@ -294,4 +295,16 @@ public class TransactionModel
      * @param value The new value for supportsErpPdfRetrieval
      */
     public void setSupportsErpPdfRetrieval(@NotNull Boolean value) { this.supportsErpPdfRetrieval = value; }
+    /**
+     * The customer associated with this transaction
+     *
+     * @return The field transactionCustomerId
+     */
+    public @NotNull String getTransactionCustomerId() { return this.transactionCustomerId; }
+    /**
+     * The customer associated with this transaction
+     *
+     * @param value The new value for transactionCustomerId
+     */
+    public void setTransactionCustomerId(@NotNull String value) { this.transactionCustomerId = value; }
 };
